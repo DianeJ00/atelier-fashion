@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-04T08:02:28.199352Z",
+  "generatedAt": "2026-11-04T08:04:10.331677Z",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-04",
   "reviewStatus": "unverified_headlines_only",
-  "note": "헤드라인 자동 발견만 수행. 패션 트렌드 확정·매출 증빙·여론 분석 아님. 기업별 실적은 SEC/IR 별도 확인.",
+  "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
     {
       "id": "rss-0ebf6c2d6d9794f",
@@ -15,6 +15,7 @@
       "brand": "",
       "creator": "TradingView",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기업 실적",
       "reviewStatus": "needs_review"
     },
     {
@@ -26,7 +27,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -38,7 +40,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
     {
@@ -51,6 +54,20 @@
       "brand": "",
       "creator": "Investor's Business Daily",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-92bfe800826432e",
+      "title": "Best Dressed at CFDA Awards 2026 - WWD",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRXNtS0RiSWV4SDh1SDI1cWNKZG51Mm1zN2NLWE1aZGlTTERZTUhBZTlpWlZTeWlFaTZVQmYyaWZlYzRoSkY0enhnR3JPQ2czQkRvNm8tZEFyaWV6dUR6SVZXMUpPcmpRanBPeUNPYjFfdC1OeDhXNWtNVGRGZm5zbE5LZkJOWVFsc2ZzbjEwNTdtRHducnBIdmlkc1o?oc=5",
+      "date": "2026-11-03T18:25:21Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "WWD",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -63,6 +80,7 @@
       "brand": "",
       "creator": "WWD",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "브랜드·제품",
       "reviewStatus": "needs_review"
     },
     {
@@ -75,18 +93,7 @@
       "brand": "",
       "creator": "WWD",
       "source": "Google News RSS (원문 확인 전)",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-a65e48ba62874fb",
-      "title": "Victorias Secret & Co. (VSXY) stock price, news, quote and history - Yahoo Finance Singapore",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA5UHFYbTF2ank1MTVlQnluSmN0bkplUzNBaUJtUDA3aElZcVVBWTUxbG1aZVlxYlRpdXNvV01CdUhwVzRWTzZXa1htdm5qTXZLcEE?oc=5",
-      "date": "2026-11-03T14:38:50Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "Yahoo Finance Singapore",
-      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -99,18 +106,7 @@
       "brand": "",
       "creator": "PVH",
       "source": "Google News RSS (원문 확인 전)",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-cad0395c6881bc8",
-      "title": "The Gap, Inc. (GAP) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1xbjhnanBkRHNLQW9vZlQyaXd5THVEZjYtemNGSWtyWHVTaWstRVRya05hcjJVVWtacDVmSGxTZTBTLTNSRElzZ0N5NjZUdUVL?oc=5",
-      "date": "2026-11-03T08:21:21Z",
-      "platform": "Google News",
-      "ticker": "GAP",
-      "brand": "",
-      "creator": "Yahoo! Finance Canada",
-      "source": "Google News RSS (원문 확인 전)",
+      "topic": "브랜드·제품",
       "reviewStatus": "needs_review"
     },
     {
@@ -123,18 +119,20 @@
       "brand": "",
       "creator": "VF Corporation",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "신발·스니커즈",
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-5ee7b7ba279ef07",
-      "title": "META_TITLE_QUOTE - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5Ya1RQYlUyWHE0X21HRjdpS3laSEEwMHhmLV92YWpUbEx6aHNJVzl1OXZub0JEQU16U01uZ2h3U3RwMDRvTWhmX1FLcjc?oc=5",
-      "date": "2026-11-02T23:06:40Z",
+      "id": "rss-4697ec9b3baaec5",
+      "title": "Emmy Kasbit Lagos Spring 2027 Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9lM0tVTU9jLUtHeVRRSEdQaG4ybUt6a0xENkdISEFiVXNaaWxzaWVaRElaZVVfbWVjXzVmTGljNHFXZnFBMjNZT3BQUHltLUlteFVHLUU1R2hSSWxldld3Y3J1c25aZjgxZkVaRWg4cWMzUHc?oc=5",
+      "date": "2026-11-02T19:05:15Z",
       "platform": "Google News",
-      "ticker": "VFC",
+      "ticker": "TREND",
       "brand": "",
-      "creator": "Yahoo Finance",
+      "creator": "Vogue",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
     {
@@ -146,7 +144,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "브랜드·제품",
       "reviewStatus": "needs_review"
     },
     {
@@ -159,6 +158,7 @@
       "brand": "",
       "creator": "Retail Dive",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -170,7 +170,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -183,6 +184,7 @@
       "brand": "",
       "creator": "Levi Strauss & Co",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "브랜드·제품",
       "reviewStatus": "needs_review"
     },
     {
@@ -195,6 +197,20 @@
       "brand": "",
       "creator": "ADWEEK",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-84edb0a04be0910",
+      "title": "Style Capital Takes Control of Alessandro Dell’Acqua’s No. 21 - WWD",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZHBZVGlLR3JLc3dKRjBPdTNIT28wdXN2dWs4TTdFWGJIU0VjVF9GQkFCdFdyeFgzWElZdUM4TGE5anVtTUJNNVdsZ3JTallBbGNVR1JXcHdUQ3Q3UXBtUjVXVm1ScDVON2E4TkV0OUFfQk5SYnk2RF9iOTAxTGhUZU1nMGlqX2Q2ck5mdVNqQzJXU1FzSzJKTkxCSzN3RUVpbFFROXpsYTRsVFpMZWowUmlEWXJWaGJaYWhxY2Yya0NPbEFjQ3c?oc=5",
+      "date": "2026-11-02T13:14:49Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "WWD",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -206,19 +222,21 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-4bbc0a2f37abbf8",
-      "title": "Tapestry, Inc. (TPR) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0zRE1uR2hiOXFOeF9pXzRUZ2ZJZ3dXVnJjOWJVcUIycFc2dEdoc0taOUkyampHZUJJbE1teVR0SDJYcDhtWFU2UDQ1MU1zWXlu?oc=5",
-      "date": "2026-11-01T22:54:53Z",
+      "id": "rss-d1fe479af27837d",
+      "title": "2 Reasons to like VSXY and 1 to stay skeptical - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQlYwSW5ZT1djV29zbkM3eVBEekRYVVh1eGhBcFl5dGw4QkZCWjJySlk1MUpUUkl2LVRJTXZwRXhzS0kweUZYeG1LS3E4eE43U2N4eFEzS242N2tCaXQ5dlljMEhKeldUNGphV1JtX0FldU9FOWg4ZmUxa3VCYWs5NVRVNzEySXFmX3NNYk9ETVJtbnl3ZE5qZzJxSjJJQjFmMGdrY0dOU0VGN2s?oc=5",
+      "date": "2026-11-02T04:00:00Z",
       "platform": "Google News",
-      "ticker": "TPR",
+      "ticker": "VSXY",
       "brand": "",
-      "creator": "Yahoo! Finance Canada",
+      "creator": "TradingView",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -231,6 +249,7 @@
       "brand": "",
       "creator": "The Business of Fashion",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -243,6 +262,7 @@
       "brand": "",
       "creator": "MarketBeat",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -254,7 +274,21 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-a2c2beb6d73a533",
+      "title": "Gap (GAP) Q1 2027 Earnings Call Transcript - Fortune",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3Ryb3RBSGVSY28xXzNuUnQ5YVRWY0R3cEc3Z2E5bkFxaEtkcnFnalRzRl9iTi1NTEZVMUE0UXdsTDlZckRBU3FXVFR1YWdRZ2luWHNWOUcyVy0zclE?oc=5",
+      "date": "2026-10-31T08:41:01Z",
+      "platform": "Google News",
+      "ticker": "GAP",
+      "brand": "",
+      "creator": "Fortune",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기업 실적",
       "reviewStatus": "needs_review"
     },
     {
@@ -267,6 +301,20 @@
       "brand": "",
       "creator": "WWD",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-e195924837b10eb",
+      "title": "Hertunba Lagos Spring 2027 Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9MRFU1TjdiM1B4dTlURmZzSThRWUhhMjJJRV9OTkFGV01zYktvR1NmaENzZnJ0T08xRVFlbXlpR3htTzhRa0wwQkR3UDN0UzVYeFJfU0NRam1lUUNaeE9uQlF6SkJBM0pweHR6VkNxYw?oc=5",
+      "date": "2026-10-30T16:22:34Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Vogue",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
     {
@@ -279,6 +327,7 @@
       "brand": "",
       "creator": "Quartz",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -291,6 +340,7 @@
       "brand": "",
       "creator": "PA Department of Community & Economic Development (.gov)",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -303,6 +353,20 @@
       "brand": "",
       "creator": "Capri Holdings Limited - Investor Relations",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-d891004a32a1cd1",
+      "title": "How Fashion Is Doing Business in the Middle East’s ‘New Reality’ - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQzBTakhZcmxQbGV6QmNsLVNoMEpoelgwSmE4SnB4SHdmVnhaUzRDSlVZRTItQUowOWpvbzVIMkYwZXVjZmhLZ1c2TWR3Ql9Dc0lPejVBTTVaMVZvRWRrekE1dzNQekJpZEo2TWNHN2dpRHQ5U1M0Vm1qNmNMQ3oxU3R6dFFfSVhQYW16VnNGaTdHdm9CSml4Q0tFbjI4azRULUFqUzJUME9qYmZDOHo4MHJHV0k2MmhnM3pydHpER2dMaFk2aG5hSDlqbnJLLUItZUQtU0RydkJ6LUdlSzBHcEViNGk4ZDhMalV2X3p3?oc=5",
+      "date": "2026-10-30T05:30:00Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -315,6 +379,7 @@
       "brand": "",
       "creator": "BUCKSCO.Today",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -327,6 +392,7 @@
       "brand": "",
       "creator": "Yahoo Finance Australia",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -338,7 +404,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -351,7 +418,196 @@
       "brand": "",
       "creator": "WWD",
       "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-9368866aeff14d9",
+      "title": "V.F. Corp beats FQ2 estimates as Vans weakness continues (VFC:NYSE) - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOEVlbHdLTnNnTVpKd2N0WklvWEhzUXV0TGFlUTlXeHRHOUlLTVZhYXpYT2FSeENNdlMtLUZjSzdjcnRnRENTNjByMHVwYnhZaHk2eDdrRGpqbDd5c1VWYnlGNDBGQm83R1FSaFFjcHVZVmhQX3lXZEZxa044ay1FaGtNY25hdk9CNXRIaENWd2pZRnpqTFRB?oc=5",
+      "date": "2026-10-28T14:08:54Z",
+      "platform": "Google News",
+      "ticker": "VFC",
+      "brand": "",
+      "creator": "Seeking Alpha",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "신발·스니커즈",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-5e94903c6a36498",
+      "title": "What to Expect From Tapestry's Q1 2027 Earnings Report - inkl",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORFladElWMzJMbTV4VU44MVF1VzZJMzB2VnpxT09ZWEZsQ3hoWkRQR1oxbGZQeFpySXBBbzhrNFJqbWVPcUQ5dDF2c2d5Q2NTaG9kTjhVNFZ2REVReko0ejVoQnJjWmltQjVfa0x6b2hoOUEzRVRaZnNZRUNTSmwydkwxN3Z2Zw?oc=5",
+      "date": "2026-10-27T16:48:41Z",
+      "platform": "Google News",
+      "ticker": "TPR",
+      "brand": "",
+      "creator": "inkl",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기업 실적",
+      "reviewStatus": "needs_review"
+    }
+  ],
+  "weeklyDigest": {
+    "status": "자동 요약 · 원문 미검증",
+    "counts": [
+      {
+        "source": "Google News",
+        "count": 27
+      },
+      {
+        "source": "YouTube",
+        "count": 7
+      }
+    ],
+    "topics": [
+      {
+        "name": "기타 뉴스·콘텐츠",
+        "count": 22
+      },
+      {
+        "name": "브랜드·제품",
+        "count": 4
+      },
+      {
+        "name": "기업 실적",
+        "count": 3
+      },
+      {
+        "name": "패션쇼·디자인",
+        "count": 3
+      },
+      {
+        "name": "신발·스니커즈",
+        "count": 2
+      }
+    ],
+    "previousCollectedAt": "2026-11-04T08:02:28.199352Z",
+    "newSincePrevious": 9,
+    "companyFocus": [
+      {
+        "ticker": "AEO",
+        "count": 2,
+        "check": "Aerie 성장·연결 이익률",
+        "headlines": [
+          {
+            "title": "American Eagle Outfitters, Inc. (AEO) latest stock news and headlines - Yahoo Finance Australia",
+            "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uYWFiMXdvaUFiaVhtMF9NVmp3OHUyTzNobjVqODdEWi1pRWpTazF2VHYzZ1FPRTdxcHFSb0lnUW9GWWRvQjNmRE90TkxabDFXYkEtMnRlZw?oc=5",
+            "date": "2026-10-29"
+          },
+          {
+            "title": "Court Slaps Aerie With Preliminary Injunction Barring Sale of Overslept Sleepwear - WWD",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQa3hOM2pqUmRzd0RINGtGejRJUzBnWkVDc3d0ZmNpbHVBa0N0NEZMVWduWGxnN1pWODdOR21BS2RDSFR1TlA4bHdyNEtJMENtSHI2QkRDZVFNQ2tiaS1ualFRcWh4WS1XWHNkcmpmRllqdXVpanJsc3dRVkhXYnhMSDdoX2VoZWg4LVZtbTNDRUM?oc=5",
+            "date": "2026-10-28"
+          }
+        ]
+      },
+      {
+        "ticker": "ANF",
+        "count": 2,
+        "check": "Hollister 성장·마진",
+        "headlines": [
+          {
+            "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
+            "date": "2026-11-03"
+          },
+          {
+            "title": "The CeeDee Lamb Edit from Abercrombie & Fitch [PHOTOS] - WWD",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlpKeDNiUHBRdHh4blE2R0FTWkE5bUtmZlFyYzZfbUFSeDRHcDhfWDB4UVM2VGpnVENUM3pCOTZmdURQRzRHWVYxcnQ3ODJXN0NCVklMRkJrMUF4MVZidjlabnFmblcta01PYUZyMlJkZ2JjcGIzRlFBMWtwR18wNHVySFRqM3pUcDJ3WEx5S0NLVy0tSDFNRm5yUVJaN0U?oc=5",
+            "date": "2026-11-03"
+          }
+        ]
+      },
+      {
+        "ticker": "CPRI",
+        "count": 2,
+        "check": "Michael Kors 매출·정가 판매",
+        "headlines": [
+          {
+            "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
+            "date": "2026-10-30"
+          },
+          {
+            "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
+            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
+            "date": "2026-10-30"
+          }
+        ]
+      },
+      {
+        "ticker": "GAP",
+        "count": 2,
+        "check": "Old Navy 동일매장매출·Athleta",
+        "headlines": [
+          {
+            "title": "Shakeup at Old Navy continues amid merchandising struggles - Retail Dive",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeU9HRmphXzdGUUNhNHQxTl94QVUxb05ZaE1hMVhQZXNFQ2UyeTZMRFF3WlFYWEFZR0JRRW02RlctY1BCNVNFV2F5eDNsYjBfTDR0RGJpTUJTaWhCcjloaEhfcVdLSVkxWVh4Sy1NT1M3SmxYMnRRaFJTMzFxZENTQU5lbkZKUTBPdW9jc2hicFhTM2tONVNyaw?oc=5",
+            "date": "2026-11-02"
+          },
+          {
+            "title": "Gap (GAP) Q1 2027 Earnings Call Transcript - Fortune",
+            "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3Ryb3RBSGVSY28xXzNuUnQ5YVRWY0R3cEc3Z2E5bkFxaEtkcnFnalRzRl9iTi1NTEZVMUE0UXdsTDlZckRBU3FXVFR1YWdRZ2luWHNWOUcyVy0zclE?oc=5",
+            "date": "2026-10-31"
+          }
+        ]
+      },
+      {
+        "ticker": "LEVI",
+        "count": 2,
+        "check": "미국 직접판매 동일매장매출·재고",
+        "headlines": [
+          {
+            "title": "Let’s Get Fuzzy: Meet the Levi’s® Holiday Campaign - Levi Strauss & Co",
+            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLYzhBUU16NGVFTGE0MlRZbV9ldkxLaElnMm40MVlwQW5Rd1JXNEtreXhGYXVwcExTNFNvLXUzTUtzeExmbDIwdjFBVUstVzFyXzlEc2hvUmZaRGt4MFlpS051TDZKU3U3TGc?oc=5",
+            "date": "2026-11-02"
+          },
+          {
+            "title": "Levi Strauss Faces Class Action Lawsuit Over Tariff Refunds - WWD",
+            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTnlSSnRPMUstRWhzX2piOVlaWTZmMlBfX3pzckRtRHprelhSME1meE1fQWQ2WVNaM19mcVcweExUNTFrVUt1WXBEOC1vbEt5NEZaT1FjalpIdjIySzd4ay1RT2FwR1BrcXc1WHpIMGdWS2Q2N2h3aTQ3WDFWWHN3RUd2c1NBa2FLV3BKNDRLellCYUpxN1EzWmMxQjRERm1pY2ZybnMyV1FrX2c?oc=5",
+            "date": "2026-10-30"
+          }
+        ]
+      },
+      {
+        "ticker": "PVH",
+        "count": 2,
+        "check": "Calvin Klein·Tommy 매출",
+        "headlines": [
+          {
+            "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
+            "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
+            "date": "2026-11-03"
+          },
+          {
+            "title": "Jude Bellingham Strips Down for Calvin Klein After Lighting Up the World Cup - ADWEEK",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa1BRbXN2eUpSb2FUQUNpUHZ6NmdMZTBRMjZYNFI1TG9Bbkctczd6a0x4NExmNW1zbHN5Q3dOUjhXUFJxS1RzZFBRRXdSendFLWd1WjNiTWpkX1ZDQ05MOWxGYnFVb09ZeU9ReFlzSnhqMGR2b2ExekdTMGt6Uzdod1BLRlZ2RUJkakNzam5ieHI1NGpuNWtTVHg0ZUYwbFVDcVUxOTh6dWV1UlBZcFNEdw?oc=5",
+            "date": "2026-11-02"
+          }
+        ]
+      }
+    ],
+    "reviewNote": "기사·영상 제목을 출처별로 묶은 자동 초안이며 유행 확정, 소비자 평가, 실적 분석이 아닙니다."
+  },
+  "sourceHealth": [
+    {
+      "name": "Fashion Roadman",
+      "source": "YouTube RSS",
+      "status": "수집 완료",
+      "count": 6
+    },
+    {
+      "name": "Tim Dessaint",
+      "source": "YouTube RSS",
+      "status": "수집 완료",
+      "count": 1
+    },
+    {
+      "name": "공개 뉴스·패션 매체",
+      "source": "Google News RSS",
+      "status": "수집 완료",
+      "count": 27
     }
   ],
   "errors": []
