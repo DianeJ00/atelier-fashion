@@ -1,126 +1,167 @@
 #!/usr/bin/env python3
-"""Optional public YouTube comment theme COUNTS (no PII or raw comment storage).
+"""Source-aware, privacy-minimizing public YouTube product-review theme sampler.
 
-A few recent top-level comments, sampled by recency, cannot establish consumer
-sentiment or representative product demand. Requires YouTube Data API v3 key.
+Searches independent-looking product-review videos via official Data API v3.
+Counts *keywords* in a non-representative recent sample of top-level comments.
+Does not retain raw comments, authors, usernames or sentiment conclusions.
 """
 from __future__ import annotations
-
 import json
 import os
 import re
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urlparse, parse_qs
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "consumer-samples.json"
-FEED = ROOT / "weekly-research.json"
 NOW = datetime.now(timezone.utc)
 KEY = os.environ.get("YOUTUBE_API_KEY", "").strip()
 MAX_VIDEOS = 5
 MAX_COMMENTS = 60
+DAYS_LOOKBACK = 90
 
-# Topic presence only. These are not approval/disapproval labels or sentiment.
+# Broad public-video discovery: 5 searches per weekly run (~500 search quota units).
+REVIEW_QUERIES = [
+    ("TPR", "Coach Brooklyn bag review"),
+    ("RL", "Ralph Lauren polo sweater review"),
+    ("GAP", "Old Navy jeans denim review"),
+    ("LEVI", "Levi's jeans fit review"),
+    ("URBN", "Free People clothing review"),
+]
+BRAND_REGEX = {
+    "TPR": r"\bcoach\b|brooklyn bag",
+    "RL": r"ralph lauren|\bpolo\b",
+    "GAP": r"old navy",
+    "LEVI": r"\blevi'?s\b|\blevis\b",
+    "URBN": r"free people",
+}
 TOPICS = {
-    "가격·할인": (r"\bprice\b", r"\bexpensive\b", r"\baffordabl", r"\bcheap\b", r"\bworth\b", "가격", "비싸"),
-    "핏·실루엣": (r"\bfit\b", r"\bsiz(e|ing)\b", r"\boversize", r"\bbaggy\b", r"\bsilhouette\b", "핏", "사이즈"),
-    "품질·소재": (r"\bquality\b", r"\bfabric\b", r"\bleather\b", r"\bmaterial\b", r"\bstitch", "소재", "품질"),
-    "디자인·색상": (r"\bdesign\b", r"\bstyle\b", r"\bcolor\b", r"\bcolour\b", r"\blook\b", "디자인", "색상"),
-    "구매·반품": (r"\bbought\b", r"\bbuy\b", r"\bpurchas", r"\breturned\b", r"\bordered\b", "구매", "반품"),
+    "가격·할인": [r"\bprice\b", r"\bexpensive\b", r"\baffordabl", r"\bworth\b", "가격", "비싸"],
+    "핏·사이즈": [r"\bfit\b", r"\bsiz(?:e|ing)\b", r"\bbaggy\b", r"\boversize", "핏", "사이즈"],
+    "품질·소재": [r"\bquality\b", r"\bfabric\b", r"\bleather\b", r"\bmaterial\b", r"\bstitch", "소재", "품질"],
+    "디자인·색상": [r"\bdesign\b", r"\bstyle\b", r"\bcolou?r\b", r"\blook\b", "디자인", "색상"],
+    "구매·반품": [r"\bbought\b", r"\bbuy\b", r"\bpurchas", r"\breturn(?:ed|ing)?\b", "구매", "반품"],
 }
-BRANDS = {
-    "RL": (r"ralph lauren", r"\bpolo\b"),
-    "PVH": (r"calvin klein", r"tommy hilfiger"),
-    "LEVI": (r"levi'?s", r"\blevis\b"),
-    "ANF": (r"abercrombie", r"hollister"),
-    "GAP": (r"old navy", r"\bgap\b", r"athleta"),
-    "AEO": (r"american eagle", r"\baerie\b"),
-    "URBN": (r"free people", r"urban outfitters", r"nuuly"),
-    "VFC": (r"\bvans\b", r"north face", r"timberland"),
-    "CPRI": (r"michael kors", r"jimmy choo"),
-    "CAL": (r"sam edelman", r"stuart weitzman"),
-    "VSXY": (r"victoria'?s secret", r"\bpink\b"),
-    "TPR": (r"\bcoach\b", r"kate spade"),
-}
+REVIEW_WORDS = re.compile(r"review|try.?on|wear test|fit|outfit|styling|haul|unboxing|honest|vs\b", re.I)
 
-def video_id(url):
-    p = urlparse(url)
-    if p.hostname not in ("www.youtube.com", "youtube.com", "youtu.be"):
-        return None
-    v = p.path.strip("/") if p.hostname == "youtu.be" else parse_qs(p.query).get("v", [""])[0]
-    return v if re.fullmatch(r"[A-Za-z0-9_-]{11}", v or "") else None
+def api(endpoint, params):
+    url = "https://www.googleapis.com/youtube/v3/" + endpoint + "?" + urlencode({**params, "key": KEY})
+    req = Request(url, headers={"User-Agent": "ATELIER-Public-Research/2.0", "Accept": "application/json"})
+    with urlopen(req, timeout=24) as response:
+        return json.load(response)
 
-def get_comments(vid):
-    url = "https://www.googleapis.com/youtube/v3/commentThreads?" + urlencode({
-        "part": "snippet", "videoId": vid, "maxResults": MAX_COMMENTS,
-        "order": "time", "textFormat": "plainText", "key": KEY
+def discover_video(ticker, query):
+    after = (NOW - timedelta(days=DAYS_LOOKBACK)).isoformat().replace("+00:00", "Z")
+    data = api("search", {
+        "part": "snippet", "q": query, "type": "video", "order": "date",
+        "publishedAfter": after, "maxResults": 12, "relevanceLanguage": "en",
+        "videoDuration": "medium",
     })
-    req = Request(url, headers={"User-Agent": "ATELIER Fashion Research"})
-    with urlopen(req, timeout=20) as response:
-        data = json.load(response)
-    results = []
-    for row in data.get("items", []):
-        top = row.get("snippet", {}).get("topLevelComment", {}).get("snippet", {})
-        text = str(top.get("textOriginal") or top.get("textDisplay") or "")
-        if text:
-            results.append(text[:1500])
-    return results
+    options = []
+    for item in data.get("items", []):
+        snippet = item.get("snippet", {})
+        vid = item.get("id", {}).get("videoId")
+        title = snippet.get("title", "")
+        if not re.fullmatch(r"[a-zA-Z0-9_-]{11}", vid or ""):
+            continue
+        if not re.search(BRAND_REGEX[ticker], title, re.I):
+            continue
+        # Search and naming are not proof of independence, sponsorship or ownership.
+        score = (2 if REVIEW_WORDS.search(title) else 0) + (
+            1 if not re.search(r"official|brand channel|trailer|shorts", title, re.I) else 0
+        )
+        options.append({
+            "id": vid, "title": title, "creator": snippet.get("channelTitle", ""),
+            "date": snippet.get("publishedAt", ""), "score": score,
+            "reviewQuery": query, "brandTicker": ticker
+        })
+    options.sort(key=lambda x: (x["score"], x["date"]), reverse=True)
+    return options[:1]
+
+def sample_comments(video):
+    data = api("commentThreads", {
+        "part": "snippet", "videoId": video["id"], "order": "time",
+        "maxResults": MAX_COMMENTS, "textFormat": "plainText"
+    })
+    comments = []
+    for item in data.get("items", []):
+        snippet = item.get("snippet", {}).get("topLevelComment", {}).get("snippet", {})
+        content = str(snippet.get("textOriginal") or snippet.get("textDisplay") or "")[:1200]
+        if content.strip():
+            comments.append(content)
+    topics = Counter()
+    comments_with_topic = 0
+    for raw in comments:
+        matched = False
+        for label, patterns in TOPICS.items():
+            if any(re.search(term, raw, flags=re.I) for term in patterns):
+                topics[label] += 1
+                matched = True
+        if matched:
+            comments_with_topic += 1
+    # No raw comments, names, user ids, or comment identifiers are written to disk.
+    return {
+        "videoTitle": video["title"],
+        "videoUrl": "https://www.youtube.com/watch?v=" + video["id"],
+        "creator": video["creator"], "videoDate": video["date"][:10],
+        "titleMatchedTickers": [video["brandTicker"]],
+        "selection": "공식 YouTube 검색에서 찾은 브랜드 상품 리뷰 후보 · 영상·협찬 여부 검토 전",
+        "reviewQuery": video["reviewQuery"],
+        "sampledTopLevelComments": len(comments),
+        "commentsWithTrackedTopic": comments_with_topic,
+        "themeCounts": dict(topics),
+        "samplingNote": "공개 최상위 댓글 최신순 일부; 댓글·작성자 정보 미저장; 언급 건수는 호감·불호 판단이 아님",
+    }
 
 def main():
     output = {
-        "generatedAt": NOW.isoformat(), "source": "YouTube Data API v3 / published top-level comments",
+        "generatedAt": NOW.isoformat(), "source": "YouTube Data API v3",
         "status": "key_required" if not KEY else "no_matching_videos",
-        "method": "최근 영상별 최신순 상위 댓글 최대 60개에서 주제 단어 포함 건수만 집계. 답글·삭제 댓글은 제외.",
-        "caveat": "댓글은 자기선택 편향이 있는 비대표 표본. 단어 출현은 호감·구매·매출 증가 증거가 아니며 긍부정 자동 판단 없음.",
-        "videos": [], "errors": []
+        "method": "브랜드 상품 리뷰 후보 최대 5개를 공식 검색, 영상당 최근 공개 최상위 댓글 최대 60건의 주제 단어만 계산",
+        "caveat": "선정 영상은 협찬·광고·편향 여부를 확인하지 않았고 댓글은 비대표 표본. 자동 감성 판단·구매율 추정 금지.",
+        "quotaNote": "YouTube search.list 5회/실행은 일반적으로 약 500 API quota units를 사용. 공식 쿼터 확인 필요.",
+        "videos": [], "errors": [], "searches": []
     }
     if not KEY:
-        OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-        print("YouTube comments: API key not configured (explicitly unavailable)")
+        OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print("Public comment analysis inactive: YOUTUBE_API_KEY missing")
         return
-    try:
-        feed = json.loads(FEED.read_text(encoding="utf-8"))
-    except (ValueError, OSError):
-        feed = {}
-    candidates = []
-    for item in feed.get("items", []):
-        if item.get("platform") != "YouTube":
-            continue
-        vid = video_id(item.get("url", ""))
-        if not vid:
-            continue
-        title = (item.get("title") or "").lower()
-        linked = [ticker for ticker, terms in BRANDS.items()
-                  if any(re.search(term, title, re.I) for term in terms)]
-        candidates.append((bool(linked), item, vid, linked))
-    candidates.sort(key=lambda x: (x[0], x[1].get("date", "")), reverse=True)
-    for _, item, vid, linked in candidates[:MAX_VIDEOS]:
+    choices = []
+    for ticker, query in REVIEW_QUERIES:
         try:
-            comments = get_comments(vid)
-            counts = Counter()
-            for text in comments:
-                for label, patterns in TOPICS.items():
-                    if any(re.search(pattern, text, re.I) for pattern in patterns):
-                        counts[label] += 1
-            output["videos"].append({
-                "videoTitle": item["title"], "videoUrl": item["url"],
-                "creator": item.get("creator"), "videoDate": item.get("date", "")[:10],
-                "titleMatchedTickers": linked,
-                "sampledTopLevelComments": len(comments),
-                "themeCounts": dict(counts),
-                "samplingNote": "최신순 공개 최상위 댓글 일부. 각 댓글은 여러 주제에 중복 집계될 수 있음.",
-            })
-        except Exception as e:
-            output["errors"].append({"videoUrl": item["url"], "reason": type(e).__name__})
+            matches = discover_video(ticker, query)
+            choices.extend(matches)
+            output["searches"].append({"ticker": ticker, "query": query,
+                                       "status": "found" if matches else "not_found",
+                                       "count": len(matches)})
+        except (HTTPError, Exception) as exc:
+            reason = "HTTP_" + str(exc.code) if isinstance(exc, HTTPError) else type(exc).__name__
+            output["errors"].append({"stage": "search", "ticker": ticker, "reason": reason})
+            output["searches"].append({"ticker": ticker, "query": query, "status": "error", "count": 0})
+    seen = set()
+    for video in choices:
+        if video["id"] in seen:
+            continue
+        seen.add(video["id"])
+        try:
+            output["videos"].append(sample_comments(video))
+        except Exception as exc:
+            reason = "HTTP_" + str(exc.code) if isinstance(exc, HTTPError) else type(exc).__name__
+            output["errors"].append({"stage": "comments", "ticker": video["brandTicker"],
+                                     "videoUrl": "https://www.youtube.com/watch?v="+video["id"], "reason": reason})
+        if len(output["videos"]) >= MAX_VIDEOS:
+            break
     output["status"] = (
+        "sampled_with_errors" if output["videos"] and output["errors"] else
         "sampled" if output["videos"] else
         "source_error" if output["errors"] else "no_matching_videos"
     )
-    OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-    print(f"YouTube comment samples: videos={len(output['videos'])}, errors={len(output['errors'])}")
+    OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Brand-video research: {len(output['videos'])} videos, {len(output['errors'])} errors")
 
 if __name__ == "__main__":
     main()
