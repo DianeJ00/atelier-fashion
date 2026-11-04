@@ -1,0 +1,61 @@
+name: ATELIER weekly research and site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Every Monday at 09:00 Korea Standard Time (UTC+9)
+    - cron: '0 0 * * 1'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: atelier-pages
+  cancel-in-progress: false
+
+jobs:
+  collect-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Discover public RSS headlines (unverified)
+        run: python scripts/collect_weekly.py
+      - name: Save weekly source inbox in repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add weekly-research.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: refresh weekly fashion source inbox'
+            git push
+          fi
+      - name: Prepare published files only
+        run: |
+          mkdir -p _site
+          cp index.html weekly-research.json _site/
+          touch _site/.nojekyll
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: collect-and-build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish ATELIER site
+        id: deployment
+        uses: actions/deploy-pages@v4
