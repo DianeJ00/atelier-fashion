@@ -1,10 +1,49 @@
 {
-  "generatedAt": "2026-11-04T08:07:22.638542Z",
+  "generatedAt": "2026-11-04T23:30:34.714132Z",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-04",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
+    {
+      "id": "rss-6bd72c50fb616d2",
+      "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQ2RnZUtncXJ0SGVCRkJaSC12YW5ueGdoZncycnpQeklydmdMYWRTTnZpeDNVajI1REgwMk1hZTgwUGpGMVNiZlNDN0huWVdoemxjdnlqbmN3YlBwdnI3RnE3QXFrN1hqTXdTTjlqNmR1dXVRaU9rWkpMa2pIb3pIM0pOSFBqTzg1UnZzUWZORVVjNTMxM2RxeFpEMnJLbm9wUkkw?oc=5",
+      "date": "2026-11-04T16:10:01Z",
+      "platform": "Google News",
+      "ticker": "VSXY",
+      "brand": "",
+      "creator": "Yahoo Finance",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기업 실적",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-bbf88fa138a5331",
+      "title": "Dallas Cowboys player CeeDee Lamb helped design an Abercrombie line featuring his No. 88. - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQU9VY0dGOFNIbzFYUUVvRDBBMEp0SXJFeUI1aElQRzN5ajVrMEZHQnZ3dXQtMnlaMDJTVkdEdmpJZTltUXY0NlpITms4c1Uwa3FhLWxiX25iWHAxb3lMY1BBT3JmTXctQTZQM3hyNVhBd0lyWU1rdEVRLUZnX2VFdzBIMHRqN2x2OVdTNzNaQXFTY0xkaW1QeE9Ja3N3SW42LUNkeHd4N21IcjJ4a1BrOUJYNElIX3dI?oc=5",
+      "date": "2026-11-04T13:30:00Z",
+      "platform": "Google News",
+      "ticker": "ANF",
+      "brand": "",
+      "creator": "Stock Titan",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-79f91885d638102",
+      "title": "How Fashion Has ‘Turbocharged’ Its Diwali Marketing - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQW5YOVYteS04QTdCZkI4WTNNenJYSVM1XzNFSnFMVlpGOFdaMk1ERHdabFRiUk5XZUdGcTBncXJ1NDBEbDZRZXhOZkZDcVNyNWlGMGhxRXBFQTd6SHRCUHFrZ1BKXzhKay1aY1pGRENOTm9uazhKVWpJU2dwRl9DRktwVThFU0tlV3VDcHlGenE1WGs3RVMxeWphOXhTU3c?oc=5",
+      "date": "2026-11-04T05:30:00Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
     {
       "id": "rss-0ebf6c2d6d9794f",
       "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
@@ -19,28 +58,15 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-f1a8b314babece7",
-      "title": "Ledbyher On Her Love For Fashion",
-      "url": "https://www.youtube.com/watch?v=Zz85DAl0dGQ",
-      "date": "2026-11-03T20:42:35Z",
-      "platform": "YouTube",
+      "id": "rss-77598da43620ed4",
+      "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
+      "date": "2026-11-03T21:51:09Z",
+      "platform": "Google News",
       "ticker": "TREND",
       "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-7140b71d4623b2c",
-      "title": "Operations Director On How Fashion Week Is Organised",
-      "url": "https://www.youtube.com/watch?v=9H5MOcJ5M_Y",
-      "date": "2026-11-03T19:09:55Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "creator": "WWD",
+      "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
@@ -61,7 +87,7 @@
       "id": "rss-92bfe800826432e",
       "title": "Best Dressed at CFDA Awards 2026 - WWD",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRXNtS0RiSWV4SDh1SDI1cWNKZG51Mm1zN2NLWE1aZGlTTERZTUhBZTlpWlZTeWlFaTZVQmYyaWZlYzRoSkY0enhnR3JPQ2czQkRvNm8tZEFyaWV6dUR6SVZXMUpPcmpRanBPeUNPYjFfdC1OeDhXNWtNVGRGZm5zbE5LZkJOWVFsc2ZzbjEwNTdtRHducnBIdmlkc1o?oc=5",
-      "date": "2026-11-03T18:25:21Z",
+      "date": "2026-11-03T18:23:24Z",
       "platform": "Google News",
       "ticker": "TREND",
       "brand": "",
@@ -84,14 +110,14 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-de447d851e8cc9a",
-      "title": "The CeeDee Lamb Edit from Abercrombie & Fitch [PHOTOS] - WWD",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlpKeDNiUHBRdHh4blE2R0FTWkE5bUtmZlFyYzZfbUFSeDRHcDhfWDB4UVM2VGpnVENUM3pCOTZmdURQRzRHWVYxcnQ3ODJXN0NCVklMRkJrMUF4MVZidjlabnFmblcta01PYUZyMlJkZ2JjcGIzRlFBMWtwR18wNHVySFRqM3pUcDJ3WEx5S0NLVy0tSDFNRm5yUVJaN0U?oc=5",
-      "date": "2026-11-03T16:14:58Z",
+      "id": "rss-7b66e2f82ee58f5",
+      "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
+      "date": "2026-11-03T15:39:00Z",
       "platform": "Google News",
-      "ticker": "ANF",
+      "ticker": "TPR",
       "brand": "",
-      "creator": "WWD",
+      "creator": "Forbes",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -123,6 +149,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-fd2f0df66770cb5",
+      "title": "Why Jude Bellingham Is Calvin Klein’s New Star - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSy05MVNJX2xuQ1pJSlNRWEczWnNuSU1DRHlfYmR3bk0zNDAyNHozTThSd3EySTBGcXRCVTRFVUFMZjV1SG5QVzEwdmpQUllwbDZIMUViRGc0MXJrZ3VoaEg5MXdGbnRnMFVxTl8tSlpSZzR2SGZJVGFUaDFmX1RDY2lJV2hYa2ltVFpDR2NLazB4bGZMWXgyeWp1ak1OLVp4ZjVVWldJSQ?oc=5",
+      "date": "2026-11-03T00:06:18Z",
+      "platform": "Google News",
+      "ticker": "PVH",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-4697ec9b3baaec5",
       "title": "Emmy Kasbit Lagos Spring 2027 Collection - Vogue",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9lM0tVTU9jLUtHeVRRSEdQaG4ybUt6a0xENkdISEFiVXNaaWxzaWVaRElaZVVfbWVjXzVmTGljNHFXZnFBMjNZT3BQUHltLUlteFVHLUU1R2hSSWxldld3Y3J1c25aZjgxZkVaRWg4cWMzUHc?oc=5",
@@ -136,19 +175,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-541409f299641ad",
-      "title": "Mariah Carey Stars In Gucci’s Christmas Campaign",
-      "url": "https://www.youtube.com/watch?v=auPKiKhHTXw",
-      "date": "2026-11-02T17:52:23Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "브랜드·제품",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-0e028428d469986",
       "title": "Shakeup at Old Navy continues amid merchandising struggles - Retail Dive",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeU9HRmphXzdGUUNhNHQxTl94QVUxb05ZaE1hMVhQZXNFQ2UyeTZMRFF3WlFYWEFZR0JRRW02RlctY1BCNVNFV2F5eDNsYjBfTDR0RGJpTUJTaWhCcjloaEhfcVdLSVkxWVh4Sy1NT1M3SmxYMnRRaFJTMzFxZENTQU5lbkZKUTBPdW9jc2hicFhTM2tONVNyaw?oc=5",
@@ -158,19 +184,6 @@
       "brand": "",
       "creator": "Retail Dive",
       "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-2201dd87e652b57",
-      "title": "Why Converse’s Premium Line Makes SO Much Sense",
-      "url": "https://www.youtube.com/watch?v=qsGYshBLYNY",
-      "date": "2026-11-02T16:30:25Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
@@ -188,45 +201,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-d5b34b855ee61ac",
-      "title": "Jude Bellingham Strips Down for Calvin Klein After Lighting Up the World Cup - ADWEEK",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa1BRbXN2eUpSb2FUQUNpUHZ6NmdMZTBRMjZYNFI1TG9Bbkctczd6a0x4NExmNW1zbHN5Q3dOUjhXUFJxS1RzZFBRRXdSendFLWd1WjNiTWpkX1ZDQ05MOWxGYnFVb09ZeU9ReFlzSnhqMGR2b2ExekdTMGt6Uzdod1BLRlZ2RUJkakNzam5ieHI1NGpuNWtTVHg0ZUYwbFVDcVUxOTh6dWV1UlBZcFNEdw?oc=5",
-      "date": "2026-11-02T13:30:00Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "ADWEEK",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-84edb0a04be0910",
-      "title": "Style Capital Takes Control of Alessandro Dell’Acqua’s No. 21 - WWD",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZHBZVGlLR3JLc3dKRjBPdTNIT28wdXN2dWs4TTdFWGJIU0VjVF9GQkFCdFdyeFgzWElZdUM4TGE5anVtTUJNNVdsZ3JTallBbGNVR1JXcHdUQ3Q3UXBtUjVXVm1ScDVON2E4TkV0OUFfQk5SYnk2RF9iOTAxTGhUZU1nMGlqX2Q2ck5mdVNqQzJXU1FzSzJKTkxCSzN3RUVpbFFROXpsYTRsVFpMZWowUmlEWXJWaGJaYWhxY2Yya0NPbEFjQ3c?oc=5",
-      "date": "2026-11-02T13:14:49Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-b7d1f23bcbd86dd",
-      "title": "Bottega Veneta SS27 Outerwear Double As Dresses",
-      "url": "https://www.youtube.com/watch?v=0CrnryIVUZQ",
-      "date": "2026-11-02T12:45:15Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-055684c48676722",
       "title": "You Can Finally Rent Chanel on Rent the Runway - The Business of Fashion",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUUhKaEFnVGRpTHN5OGZKcjNjZkVqZzVkWWpmVnM5cVJFblVuMjcwV1ZxMXdVb3NnUHdsQnZUNW5qUXoyZks2dElJT1BYWHNnMGc0RGd0Z3NLdHNDWTlnR1hGZGhPdnVkMXFDUWNWY21nVUpyQWR2Tm4wamV5UW0tZkJuV3hJY001UHYzTGtGVDZYQjFyUVdBSmVuY0xGT3l1anc?oc=5",
@@ -240,19 +214,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-d1fe479af27837d",
-      "title": "2 Reasons to like VSXY and 1 to stay skeptical - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQlYwSW5ZT1djV29zbkM3eVBEekRYVVh1eGhBcFl5dGw4QkZCWjJySlk1MUpUUkl2LVRJTXZwRXhzS0kweUZYeG1LS3E4eE43U2N4eFEzS242N2tCaXQ5dlljMEhKeldUNGphV1JtX0FldU9FOWg4ZmUxa3VCYWs5NVRVNzEySXFmX3NNYk9ETVJtbnl3ZE5qZzJxSjJJQjFmMGdrY0dOU0VGN2s?oc=5",
-      "date": "2026-11-02T04:00:00Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "TradingView",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-7cb0541eb36c22b",
       "title": "Can Ralph Lauren and Coach Keep Winning Even as US Spending Slows? - The Business of Fashion",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYV95eGNwbm5mdEx1M1VCVUMwTnF3b2ZrWkEtN3gyZzNaN21NSVVDdFdfcWdkdk5VZmczcWliNFNvMy1iR3hZa21mZnI0ZHNWSlZ4YnBMTl9mNHQ4NTVFRlpXcm56dVRyYVdVTTB5TVR2T2ZBZjlTR0NjMkdfQTF1aWVRYS1YNG1aTHM0M1lqa0RIX2tEVlNzaTZRbWtPU0k5SWpkbG5oN09nZEE0ek5RanV1TWJDdUU2?oc=5",
@@ -261,32 +222,6 @@
       "ticker": "RL",
       "brand": "",
       "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-fc2feb5629b1bed",
-      "title": "The hoodie everyone keeps asking about",
-      "url": "https://www.youtube.com/watch?v=7OK8T3gArtc",
-      "date": "2026-10-31T15:16:21Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-9f1a3396a37210f",
-      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com Australia",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSkl1enJreWU2ZkZMOFBBajRtSFpKT1YzQllnSWU3SHRXM2dpZ0tuT0x3ZnE4djNnRTYzaW16eXdVTlpWN0JzVWgxcFYtMWpwUnVxTVMwN3E5elZ5MlBQdzlwYzdPaWRPNEJCSmpydVhKMTc1SmRYWkVtSmotY0F6YnhPcGdyUFZ5YlJqM0EySzlJdHZsSVpHaUFkVExOQVVlLW9LZmxpNkJ0LWl3bmZkTHJWYjl2TkFpT2tFeXNCSXpTakJTTlp2TGp0SFByY0J0czltaGxDR0h2Q2FFSmljYmFrbnNuVlU5a0trSEJB?oc=5",
-      "date": "2026-10-31T09:26:44Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "Investing.com Australia",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -328,6 +263,19 @@
       "creator": "Vogue",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-c1e379ebd64ffdb",
+      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
+      "date": "2026-10-30T15:50:18Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "qz.com",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -383,19 +331,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-11fed69c65e7099",
-      "title": "Louis Vuitton Made The Trunk For The Ballon D’Or",
-      "url": "https://www.youtube.com/watch?v=8tUnj2W1rEk",
-      "date": "2026-10-28T23:00:11Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-66cff68b608b3f6",
       "title": "Court Slaps Aerie With Preliminary Injunction Barring Sale of Overslept Sleepwear - WWD",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQa3hOM2pqUmRzd0RINGtGejRJUzBnWkVDc3d0ZmNpbHVBa0N0NEZMVWduWGxnN1pWODdOR21BS2RDSFR1TlA4bHdyNEtJMENtSHI2QkRDZVFNQ2tiaS1ualFRcWh4WS1XWHNkcmpmRllqdXVpanJsc3dRVkhXYnhMSDdoX2VoZWg4LVZtbTNDRUM?oc=5",
@@ -420,19 +355,6 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "신발·스니커즈",
       "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-5e94903c6a36498",
-      "title": "What to Expect From Tapestry's Q1 2027 Earnings Report - inkl",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORFladElWMzJMbTV4VU44MVF1VzZJMzB2VnpxT09ZWEZsQ3hoWkRQR1oxbGZQeFpySXBBbzhrNFJqbWVPcUQ5dDF2c2d5Q2NTaG9kTjhVNFZ2REVReko0ejVoQnJjWmltQjVfa0x6b2hoOUEzRVRaZnNZRUNTSmwydkwxN3Z2Zw?oc=5",
-      "date": "2026-10-27T16:48:41Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "inkl",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review"
     }
   ],
   "weeklyDigest": {
@@ -440,11 +362,7 @@
     "counts": [
       {
         "source": "Google News",
-        "count": 26
-      },
-      {
-        "source": "YouTube",
-        "count": 7
+        "count": 27
       }
     ],
     "topics": [
@@ -453,11 +371,11 @@
         "count": 4
       },
       {
-        "name": "브랜드·제품",
-        "count": 4
+        "name": "기업 실적",
+        "count": 3
       },
       {
-        "name": "기업 실적",
+        "name": "브랜드·제품",
         "count": 3
       },
       {
@@ -465,9 +383,9 @@
         "count": 2
       }
     ],
-    "uncategorizedCount": 20,
-    "previousCollectedAt": "2026-11-04T08:05:22.744581Z",
-    "newSincePrevious": 2,
+    "uncategorizedCount": 15,
+    "previousCollectedAt": "2026-11-04T08:07:22.638542Z",
+    "newSincePrevious": 7,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -475,9 +393,9 @@
         "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "What to Expect From Tapestry's Q1 2027 Earnings Report - inkl",
-            "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORFladElWMzJMbTV4VU44MVF1VzZJMzB2VnpxT09ZWEZsQ3hoWkRQR1oxbGZQeFpySXBBbzhrNFJqbWVPcUQ5dDF2c2d5Q2NTaG9kTjhVNFZ2REVReko0ejVoQnJjWmltQjVfa0x6b2hoOUEzRVRaZnNZRUNTSmwydkwxN3Z2Zw?oc=5",
-            "date": "2026-10-27"
+            "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
+            "date": "2026-11-03"
           }
         ]
       },
@@ -574,19 +492,19 @@
       "name": "Fashion Roadman",
       "source": "YouTube RSS",
       "status": "수집 완료",
-      "count": 6
+      "count": 0
     },
     {
       "name": "Tim Dessaint",
       "source": "YouTube RSS",
       "status": "수집 완료",
-      "count": 1
+      "count": 0
     },
     {
       "name": "공개 뉴스·패션 매체",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 26
+      "count": 27
     }
   ],
   "errors": []

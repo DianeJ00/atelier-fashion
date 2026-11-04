@@ -1,0 +1,223 @@
+{
+  "generatedAt": "2026-11-04T23:30:44.795287+00:00",
+  "periodStart": "2026-10-28",
+  "periodEnd": "2026-11-04",
+  "classification": "공식 재무 사실 + 미검증 자료 + 투자 검증 질문",
+  "summaryCounts": {
+    "newSECReports": 0,
+    "unverifiedHeadlines": 27,
+    "commentVideosSampled": 0,
+    "commentSamples": 0
+  },
+  "secStatus": "unavailable",
+  "consumerStatus": "key_required",
+  "companies": [
+    {
+      "ticker": "TPR",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 1,
+      "nextCheck": "Coach 성장·Kate Spade 손익",
+      "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
+      "headline": {
+        "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
+        "date": "2026-11-03"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "RL",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "평균 판매단가·아시아 수요",
+      "riskToTest": "가격 인상 이후 수요 둔화",
+      "headline": {
+        "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
+        "date": "2026-11-04"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "GAP",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Old Navy 동일매장매출·Athleta",
+      "riskToTest": "최대 브랜드 부진과 할인 확대",
+      "headline": {
+        "title": "Shakeup at Old Navy continues amid merchandising struggles - Retail Dive",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeU9HRmphXzdGUUNhNHQxTl94QVUxb05ZaE1hMVhQZXNFQ2UyeTZMRFF3WlFYWEFZR0JRRW02RlctY1BCNVNFV2F5eDNsYjBfTDR0RGJpTUJTaWhCcjloaEhfcVdLSVkxWVh4Sy1NT1M3SmxYMnRRaFJTMzFxZENTQU5lbkZKUTBPdW9jc2hicFhTM2tONVNyaw?oc=5",
+        "date": "2026-11-02"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "URBN",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Free People 동일매장매출·Nuuly 마진",
+      "riskToTest": "재고·물류 투자와 FCF 부담",
+      "headline": {
+        "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
+        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
+        "date": "2026-10-30"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "LEVI",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "미국 직접판매 동일매장매출·재고",
+      "riskToTest": "미국 직접판매 성장 정체",
+      "headline": {
+        "title": "Let’s Get Fuzzy: Meet the Levi’s® Holiday Campaign - Levi Strauss & Co",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLYzhBUU16NGVFTGE0MlRZbV9ldkxLaElnMm40MVlwQW5Rd1JXNEtreXhGYXVwcExTNFNvLXUzTUtzeExmbDIwdjFBVUstVzFyXzlEc2hvUmZaRGt4MFlpS051TDZKU3U3TGc?oc=5",
+        "date": "2026-11-02"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "CPRI",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Michael Kors 매출·정가 판매",
+      "riskToTest": "브랜드 회복 지연",
+      "headline": {
+        "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
+        "date": "2026-10-30"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "VFC",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Vans 매출·재고",
+      "riskToTest": "상품 관심도 대비 전체 매출 부진",
+      "headline": {
+        "title": "Vans and SZA Debut Campaign - VF Corporation",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLS1pZQ0lBNHhxZEF1a09xUDlTalJBOG5PQ3pqZU5lVU1lWTRJMVgxTVpBbWprMXRzNnNBNEhncWdzRE1jeDFYWDVJLWNQX1JlM185VnliaGVxOHFycENjLWY4ZS1oeW5jQ2dGZlpQRjA0VUk1WWVtWWFic3B1cUk?oc=5",
+        "date": "2026-11-03"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "ANF",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Hollister 동일매장매출·영업이익률",
+      "riskToTest": "핵심 브랜드 성장 둔화",
+      "headline": {
+        "title": "Dallas Cowboys player CeeDee Lamb helped design an Abercrombie line featuring his No. 88. - Stock Titan",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQU9VY0dGOFNIbzFYUUVvRDBBMEp0SXJFeUI1aElQRzN5ajVrMEZHQnZ3dXQtMnlaMDJTVkdEdmpJZTltUXY0NlpITms4c1Uwa3FhLWxiX25iWHAxb3lMY1BBT3JmTXctQTZQM3hyNVhBd0lyWU1rdEVRLUZnX2VFdzBIMHRqN2x2OVdTNzNaQXFTY0xkaW1QeE9Ja3N3SW42LUNkeHd4N21IcjJ4a1BrOUJYNElIX3dI?oc=5",
+        "date": "2026-11-04"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "AEO",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Aerie 성장·연결 영업이익률",
+      "riskToTest": "성장 브랜드의 이익 기여 미흡",
+      "headline": {
+        "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
+        "date": "2026-10-30"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "PVH",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "Calvin Klein·Tommy 매출",
+      "riskToTest": "핵심 브랜드 매출 부진",
+      "headline": {
+        "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
+        "date": "2026-11-03"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "VSXY",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 2,
+      "nextCheck": "PINK 성장·정가 판매",
+      "riskToTest": "회복 기대 대비 판촉 확대",
+      "headline": {
+        "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQ2RnZUtncXJ0SGVCRkJaSC12YW5ueGdoZncycnpQeklydmdMYWRTTnZpeDNVajI1REgwMk1hZTgwUGpGMVNiZlNDN0huWVdoemxjdnlqbmN3YlBwdnI3RnE3QXFrN1hqTXdTTjlqNmR1dXVRaU9rWkpMa2pIb3pIM0pOSFBqTzg1UnZzUWZORVVjNTMxM2RxeFpEMnJLbm9wUkkw?oc=5",
+        "date": "2026-11-04"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "CAL",
+      "officialStatus": "unavailable",
+      "officialText": "SEC 분기 매출 확인 대기",
+      "officialPeriod": null,
+      "officialSource": null,
+      "latestReport": null,
+      "newsTitleCount": 0,
+      "nextCheck": "Famous Footwear 동일매장매출",
+      "riskToTest": "매장 부진과 차입 부담",
+      "headline": null,
+      "consumerSampleCount": 0
+    }
+  ],
+  "latestSEC": [],
+  "rules": [
+    "10-Q 약 3개월 단위 US-GAAP 수치만 공식 실적 표시",
+    "GAAP와 조정 실적, 다른 회계연도와 기간, 매출과 ARR 구분",
+    "뉴스·영상 제목과 댓글 건수는 소비자 선호·실적 증가를 증명하지 않음",
+    "SEC 조회 실패 시 최신 실적으로 추정하지 않음"
+  ]
+}

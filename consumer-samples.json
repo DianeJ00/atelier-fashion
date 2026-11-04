@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-11-04T23:30:44.759215+00:00",
+  "source": "YouTube Data API v3 / published top-level comments",
+  "status": "key_required",
+  "method": "최근 영상별 최신순 상위 댓글 최대 60개에서 주제 단어 포함 건수만 집계. 답글·삭제 댓글은 제외.",
+  "caveat": "댓글은 자기선택 편향이 있는 비대표 표본. 단어 출현은 호감·구매·매출 증가 증거가 아니며 긍부정 자동 판단 없음.",
+  "videos": [],
+  "errors": []
+}
