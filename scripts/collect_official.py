@@ -17,9 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "official-financials.json"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
-USER_AGENT = os.environ.get("SEC_USER_AGENT", "").strip() or (
-    "ATELIER Fashion Research (contact: https://github.com/DianeJ00/atelier-fashion/issues)"
-)
+# SEC requires a declared organization/contact email, not an anonymous default.
+USER_AGENT = os.environ.get("SEC_USER_AGENT", "").strip()
 
 # CIK identifies the registrant, not its brand; the ticker is the app's label.
 CIKS = {
@@ -152,6 +151,22 @@ def collect_one(ticker, cik):
     return result
 
 def main():
+    # Do not hammer the SEC with an undeclared automated User-Agent.
+    if not USER_AGENT or "@" not in USER_AGENT:
+        placeholder = [{"ticker": ticker, "cik": cik, "status": "configuration_required",
+                        "latestReport": None, "quarter": None,
+                        "note": "GitHub Secret SEC_USER_AGENT: 조직/이름 및 연락 이메일 설정 필요"}
+                       for ticker, cik in CIKS.items()]
+        output = {
+            "generatedAt": NOW.isoformat(),
+            "source": "U.S. SEC EDGAR submissions + XBRL companyfacts",
+            "method": "SEC Fair Access: 선언된 사용자 식별자와 연락 이메일 필수. 미설정 시 수집하지 않음.",
+            "companies": placeholder, "errors": [],
+            "sourceStatus": "configuration_required"
+        }
+        OUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print("SEC configuration required: set SEC_USER_AGENT in GitHub Secrets")
+        return
     previous = {}
     if OUT.exists():
         try:
