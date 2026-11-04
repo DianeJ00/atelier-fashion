@@ -597,6 +597,27 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 .comment-line>div:last-child{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
 @media(max-width:760px){.crosscheck-row{grid-template-columns:48px 1fr}.crosscheck-row>a,.crosscheck-row>span{grid-column:2;text-align:left}.comment-line{grid-template-columns:1fr}.comment-line>div:last-child{justify-content:flex-start}}
 </style>
+
+<style>
+.weekly-evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:13px 0 10px}
+.weekly-evidence-item{min-width:0;border:1px solid #dce7f1;border-radius:9px;padding:12px 13px;background:#fbfdff;display:flex;flex-direction:column;gap:6px}
+.weekly-evidence-tag{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:#69829b}
+.weekly-evidence-item .pill{font-size:10px;padding:2px 6px}
+.weekly-evidence-title{font-weight:700;font-size:13px;line-height:1.45;color:#164a7a;text-decoration:none}
+.weekly-evidence-title:hover{text-decoration:underline}
+.weekly-evidence-item p{margin:0;font-size:12px;line-height:1.5;color:#405970}
+.weekly-evidence-item small{font-size:11px;color:#8291a4;line-height:1.35}
+.weekly-evidence-empty{padding:10px 12px;border:1px dashed #cad9e6;border-radius:9px;font-size:12px;color:#64788d;margin:10px 0}
+.weekly-source-toggle{margin:7px 0 10px;border:1px solid #dbe6ef;border-radius:8px;overflow:hidden}
+.weekly-source-toggle summary{padding:10px 13px;font-size:12px;font-weight:700;cursor:pointer;background:#f6f9fd;color:#365876}
+.weekly-source-toggle .weekly-auto{border:0;border-radius:0;margin:0}
+.official-inline{border-top:1px solid #dfe7f0;border-bottom:1px solid #dfe7f0;margin:12px 0;padding:9px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}
+.official-inline span{font-weight:700;color:#627d93}
+.official-inline b{color:#26465e}
+.official-inline small{color:#667e94}
+.official-inline .link-btn{margin-left:auto;font-size:11px}
+@media(max-width:1000px){.weekly-evidence{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -668,7 +689,7 @@ function buttons(){return `<button class="btn btn-small" data-action="note">+ �
 function noteCount(t){return notes.filter(n=>n.ticker===t).length}
 function focusCard(p){return `<article class="card focus-card" data-action="select" data-ticker="${p.ticker}" tabindex="0" role="button" aria-label="${esc(p.name)} 상세 분석"><div class="focus-head"><div class="ticker">${p.ticker} <span class="company-subname">${esc(p.name)}</span></div>${badge(p.stage,tone(p.stage))}</div><div class="focus-price" style="margin-top:12px">${money(p.price)} <span class="focus-per">PER ${f(p.per,1)}배</span></div><div class="metric-row" style="margin-top:6px"><span class="small subtle">최근 3개월</span><strong class="${polarity(p.r3m)}">${pct(p.r3m)}</strong></div><div class="line" style="margin:13px 0 10px"></div><div class="focus-bottom"><b>다음 확인</b> · ${esc(readableCheck(p.check))}</div></article>`}
  function shortPeerTable(items){return `<div class="table-wrap"><table class="peer-table" style="min-width:740px"><thead><tr><th>기업</th><th>현재가</th><th>1개월</th><th>3개월</th><th>연초 대비</th><th>52주 가격 범위 내 위치</th><th>PER / 고정 EPS</th><th>핵심 투자 변수</th></tr></thead><tbody>${items.map(p=>`<tr data-action="select" data-ticker="${p.ticker}"><td class="ticker-cell">${p.ticker}</td><td class="mono">${money(p.price)}</td>${['r1m','r3m','ytd'].map(k=>`<td class="mono ${polarity(p[k])}">${pct(p[k])}</td>`).join('')}<td><div class="range-wrap"><div class="mini-track"><div class="fill" style="width:${rpos(p)}%"></div></div><span class="mono">${f(rpos(p),0)}%</span></div></td><td class="mono">${f(p.per,1)}×</td><td style="white-space:normal;min-width:170px;max-width:290px">${esc(p.check)}</td></tr>`).join('')}</tbody></table></div>`}
-function detailPane(t){const p=peers.find(x=>x.ticker===t)||peers[0];if(!p)return'';const th=(D.research.theses||[]).find(x=>x.ticker===p.ticker);return `<aside class="detail-pane"><div class="detail-head"><div><div class="ticker-big">${p.ticker} · 기업 분석</div><h2>${esc(p.name)}</h2><div class="detail-sub">${esc(p.style)} · ${esc(p.group)}</div></div>${badge(p.stage,tone(p.stage))}</div><div class="detail-metric-grid"><div class="detail-metric"><small>종가 / ${esc(p.quoteDate)}</small><b>${money(p.price)}</b></div><div class="detail-metric"><small>PER / 고정 EPS</small><b>${f(p.per,1)}×</b></div><div class="detail-metric"><small>3개월 수익률</small><b class="${polarity(p.r3m)}">${pct(p.r3m)}</b></div><div class="detail-metric"><small>52주 범위</small><b>${f(rpos(p),0)}%</b></div></div><div class="detail-label">최근 실적 흐름</div><p>${esc(p.performance)}</p><div class="detail-label">강점 · 실적을 지지하는 요인</div><p>${esc(p.positive)}</p><div class="detail-label">위험 · 가설이 틀릴 조건</div><p>${esc(p.negative)}</p><div class="detail-label">다음 확인 지표</div><p>${esc(p.check)}</p><div class="detail-label">주요 브랜드</div>${(p.brands||[]).map(b=>`<div class="detail-brand"><div class="metric-row"><strong>${esc(b.name)}</strong>${badge(b.status,tone(b.status))}</div><p>${esc(b.metric)}</p><p style="color:#8eacc0">→ ${esc(b.verification)}</p></div>`).join('')} ${th?`<div class="detail-label">투자 가설</div><p>${esc(th.title)}</p><div class="note-block"><b class="positive">강세 가설</b><p>${esc(th.bull)}</p></div><div class="note-block"><b class="negative">반증 조건</b><p>${esc(th.bear)}</p></div>`:''}<div class="detail-label">다음 일정</div><p>${esc(p.earnings)}</p><div class="line"></div><div class="metric-row"><a class="watch-link" target="_blank" rel="noopener noreferrer" href="https://www.sec.gov/edgar/browse/?CIK=${encodeURIComponent(p.cikHint)}">SEC 공시 열기 ↗</a><button class="btn btn-small" data-action="note" data-ticker="${p.ticker}">+ 메모</button></div><div class="source-note" style="margin-top:12px">가격 데이터: ${p.quoteSource==='user_snapshot'?'사용자 입력값':esc(p.quoteSource)} · ${esc(p.quoteDate)}. 자동 수집과 분석가 판단을 구분해 관리합니다.</div></aside>`}
+function detailPane(t){const p=peers.find(x=>x.ticker===t)||peers[0];if(!p)return'';const th=(D.research.theses||[]).find(x=>x.ticker===p.ticker);return `<aside class="detail-pane"><div class="detail-head"><div><div class="ticker-big">${p.ticker} · 기업 분석</div><h2>${esc(p.name)}</h2><div class="detail-sub">${esc(p.style)} · ${esc(p.group)}</div></div>${badge(p.stage,tone(p.stage))}</div><div class="detail-metric-grid"><div class="detail-metric"><small>종가 / ${esc(p.quoteDate)}</small><b>${money(p.price)}</b></div><div class="detail-metric"><small>PER / 고정 EPS</small><b>${f(p.per,1)}×</b></div><div class="detail-metric"><small>3개월 수익률</small><b class="${polarity(p.r3m)}">${pct(p.r3m)}</b></div><div class="detail-metric"><small>52주 범위</small><b>${f(rpos(p),0)}%</b></div></div>${detailOfficialLine(p.ticker)}<div class="detail-label">기존 분석 실적 흐름 · 저장된 내용</div><p>${esc(p.performance)}</p><div class="detail-label">강점 · 실적을 지지하는 요인</div><p>${esc(p.positive)}</p><div class="detail-label">위험 · 가설이 틀릴 조건</div><p>${esc(p.negative)}</p><div class="detail-label">다음 확인 지표</div><p>${esc(p.check)}</p><div class="detail-label">주요 브랜드</div>${(p.brands||[]).map(b=>`<div class="detail-brand"><div class="metric-row"><strong>${esc(b.name)}</strong>${badge(b.status,tone(b.status))}</div><p>${esc(b.metric)}</p><p style="color:#8eacc0">→ ${esc(b.verification)}</p></div>`).join('')} ${th?`<div class="detail-label">투자 가설</div><p>${esc(th.title)}</p><div class="note-block"><b class="positive">강세 가설</b><p>${esc(th.bull)}</p></div><div class="note-block"><b class="negative">반증 조건</b><p>${esc(th.bear)}</p></div>`:''}<div class="detail-label">다음 일정</div><p>${esc(p.earnings)}</p><div class="line"></div><div class="metric-row"><a class="watch-link" target="_blank" rel="noopener noreferrer" href="https://www.sec.gov/edgar/browse/?CIK=${encodeURIComponent(p.cikHint)}">SEC 공시 열기 ↗</a><button class="btn btn-small" data-action="note" data-ticker="${p.ticker}">+ 메모</button></div><div class="source-note" style="margin-top:12px">가격 데이터: ${p.quoteSource==='user_snapshot'?'사용자 입력값':esc(p.quoteSource)} · ${esc(p.quoteDate)}. 자동 수집과 분석가 판단을 구분해 관리합니다.</div></aside>`}
 
 function officialUsd(v){
  if(typeof v!=='number')return '—';
@@ -703,6 +724,7 @@ function weeklyText(){
    '[기업별 새 원문과 확인 지표]',...(digest.companyFocus||[]).map(x=>`• ${x.ticker}: 수집 ${x.count}건 / 다음 공식 실적 확인: ${x.check}\n  ${x.headlines?.[0]?.title||'해당 기간 수집 원문 없음'}\n  ${x.headlines?.[0]?.url||''}`),'');
  }
  if(weeklyInvestment){
+  sectionText.push('[이번 주 주요 원문 · 증거 단계별 분류]',...(weeklyInvestment?.highlights||[]).slice(0,3).map(x=>x.tier+' / '+x.ticker+' / '+x.date+' / '+x.title+'\n  관찰: '+x.context+'\n  '+x.url),'');
   sectionText.push('[공식 SEC 실적 · 원문 링크]',...weeklyInvestment.companies.slice(0,6).map(x=>
    x.ticker+': '+x.officialText+' / 기간 '+(x.officialPeriod||'미확인')+' / '+(x.officialSource||'공시 확인 필요')),'');
   sectionText.push('[실적 검증 질문]',...weeklyInvestment.companies.slice(0,6).map(x=>
@@ -719,17 +741,33 @@ function weeklyText(){
 }
 function exportWeekly(){const blob=new Blob([weeklyText()],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='ATELIER_주간리서치_'+(externalUpdatedAt?.slice(0,10)||WEEKLY_BRIEF.edited)+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);notify('주간 리서치 요약을 저장했습니다')}
 function healthStrip(){return externalHealth.length?`<div class="source-health">${externalHealth.map(x=>`<span class="${x.status==='연결 실패'?'failed':''}">${esc(x.name)} · ${esc(x.status)} · ${Number(x.count)||0}건</span>`).join('')}</div>`:''}
+
+function weeklyEvidenceBlock(){
+ const picks=weeklyInvestment?.highlights||[];
+ if(!picks.length)return '<div class="weekly-evidence-empty">이번 주 확인할 근거 3선은 다음 자료 갱신 시 생성됩니다. 검증되지 않은 변화를 임의로 채우지 않습니다.</div>';
+ return `<div class="weekly-evidence">
+ ${picks.slice(0,3).map(x=>`<article class="weekly-evidence-item"><div class="weekly-evidence-tag">${badge(x.tier)}<span>${esc(x.date||'날짜 확인')}</span>${badge(x.ticker||'산업')}</div><a class="weekly-evidence-title" href="${safeURL(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)} ↗</a><p>${esc(x.context)}</p><small>${esc(x.note||'원문 검증 필요')}</small></article>`).join('')}
+ </div>`;
+}
+function detailOfficialLine(ticker){
+ const row=(officialData?.companies||[]).find(x=>x.ticker===ticker);
+ const q=row?.quarter, rev=q?.metrics?.revenue;
+ const good=row?.status==='quarter_verified'&&rev;
+ return `<div class="official-inline"><span>공식 실적 · SEC</span>${good?`<b>10-Q 분기 매출 ${officialUsd(rev.value)}</b><small>${esc(q.periodStart)} ~ ${esc(q.periodEnd)} · GAAP</small>`:'<b>분기 실적 자동 확인 대기</b>'}<button class="link-btn" data-page="official">공식 원문 확인 →</button></div>`;
+}
+
 function weeklyPanel(){
  const w=WEEKLY_BRIEF,d=externalDigest;
  const sourceStats=(d?.counts||[]).map(x=>`<span>${esc(x.source)} <b>${Number(x.count)||0}건</b></span>`).join('');
  const topics=(d?.topics||[]).slice(0,4);
  const companies=(d?.companyFocus||[]).slice(0,4);
  return `<section class="weekly-panel"><div class="weekly-heading"><div><span class="weekly-kicker">주간 자료 · ${esc(externalPeriod||'최근 자동 수집')}</span><h2>이번 주 리서치 한눈에 보기</h2><p>${externalUpdatedAt?'수집 '+esc(externalUpdatedAt.slice(0,10)):'자동 수집을 연결하는 중'} · 수집 자료는 원문 확인 전</p></div><button class="btn btn-small" data-action="exportWeekly">주간 보고서 저장 ↓</button></div>
- <div class="weekly-auto"><div class="weekly-auto-head"><strong>새로 발견된 자료 · ${socialItems().length}건</strong><small>제목 기반 자동 요약 · 실적 분석 아님</small></div><div class="weekly-auto-stats">${sourceStats||'<span>수집 상태 확인 중</span>'}${d?.newSincePrevious!=null?`<span>이전 실행 후 새 발견 ${d.newSincePrevious}건</span>`:''}</div>
+ ${weeklyEvidenceBlock()}
+ <details class="weekly-source-toggle"><summary>자료 수집 현황 펼쳐보기 · ${socialItems().length}건</summary><div class="weekly-auto"><div class="weekly-auto-head"><strong>새로 발견된 자료 · ${socialItems().length}건</strong><small>제목 기반 자동 요약 · 실적 분석 아님</small></div><div class="weekly-auto-stats">${sourceStats||'<span>수집 상태 확인 중</span>'}${d?.newSincePrevious!=null?`<span>이전 실행 후 새 발견 ${d.newSincePrevious}건</span>`:''}</div>
  <div class="weekly-auto-grid"><div class="weekly-auto-group"><h3>이번 주 원문에 등장한 주제</h3>${topics.length?`<ul class="weekly-auto-list">${topics.map(x=>`<li><b>${esc(x.name)}</b> · 제목 ${x.count}건</li>`).join('')}</ul>`:'<div class="weekly-auto-empty">주제별 자료가 아직 없습니다.</div>'}<p class="source-note">제목 분류 건수이지 트렌드 성장률·인기 순위가 아닙니다.</p></div>
  <div class="weekly-auto-group"><h3>집중 관찰 기업 · 관련 원문과 실적 지표</h3>${companies.length?`<ul class="weekly-auto-list">${companies.map(x=>`<li><b>${esc(x.ticker)}</b> · 제목 ${x.count}건 <small>${esc(x.check)}</small>${x.headlines?.length?`<a href="${safeURL(x.headlines[0].url)}" target="_blank" rel="noopener noreferrer">관련 원문 확인 ↗</a>`:''}</li>`).join('')}</ul>`:'<div class="weekly-auto-empty">기업별 수집 자료가 없습니다.</div>'}</div></div>
  ${externalHealth.some(x=>x.status==='연결 실패')?'<p class="source-note" style="margin-top:9px">일부 채널 연결 실패 · 영상 0건은 관심이 없다는 뜻이 아닙니다. ‘새로 수집한 자료’에서 연결 상태를 확인하세요.</p>':''}
- </div>
+ </div></details>
  <details class="weekly-editorial"><summary>기존 분석가 편집본 보기 · ${esc(w.edited)} 기준 (자동 갱신 아님)</summary><div class="weekly-content"><div class="weekly-trends"><h3>확인된 자료와 해석</h3>${w.focus.map(x=>`<div class="weekly-point"><span>${esc(x.kind)}</span><p>${esc(x.text)}</p><a href="${safeURL(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.source)} ↗</a></div>`).join('')}</div><div class="weekly-companies"><h3>기존 기업 점검 목록</h3>${w.companies.map(x=>`<button class="weekly-company" data-action="select" data-ticker="${esc(x.ticker)}"><span class="weekly-company-ticker">${esc(x.ticker)}</span><span class="weekly-company-main"><strong>${esc(x.brief)}</strong><small>${esc(x.event)} · ${esc(x.attention)}</small></span></button>`).join('')}</div></div></details>
  <div class="weekly-disclaimer">수집 항목은 영상·기사 제목과 링크이며, 트렌드 강도·소비자 평가·최신 기업 실적으로 해석할 수 없습니다. ${esc(w.limitations)}</div></section>`;
 }
