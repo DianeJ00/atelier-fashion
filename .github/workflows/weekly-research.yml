@@ -28,19 +28,34 @@ jobs:
         with:
           python-version: '3.11'
       - name: Discover public RSS and optional YouTube API titles
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
+      - name: Verify Python source syntax
+        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py
+      - name: Verify SEC filings and extract quarterly GAAP facts
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python scripts/collect_official.py
+      - name: Aggregate public YouTube comment themes when permitted
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/collect_consumer.py
+      - name: Build evidence-tiered weekly investment checklist
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        run: python scripts/build_weekly_brief.py
       - name: Save weekly source inbox in repository
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           # Rebase our generated JSON on the latest main to avoid stale workflow checkouts.
           git fetch origin main
           git reset --mixed origin/main
-          git add weekly-research.json
+          git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh weekly fashion source inbox'
             git push origin HEAD:main
@@ -52,6 +67,9 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html weekly-research.json _site/
+          for source in official-financials.json consumer-samples.json weekly-investment.json; do
+            if [ -f "$source" ]; then cp "$source" _site/; fi
+          done
           touch _site/.nojekyll
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
