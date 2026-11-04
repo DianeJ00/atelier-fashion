@@ -166,7 +166,8 @@ def main():
             companies.append(item)
             print(f"{ticker}: {item['status']}")
         except Exception as exc:
-            reason = type(exc).__name__
+            http_status = getattr(exc, "code", None)
+            reason = ("HTTP_" + str(http_status)) if http_status else type(exc).__name__
             errors.append({"ticker": ticker, "reason": reason})
             prev = prev_by_ticker.get(ticker)
             if prev and prev.get("status") in ("quarter_verified", "stale_cached"):
