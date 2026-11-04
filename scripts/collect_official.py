@@ -17,10 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "official-financials.json"
 NOW = datetime.now(timezone.utc)
 TODAY = NOW.date().isoformat()
-USER_AGENT = os.environ.get(
-    "SEC_USER_AGENT",
+USER_AGENT = os.environ.get("SEC_USER_AGENT", "").strip() or (
     "ATELIER Fashion Research (contact: https://github.com/DianeJ00/atelier-fashion/issues)"
-).strip()
+)
 
 # CIK identifies the registrant, not its brand; the ticker is the app's label.
 CIKS = {
