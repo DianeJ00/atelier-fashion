@@ -199,18 +199,33 @@ def main():
         except (OSError, ValueError):
             pass
     found, errors, health = [], [], []
+    # Prior video titles may disappear from a transient RSS result.
+    # Retain only titles originally fetched via official source and still within the 8-day window.
+    previous_videos = []
+    for item in previous.get('items', []):
+        dt = dated(item.get('date'))
+        if item.get('platform') == 'YouTube' and dt and START <= dt <= NOW + timedelta(days=1):
+            prior = dict(item)
+            prior['carriedOver'] = True
+            prior['source'] = str(prior.get('source', 'YouTube')) + ' · 이전 수집 자료 유지'
+            previous_videos.append(prior)
     key = os.environ.get('YOUTUBE_API_KEY', '').strip()
     channels = API_CHANNEL_HANDLES if key else CHANNELS
     for name, identifier in channels.items():
         try:
             rows = youtube_api(name, identifier, key) if key else youtube(name, identifier)
-            found.extend(rows)
+            prior = [x for x in previous_videos if x.get('creator') == name]
+            found.extend(rows if rows else prior)
             health.append({'name': name, 'source': 'YouTube API' if key else 'YouTube RSS',
-                           'status': '수집 완료', 'count': len(rows)})
+                           'status': '수집 완료' if rows else ('신규 0건 · 이전 자료 유지' if prior else '최근 영상 0건'),
+                           'count': len(rows), 'previousRetained': 0 if rows else len(prior)})
         except Exception as e:
             errors.append('YouTube '+name+': '+type(e).__name__)
+            prior = [x for x in previous_videos if x.get('creator') == name]
+            found.extend(prior)
             health.append({'name': name, 'source': 'YouTube API' if key else 'YouTube RSS',
-                           'status': '연결 실패', 'count': 0})
+                           'status': '연결 실패 · 이전 자료 유지' if prior else '연결 실패',
+                           'count': 0, 'previousRetained': len(prior)})
     news_errors = 0
     for ticker, query in COMPANIES.items():
         try:
