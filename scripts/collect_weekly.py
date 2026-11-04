@@ -99,7 +99,7 @@ def record(title, url, date, platform, ticker, brand, creator, source):
     url = str(url or '').strip()
     if not title or not url.startswith('https://'):
         return None
-    if re.search(r'META_TITLE|stock price, news, quote|stock quote and history', title, re.I):
+    if re.search(r'META_TITLE|stock price, news, quote|stock quote and history|latest stock news and headlines|wall street zen upgrades', title, re.I):
         return None
     digest = sha256(url.encode('utf-8')).hexdigest()[:15]
     return {'id': 'rss-' + digest, 'title': title, 'url': url,
@@ -170,19 +170,22 @@ def weekly_digest(items, previous):
     counts = Counter(x['platform'] for x in items)
     topics = Counter(x['topic'] for x in items)
     company_counts = Counter(x['ticker'] for x in items if x['ticker'] in COMPANY_CHECK)
+    watch_priority = ['TPR', 'RL', 'GAP', 'URBN', 'LEVI', 'CPRI', 'VFC', 'ANF', 'AEO', 'PVH', 'VSXY', 'CAL']
+    ranked_topics = [(k, v) for k, v in topics.most_common() if k != '기타 뉴스·콘텐츠'][:4]
     previous_ids = {x.get('id') for x in previous.get('items', [])}
     previous_date = previous.get('generatedAt')
     return {
         'status': '자동 요약 · 원문 미검증',
         'counts': [{'source': k, 'count': v} for k, v in sorted(counts.items())],
-        'topics': [{'name': k, 'count': v} for k, v in topics.most_common(5)],
+        'topics': [{'name': k, 'count': v} for k, v in ranked_topics],
+        'uncategorizedCount': topics['기타 뉴스·콘텐츠'],
         'previousCollectedAt': previous_date,
         'newSincePrevious': sum(x['id'] not in previous_ids for x in items) if previous_date else None,
         'companyFocus': [
             {'ticker': ticker, 'count': count, 'check': COMPANY_CHECK[ticker],
              'headlines': [{'title': x['title'], 'url': x['url'], 'date': x['date'][:10]}
                            for x in items if x['ticker'] == ticker][:2]}
-            for ticker, count in sorted(company_counts.items(), key=lambda kv: (-kv[1], kv[0]))[:6]
+            for ticker, count in sorted(company_counts.items(), key=lambda kv: (watch_priority.index(kv[0]) if kv[0] in watch_priority else 99, -kv[1]))[:6]
         ],
         'reviewNote': '기사·영상 제목을 출처별로 묶은 자동 초안이며 유행 확정, 소비자 평가, 실적 분석이 아닙니다.',
     }
