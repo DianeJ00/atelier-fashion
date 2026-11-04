@@ -27,7 +27,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Discover public RSS headlines (unverified)
+      - name: Discover public RSS and optional YouTube API titles
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Save weekly source inbox in repository
         run: |
