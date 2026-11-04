@@ -50,7 +50,7 @@ def top3_facts(cards, consumer, articles, start):
  for card in cards:
   report=card.get("latestReport") or {}
   if report.get("filed", "")<start or not report.get("url"):continue
-  checked=card.get("officialStatus")=="quarter_verified" and bool(card.get("officialPeriod"))
+  checked=(card.get("officialStatus")=="quarter_verified" and bool(card.get("officialPeriod")) and report.get("form")=="10-Q" and card.get("latestReport",{}).get("filed")==report.get("filed"))
   highlights.append({
    "tier":"공식 공시","ticker":card["ticker"],"date":report["filed"],
    "title":card["officialText"] if checked else "SEC "+report["form"]+" 공시 제출",
