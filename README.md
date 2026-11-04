@@ -96,7 +96,7 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 **주간 수집:** 월요일 오전 9시 KST. 수동 재수집은 GitHub Actions에서 `ATELIER weekly research and site → Run workflow`.
 코드만 수정할 때는 배포만 하고 데이터를 불필요하게 재수집하지 않습니다.
 
-**SEC 접근:** 별도 키 불필요. SEC Fair Access 정책에 맞춰 GitHub `Settings → Secrets and variables → Actions`에서 `SEC_USER_AGENT`를 회사/사용자 식별자와 연락 가능한 이메일을 포함한 값으로 설정하는 것을 권장합니다. 비밀값을 HTML이나 채팅에 작성하지 마세요. SEC API가 차단되거나 GAAP 표준 수치가 없다면 '조회 불가/확인 필요'로 표시합니다.
+**SEC 접근:** 별도 키 불필요. SEC Fair Access 정책에 맞춰 GitHub `Settings → Secrets and variables → Actions`에서 `SEC_USER_AGENT`를 회사/사용자 식별자와 연락 가능한 이메일을 포함한 값으로 설정해야 SEC 자동 조회가 시작됩니다. SEC의 자동 접근 정책에 따라 연락 이메일이 없는 상태에서는 수집을 수행하지 않습니다. 비밀값을 HTML이나 채팅에 작성하지 마세요. SEC API가 차단되거나 GAAP 표준 수치가 없다면 '조회 불가/확인 필요'로 표시합니다.
 
 **소비자 댓글 주제 집계:** 공식 Google Cloud YouTube Data API v3의 `YOUTUBE_API_KEY`를 GitHub Actions secret에 저장해야만 활성화됩니다. 최대 5개 영상의 최신 최상위 공개 댓글 각 60개까지 대상으로 가격·핏·품질·디자인·구매 단어 언급 건수만 계산합니다. 댓글 내용과 작성자 정보는 저장하지 않습니다. 이는 대표성 있는 소비자 조사·긍부정 감성 분석·구매 증빙이 아닙니다.
 
