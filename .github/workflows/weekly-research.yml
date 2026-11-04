@@ -28,18 +28,26 @@ jobs:
         with:
           python-version: '3.11'
       - name: Discover public RSS and optional YouTube API titles
+        if: github.event_name != 'push'
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Save weekly source inbox in repository
+        if: github.event_name != 'push'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Rebase our generated JSON on the latest main to avoid stale workflow checkouts.
+          git fetch origin main
+          git reset --mixed origin/main
           git add weekly-research.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh weekly fashion source inbox'
-            git push
+            git push origin HEAD:main
           fi
+          # Publish current files rather than the snapshot from workflow start.
+          git fetch origin main
+          git reset --hard origin/main
       - name: Prepare published files only
         run: |
           mkdir -p _site
