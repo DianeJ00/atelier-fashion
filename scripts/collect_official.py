@@ -74,7 +74,7 @@ def period_days(entry: dict) -> int:
     except (KeyError, TypeError, ValueError):
         return 0
 
-def select_metric(companyfacts: dict, accn: str, metric: str):
+def select_metric(companyfacts: dict, accn: str, metric: str, report_end: str | None = None):
     gaap = companyfacts.get("facts", {}).get("us-gaap", {})
     for tag in METRIC_TAGS[metric]:
         entries = gaap.get(tag, {}).get("units", {}).get("USD", [])
@@ -88,7 +88,10 @@ def select_metric(companyfacts: dict, accn: str, metric: str):
             continue
         # An accession can contain both this quarter and the comparative prior quarter.
         current.sort(key=lambda x: (x["end"], x.get("filed", "")), reverse=True)
-        row = current[0]
+        # Guard against presenting an old comparative quarter as the new quarter.
+        row = next((x for x in current if not report_end or x["end"] == report_end), None)
+        if row is None:
+            continue
         value = row["val"]
         item = {
             "value": value, "unit": "USD", "usGaapTag": tag,
@@ -100,7 +103,9 @@ def select_metric(companyfacts: dict, accn: str, metric: str):
             base = []
             this_start = date.fromisoformat(row["start"])
             this_end = date.fromisoformat(row["end"])
-            for x in current[1:]:
+            for x in current:
+                if x is row:
+                    continue
                 if not x.get("start") or not x.get("end"):
                     continue
                 if x.get("val", 0) <= 0 or abs(period_days(x) - period_days(row)) > 8:
@@ -136,7 +141,7 @@ def collect_one(ticker, cik):
     latest_q = quarterly_filings[0]
     result["quarterFiling"] = latest_q
     facts = get_json(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik10}.json")
-    metrics = {key: select_metric(facts, latest_q["accession"], key) for key in METRIC_TAGS}
+    metrics = {key: select_metric(facts, latest_q["accession"], key, latest_q.get("reportEnd")) for key in METRIC_TAGS}
     if any(x is not None for x in metrics.values()):
         ref = next(x for x in metrics.values() if x is not None)
         result["quarter"] = {
