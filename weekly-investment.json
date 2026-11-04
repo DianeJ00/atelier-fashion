@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-04T23:30:44.795287+00:00",
+  "generatedAt": "2026-11-04T23:34:48.861164+00:00",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-04",
   "classification": "공식 재무 사실 + 미검증 자료 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
-    "unverifiedHeadlines": 27,
+    "unverifiedHeadlines": 34,
     "commentVideosSampled": 0,
     "commentSamples": 0
   },
-  "secStatus": "unavailable",
+  "secStatus": "configuration_required",
   "consumerStatus": "key_required",
   "companies": [
     {
       "ticker": "TPR",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -31,7 +31,7 @@
     },
     {
       "ticker": "RL",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -48,7 +48,7 @@
     },
     {
       "ticker": "GAP",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -65,7 +65,7 @@
     },
     {
       "ticker": "URBN",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -82,7 +82,7 @@
     },
     {
       "ticker": "LEVI",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -99,7 +99,7 @@
     },
     {
       "ticker": "CPRI",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -116,7 +116,7 @@
     },
     {
       "ticker": "VFC",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -133,7 +133,7 @@
     },
     {
       "ticker": "ANF",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -150,7 +150,7 @@
     },
     {
       "ticker": "AEO",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -167,7 +167,7 @@
     },
     {
       "ticker": "PVH",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -184,7 +184,7 @@
     },
     {
       "ticker": "VSXY",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
@@ -201,7 +201,7 @@
     },
     {
       "ticker": "CAL",
-      "officialStatus": "unavailable",
+      "officialStatus": "configuration_required",
       "officialText": "SEC 분기 매출 확인 대기",
       "officialPeriod": null,
       "officialSource": null,
