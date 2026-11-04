@@ -3,7 +3,7 @@
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-04",
   "reviewStatus": "unverified_headlines_only",
-  "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
+  "note": "자동 수집 기사 제목과 이전 실행에서 확인한 공개 YouTube 영상 제목을 구분해 보존. 인기·구매·매출 판단 금지.",
   "items": [
     {
       "id": "rss-6bd72c50fb616d2",
@@ -69,6 +69,34 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-f1a8b314babece7",
+      "title": "Ledbyher On Her Love For Fashion",
+      "url": "https://www.youtube.com/watch?v=Zz85DAl0dGQ",
+      "date": "2026-11-03T20:42:35Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
+    },
+    {
+      "id": "rss-7140b71d4623b2c",
+      "title": "Operations Director On How Fashion Week Is Organised",
+      "url": "https://www.youtube.com/watch?v=9H5MOcJ5M_Y",
+      "date": "2026-11-03T19:09:55Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "패션쇼·디자인",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
     },
     {
       "id": "rss-4cbde890c13b0a0",
@@ -175,6 +203,20 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-541409f299641ad",
+      "title": "Mariah Carey Stars In Gucci’s Christmas Campaign",
+      "url": "https://www.youtube.com/watch?v=auPKiKhHTXw",
+      "date": "2026-11-02T17:52:23Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "브랜드·제품",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
+    },
+    {
       "id": "rss-0e028428d469986",
       "title": "Shakeup at Old Navy continues amid merchandising struggles - Retail Dive",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeU9HRmphXzdGUUNhNHQxTl94QVUxb05ZaE1hMVhQZXNFQ2UyeTZMRFF3WlFYWEFZR0JRRW02RlctY1BCNVNFV2F5eDNsYjBfTDR0RGJpTUJTaWhCcjloaEhfcVdLSVkxWVh4Sy1NT1M3SmxYMnRRaFJTMzFxZENTQU5lbkZKUTBPdW9jc2hicFhTM2tONVNyaw?oc=5",
@@ -188,6 +230,20 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-2201dd87e652b57",
+      "title": "Why Converse’s Premium Line Makes SO Much Sense",
+      "url": "https://www.youtube.com/watch?v=qsGYshBLYNY",
+      "date": "2026-11-02T16:30:25Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
+    },
+    {
       "id": "rss-8f268443bdfb166",
       "title": "Let’s Get Fuzzy: Meet the Levi’s® Holiday Campaign - Levi Strauss & Co",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLYzhBUU16NGVFTGE0MlRZbV9ldkxLaElnMm40MVlwQW5Rd1JXNEtreXhGYXVwcExTNFNvLXUzTUtzeExmbDIwdjFBVUstVzFyXzlEc2hvUmZaRGt4MFlpS051TDZKU3U3TGc?oc=5",
@@ -199,6 +255,20 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-b7d1f23bcbd86dd",
+      "title": "Bottega Veneta SS27 Outerwear Double As Dresses",
+      "url": "https://www.youtube.com/watch?v=0CrnryIVUZQ",
+      "date": "2026-11-02T12:45:15Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
     },
     {
       "id": "rss-055684c48676722",
@@ -225,6 +295,20 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-fc2feb5629b1bed",
+      "title": "The hoodie everyone keeps asking about",
+      "url": "https://www.youtube.com/watch?v=7OK8T3gArtc",
+      "date": "2026-10-31T15:16:21Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Tim Dessaint",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
     },
     {
       "id": "rss-a2c2beb6d73a533",
@@ -329,6 +413,20 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-11fed69c65e7099",
+      "title": "Louis Vuitton Made The Trunk For The Ballon D’Or",
+      "url": "https://www.youtube.com/watch?v=8tUnj2W1rEk",
+      "date": "2026-10-28T23:00:11Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "carriedOver": true
     },
     {
       "id": "rss-66cff68b608b3f6",
@@ -491,14 +589,16 @@
     {
       "name": "Fashion Roadman",
       "source": "YouTube RSS",
-      "status": "수집 완료",
-      "count": 0
+      "status": "최근 신규 0건 · 이전 수집 자료 유지",
+      "count": 0,
+      "previousRetained": 6
     },
     {
       "name": "Tim Dessaint",
       "source": "YouTube RSS",
-      "status": "수집 완료",
-      "count": 0
+      "status": "최근 신규 0건 · 이전 수집 자료 유지",
+      "count": 0,
+      "previousRetained": 1
     },
     {
       "name": "공개 뉴스·패션 매체",
