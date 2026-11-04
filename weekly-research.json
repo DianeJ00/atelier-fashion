@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T08:05:22.744581Z",
+  "generatedAt": "2026-11-04T08:07:22.638542Z",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-04",
   "reviewStatus": "unverified_headlines_only",
@@ -227,6 +227,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-055684c48676722",
+      "title": "You Can Finally Rent Chanel on Rent the Runway - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUUhKaEFnVGRpTHN5OGZKcjNjZkVqZzVkWWpmVnM5cVJFblVuMjcwV1ZxMXdVb3NnUHdsQnZUNW5qUXoyZks2dElJT1BYWHNnMGc0RGd0Z3NLdHNDWTlnR1hGZGhPdnVkMXFDUWNWY21nVUpyQWR2Tm4wamV5UW0tZkJuV3hJY001UHYzTGtGVDZYQjFyUVdBSmVuY0xGT3l1anc?oc=5",
+      "date": "2026-11-02T05:30:00Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "패션쇼·디자인",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-d1fe479af27837d",
       "title": "2 Reasons to like VSXY and 1 to stay skeptical - TradingView",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQlYwSW5ZT1djV29zbkM3eVBEekRYVVh1eGhBcFl5dGw4QkZCWjJySlk1MUpUUkl2LVRJTXZwRXhzS0kweUZYeG1LS3E4eE43U2N4eFEzS242N2tCaXQ5dlljMEhKeldUNGphV1JtX0FldU9FOWg4ZmUxa3VCYWs5NVRVNzEySXFmX3NNYk9ETVJtbnl3ZE5qZzJxSjJJQjFmMGdrY0dOU0VGN2s?oc=5",
@@ -253,19 +266,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-4f0abfa64e1d802",
-      "title": "Wall Street Zen Upgrades Caleres (NYSE:CAL) to Strong-Buy - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNWM1RVFZSDlkbjVvd2VNcXRhOWZObFprVkNDeDlBOXRQS2xQQWJqZ3pHR2MtRC0xc2h3emNtVk9HUV85QkZ4T2lNNkZhbmZEZHRPSWZMQU9rbVROMXBwRndSUkJXcnFUZW9TLVJ2OGRMWUNIam4zcW5fbThkdFpTVHpuQmt5N3ZFWlhoTl9Zb0h1Ni1JS1pnenNSRkVRdjhpN0NsWFJNb2VzdVhvU202SUtISFVFa09w?oc=5",
-      "date": "2026-11-01T05:14:33Z",
-      "platform": "Google News",
-      "ticker": "CAL",
-      "brand": "",
-      "creator": "MarketBeat",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-fc2feb5629b1bed",
       "title": "The hoodie everyone keeps asking about",
       "url": "https://www.youtube.com/watch?v=7OK8T3gArtc",
@@ -275,6 +275,19 @@
       "brand": "",
       "creator": "Tim Dessaint",
       "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-9f1a3396a37210f",
+      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com Australia",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSkl1enJreWU2ZkZMOFBBajRtSFpKT1YzQllnSWU3SHRXM2dpZ0tuT0x3ZnE4djNnRTYzaW16eXdVTlpWN0JzVWgxcFYtMWpwUnVxTVMwN3E5elZ5MlBQdzlwYzdPaWRPNEJCSmpydVhKMTc1SmRYWkVtSmotY0F6YnhPcGdyUFZ5YlJqM0EySzlJdHZsSVpHaUFkVExOQVVlLW9LZmxpNkJ0LWl3bmZkTHJWYjl2TkFpT2tFeXNCSXpTakJTTlp2TGp0SFByY0J0czltaGxDR0h2Q2FFSmljYmFrbnNuVlU5a0trSEJB?oc=5",
+      "date": "2026-10-31T09:26:44Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "Investing.com Australia",
+      "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
@@ -357,19 +370,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-d891004a32a1cd1",
-      "title": "How Fashion Is Doing Business in the Middle East’s ‘New Reality’ - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQzBTakhZcmxQbGV6QmNsLVNoMEpoelgwSmE4SnB4SHdmVnhaUzRDSlVZRTItQUowOWpvbzVIMkYwZXVjZmhLZ1c2TWR3Ql9Dc0lPejVBTTVaMVZvRWRrekE1dzNQekJpZEo2TWNHN2dpRHQ5U1M0Vm1qNmNMQ3oxU3R6dFFfSVhQYW16VnNGaTdHdm9CSml4Q0tFbjI4azRULUFqUzJUME9qYmZDOHo4MHJHV0k2MmhnM3pydHpER2dMaFk2aG5hSDlqbnJLLUItZUQtU0RydkJ6LUdlSzBHcEViNGk4ZDhMalV2X3p3?oc=5",
-      "date": "2026-10-30T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-43c4c7277d29fa2",
       "title": "Nuuly to Convert Falls Township Quarry Into Clothing Rental Processing Center - BUCKSCO.Today",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1XzMzWXpjdUNuMTdGZ3Zscm5pYzBRSXhLdVhRVlJXUG0wbzkwS1UzQl9NYmlESlBwY0ZXTXktWDIxVWVCS3JzNDJnWEF0WFNvMzl3ek5IY05BVmQ5cEhuZWJubnJHWUI1VTgyZzhrcEtPNXFOU09yNA?oc=5",
@@ -378,19 +378,6 @@
       "ticker": "URBN",
       "brand": "",
       "creator": "BUCKSCO.Today",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-69fe161f45ac629",
-      "title": "American Eagle Outfitters, Inc. (AEO) latest stock news and headlines - Yahoo Finance Australia",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uYWFiMXdvaUFiaVhtMF9NVmp3OHUyTzNobjVqODdEWi1pRWpTazF2VHYzZ1FPRTdxcHFSb0lnUW9GWWRvQjNmRE90TkxabDFXYkEtMnRlZw?oc=5",
-      "date": "2026-10-29T11:01:44Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "Yahoo Finance Australia",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -453,7 +440,7 @@
     "counts": [
       {
         "source": "Google News",
-        "count": 27
+        "count": 26
       },
       {
         "source": "YouTube",
@@ -462,8 +449,8 @@
     ],
     "topics": [
       {
-        "name": "기타 뉴스·콘텐츠",
-        "count": 22
+        "name": "패션쇼·디자인",
+        "count": 4
       },
       {
         "name": "브랜드·제품",
@@ -474,65 +461,40 @@
         "count": 3
       },
       {
-        "name": "패션쇼·디자인",
-        "count": 3
-      },
-      {
         "name": "신발·스니커즈",
         "count": 2
       }
     ],
-    "previousCollectedAt": "2026-11-04T08:04:45.796772Z",
-    "newSincePrevious": 0,
+    "uncategorizedCount": 20,
+    "previousCollectedAt": "2026-11-04T08:05:22.744581Z",
+    "newSincePrevious": 2,
     "companyFocus": [
       {
-        "ticker": "AEO",
-        "count": 2,
-        "check": "Aerie 성장·연결 이익률",
+        "ticker": "TPR",
+        "count": 1,
+        "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "American Eagle Outfitters, Inc. (AEO) latest stock news and headlines - Yahoo Finance Australia",
-            "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5uYWFiMXdvaUFiaVhtMF9NVmp3OHUyTzNobjVqODdEWi1pRWpTazF2VHYzZ1FPRTdxcHFSb0lnUW9GWWRvQjNmRE90TkxabDFXYkEtMnRlZw?oc=5",
-            "date": "2026-10-29"
-          },
-          {
-            "title": "Court Slaps Aerie With Preliminary Injunction Barring Sale of Overslept Sleepwear - WWD",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQa3hOM2pqUmRzd0RINGtGejRJUzBnWkVDc3d0ZmNpbHVBa0N0NEZMVWduWGxnN1pWODdOR21BS2RDSFR1TlA4bHdyNEtJMENtSHI2QkRDZVFNQ2tiaS1ualFRcWh4WS1XWHNkcmpmRllqdXVpanJsc3dRVkhXYnhMSDdoX2VoZWg4LVZtbTNDRUM?oc=5",
-            "date": "2026-10-28"
+            "title": "What to Expect From Tapestry's Q1 2027 Earnings Report - inkl",
+            "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORFladElWMzJMbTV4VU44MVF1VzZJMzB2VnpxT09ZWEZsQ3hoWkRQR1oxbGZQeFpySXBBbzhrNFJqbWVPcUQ5dDF2c2d5Q2NTaG9kTjhVNFZ2REVReko0ejVoQnJjWmltQjVfa0x6b2hoOUEzRVRaZnNZRUNTSmwydkwxN3Z2Zw?oc=5",
+            "date": "2026-10-27"
           }
         ]
       },
       {
-        "ticker": "ANF",
+        "ticker": "RL",
         "count": 2,
-        "check": "Hollister 성장·마진",
+        "check": "평균 판매단가·아시아 매출",
         "headlines": [
           {
-            "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
-            "date": "2026-11-03"
+            "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
+            "date": "2026-11-04"
           },
           {
-            "title": "The CeeDee Lamb Edit from Abercrombie & Fitch [PHOTOS] - WWD",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlpKeDNiUHBRdHh4blE2R0FTWkE5bUtmZlFyYzZfbUFSeDRHcDhfWDB4UVM2VGpnVENUM3pCOTZmdURQRzRHWVYxcnQ3ODJXN0NCVklMRkJrMUF4MVZidjlabnFmblcta01PYUZyMlJkZ2JjcGIzRlFBMWtwR18wNHVySFRqM3pUcDJ3WEx5S0NLVy0tSDFNRm5yUVJaN0U?oc=5",
-            "date": "2026-11-03"
-          }
-        ]
-      },
-      {
-        "ticker": "CPRI",
-        "count": 2,
-        "check": "Michael Kors 매출·정가 판매",
-        "headlines": [
-          {
-            "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
-            "date": "2026-10-30"
-          },
-          {
-            "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
-            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
-            "date": "2026-10-30"
+            "title": "Can Ralph Lauren and Coach Keep Winning Even as US Spending Slows? - The Business of Fashion",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYV95eGNwbm5mdEx1M1VCVUMwTnF3b2ZrWkEtN3gyZzNaN21NSVVDdFdfcWdkdk5VZmczcWliNFNvMy1iR3hZa21mZnI0ZHNWSlZ4YnBMTl9mNHQ4NTVFRlpXcm56dVRyYVdVTTB5TVR2T2ZBZjlTR0NjMkdfQTF1aWVRYS1YNG1aTHM0M1lqa0RIX2tEVlNzaTZRbWtPU0k5SWpkbG5oN09nZEE0ek5RanV1TWJDdUU2?oc=5",
+            "date": "2026-11-01"
           }
         ]
       },
@@ -554,6 +516,23 @@
         ]
       },
       {
+        "ticker": "URBN",
+        "count": 2,
+        "check": "Free People 동일매장매출·Nuuly 마진",
+        "headlines": [
+          {
+            "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
+            "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
+            "date": "2026-10-30"
+          },
+          {
+            "title": "Nuuly to Convert Falls Township Quarry Into Clothing Rental Processing Center - BUCKSCO.Today",
+            "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFA1XzMzWXpjdUNuMTdGZ3Zscm5pYzBRSXhLdVhRVlJXUG0wbzkwS1UzQl9NYmlESlBwY0ZXTXktWDIxVWVCS3JzNDJnWEF0WFNvMzl3ek5IY05BVmQ5cEhuZWJubnJHWUI1VTgyZzhrcEtPNXFOU09yNA?oc=5",
+            "date": "2026-10-29"
+          }
+        ]
+      },
+      {
         "ticker": "LEVI",
         "count": 2,
         "check": "미국 직접판매 동일매장매출·재고",
@@ -571,19 +550,19 @@
         ]
       },
       {
-        "ticker": "PVH",
+        "ticker": "CPRI",
         "count": 2,
-        "check": "Calvin Klein·Tommy 매출",
+        "check": "Michael Kors 매출·정가 판매",
         "headlines": [
           {
-            "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
-            "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
-            "date": "2026-11-03"
+            "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
+            "date": "2026-10-30"
           },
           {
-            "title": "Jude Bellingham Strips Down for Calvin Klein After Lighting Up the World Cup - ADWEEK",
-            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa1BRbXN2eUpSb2FUQUNpUHZ6NmdMZTBRMjZYNFI1TG9Bbkctczd6a0x4NExmNW1zbHN5Q3dOUjhXUFJxS1RzZFBRRXdSendFLWd1WjNiTWpkX1ZDQ05MOWxGYnFVb09ZeU9ReFlzSnhqMGR2b2ExekdTMGt6Uzdod1BLRlZ2RUJkakNzam5ieHI1NGpuNWtTVHg0ZUYwbFVDcVUxOTh6dWV1UlBZcFNEdw?oc=5",
-            "date": "2026-11-02"
+            "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
+            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
+            "date": "2026-10-30"
           }
         ]
       }
@@ -607,7 +586,7 @@
       "name": "공개 뉴스·패션 매체",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 27
+      "count": 26
     }
   ],
   "errors": []
