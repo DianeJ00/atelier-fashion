@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T08:04:45.796772Z",
+  "generatedAt": "2026-11-04T08:05:22.744581Z",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-04",
   "reviewStatus": "unverified_headlines_only",
@@ -482,7 +482,7 @@
         "count": 2
       }
     ],
-    "previousCollectedAt": "2026-11-04T08:04:10.331677Z",
+    "previousCollectedAt": "2026-11-04T08:04:45.796772Z",
     "newSincePrevious": 0,
     "companyFocus": [
       {
