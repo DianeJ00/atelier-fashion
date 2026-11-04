@@ -6,6 +6,7 @@ No AI-generated interpretations or unverified financial estimates.
 from __future__ import annotations
 import json
 from collections import Counter
+import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -36,6 +37,53 @@ def short_usd(v):
  if abs(v)>=1e9:return f"USD {v/1e9:,.2f}B"
  if abs(v)>=1e6:return f"USD {v/1e6:,.1f}M"
  return f"USD {v:,.0f}"
+
+def headline_ok(row):
+ title=(row.get("title") or "").lower()
+ if not row.get("url") or not row.get("date"):return False
+ bad=("stock price", "stock quote", "latest stock news", "share price", "wall street zen", "meta_title")
+ return not any(word in title for word in bad)
+
+def top3_facts(cards, consumer, articles, start):
+ """Source-linked briefs; no synthetic trend direction or speculative scores."""
+ highlights=[]
+ for card in cards:
+  report=card.get("latestReport") or {}
+  if report.get("filed", "")<start or not report.get("url"):continue
+  checked=card.get("officialStatus")=="quarter_verified" and bool(card.get("officialPeriod"))
+  highlights.append({
+   "tier":"공식 공시","ticker":card["ticker"],"date":report["filed"],
+   "title":card["officialText"] if checked else "SEC "+report["form"]+" 공시 제출",
+   "context":card["nextCheck"]+" · GAAP 법인 단위; 브랜드별 지표 별도 확인",
+   "url":report["url"],"note":"공식 공시 사실, 세부 원문 확인 필요",
+  })
+  if len(highlights)>=2:break
+ # Product review is a lead, never a broad consumer conclusion.
+ for v in consumer.get("videos", []):
+  ticker=(v.get("titleMatchedTickers") or [""])[0]
+  if not ticker or not v.get("videoUrl") or ticker not in WATCH:continue
+  counts=v.get("themeCounts") or {}
+  topic=max(counts.items(),key=lambda x:x[1]) if counts else None
+  label="상품 리뷰 댓글 표본"
+  if topic:label+=" · "+topic[0]+" 언급 "+str(topic[1])+"건"
+  highlights.append({
+   "tier":"댓글 표본·미검증","ticker":ticker,"date":v.get("videoDate"),
+   "title":label,
+   "context":WATCH[ticker][0]+" · 최신 댓글 일부, 대표성·매출 영향 미확인",
+   "url":v["videoUrl"],"note":"협찬 여부와 표본 편향을 원문에서 확인",
+  })
+  break
+ selected=set(x["ticker"] for x in highlights)
+ for row in articles:
+  ticker=row.get("ticker")
+  if ticker not in WATCH or ticker in selected or not headline_ok(row):continue
+  highlights.append({
+   "tier":"기사 제목·미검증","ticker":ticker,"date":row.get("date","")[:10],
+   "title":row.get("title",""),"context":WATCH[ticker][0]+" · 공식 IR 교차 검증 전",
+   "url":row["url"],"note":"Google News RSS 발견 원문; 기사 본문 미검증",
+  })
+  break
+ return highlights[:3]
 
 def build():
  raw=read_json("weekly-research.json")
@@ -79,13 +127,16 @@ def build():
  rank={key:i for i,key in enumerate(WATCH)}
  cards.sort(key=lambda x:(0 if x.get("latestReport") and
             x["latestReport"].get("filed","")>=START else 1,rank[x["ticker"]]))
+ highlights=top3_facts(cards,consumer,news,START)
  output={
+  "highlights":highlights,
   "generatedAt":NOW.isoformat(),"periodStart":START,"periodEnd":NOW.date().isoformat(),
-  "classification":"공식 재무 사실 + 미검증 자료 + 투자 검증 질문",
+  "classification":"공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts":{
    "newSECReports":len(recent),"unverifiedHeadlines":len(news),
    "commentVideosSampled":len(videos),
-   "commentSamples":sum(x.get("sampledTopLevelComments",0) for x in videos)
+   "commentSamples":sum(x.get("sampledTopLevelComments",0) for x in videos),
+   "verifiedQuarters":sum(x.get("status")=="quarter_verified" for x in sec.get("companies",[]))
   },
   "secStatus":sec.get("sourceStatus","not_run"),
   "consumerStatus":consumer.get("status","not_run"),
