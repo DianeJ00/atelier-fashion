@@ -121,6 +121,7 @@ function overview(){
  if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
  return `<div class="r2-overview">
  <div class="r2-stats">${countBySector().map(x=>`<button class="r2-stat" data-r2="sector" data-val="${esc(x.s)}"><strong>${x.n}</strong><span>${esc(x.s)}</span><small>기업 보기 →</small></button>`).join('')}</div>
+ ${window.ATELIER3?.overview()||''}
  ${marketPanel()}
  ${diseaseMap()}
  ${clinicalPanel()}
@@ -184,12 +185,13 @@ function drugPanel(company){
  <div class="r2-check"><b>질환별 체크</b><span>${esc(company.focus)}</span><small>시험의 주요 완료일은 결과 발표일과 다르고, 경쟁 약물의 치료효과를 일률적으로 비교할 수 없습니다.</small></div></div>`;
 }
 function detailBody(company){
- if(state.detailTab==='핵심 KPI'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body">${window.ATELIER_CONSUMER?.card(company)||'<p class="r2-empty">공식 실적 수집 상태 확인 중</p>'}<div class="r2-kpi-checklist"><h4>다음 분기 확인할 항목</h4><div class="r2-kpi-list">${(company.kpis||[]).map(x=>`<span>${esc(x)}</span>`).join('')}</div></div></div>`;
- if(state.detailTab==='핵심 KPI')return `<div class="r2-detail-body"><h4>업종별 핵심 지표</h4><p class="r2-muted">아래는 앞으로 점검할 지표 목록이며 최신 실적 수치를 의미하지 않습니다.</p><div class="r2-kpi-grid">${(company.kpis||[]).map((k,i)=>`<div class="r2-kpi"><span>${i+1<10?'0'+(i+1):i+1}</span><b>${esc(k)}</b><small>공식 자료 대조 대기</small></div>`).join('')}</div>
+ if(state.detailTab==='핵심 KPI'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body">${window.ATELIER_CONSUMER?.card(company)||'<p class="r2-empty">공식 실적 수집 상태 확인 중</p>'}${window.ATELIER3?.secComparison(company.ticker)||''}<div class="r2-kpi-checklist"><h4>다음 분기 확인할 항목</h4><div class="r2-kpi-list">${(company.kpis||[]).map(x=>`<span>${esc(x)}</span>`).join('')}</div></div></div>`;
+ if(state.detailTab==='핵심 KPI')return `<div class="r2-detail-body">${window.ATELIER3?.secComparison(company.ticker)||''}<h4>업종별 핵심 지표</h4><p class="r2-muted">아래는 앞으로 점검할 지표 목록이며 최신 실적 수치를 의미하지 않습니다.</p><div class="r2-kpi-grid">${(company.kpis||[]).map((k,i)=>`<div class="r2-kpi"><span>${i+1<10?'0'+(i+1):i+1}</span><b>${esc(k)}</b><small>공식 자료 대조 대기</small></div>`).join('')}</div>
  <p class="r2-muted">서로 다른 회사의 사업·회계기간·조정 지표를 혼합해 비교하지 않습니다.</p></div>`;
  if(state.detailTab==='질환·파이프라인')return drugPanel(company);
  if(state.detailTab==='산업·경쟁'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body"><div class="r2-check"><b>사업 모델</b><span>${esc(company.domain)}</span></div><div class="r2-check"><b>수익성 검증 질문</b><span>${esc(company.focus)}</span></div>${window.ATELIER_CONSUMER?.card(company)||''}</div>`;
  if(state.detailTab==='산업·경쟁')return `<div class="r2-detail-body"><div class="r2-check"><b>산업 분류</b><span>${esc(company.domain||company.sector)}</span></div><div class="r2-check"><b>사업 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>비교 항목</b><span>${(company.kpis||[]).map(esc).join(' · ')}</span></div></div>`;
+ if(state.detailTab==='투자 가설'&&window.ATELIER3)return `<div class="r2-detail-body">${window.ATELIER3.recordCard(company,true)}</div>`;
  if(state.detailTab==='투자 가설')return `<div class="r2-detail-body"><div class="r2-check"><b>투자 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>가설을 훼손할 조건</b><span>${esc(company.risk)}</span></div><div class="r2-box-lite"><h4>브리프 이력</h4><p>${company.market==='한국'?'과거 담당 기업의 원본 브리프 연결 대기. 공개 저장소에 비공개 브리프 원문을 업로드하지 않습니다.':'현재는 초기 조사 항목. 정식 투자 가설로 채택·수정한 기록은 아직 없습니다.'}</p></div></div>`;
  return `<div class="r2-detail-body"><div class="r2-check"><b>사업에서 가장 중요한 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>산업 내 위치</b><span>${esc(company.disease||company.domain||company.sector)} · ${esc(company.maturity||company.technology||'')}</span></div>
  <div class="r2-check"><b>주의할 위험</b><span>${esc(company.risk)}</span></div>
@@ -238,6 +240,7 @@ function theses(){
  const group=state.thesisSector||'내 담당 기업';
  const list=companies().filter(x=>group==='전체'||x.sector===group);
  return `<section class="r2-panel r2-thesis-panel">
+ ${window.ATELIER3?.proposals(list,group)||''}
  <div class="r2-panel-head"><div><div class="r2-eyebrow">투자 가설 원장 · 초기 검증 질문</div><h2>기존 논리와 새 근거의 차이를 기록하는 곳</h2><p>현재 표시된 문구는 초기 점검 질문이며 확정된 투자 의견이 아닙니다. 원본 브리프와 최신 실적 검증 후 강화·유지·약화 판정을 기록합니다.</p></div></div>
  <div class="r2-filter-wrap" style="margin:12px 0">${click(options,group,'thesisSector')}</div>
  <div class="r2-thesis-grid">${list.map(c=>`<article class="r2-thesis-row"><div><b>${esc(c.ticker)}</b><small>${esc(c.name)} · ${esc(c.market)}</small></div>
@@ -253,6 +256,7 @@ function weeklyIntro(){
  const health=ready?`ClinicalTrials.gov 등록시험 ${Number(clinicalData?.verifiedTrialCards)||0}건 확인 · 임상 결과 판정 아님`:`공식 임상 자료 미연결`;
  return `<div class="r2-panel r2-weekly-intro"><div class="r2-panel-head"><div><h2>산업별 주간 리서치</h2><p>확인된 원문만 사용합니다. 패션은 원문 대조 브리프, 바이오는 등록시험 상태·일정 변화를 우선 연결합니다.</p></div></div>
  <div class="r2-filter-wrap">${click(sectorOptions,state.weeklySector,'weeklySector')}</div>
+ ${window.ATELIER3?.weekly(state.weeklySector,false)||''}
  ${global?`<div class="r2-weekly-grid">${[
  ["바이오·제약","질환·약물별 등록시험과 주요 완료일",health],
  ["소비재·서비스","방문·예약·구독·제품 수익화","공식 실적·운영지표 검증 대기"],
@@ -310,6 +314,7 @@ async function load(){
  prices=all[1]||null;pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
  renderCurrent();
  if(window.ATELIER_CONSUMER?.load)window.ATELIER_CONSUMER.load();
+ if(window.ATELIER3?.load)window.ATELIER3.load();
 }
 window.ATELIER2={load,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
 })();
