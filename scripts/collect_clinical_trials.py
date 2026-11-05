@@ -120,7 +120,7 @@ def parse_trial(study, asset, ticker):
         "start": clean_dates(status, "startDateStruct"),
         "primaryCompletion": clean_dates(status, "primaryCompletionDateStruct"),
         "completion": clean_dates(status, "completionDateStruct"),
-        "lastUpdatePost": (status.get("studyFirstPostDateStruct") or {}).get("date"),
+        "lastUpdatePost": (status.get("studyLastUpdatePostDateStruct") or {}).get("date"),
         "primaryMeasure": (primary[0].get("measure") or "")[:180] if primary else None,
         "hasResultsPosted": bool(study.get("hasResults")),
         "url": "https://clinicaltrials.gov/study/" + nct
