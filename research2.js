@@ -174,7 +174,9 @@ function drugPanel(company){
  ${rows.length?`<div class="r2-asset-list">${rows.map(r=>{
   const item=extracted.find(x=>x.asset===r.asset);
   const trials=item?.trials||[];
-  return `<div class="r2-asset-card"><div class="r2-asset-head"><b>${esc(r.asset)}</b>${pill(r.modality)}<a href="${url(r.link)}" target="_blank" rel="noopener noreferrer">전체 검색 ↗</a></div>
+  return `<div class="r2-asset-card"><div class="r2-asset-head"><b>${esc(r.asset)}</b>${pill(r.modality)}${r.stage?pill(r.stage):pill('등록 단계 검증 대기')}<a href="${url(r.clinicalTrialURL||r.link)}" target="_blank" rel="noopener noreferrer">${r.clinicalTrialURL?'확인한 임상 원문 ↗':'전체 검색 ↗'}</a></div>
+  ${r.stage?`<p class="r6-trial-stage"><strong>공식 등록시험 기준</strong> · ${esc(r.stage)} · ${esc(r.trialStatus||'등록 상태 미기재')} · ${esc(String(r.stageVerifiedAt||'').slice(0,10))}</p>`:''}
+  <p class="r6-trial-disclaimer">최고 단계로 확인된 개별 등록시험 정보이며, 모든 적응증의 전체 개발 단계·신약 허가 여부를 뜻하지 않습니다.</p>
   ${trials.length?`<div class="r2-trial-grid">${trials.map(t=>`<div class="r2-trial-row">
     <div><a href="${url(t.url)}" target="_blank" rel="noopener noreferrer"><strong>시험 상세 ↗</strong></a> ${pill((t.phases||[]).map(z=>({'PHASE3':'3상','PHASE2':'2상','PHASE1':'1상','PHASE4':'4상'}[z]||z)).join('·')||'단계 미기재')} ${pill(t.statusKr||t.status||'상태 미기재')}</div>
     <p>${esc(t.title)}</p>
