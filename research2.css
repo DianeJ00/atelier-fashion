@@ -180,3 +180,42 @@
 .r2-weekly-clinical{border-top:1px solid #e2eaf3;padding-top:14px;margin-top:13px}
 .r2-weekly-clinical h3{margin:0 0 9px;font-size:13px;color:#214e80}
 .r2-weekly-clinical .r2-trial-events{margin-top:4px}
+
+/* Accessibility: readable and consistent type scale across legacy and cross-sector views.
+   Body 15px, analytical text 14-15px, metadata 12px; no more 10-11px body paragraphs. */
+body{font-size:15px;line-height:1.68}
+.content{font-size:15px;line-height:1.68}
+.content :is(p,li,td,th){line-height:1.65}
+.content :is(.lead,.brief-observation,.signal-observation,.card-desc,.r2-detail-header p,.r2-detail-body p,.r2-panel-head p,.r2-check span,.r2-thesis-row p,.r2-weekly-tile p,.r2-trial-row p){font-size:14px;line-height:1.7}
+.content :is(.brief-evidence-grid p,.brief-caution,.r2-panel p,.r2-foot,.source-note,.weekly-disclaimer,.research-method p,.card-desc,.trend-fresh p,.social-byline,.channel-desc,.feed-excerpt){font-size:13.5px;line-height:1.65}
+.content :is(.brief-origin,.brief-date,.brief-review,.brief-type,.brief-tags,.r2-eyebrow,.r2-asof,.r2-trial-row small,.r2-company-name small,.r2-market,.r2-company-row small,.r2-clinical-insight small){font-size:12px;line-height:1.55}
+.content :is(.r2-chip,.r2-link,.r2-detail-tabs button,.r2-pill,.brief-pending-row,.r2-asset-head a,.r2-bio-filter small,.r2-trial-row){font-size:13px;line-height:1.5}
+.content :is(.r2-company-name b,.r2-ticker,.r2-detail-footer a,.r2-shortcut-grid b,.r2-breadth-title b,.r2-kpi b,.r2-trial-events span){font-size:14px}
+.content :is(.r2-trial-events small,.r2-trial-events a,.r2-kpi small,.r2-kpi>span,.r2-breadth-title span){font-size:12px}
+.content :is(.brief-article-title h3){font-size:18px;line-height:1.45}
+.content :is(.r2-panel h2,.trend-fresh h2,.weekly-heading h2){font-size:20px;line-height:1.45}
+.content :is(.r2-page-head h1,.section-head h1){font-size:27px;line-height:1.3}
+.content :is(.card-title,.r2-panel h3,.r2-detail-body h4,.r2-asset-head b){font-size:16px}
+.content :is(.social-item h3,.trend-signal h2,.thesis-row h2){font-size:16px;line-height:1.55}
+.content :is(.social-item .social-byline,.source-note,.evidence-note-muted,.brief-source-archive p){font-size:13px;line-height:1.6}
+.content :is(.r2-table td,.r2-mini-table td,.r2-table th,.r2-mini-table th,.peer-table td,.peer-table th){font-size:13px;line-height:1.55}
+.content .r2-table td b,.content .r2-mini-table td a{font-size:13.5px}
+.content .r2-clinical-insight p{font-size:14px;line-height:1.7}
+.content .r2-clinical-insight h4{font-size:16px;line-height:1.5}
+.content .r2-detail-tabs button{padding:13px 9px}
+.content .brief-article{padding:18px 20px}
+.nav-item{font-size:14px;line-height:1.45}
+.identity small,.nav-eyebrow,.sidebar-tiny,.crumb{font-size:11.5px}
+.r2-clinical-digest{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:13px 0}
+.r2-clinical-insight{border:1px solid #dee8f2;border-radius:9px;background:#fbfdff;padding:14px 15px;display:grid;align-content:start;gap:8px}
+.r2-clinical-insight-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px}
+.r2-clinical-insight-meta>span{font-size:12px;color:#32618c;background:#eaf3fd;padding:4px 8px;border-radius:6px;font-weight:700}
+.r2-clinical-insight-meta a{font-size:12px;color:#285e91;font-weight:700}
+.r2-clinical-insight h4{color:#1b476e;margin:0}
+.r2-clinical-insight p{color:#3a536a;margin:0}
+.r2-clinical-insight p b{color:#255f93}
+.r2-clinical-insight small{color:#7e8fa1}
+.r2-clinical-raw{border:1px solid #dbe5ef;border-radius:8px;margin:10px 0;overflow:hidden}
+.r2-clinical-raw summary{cursor:pointer;background:#f4f8fc;padding:11px 14px;font-size:13px;font-weight:750;color:#3a627f}
+.r2-clinical-raw>.r2-trial-changes,.r2-clinical-raw>.r2-trial-events{margin:12px}
+@media(max-width:820px){.r2-clinical-digest{grid-template-columns:1fr}.content{padding-left:16px;padding-right:16px}.content .brief-article{padding:14px}.content :is(.brief-article-title h3,.r2-detail-header h2){font-size:17px}}
