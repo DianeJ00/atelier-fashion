@@ -119,20 +119,12 @@ function diseaseMap(){
 }
 function overview(){
  if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
- return `<div class="r2-overview">
- <div class="r2-stats">${countBySector().map(x=>`<button class="r2-stat" data-r2="sector" data-val="${esc(x.s)}"><strong>${x.n}</strong><span>${esc(x.s)}</span><small>기업 보기 →</small></button>`).join('')}</div>
- ${window.ATELIER3?.overview()||''}
+ return `<div class="r2-overview r5-overview">
  ${marketPanel()}
- ${diseaseMap()}
- ${clinicalPanel()}
- ${window.ATELIER_CONSUMER?.summary()||''}
- <div class="r2-panel r2-shortcuts"><h3>산업별 분석 기준</h3>
- <div class="r2-shortcut-grid">
- <button data-r2="sector" data-val="바이오·제약"><b>바이오·제약</b><span>질환 → 약물·기술 → 임상·허가 → 현금</span></button>
- <button data-r2="sector" data-val="소비재·서비스"><b>소비재·서비스</b><span>방문·이용 → 가격·수익화 → 마진·FCF</span></button>
- <button data-r2="sector" data-val="패션"><b>미국 패션</b><span>스타일·브랜드 → 정가 판매 → 동일매장매출</span></button>
- <button data-r2="sector" data-val="내 담당 기업"><b>국내 기존 브리프</b><span>산업별 KPI → 투자 가설의 강화·약화</span></button>
- </div></div></div>`;
+ ${window.ATELIER3?.industryOverview()||''}
+ ${window.ATELIER3?.overviewSignals()||''}
+ ${window.ATELIER3?.attentionQueue()||''}
+ </div>`;
 }
 function visibleCompanies(){
  const search=state.search.trim().toLowerCase();
@@ -155,7 +147,7 @@ function cardsTable(list){
  ${!list.length?'<div class="r2-empty">조건에 맞는 기업이 없습니다. 필터를 변경해 주세요.</div>':''}</div>`;
 }
 function detailTabs(company){
- const tabs=['사업 이해','핵심 KPI',company.sector==='바이오·제약'?'질환·파이프라인':'산업·경쟁','투자 가설'];
+ const tabs=['사업 이해','핵심 KPI',company.sector==='바이오·제약'?'질환·파이프라인':'산업·경쟁','투자 판단'];
  return `<div class="r2-detail-tabs">${tabs.map(t=>`<button data-r2="tab" data-val="${esc(t)}" class="${state.detailTab===t?'is-active':''}">${esc(t)}</button>`).join('')}</div>`;
 }
 function trialDate(dateStruct){
@@ -191,21 +183,21 @@ function detailBody(company){
  if(state.detailTab==='질환·파이프라인')return drugPanel(company);
  if(state.detailTab==='산업·경쟁'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body"><div class="r2-check"><b>사업 모델</b><span>${esc(company.domain)}</span></div><div class="r2-check"><b>수익성 검증 질문</b><span>${esc(company.focus)}</span></div>${window.ATELIER_CONSUMER?.card(company)||''}</div>`;
  if(state.detailTab==='산업·경쟁')return `<div class="r2-detail-body"><div class="r2-check"><b>산업 분류</b><span>${esc(company.domain||company.sector)}</span></div><div class="r2-check"><b>사업 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>비교 항목</b><span>${(company.kpis||[]).map(esc).join(' · ')}</span></div></div>`;
- if(state.detailTab==='투자 가설'&&window.ATELIER3)return `<div class="r2-detail-body">${window.ATELIER3.recordCard(company,true)}</div>`;
- if(state.detailTab==='투자 가설')return `<div class="r2-detail-body"><div class="r2-check"><b>투자 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>가설을 훼손할 조건</b><span>${esc(company.risk)}</span></div><div class="r2-box-lite"><h4>브리프 이력</h4><p>${company.market==='한국'?'과거 담당 기업의 원본 브리프 연결 대기. 공개 저장소에 비공개 브리프 원문을 업로드하지 않습니다.':'현재는 초기 조사 항목. 정식 투자 가설로 채택·수정한 기록은 아직 없습니다.'}</p></div></div>`;
+ if(state.detailTab==='투자 판단'&&window.ATELIER3)return `<div class="r2-detail-body r5-decision">${window.ATELIER3.companyDecision(company)}</div>`;
+ if(state.detailTab==='투자 판단')return `<div class="r2-detail-body"><div class="r2-check"><b>투자 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>가설을 훼손할 조건</b><span>${esc(company.risk)}</span></div><div class="r2-box-lite"><h4>브리프 이력</h4><p>${company.market==='한국'?'과거 담당 기업의 원본 브리프 연결 대기. 공개 저장소에 비공개 브리프 원문을 업로드하지 않습니다.':'현재는 초기 조사 항목. 정식 투자 가설로 채택·수정한 기록은 아직 없습니다.'}</p></div></div>`;
  return `<div class="r2-detail-body"><div class="r2-check"><b>사업에서 가장 중요한 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>산업 내 위치</b><span>${esc(company.disease||company.domain||company.sector)} · ${esc(company.maturity||company.technology||'')}</span></div>
  <div class="r2-check"><b>주의할 위험</b><span>${esc(company.risk)}</span></div>
  <div class="r2-box-lite"><h4>자료 상태</h4><p>${esc(company.status)}. 공식 분기·임상·브랜드 지표는 별도 확인이 필요하며, 상단의 기존 패션 시세와 다른 산업을 직접 비교하지 않습니다.</p></div></div>`;
 }
 function companyDetail(company){
  if(!company)return '<div class="r2-detail r2-empty">기업을 선택해 주세요.</div>';
- const chosen=state.detailTab==='질환·파이프라인'&&company.sector!=='바이오·제약'?'사업 이해':state.detailTab;
+ const chosen=state.detailTab==='질환·파이프라인'&&company.sector!=='바이오·제약'?'사업 이해':state.detailTab==='투자 가설'?'투자 판단':state.detailTab;
  if(chosen!==state.detailTab)state.detailTab=chosen;
  const isBio=company.sector==='바이오·제약';
  return `<section class="r2-detail">
  <div class="r2-detail-header"><div class="r2-eyebrow">${esc(company.market)} · ${esc(company.sector)}</div>
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
- <p>${esc(company.focus)}</p>
+ <p>${state.detailTab==='투자 판단'?'최신 근거와 반증 조건을 확인하고 직접 투자 판단을 기록합니다.':esc(company.focus)}</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
  ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
@@ -252,25 +244,18 @@ function theses(){
 }
 
 function weeklyIntro(){
- const global=state.weeklySector==='전체',bio=state.weeklySector==='바이오·제약';
- const ready=['ok','partial'].includes(clinicalData?.status);
- const health=ready?`ClinicalTrials.gov 등록시험 ${Number(clinicalData?.verifiedTrialCards)||0}건 확인 · 임상 결과 판정 아님`:`공식 임상 자료 미연결`;
- return `<div class="r2-panel r2-weekly-intro"><div class="r2-panel-head"><div><h2>산업별 주간 리서치</h2><p>확인된 원문만 사용합니다. 패션은 원문 대조 브리프, 바이오는 등록시험 상태·일정 변화를 우선 연결합니다.</p></div></div>
- <div class="r2-filter-wrap">${click(sectorOptions,state.weeklySector,'weeklySector')}</div>
- ${window.ATELIER3?.weekly(state.weeklySector,false)||''}
- ${global?`<div class="r2-weekly-grid">${[
- ["바이오·제약","질환·약물별 등록시험과 주요 완료일",health],
- ["소비재·서비스","방문·예약·구독·제품 수익화","공식 실적·운영지표 검증 대기"],
- ["패션","상품·브랜드 변화와 정가 판매","원문 확인 편집 브리프"],
- ["내 담당 기업","원본 브리프와 DART 실적 비교","비공개 원문 연결 대기"]
- ].map(x=>`<div class="r2-weekly-tile"><b>${esc(x[0])}</b><p>${esc(x[1])}</p><small>${esc(x[2])}</small></div>`).join('')}</div>`:
- `<div class="r2-weekly-single"><b>${esc(state.weeklySector)}</b><p>${bio?health:state.weeklySector==='패션'?'아래에 기존 원문 대조 보고서를 표시합니다.':'공식 원문에 근거한 운영 KPI 분석을 연결하는 중입니다. 제목만으로 리서치를 생성하지 않습니다.'}</p></div>`}
- ${state.weeklySector==='소비재·서비스'?(window.ATELIER_CONSUMER?.latest()||''):''}
- ${bio?`<div class="r2-weekly-clinical"><h3>바이오 신약 개발, 이번 주 확인할 것</h3>
- ${clinicalDigest()}
- <details class="r2-clinical-raw"><summary>NCT별 변경·완료 예정일 자세히 보기</summary>${trialChangesBlock()}${trialEvents()}</details>
- <p class="r2-foot">시험 상태·날짜는 제출자가 갱신한 등록정보입니다. 효과·안전성·기업가치 영향은 임상 결과 자료로 별도 검증해야 합니다.</p></div>`:''}
- </div>`;
+ const sector=state.weeklySector;
+ const bio=sector==='바이오·제약';
+ const consumer=sector==='소비재·서비스';
+ return `<section class="r5-weekly">
+ <div class="r5-weekly-head"><div><div class="r2-eyebrow">원문을 확인한 산업별 변화</div><h2>이번 주 투자 리서치</h2><p>이번 주 발생한 사건과 과거 실적·향후 일정을 구분합니다. 자세한 해석은 아래 공식 근거에서 확인하세요.</p></div></div>
+ <div class="r2-filter-wrap r5-weekly-filter">${click(sectorOptions,sector,'weeklySector')}</div>
+ ${window.ATELIER3?.weekly(sector,false)||'<p class="r2-empty">통합 주간 보고서 연결 대기</p>'}
+ ${window.ATELIER3?.reviewQueue(sector)||''}
+ ${bio?`<details class="r5-source-detail"><summary>바이오 등록시험 · 질환별 연구 일정·원자료 자세히 보기</summary>
+ <div class="r5-source-inner">${clinicalDigest()}<details class="r2-clinical-raw"><summary>공식 등록시험 변경·일정 원자료</summary>${trialChangesBlock()}${trialEvents()}</details></div></details>`:''}
+ ${consumer?`<details class="r5-source-detail"><summary>소비재 15개 기업 · 최근 검토 실적·운영 KPI 더 보기</summary><div class="r5-source-inner">${window.ATELIER_CONSUMER?.latest()||'<p>공식 자료 연결 대기</p>'}</div></details>`:''}
+ </section>`;
 }
 function weeklyFashionEnabled(){return ['전체','패션'].includes(state.weeklySector)}
 function goSector(name){
@@ -286,7 +271,7 @@ function act(kind,val){
  if(kind==='thesisSector'){state.thesisSector=val;renderCurrent();return}
  if(kind==='diseaseJump'){state.disease=val;state.sector='바이오·제약';state.market='전체';state.search='';state.technology='전체';state.selected='';state.legacy=false;if(window.atelierGotoCompanies)window.atelierGotoCompanies();else renderCurrent();return}
  if(kind==='legacy'){if(typeof window.atelierLegacyFashion==='function')window.atelierLegacyFashion();return}
- if(kind==='company'){state.selected=val;state.detailTab='사업 이해'}
+ if(kind==='company'){state.selected=val;if(state.detailTab!=='투자 판단')state.detailTab='사업 이해'}
  else if(kind==='tab'){state.detailTab=val}
  else if(kind==='market'){state.market=val;state.selected=''}
  else if(kind==='disease'){state.disease=val;state.selected=''}
