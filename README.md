@@ -315,3 +315,12 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - **운영:** 매주 월요일 09:00 KST와 수동 재수집 또는 `[research refresh]` 커밋에서 전체 수집 후 GitHub Pages 게시. 일반 코드 푸시에서는 데이터 파일을 덮어쓰지 않음.
 
 시장 원문: [XLK](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLK) · [XBI](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XBI) · [XLY](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLY) · [XRT](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XRT), 가격 제공 Barchart WebSol.
+
+## 19. 국내 담당 기업 OpenDART 공식 보고서 연결
+
+- 국내 과거 담당 기업 5개(인제니아테라퓨틱스 950260, APR 278470, 삼양식품 003230, KB금융 105560, DB손해보험 005830)는 미국 SEC와 분리해 **공식 OpenDART**의 정기보고서 및 재무제표를 확인합니다.
+- `scripts/collect_korea_dart.py`: GitHub Actions의 비공개 `DART_API_KEY` 인증키를 이용해 법인 고유번호를 종목코드로 확인하고, 최신 확정 사업·반기·분기보고서 및 해당 회사 연결/별도 재무제표 표준 계정을 대조합니다. API 키 자체는 공개 HTML·JSON에 기록하지 않습니다.
+- 공식 XBRL 손익계산서 매출·영업이익·순이익은 **반기/분기 3개월 금액, 사업보고서 연간 12개월 금액**으로 구분합니다. 없는 계정은 임의 추정하지 않으며, 전년 비교 가능 여부도 원문으로 확인합니다.
+- `korea-dart.json` 및 `korea.js`는 국내 회사 **기업 분석 → 핵심 KPI** 안에서만 공식 재무 숫자/출처 또는 연결 필요 상태를 표시합니다. 은행 NIM/CET1, 보험 CSM/K-ICS, 해외 브랜드·임상 특화 KPI는 별도 정식 IR 대조 전까지 수치 자동 추정하지 않습니다.
+- **외부 인증 조건:** 현재 연결 정보가 없다면 GitHub 저장소 Settings → Secrets and variables → Actions → New repository secret에 **DART_API_KEY**(본인의 OpenDART 발급 키)로 등록한 뒤 Actions의 주간 수집을 실행해야 합니다. 키를 ChatGPT 대화나 GitHub 코드 파일·이슈에 공개하지 마세요.
+- 공시 자동 수집을 위한 공식 가이드: [OpenDART 공시검색](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS001&apiId=2019001), [단일회사 재무제표](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS003&apiId=2019020).
