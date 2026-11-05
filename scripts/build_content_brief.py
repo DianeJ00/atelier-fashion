@@ -249,6 +249,9 @@ def build():
     curated = load("editorial-brief.json", {"items": []})
     previous = load("weekly-content.json", {"autoItems": []})
     manual = [x for x in curated.get("items", []) if x.get("date", "") >= WINDOW]
+    manual.sort(key=lambda x:(x.get("priority",0),x.get("date","")),reverse=True)
+    reviewed_ids = {source_id: x for x in manual for source_id in x.get("inboxIds",[])}
+    reviewed_links = {x.get("url") for x in manual}
     auto_map = {x["url"]: x for x in previous.get("autoItems", [])
                 if x.get("url") and x.get("date", "") >= WINDOW}
     candidates, errors = rss_candidates()
@@ -271,7 +274,7 @@ def build():
     queued_urls = {x.get("url") for x in queue}
     for item in inbox.get("items", []):
         url = item.get("url")
-        if not url or url in known_urls or url in queued_urls:
+        if not url or url in known_urls or url in queued_urls or item.get("id") in reviewed_ids:
             continue
         day = str(item.get("date") or "")[:10]
         if day < WINDOW:
@@ -286,17 +289,27 @@ def build():
         queued_urls.add(url)
     # Curated original-source review trumps auto drafts; do not conflate dates.
     urls = {x["url"] for x in manual}
-    selected = list(manual)
+    selected=list(manual[:5])
+    reviewed_extra=list(manual[5:])
     for row in auto:
-        if row["url"] not in urls and len(selected) < 5:
+        if row["url"] not in urls and len(selected)<5:
             selected.append(row)
             urls.add(row["url"])
-    selected.sort(key=lambda x: (x["status"] == "원문 대조·편집", x["date"]), reverse=True)
+    verified_map = {
+        k: {"id":v["id"],"title":v["title"],"summary":v["summary"],
+            "impact":v["impact"],"kpi":v["kpi"],"risk":v["risk"],
+            "source":v["source"],"sourceType":v["sourceType"],
+            "url":v["url"],"secondaryUrl":v.get("secondaryUrl"),
+            "reviewedAt":curated.get("editedAt"),"status":v["status"]}
+        for k,v in reviewed_ids.items()
+    }
     output = {
         "generatedAt": NOW.isoformat(), "periodStart": WINDOW,
         "periodEnd": NOW.date().isoformat(),
-        "summaryPolicy": "원문이 확보된 경우만 요약. AI 초안은 검증 전이며 패션 크리에이터 영상 제목만으로 내용을 추정하지 않음.",
-        "items": selected[:5], "autoItems": auto[:20],
+        "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
+        "items": selected[:5], "reviewedExtra":reviewed_extra,
+        "reviewedInInbox":verified_map,"reviewedSourceCount":len(reviewed_ids),
+        "autoItems": auto[:20],
         "pending": queue[:12], "pendingCount": len(queue),
         "sourceErrors": errors,
         "sourcesChecked": len(candidates),
