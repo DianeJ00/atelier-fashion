@@ -324,3 +324,5 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - `korea-dart.json` 및 `korea.js`는 국내 회사 **기업 분석 → 핵심 KPI** 안에서만 공식 재무 숫자/출처 또는 연결 필요 상태를 표시합니다. 은행 NIM/CET1, 보험 CSM/K-ICS, 해외 브랜드·임상 특화 KPI는 별도 정식 IR 대조 전까지 수치 자동 추정하지 않습니다.
 - **외부 인증 조건:** 현재 연결 정보가 없다면 GitHub 저장소 Settings → Secrets and variables → Actions → New repository secret에 **DART_API_KEY**(본인의 OpenDART 발급 키)로 등록한 뒤 Actions의 주간 수집을 실행해야 합니다. 키를 ChatGPT 대화나 GitHub 코드 파일·이슈에 공개하지 마세요.
 - 공시 자동 수집을 위한 공식 가이드: [OpenDART 공시검색](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS001&apiId=2019001), [단일회사 재무제표](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS003&apiId=2019020).
+
+- **2.6.1 갱신 검증:** 시장 ETF 원문 스냅샷, SEC 미국 47사, 바이오 등록시험 12건, 국내 OpenDART 연결 상태, 회사별 출처 감사 항목을 정기 갱신에서 함께 검사합니다. API 키 누락은 비밀키를 추측하거나 외부로 전송하지 않고 미연결 상태로 남깁니다.
