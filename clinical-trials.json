@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:13:53.700505+00:00",
+  "generatedAt": "2026-11-05T06:28:04.570482+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -1959,9 +1959,48 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-05T06:05:33.454727+00:00",
+  "comparisonTo": "2026-11-05T06:13:53.700505+00:00",
   "changeCount": 0,
   "changes": [],
+  "weeklyInterpretation": [
+    {
+      "type": "변경 없음",
+      "title": "동일 시험 등록정보에서 중요한 변경 없음",
+      "observation": "직전 수집과 비교한 동일 NCT 표본에서 진행 상태·시험 단계·주요 완료일·결과 등록 표시 변화가 확인되지 않음.",
+      "investmentCheck": "실제 기업 공지와 임상 결과 발표 여부는 별도로 확인",
+      "limitation": "상위 검색 표본에 한정되며 외부에서 새로운 임상 결과가 없었다는 뜻은 아님.",
+      "url": "https://clinicaltrials.gov/",
+      "nctId": null
+    },
+    {
+      "type": "향후 시험 일정",
+      "title": "[신경계] BIIB lecanemab의 등록 완료 예정일",
+      "observation": "등록시험 NCT03887455 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2026-12-31(예상)로 기재됨.",
+      "investmentCheck": "BIIB의 lecanemab 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
+      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "url": "https://clinicaltrials.gov/study/NCT03887455",
+      "nctId": "NCT03887455"
+    },
+    {
+      "type": "향후 시험 일정",
+      "title": "[비만·대사] AMGN MariTide의 등록 완료 예정일",
+      "observation": "등록시험 NCT06858839 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2027-01-21(예상)로 기재됨.",
+      "investmentCheck": "AMGN의 MariTide 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
+      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "url": "https://clinicaltrials.gov/study/NCT06858839",
+      "nctId": "NCT06858839"
+    },
+    {
+      "type": "향후 시험 일정",
+      "title": "[면역·염증] ABBV risankizumab의 등록 완료 예정일",
+      "observation": "등록시험 NCT06063967 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2027-03(예상)로 기재됨.",
+      "investmentCheck": "ABBV의 risankizumab 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
+      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "url": "https://clinicaltrials.gov/study/NCT06063967",
+      "nctId": "NCT06063967"
+    }
+  ],
+  "weeklyInterpretationPolicy": "시험 등록 상태와 예상 완료일을 한국어로 재구성한 관찰. 실제 데이터 발표·승인·성공을 뜻하지 않음.",
   "changesNote": "이전 상위 등록시험 표본과 비교. 신규 포착은 신규 임상 개시를 뜻하지 않음.",
   "limitations": [
     "시험 등록자료는 제출자 관리 정보로 임상 성공·승인·실제 투자 가치의 검증이 아님",
