@@ -38,7 +38,7 @@ vm.runInNewContext(read("health.js"),context);
  for(const t of ["SPY","QQQ","XLK","XBI","XLY","XRT"])
    assert.ok(urls[t].startsWith("https://raymondjames.websol.barchart.com/"));
  const audit=w.ATELIER_HEALTH.panel();
- assert.ok(audit.includes("자료 수집")&&audit.includes("검증"));
+ assert.ok(audit.includes("지금 실제로 확인되는 자료와 남은 작업")&&audit.includes("재검증·연결 확인"));
  assert.ok(read(".github/workflows/weekly-research.yml").includes("data-health.json"));
  console.log("ATELIER 2.6 market source snapshot, excess returns, live widget and coverage audit PASS");
 })().catch(e=>{console.error(e);process.exitCode=1});
