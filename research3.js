@@ -39,7 +39,7 @@ function weekly(sector="전체",preview=false){
  const shown=preview?items.slice(0,3):items;
  const count=items.length;
  const stale=report.staleConsumerKpi||[];
- const more=preview?'<button class="a3-open-weekly" data-a3="openWeekly">통합 주간 보고서 전체 보기 →</button>':"";
+ const more=preview?'<button class="a3-open-weekly" data-a3="openWeekly">통합 주간 보고서 전체 보기 →</button>':'<button class="a3-open-weekly" data-a3="download" data-sector="'+esc(sector)+'">주간 보고서 저장 ↓</button>';
  const future=(!preview&&(sector==="전체"||sector==="바이오·제약")&&(report.upcomingClinical||[]).length)?
  '<details class="a3-upcoming"><summary>예정된 바이오 시험 평가 시점 · 이번 주 발생 사건과 구분</summary>'+report.upcomingClinical.map(t=>
  '<div><b>'+esc(t.title)+'</b><small>'+esc(t.date)+'</small><p>'+esc(t.observation)+'</p><a href="'+uri(t.url)+'" target="_blank" rel="noopener noreferrer">등록자료 ↗</a></div>'
@@ -96,6 +96,53 @@ function overview(){
  const count=report?.itemCount||0;
  return weekly("전체",true);
 }
+function markdownReport(sector="전체"){
+ if(!report)return "# ATELIER 주간 보고서\n\n자료 수집 대기";
+ const rows=(report.items||[]).filter(x=>sector==="전체"||x.sector===sector);
+ let lines=[
+  "# ATELIER | 통합 투자 리서치",
+  "",
+  "보고기간: "+report.periodStart+" ~ "+report.periodEnd+" ("+(report.timezone||"UTC")+")",
+  "산업: "+sector+" · 검증된 신규 변화 "+rows.length+"건",
+  "",
+  "※ SEC GAAP·임상 등록정보·원문 편집 자료를 구분. 자동 검토 제안은 매매 의견이 아님.",
+  ""
+ ];
+ rows.forEach((r,i)=>{
+  lines.push("## "+(i+1)+". ["+r.sector+"] "+r.title,
+   "- 사실 확인: "+r.observation,
+   "- 투자 연결: "+r.investment,
+   "- 다음 검증: "+r.nextCheck,
+   "- 해석 한계: "+r.caveat,
+   "- 출처: "+r.sourceLabel+" · "+r.eventDate+(r.period?" · "+r.period:""),
+   "- 원문: "+r.sourceUrl,"");
+ });
+ if(!rows.length)lines.push("보고기간 중 원문으로 확인된 신규 변화가 없습니다.","");
+ if(sector==="전체"||sector==="바이오·제약"){
+  lines.push("## 향후 바이오 시험 일정 (이번 주 발생 사건 아님)","");
+  (report.upcomingClinical||[]).forEach(x=>lines.push("- "+x.title+" · "+x.date+" · "+x.nextCheck+" · "+x.url));
+  lines.push("");
+ }
+ if(sector==="전체"||sector==="소비재·서비스"){
+  lines.push("## 회사 고유 KPI 갱신 확인 목록","");
+  (report.staleConsumerKpi||[]).forEach(x=>lines.push("- "+x.ticker+" · 이전 "+x.period+" / 신규 SEC "+x.newSECPeriod+" · "+x.reason+" · "+x.url));
+  lines.push("");
+ }
+ lines.push("자료 생성: "+(report.generatedAt||"미확인"),"한국 기존 담당 브리프·DART 원본 비교는 아직 미연결.");
+ return lines.join("\n");
+}
+function downloadReport(sector){
+ const contents=markdownReport(sector);
+ const blob=new Blob([contents],{type:"text/markdown;charset=utf-8"});
+ const href=URL.createObjectURL(blob);
+ const anchor=document.createElement("a");
+ anchor.href=href;
+ anchor.download="ATELIER_주간리서치_"+(report?.periodEnd||"기준일미확인")+".md";
+ document.body.appendChild(anchor);
+ anchor.click();
+ anchor.remove();
+ setTimeout(()=>URL.revokeObjectURL(href),1200);
+}
 function saveChoice(id,choice){
  const note=document.querySelector('[data-a3-note="'+id+'"]')?.value??drafts[id]?.note??records[id]?.note??"";
  records[id]={choice,note:note.slice(0,2500),at:new Date().toISOString()};
@@ -118,6 +165,8 @@ document.addEventListener("click",e=>{
    if(window.atelierRerender)window.atelierRerender();
  }else if(kind==="openWeekly"){
    if(window.atelierGotoWeekly)window.atelierGotoWeekly();
+ }else if(kind==="download"){
+   downloadReport(b.dataset.sector||"전체");
  }
 });
 async function load(){
@@ -128,6 +177,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,weekly,proposals,recordCard,secComparison,
+window.ATELIER3={load,overview,weekly,proposals,recordCard,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
