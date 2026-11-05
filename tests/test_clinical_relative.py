@@ -50,6 +50,33 @@ class ClinicalTrialTests(unittest.TestCase):
         x=self.study()
         x["protocolSection"]["identificationModule"]["nctId"]="not-an-nct"
         self.assertIsNone(trials.parse_trial(x,"tirzepatide","LLY"))
+    def test_clinical_comparison_detects_status_and_date_changes_only(self):
+        previous={"assets":[{"ticker":"LLY","asset":"tirzepatide","trials":[{
+            "nctId":"NCT01234567","url":"https://clinicaltrials.gov/study/NCT01234567",
+            "status":"RECRUITING","statusKr":"모집 중","phases":["PHASE3"],
+            "primaryCompletion":{"date":"2027-06","type":"ESTIMATED"},
+            "hasResultsPosted":False
+        }]}]}
+        current=[{"ticker":"LLY","asset":"tirzepatide","trials":[{
+            "nctId":"NCT01234567","url":"https://clinicaltrials.gov/study/NCT01234567",
+            "status":"COMPLETED","statusKr":"완료","phases":["PHASE3"],
+            "primaryCompletion":{"date":"2027-09","type":"ESTIMATED"},
+            "hasResultsPosted":True
+        }]}]
+        types={x["type"] for x in trials.registered_changes(previous,current)}
+        self.assertEqual(types,{"시험 진행 상태 변경","주요 완료일 등록 변경","시험 결과 등록 표시 확인"})
+        self.assertEqual(trials.registered_changes({},current),[])
+    def test_newly_seen_trial_not_called_new_trial(self):
+        old={"assets":[{"ticker":"LLY","asset":"tirzepatide","trials":[{
+            "nctId":"NCT11111111","url":"https://clinicaltrials.gov/study/NCT11111111"
+        }]}]}
+        curr=[{"ticker":"LLY","asset":"tirzepatide","trials":[{
+            "nctId":"NCT22222222","url":"https://clinicaltrials.gov/study/NCT22222222",
+            "status":"RECRUITING"
+        }]}]
+        change=trials.registered_changes(old,curr)
+        self.assertEqual(len(change),1)
+        self.assertEqual(change[0]["type"],"표본에서 새로 포착")
     def test_registry_seeds_unchanged(self):
         src=json.loads((ROOT/"research-pipeline.json").read_text(encoding="utf-8"))
         self.assertEqual(len(src["records"]),12)
