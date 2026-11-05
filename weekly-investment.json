@@ -11,11 +11,11 @@
     },
     {
       "tier": "공식 공시",
-      "ticker": "CPRI",
-      "date": "2026-10-30",
-      "title": "SEC 10-Q 매출 USD 809.0M / 전년 대비 -5.5%",
-      "context": "Michael Kors 매출·정가 판매 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
-      "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm",
+      "ticker": "RL",
+      "date": "2026-11-05",
+      "title": "SEC 10-Q 매출 USD 2.19B / 전년 대비 +9.1%",
+      "context": "평균 판매단가·아시아 수요 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
+      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
       "note": "공식 공시 사실, 세부 원문 확인 필요"
     },
     {
@@ -28,13 +28,13 @@
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-05T13:29:43.147593+00:00",
+  "generatedAt": "2026-11-05T23:13:00.188906+00:00",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-05",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
-    "newSECReports": 2,
-    "unverifiedHeadlines": 35,
+    "newSECReports": 3,
+    "unverifiedHeadlines": 34,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -59,8 +59,31 @@
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
-        "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
+        "title": "Tapestry lifts annual forecasts as Coach revenue rises 16% but Kate Spade sales fall 10% in Q1 - FashionNetwork - The World's Fashion Business News",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdDJyWkpTUUNkSXNSamZQbWZ6Wk9yVzVCbnNXOFhhUElveDB5eWdrcjN1SFJFTDZoLXJwOC1ZbDJzZ3ZCNlFYUHBYdllRS2JOYVRGVVhXdVpSQTBURnJKZlRVcEdfengyU251MjllRkFvTF9zc3VXMXhuelFSeHhCMVNHZVcwNXdvYUgxOFBpUlRWdHNoUExvWnpyeDlnMk5rN08yb3I4ekJRdWVTUlJLVWRzMHE2NTVpWGhkWVhTdVFoRGZhZE5USDVoQkR4X0oyQXk4cnJPZw?oc=5",
+        "date": "2026-11-05"
+      },
+      "consumerSampleCount": 0
+    },
+    {
+      "ticker": "RL",
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 2.19B / 전년 대비 +9.1%",
+      "officialPeriod": "2026-06-28~2026-09-26",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-05",
+        "reportEnd": "2026-09-26",
+        "accession": "0001628280-26-070697",
+        "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm"
+      },
+      "newsTitleCount": 2,
+      "nextCheck": "평균 판매단가·아시아 수요",
+      "riskToTest": "가격 인상 이후 수요 둔화",
+      "headline": {
+        "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
         "date": "2026-11-05"
       },
       "consumerSampleCount": 0
@@ -82,32 +105,9 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
+        "title": "Michael Kors owner Capri soars after raising annual forecasts - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY0ZQcS1zc0tmRW05ZXJpRlRfOFVqbkczVFA0VWY1dzl5MjBoeXdEcmNQQTVxQWRCSjBOemdUWllNQ0UyUDNLM0dEWHpqeHJzUVcxbjl6cWplc21lb2RBWWNBeDFzX2luMWVuUWFYR0c2TUNLX09UTWxpR0ZvSXpXLVdMZlhZRENxWW5nTGY1bnZoREJaNG9ZeGU3YjAzZzVBMkdXdVpyWlZ6R2NhSlkzVG1ER2lZZ3NhRmptMVduMA?oc=5",
         "date": "2026-10-30"
-      },
-      "consumerSampleCount": 0
-    },
-    {
-      "ticker": "RL",
-      "officialStatus": "quarter_verified",
-      "officialText": "SEC 10-Q 매출 USD 1.96B / 전년 대비 +14.0%",
-      "officialPeriod": "2026-03-29~2026-06-27",
-      "officialSource": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm",
-      "latestReport": {
-        "form": "10-Q",
-        "filed": "2026-08-06",
-        "reportEnd": "2026-06-27",
-        "accession": "0001628280-26-053992",
-        "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm"
-      },
-      "newsTitleCount": 2,
-      "nextCheck": "평균 판매단가·아시아 수요",
-      "riskToTest": "가격 인상 이후 수요 둔화",
-      "headline": {
-        "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
-        "date": "2026-11-04"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
-        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
-        "date": "2026-10-30"
+        "title": "Urban Outfitters seeks material cost visibility from expanded technology suite - Supply Chain Dive",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMHU0Vkcxd0E2THhnX3VRdWl1TUwxR1pvdFl6S0tfU0pxemZoM2dfSmVaZzIxZi1nYXhjSGQtNDAzeWljZGdtWGNrR21ESExubkJpSW9lYmptZ1EyX3JqSmd3Zm54LTN6WVVCblJuVkU4cVh1Rmp0WmtlQnJScE53aUN4ZkRJSHBadU12aF9ZcFg4cTQxckNXam9FX2lkTGF0Vy1FUWFtS0NaN000SmdwVnI0c2xyS2wyQW1CNQ?oc=5",
+        "date": "2026-11-05"
       },
       "consumerSampleCount": 0
     },
@@ -198,7 +198,7 @@
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
       "headline": {
         "title": "Vans and SZA Debut Campaign - VF Corporation",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLS1pZQ0lBNHhxZEF1a09xUDlTalJBOG5PQ3pqZU5lVU1lWTRJMVgxTVpBbWprMXRzNnNBNEhncWdzRE1jeDFYWDVJLWNQX1JlM185VnliaGVxOHFycENjLWY4ZS1oeW5jQ2dGZlpQRjA0VUk1WWVtWWFic3B1cUk?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNS3RNdEF3dEVPQkxya3FWU1ZiZ2lMblR5Z3pZN29ETlBOM2NySTcybEIySVl5T2IxZW1mbVJCdWc5QWZkdmxmSzhCOGt3RDZfSEJyTkxfWHlhM3hNdGhyNFR1OGFwOTBxWFZuaklqYWp1ckF2YzRReUtjbUsyY1F2OXV3Wmh6RE04X0lJ?oc=5",
         "date": "2026-11-03"
       },
       "consumerSampleCount": 0
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
-        "date": "2026-10-30"
+        "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
+        "date": "2026-10-31"
       },
       "consumerSampleCount": 0
     },
@@ -316,6 +316,12 @@
     }
   ],
   "latestSEC": [
+    {
+      "ticker": "RL",
+      "form": "10-Q",
+      "filed": "2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm"
+    },
     {
       "ticker": "TPR",
       "form": "10-Q",

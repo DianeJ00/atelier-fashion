@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T13:29:43.034728+00:00",
+  "generatedAt": "2026-11-05T23:12:59.983183+00:00",
   "periodStart": "2026-10-26",
   "periodEnd": "2026-11-05",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
@@ -175,38 +175,47 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-7fd0099aad78a0b",
-      "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
+      "id": "rss-7d3ea0d3813a70e",
+      "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
       "date": "2026-11-05",
-      "source": "Reuters",
+      "source": "WWD",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-6996d8e14041782",
-      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+      "id": "rss-df9eb7083f1f851",
+      "title": "Tapestry lifts annual forecasts as Coach revenue rises 16% but Kate Spade sales fall 10% in Q1 - FashionNetwork - The World's Fashion Business News",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdDJyWkpTUUNkSXNSamZQbWZ6Wk9yVzVCbnNXOFhhUElveDB5eWdrcjN1SFJFTDZoLXJwOC1ZbDJzZ3ZCNlFYUHBYdllRS2JOYVRGVVhXdVpSQTBURnJKZlRVcEdfengyU251MjllRkFvTF9zc3VXMXhuelFSeHhCMVNHZVcwNXdvYUgxOFBpUlRWdHNoUExvWnpyeDlnMk5rN08yb3I4ekJRdWVTUlJLVWRzMHE2NTVpWGhkWVhTdVFoRGZhZE5USDVoQkR4X0oyQXk4cnJPZw?oc=5",
       "date": "2026-11-05",
-      "source": "Finimize",
+      "source": "FashionNetwork - The World's Fashion Business News",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-2e51d797ab1d244",
-      "title": "Founders Shut Down Coperni - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyS21WOWtNWmc4cTk2Ykh1LV9pMGgzbHVPSF91NGsyWWRWZGpWckJ1ZDJRNEg2YWhBS2RSOTdWejNqaXoweEwyVnMzS0FMVFZ0T2ctTjdXRVAzVTZFdGZ5WF90NW5HZ1MzWWtEXzAzcWx6MVhvOHVLQi1VVHQxQQ?oc=5",
-      "date": "2026-11-04",
-      "source": "The Business of Fashion",
+      "id": "rss-601e1ce1939cb63",
+      "title": "Tapestry Revenues Hit 12% Growth Despite Kate Spade Dip - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQeEN0MHdpM3hSX0c3Z254bjhzWVV5SW5jdFVHS195WnFFeDB2T3Q1Y3Z3VmQ2dHpYcVMxaTFub1ZncnQ2VXY1RmpsUlBzWjE0Y2t1Z0NWVUplNks4Vjc5U1Z2Mzk3akxGVFhPUGI5Q0g0bW1XTFF1bVhwUXFkWFFXR2VFRWJ2dw?oc=5",
+      "date": "2026-11-05",
+      "source": "Vogue",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-0ebf6c2d6d9794f",
-      "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
+      "id": "rss-db317d89a822495",
+      "title": "Urban Outfitters seeks material cost visibility from expanded technology suite - Supply Chain Dive",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMHU0Vkcxd0E2THhnX3VRdWl1TUwxR1pvdFl6S0tfU0pxemZoM2dfSmVaZzIxZi1nYXhjSGQtNDAzeWljZGdtWGNrR21ESExubkJpSW9lYmptZ1EyX3JqSmd3Zm54LTN6WVVCblJuVkU4cVh1Rmp0WmtlQnJScE53aUN4ZkRJSHBadU12aF9ZcFg4cTQxckNXam9FX2lkTGF0Vy1FUWFtS0NaN000SmdwVnI0c2xyS2wyQW1CNQ?oc=5",
+      "date": "2026-11-05",
+      "source": "Supply Chain Dive",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-f76392dbc2a541d",
+      "title": "Palmer Harding Spring 2027 Ready-to-Wear Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNV1NnSHZPME9OQUlObjRUOHF1VEVwVmlQN3pSREdjN3lPd0FuT09pOFk5QjhJRVhuUHZ2c05Mckg3OVJjTE1tSzhoVXNEdTJEemNnTkpWRE5rc05nNFFQb3dPbVRPT2FVWDBhb0NTUzR6akM0T1p2OURaZ3o3S2JTYQ?oc=5",
       "date": "2026-11-04",
-      "source": "TradingView",
+      "source": "Vogue",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -272,18 +281,9 @@
       "source": "PVH",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-bd289860895c10c",
-      "title": "Vans and SZA Debut Campaign - VF Corporation",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLS1pZQ0lBNHhxZEF1a09xUDlTalJBOG5PQ3pqZU5lVU1lWTRJMVgxTVpBbWprMXRzNnNBNEhncWdzRE1jeDFYWDVJLWNQX1JlM185VnliaGVxOHFycENjLWY4ZS1oeW5jQ2dGZlpQRjA0VUk1WWVtWWFic3B1cUk?oc=5",
-      "date": "2026-11-03",
-      "source": "VF Corporation",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 32,
+  "pendingCount": 31,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T13:29:43.309263+00:00",
+  "generatedAt": "2026-11-05T23:13:00.325584+00:00",
   "coverage": {
     "tracked": 52,
     "us": 47,
@@ -9,7 +9,7 @@
     "registeredTrials": 59,
     "upcomingClinical": 4,
     "reviewedFashionSources": 3,
-    "pendingUnverifiedArticles": 32
+    "pendingUnverifiedArticles": 31
   },
   "items": [
     {
@@ -45,7 +45,7 @@
       "status": "live",
       "covered": 12,
       "total": 12,
-      "asOf": "2026-11-05T13:28:49.997555+00:00",
+      "asOf": "2026-11-05T23:11:49.641065+00:00",
       "ageDays": 0,
       "note": "SEC 10-Q GAAP 공식 등록 수치",
       "nextAction": null,
@@ -58,7 +58,7 @@
       "status": "live",
       "covered": 15,
       "total": 15,
-      "asOf": "2026-11-05T13:28:56.117116+00:00",
+      "asOf": "2026-11-05T23:11:58.468623+00:00",
       "ageDays": 0,
       "note": "SEC GAAP 분기 실적. 고유 운영 KPI는 별도 검증 스냅샷.",
       "nextAction": null,
@@ -84,7 +84,7 @@
       "status": "live",
       "covered": 20,
       "total": 20,
-      "asOf": "2026-11-05T13:29:03.880035+00:00",
+      "asOf": "2026-11-05T23:12:09.651722+00:00",
       "ageDays": 0,
       "note": "SEC 10-Q GAAP, 기업별 회계기간 구분",
       "nextAction": null,
@@ -97,7 +97,7 @@
       "status": "live",
       "covered": 12,
       "total": 12,
-      "asOf": "2026-11-05T13:29:34.031024+00:00",
+      "asOf": "2026-11-05T23:12:50.459188+00:00",
       "ageDays": 0,
       "note": "ClinicalTrials.gov의 동일 약물·후원기관이 확인된 등록시험 검색 표본",
       "nextAction": null,
@@ -110,7 +110,7 @@
       "status": "live",
       "covered": 12,
       "total": 12,
-      "asOf": "2026-11-05T13:29:34.031024+00:00",
+      "asOf": "2026-11-05T23:12:50.459188+00:00",
       "ageDays": 0,
       "note": "최고 단계 등록시험 하나를 기록; 품목 허가나 전체 파이프라인 단계와 다름",
       "nextAction": "허가·품목별 승인 단계는 기업 IR/FDA 개별 대조 필요",
@@ -122,8 +122,8 @@
       "category": "기사·콘텐츠",
       "status": "reviewed_snapshot",
       "covered": 5,
-      "total": 37,
-      "asOf": "2026-11-05T13:29:43.034728+00:00",
+      "total": 36,
+      "asOf": "2026-11-05T23:12:59.983183+00:00",
       "ageDays": 0,
       "note": "편집 검토 원문 우선, 확인 전 RSS·영상은 투자 사실로 사용하지 않음",
       "nextAction": "공개 본문 접근·OPENAI_API_KEY 권한 설정 후 자동 요약 검증",
@@ -136,7 +136,7 @@
       "status": "live",
       "covered": 8,
       "total": null,
-      "asOf": "2026-11-05T13:29:43.190778+00:00",
+      "asOf": "2026-11-05T23:13:00.225637+00:00",
       "ageDays": 0,
       "note": "확인된 새 사건만 수록. 신규 사건 없음은 투자 변화 없음과 다름.",
       "nextAction": null,
@@ -156,6 +156,11 @@
       "source": "https://opendart.fss.or.kr/"
     }
   ],
+  "automation": {
+    "frequency": "daily",
+    "scheduledTimeKST": "09:00",
+    "realTime": false
+  },
   "needsAttention": 5,
   "policy": "정량 근거가 없으면 값을 만들지 않습니다. 공식 보고 분기와 시장 데이터 기준일을 구분하고, 사용권한 없는 시세의 자동 재배포를 하지 않습니다."
 }
