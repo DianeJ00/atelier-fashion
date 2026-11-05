@@ -179,6 +179,74 @@ def registered_changes(previous, current):
     changes.sort(key=lambda x:(order.get(x["type"],5),x.get("sourceLastUpdate") or ""),reverse=False)
     return changes[:30]
 
+def weekly_interpretation(assets, changes, previous_generated):
+    """Korean registry observations with an explicit investment question, not efficacy claims."""
+    notes=[]
+    priority_changes=[x for x in changes if x["type"]!="표본에서 새로 포착"]
+    if priority_changes:
+        for item in priority_changes[:2]:
+            ticker=item["ticker"]
+            label=item["type"]
+            detail=(str(item.get("before",""))+" → "+str(item.get("after",""))
+                    if "before" in item else item.get("detail",""))
+            notes.append({
+                "type":"등록정보 변경",
+                "title":f"[{ticker} {item['asset']}] {label}",
+                "observation":f"ClinicalTrials.gov의 {item['nctId']} 등록 정보에서 {detail} 항목이 변경됨.",
+                "investmentCheck":"시험 등록 내용과 기업 IR의 후속 안내를 대조하고 실제 결과 발표·안전성 데이터를 확인",
+                "limitation":"등록 정보의 변경은 긍정적 결과·허가·매출을 뜻하지 않음.",
+                "url":item["url"],"nctId":item["nctId"]
+            })
+    elif previous_generated:
+        notes.append({
+            "type":"변경 없음",
+            "title":"동일 시험 등록정보에서 중요한 변경 없음",
+            "observation":"직전 수집과 비교한 동일 NCT 표본에서 진행 상태·시험 단계·주요 완료일·결과 등록 표시 변화가 확인되지 않음.",
+            "investmentCheck":"실제 기업 공지와 임상 결과 발표 여부는 별도로 확인",
+            "limitation":"상위 검색 표본에 한정되며 외부에서 새로운 임상 결과가 없었다는 뜻은 아님.",
+            "url":"https://clinicaltrials.gov/","nctId":None
+        })
+    # Surface high-stakes Phase 3 completion first, then Phase 2, spread across diseases.
+    today=NOW.date()
+    candidates=[]
+    for asset in assets:
+        for trial in asset["trials"]:
+            primary=trial.get("primaryCompletion") or {}
+            raw=primary.get("date") or ""
+            if not re.fullmatch(r"\d{4}-\d{2}(-\d{2})?", raw):
+                continue
+            # Month-level dates: compare to the first of that month, and keep precision explicit.
+            try:
+                day=datetime.fromisoformat(raw if len(raw)==10 else raw+"-01").date()
+            except ValueError:
+                continue
+            day_gap=(day-today).days
+            if day_gap<0 or day_gap>240 or primary.get("type")=="ACTUAL":
+                continue
+            phase=trial.get("phases") or []
+            seriousness=(0 if "PHASE3" in phase else 1 if "PHASE2" in phase else 2)
+            candidates.append((seriousness,day_gap,asset,trial,raw))
+    candidates.sort(key=lambda x:(x[0],x[1],x[2]["ticker"]))
+    used=set()
+    for _,_,asset,trial,raw in candidates:
+        if len(notes)>=4:
+            break
+        field=asset["disease"]
+        if field in used:
+            continue
+        used.add(field)
+        phase="/".join(trial.get("phases") or []) or "단계 미기재"
+        trial_status=trial.get("statusKr") or "상태 미기재"
+        notes.append({
+            "type":"향후 시험 일정",
+            "title":f"[{field}] {asset['ticker']} {asset['asset']}의 등록 완료 예정일",
+            "observation":f"등록시험 {trial['nctId']} ({phase}, {trial_status})의 주요 평가 완료일이 {raw}(예상)로 기재됨.",
+            "investmentCheck":f"{asset['ticker']}의 {asset['asset']} 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
+            "limitation":"주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+            "url":trial["url"],"nctId":trial["nctId"]
+        })
+    return notes[:4]
+
 def gather():
     try:
         previous = json.loads(OUT.read_text(encoding="utf-8"))
@@ -220,6 +288,7 @@ def gather():
         })
     total = sum(len(x["trials"]) for x in assets)
     changes=registered_changes(previous,assets)
+    weekly=weekly_interpretation(assets,changes,previous.get("generatedAt"))
     result = {
         "generatedAt": NOW.isoformat(), "source": "ClinicalTrials.gov API v2",
         "status": "partial" if err else "ok",
@@ -227,6 +296,8 @@ def gather():
         "verifiedTrialCards": total,
         "comparisonTo": previous.get("generatedAt"),
         "changeCount": len(changes), "changes": changes,
+        "weeklyInterpretation": weekly,
+        "weeklyInterpretationPolicy": "시험 등록 상태와 예상 완료일을 한국어로 재구성한 관찰. 실제 데이터 발표·승인·성공을 뜻하지 않음.",
         "changesNote": "이전 상위 등록시험 표본과 비교. 신규 포착은 신규 임상 개시를 뜻하지 않음.",
         "limitations": [
             "시험 등록자료는 제출자 관리 정보로 임상 성공·승인·실제 투자 가치의 검증이 아님",
