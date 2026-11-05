@@ -63,8 +63,17 @@ function trialEvents(){
  if(!upcoming.length)return `<div class="r2-empty">확인 가능한 임상 시험의 향후 주요 완료 예정일이 없습니다. 등록되지 않은 일정은 예측하지 않습니다.</div>`;
  return `<div class="r2-trial-events">${upcoming.map(x=>`<div><span>${esc(x.ticker)} · ${esc(x.asset)}</span><a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.nctId)} ↗</a><b>${esc(x.primaryCompletion.date)}</b><small>${x.primaryCompletion.type==='ESTIMATED'?'예상 완료일':x.primaryCompletion.type==='ACTUAL'?'실제 완료일':'완료일 구분 미기재'} · ${esc(x.statusKr||x.status)}</small></div>`).join('')}</div>`;
 }
+function trialChangesBlock(){
+ const changes=clinicalData?.changes||[];
+ if(!changes.length)return '';
+ return `<div class="r2-trial-changes"><div class="r2-breadth-title"><b>이전 수집 대비 임상 등록 정보 변경</b><span>${changes.length}건 · 원문 확인 필요</span></div>
+ ${changes.slice(0,6).map(c=>`<div class="r2-trial-change"><b>${esc(c.ticker)} · ${esc(c.asset)}</b><span>${esc(c.type)}</span><a href="${url(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.nctId)} ↗</a>
+ <small>${c.before!=null?esc(c.before)+' → '+esc(c.after||''):esc(c.detail||'등록자료 변경·검증 필요')}</small></div>`).join('')}
+ <p class="r2-foot">새로 포착된 시험은 과거 표본에 없었다는 뜻이며 신규 임상 착수·유효성 입증을 의미하지 않습니다.</p></div>`;
+}
 function clinicalPanel(){
  return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 임상시험 일정</h3><p>ClinicalTrials.gov 등록 자료 기준. 시험 완료 예정일은 임상 결과 발표일이 아닙니다.</p></div><span class="r2-asof">${esc(clinicalData?.generatedAt?.slice(0,10)||'미수집')}</span></div>
+ ${trialChangesBlock()}
  ${trialEvents()}
  <p class="r2-foot">등록 시험 ${Number(clinicalData?.verifiedTrialCards)||0}건(상위 표본) · 임상 데이터 상태 ${esc(clinicalData?.status||'조회 전')} · 원문 상태·후원기관 대조, 적응증별 데이터는 계속 보완 중</p></section>`;
 }
