@@ -33,7 +33,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Verify Python source syntax
-        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py
+        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py scripts/build_pipeline_review.py scripts/collect_biotech_official.py scripts/build_data_health.py
       - name: Set up Node.js for UI smoke tests
         uses: actions/setup-node@v4
         with:
@@ -55,6 +55,11 @@ jobs:
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: python scripts/collect_consumer_official.py
+      - name: Verify official 10-Q US-GAAP statements for twenty biotech firms
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python scripts/collect_biotech_official.py
       - name: Compare US SEC GAAP quarters on identical accounting concepts
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         env:
@@ -74,6 +79,9 @@ jobs:
       - name: Match official clinical studies to tracked drugs and registrants
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/collect_clinical_trials.py
+      - name: Match twelve biotech watchlist assets with verified registry study stages
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        run: python scripts/build_pipeline_review.py
       - name: Calculate per-stock relative returns in controlled API batches
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         env:
@@ -94,6 +102,9 @@ jobs:
       - name: Build integrated cross-sector weekly brief and analyst review queue
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/build_atelier_weekly.py
+      - name: Audit verified data coverage and unfinished source connections
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        run: python scripts/build_data_health.py
       - name: Save weekly source inbox in repository
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: |
@@ -102,7 +113,7 @@ jobs:
           # Rebase our generated JSON on the latest main to avoid stale workflow checkouts.
           git fetch origin main
           git reset --mixed origin/main
-          git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json weekly-content.json consumer-official.json sec-trends.json atelier-weekly.json market-relative.json clinical-trials.json stock-relative.json
+          git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json weekly-content.json consumer-official.json biotech-financials.json sec-trends.json atelier-weekly.json market-relative.json clinical-trials.json research-pipeline.json stock-relative.json data-health.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh weekly fashion source inbox'
             git push origin HEAD:main
@@ -113,7 +124,7 @@ jobs:
       - name: Prepare published files only
         run: |
           mkdir -p _site
-          cp index.html research2.js research2.css research3.js research3.css consumer2.js consumer2.css research-universe.json research-pipeline.json consumer-official.json sec-trends.json atelier-weekly.json clinical-trials.json stock-relative.json weekly-research.json market-relative.json _site/
+          cp index.html research2.js research2.css research3.js research3.css consumer2.js consumer2.css market-live.js health.js research-universe.json research-pipeline.json consumer-official.json biotech-financials.json sec-trends.json atelier-weekly.json clinical-trials.json stock-relative.json weekly-research.json market-relative.json market-reviewed.json data-health.json _site/
           for source in official-financials.json consumer-samples.json weekly-investment.json weekly-content.json; do
             if [ -f "$source" ]; then cp "$source" _site/; fi
           done
