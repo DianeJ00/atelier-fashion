@@ -219,3 +219,14 @@ body{font-size:15px;line-height:1.68}
 .r2-clinical-raw summary{cursor:pointer;background:#f4f8fc;padding:11px 14px;font-size:13px;font-weight:750;color:#3a627f}
 .r2-clinical-raw>.r2-trial-changes,.r2-clinical-raw>.r2-trial-events{margin:12px}
 @media(max-width:820px){.r2-clinical-digest{grid-template-columns:1fr}.content{padding-left:16px;padding-right:16px}.content .brief-article{padding:14px}.content :is(.brief-article-title h3,.r2-detail-header h2){font-size:17px}}
+
+/* Original-source summaries inside collected fashion news cards */
+.content .social-reviewed{border:1px solid #b8d5ea;background:#fff;box-shadow:0 3px 14px #0d35500b}
+.content .social-reviewed h3{color:#1c4e7b;font-size:16px;line-height:1.45}
+.content .social-summary{margin:11px 0 12px;padding:12px 14px;border-radius:9px;background:#f2f7fc;color:#294a65;display:grid;gap:8px}
+.content .social-summary p{font-size:14px;line-height:1.65;margin:0;color:#314e68}
+.content .social-summary p b{color:#1c6297}
+.content .social-summary small{font-size:12.5px;line-height:1.55;color:#60788c}
+.content .social-unverified{font-size:13px;color:#74869a;line-height:1.6}
+.content .brief-extra-head{font-size:15px;color:#305d85;margin:10px 0 8px}
+.trend-fresh-list .trend-reviewed-preview{display:block;font-size:13.5px;line-height:1.6;color:#4d697e;margin:5px 0}
