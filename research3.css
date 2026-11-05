@@ -170,3 +170,78 @@
 @media(max-width:1060px){.t4-layout{grid-template-columns:minmax(215px,260px) minmax(0,1fr)}.t4-step{padding:18px}}
 @media(max-width:900px){.t4-layout{grid-template-columns:1fr}.t4-company-scroll{max-height:250px;min-height:0}.t4-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.t4-toolbar-group{display:grid;gap:6px}.t4-editor-header,.t4-step{padding:16px}}
 @media(max-width:520px){.t4-title-row h1{font-size:26px}.t4-summary>div{padding:12px}.t4-summary strong{font-size:23px}.t4-toolbar{padding:13px}.t4-chips>button{font-size:13px;padding:7px 10px}.t4-editor-header h2{font-size:21px}.t4-choices{grid-template-columns:repeat(2,minmax(0,1fr))}.t4-field textarea{font-size:15px}.t4-editor-header{gap:10px}}
+
+/* ATELIER 2.5 — one source of detail, coherent market→sector→event→decision flow */
+.r5-overview{display:grid;gap:16px}
+.r5-overview>.r2-panel:first-child{margin-top:0}
+.a5-industries,.a5-overview-signals,.a5-attention,.a5-review-queue{
+ background:#fff;border:1px solid #dce7f1;border-radius:11px;padding:19px 21px;margin:0;min-width:0
+}
+.a5-section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:13px}
+.a5-section-head h2{font-size:20px;line-height:1.4;color:#1e4a70;margin:5px 0}
+.a5-section-head h3{font-size:18px;line-height:1.4;color:#214f77;margin:0}
+.content .a5-section-head p{font-size:13.5px;color:#6d849b;line-height:1.65;margin:0}
+.a5-section-head button{background:#f4f9ff;border:1px solid #cce0f1;color:#23649d;padding:9px 12px;border-radius:7px;font-size:13px;font-weight:750;cursor:pointer}
+.a5-count{font-size:13px;font-weight:800;color:#265a89;background:#eaf4fe;padding:6px 10px;border-radius:6px}
+.a5-industry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.a5-industry{border:1px solid #dfebf5;border-radius:9px;padding:17px 18px;background:#fcfeff;display:flex;flex-direction:column;gap:10px}
+.a5-industry-top{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.a5-industry-top h3{font-size:16px;font-weight:800;color:#1b537f;margin:0 0 3px;line-height:1.4}
+.a5-industry-top span{font-size:12.5px;color:#7a91a5;line-height:1.5}
+.a5-industry-top strong{font-size:14px;color:#5e83a1;white-space:nowrap}
+.content .a5-industry>p{font-size:14.5px;line-height:1.62;color:#314f68;margin:0}
+.a5-industry>p b{font-size:12px;color:#386c9b;margin-right:6px}
+.content .a5-industry .a5-no-signal{color:#758ca1}
+.a5-industry>small{font-size:12px;color:#8597a7}
+.a5-industry>button{margin-top:auto;align-self:flex-start;font-size:13px;font-weight:750;color:#286a9e;background:none;border:0;padding:3px 0;cursor:pointer}
+.a5-signal-list{display:grid;gap:0}
+.a5-signal{display:flex;gap:13px;align-items:flex-start;border-top:1px solid #e6edf4;padding:14px 3px}
+.a5-signal:first-child{border-top:0}
+.a5-signal-num{font-size:15px;font-weight:850;color:#7b9ab7;font-variant-numeric:tabular-nums;line-height:1.5}
+.a5-signal>div{display:grid;gap:5px;min-width:0}
+.a5-signal b{font-size:15px;color:#284c6b;line-height:1.55}
+.a5-signal small{font-size:12.5px;color:#7b91a5}
+.a5-attention-list,.a5-review-rows{display:grid;gap:7px}
+.a5-attention-list>button,.a5-review-rows>button{display:flex;align-items:center;gap:12px;width:100%;padding:13px 15px;background:#f8fbfe;border:1px solid #e1eaf3;border-radius:8px;text-align:left;cursor:pointer}
+.a5-attention-list>button:hover,.a5-review-rows>button:hover{background:#edf5fe;border-color:#a7cbe7}
+.a5-attention-list b,.a5-review-rows strong{font-size:13.5px;color:#1c5c90;min-width:45px}
+.a5-attention-list>button>span,.a5-review-rows>button>span{font-size:13.5px;line-height:1.55;color:#3d5e79;flex:1;min-width:0}
+.a5-attention-list small,.a5-review-rows>button>b{font-size:12px;color:#286ba1;font-weight:750;white-space:nowrap}
+.a5-review-queue{margin:13px 0}
+.a5-review-rows>button>span small{display:block;font-size:11.5px;color:#7890a5;margin-top:3px}
+.content .a5-queue-empty{font-size:13.5px;color:#7890a5;background:#f7fafd;border-radius:7px;padding:13px;margin:0}
+.r5-weekly{display:grid;gap:13px}
+.r5-weekly-head{background:#fff;border:1px solid #dae6f1;border-radius:9px;padding:16px 19px}
+.r5-weekly-head h2{font-size:20px;color:#1d4b74;line-height:1.4;margin:5px 0}
+.r5-weekly-head p{font-size:14px;line-height:1.6;color:#66819a;margin:0}
+.r5-weekly-filter{background:#fff;border:1px solid #e1eaf2;border-radius:9px;padding:13px;gap:7px;display:flex;flex-wrap:wrap}
+.r5-weekly .a3-report{margin:0}
+.r5-source-detail{border:1px solid #dce8f1;background:#fff;border-radius:9px;overflow:hidden}
+.r5-source-detail>summary{font-size:14px;font-weight:750;color:#286397;background:#f4f9fe;padding:13px 17px;cursor:pointer}
+.r5-source-inner{padding:14px}
+.r5-source-detail .c2-intro{margin:0}
+.r5-decision{padding:0!important}
+.r5-decision .t4-editor{border:0;border-radius:0;background:transparent}
+.r5-decision .t4-step{padding:20px 22px}
+.r5-decision .t4-step:first-child{border-top:0}
+.r5-decision .t4-step-heading h3{font-size:18px}
+.r5-decision .t4-baseline p{font-size:15.5px}
+.r5-decision .t4-step-heading p{font-size:13.5px}
+.r5-decision .t4-field textarea{font-size:15px}
+.t4-fashion-history{padding:14px 18px;display:grid;gap:10px}
+.t4-fashion-history>b{font-size:15px;color:#245c87}
+.content .t4-fashion-history p{font-size:14px;line-height:1.65;color:#476780;margin:0}
+.t4-fashion-history strong{color:#2a638c}
+.t4-fashion-history small{font-size:12px;color:#8195a7}
+.r5-overview .r2-table td,.r5-overview .r2-table th{font-size:13.5px}
+.r5-overview .r2-index-strip strong{font-size:19px}
+@media(max-width:790px){
+ .a5-industry-grid{grid-template-columns:1fr}
+ .a5-industries,.a5-overview-signals,.a5-attention,.a5-review-queue{padding:14px}
+ .r5-decision .t4-step{padding:14px}
+}
+@media(max-width:510px){
+ .a5-attention-list>button,.a5-review-rows>button{flex-wrap:wrap}
+ .a5-attention-list>button>span,.a5-review-rows>button>span{flex-basis:calc(100% - 60px)}
+ .a5-attention-list small,.a5-review-rows>button>b{margin-left:auto}
+}
