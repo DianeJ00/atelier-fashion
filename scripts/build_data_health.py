@@ -30,6 +30,7 @@ def build():
     content=read("weekly-content.json")
     weekly=read("atelier-weekly.json")
     sec=read("sec-trends.json")
+    korea=read("korea-dart.json")
     universe=read("research-universe.json")
     u=universe.get("companies") or []
     consumer_list=consumer.get("companies") or []
@@ -98,11 +99,13 @@ def build():
              weekly.get("itemCount",0),None,
              "확인된 새 사건만 수록. 신규 사건 없음은 투자 변화 없음과 다름.",
              weekly.get("generatedAt")),
-        item("korea","국내 담당 기업 실적·브리프","국내",
-             "blocked",0,5,
-             "공개 주가/공시 및 기존 비공개 브리프 원본 미연결",
-             None,
-             "DART 및 기업 공식 IR과 사용자 원본 브리프를 허가된 방법으로 연결")
+        item("korea","국내 담당 기업 DART 재무 실적","국내",
+             "live" if korea.get("verified")==5 else "partial" if korea.get("verified",0)>0 else "blocked",
+             korea.get("verified",0),5,
+             "OpenDART 정기공시에서 3개월 또는 12개월 손익계산서를 구분. 개인 원본 브리프는 미연결",
+             korea.get("generatedAt") if korea.get("verified",0)>0 else None,
+             "GitHub Actions DART_API_KEY 인증키 설정 후 자동 수집. NIM·CET1·CSM·K-ICS 등 별도 IR 대조 필요" if korea.get("verified",0)<5 else "국내 과거 브리프 원본과 회사별 특화 KPI 별도 확인",
+             "https://opendart.fss.or.kr/")
     ]
     coverage={
         "tracked":len(u),
