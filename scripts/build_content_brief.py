@@ -265,6 +265,25 @@ def build():
         except Exception as exc:
             queue.append({**row, "status": "요약 대기", "reason": str(exc)[:55]})
     auto = sorted(auto_map.values(), key=lambda x: x["date"], reverse=True)
+    # Existing YouTube/Google News RSS items are titles, never full-text summaries.
+    inbox = load("weekly-research.json", {"items": []})
+    known_urls = {x.get("url") for x in manual + auto}
+    queued_urls = {x.get("url") for x in queue}
+    for item in inbox.get("items", []):
+        url = item.get("url")
+        if not url or url in known_urls or url in queued_urls:
+            continue
+        day = str(item.get("date") or "")[:10]
+        if day < WINDOW:
+            continue
+        why = ("영상 자막·내용 미확보" if item.get("platform") == "YouTube"
+               else "기사 본문 미확보 · RSS 제목만 수집")
+        queue.append({
+            "id": item.get("id"), "title": item.get("title", ""),
+            "url": url, "date": day, "source": item.get("creator") or item.get("platform"),
+            "status": "분석 대기", "reason": why,
+        })
+        queued_urls.add(url)
     # Curated original-source review trumps auto drafts; do not conflate dates.
     urls = {x["url"] for x in manual}
     selected = list(manual)
