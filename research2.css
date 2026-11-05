@@ -176,3 +176,7 @@
 .r2-trial-change a{color:#2167a4;font-weight:700}
 .r2-trial-change small{grid-column:1/-1;color:#7d91a5}
 @media(max-width:660px){.r2-trial-change{grid-template-columns:1fr auto}.r2-trial-change span{grid-column:1}.r2-trial-change a{grid-column:2;grid-row:1 / span 2}}
+
+.r2-weekly-clinical{border-top:1px solid #e2eaf3;padding-top:14px;margin-top:13px}
+.r2-weekly-clinical h3{margin:0 0 9px;font-size:13px;color:#214e80}
+.r2-weekly-clinical .r2-trial-events{margin-top:4px}
