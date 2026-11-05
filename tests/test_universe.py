@@ -39,9 +39,15 @@ class UniverseTests(unittest.TestCase):
             {b["disease"] for b in bios}))
     def test_unverified_pipeline_stages_not_presented_as_facts(self):
         for asset in self.assets["records"]:
-            self.assertIsNone(asset["stage"])
-            self.assertIsNone(asset["clinicalTrialId"])
-            self.assertIsNone(asset["verifiedAt"])
+            if asset.get("stage") is not None:
+                self.assertTrue(asset.get("clinicalTrialURL","").startswith("https://clinicaltrials.gov/study/"))
+                self.assertIsNotNone(asset.get("clinicalTrialId"))
+                self.assertIsNotNone(asset.get("stageVerifiedAt"))
+                self.assertIsNone(asset.get("approval"))
+                self.assertIn("등록시험",asset["stageBasis"])
+            else:
+                self.assertIsNone(asset.get("clinicalTrialId"))
+            self.assertIsNone(asset.get("verifiedAt"))
             self.assertTrue(asset["link"].startswith("https://clinicaltrials.gov/search?term="))
 
 class RelativeReturnTests(unittest.TestCase):
