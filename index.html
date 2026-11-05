@@ -650,6 +650,7 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 </style>
 <link rel="stylesheet" href="./research2.css"/>
 <link rel="stylesheet" href="./consumer2.css"/>
+<link rel="stylesheet" href="./research3.css"/>
 </head>
 <body>
 <div class="shell">
@@ -682,6 +683,7 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 <div id="modal-root"></div>
 <input id="import-input" type="file" accept="application/json" style="display:none"/>
 <script src="./consumer2.js"></script>
+<script src="./research3.js"></script>
 <script src="./research2.js"></script>
 <script>/* ATELIER legacy fashion module + sector overlay */
 (()=>{
@@ -984,6 +986,7 @@ function insightsPage(){
 }
 function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{const active=b.dataset.page===state.page;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('#page-crumb').textContent=pages[state.page]||'한눈에 보기';let html=({overview:overview,companies:companyPage,insights:insightsPage,theses:thesesPage,hub:hubPage}[state.page]||overview)();$('#content').innerHTML=html}
 window.atelierRerender=render;
+window.atelierGotoWeekly=()=>{nav('insights')};
 window.atelierGotoCompanies=()=>{state.r2LegacyFashion=false;nav('companies')};
 window.atelierLegacyFashion=()=>{state.r2LegacyFashion=true;state.companyTab='peers';nav('companies')};
 function nav(page){if(['peers','brands'].includes(page)){state.companyTab=page;page='companies'}if(page==='trends'){state.insightTab='trends';page='insights'}if(page==='evidence'){state.insightTab='verified';page='insights'}if(['feed','calendar','official','settings'].includes(page)){state.hubTab=page;page='hub'}if(!pages[page])return;state.page=page;document.querySelector('#sidebar')?.classList.remove('open');document.body.classList.remove('menu-open');render();window.scrollTo({top:0,behavior:'smooth'})}
