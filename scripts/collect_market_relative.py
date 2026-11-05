@@ -29,7 +29,7 @@ def make_empty(reason):
         "priceConvention":"adjust=all · 배당·분할 조정 종가 기준, 실제 제공 시에만 계산",
         "benchmarkSymbols":[{"ticker":t,"label":name} for t,name in SYMBOLS.items()],
         "relativeTo":"XLK","periods":list(TERMS),"returns":{},"relative":{},
-        "weeklyBreadth":{},"asOf":None,"errors":[],
+        "weeklyBreadth":{},"asOf":None,"periodDates":{},"errors":[],
         "caveats":[
             "XBI·XLY·XRT는 산업 대리 ETF이며 추적 기업의 동일가중 수익률이 아님",
             "동일 날짜의 배당·분할 조정 종가로 비교; ETF 초과수익률은 자금 유입 증거가 아님",
@@ -67,6 +67,13 @@ def performance(bars,anchor,day_count):
     old=baseline(bars,(date.fromisoformat(anchor)-timedelta(days=day_count)).isoformat())
     return round(100*(p/old-1),2) if old and p else None
 
+def period_return(bars, anchor, baseline_date):
+    """Exactly matched start/end trading dates, never a shifted proxy."""
+    if not baseline_date or anchor not in bars or baseline_date not in bars:
+        return None
+    base = bars[baseline_date]
+    return round(100*(bars[anchor]/base-1),2) if base>0 else None
+
 def build():
     if not KEY or not DISPLAY:
         data=make_empty("key_required" if not KEY else "display_permission_required")
@@ -84,9 +91,18 @@ def build():
             for bars in history.values():dates.intersection_update(bars)
             anchor=max(dates) if dates else None
             data["asOf"]=anchor
+            if anchor:
+                data["periodDates"]={p:max(
+                    (d for d in history["XLK"] if d<=(
+                        date.fromisoformat(anchor)-timedelta(days=days)
+                    ).isoformat() and (
+                        date.fromisoformat(anchor)-date.fromisoformat(d)
+                    ).days-days<=7),default=None)
+                    for p,days in TERMS.items()}
             for ticker,bars in history.items():
-                if anchor not in bars:continue
-                data["returns"][ticker]={p:performance(bars,anchor,days) for p,days in TERMS.items()}
+                if not anchor or anchor not in bars:continue
+                data["returns"][ticker]={p:period_return(bars,anchor,data["periodDates"].get(p))
+                                          for p in TERMS}
             base=data["returns"].get("XLK",{})
             for ticker in ("XBI","XLY","XRT","SPY","QQQ"):
                 row=data["returns"].get(ticker,{})
