@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "coverage": {
+    "tracked": 52,
+    "us": 47,
+    "korea": 5
+  },
+  "items": [],
+  "needsAttention": 0,
+  "policy": "상태 점검 실행 전. 숫자·날짜는 원문 확인 후 작성."
+}
