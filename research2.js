@@ -71,10 +71,21 @@ function trialChangesBlock(){
  <small>${c.before!=null?esc(c.before)+' → '+esc(c.after||''):esc(c.detail||'등록자료 변경·검증 필요')}</small></div>`).join('')}
  <p class="r2-foot">새로 포착된 시험은 과거 표본에 없었다는 뜻이며 신규 임상 착수·유효성 입증을 의미하지 않습니다.</p></div>`;
 }
+function clinicalDigest(){
+ const entries=clinicalData?.weeklyInterpretation||[];
+ if(!entries.length)return `<div class="r2-empty">이번 주 등록시험 해석 자료를 준비 중입니다. 시험 검색 원문은 기업별 화면에서 확인할 수 있습니다.</div>`;
+ return `<div class="r2-clinical-digest">${entries.slice(0,4).map(x=>`<article class="r2-clinical-insight">
+ <div class="r2-clinical-insight-meta"><span>${esc(x.type)}</span>${x.nctId?`<a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.nctId)} 원문 ↗</a>`:''}</div>
+ <h4>${esc(x.title)}</h4><p>${esc(x.observation)}</p>
+ <p><b>투자 검증</b> · ${esc(x.investmentCheck)}</p>
+ <small>${esc(x.limitation)}</small>
+ </article>`).join('')}</div>`;
+}
+
 function clinicalPanel(){
  return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 임상시험 일정</h3><p>ClinicalTrials.gov 등록 자료 기준. 시험 완료 예정일은 임상 결과 발표일이 아닙니다.</p></div><span class="r2-asof">${esc(clinicalData?.generatedAt?.slice(0,10)||'미수집')}</span></div>
- ${trialChangesBlock()}
- ${trialEvents()}
+ ${clinicalDigest()}
+ <details class="r2-clinical-raw"><summary>등록시험 변경 내역·일정 원자료 펼치기</summary>${trialChangesBlock()}${trialEvents()}</details>
  <p class="r2-foot">등록 시험 ${Number(clinicalData?.verifiedTrialCards)||0}건(상위 표본) · 임상 데이터 상태 ${esc(clinicalData?.status||'조회 전')} · 원문 상태·후원기관 대조, 적응증별 데이터는 계속 보완 중</p></section>`;
 }
 
@@ -125,7 +136,6 @@ function visibleCompanies(){
  (state.sector==='전체'||x.sector===state.sector)&&
  (state.market==='전체'||x.market===state.market)&&
  (state.sector!=='바이오·제약'||state.disease==='전체'||x.disease===state.disease||x.secondaryDiseases?.includes(state.disease))&&
- (state.sector!=='바이오·제약'||state.technology==='전체'||x.technology===state.technology)&&
  (!search||[x.ticker,x.name,x.sector,x.domain,x.disease,x.technology,x.focus,...(x.brands||[])].filter(Boolean).some(y=>String(y).toLowerCase().includes(search)))
  );
 }
@@ -133,10 +143,8 @@ function pill(text){return `<span class="r2-pill">${esc(text)}</span>`}
 function bioFilters(){
  if(state.sector!=='바이오·제약')return '';
  const groups=db?.diseaseGroups||[];
- const technologies=[...new Set(companies().filter(x=>x.sector==='바이오·제약').map(x=>x.technology))].sort();
- return `<div class="r2-bio-filter"><div><b>질환 분야</b><div class="r2-filter-wrap">${click(['전체',...groups],state.disease,'disease')}</div></div>
- <div><b>치료 기술</b><div class="r2-filter-wrap">${click(['전체',...technologies],state.technology,'technology')}</div></div>
- <small>한 기업은 여러 질환에 걸칠 수 있습니다. 약물별 적응증·임상 단계는 별도 기록으로 검증합니다.</small></div>`;
+ return `<div class="r2-bio-filter"><div><b>관심 질환</b><div class="r2-filter-wrap">${click(['전체',...groups],state.disease,'disease')}</div></div>
+ <small>먼저 질환별로 기업을 선택하세요. 치료 기술은 기업 상세의 질환·파이프라인 화면에만 표시합니다.</small></div>`;
 }
 function cardsTable(list){
  return `<div class="r2-company-list" role="list" aria-label="기업 목록">${list.slice(0,80).map(x=>`<button role="listitem" class="r2-company-row ${state.selected===x.id?'is-selected':''}" data-r2="company" data-val="${esc(x.id)}"><span class="r2-ticker">${esc(x.ticker)}</span><span class="r2-company-name"><b>${esc(x.name)}</b><small>${esc(x.disease||x.domain||x.sector)}</small></span><span class="r2-market">${esc(x.market)}</span></button>`).join('')}
@@ -247,8 +255,8 @@ function weeklyIntro(){
  ].map(x=>`<div class="r2-weekly-tile"><b>${esc(x[0])}</b><p>${esc(x[1])}</p><small>${esc(x[2])}</small></div>`).join('')}</div>`:
  `<div class="r2-weekly-single"><b>${esc(state.weeklySector)}</b><p>${bio?health:state.weeklySector==='패션'?'아래에 기존 원문 대조 보고서를 표시합니다.':'공식 원문에 근거한 운영 KPI 분석을 연결하는 중입니다. 제목만으로 리서치를 생성하지 않습니다.'}</p></div>`}
  ${bio?`<div class="r2-weekly-clinical"><h3>등록시험 주요 변화 · 결과 발표일 아님</h3>
- ${trialChangesBlock()}
- ${trialEvents()}
+ ${clinicalDigest()}
+ <details class="r2-clinical-raw"><summary>NCT별 변경·완료 예정일 자세히 보기</summary>${trialChangesBlock()}${trialEvents()}</details>
  <p class="r2-foot">시험 상태·날짜는 제출자가 갱신한 등록정보입니다. 효과·안전성·기업가치 영향은 임상 결과 자료로 별도 검증해야 합니다.</p></div>`:''}
  </div>`;
 }
