@@ -3,6 +3,71 @@
   "scope": "원문 대조 편집본. 자동 수집 결과와 구분; 추가 실적 숫자는 원문을 확인한 범위로 한정.",
   "items": [
     {
+      "id": "vsxy-earnings-preview-nov4",
+      "date": "2026-11-04",
+      "source": "Zacks / Victoria's Secret IR",
+      "sourceType": "증권사 전망 기사 + 회사 공식 실적 대조",
+      "status": "원문 대조·편집",
+      "title": "Victoria's Secret, 과거 EPS 서프라이즈보다 정가 판매 지속성이 관건",
+      "summary": "Zacks는 최근 두 분기의 예상 EPS 상회 이력과 다음 분기 서프라이즈 가능성을 분석. 회사 공식 발표상 2026년 2분기 조정 EPS는 $0.95, 매출은 $1.611B(+10%)였으나 다음 실적 개선이 확정된 것은 아님.",
+      "impact": "VSXY의 매출 성장과 브랜드 회복이 재고 할인 축소·조정 영업이익 개선으로 지속되는지 확인이 핵심.",
+      "kpi": "2026년 3분기 매출 가이던스 $1.57~1.60B 대비 실제 / 동일매장매출 / 조정 영업이익",
+      "risk": "Zacks의 서프라이즈 예상은 전망 모델이며 회사 가이던스가 아님. 조정 EPS와 GAAP EPS 혼동 금지.",
+      "tickers": [
+        "VSXY"
+      ],
+      "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-beat-estimates-161001658.html",
+      "secondaryUrl": "https://victoriassecret.gcs-web.com/news-releases/news-release-details/victorias-secret-co-reports-second-quarter-2026-results",
+      "kind": "results",
+      "inboxIds": [
+        "rss-6bd72c50fb616d2"
+      ],
+      "priority": 5
+    },
+    {
+      "id": "anf-ceedee-edit",
+      "date": "2026-11-04",
+      "source": "Abercrombie & Fitch IR",
+      "sourceType": "기업 공식 신상품 발표",
+      "status": "원문 대조·편집",
+      "title": "Abercrombie, NFL 스타 협업을 판매 가능한 상품으로 연결",
+      "summary": "Abercrombie가 Dallas Cowboys 선수 CeeDee Lamb와 공동 기획한 19개 상품의 캡슐 컬렉션을 발표. 아우터·니트·셔츠 등 클래식 스타일을 2026년 홀리데이 판매에 투입.",
+      "impact": "ANF가 유명인 캠페인을 단순 홍보가 아니라 남성복 상품 판매로 전환할 수 있는지 확인할 사례.",
+      "kpi": "Abercrombie 브랜드 동일매장매출·남성복 성장 / 4분기 정가 판매·매출총이익률",
+      "risk": "제품 출시와 파트너십 자체는 소비자 구매량이나 매출 증가를 의미하지 않음.",
+      "tickers": [
+        "ANF"
+      ],
+      "url": "https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-and-dallas-cowboys-wide-receiver-ceedee-lamb",
+      "kind": "company",
+      "inboxIds": [
+        "rss-bbf88fa138a5331"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "diwali-luxury-2026",
+      "date": "2026-11-04",
+      "source": "The Business of Fashion",
+      "sourceType": "패션 산업 전문매체 · 공개 원문",
+      "status": "원문 대조·편집",
+      "title": "인도 명절 소비를 겨냥한 럭셔리 브랜드의 현지화",
+      "summary": "BoF에 따르면 Bulgari·Jimmy Choo·Michael Kors 등 럭셔리 브랜드가 인도 디왈리 축제에 맞춘 제품·행사·캠페인을 확대. 브랜드 인지도 경쟁이 인도 및 해외 인도계 소비자까지 확장되는 양상.",
+      "impact": "CPRI의 Michael Kors·Jimmy Choo, RL의 인도 유통 파트너 매출 확대 가능성과 지역별 수익성 확인이 필요.",
+      "kpi": "인도·아시아 매출 성장률 / 명절 시즌 정가 판매·판매량 / 브랜드별 기여도",
+      "risk": "축제 판매 전망은 산업 단위 추정이고 홍보 활동은 실제 브랜드 매출 증가를 입증하지 않음. 공개 확인 가능한 기사 범위만 반영.",
+      "tickers": [
+        "CPRI",
+        "RL"
+      ],
+      "url": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/",
+      "kind": "trend",
+      "inboxIds": [
+        "rss-79f91885d638102"
+      ],
+      "priority": 9
+    },
+    {
       "id": "lyst-q3-2026-style",
       "date": "2026-10-28",
       "source": "Lyst Q3 2026 Index",
@@ -18,7 +83,8 @@
         "VFC"
       ],
       "url": "https://www.lyst.com/the-lyst-index/Q3-26/",
-      "kind": "trend"
+      "kind": "trend",
+      "priority": 8
     },
     {
       "id": "capri-fy27-q2",
@@ -35,7 +101,8 @@
         "CPRI"
       ],
       "url": "https://www.capriholdings.com/news/news-details/2026/Capri-Holdings-Limited-Reports-Second-Quarter-Fiscal-2027-Results/default.aspx",
-      "kind": "results"
+      "kind": "results",
+      "priority": 7
     },
     {
       "id": "old-navy-merch-reset",
@@ -52,7 +119,9 @@
         "GAP"
       ],
       "url": "https://www.retaildive.com/news/shakeup-old-navy-amid-merchandising-struggles-walmart/873431/",
-      "kind": "company"
+      "kind": "company",
+      "priority": 6
     }
-  ]
+  ],
+  "policy": "기사 원문 공개 범위를 확인한 편집 요약, 실제 실적은 기업 공식 IR과 교차 대조. 2차 기사 전망은 확정치가 아님."
 }
