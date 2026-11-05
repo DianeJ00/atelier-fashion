@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "status": "not_configured",
+  "source": "Twelve Data adjust=all, 외부 공개 표시 허가 필수",
+  "asOf": null,
+  "benchmarkDates": {},
+  "periods": [
+    "1w",
+    "1m",
+    "3m",
+    "6m",
+    "1y"
+  ],
+  "companies": {},
+  "summary": {},
+  "totalUS": 47,
+  "updatedThisRun": 0,
+  "errors": [],
+  "limitations": [
+    "실시간 종목 상대수익률이 연결되지 않았음",
+    "허가된 시세 데이터가 없으면 가격·초과수익률·상회 비율을 추정하지 않음"
+  ]
+}
