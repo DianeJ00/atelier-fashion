@@ -66,8 +66,8 @@ jobs:
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           MARKET_DATA_DISPLAY_OK: ${{ vars.MARKET_DATA_DISPLAY_OK }}
-          STOCK_MAX_SYMBOLS: '8'
-          STOCK_API_SLEEP_SEC: '8.5'
+          STOCK_MAX_SYMBOLS: '47'
+          STOCK_API_SLEEP_SEC: '9.0'
         run: python scripts/collect_stock_relative.py
       - name: Summarize eligible full article bodies only
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
