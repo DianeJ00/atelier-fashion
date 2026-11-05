@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T07:15:09.356418+00:00",
+  "generatedAt": "2026-11-05T13:19:12.240169+00:00",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-05",
   "timezone": "UTC",
@@ -37,6 +37,23 @@
       "sourceUrl": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/",
       "sourceLabel": "The Business of Fashion",
       "priority": 5.5
+    },
+    {
+      "id": "SEC:CAVA:2026-10-04",
+      "sector": "소비재·서비스",
+      "ticker": "CAVA",
+      "eventDate": "2026-11-05",
+      "eventType": "미국 SEC 분기 실적",
+      "tier": "공식 공시 · GAAP",
+      "title": "CAVA · 매출 전년 대비 +22.0%",
+      "observation": "SEC 10-Q 분기 GAAP 매출 USD 0.36B, 전년 동기 대비 +22.0%, 직전 분기 대비 -3.3%",
+      "period": "2026-07-13 ~ 2026-10-04",
+      "investment": "신규 점포 확대와 기존 점포 방문객·가격 성장의 기여",
+      "nextCheck": "동일매장매출 성장률와 수익성·현금흐름을 동일 분기로 비교",
+      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. 동일매장매출 +3.1%는 주로 가격·상품 구성 효과 3.0%p; 방문객 증가는 소폭",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1639438/000162828026070344/cava-20261004.htm",
+      "sourceLabel": "SEC 10-Q",
+      "priority": 5
     },
     {
       "id": "SEC:UBER:2026-09-30",
@@ -90,23 +107,6 @@
       "priority": 5
     },
     {
-      "id": "SEC:CMG:2026-09-30",
-      "sector": "소비재·서비스",
-      "ticker": "CMG",
-      "eventDate": "2026-10-29",
-      "eventType": "미국 SEC 분기 실적",
-      "tier": "공식 공시 · GAAP",
-      "title": "CMG · 매출 전년 대비 +9.6%",
-      "observation": "SEC 10-Q 분기 GAAP 매출 USD 3.29B, 전년 동기 대비 +9.6%, 직전 분기 대비 -1.7%",
-      "period": "2026-07-01 ~ 2026-09-30",
-      "investment": "기존 매장 거래건수 회복과 마진의 동반 개선 여부",
-      "nextCheck": "동일매장매출 성장률와 수익성·현금흐름을 동일 분기로 비교",
-      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. 매장 단위 이익률(23.3%)과 연결 GAAP 영업이익률(13.7%)을 혼동하지 않음",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000104/cmg-20260930.htm",
-      "sourceLabel": "SEC 10-Q",
-      "priority": 5
-    },
-    {
       "id": "FASH:capri-fy27-q2",
       "sector": "패션",
       "ticker": "CPRI",
@@ -123,27 +123,28 @@
       "priority": 4.5
     },
     {
-      "id": "FASH:old-navy-merch-reset",
-      "sector": "패션",
-      "ticker": "GAP",
-      "eventDate": "2026-11-02",
-      "eventType": "패션 상품·브랜드 변화",
-      "tier": "편집 원문 대조",
-      "title": "Old Navy, 여성 상품기획 재편으로 수요 회복 시도",
-      "observation": "Retail Dive 보도에 따르면 Old Navy는 여성 상품기획 책임자를 새로 선임. 앞선 2분기 매출과 동일매장매출이 각각 4% 감소했고 상품 구성·가격 대응이 과제로 지목.",
-      "investment": "GAP의 핵심 브랜드인 Old Navy가 단순 광고 화제성보다 상품 적중률·매장 트래픽을 회복하는지가 중요.",
-      "nextCheck": "Old Navy 동일매장매출·방문객 수 / 판촉 의존도",
-      "caveat": "인사 변화는 회복의 결과가 아닌 대응 조치. 향후 분기 실적에서 개선 여부 확인 필요.",
-      "sourceUrl": "https://www.retaildive.com/news/shakeup-old-navy-amid-merchandising-struggles-walmart/873431/",
-      "sourceLabel": "Retail Dive",
-      "priority": 4.0
+      "id": "SEC:MRK:2026-09-30",
+      "sector": "바이오·제약",
+      "ticker": "MRK",
+      "eventDate": "2026-11-04",
+      "eventType": "미국 SEC 분기 실적",
+      "tier": "공식 공시 · GAAP",
+      "title": "MRK · 매출 전년 대비 +4.7%",
+      "observation": "SEC 10-Q 분기 GAAP 매출 USD 18.09B, 전년 동기 대비 +4.7%, 직전 분기 대비 +8.9%",
+      "period": "2026-07-01 ~ 2026-09-30",
+      "investment": "주력 항암제 의존을 신약 파이프라인이 완화할 수 있는가",
+      "nextCheck": "제품·사업별 성장과 영업이익·FCF를 동일 기간으로 확인",
+      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. ",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm",
+      "sourceLabel": "SEC 10-Q",
+      "priority": 4
     }
   ],
   "itemCount": 8,
   "bySector": {
     "소비재·서비스": 4,
-    "바이오·제약": 0,
-    "패션": 4
+    "바이오·제약": 1,
+    "패션": 3
   },
   "reviewCandidates": [
     {
@@ -168,6 +169,18 @@
       "change": "인도 명절 소비를 겨냥한 럭셔리 브랜드의 현지화",
       "evidenceDate": "2026-11-04",
       "sourceUrl": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/",
+      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
+    },
+    {
+      "companyId": "US:CAVA",
+      "ticker": "CAVA",
+      "sector": "소비재·서비스",
+      "currentQuestion": "신규 점포 확장의 단위 경제성",
+      "contradictionToCheck": "인건비·식재료비·점포 성장 둔화",
+      "candidateState": "근거 검토 필요 · 방향 미판정",
+      "change": "CAVA · 매출 전년 대비 +22.0%",
+      "evidenceDate": "2026-11-05",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1639438/000162828026070344/cava-20261004.htm",
       "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
     },
     {
@@ -207,27 +220,15 @@
       "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
     },
     {
-      "companyId": "US:CMG",
-      "ticker": "CMG",
-      "sector": "소비재·서비스",
-      "currentQuestion": "기존 점포 객수와 가격 효과",
-      "contradictionToCheck": "방문객 감소·가격 저항",
+      "companyId": "US:MRK",
+      "ticker": "MRK",
+      "sector": "바이오·제약",
+      "currentQuestion": "주력 항암제 의존을 신약 파이프라인이 완화할 수 있는가",
+      "contradictionToCheck": "주력 제품 특허 종료 전 대체 성장원 부족",
       "candidateState": "근거 검토 필요 · 방향 미판정",
-      "change": "CMG · 매출 전년 대비 +9.6%",
-      "evidenceDate": "2026-10-29",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000104/cmg-20260930.htm",
-      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
-    },
-    {
-      "companyId": "US:GAP",
-      "ticker": "GAP",
-      "sector": "패션",
-      "currentQuestion": "Old Navy comps·여성복 상품 적중률·환급 제외 마진",
-      "contradictionToCheck": "할인율·브랜드별 성장 차이",
-      "candidateState": "근거 검토 필요 · 방향 미판정",
-      "change": "Old Navy, 여성 상품기획 재편으로 수요 회복 시도",
-      "evidenceDate": "2026-11-02",
-      "sourceUrl": "https://www.retaildive.com/news/shakeup-old-navy-amid-merchandising-struggles-walmart/873431/",
+      "change": "MRK · 매출 전년 대비 +4.7%",
+      "evidenceDate": "2026-11-04",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm",
       "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
     }
   ],
@@ -270,11 +271,11 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-05T07:15:09.159853+00:00"
+    "fashion": "2026-11-05T13:19:12.052429+00:00"
   },
   "coverage": {
     "tracked": 52,
-    "gaapCompared": 27,
+    "gaapCompared": 47,
     "consumerWithOfficialKpi": 15,
     "domesticBriefs": "과거 국내 담당 브리프 원본 및 DART 연결 대기"
   },

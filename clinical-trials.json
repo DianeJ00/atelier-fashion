@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T07:14:56.438419+00:00",
+  "generatedAt": "2026-11-05T13:19:02.595243+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -495,7 +495,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 15,
+      "verifiedTrialCountInSearchWindow": 17,
       "trials": [
         {
           "nctId": "NCT04040361",
@@ -621,35 +621,34 @@
           "url": "https://clinicaltrials.gov/study/NCT03407144"
         },
         {
-          "nctId": "NCT05405595",
-          "title": "ADG126 in Combination With Pembrolizumab in Patients With Advanced/Metastatic Solid Tumors",
+          "nctId": "NCT06493019",
+          "title": "Study of Pembrolizumab, Carboplatin, Paclitaxel, and Radiation for the Treatment of Early-Stage Anal Cancer",
           "status": "RECRUITING",
           "statusKr": "모집 중",
           "phases": [
-            "PHASE1",
             "PHASE2"
           ],
           "conditions": [
-            "Advanced/Metastatic Solid Tumors"
+            "Anal Cancer"
           ],
-          "sponsor": "Adagene Inc",
+          "sponsor": "Dustin Deming",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2022-06-15",
+            "date": "2024-09-30",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2027-06-30",
+            "date": "2027-04-15",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2027-12-31",
+            "date": "2029-04-14",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Maximum tolerated dose (MTD) and RP2D for ADG126 in combination with pembrolizumab.",
+          "primaryMeasure": "Clinical complete response rate (cCR) following weekly carboplatin and paclitaxel in combination with pembrolizumab and radiation for the treatment of early-stage anal cancer.",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT05405595"
+          "url": "https://clinicaltrials.gov/study/NCT06493019"
         }
       ],
       "status": "registered_trials_found",
@@ -1959,9 +1958,19 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-05T06:52:40.638608+00:00",
-  "changeCount": 0,
-  "changes": [],
+  "comparisonTo": "2026-11-05T07:14:56.438419+00:00",
+  "changeCount": 1,
+  "changes": [
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT06493019",
+      "url": "https://clinicaltrials.gov/study/NCT06493019",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    }
+  ],
   "weeklyInterpretation": [
     {
       "type": "앞으로 확인할 임상 일정",

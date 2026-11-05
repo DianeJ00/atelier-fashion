@@ -1,10 +1,36 @@
 {
-  "generatedAt": "2026-11-05T07:14:26.574398Z",
+  "generatedAt": "2026-11-05T13:17:59.928629Z",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-05",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
+    {
+      "id": "rss-6996d8e14041782",
+      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+      "date": "2026-11-05T13:04:16Z",
+      "platform": "Google News",
+      "ticker": "TPR",
+      "brand": "",
+      "creator": "Finimize",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-7fd0099aad78a0b",
+      "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
+      "date": "2026-11-05T11:51:43Z",
+      "platform": "Google News",
+      "ticker": "TPR",
+      "brand": "",
+      "creator": "Reuters",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
     {
       "id": "rss-6bd72c50fb616d2",
       "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
@@ -16,6 +42,19 @@
       "creator": "Yahoo Finance",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기업 실적",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-2e51d797ab1d244",
+      "title": "Founders Shut Down Coperni - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAyS21WOWtNWmc4cTk2Ykh1LV9pMGgzbHVPSF91NGsyWWRWZGpWckJ1ZDJRNEg2YWhBS2RSOTdWejNqaXoweEwyVnMzS0FMVFZ0T2ctTjdXRVAzVTZFdGZ5WF90NW5HZ1MzWWtEXzAzcWx6MVhvOHVLQi1VVHQxQQ?oc=5",
+      "date": "2026-11-04T13:54:10Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -48,7 +87,7 @@
       "id": "rss-0ebf6c2d6d9794f",
       "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
-      "date": "2026-11-04T03:03:00Z",
+      "date": "2026-11-04T03:03:24Z",
       "platform": "Google News",
       "ticker": "RL",
       "brand": "",
@@ -79,21 +118,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
-    },
-    {
-      "id": "rss-7b680c5dd58e651",
-      "title": "Judge sides with FTC, blocking Kate Spade and Michael Kors merger - ABC News - Breaking News, Latest News and Videos",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeW9kT2xhQVUyc3MzdHB4ano0UFlQdGhSSEhraG04ZWNSVjR2VjJUT0lXbUxscWNuMTl5b3poNzBZVEJQdnRFWFFhSVRhRnh2STA1bXo2UkhMQURRTmRvQlpyNlB1eUJLb1lqNjJNSTRqdFZWOTN6dFpnM0NIOHJUTXhkSWJYczFCS2NHd2hIWEsyWDNndkRwUHNxNnVJZ9IBowFBVV95cUxNSHBISzVob3NpWm1qUXNSX19fTFZzY0hqckpESkpCX3JFV3hqTlFub2JGQVlYYlV6V1pCX1dYMTl2ZXFNMVpMRjJycGlnc28zRGk5c3BRbXh4eHdrcVRoOVJ2SlZmSEQ3OGFXUUxPZGNCdHQxRXozSERHaWxhNENZOFJIazIyME1JNUpvQUxyMllQM2VIanlYeGNxZllTLTRiSWZJ?oc=5",
-      "date": "2026-11-03T19:57:30Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "ABC News - Breaking News, Latest News and Videos",
-      "source": "Google News RSS (원문 확인 전)",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
@@ -106,10 +131,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-4cbde890c13b0a0",
@@ -198,10 +222,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "브랜드·제품",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-0e028428d469986",
@@ -225,10 +248,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-8f268443bdfb166",
@@ -252,22 +274,8 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
-    },
-    {
-      "id": "rss-055684c48676722",
-      "title": "You Can Finally Rent Chanel on Rent the Runway - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUUhKaEFnVGRpTHN5OGZKcjNjZkVqZzVkWWpmVnM5cVJFblVuMjcwV1ZxMXdVb3NnUHdsQnZUNW5qUXoyZks2dElJT1BYWHNnMGc0RGd0Z3NLdHNDWTlnR1hGZGhPdnVkMXFDUWNWY21nVUpyQWR2Tm4wamV5UW0tZkJuV3hJY001UHYzTGtGVDZYQjFyUVdBSmVuY0xGT3l1anc?oc=5",
-      "date": "2026-11-02T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
     {
@@ -292,21 +300,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
-    },
-    {
-      "id": "rss-17c8789b0d00c77",
-      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
-      "date": "2026-10-31T09:16:00Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "Investing.com UK",
-      "source": "Google News RSS (원문 확인 전)",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
@@ -347,6 +341,19 @@
       "creator": "Vogue",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-c1e379ebd64ffdb",
+      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
+      "date": "2026-10-30T15:50:18Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "qz.com",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -423,10 +430,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-66cff68b608b3f6",
@@ -460,7 +466,7 @@
     "counts": [
       {
         "source": "Google News",
-        "count": 27
+        "count": 28
       },
       {
         "source": "YouTube",
@@ -470,7 +476,7 @@
     "topics": [
       {
         "name": "패션쇼·디자인",
-        "count": 5
+        "count": 4
       },
       {
         "name": "기업 실적",
@@ -485,19 +491,24 @@
         "count": 2
       }
     ],
-    "uncategorizedCount": 21,
-    "previousCollectedAt": "2026-11-05T06:52:10.792332Z",
-    "newSincePrevious": 2,
+    "uncategorizedCount": 23,
+    "previousCollectedAt": "2026-11-05T07:14:26.574398Z",
+    "newSincePrevious": 4,
     "companyFocus": [
       {
         "ticker": "TPR",
-        "count": 1,
+        "count": 2,
         "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "Judge sides with FTC, blocking Kate Spade and Michael Kors merger - ABC News - Breaking News, Latest News and Videos",
-            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeW9kT2xhQVUyc3MzdHB4ano0UFlQdGhSSEhraG04ZWNSVjR2VjJUT0lXbUxscWNuMTl5b3poNzBZVEJQdnRFWFFhSVRhRnh2STA1bXo2UkhMQURRTmRvQlpyNlB1eUJLb1lqNjJNSTRqdFZWOTN6dFpnM0NIOHJUTXhkSWJYczFCS2NHd2hIWEsyWDNndkRwUHNxNnVJZ9IBowFBVV95cUxNSHBISzVob3NpWm1qUXNSX19fTFZzY0hqckpESkpCX3JFV3hqTlFub2JGQVlYYlV6V1pCX1dYMTl2ZXFNMVpMRjJycGlnc28zRGk5c3BRbXh4eHdrcVRoOVJ2SlZmSEQ3OGFXUUxPZGNCdHQxRXozSERHaWxhNENZOFJIazIyME1JNUpvQUxyMllQM2VIanlYeGNxZllTLTRiSWZJ?oc=5",
-            "date": "2026-11-03"
+            "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+            "date": "2026-11-05"
+          },
+          {
+            "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
+            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
+            "date": "2026-11-05"
           }
         ]
       },
@@ -593,22 +604,22 @@
     {
       "name": "Fashion Roadman",
       "source": "YouTube RSS",
-      "status": "신규 0건 · 이전 자료 유지",
-      "count": 0,
-      "previousRetained": 6
+      "status": "수집 완료",
+      "count": 6,
+      "previousRetained": 0
     },
     {
       "name": "Tim Dessaint",
       "source": "YouTube RSS",
-      "status": "신규 0건 · 이전 자료 유지",
-      "count": 0,
-      "previousRetained": 1
+      "status": "수집 완료",
+      "count": 1,
+      "previousRetained": 0
     },
     {
       "name": "공개 뉴스·패션 매체",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 27
+      "count": 28
     }
   ],
   "errors": []

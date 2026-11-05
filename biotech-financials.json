@@ -1,13 +1,1814 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
-  "status": "not_collected",
-  "source": "SEC 10-Q US GAAP",
+  "generatedAt": "2026-11-05T13:18:24.600577+00:00",
+  "status": "ok",
+  "source": "SEC company_tickers.json, submissions, US-GAAP companyfacts",
   "count": 20,
-  "quarterVerified": 0,
-  "companies": [],
+  "quarterVerified": 20,
+  "companies": [
+    {
+      "ticker": "LLY",
+      "cik": 59478,
+      "companyName": "Eli Lilly",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000059478-26-000108",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-09-30",
+          "accession": "0000059478-26-000108",
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-05",
+          "reportEnd": "2026-06-30",
+          "accession": "0000059478-26-000081",
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000081/lly-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-30",
+          "reportEnd": "2026-03-31",
+          "accession": "0000059478-26-000045",
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000045/lly-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 24397000000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000059478-26-000108",
+            "priorYearValue": 17601000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 38.6
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": 6451000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000059478-26-000108"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000059478-26-000108",
+        "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "JNJ",
+      "cik": 200406,
+      "companyName": "Johnson & Johnson",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-21",
+        "reportEnd": "2026-09-27",
+        "accession": "0000200406-26-000197",
+        "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000197/jnj-20260927.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-21",
+          "reportEnd": "2026-09-27",
+          "accession": "0000200406-26-000197",
+          "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000197/jnj-20260927.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-23",
+          "reportEnd": "2026-06-28",
+          "accession": "0000200406-26-000153",
+          "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000153/jnj-20260628.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-22",
+          "reportEnd": "2026-03-29",
+          "accession": "0000200406-26-000087",
+          "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000087/jnj-20260329.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-06-29",
+        "periodEnd": "2026-09-27",
+        "form": "10-Q",
+        "filed": "2026-10-21",
+        "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000197/jnj-20260927.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 25399000000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-06-29",
+            "end": "2026-09-27",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000200406-26-000197",
+            "priorYearValue": 23993000000,
+            "priorYearStart": "2025-06-30",
+            "priorYearEnd": "2025-09-28",
+            "yoyPercent": 5.9
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": 210000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-06-29",
+            "end": "2026-09-27",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000200406-26-000197"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-21",
+        "reportEnd": "2026-09-27",
+        "accession": "0000200406-26-000197",
+        "url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000197/jnj-20260927.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "MRK",
+      "cik": 310158,
+      "companyName": "Merck & Co.",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "reportEnd": "2026-09-30",
+        "accession": "0000310158-26-000248",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-04",
+          "reportEnd": "2026-09-30",
+          "accession": "0000310158-26-000248",
+          "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-07",
+          "reportEnd": "2026-06-30",
+          "accession": "0000310158-26-000212",
+          "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000212/mrk-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-04",
+          "reportEnd": "2026-03-31",
+          "accession": "0001628280-26-029802",
+          "url": "https://www.sec.gov/Archives/edgar/data/310158/000162828026029802/mrk-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 18085000000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000310158-26-000248",
+            "priorYearValue": 17276000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 4.7
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": 5065000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000310158-26-000248"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "reportEnd": "2026-09-30",
+        "accession": "0000310158-26-000248",
+        "url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000248/mrk-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "ABBV",
+      "cik": 1551152,
+      "companyName": "AbbVie",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-30",
+        "accession": "0001551152-26-000037",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000037/abbv-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-03",
+          "reportEnd": "2026-09-30",
+          "accession": "0001551152-26-000037",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000037/abbv-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-03",
+          "reportEnd": "2026-06-30",
+          "accession": "0001551152-26-000026",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000026/abbv-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-08",
+          "reportEnd": "2026-03-31",
+          "accession": "0001551152-26-000017",
+          "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000017/abbv-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000037/abbv-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 17404000000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001551152-26-000037",
+            "priorYearValue": 15776000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 10.3
+          },
+          "operatingIncome": {
+            "value": 6267000000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001551152-26-000037"
+          },
+          "netIncome": {
+            "value": 4218000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001551152-26-000037"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-30",
+        "accession": "0001551152-26-000037",
+        "url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000037/abbv-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "PFE",
+      "cik": 78003,
+      "companyName": "Pfizer",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-27",
+        "accession": "0000078003-26-000127",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000127/pfe-20260927.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-03",
+          "reportEnd": "2026-09-27",
+          "accession": "0000078003-26-000127",
+          "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000127/pfe-20260927.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-04",
+          "reportEnd": "2026-06-28",
+          "accession": "0000078003-26-000095",
+          "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000095/pfe-20260628.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "reportEnd": "2026-03-29",
+          "accession": "0000078003-26-000054",
+          "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000054/pfe-20260329.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-06-29",
+        "periodEnd": "2026-09-27",
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000127/pfe-20260927.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 16583000000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-06-29",
+            "end": "2026-09-27",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000078003-26-000127",
+            "priorYearValue": 16654000000,
+            "priorYearStart": "2025-06-30",
+            "priorYearEnd": "2025-09-28",
+            "yoyPercent": -0.4
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": 3242000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-06-29",
+            "end": "2026-09-27",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000078003-26-000127"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-27",
+        "accession": "0000078003-26-000127",
+        "url": "https://www.sec.gov/Archives/edgar/data/78003/000007800326000127/pfe-20260927.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "BMY",
+      "cik": 14272,
+      "companyName": "Bristol Myers Squibb",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000014272-26-000024",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000024/bmy-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-09-30",
+          "accession": "0000014272-26-000024",
+          "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000024/bmy-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-30",
+          "reportEnd": "2026-06-30",
+          "accession": "0000014272-26-000020",
+          "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000020/bmy-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-30",
+          "reportEnd": "2026-03-31",
+          "accession": "0000014272-26-000010",
+          "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000010/bmy-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000024/bmy-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 13069000000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000014272-26-000024",
+            "priorYearValue": 12222000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 6.9
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": 2162000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000014272-26-000024"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000014272-26-000024",
+        "url": "https://www.sec.gov/Archives/edgar/data/14272/000001427226000024/bmy-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "AMGN",
+      "cik": 318154,
+      "companyName": "Amgen",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "reportEnd": "2026-09-30",
+        "accession": "0000318154-26-000155",
+        "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000155/amgn-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-04",
+          "reportEnd": "2026-09-30",
+          "accession": "0000318154-26-000155",
+          "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000155/amgn-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-05",
+          "reportEnd": "2026-06-30",
+          "accession": "0000318154-26-000126",
+          "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000126/amgn-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-01",
+          "reportEnd": "2026-03-31",
+          "accession": "0000318154-26-000057",
+          "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000057/amgn-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000155/amgn-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 10365000000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000318154-26-000155",
+            "priorYearValue": 9557000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 8.5
+          },
+          "operatingIncome": {
+            "value": 3710000000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000318154-26-000155"
+          },
+          "netIncome": {
+            "value": 3864000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000318154-26-000155"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-04",
+        "reportEnd": "2026-09-30",
+        "accession": "0000318154-26-000155",
+        "url": "https://www.sec.gov/Archives/edgar/data/318154/000031815426000155/amgn-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "GILD",
+      "cik": 882095,
+      "companyName": "Gilead Sciences",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "reportEnd": "2026-09-30",
+        "accession": "0000882095-26-000039",
+        "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000039/gild-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-30",
+          "reportEnd": "2026-09-30",
+          "accession": "0000882095-26-000039",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000039/gild-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-06",
+          "reportEnd": "2026-06-30",
+          "accession": "0000882095-26-000031",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000031/gild-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-07",
+          "reportEnd": "2026-03-31",
+          "accession": "0000882095-26-000024",
+          "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000024/gild-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000039/gild-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 8300000000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000882095-26-000039",
+            "priorYearValue": 7769000000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 6.8
+          },
+          "operatingIncome": {
+            "value": 3462000000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000882095-26-000039"
+          },
+          "netIncome": {
+            "value": 2429000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000882095-26-000039"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "reportEnd": "2026-09-30",
+        "accession": "0000882095-26-000039",
+        "url": "https://www.sec.gov/Archives/edgar/data/882095/000088209526000039/gild-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "REGN",
+      "cik": 872589,
+      "companyName": "Regeneron",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "reportEnd": "2026-09-30",
+        "accession": "0000872589-26-000034",
+        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000034/regn-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-30",
+          "reportEnd": "2026-09-30",
+          "accession": "0000872589-26-000034",
+          "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000034/regn-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-30",
+          "reportEnd": "2026-06-30",
+          "accession": "0000872589-26-000025",
+          "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000025/regn-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-29",
+          "reportEnd": "2026-03-31",
+          "accession": "0000872589-26-000016",
+          "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000016/regn-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000034/regn-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 5115800000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000872589-26-000034",
+            "priorYearValue": 3754300000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 36.3
+          },
+          "operatingIncome": {
+            "value": 2048200000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000872589-26-000034"
+          },
+          "netIncome": {
+            "value": 1948700000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000872589-26-000034"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "reportEnd": "2026-09-30",
+        "accession": "0000872589-26-000034",
+        "url": "https://www.sec.gov/Archives/edgar/data/872589/000087258926000034/regn-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "VRTX",
+      "cik": 875320,
+      "companyName": "Vertex Pharmaceuticals",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-30",
+        "accession": "0000875320-26-000291",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000291/vrtx-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-03",
+          "reportEnd": "2026-09-30",
+          "accession": "0000875320-26-000291",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000291/vrtx-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-04",
+          "reportEnd": "2026-06-30",
+          "accession": "0000875320-26-000259",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000259/vrtx-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "reportEnd": "2026-03-31",
+          "accession": "0000875320-26-000173",
+          "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000173/vrtx-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000291/vrtx-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 3440800000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000875320-26-000291",
+            "priorYearValue": 3076400000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 11.8
+          },
+          "operatingIncome": {
+            "value": 712900000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000875320-26-000291"
+          },
+          "netIncome": {
+            "value": 653600000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000875320-26-000291"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-03",
+        "reportEnd": "2026-09-30",
+        "accession": "0000875320-26-000291",
+        "url": "https://www.sec.gov/Archives/edgar/data/875320/000087532026000291/vrtx-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "ALNY",
+      "cik": 1178670,
+      "companyName": "Alnylam Pharmaceuticals",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0001178670-26-000076",
+        "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000076/alny-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-09-30",
+          "accession": "0001178670-26-000076",
+          "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000076/alny-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-30",
+          "reportEnd": "2026-06-30",
+          "accession": "0001178670-26-000062",
+          "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000062/alny-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-30",
+          "reportEnd": "2026-03-31",
+          "accession": "0001628280-26-028605",
+          "url": "https://www.sec.gov/Archives/edgar/data/1178670/000162828026028605/alny-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000076/alny-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 1458086000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001178670-26-000076",
+            "priorYearValue": 1249026000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 16.7
+          },
+          "operatingIncome": {
+            "value": 345798000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001178670-26-000076"
+          },
+          "netIncome": {
+            "value": 2167335000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001178670-26-000076"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0001178670-26-000076",
+        "url": "https://www.sec.gov/Archives/edgar/data/1178670/000117867026000076/alny-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "BIIB",
+      "cik": 875045,
+      "companyName": "Biogen",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-28",
+        "reportEnd": "2026-09-30",
+        "accession": "0000875045-26-000096",
+        "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000096/biib-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-28",
+          "reportEnd": "2026-09-30",
+          "accession": "0000875045-26-000096",
+          "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000096/biib-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-29",
+          "reportEnd": "2026-06-30",
+          "accession": "0000875045-26-000075",
+          "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000075/biib-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-29",
+          "reportEnd": "2026-03-31",
+          "accession": "0000875045-26-000045",
+          "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000045/biib-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-28",
+        "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000096/biib-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 2804100000,
+            "unit": "USD",
+            "usGaapTag": "Revenues",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000875045-26-000096",
+            "priorYearValue": 2534700000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 10.6
+          },
+          "operatingIncome": null,
+          "netIncome": {
+            "value": -20600000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000875045-26-000096"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-28",
+        "reportEnd": "2026-09-30",
+        "accession": "0000875045-26-000096",
+        "url": "https://www.sec.gov/Archives/edgar/data/875045/000087504526000096/biib-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "VKTX",
+      "cik": 1607678,
+      "companyName": "Viking Therapeutics",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0001193125-26-436432",
+        "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526436432/vktx-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-09-30",
+          "accession": "0001193125-26-436432",
+          "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526436432/vktx-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-29",
+          "reportEnd": "2026-06-30",
+          "accession": "0001193125-26-324219",
+          "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526324219/vktx-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-30",
+          "reportEnd": "2026-03-31",
+          "accession": "0001193125-26-193315",
+          "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526193315/vktx-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526436432/vktx-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 0,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-436432"
+          },
+          "operatingIncome": {
+            "value": -187112000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-436432"
+          },
+          "netIncome": {
+            "value": -183186000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-436432"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0001193125-26-436432",
+        "url": "https://www.sec.gov/Archives/edgar/data/1607678/000119312526436432/vktx-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "NBIX",
+      "cik": 914475,
+      "companyName": "Neurocrine Biosciences",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "reportEnd": "2026-09-30",
+        "accession": "0000914475-26-000054",
+        "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000054/nbix-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-02",
+          "reportEnd": "2026-09-30",
+          "accession": "0000914475-26-000054",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000054/nbix-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-31",
+          "reportEnd": "2026-06-30",
+          "accession": "0000914475-26-000037",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000037/nbix-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "reportEnd": "2026-03-31",
+          "accession": "0000914475-26-000026",
+          "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000026/nbix-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000054/nbix-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 1122700000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000914475-26-000054",
+            "priorYearValue": 794900000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 41.2
+          },
+          "operatingIncome": {
+            "value": 331300000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000914475-26-000054"
+          },
+          "netIncome": {
+            "value": 206500000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000914475-26-000054"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "reportEnd": "2026-09-30",
+        "accession": "0000914475-26-000054",
+        "url": "https://www.sec.gov/Archives/edgar/data/914475/000091447526000054/nbix-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "IONS",
+      "cik": 874015,
+      "companyName": "Ionis Pharmaceuticals",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-07-29",
+        "reportEnd": "2026-06-30",
+        "accession": "0000874015-26-000251",
+        "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000251/form10q.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-07-29",
+          "reportEnd": "2026-06-30",
+          "accession": "0000874015-26-000251",
+          "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000251/form10q.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-29",
+          "reportEnd": "2026-03-31",
+          "accession": "0000874015-26-000177",
+          "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000177/form10q.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-02-26",
+          "reportEnd": "2025-12-31",
+          "accession": "0000874015-26-000115",
+          "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000115/form10k.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-04-01",
+        "periodEnd": "2026-06-30",
+        "form": "10-Q",
+        "filed": "2026-07-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000251/form10q.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q2",
+        "metrics": {
+          "revenue": {
+            "value": 267949000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0000874015-26-000251",
+            "priorYearValue": 452049000,
+            "priorYearStart": "2025-04-01",
+            "priorYearEnd": "2025-06-30",
+            "yoyPercent": -40.7
+          },
+          "operatingIncome": {
+            "value": -102293000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0000874015-26-000251"
+          },
+          "netIncome": {
+            "value": -114646000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0000874015-26-000251"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-07-29",
+        "reportEnd": "2026-06-30",
+        "accession": "0000874015-26-000251",
+        "url": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000251/form10q.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "INCY",
+      "cik": 879169,
+      "companyName": "Incyte",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000879169-26-000066",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000066/incy-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-09-30",
+          "accession": "0000879169-26-000066",
+          "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000066/incy-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-28",
+          "reportEnd": "2026-06-30",
+          "accession": "0000879169-26-000056",
+          "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000056/incy-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-04-28",
+          "reportEnd": "2026-03-31",
+          "accession": "0000879169-26-000026",
+          "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000026/incy-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000066/incy-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 1557204000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000879169-26-000066",
+            "priorYearValue": 1365980000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 14.0
+          },
+          "operatingIncome": {
+            "value": -708361000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000879169-26-000066"
+          },
+          "netIncome": {
+            "value": -784803000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000879169-26-000066"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-09-30",
+        "accession": "0000879169-26-000066",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000066/incy-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "EXEL",
+      "cik": 939767,
+      "companyName": "Exelixis",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-10-02",
+        "accession": "0000939767-26-000116",
+        "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000116/exel-20261002.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-10-29",
+          "reportEnd": "2026-10-02",
+          "accession": "0000939767-26-000116",
+          "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000116/exel-20261002.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-05",
+          "reportEnd": "2026-07-03",
+          "accession": "0000939767-26-000098",
+          "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000098/exel-20260703.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "reportEnd": "2026-04-03",
+          "accession": "0000939767-26-000059",
+          "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000059/exel-20260403.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-04",
+        "periodEnd": "2026-10-02",
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000116/exel-20261002.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 658696000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-04",
+            "end": "2026-10-02",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000939767-26-000116",
+            "priorYearValue": 597755000,
+            "priorYearStart": "2025-07-05",
+            "priorYearEnd": "2025-10-03",
+            "yoyPercent": 10.2
+          },
+          "operatingIncome": {
+            "value": 268423000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-04",
+            "end": "2026-10-02",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000939767-26-000116"
+          },
+          "netIncome": {
+            "value": 218095000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-04",
+            "end": "2026-10-02",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0000939767-26-000116"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-10-29",
+        "reportEnd": "2026-10-02",
+        "accession": "0000939767-26-000116",
+        "url": "https://www.sec.gov/Archives/edgar/data/939767/000093976726000116/exel-20261002.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "MRNA",
+      "cik": 1682852,
+      "companyName": "Moderna",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-07-31",
+        "reportEnd": "2026-06-30",
+        "accession": "0001682852-26-000150",
+        "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-07-31",
+          "reportEnd": "2026-06-30",
+          "accession": "0001682852-26-000150",
+          "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-01",
+          "reportEnd": "2026-03-31",
+          "accession": "0001682852-26-000060",
+          "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000060/mrna-20260331.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-02-20",
+          "reportEnd": "2025-12-31",
+          "accession": "0001682852-26-000033",
+          "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/mrna-20251231.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-04-01",
+        "periodEnd": "2026-06-30",
+        "form": "10-Q",
+        "filed": "2026-07-31",
+        "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q2",
+        "metrics": {
+          "revenue": {
+            "value": 145000000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001682852-26-000150",
+            "priorYearValue": 142000000,
+            "priorYearStart": "2025-04-01",
+            "priorYearEnd": "2025-06-30",
+            "yoyPercent": 2.1
+          },
+          "operatingIncome": {
+            "value": -815000000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001682852-26-000150"
+          },
+          "netIncome": {
+            "value": -782000000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001682852-26-000150"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-07-31",
+        "reportEnd": "2026-06-30",
+        "accession": "0001682852-26-000150",
+        "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "CRSP",
+      "cik": 1674416,
+      "companyName": "CRISPR Therapeutics",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "reportEnd": "2026-09-30",
+        "accession": "0001193125-26-443665",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526443665/crsp-20260930.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-02",
+          "reportEnd": "2026-09-30",
+          "accession": "0001193125-26-443665",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526443665/crsp-20260930.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-08-03",
+          "reportEnd": "2026-06-30",
+          "accession": "0001193125-26-330672",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526330672/crsp-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-04",
+          "reportEnd": "2026-03-31",
+          "accession": "0001193125-26-204188",
+          "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526204188/crsp-20260331.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-09-30",
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526443665/crsp-20260930.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q3",
+        "metrics": {
+          "revenue": {
+            "value": 12669000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-443665",
+            "priorYearValue": 889000,
+            "priorYearStart": "2025-07-01",
+            "priorYearEnd": "2025-09-30",
+            "yoyPercent": 1325.1
+          },
+          "operatingIncome": {
+            "value": -130045000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-443665"
+          },
+          "netIncome": {
+            "value": -111437000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-07-01",
+            "end": "2026-09-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q3",
+            "form": "10-Q",
+            "accession": "0001193125-26-443665"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-11-02",
+        "reportEnd": "2026-09-30",
+        "accession": "0001193125-26-443665",
+        "url": "https://www.sec.gov/Archives/edgar/data/1674416/000119312526443665/crsp-20260930.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    },
+    {
+      "ticker": "SRPT",
+      "cik": 873303,
+      "companyName": "Sarepta Therapeutics",
+      "status": "quarter_verified",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-08-05",
+        "reportEnd": "2026-06-30",
+        "accession": "0001193125-26-335003",
+        "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526335003/srpt-20260630.htm"
+      },
+      "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-08-05",
+          "reportEnd": "2026-06-30",
+          "accession": "0001193125-26-335003",
+          "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526335003/srpt-20260630.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-06",
+          "reportEnd": "2026-03-31",
+          "accession": "0001193125-26-208893",
+          "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526208893/srpt-20260331.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-03-02",
+          "reportEnd": "2025-12-31",
+          "accession": "0001193125-26-084144",
+          "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526084144/srpt-20251231.htm"
+        }
+      ],
+      "quarter": {
+        "periodStart": "2026-04-01",
+        "periodEnd": "2026-06-30",
+        "form": "10-Q",
+        "filed": "2026-08-05",
+        "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526335003/srpt-20260630.htm",
+        "fiscalYear": 2026,
+        "fiscalPeriod": "Q2",
+        "metrics": {
+          "revenue": {
+            "value": 328689000,
+            "unit": "USD",
+            "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001193125-26-335003",
+            "priorYearValue": 513123000,
+            "priorYearStart": "2025-04-01",
+            "priorYearEnd": "2025-06-30",
+            "yoyPercent": -35.9
+          },
+          "operatingIncome": {
+            "value": 13291000,
+            "unit": "USD",
+            "usGaapTag": "OperatingIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001193125-26-335003"
+          },
+          "netIncome": {
+            "value": -4890000,
+            "unit": "USD",
+            "usGaapTag": "NetIncomeLoss",
+            "start": "2026-04-01",
+            "end": "2026-06-30",
+            "fiscalYear": 2026,
+            "fiscalPeriod": "Q2",
+            "form": "10-Q",
+            "accession": "0001193125-26-335003"
+          }
+        }
+      },
+      "verifiedAt": "2026-11-05T13:18:24.600370+00:00",
+      "quarterFiling": {
+        "form": "10-Q",
+        "filed": "2026-08-05",
+        "reportEnd": "2026-06-30",
+        "accession": "0001193125-26-335003",
+        "url": "https://www.sec.gov/Archives/edgar/data/873303/000119312526335003/srpt-20260630.htm"
+      },
+      "updatedAt": "2026-11-05T13:18:24.600577+00:00"
+    }
+  ],
   "errors": [],
   "limitations": [
-    "SEC 공식 분기 검증 완료 전에는 수치를 채우지 않습니다."
+    "등록기업 20개가 모두 동일 회계기준이나 임상 개발 단계에 있다는 뜻이 아님",
+    "바이오텍의 매출이 0 또는 음수일 때 임의 성장률 계산 금지",
+    "임상 성공·FDA 승인·시장규모는 SEC GAAP 숫자만으로 판단하지 않음",
+    "SEC 10-Q가 확인되지 않는 해외 상장사 등은 자료 공백 그대로 유지",
+    "분기 수치와 임상시험 단계·품목허가를 혼동하지 않음"
   ]
 }

@@ -2,6 +2,15 @@
   "highlights": [
     {
       "tier": "공식 공시",
+      "ticker": "TPR",
+      "date": "2026-11-05",
+      "title": "SEC 10-Q 매출 USD 1.89B / 전년 대비 +11.1%",
+      "context": "Coach 성장·Kate Spade 손익 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
+      "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm",
+      "note": "공식 공시 사실, 세부 원문 확인 필요"
+    },
+    {
+      "tier": "공식 공시",
       "ticker": "CPRI",
       "date": "2026-10-30",
       "title": "SEC 10-Q 매출 USD 809.0M / 전년 대비 -5.5%",
@@ -17,24 +26,15 @@
       "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
-      "ticker": "VFC",
-      "date": "2026-11-03",
-      "title": "Vans and SZA Debut Campaign - VF Corporation",
-      "context": "Vans 매출·재고 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLS1pZQ0lBNHhxZEF1a09xUDlTalJBOG5PQ3pqZU5lVU1lWTRJMVgxTVpBbWprMXRzNnNBNEhncWdzRE1jeDFYWDVJLWNQX1JlM185VnliaGVxOHFycENjLWY4ZS1oeW5jQ2dGZlpQRjA0VUk1WWVtWWFic3B1cUk?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-05T07:15:09.316728+00:00",
+  "generatedAt": "2026-11-05T13:19:12.207860+00:00",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-05",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
-    "newSECReports": 1,
-    "unverifiedHeadlines": 34,
+    "newSECReports": 2,
+    "unverifiedHeadlines": 35,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -42,6 +42,29 @@
   "secStatus": "ok",
   "consumerStatus": "key_required",
   "companies": [
+    {
+      "ticker": "TPR",
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.89B / 전년 대비 +11.1%",
+      "officialPeriod": "2026-06-28~2026-09-26",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-05",
+        "reportEnd": "2026-09-26",
+        "accession": "0001116132-26-000031",
+        "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
+      },
+      "newsTitleCount": 2,
+      "nextCheck": "Coach 성장·Kate Spade 손익",
+      "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
+      "headline": {
+        "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+        "date": "2026-11-05"
+      },
+      "consumerSampleCount": 0
+    },
     {
       "ticker": "CPRI",
       "officialStatus": "quarter_verified",
@@ -62,29 +85,6 @@
         "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
         "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
         "date": "2026-10-30"
-      },
-      "consumerSampleCount": 0
-    },
-    {
-      "ticker": "TPR",
-      "officialStatus": "quarter_verified",
-      "officialText": "SEC 10-Q 매출 USD 1.92B / 전년 대비 +21.2%",
-      "officialPeriod": "2025-12-28~2026-03-28",
-      "officialSource": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000011/tpr-20260328.htm",
-      "latestReport": {
-        "form": "10-K",
-        "filed": "2026-08-13",
-        "reportEnd": "2026-06-27",
-        "accession": "0001116132-26-000018",
-        "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000018/tpr-20260627.htm"
-      },
-      "newsTitleCount": 1,
-      "nextCheck": "Coach 성장·Kate Spade 손익",
-      "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
-      "headline": {
-        "title": "Judge sides with FTC, blocking Kate Spade and Michael Kors merger - ABC News - Breaking News, Latest News and Videos",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeW9kT2xhQVUyc3MzdHB4ano0UFlQdGhSSEhraG04ZWNSVjR2VjJUT0lXbUxscWNuMTl5b3poNzBZVEJQdnRFWFFhSVRhRnh2STA1bXo2UkhMQURRTmRvQlpyNlB1eUJLb1lqNjJNSTRqdFZWOTN6dFpnM0NIOHJUTXhkSWJYczFCS2NHd2hIWEsyWDNndkRwUHNxNnVJZ9IBowFBVV95cUxNSHBISzVob3NpWm1qUXNSX19fTFZzY0hqckpESkpCX3JFV3hqTlFub2JGQVlYYlV6V1pCX1dYMTl2ZXFNMVpMRjJycGlnc28zRGk5c3BRbXh4eHdrcVRoOVJ2SlZmSEQ3OGFXUUxPZGNCdHQxRXozSERHaWxhNENZOFJIazIyME1JNUpvQUxyMllQM2VIanlYeGNxZllTLTRiSWZJ?oc=5",
-        "date": "2026-11-03"
       },
       "consumerSampleCount": 0
     },
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
-        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
-        "date": "2026-10-31"
+        "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
+        "date": "2026-10-30"
       },
       "consumerSampleCount": 0
     },
@@ -316,6 +316,12 @@
     }
   ],
   "latestSEC": [
+    {
+      "ticker": "TPR",
+      "form": "10-Q",
+      "filed": "2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
+    },
     {
       "ticker": "CPRI",
       "form": "10-Q",
