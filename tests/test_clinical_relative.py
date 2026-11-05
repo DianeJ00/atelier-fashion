@@ -77,6 +77,21 @@ class ClinicalTrialTests(unittest.TestCase):
         change=trials.registered_changes(old,curr)
         self.assertEqual(len(change),1)
         self.assertEqual(change[0]["type"],"표본에서 새로 포착")
+    def test_clinical_interpretation_uses_registry_dates_not_outcome_inference(self):
+        asset={"ticker":"LLY","asset":"tirzepatide","disease":"비만·대사",
+               "trials":[{
+                  "nctId":"NCT01234567","url":"https://clinicaltrials.gov/study/NCT01234567",
+                  "phases":["PHASE3"],"statusKr":"모집 중",
+                  "primaryCompletion":{"date":"2027-02-01","type":"ESTIMATED"}
+               }]}
+        notes=trials.weekly_interpretation([asset],[],None)
+        self.assertTrue(any("2027-02-01" in x["observation"] for x in notes))
+        self.assertTrue(all("발표일" in x["limitation"] for x in notes))
+        self.assertTrue(all(x["url"].startswith("https://") for x in notes))
+    def test_no_registry_change_is_not_scientific_claim(self):
+        notes=trials.weekly_interpretation([],[],"2026-11-04T00:00:00Z")
+        self.assertEqual(notes[0]["type"],"변경 없음")
+        self.assertIn("상위 검색 표본",notes[0]["limitation"])
     def test_registry_seeds_unchanged(self):
         src=json.loads((ROOT/"research-pipeline.json").read_text(encoding="utf-8"))
         self.assertEqual(len(src["records"]),12)
