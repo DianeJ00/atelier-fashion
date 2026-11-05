@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T00:02:12.364268Z",
+  "generatedAt": "2026-11-05T00:04:20.736716Z",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-05",
   "reviewStatus": "unverified_headlines_only",
@@ -79,7 +79,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -93,7 +93,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -198,7 +198,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -225,7 +225,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -252,7 +252,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -292,10 +292,23 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
+    },
+    {
+      "id": "rss-17c8789b0d00c77",
+      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
+      "date": "2026-10-31T09:16:00Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "Investing.com UK",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-a2c2beb6d73a533",
@@ -334,19 +347,6 @@
       "creator": "Vogue",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-c1e379ebd64ffdb",
-      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
-      "date": "2026-10-30T15:50:18Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "qz.com",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -423,7 +423,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -486,7 +486,7 @@
       }
     ],
     "uncategorizedCount": 20,
-    "previousCollectedAt": "2026-11-04T23:34:41.472160Z",
+    "previousCollectedAt": "2026-11-05T00:02:12.364268Z",
     "newSincePrevious": 1,
     "companyFocus": [
       {
