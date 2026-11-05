@@ -254,11 +254,12 @@ def weekly_interpretation(assets, changes, previous_generated):
         trial_status=trial.get("statusKr") or "상태 미기재"
         illness=plain_condition(trial,field)
         company=asset["ticker"]
-        date_label=raw[:7] + "월" if len(raw)==7 else raw
+        date_label=(raw[:4]+"년 "+str(int(raw[5:7]))+"월" if len(raw)==7
+                    else raw[:4]+"년 "+str(int(raw[5:7]))+"월 "+str(int(raw[8:10]))+"일")
         notes.append({
             "type":"앞으로 확인할 임상 일정",
             "title":f"{company} · {illness} 치료제의 {phase} 시험 일정",
-            "observation":f"{asset['asset']}의 {illness} 관련 {phase} 시험은 {trial_status}. 공식 등록자료에 주요 치료 효과·안전성 평가를 마칠 시점이 {date_label}로 예상되어 있음.",
+            "observation":f"{asset['asset']}의 {illness} 관련 {phase} 시험은 {trial_status}. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 {date_label}로 예상되어 있음.",
             "investmentCheck":f"{company}의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
             "limitation":"시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
             "url":trial["url"],"nctId":trial["nctId"],
