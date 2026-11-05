@@ -115,3 +115,11 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 **수집 상태 확인:** 마지막 정상 GitHub Actions 실행과 데이터 생성일을 각각 확인하세요. 워크플로 실행에 초록색 체크가 나와도 SEC 또는 YouTube API 권한이 없으면 자동 요약에 **설정 필요**로 나옵니다. 새 원문이 없을 경우 이전 수집 영상은 기간 내로만 보존하고, 과거 영상을 신규 신호로 표시하지 않습니다.
 
 마지막으로: **자동 주간 브리프는 투자 판단에 필요한 검증 순서를 제시하는 작업표**입니다. 최신 공식 실적과 소비자 반응을 모두 교차 확인한 분석가 리포트로 오인하면 안 됩니다.
+
+## 9. 데이터 수집 성공과 배포 성공 구분
+
+- GitHub Actions의 초록색 체크는 **워크플로 실행 및 웹사이트 게시 성공**을 뜻하며, 외부 API 수집 성공을 보장하지 않습니다.
+- **공식 SEC 확인:** 사이트에 공개되는 `official-financials.json`의 `sourceStatus`가 `ok` 또는 `partial`이고, 해당 기업 `status=quarter_verified`인지 확인합니다. `configuration_required`면 `SEC_USER_AGENT` 설정이 해당 작업에 적용되지 않은 것입니다.
+- **YouTube 댓글 확인:** `consumer-samples.json`의 `status=sampled`(또는 `sampled_with_errors`)와 `videos` 항목을 확인합니다. `key_required`라면 `YOUTUBE_API_KEY`가 작업에 전달되지 않았습니다.
+- 비밀값은 저장소의 **Settings → Secrets and variables → Actions → Repository secrets**에 등록해야 합니다. 페이지 게시용 `github-pages` 환경의 Environment secrets에만 넣으면 이 파이프라인의 수집 작업에는 전달되지 않을 수 있습니다.
+- 설정값은 사용자 본인만 관리하고, 채팅이나 공개 코드에 붙여넣지 마세요. 변경 후 **Actions → ATELIER weekly research and site → Run workflow**를 다시 실행해 소스별 상태를 확인합니다.
