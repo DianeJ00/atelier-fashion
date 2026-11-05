@@ -245,3 +245,9 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - 자동화·데이터 상태가 확인되지 않아도 **15개 출처 원문 링크와 검토 분기**는 남기며, 투자 의견을 자동으로 매수/매도 판단하지 않습니다.
 
 주요 원문 예: [Uber 2026 3Q SEC](https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm), [Netflix 2026 3Q SEC](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [CAVA 2026 3Q IR](https://investor.cava.com/news/news-details/2026/CAVA-Group-Reports-Third-Quarter-2026-Results/default.aspx), [Target 2026 2Q](https://corporate.target.com/press/release/2026/08/target-corporation-reports-second-quarter-earnings), [Walmart FY27 Q2](https://corporate.walmart.com/news/2026/08/20/walmart-releases-q2-fy27-earnings), [e.l.f. FY27 Q2](https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/11-04-2026-210608777).
+
+### 검증·배포 메모 (2026-11-05)
+
+- GitHub Actions의 Node.js UI 검사와 Python 재무·임상 검사는 함께 통과해야만 게시합니다.
+- 이 구현의 소비재 수치는 **공식 발표 당시의 사실**이며 모든 KPI가 매주 자동으로 최신 분기로 갱신되는 것은 아닙니다. `SEC_USER_AGENT` 연결 시 SEC의 최신 GAAP 분기 수치는 별도 추적하고, 매장·예약·가입자 등 경영 KPI는 후속 IR 원문 확인 후 갱신해야 합니다.
+- 이번 바이오 화면의 NCT는 임상 원문의 **문서 식별번호**로만 노출하고, 사용자에게는 질환·회사·신약·임상 단계·예상 주요 평가 완료 시점·검증 질문부터 표시합니다.
