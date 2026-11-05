@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-11-05",
+  "basis": "2026-11-05 기준 확인 가능한 가장 최근 공시·실적 자료. 업종별 운영지표는 분기·회계연도와 GAAP/조정 기준을 그대로 표시. 자동 최신화 아님.",
+  "items": [
+    {
+      "ticker": "UBER",
+      "period": "2026 Q3",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-11-04",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm",
+      "thesis": "총예약액 증가가 실제 거래량과 현금흐름으로 이어지는지",
+      "metrics": [
+        {
+          "label": "총예약액",
+          "value": 59.8,
+          "unit": "USD B",
+          "change": "20% 증가",
+          "basis": "비GAAP 운영지표",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "이용건수",
+          "value": 4.1,
+          "unit": "billion trips",
+          "change": "16% 증가",
+          "basis": "분기 완료 운행·배달",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "GAAP 매출",
+          "value": 14.766,
+          "unit": "USD B",
+          "change": "10% 증가",
+          "basis": "연결 매출",
+          "period": "2026 Q3"
+        }
+      ],
+      "risk": "총예약액은 매출이 아니며, 모델 변경으로 매출 성장률과 예약액 성장률이 다를 수 있음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2026 Q3",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-10-20",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+      "thesis": "구독·가격·광고 성장과 콘텐츠 비용 사이의 수익성",
+      "metrics": [
+        {
+          "label": "GAAP 매출",
+          "value": 12.874,
+          "unit": "USD B",
+          "change": "12% 증가",
+          "basis": "분기 연결 매출",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "영업이익률",
+          "value": 34.6,
+          "unit": "%",
+          "change": "전년 28.2%",
+          "basis": "GAAP 영업이익률",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "광고 매출 증가액",
+          "value": 256,
+          "unit": "USD M",
+          "change": "전년 동기 대비",
+          "basis": "광고 매출의 증가액, 총액 아님",
+          "period": "2026 Q3"
+        }
+      ],
+      "risk": "광고 매출 증가액은 광고 사업 매출 전체가 아니며 구독자 수와 분리해 확인",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "DIS",
+      "period": "FY2026 Q3",
+      "periodEnd": null,
+      "publishedAt": "2026-08-05",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://thewaltdisneycompany.com/news/disney-q3-earnings-2026/",
+      "thesis": "스트리밍 수익성과 테마파크·크루즈 이용 증가를 구분해 확인",
+      "metrics": [
+        {
+          "label": "글로벌 파크 이용객 증가율",
+          "value": 4,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "경영진 발표, 글로벌 파크 방문객 기준",
+          "period": "FY2026 Q3"
+        }
+      ],
+      "risk": "전사 실적이 아니라 경영진이 발표한 방문객 변화이며 스트리밍 이익·파크 영업이익과 별개",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2026 Q3",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-11-03",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm",
+      "thesis": "여행 수요·예약 숙박일수가 수익으로 전환되는 속도",
+      "metrics": [
+        {
+          "label": "예약 숙박일수",
+          "value": 345,
+          "unit": "million nights",
+          "change": "7% 증가",
+          "basis": "예약된 숙박일수",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "총예약액",
+          "value": 54.5,
+          "unit": "USD B",
+          "change": "10% 증가",
+          "basis": "총예약액, 매출과 다름",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "GAAP 매출",
+          "value": 8.9,
+          "unit": "USD B",
+          "change": "1% 감소",
+          "basis": "조정 매출은 9% 증가",
+          "period": "2026 Q3"
+        }
+      ],
+      "risk": "GAAP 매출과 조정 매출을 혼용하지 않음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "WMT",
+      "period": "FY2027 Q2",
+      "periodEnd": null,
+      "publishedAt": "2026-08-20",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://corporate.walmart.com/news/2026/08/20/walmart-releases-q2-fy27-earnings",
+      "thesis": "오프라인 가성비 수요와 온라인·광고 수익화",
+      "metrics": [
+        {
+          "label": "Walmart 미국 동일매장매출",
+          "value": 2.6,
+          "unit": "%",
+          "change": "연료 제외",
+          "basis": "미국 Walmart 부분",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "미국 전자상거래 성장률",
+          "value": 24,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "Walmart U.S.",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "연결 매출 증가율",
+          "value": 5.9,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "환율 미조정",
+          "period": "FY2027 Q2"
+        }
+      ],
+      "risk": "Walmart 미국·Sam's Club·국제부문 KPI의 범위를 구분",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "TGT",
+      "period": "2026 Q2",
+      "periodEnd": "2026-08-01",
+      "publishedAt": "2026-08-19",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://corporate.target.com/press/release/2026/08/target-corporation-reports-second-quarter-earnings",
+      "thesis": "방문객 회복과 할인·관세 환급의 이익 기여 분리",
+      "metrics": [
+        {
+          "label": "동일매장매출 성장률",
+          "value": 3.8,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "매장·디지털 포함",
+          "period": "2026 Q2"
+        },
+        {
+          "label": "동일매장 거래건수 성장률",
+          "value": 3.6,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "방문·거래량",
+          "period": "2026 Q2"
+        },
+        {
+          "label": "순매출",
+          "value": 26.539,
+          "unit": "USD B",
+          "change": "5.3% 증가",
+          "basis": "GAAP 연결 순매출",
+          "period": "2026 Q2"
+        }
+      ],
+      "risk": "분기 EPS에 일회성 관세 환급 혜택 포함. 반복 수익성으로 해석 금지",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "COST",
+      "period": "FY2026 Q4 (16주)",
+      "periodEnd": "2026-08-30",
+      "publishedAt": "2026-09-24",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results/default.aspx",
+      "thesis": "회원제 충성도와 연료·환율 제외 실질 판매량",
+      "metrics": [
+        {
+          "label": "미국 동일매장매출",
+          "value": 10.7,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "연료·환율 미조정",
+          "period": "FY2026 Q4 (16주)"
+        },
+        {
+          "label": "미국 조정 동일매장매출",
+          "value": 7.2,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "연료·환율 영향 제외",
+          "period": "FY2026 Q4 (16주)"
+        },
+        {
+          "label": "분기 순매출",
+          "value": 93.9,
+          "unit": "USD B",
+          "change": "11.2% 증가",
+          "basis": "16주 분기",
+          "period": "FY2026 Q4 (16주)"
+        }
+      ],
+      "risk": "분기가 16주여서 일반 13주 분기와 단순 비교 금지",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "TJX",
+      "period": "FY2027 Q2",
+      "periodEnd": "2026-08-01",
+      "publishedAt": "2026-08-19",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://investor.tjx.com/news-releases/news-release-details/tjx-reports-q2-fy27-results-above-plan-comp-sales-growth-4",
+      "thesis": "가성비 브랜드 상품 선호가 매장 매출과 마진에 미치는 영향",
+      "metrics": [
+        {
+          "label": "동일매장매출 성장률",
+          "value": 4,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "연결 사업부",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "순매출",
+          "value": 15.18,
+          "unit": "USD B",
+          "change": "5% 증가",
+          "basis": "연결 매출",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "조정 세전이익률",
+          "value": 11.9,
+          "unit": "%",
+          "change": "전년 대비 +0.5%p",
+          "basis": "관세 환급 영향 조정",
+          "period": "FY2027 Q2"
+        }
+      ],
+      "risk": "GAAP 세전이익률 13.3%와 조정 세전이익률 11.9%를 구분",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "CAVA",
+      "period": "2026 Q3",
+      "periodEnd": "2026-10-04",
+      "publishedAt": "2026-11-04",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://investor.cava.com/news/news-details/2026/CAVA-Group-Reports-Third-Quarter-2026-Results/default.aspx",
+      "thesis": "신규 점포 확대와 기존 점포 방문객·가격 성장의 기여",
+      "metrics": [
+        {
+          "label": "동일매장매출 성장률",
+          "value": 3.1,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "동일 점포",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "운영 점포 수",
+          "value": 500,
+          "unit": "stores",
+          "change": "분기말 기준",
+          "basis": "CAVA 직영 점포",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "매장 수준 이익률",
+          "value": 23.4,
+          "unit": "%",
+          "change": "전년 24.6%",
+          "basis": "GAAP 영업이익률과 다른 매장 단위 지표",
+          "period": "2026 Q3"
+        }
+      ],
+      "risk": "동일매장매출 +3.1%는 주로 가격·상품 구성 효과 3.0%p; 방문객 증가는 소폭",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "CMG",
+      "period": "2026 Q3",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-10-28",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://newsroom.chipotle.com/2026-10-28-CHIPOTLE-ANNOUNCES-THIRD-QUARTER-2026-RESULTS",
+      "thesis": "기존 매장 거래건수 회복과 마진의 동반 개선 여부",
+      "metrics": [
+        {
+          "label": "동일매장매출 성장률",
+          "value": 2.1,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "기존 점포",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "거래건수 성장률",
+          "value": 0.8,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "동일 점포 방문 거래",
+          "period": "2026 Q3"
+        },
+        {
+          "label": "GAAP 영업이익률",
+          "value": 13.7,
+          "unit": "%",
+          "change": "전년 15.9%",
+          "basis": "연결 영업이익률",
+          "period": "2026 Q3"
+        }
+      ],
+      "risk": "매장 단위 이익률(23.3%)과 연결 GAAP 영업이익률(13.7%)을 혼동하지 않음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "SBUX",
+      "period": "FY2026 Q4",
+      "periodEnd": "2026-09-27",
+      "publishedAt": "2026-10-29",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q4-and-Full-Fiscal-Year-2026-Results/default.aspx",
+      "thesis": "기존 매장 회복과 중국 사업 구조 변화의 매출 영향",
+      "metrics": [
+        {
+          "label": "글로벌 동일매장매출 성장률",
+          "value": 7.2,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "세계 전체",
+          "period": "FY2026 Q4"
+        },
+        {
+          "label": "연결 순매출",
+          "value": 9.1,
+          "unit": "USD B",
+          "change": "4% 감소",
+          "basis": "중국 거래 영향 포함",
+          "period": "FY2026 Q4"
+        },
+        {
+          "label": "GAAP 영업이익률",
+          "value": 10.8,
+          "unit": "%",
+          "change": "전년 대비 +7.9%p",
+          "basis": "연결 GAAP",
+          "period": "FY2026 Q4"
+        }
+      ],
+      "risk": "중국 사업 거래로 매출 비교 기준이 바뀌므로 동일매장매출과 연결 매출을 섞지 않음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "ELF",
+      "period": "FY2027 Q2",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-11-04",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/11-04-2026-210608777",
+      "thesis": "브랜드 점유율·해외 확장과 관세 환급을 분리한 수익성",
+      "metrics": [
+        {
+          "label": "순매출",
+          "value": 520.8,
+          "unit": "USD M",
+          "change": "51% 증가",
+          "basis": "분기 매출",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "GAAP 매출총이익률",
+          "value": 71,
+          "unit": "%",
+          "change": "전년 대비 +1.6%p",
+          "basis": "관세 환급 약 +0.3%p 기여",
+          "period": "FY2027 Q2"
+        },
+        {
+          "label": "FY2027 매출 성장 가이던스 상단",
+          "value": 24,
+          "unit": "%",
+          "change": "22~24% 범위",
+          "basis": "미래 전망치, 실적 아님",
+          "period": "FY2027 Q2"
+        }
+      ],
+      "risk": "매출총이익률 개선 일부는 관세 환급 효과, 가이던스는 실제 매출과 구분",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "ULTA",
+      "period": "FY2026 Q2",
+      "periodEnd": "2026-08-01",
+      "publishedAt": "2026-09-03",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://www.ulta.com/investor/news-events/press-releases/detail/234/ulta-beauty-announces-second-quarter-fiscal-2026-results",
+      "thesis": "뷰티 방문객·브랜드 구성·점포 확장 시 마진 유지",
+      "metrics": [
+        {
+          "label": "동일매장매출 성장률",
+          "value": 3.8,
+          "unit": "%",
+          "change": "전년 동기 대비",
+          "basis": "동일 점포",
+          "period": "FY2026 Q2"
+        },
+        {
+          "label": "순매출",
+          "value": 3.0357,
+          "unit": "USD B",
+          "change": "8.9% 증가",
+          "basis": "Space NK 인수 효과 포함",
+          "period": "FY2026 Q2"
+        },
+        {
+          "label": "GAAP 희석 EPS",
+          "value": 6.55,
+          "unit": "USD per share",
+          "change": "13.3% 증가",
+          "basis": "회계 기준 EPS",
+          "period": "FY2026 Q2"
+        }
+      ],
+      "risk": "인수 효과를 기존 매장 성장과 혼동하지 않음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "EL",
+      "period": "FY2027 Q1",
+      "periodEnd": "2026-09-30",
+      "publishedAt": "2026-11-02",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/11-02-2026-110046663",
+      "thesis": "고급 뷰티 수요의 지역별 회복과 구조조정 효과",
+      "metrics": [
+        {
+          "label": "순매출",
+          "value": 3.715,
+          "unit": "USD B",
+          "change": "7% 증가",
+          "basis": "GAAP 분기 매출",
+          "period": "FY2027 Q1"
+        },
+        {
+          "label": "GAAP 매출총이익률",
+          "value": 75.7,
+          "unit": "%",
+          "change": "전년 73.4%",
+          "basis": "연결 GAAP",
+          "period": "FY2027 Q1"
+        },
+        {
+          "label": "GAAP 영업이익률",
+          "value": 11,
+          "unit": "%",
+          "change": "전년 4.9%",
+          "basis": "연결 GAAP",
+          "period": "FY2027 Q1"
+        }
+      ],
+      "risk": "지역·상품 매출 회복과 비용 절감 효과가 동시에 작용할 수 있음",
+      "status": "official_reviewed_snapshot"
+    },
+    {
+      "ticker": "RH",
+      "period": "FY2026 Q2",
+      "periodEnd": null,
+      "publishedAt": "2026-09-10",
+      "verifiedAt": "2026-11-05",
+      "sourceType": "기업 공식 IR·SEC 원문 대조",
+      "sourceURL": "https://ir.rh.com/financials-filings/sec-filings/content/0001104659-26-106743/rh-20260910xex99d2.htm",
+      "thesis": "고가 가구 수요 반등과 관세 환급을 제외한 실질 마진",
+      "metrics": [
+        {
+          "label": "GAAP 순매출",
+          "value": 922.2,
+          "unit": "USD M",
+          "change": "2.6% 증가",
+          "basis": "분기 순매출",
+          "period": "FY2026 Q2"
+        },
+        {
+          "label": "정규화 조정 EBITDA 이익률",
+          "value": 13.4,
+          "unit": "%",
+          "change": "관세 환급 효과 정규화",
+          "basis": "비GAAP 지표",
+          "period": "FY2026 Q2"
+        },
+        {
+          "label": "조정 EBITDA 이익률",
+          "value": 19.4,
+          "unit": "%",
+          "change": "관세 환급 혜택 포함",
+          "basis": "비GAAP 지표",
+          "period": "FY2026 Q2"
+        }
+      ],
+      "risk": "관세 환급 약 $55.1M 효과로 조정 이익률과 정규화 이익률 차이가 큼",
+      "status": "official_reviewed_snapshot"
+    }
+  ]
+}
