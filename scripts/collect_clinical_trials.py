@@ -179,6 +179,29 @@ def registered_changes(previous, current):
     changes.sort(key=lambda x:(order.get(x["type"],5),x.get("sourceLastUpdate") or ""),reverse=False)
     return changes[:30]
 
+CONDITION_KO = {
+    "obesity": "비만", "overweight": "과체중",
+    "crohn's disease": "크론병(만성 장 염증질환)",
+    "early alzheimer's disease": "초기 알츠하이머병",
+    "alzheimer's disease": "알츠하이머병",
+    "type 2 diabetes": "제2형 당뇨병",
+    "ulcerative colitis": "궤양성 대장염",
+    "psoriasis": "건선", "atopic dermatitis": "아토피피부염",
+    "sickle cell disease": "겸상적혈구병"
+}
+
+def plain_condition(trial, fallback):
+    for raw in trial.get("conditions") or []:
+        key = str(raw).casefold().strip()
+        if key in CONDITION_KO:
+            return CONDITION_KO[key]
+    return fallback
+
+def plain_phase(phases):
+    words = {"PHASE1":"1상","PHASE2":"2상","PHASE3":"3상",
+             "PHASE4":"4상","EARLY_PHASE1":"초기 1상","NA":"단계 해당 없음"}
+    return "·".join(words.get(p, "단계 미기재") for p in phases) or "단계 미기재"
+
 def weekly_interpretation(assets, changes, previous_generated):
     """Korean registry observations with an explicit investment question, not efficacy claims."""
     notes=[]
@@ -197,15 +220,7 @@ def weekly_interpretation(assets, changes, previous_generated):
                 "limitation":"등록 정보의 변경은 긍정적 결과·허가·매출을 뜻하지 않음.",
                 "url":item["url"],"nctId":item["nctId"]
             })
-    elif previous_generated:
-        notes.append({
-            "type":"변경 없음",
-            "title":"동일 시험 등록정보에서 중요한 변경 없음",
-            "observation":"직전 수집과 비교한 동일 NCT 표본에서 진행 상태·시험 단계·주요 완료일·결과 등록 표시 변화가 확인되지 않음.",
-            "investmentCheck":"실제 기업 공지와 임상 결과 발표 여부는 별도로 확인",
-            "limitation":"상위 검색 표본에 한정되며 외부에서 새로운 임상 결과가 없었다는 뜻은 아님.",
-            "url":"https://clinicaltrials.gov/","nctId":None
-        })
+    # No-change status belongs in compact metadata, not a headline card.
     # Surface high-stakes Phase 3 completion first, then Phase 2, spread across diseases.
     today=NOW.date()
     candidates=[]
@@ -235,15 +250,21 @@ def weekly_interpretation(assets, changes, previous_generated):
         if field in used:
             continue
         used.add(field)
-        phase="/".join(trial.get("phases") or []) or "단계 미기재"
+        phase=plain_phase(trial.get("phases") or [])
         trial_status=trial.get("statusKr") or "상태 미기재"
+        illness=plain_condition(trial,field)
+        company=asset["ticker"]
+        date_label=raw[:7] + "월" if len(raw)==7 else raw
         notes.append({
-            "type":"향후 시험 일정",
-            "title":f"[{field}] {asset['ticker']} {asset['asset']}의 등록 완료 예정일",
-            "observation":f"등록시험 {trial['nctId']} ({phase}, {trial_status})의 주요 평가 완료일이 {raw}(예상)로 기재됨.",
-            "investmentCheck":f"{asset['ticker']}의 {asset['asset']} 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
-            "limitation":"주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
-            "url":trial["url"],"nctId":trial["nctId"]
+            "type":"앞으로 확인할 임상 일정",
+            "title":f"{company} · {illness} 치료제의 {phase} 시험 일정",
+            "observation":f"{asset['asset']}의 {illness} 관련 {phase} 시험은 {trial_status}. 공식 등록자료에 주요 치료 효과·안전성 평가를 마칠 시점이 {date_label}로 예상되어 있음.",
+            "investmentCheck":f"{company}의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+            "limitation":"시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+            "url":trial["url"],"nctId":trial["nctId"],
+            "explain":f"{phase}: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+            "expectedDate":raw, "datePrecision":"월" if len(raw)==7 else "일",
+            "indication":illness
         })
     return notes[:4]
 
