@@ -1,0 +1,1208 @@
+{
+  "version": 1,
+  "asOf": "2026-11-05",
+  "principles": [
+    "총 52개: 미국 바이오 20·소비재/서비스 15·패션 기존 12·국내 담당 기업 5",
+    "산업별 KPI는 조사 질문이며 공식 수치·예측 실적을 의미하지 않음",
+    "약물/임상시험별 개발 단계·NCT 번호는 공식 자료 검증 후 별도 연결",
+    "국내 5개는 국내 상장 기준이며, 미국 신규 유니버스는 미국 상장 종목"
+  ],
+  "counts": {
+    "bio": 20,
+    "consumer": 15,
+    "fashion": 12,
+    "domestic": 5
+  },
+  "diseaseGroups": [
+    "비만·대사",
+    "항암",
+    "면역·염증",
+    "신경계",
+    "희귀·유전",
+    "백신·감염"
+  ],
+  "techGroups": [
+    "GLP-1·복합 작용제",
+    "항체·세포치료",
+    "면역항암·표적 치료",
+    "항체약물접합체(ADC)",
+    "RNA 간섭 치료",
+    "유전자 편집",
+    "유전자 치료",
+    "mRNA 플랫폼"
+  ],
+  "companies": [
+    {
+      "id": "US:LLY",
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "비만·대사",
+      "secondaryDiseases": [
+        "항암",
+        "면역·염증"
+      ],
+      "technology": "GLP-1·복합 작용제",
+      "maturity": "대형 제약",
+      "focus": "비만 신약의 공급·처방과 파이프라인 경쟁력",
+      "kpis": [
+        "신약 판매·처방 성장",
+        "용량·공급",
+        "개발 단계"
+      ],
+      "risk": "가격·보험 적용과 경쟁 복합제 영향",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:JNJ",
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "면역·염증"
+      ],
+      "technology": "항체·세포치료",
+      "maturity": "대형 제약",
+      "focus": "종양·면역 중심 신제품과 특허 만료 영향을 분리",
+      "kpis": [
+        "제품 매출",
+        "출시 속도",
+        "특허 만료 노출"
+      ],
+      "risk": "신제품 기여가 기존 제품 감소를 못 메울 위험",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:MRK",
+      "ticker": "MRK",
+      "name": "Merck & Co.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "백신·감염"
+      ],
+      "technology": "면역항암·표적 치료",
+      "maturity": "대형 제약",
+      "focus": "주력 항암제 의존을 신약 파이프라인이 완화할 수 있는가",
+      "kpis": [
+        "핵심 제품 성장",
+        "특허 시계",
+        "후기임상 결과"
+      ],
+      "risk": "주력 제품 특허 종료 전 대체 성장원 부족",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:ABBV",
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "면역·염증",
+      "secondaryDiseases": [
+        "신경"
+      ],
+      "technology": "면역 조절 치료",
+      "maturity": "대형 제약",
+      "focus": "차세대 면역 치료제가 기존 제품의 매출 공백을 대체하는가",
+      "kpis": [
+        "면역 신약 성장",
+        "적응증 확대",
+        "판촉·마진"
+      ],
+      "risk": "특허 종료·가격 협상과 신제품 침투 지연",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:PFE",
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "백신·감염"
+      ],
+      "technology": "항체약물접합체(ADC)",
+      "maturity": "대형 제약",
+      "focus": "항암 성장과 비용 구조 재편이 이익을 회복시키는가",
+      "kpis": [
+        "항암 제품·백신 판매",
+        "R&D",
+        "영업이익률"
+      ],
+      "risk": "상업화·인수 성과 부진 및 특허 만료",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:BMY",
+      "ticker": "BMY",
+      "name": "Bristol Myers Squibb",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "면역·염증"
+      ],
+      "technology": "표적·면역 치료",
+      "maturity": "대형 제약",
+      "focus": "특허 만료 제품의 매출을 신제품이 대체할 속도",
+      "kpis": [
+        "신제품 매출",
+        "특허 공백",
+        "개발 성과"
+      ],
+      "risk": "신제품 성장 지연으로 현금흐름 약화",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:AMGN",
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "비만·대사",
+      "secondaryDiseases": [
+        "항암",
+        "희귀·유전"
+      ],
+      "technology": "항체·복합 작용제",
+      "maturity": "상업화 바이오",
+      "focus": "비만 파이프라인의 안전성·차별성과 기존 사업 현금창출력",
+      "kpis": [
+        "효능·부작용",
+        "투여 간격",
+        "제품 매출"
+      ],
+      "risk": "경쟁 치료제 대비 차별성 약화",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:GILD",
+      "ticker": "GILD",
+      "name": "Gilead Sciences",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "백신·감염"
+      ],
+      "technology": "세포치료·표적 치료",
+      "maturity": "상업화 바이오",
+      "focus": "항암 제품 성장과 기존 감염질환 사업의 수익 구조",
+      "kpis": [
+        "항암 매출",
+        "세포치료 침투",
+        "마진"
+      ],
+      "risk": "임상·상업화 비용 대비 수익 지연",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:REGN",
+      "ticker": "REGN",
+      "name": "Regeneron",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "면역·염증",
+      "secondaryDiseases": [
+        "항암",
+        "안과"
+      ],
+      "technology": "항체 치료",
+      "maturity": "상업화 바이오",
+      "focus": "면역·안과 주력 제품 이후 성장 동력의 지속성",
+      "kpis": [
+        "제품별 매출",
+        "적응증 확대",
+        "경쟁 임상"
+      ],
+      "risk": "바이오시밀러·신약 경쟁",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:VRTX",
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "희귀·유전",
+      "secondaryDiseases": [
+        "통증"
+      ],
+      "technology": "유전자 편집·저분자 치료",
+      "maturity": "상업화 바이오",
+      "focus": "기존 치료제 현금창출력으로 신규 제품을 상업화하는가",
+      "kpis": [
+        "신규 제품 매출",
+        "보험 접근성",
+        "파이프라인"
+      ],
+      "risk": "고가 치료제 상업화·환자 접근 제약",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:ALNY",
+      "ticker": "ALNY",
+      "name": "Alnylam Pharmaceuticals",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "희귀·유전",
+      "secondaryDiseases": [
+        "심혈관·대사"
+      ],
+      "technology": "RNA 간섭 치료",
+      "maturity": "상업화 바이오",
+      "focus": "RNA 치료제의 적응증 확장이 현금창출력을 높이는가",
+      "kpis": [
+        "제품 성장",
+        "환자 접근성",
+        "출시 비용"
+      ],
+      "risk": "고가 약가·급여 확대 속도",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:BIIB",
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "신경계",
+      "secondaryDiseases": [
+        "희귀·유전"
+      ],
+      "technology": "항체·신경질환 치료",
+      "maturity": "상업화 바이오",
+      "focus": "신경계 신제품의 실제 투약·보험 접근성이 확대되는가",
+      "kpis": [
+        "신제품 매출",
+        "투약센터",
+        "안전성"
+      ],
+      "risk": "환자 선별·치료 비용으로 채택 지연",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:VKTX",
+      "ticker": "VKTX",
+      "name": "Viking Therapeutics",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "비만·대사",
+      "secondaryDiseases": [
+        "대사질환"
+      ],
+      "technology": "GLP-1·복합 작용제",
+      "maturity": "임상 바이오",
+      "focus": "비만 후보의 효능·부작용·생산 계획이 경쟁력을 입증하는가",
+      "kpis": [
+        "체중 감소",
+        "중단율",
+        "개발 단계·현금"
+      ],
+      "risk": "개발 지연·자본 조달·상업화 부담",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:NBIX",
+      "ticker": "NBIX",
+      "name": "Neurocrine Biosciences",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "신경계",
+      "secondaryDiseases": [
+        "정신질환"
+      ],
+      "technology": "중추신경 치료",
+      "maturity": "상업화 바이오",
+      "focus": "기존 신경계 제품 성장과 후속 적응증이 균형을 이루는가",
+      "kpis": [
+        "제품 매출",
+        "처방 증가",
+        "임상 결과"
+      ],
+      "risk": "집중 제품 의존과 임상 실패",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:IONS",
+      "ticker": "IONS",
+      "name": "Ionis Pharmaceuticals",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "희귀·유전",
+      "secondaryDiseases": [
+        "신경계"
+      ],
+      "technology": "안티센스 올리고핵산(ASO)",
+      "maturity": "임상·상업화 바이오",
+      "focus": "RNA 기반 파트너십과 자체 제품이 이익으로 전환되는가",
+      "kpis": [
+        "계약 수익·제품 매출",
+        "임상 일정",
+        "현금"
+      ],
+      "risk": "파트너 개발·허가 지연",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:INCY",
+      "ticker": "INCY",
+      "name": "Incyte",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "면역·염증"
+      ],
+      "technology": "면역·표적 치료",
+      "maturity": "상업화 바이오",
+      "focus": "주력 제품 이후 항암·면역 확장이 실적을 뒷받침하는가",
+      "kpis": [
+        "제품 매출",
+        "임상·출시",
+        "마진"
+      ],
+      "risk": "특허·임상 실패·고객 집중",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:EXEL",
+      "ticker": "EXEL",
+      "name": "Exelixis",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "항암",
+      "secondaryDiseases": [
+        "희귀암"
+      ],
+      "technology": "표적 항암 치료",
+      "maturity": "상업화 바이오",
+      "focus": "후속 항암 파이프라인이 기존 제품 의존을 낮추는가",
+      "kpis": [
+        "주력 제품 매출",
+        "후기임상",
+        "로열티"
+      ],
+      "risk": "차세대 임상 경쟁력·특허 위험",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:MRNA",
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "백신·감염",
+      "secondaryDiseases": [
+        "항암"
+      ],
+      "technology": "mRNA 플랫폼",
+      "maturity": "임상·상업화 바이오",
+      "focus": "예방 백신·후속 파이프라인이 고정비를 흡수하는가",
+      "kpis": [
+        "제품 매출",
+        "R&D",
+        "현금 소진",
+        "허가"
+      ],
+      "risk": "시장 수요 감소·임상 지연",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:CRSP",
+      "ticker": "CRSP",
+      "name": "CRISPR Therapeutics",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "희귀·유전",
+      "secondaryDiseases": [
+        "혈액질환"
+      ],
+      "technology": "유전자 편집",
+      "maturity": "임상 바이오",
+      "focus": "유전자 편집 치료제의 실제 환자 투약과 상업화 속도",
+      "kpis": [
+        "투약 환자·보험",
+        "마일스톤",
+        "현금 소진"
+      ],
+      "risk": "치료기관 확장·제조비·안전성",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:SRPT",
+      "ticker": "SRPT",
+      "name": "Sarepta Therapeutics",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "바이오·제약",
+      "disease": "희귀·유전",
+      "secondaryDiseases": [
+        "근육질환"
+      ],
+      "technology": "유전자 치료",
+      "maturity": "상업화 바이오",
+      "focus": "유전자치료의 안전성·규제와 보험 적용이 매출을 좌우하는가",
+      "kpis": [
+        "환자·안전성",
+        "규제 결정",
+        "현금"
+      ],
+      "risk": "안전성 이슈·규제 변경·제조원가",
+      "status": "초기 관찰 항목",
+      "sourceURL": "https://www.sec.gov/edgar/search/",
+      "therapyEvidence": "개별 약물·시험 단계는 공식 원문 확인 후 기록",
+      "priority": "기본"
+    },
+    {
+      "id": "US:UBER",
+      "ticker": "UBER",
+      "name": "Uber Technologies",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "플랫폼·이동",
+      "focus": "플랫폼 거래량·수익화",
+      "kpis": [
+        "총예약액",
+        "이용횟수",
+        "조정 EBITDA·FCF"
+      ],
+      "risk": "가격경쟁과 지역별 규제",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:NFLX",
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "미디어·구독",
+      "focus": "광고·구독의 성장 조합",
+      "kpis": [
+        "매출 성장",
+        "광고 매출",
+        "영업이익률"
+      ],
+      "risk": "콘텐츠 제작비 대비 가입자 수익화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:DIS",
+      "ticker": "DIS",
+      "name": "Walt Disney",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "미디어·경험",
+      "focus": "스트리밍 수익성·파크 이용",
+      "kpis": [
+        "스트리밍 이익",
+        "파크 수요",
+        "FCF"
+      ],
+      "risk": "파크 투자 대비 수요·이익 둔화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:BKNG",
+      "ticker": "BKNG",
+      "name": "Booking Holdings",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "여행·플랫폼",
+      "focus": "여행 수요와 예약·수수료 수익",
+      "kpis": [
+        "예약 숙박일수",
+        "총예약액",
+        "FCF"
+      ],
+      "risk": "여행 소비 둔화·채널 경쟁",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:WMT",
+      "ticker": "WMT",
+      "name": "Walmart",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "대형 유통",
+      "focus": "중저가 소비와 믹스 개선",
+      "kpis": [
+        "미국 동일매장매출",
+        "전자상거래",
+        "마진"
+      ],
+      "risk": "가격 경쟁과 재고 비용",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:TGT",
+      "ticker": "TGT",
+      "name": "Target",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "대형 유통",
+      "focus": "재량 소비 회복과 매장 트래픽",
+      "kpis": [
+        "동일매장매출",
+        "방문객",
+        "재고·마진"
+      ],
+      "risk": "비필수 소비 둔화·판촉 심화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:COST",
+      "ticker": "COST",
+      "name": "Costco Wholesale",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "회원제 유통",
+      "focus": "회원제와 가격 우위의 지속성",
+      "kpis": [
+        "동일매장매출",
+        "회원 갱신율",
+        "회비 수입"
+      ],
+      "risk": "상품 마진 압력·회원 성장 둔화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:TJX",
+      "ticker": "TJX",
+      "name": "TJX Companies",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "할인 유통",
+      "focus": "오프프라이스 수요와 바잉 경쟁력",
+      "kpis": [
+        "동일매장매출",
+        "매장 수",
+        "재고 회전"
+      ],
+      "risk": "매입 기회 축소·상품 구성 약화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:CAVA",
+      "ticker": "CAVA",
+      "name": "CAVA Group",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "외식",
+      "focus": "신규 점포 확장의 단위 경제성",
+      "kpis": [
+        "동일매장매출",
+        "점포 수",
+        "매장 마진"
+      ],
+      "risk": "인건비·식재료비·점포 성장 둔화",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:CMG",
+      "ticker": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "외식",
+      "focus": "기존 점포 객수와 가격 효과",
+      "kpis": [
+        "동일매장매출",
+        "객수",
+        "매장 마진"
+      ],
+      "risk": "방문객 감소·가격 저항",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:SBUX",
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "외식",
+      "focus": "미국·중국 기존 점포 회복",
+      "kpis": [
+        "동일매장매출",
+        "거래건수",
+        "마진"
+      ],
+      "risk": "회복 지연·인건비 증가",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:ELF",
+      "ticker": "ELF",
+      "name": "e.l.f. Beauty",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "뷰티·중저가",
+      "focus": "뷰티 브랜드 점유율과 해외 확장",
+      "kpis": [
+        "순매출",
+        "해외 매출",
+        "영업이익률"
+      ],
+      "risk": "프로모션 확대·채널 집중",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:ULTA",
+      "ticker": "ULTA",
+      "name": "Ulta Beauty",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "뷰티 유통",
+      "focus": "프리미엄·매스 브랜드 판매 구성",
+      "kpis": [
+        "동일매장매출",
+        "객단가",
+        "고객 방문"
+      ],
+      "risk": "전문 유통 경쟁과 할인 압력",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:EL",
+      "ticker": "EL",
+      "name": "Estée Lauder",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "프리미엄 뷰티",
+      "focus": "중국·여행소매 회복과 구조조정",
+      "kpis": [
+        "지역 매출",
+        "마진",
+        "재고"
+      ],
+      "risk": "프리미엄 수요·중국 회복 지연",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:RH",
+      "ticker": "RH",
+      "name": "RH",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "소비재·서비스",
+      "domain": "프리미엄 홈",
+      "focus": "고가 주택·인테리어 소비 회복",
+      "kpis": [
+        "수요·매출",
+        "매장 투자",
+        "FCF"
+      ],
+      "risk": "주택 거래 부진·CAPEX 부담",
+      "status": "초기 관찰 항목",
+      "priority": "기본",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:RL",
+      "ticker": "RL",
+      "name": "Ralph Lauren",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "클래식·프레피",
+      "focus": "평균 판매단가·아시아 동일매장매출·재고",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Polo Ralph Lauren",
+        "Purple Label"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:PVH",
+      "ticker": "PVH",
+      "name": "PVH Corp.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "클래식·프레피",
+      "focus": "Tommy·CK 유기적 성장률·조정 마진",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Tommy Hilfiger",
+        "Calvin Klein"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:LEVI",
+      "ticker": "LEVI",
+      "name": "Levi Strauss & Co.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "데님·헤리티지",
+      "focus": "미국 DTC comps·환급 제외 EBIT·여성복 비중",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Levi’s",
+        "Levi Strauss Signature",
+        "Beyond Yoga"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:ANF",
+      "ticker": "ANF",
+      "name": "Abercrombie & Fitch",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "클래식·프레피",
+      "focus": "Hollister comps·정상화 마진·자사주 매입",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Abercrombie",
+        "Hollister"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:GAP",
+      "ticker": "GAP",
+      "name": "Gap Inc.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "클래식·프레피",
+      "focus": "Old Navy comps·여성복 상품 적중률·환급 제외 마진",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Old Navy",
+        "Gap",
+        "Banana Republic",
+        "Athleta"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:AEO",
+      "ticker": "AEO",
+      "name": "American Eagle Outfitters",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "젊은 캐주얼",
+      "focus": "Aerie comps·연결 정상화 영업마진·재고",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "American Eagle",
+        "Aerie / OFFLINE"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:URBN",
+      "ticker": "URBN",
+      "name": "Urban Outfitters Inc.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "개성·보헤미안",
+      "focus": "Nuuly 가입자/부문마진·FP comps·재고",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Anthropologie",
+        "Free People",
+        "FP Movement",
+        "Urban Outfitters",
+        "Nuuly"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:VFC",
+      "ticker": "VFC",
+      "name": "V.F. Corporation",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "아웃도어·워크웨어",
+      "focus": "Vans 도매·DTC comps·순부채",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "The North Face",
+        "Timberland",
+        "Vans"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:CPRI",
+      "ticker": "CPRI",
+      "name": "Capri Holdings",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "컨템포러리 럭셔리",
+      "focus": "Michael Kors 유기적 성장·Jimmy Choo 매출·EBIT",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Michael Kors",
+        "Jimmy Choo"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:CAL",
+      "ticker": "CAL",
+      "name": "Caleres",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "헤리티지 슈즈",
+      "focus": "Famous comps·브랜드 마진·순부채",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Famous Footwear",
+        "Sam Edelman",
+        "Allen Edmonds",
+        "Stuart Weitzman"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:VSXY",
+      "ticker": "VSXY",
+      "name": "Victoria's Secret & Co.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "여성 란제리",
+      "focus": "정가 판매율·PINK 성장·조정 마진",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Victoria’s Secret",
+        "PINK",
+        "Adore Me"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "US:TPR",
+      "ticker": "TPR",
+      "name": "Tapestry Inc.",
+      "market": "미국",
+      "currency": "USD",
+      "sector": "패션",
+      "domain": "모던 럭셔리",
+      "focus": "Coach 평균판매단가·Kate Spade 손익·FY27 EPS",
+      "kpis": [
+        "브랜드 매출·동일매장매출",
+        "정가 판매·마진",
+        "재고·현금흐름"
+      ],
+      "risk": "할인율·브랜드별 성장 차이",
+      "brands": [
+        "Coach",
+        "Kate Spade"
+      ],
+      "status": "2026-11-03 기존 분석 스냅샷",
+      "priority": "기존 추적",
+      "sourceURL": "https://www.sec.gov/edgar/search/"
+    },
+    {
+      "id": "KR:950260",
+      "ticker": "950260",
+      "name": "인제니아테라퓨틱스",
+      "market": "한국",
+      "currency": "KRW",
+      "sector": "내 담당 기업",
+      "domain": "바이오·제약",
+      "focus": "미세혈관 치료 연구·개발",
+      "kpis": [
+        "임상 승인·결과",
+        "파트너 마일스톤",
+        "현금 소진"
+      ],
+      "risk": "임상 일정·기술이전 계약의 불확실성",
+      "status": "과거 브리프 연결 대기",
+      "sourceURL": "https://dart.fss.or.kr/",
+      "priority": "집중"
+    },
+    {
+      "id": "KR:278470",
+      "ticker": "278470",
+      "name": "에이피알(APR)",
+      "market": "한국",
+      "currency": "KRW",
+      "sector": "내 담당 기업",
+      "domain": "뷰티·화장품",
+      "focus": "해외 화장품·미용기기 성장",
+      "kpis": [
+        "해외 매출",
+        "브랜드 성장",
+        "이익률"
+      ],
+      "risk": "국가별 판촉비와 경쟁",
+      "status": "과거 브리프 연결 대기",
+      "sourceURL": "https://dart.fss.or.kr/",
+      "priority": "집중"
+    },
+    {
+      "id": "KR:003230",
+      "ticker": "003230",
+      "name": "삼양식품",
+      "market": "한국",
+      "currency": "KRW",
+      "sector": "내 담당 기업",
+      "domain": "식품",
+      "focus": "불닭 해외 소비와 증설 효과",
+      "kpis": [
+        "수출 매출",
+        "생산능력·가동률",
+        "영업이익률"
+      ],
+      "risk": "해외 성장 둔화·설비투자 회수",
+      "status": "과거 브리프 연결 대기",
+      "sourceURL": "https://dart.fss.or.kr/",
+      "priority": "집중"
+    },
+    {
+      "id": "KR:105560",
+      "ticker": "105560",
+      "name": "KB금융",
+      "market": "한국",
+      "currency": "KRW",
+      "sector": "내 담당 기업",
+      "domain": "은행·금융지주",
+      "focus": "자본 효율과 주주환원",
+      "kpis": [
+        "NIM",
+        "CET1",
+        "대손비용",
+        "자사주·배당"
+      ],
+      "risk": "신용비용·규제 자본 제약",
+      "status": "과거 브리프 연결 대기",
+      "sourceURL": "https://dart.fss.or.kr/",
+      "priority": "집중"
+    },
+    {
+      "id": "KR:005830",
+      "ticker": "005830",
+      "name": "DB손해보험",
+      "market": "한국",
+      "currency": "KRW",
+      "sector": "내 담당 기업",
+      "domain": "보험",
+      "focus": "보험 손익·자본 관리",
+      "kpis": [
+        "CSM",
+        "보험손익",
+        "손해율",
+        "K-ICS"
+      ],
+      "risk": "손해율 악화·할인율·자본 제약",
+      "status": "과거 브리프 연결 대기",
+      "sourceURL": "https://dart.fss.or.kr/",
+      "priority": "집중"
+    }
+  ]
+}
