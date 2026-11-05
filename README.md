@@ -226,3 +226,22 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - **자동화 범위:** 매주 새로운 기사 전체의 완성된 의미 요약은 **공개 원문 확보와 승인된 요약 API**가 필요합니다. `OPENAI_API_KEY`가 없는 경우 원문 대조 편집본만 분석 완료로 표시하고, 비검증 RSS 제목을 보고서 분석인 것처럼 보이지 않게 합니다.
 
 근거로 확인한 원문: [Abercrombie 공식 발표](https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-and-dallas-cowboys-wide-receiver-ceedee-lamb), [BoF 산업 기사](https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/), [VSXY Zacks 기사](https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-beat-estimates-161001658.html), [VSXY 기업 IR](https://victoriassecret.gcs-web.com/news-releases/news-release-details/victorias-secret-co-reports-second-quarter-2026-results).
+
+## 14. 설명형 임상 요약과 미국 소비재 15개 공식 KPI (2026-11-05)
+
+### 바이오 요약의 읽기 순서
+- 첫 화면의 임상 카드는 **어떤 질환인가 → 어느 회사의 어떤 치료제인가 → 몇 상인가 → 어떤 일이 예정되어 있는가 → 다음에 무엇을 검증할까** 순서로 작성합니다.
+- `NCT06063967` 같은 코드는 제목이 아니라 임상시험 원문을 찾기 위한 **등록번호**입니다. 임상 3상은 환자 대상 효과·안전성 확인 단계이며, 등록정보의 '주요 평가 완료 예상 시점'은 결과 발표일·허가일이 아닙니다.
+- 임상시험 변화가 없는 경우 별도 헤드라인으로 과장하지 않고, 확인 가능한 주요 개발 일정만 보여줍니다. 예상 시점은 '2027년 3월'처럼 읽기 쉽게 표기합니다.
+
+### 미국 소비재 공식 운영 지표
+- `consumer-kpi-baseline.json`: 2026-11-05 기준 **15개 미국 상장 기업의 43개 원문 대조 지표**를 포함합니다. 기업 공식 IR·SEC 출처, 회사별 회계연도/분기, 지표의 범위와 연결된 투자 검증 질문·해석 주의를 기록했습니다.
+- `consumer-official.json`: 사이트에서 읽는 기업 공식 KPI 현황. `consumer2.js` / `consumer2.css`: 독립된 업종별 화면으로 기존 패션·바이오와 별도 관리합니다.
+- **기업 분석 → 소비재·서비스**에서 기업을 선택하면 최신 검토 분기 대표 지표 2개가 상단에 나오고, **핵심 KPI**를 클릭하면 최대 4개 지표·공시 원문·투자 연결·해석 한계를 볼 수 있습니다.
+- **주간 리서치 → 소비재·서비스**는 발표일 순 최신 공식 보고서 5개를 요약합니다. '이번 주 새로 발생한 사실'이 아니라 **최근 발표 실적 현황**이며, 보고서가 갱신되지 않은 경우에도 기준일을 명확히 표시합니다.
+- 업종별 검증 질문: Uber(총예약액·이용건수·현금), Netflix(구독·광고·영업이익률), Disney(파크 방문·스트리밍 이익), Walmart/Target(동일매장매출·전자상거래·거래건수), 외식(동일 점포 매출·점포 수), 뷰티(브랜드 성장·마진), 프리미엄(정규화 마진·CAPEX).
+- `scripts/collect_consumer_official.py`: **SEC_USER_AGENT 설정 시** SEC 공식 최근 10-Q/US-GAAP 수치를 별도로 조회하며, 원문 대조한 업종별 비GAAP KPI와 **분기·계정 및 의미를 혼합하지 않습니다**. 새 SEC 10-Q가 기존 수치보다 최신인 경우 운영 KPI를 자동 최신 수치로 덮어쓰지 않고 이전 분기임을 경고합니다. `SEC_USER_AGENT`가 없으면 정확히 표기된 **공식 IR 편집 스냅샷**만 제공하며, 자동 실적 업데이트로 주장하지 않습니다.
+- 영업이익률과 조정 영업이익률, 예약액과 매출, 동일점포 성과와 전체 매출, 관세 환급으로 일시 증가한 이익 등을 반드시 구분합니다. 서로 기간·기준이 다른 15개를 한 성장률 순위로 비교하지 않습니다.
+- 자동화·데이터 상태가 확인되지 않아도 **15개 출처 원문 링크와 검토 분기**는 남기며, 투자 의견을 자동으로 매수/매도 판단하지 않습니다.
+
+주요 원문 예: [Uber 2026 3Q SEC](https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm), [Netflix 2026 3Q SEC](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [CAVA 2026 3Q IR](https://investor.cava.com/news/news-details/2026/CAVA-Group-Reports-Third-Quarter-2026-Results/default.aspx), [Target 2026 2Q](https://corporate.target.com/press/release/2026/08/target-corporation-reports-second-quarter-earnings), [Walmart FY27 Q2](https://corporate.walmart.com/news/2026/08/20/walmart-releases-q2-fy27-earnings), [e.l.f. FY27 Q2](https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/11-04-2026-210608777).
