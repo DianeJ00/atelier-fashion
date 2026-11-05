@@ -88,7 +88,10 @@ def build():
             data["status"]="unavailable"
         else:
             dates=set(history["XLK"])
-            for bars in history.values():dates.intersection_update(bars)
+            # Only the chosen benchmarks define the common market session.
+            # A missing sector proxy must not invalidate all comparisons.
+            for symbol in ("SPY","QQQ"):
+                if symbol in history:dates.intersection_update(history[symbol])
             anchor=max(dates) if dates else None
             data["asOf"]=anchor
             if anchor:
