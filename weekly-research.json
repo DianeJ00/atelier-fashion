@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:52:10.792332Z",
+  "generatedAt": "2026-11-05T07:14:26.574398Z",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-05",
   "reviewStatus": "unverified_headlines_only",
@@ -79,10 +79,23 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
+    },
+    {
+      "id": "rss-7b680c5dd58e651",
+      "title": "Judge sides with FTC, blocking Kate Spade and Michael Kors merger - ABC News - Breaking News, Latest News and Videos",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeW9kT2xhQVUyc3MzdHB4ano0UFlQdGhSSEhraG04ZWNSVjR2VjJUT0lXbUxscWNuMTl5b3poNzBZVEJQdnRFWFFhSVRhRnh2STA1bXo2UkhMQURRTmRvQlpyNlB1eUJLb1lqNjJNSTRqdFZWOTN6dFpnM0NIOHJUTXhkSWJYczFCS2NHd2hIWEsyWDNndkRwUHNxNnVJZ9IBowFBVV95cUxNSHBISzVob3NpWm1qUXNSX19fTFZzY0hqckpESkpCX3JFV3hqTlFub2JGQVlYYlV6V1pCX1dYMTl2ZXFNMVpMRjJycGlnc28zRGk5c3BRbXh4eHdrcVRoOVJ2SlZmSEQ3OGFXUUxPZGNCdHQxRXozSERHaWxhNENZOFJIazIyME1JNUpvQUxyMllQM2VIanlYeGNxZllTLTRiSWZJ?oc=5",
+      "date": "2026-11-03T19:57:30Z",
+      "platform": "Google News",
+      "ticker": "TPR",
+      "brand": "",
+      "creator": "ABC News - Breaking News, Latest News and Videos",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-7140b71d4623b2c",
@@ -93,7 +106,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -138,19 +151,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-7b66e2f82ee58f5",
-      "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
-      "date": "2026-11-03T15:39:00Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "Forbes",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-11e0c63c64c7f9e",
       "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
@@ -177,19 +177,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-fd2f0df66770cb5",
-      "title": "Why Jude Bellingham Is Calvin Klein’s New Star - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSy05MVNJX2xuQ1pJSlNRWEczWnNuSU1DRHlfYmR3bk0zNDAyNHozTThSd3EySTBGcXRCVTRFVUFMZjV1SG5QVzEwdmpQUllwbDZIMUViRGc0MXJrZ3VoaEg5MXdGbnRnMFVxTl8tSlpSZzR2SGZJVGFUaDFmX1RDY2lJV2hYa2ltVFpDR2NLazB4bGZMWXgyeWp1ak1OLVp4ZjVVWldJSQ?oc=5",
-      "date": "2026-11-03T00:06:18Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-4697ec9b3baaec5",
       "title": "Emmy Kasbit Lagos Spring 2027 Collection - Vogue",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9lM0tVTU9jLUtHeVRRSEdQaG4ybUt6a0xENkdISEFiVXNaaWxzaWVaRElaZVVfbWVjXzVmTGljNHFXZnFBMjNZT3BQUHltLUlteFVHLUU1R2hSSWxldld3Y3J1c25aZjgxZkVaRWg4cWMzUHc?oc=5",
@@ -211,7 +198,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -238,7 +225,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -265,7 +252,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -305,7 +292,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -415,6 +402,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-292ba68d8af83ba",
+      "title": "Calvin Klein Net Worth - Celebrity Net Worth",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd05tZjF0eW1TX21Mb1NZY1dIcUNsTnVERzFBVnlRYmtHQW1rdDRvSFB2UmZCeWhwU3NHY1UxMTlfamRVTW0zRVgtd09lOTZjUGZOaTluZExZcUpic1NKV1ZhYW9WQ3VIU2VUaC1FLXBhWm9ONWRSZFR6bEIwM3BkbGhaZFFab0JRbWRETTYzVWczWE1DWVhyU1RHVQ?oc=5",
+      "date": "2026-10-29T07:00:00Z",
+      "platform": "Google News",
+      "ticker": "PVH",
+      "brand": "",
+      "creator": "Celebrity Net Worth",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-11fed69c65e7099",
       "title": "Louis Vuitton Made The Trunk For The Ballon D’Or",
       "url": "https://www.youtube.com/watch?v=8tUnj2W1rEk",
@@ -423,7 +423,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -486,8 +486,8 @@
       }
     ],
     "uncategorizedCount": 21,
-    "previousCollectedAt": "2026-11-05T06:27:52.101621Z",
-    "newSincePrevious": 0,
+    "previousCollectedAt": "2026-11-05T06:52:10.792332Z",
+    "newSincePrevious": 2,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -495,8 +495,8 @@
         "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
-            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
+            "title": "Judge sides with FTC, blocking Kate Spade and Michael Kors merger - ABC News - Breaking News, Latest News and Videos",
+            "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeW9kT2xhQVUyc3MzdHB4ano0UFlQdGhSSEhraG04ZWNSVjR2VjJUT0lXbUxscWNuMTl5b3poNzBZVEJQdnRFWFFhSVRhRnh2STA1bXo2UkhMQURRTmRvQlpyNlB1eUJLb1lqNjJNSTRqdFZWOTN6dFpnM0NIOHJUTXhkSWJYczFCS2NHd2hIWEsyWDNndkRwUHNxNnVJZ9IBowFBVV95cUxNSHBISzVob3NpWm1qUXNSX19fTFZzY0hqckpESkpCX3JFV3hqTlFub2JGQVlYYlV6V1pCX1dYMTl2ZXFNMVpMRjJycGlnc28zRGk5c3BRbXh4eHdrcVRoOVJ2SlZmSEQ3OGFXUUxPZGNCdHQxRXozSERHaWxhNENZOFJIazIyME1JNUpvQUxyMllQM2VIanlYeGNxZllTLTRiSWZJ?oc=5",
             "date": "2026-11-03"
           }
         ]

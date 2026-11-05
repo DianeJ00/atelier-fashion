@@ -1,10 +1,2676 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": null,
-  "status": "not_collected",
-  "companies": [],
+  "generatedAt": "2026-11-05T07:14:46.499855+00:00",
+  "status": "ok",
+  "source": "SEC US-GAAP companyfacts; 10-Q period matched",
+  "companies": [
+    {
+      "ticker": "RL",
+      "companyName": "RALPH LAUREN CORP",
+      "periodStart": "2026-03-29",
+      "periodEnd": "2026-06-27",
+      "filed": "2026-08-06",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1959800000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": 14.0,
+            "comparison": {
+              "value": 1719100000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001628280-26-053992",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": null
+        },
+        "operatingIncome": {
+          "value": 342400000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": 25.1,
+            "comparison": {
+              "value": 273600000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001628280-26-053992",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": null
+        },
+        "netIncome": {
+          "value": 262200000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": 19.0,
+            "comparison": {
+              "value": 220400000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001628280-26-053992",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": null
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "PVH",
+      "companyName": "PVH CORP. /DE/",
+      "periodStart": "2026-05-04",
+      "periodEnd": "2026-08-02",
+      "filed": "2026-09-02",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm",
+      "metrics": {
+        "revenue": {
+          "value": 2097000000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-05-04",
+          "end": "2026-08-02",
+          "yoy": {
+            "percent": -3.2,
+            "comparison": {
+              "value": 2167200000,
+              "start": "2025-05-05",
+              "end": "2025-08-03",
+              "form": "10-Q",
+              "filed": "2026-09-02",
+              "accession": "0000078239-26-000056",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 3.6,
+            "comparison": {
+              "value": 2025100000,
+              "start": "2026-02-02",
+              "end": "2026-05-03",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0000078239-26-000040",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": -190900000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-04",
+          "end": "2026-08-02",
+          "yoy": {
+            "percent": -243.3,
+            "comparison": {
+              "value": 133200000,
+              "start": "2025-05-05",
+              "end": "2025-08-03",
+              "form": "10-Q",
+              "filed": "2026-09-02",
+              "accession": "0000078239-26-000056",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -253.6,
+            "comparison": {
+              "value": 124300000,
+              "start": "2026-02-02",
+              "end": "2026-05-03",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0000078239-26-000040",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": -102900000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-04",
+          "end": "2026-08-02",
+          "yoy": {
+            "percent": -145.9,
+            "comparison": {
+              "value": 224200000,
+              "start": "2025-05-05",
+              "end": "2025-08-03",
+              "form": "10-Q",
+              "filed": "2026-09-02",
+              "accession": "0000078239-26-000056",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -216.9,
+            "comparison": {
+              "value": 88000000,
+              "start": "2026-02-02",
+              "end": "2026-05-03",
+              "form": "10-Q",
+              "filed": "2026-09-02",
+              "accession": "0000078239-26-000056",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "LEVI",
+      "companyName": "LEVI STRAUSS & CO",
+      "periodStart": "2026-06-01",
+      "periodEnd": "2026-08-30",
+      "filed": "2026-10-07",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/94845/000009484526000047/lvis-20260830.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1609700000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-06-01",
+          "end": "2026-08-30",
+          "yoy": {
+            "percent": 4.3,
+            "comparison": {
+              "value": 1543400000,
+              "start": "2025-06-02",
+              "end": "2025-08-31",
+              "form": "10-Q",
+              "filed": "2026-10-07",
+              "accession": "0000094845-26-000047",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 3.1,
+            "comparison": {
+              "value": 1562000000,
+              "start": "2026-03-02",
+              "end": "2026-05-31",
+              "form": "10-Q",
+              "filed": "2026-07-08",
+              "accession": "0000094845-26-000037",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 222300000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-06-01",
+          "end": "2026-08-30",
+          "yoy": {
+            "percent": 32.8,
+            "comparison": {
+              "value": 167400000,
+              "start": "2025-06-02",
+              "end": "2025-08-31",
+              "form": "10-Q",
+              "filed": "2026-10-07",
+              "accession": "0000094845-26-000047",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 81.9,
+            "comparison": {
+              "value": 122200000,
+              "start": "2026-03-02",
+              "end": "2026-05-31",
+              "form": "10-Q",
+              "filed": "2026-07-08",
+              "accession": "0000094845-26-000037",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "ANF",
+      "companyName": "ABERCROMBIE & FITCH CO /DE/",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-09-04",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1266689000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 4.8,
+            "comparison": {
+              "value": 1208560000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001018840-26-000047",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 13.7,
+            "comparison": {
+              "value": 1113821000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001018840-26-000036",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 252700000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 22.3,
+            "comparison": {
+              "value": 206658000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001018840-26-000047",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 184.6,
+            "comparison": {
+              "value": 88797000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001018840-26-000036",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 183720000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 29.9,
+            "comparison": {
+              "value": 141383000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001018840-26-000047",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 173.7,
+            "comparison": {
+              "value": 67134000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001018840-26-000036",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "GAP",
+      "companyName": "GAP INC",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-08-28",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 3651000000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": -2.0,
+            "comparison": {
+              "value": 3725000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 4.4,
+            "comparison": {
+              "value": 3497000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0001628280-26-039070",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 676000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 131.5,
+            "comparison": {
+              "value": 292000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 51.9,
+            "comparison": {
+              "value": 445000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0001628280-26-039070",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 501000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 131.9,
+            "comparison": {
+              "value": 216000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 47.8,
+            "comparison": {
+              "value": 339000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0001628280-26-039070",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "AEO",
+      "companyName": "AMERICAN EAGLE OUTFITTERS INC",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-09-10",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/919012/000119312526387856/aeo-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1380375000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 7.5,
+            "comparison": {
+              "value": 1283675000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001193125-26-387856",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 15.5,
+            "comparison": {
+              "value": 1195285000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0001193125-26-255712",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 211405000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 105.1,
+            "comparison": {
+              "value": 103085000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001193125-26-387856",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 649.0,
+            "comparison": {
+              "value": 28226000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0001193125-26-255712",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 134084000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 72.7,
+            "comparison": {
+              "value": 77633000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001193125-26-387856",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 470.0,
+            "comparison": {
+              "value": 23525000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0001193125-26-255712",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "URBN",
+      "companyName": "URBAN OUTFITTERS INC",
+      "periodStart": "2026-05-01",
+      "periodEnd": "2026-07-31",
+      "filed": "2026-09-09",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1661915000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": 10.4,
+            "comparison": {
+              "value": 1504755000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-09-09",
+              "accession": "0001193125-26-386468",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 12.2,
+            "comparison": {
+              "value": 1481345000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0001193125-26-263929",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 288739000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": 65.6,
+            "comparison": {
+              "value": 174387000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-09-09",
+              "accession": "0001193125-26-386468",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 106.7,
+            "comparison": {
+              "value": 139681000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0001193125-26-263929",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 240651000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": 67.3,
+            "comparison": {
+              "value": 143865000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-09-09",
+              "accession": "0001193125-26-386468",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 108.0,
+            "comparison": {
+              "value": 115705000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0001193125-26-263929",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "VFC",
+      "companyName": "V F CORP",
+      "periodStart": "2026-06-28",
+      "periodEnd": "2026-09-26",
+      "filed": "2026-10-28",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm",
+      "metrics": {
+        "revenue": {
+          "value": 2695132000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": -3.8,
+            "comparison": {
+              "value": 2802706000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-28",
+              "accession": "0000103379-26-000135",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 61.4,
+            "comparison": {
+              "value": 1669379000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000103379-26-000114",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 367920000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": 17.7,
+            "comparison": {
+              "value": 312620000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-28",
+              "accession": "0000103379-26-000135",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": null,
+            "comparison": {
+              "value": -83072000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000103379-26-000114",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 285251000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": 50.3,
+            "comparison": {
+              "value": 189765000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-28",
+              "accession": "0000103379-26-000135",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": null,
+            "comparison": {
+              "value": -97152000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000103379-26-000114",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "CPRI",
+      "companyName": "Capri Holdings Ltd",
+      "periodStart": "2026-06-28",
+      "periodEnd": "2026-09-26",
+      "filed": "2026-10-30",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm",
+      "metrics": {
+        "revenue": {
+          "value": 809000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": -5.5,
+            "comparison": {
+              "value": 856000000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-30",
+              "accession": "0001530721-26-000094",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 5.2,
+            "comparison": {
+              "value": 769000000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001530721-26-000081",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 10000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": null,
+            "comparison": {
+              "value": -12000000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-30",
+              "accession": "0001530721-26-000094",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -41.2,
+            "comparison": {
+              "value": 17000000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001530721-26-000081",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 27000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-06-28",
+          "end": "2026-09-26",
+          "yoy": {
+            "percent": null,
+            "comparison": {
+              "value": -28000000,
+              "start": "2025-06-29",
+              "end": "2025-09-27",
+              "form": "10-Q",
+              "filed": "2026-10-30",
+              "accession": "0001530721-26-000094",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -60.9,
+            "comparison": {
+              "value": 69000000,
+              "start": "2026-03-29",
+              "end": "2026-06-27",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001530721-26-000081",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "CAL",
+      "companyName": "CALERES INC",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-09-10",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm",
+      "metrics": {
+        "revenue": {
+          "value": 695454000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerIncludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 5.6,
+            "comparison": {
+              "value": 658519000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0000014707-26-000144",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 4.3,
+            "comparison": {
+              "value": 666599000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0000014707-26-000087",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 77614000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 735.3,
+            "comparison": {
+              "value": 9292000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0000014707-26-000144",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 225.2,
+            "comparison": {
+              "value": 23869000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0000014707-26-000087",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 58642000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 773.6,
+            "comparison": {
+              "value": 6713000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0000014707-26-000144",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 310.7,
+            "comparison": {
+              "value": 14277000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-09",
+              "accession": "0000014707-26-000087",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "VSXY",
+      "companyName": "Victoria's Secret & Co.",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-09-04",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1611000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 10.4,
+            "comparison": {
+              "value": 1459000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001856437-26-000021",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 3.3,
+            "comparison": {
+              "value": 1560000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001856437-26-000013",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 257000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 526.8,
+            "comparison": {
+              "value": 41000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001856437-26-000021",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 238.2,
+            "comparison": {
+              "value": 76000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001856437-26-000013",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 183000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 1043.8,
+            "comparison": {
+              "value": 16000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-04",
+              "accession": "0001856437-26-000021",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 281.2,
+            "comparison": {
+              "value": 48000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-05",
+              "accession": "0001856437-26-000013",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "TPR",
+      "companyName": "TAPESTRY, INC.",
+      "periodStart": "2025-12-28",
+      "periodEnd": "2026-03-28",
+      "filed": "2026-05-07",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000011/tpr-20260328.htm",
+      "metrics": {
+        "revenue": {
+          "value": 1920600000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2025-12-28",
+          "end": "2026-03-28",
+          "yoy": {
+            "percent": 21.2,
+            "comparison": {
+              "value": 1584600000,
+              "start": "2024-12-29",
+              "end": "2025-03-29",
+              "form": "10-Q",
+              "filed": "2026-05-07",
+              "accession": "0001116132-26-000011",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": -23.2,
+            "comparison": {
+              "value": 2502400000,
+              "start": "2025-09-28",
+              "end": "2025-12-27",
+              "form": "10-Q",
+              "filed": "2026-02-05",
+              "accession": "0001116132-26-000005",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 427500000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2025-12-28",
+          "end": "2026-03-28",
+          "yoy": {
+            "percent": 68.5,
+            "comparison": {
+              "value": 253700000,
+              "start": "2024-12-29",
+              "end": "2025-03-29",
+              "form": "10-Q",
+              "filed": "2026-05-07",
+              "accession": "0001116132-26-000011",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -40.3,
+            "comparison": {
+              "value": 716400000,
+              "start": "2025-09-28",
+              "end": "2025-12-27",
+              "form": "10-Q",
+              "filed": "2026-02-05",
+              "accession": "0001116132-26-000005",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 343800000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2025-12-28",
+          "end": "2026-03-28",
+          "yoy": {
+            "percent": 69.1,
+            "comparison": {
+              "value": 203300000,
+              "start": "2024-12-29",
+              "end": "2025-03-29",
+              "form": "10-Q",
+              "filed": "2026-05-07",
+              "accession": "0001116132-26-000011",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -38.7,
+            "comparison": {
+              "value": 561300000,
+              "start": "2025-09-28",
+              "end": "2025-12-27",
+              "form": "10-Q",
+              "filed": "2026-05-07",
+              "accession": "0001116132-26-000011",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "UBER",
+      "companyName": "Uber Technologies, Inc",
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "filed": "2026-11-04",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000041/uber-20260930.htm",
+      "metrics": {
+        "revenue": {
+          "value": 14766000000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 9.6,
+            "comparison": {
+              "value": 13467000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-04",
+              "accession": "0001543151-26-000041",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 4.1,
+            "comparison": {
+              "value": 14191000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001543151-26-000032",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 1447000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 30.0,
+            "comparison": {
+              "value": 1113000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-04",
+              "accession": "0001543151-26-000041",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -23.4,
+            "comparison": {
+              "value": 1890000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001543151-26-000032",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 512000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": -92.3,
+            "comparison": {
+              "value": 6626000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-04",
+              "accession": "0001543151-26-000041",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -78.6,
+            "comparison": {
+              "value": 2394000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001543151-26-000032",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "NFLX",
+      "companyName": "NETFLIX INC",
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "filed": "2026-10-21",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+      "metrics": {
+        "revenue": {
+          "value": 12874176000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 11.8,
+            "comparison": {
+              "value": 11510307000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-21",
+              "accession": "0001065280-26-000291",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 2.5,
+            "comparison": {
+              "value": 12559938000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-07-17",
+              "accession": "0001065280-26-000212",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 4458600000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 37.3,
+            "comparison": {
+              "value": 3248247000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-21",
+              "accession": "0001065280-26-000291",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 6.3,
+            "comparison": {
+              "value": 4192610000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-07-17",
+              "accession": "0001065280-26-000212",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 3663927000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 43.9,
+            "comparison": {
+              "value": 2546916000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-21",
+              "accession": "0001065280-26-000291",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 7.7,
+            "comparison": {
+              "value": 3401414000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-07-17",
+              "accession": "0001065280-26-000212",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "DIS",
+      "companyName": "Walt Disney Co",
+      "periodStart": "2026-03-29",
+      "periodEnd": "2026-06-27",
+      "filed": "2026-08-05",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000057/dis-20260627.htm",
+      "metrics": {
+        "revenue": {
+          "value": 25248000000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": 6.8,
+            "comparison": {
+              "value": 23650000000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001744489-26-000057",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 0.3,
+            "comparison": {
+              "value": 25168000000,
+              "start": "2025-12-28",
+              "end": "2026-03-28",
+              "form": "10-Q",
+              "filed": "2026-05-06",
+              "accession": "0001744489-26-000037",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 5555000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": 21.4,
+            "comparison": {
+              "value": 4575000000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001744489-26-000057",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 20.7,
+            "comparison": {
+              "value": 4603000000,
+              "start": "2025-12-28",
+              "end": "2026-03-28",
+              "form": "10-Q",
+              "filed": "2026-05-06",
+              "accession": "0001744489-26-000037",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 2638000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-03-29",
+          "end": "2026-06-27",
+          "yoy": {
+            "percent": -49.9,
+            "comparison": {
+              "value": 5262000000,
+              "start": "2025-03-30",
+              "end": "2025-06-28",
+              "form": "10-Q",
+              "filed": "2026-08-05",
+              "accession": "0001744489-26-000057",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 17.4,
+            "comparison": {
+              "value": 2247000000,
+              "start": "2025-12-28",
+              "end": "2026-03-28",
+              "form": "10-Q",
+              "filed": "2026-05-06",
+              "accession": "0001744489-26-000037",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "BKNG",
+      "companyName": "Booking Holdings Inc.",
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "filed": "2026-11-03",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000045/bkng-20260930.htm",
+      "metrics": {
+        "revenue": {
+          "value": 8893000000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": -1.3,
+            "comparison": {
+              "value": 9008000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-03",
+              "accession": "0001075531-26-000045",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": 21.0,
+            "comparison": {
+              "value": 7352000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-04",
+              "accession": "0001075531-26-000037",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 3418000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": -1.9,
+            "comparison": {
+              "value": 3483000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-03",
+              "accession": "0001075531-26-000045",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 36.7,
+            "comparison": {
+              "value": 2500000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-04",
+              "accession": "0001075531-26-000037",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "WMT",
+      "companyName": "Walmart Inc.",
+      "periodStart": "2026-05-01",
+      "periodEnd": "2026-07-31",
+      "filed": "2026-08-28",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm",
+      "metrics": {
+        "revenue": {
+          "value": 186100000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": 5.9,
+            "comparison": {
+              "value": 175750000000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000104169-26-000154",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 5.9,
+            "comparison": {
+              "value": 175684000000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000104169-26-000102",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 9383000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": 28.8,
+            "comparison": {
+              "value": 7286000000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000104169-26-000154",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 25.2,
+            "comparison": {
+              "value": 7493000000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000104169-26-000102",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 6366000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-01",
+          "end": "2026-07-31",
+          "yoy": {
+            "percent": -9.4,
+            "comparison": {
+              "value": 7026000000,
+              "start": "2025-05-01",
+              "end": "2025-07-31",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000104169-26-000154",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 19.4,
+            "comparison": {
+              "value": 5330000000,
+              "start": "2026-02-01",
+              "end": "2026-04-30",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000104169-26-000102",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "TGT",
+      "companyName": "TARGET CORP",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-08-28",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 26539000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 5.3,
+            "comparison": {
+              "value": 25211000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000027419-26-000042",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 4.3,
+            "comparison": {
+              "value": 25443000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000027419-26-000022",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 2560000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 94.4,
+            "comparison": {
+              "value": 1317000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000027419-26-000042",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 125.6,
+            "comparison": {
+              "value": 1135000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000027419-26-000022",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 1877000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 100.7,
+            "comparison": {
+              "value": 935000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000027419-26-000042",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 140.3,
+            "comparison": {
+              "value": 781000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000027419-26-000042",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "COST",
+      "companyName": "COSTCO WHOLESALE CORP /NEW",
+      "periodStart": "2026-02-16",
+      "periodEnd": "2026-05-10",
+      "filed": "2026-06-03",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000051/cost-20260510.htm",
+      "metrics": {
+        "revenue": {
+          "value": 70527000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-02-16",
+          "end": "2026-05-10",
+          "yoy": {
+            "percent": 11.6,
+            "comparison": {
+              "value": 63205000000,
+              "start": "2025-02-17",
+              "end": "2025-05-11",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0000909832-26-000051",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 1.3,
+            "comparison": {
+              "value": 69597000000,
+              "start": "2025-11-24",
+              "end": "2026-02-15",
+              "form": "10-Q",
+              "filed": "2026-03-11",
+              "accession": "0000909832-26-000029",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 2815000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-02-16",
+          "end": "2026-05-10",
+          "yoy": {
+            "percent": 11.3,
+            "comparison": {
+              "value": 2530000000,
+              "start": "2025-02-17",
+              "end": "2025-05-11",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0000909832-26-000051",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 8.0,
+            "comparison": {
+              "value": 2606000000,
+              "start": "2025-11-24",
+              "end": "2026-02-15",
+              "form": "10-Q",
+              "filed": "2026-03-11",
+              "accession": "0000909832-26-000029",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 2192000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-02-16",
+          "end": "2026-05-10",
+          "yoy": {
+            "percent": 15.2,
+            "comparison": {
+              "value": 1903000000,
+              "start": "2025-02-17",
+              "end": "2025-05-11",
+              "form": "10-Q",
+              "filed": "2026-06-03",
+              "accession": "0000909832-26-000051",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 7.7,
+            "comparison": {
+              "value": 2035000000,
+              "start": "2025-11-24",
+              "end": "2026-02-15",
+              "form": "10-Q",
+              "filed": "2026-03-11",
+              "accession": "0000909832-26-000029",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "TJX",
+      "companyName": "TJX COMPANIES INC /DE/",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-08-28",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/109198/000010919826000048/tjx-20260801.htm",
+      "metrics": {
+        "revenue": {
+          "value": 15180000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerIncludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 5.4,
+            "comparison": {
+              "value": 14401000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000109198-26-000048",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 6.0,
+            "comparison": {
+              "value": 14323000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000109198-26-000034",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 1520000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 22.3,
+            "comparison": {
+              "value": 1243000000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-28",
+              "accession": "0000109198-26-000048",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 14.1,
+            "comparison": {
+              "value": 1332000000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-05-29",
+              "accession": "0000109198-26-000034",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "CAVA",
+      "companyName": "CAVA GROUP, INC.",
+      "periodStart": "2026-04-20",
+      "periodEnd": "2026-07-12",
+      "filed": "2026-08-12",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639438/000162828026055864/cava-20260712.htm",
+      "metrics": {
+        "revenue": {
+          "value": 368436000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-04-20",
+          "end": "2026-07-12",
+          "yoy": {
+            "percent": 31.3,
+            "comparison": {
+              "value": 280615000,
+              "start": "2025-04-21",
+              "end": "2025-07-13",
+              "form": "10-Q",
+              "filed": "2026-08-12",
+              "accession": "0001628280-26-055864",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": null
+        },
+        "operatingIncome": {
+          "value": 26846000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-04-20",
+          "end": "2026-07-12",
+          "yoy": {
+            "percent": 36.7,
+            "comparison": {
+              "value": 19645000,
+              "start": "2025-04-21",
+              "end": "2025-07-13",
+              "form": "10-Q",
+              "filed": "2026-08-12",
+              "accession": "0001628280-26-055864",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": null
+        },
+        "netIncome": {
+          "value": 23017000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-04-20",
+          "end": "2026-07-12",
+          "yoy": {
+            "percent": 25.3,
+            "comparison": {
+              "value": 18368000,
+              "start": "2025-04-21",
+              "end": "2025-07-13",
+              "form": "10-Q",
+              "filed": "2026-08-12",
+              "accession": "0001628280-26-055864",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": null
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "CMG",
+      "companyName": "CHIPOTLE MEXICAN GRILL INC",
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "filed": "2026-10-29",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000104/cmg-20260930.htm",
+      "metrics": {
+        "revenue": {
+          "value": 3293162000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 9.6,
+            "comparison": {
+              "value": 3003444000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-29",
+              "accession": "0001058090-26-000104",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": -1.7,
+            "comparison": {
+              "value": 3348562000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accession": "0001058090-26-000066",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 451964000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": -5.3,
+            "comparison": {
+              "value": 477172000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-29",
+              "accession": "0001058090-26-000104",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -14.0,
+            "comparison": {
+              "value": 525595000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-07-31",
+              "accession": "0001058090-26-000066",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 339874000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": -11.1,
+            "comparison": {
+              "value": 382103000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-10-29",
+              "accession": "0001058090-26-000104",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -15.8,
+            "comparison": {
+              "value": 403547000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "form": "10-Q",
+              "filed": "2026-10-29",
+              "accession": "0001058090-26-000104",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "SBUX",
+      "companyName": "STARBUCKS CORP",
+      "periodStart": "2026-03-30",
+      "periodEnd": "2026-06-28",
+      "filed": "2026-07-29",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm",
+      "metrics": {
+        "revenue": {
+          "value": 9322700000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-03-30",
+          "end": "2026-06-28",
+          "yoy": {
+            "percent": -1.4,
+            "comparison": {
+              "value": 9456000000,
+              "start": "2025-03-31",
+              "end": "2025-06-29",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000829224-26-000130",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": -2.2,
+            "comparison": {
+              "value": 9531500000,
+              "start": "2025-12-29",
+              "end": "2026-03-29",
+              "form": "10-Q",
+              "filed": "2026-04-28",
+              "accession": "0000829224-26-000080",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 980400000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-03-30",
+          "end": "2026-06-28",
+          "yoy": {
+            "percent": 4.8,
+            "comparison": {
+              "value": 935600000,
+              "start": "2025-03-31",
+              "end": "2025-06-29",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000829224-26-000130",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 18.4,
+            "comparison": {
+              "value": 828100000,
+              "start": "2025-12-29",
+              "end": "2026-03-29",
+              "form": "10-Q",
+              "filed": "2026-04-28",
+              "accession": "0000829224-26-000080",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 1045300000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-03-30",
+          "end": "2026-06-28",
+          "yoy": {
+            "percent": 87.2,
+            "comparison": {
+              "value": 558300000,
+              "start": "2025-03-31",
+              "end": "2025-06-29",
+              "form": "10-Q",
+              "filed": "2026-07-29",
+              "accession": "0000829224-26-000130",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 104.6,
+            "comparison": {
+              "value": 510900000,
+              "start": "2025-12-29",
+              "end": "2026-03-29",
+              "form": "10-Q",
+              "filed": "2026-04-28",
+              "accession": "0000829224-26-000080",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "ELF",
+      "companyName": "e.l.f. Beauty, Inc.",
+      "periodStart": "2026-04-01",
+      "periodEnd": "2026-06-30",
+      "filed": "2026-08-06",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1600033/000160003326000040/elf-20260630.htm",
+      "metrics": {
+        "revenue": {
+          "value": 479373000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "yoy": {
+            "percent": 35.5,
+            "comparison": {
+              "value": 353739000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001600033-26-000040",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 6.7,
+            "comparison": {
+              "value": 449292000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "form": "10-K",
+              "filed": "2026-05-21",
+              "accession": "0001600033-26-000020",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 102441000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "yoy": {
+            "percent": 110.3,
+            "comparison": {
+              "value": 48709000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001600033-26-000040",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": null
+        },
+        "netIncome": {
+          "value": 66599000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "yoy": {
+            "percent": 99.9,
+            "comparison": {
+              "value": 33311000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "form": "10-Q",
+              "filed": "2026-08-06",
+              "accession": "0001600033-26-000040",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": null,
+            "comparison": {
+              "value": -49365000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "form": "10-K",
+              "filed": "2026-05-21",
+              "accession": "0001600033-26-000020",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "ULTA",
+      "companyName": "Ulta Beauty, Inc.",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-08-27",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1403568/000110465926102442/ulta-20260801x10q.htm",
+      "metrics": {
+        "revenue": {
+          "value": 3035676000,
+          "unit": "USD",
+          "tag": "Revenues",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 8.9,
+            "comparison": {
+              "value": 2788469000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-27",
+              "accession": "0001104659-26-102442",
+              "usGaapTag": "Revenues"
+            }
+          },
+          "qoq": {
+            "percent": -4.1,
+            "comparison": {
+              "value": 3163857000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-02",
+              "accession": "0001104659-26-069491",
+              "usGaapTag": "Revenues"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 379641000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 10.1,
+            "comparison": {
+              "value": 344854000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-27",
+              "accession": "0001104659-26-102442",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -15.3,
+            "comparison": {
+              "value": 448256000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-02",
+              "accession": "0001104659-26-069491",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 282006000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 8.1,
+            "comparison": {
+              "value": 260875000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-08-27",
+              "accession": "0001104659-26-102442",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": -17.2,
+            "comparison": {
+              "value": 340469000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-08-27",
+              "accession": "0001104659-26-102442",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "EL",
+      "companyName": "ESTEE LAUDER COMPANIES INC",
+      "periodStart": "2026-07-01",
+      "periodEnd": "2026-09-30",
+      "filed": "2026-11-02",
+      "fiscalYear": 2027,
+      "fiscalPeriod": "Q1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000060/el-20260930.htm",
+      "metrics": {
+        "revenue": {
+          "value": 3715000000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 6.7,
+            "comparison": {
+              "value": 3481000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-02",
+              "accession": "0001001250-26-000060",
+              "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+            }
+          },
+          "qoq": null
+        },
+        "operatingIncome": {
+          "value": 408000000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 141.4,
+            "comparison": {
+              "value": 169000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-02",
+              "accession": "0001001250-26-000060",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": null
+        },
+        "netIncome": {
+          "value": 233000000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-07-01",
+          "end": "2026-09-30",
+          "yoy": {
+            "percent": 395.7,
+            "comparison": {
+              "value": 47000000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "form": "10-Q",
+              "filed": "2026-11-02",
+              "accession": "0001001250-26-000060",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": null
+        }
+      },
+      "status": "period_compared"
+    },
+    {
+      "ticker": "RH",
+      "companyName": "RH",
+      "periodStart": "2026-05-03",
+      "periodEnd": "2026-08-01",
+      "filed": "2026-09-10",
+      "fiscalYear": 2026,
+      "fiscalPeriod": "Q2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1528849/000110465926106764/rh-20260801x10q.htm",
+      "metrics": {
+        "revenue": {
+          "value": 922150000,
+          "unit": "USD",
+          "tag": "RevenueFromContractWithCustomerIncludingAssessedTax",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 2.6,
+            "comparison": {
+              "value": 899151000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001104659-26-106764",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          },
+          "qoq": {
+            "percent": 15.2,
+            "comparison": {
+              "value": 800328000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-11",
+              "accession": "0001104659-26-073006",
+              "usGaapTag": "RevenueFromContractWithCustomerIncludingAssessedTax"
+            }
+          }
+        },
+        "operatingIncome": {
+          "value": 107573000,
+          "unit": "USD",
+          "tag": "OperatingIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": -16.5,
+            "comparison": {
+              "value": 128876000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001104659-26-106764",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": 214.1,
+            "comparison": {
+              "value": 34243000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-11",
+              "accession": "0001104659-26-073006",
+              "usGaapTag": "OperatingIncomeLoss"
+            }
+          }
+        },
+        "netIncome": {
+          "value": 60167000,
+          "unit": "USD",
+          "tag": "NetIncomeLoss",
+          "start": "2026-05-03",
+          "end": "2026-08-01",
+          "yoy": {
+            "percent": 16.4,
+            "comparison": {
+              "value": 51708000,
+              "start": "2025-05-04",
+              "end": "2025-08-02",
+              "form": "10-Q",
+              "filed": "2026-09-10",
+              "accession": "0001104659-26-106764",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          },
+          "qoq": {
+            "percent": null,
+            "comparison": {
+              "value": -13697000,
+              "start": "2026-02-01",
+              "end": "2026-05-02",
+              "form": "10-Q",
+              "filed": "2026-06-11",
+              "accession": "0001104659-26-073006",
+              "usGaapTag": "NetIncomeLoss"
+            }
+          }
+        }
+      },
+      "status": "period_compared"
+    }
+  ],
   "errors": [],
-  "verifiedCurrent": 0,
-  "compared": 0,
-  "message": "SEC 분기 비교 실행 전"
+  "verifiedCurrent": 27,
+  "compared": 27,
+  "limitations": [
+    "수치는 같은 GAAP 계정·통화·분기 길이를 충족한 경우만 비교",
+    "전분기 비교 분기(특히 4분기)가 별도 3개월 사실로 확인되지 않으면 QoQ 비워둠",
+    "같은 분기 재공시가 있으면 가장 최신 제출 자료를 비교 기준으로 사용",
+    "동일매장매출·예약총액·방문객·조정 영업이익률은 SEC GAAP에서 자동 추출하지 않음",
+    "성장률 자체가 투자 의견의 강화·약화를 확정하지 않음"
+  ]
 }

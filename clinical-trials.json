@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:52:40.638608+00:00",
+  "generatedAt": "2026-11-05T07:14:56.438419+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -1959,7 +1959,7 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-05T06:28:04.570482+00:00",
+  "comparisonTo": "2026-11-05T06:52:40.638608+00:00",
   "changeCount": 0,
   "changes": [],
   "weeklyInterpretation": [
