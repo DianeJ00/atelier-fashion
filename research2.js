@@ -236,6 +236,7 @@ function companyPage(){
 
 function theses(){
  if(!db)return '<p class="r2-empty">기업별 투자 가설의 기준 정보를 불러오는 중입니다.</p>';
+ if(window.ATELIER3?.thesisWorkspace)return window.ATELIER3.thesisWorkspace(companies());
  const options=['내 담당 기업','바이오·제약','소비재·서비스','패션','전체'];
  const group=state.thesisSector||'내 담당 기업';
  const list=companies().filter(x=>group==='전체'||x.sector===group);
