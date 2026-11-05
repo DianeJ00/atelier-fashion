@@ -234,11 +234,22 @@ function theses(){
 }
 
 function weeklyIntro(){
- const all=companies();
- return `<div class="r2-panel r2-weekly-intro"><div class="r2-panel-head"><div><h2>산업별 주간 리서치</h2><p>패션은 원문 대조한 주간 브리프가 연결되어 있습니다. 다른 산업의 전문 기사·임상·DART 분석은 단계별로 연동합니다.</p></div></div>
+ const global=state.weeklySector==='전체',bio=state.weeklySector==='바이오·제약';
+ const ready=['ok','partial'].includes(clinicalData?.status);
+ const health=ready?`ClinicalTrials.gov 등록시험 ${Number(clinicalData?.verifiedTrialCards)||0}건 확인 · 임상 결과 판정 아님`:`공식 임상 자료 미연결`;
+ return `<div class="r2-panel r2-weekly-intro"><div class="r2-panel-head"><div><h2>산업별 주간 리서치</h2><p>확인된 원문만 사용합니다. 패션은 원문 대조 브리프, 바이오는 등록시험 상태·일정 변화를 우선 연결합니다.</p></div></div>
  <div class="r2-filter-wrap">${click(sectorOptions,state.weeklySector,'weeklySector')}</div>
- ${state.weeklySector==='전체'?`<div class="r2-weekly-grid">${[["바이오·제약","질환·약물별 임상·허가 공시","추가 수집·검증 대기"],["소비재·서비스","예약·방문·구독과 제품 수익화","추가 수집·검증 대기"],["패션","상품·브랜드 변화와 정가 판매","기존 원문 편집 브리프 연결"],["내 담당 기업","원본 브리프와 최신 DART 비교","비공개 원문 연결 대기"]].map(x=>`<div class="r2-weekly-tile"><b>${esc(x[0])}</b><p>${esc(x[1])}</p><small>${esc(x[2])}</small></div>`).join('')}</div>`:
-  `<div class="r2-weekly-single"><b>${esc(state.weeklySector)}</b><p>${state.weeklySector==='패션'?'기존 원문 대조 보고서를 아래에서 확인할 수 있습니다.':'원문 내용을 확인한 자료가 아직 연결되지 않았습니다. 기사 제목만으로 분석 보고서를 생성하지 않습니다.'}</p></div>`}
+ ${global?`<div class="r2-weekly-grid">${[
+ ["바이오·제약","질환·약물별 등록시험과 주요 완료일",health],
+ ["소비재·서비스","방문·예약·구독·제품 수익화","공식 실적·운영지표 검증 대기"],
+ ["패션","상품·브랜드 변화와 정가 판매","원문 확인 편집 브리프"],
+ ["내 담당 기업","원본 브리프와 DART 실적 비교","비공개 원문 연결 대기"]
+ ].map(x=>`<div class="r2-weekly-tile"><b>${esc(x[0])}</b><p>${esc(x[1])}</p><small>${esc(x[2])}</small></div>`).join('')}</div>`:
+ `<div class="r2-weekly-single"><b>${esc(state.weeklySector)}</b><p>${bio?health:state.weeklySector==='패션'?'아래에 기존 원문 대조 보고서를 표시합니다.':'공식 원문에 근거한 운영 KPI 분석을 연결하는 중입니다. 제목만으로 리서치를 생성하지 않습니다.'}</p></div>`}
+ ${bio?`<div class="r2-weekly-clinical"><h3>등록시험 주요 변화 · 결과 발표일 아님</h3>
+ ${trialChangesBlock()}
+ ${trialEvents()}
+ <p class="r2-foot">시험 상태·날짜는 제출자가 갱신한 등록정보입니다. 효과·안전성·기업가치 영향은 임상 결과 자료로 별도 검증해야 합니다.</p></div>`:''}
  </div>`;
 }
 function weeklyFashionEnabled(){return ['전체','패션'].includes(state.weeklySector)}
