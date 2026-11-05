@@ -141,3 +141,29 @@
 .r2-thesis-row p strong{display:block;font-size:10px;color:#718ca6;margin-bottom:3px}
 .r2-thesis-row>div:last-child{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:auto}
 @media(max-width:720px){.r2-thesis-grid{grid-template-columns:1fr}}
+
+/* ATELIER 2.1 clinical registry and individual relative performance */
+.r2-breadth{margin-top:15px;border-top:1px solid #e1eaf3;padding-top:13px}
+.r2-breadth-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+.r2-breadth-title b{font-size:13px;color:#254d77}
+.r2-breadth-title span{font-size:11px;color:#8796a7}
+.r2-asof{font-variant-numeric:tabular-nums;color:#7a8ea3;font-size:11px}
+.r2-trial-events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:12px 0}
+.r2-trial-events>div{display:grid;gap:4px;padding:11px;border:1px solid #dfebf5;background:#f9fcff;border-radius:8px;font-size:11px}
+.r2-trial-events span{font-weight:700;color:#234974}
+.r2-trial-events a{color:#2268a8;font-size:10px}
+.r2-trial-events b{color:#315c83;font-variant-numeric:tabular-nums}
+.r2-trial-events small{color:#8091a4}
+.r2-asset-list{display:grid;gap:10px}
+.r2-asset-card{border:1px solid #e0eaf2;border-radius:9px;padding:10px 12px}
+.r2-asset-head{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 9px}
+.r2-asset-head b{font-size:13px;color:#255483}
+.r2-asset-head a{margin-left:auto;font-size:11px;font-weight:700;color:#2971ac}
+.r2-trial-grid{display:grid;gap:8px}
+.r2-trial-row{padding:10px 11px;background:#f6faff;border:1px solid #e2ecf5;border-radius:8px;display:grid;gap:5px}
+.r2-trial-row>div{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.r2-trial-row strong{color:#235d9a}
+.r2-trial-row p{font-size:11px;line-height:1.5;color:#395d78;margin:0}
+.r2-trial-row small{font-size:10px;line-height:1.5;color:#748ba0}
+.r2-comparison-mini strong{color:#235b83;font-size:12px;font-variant-numeric:tabular-nums}
+@media(max-width:720px){.r2-breadth-title{display:grid}.r2-trial-events{grid-template-columns:1fr}}
