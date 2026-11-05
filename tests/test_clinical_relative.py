@@ -85,7 +85,7 @@ class ClinicalTrialTests(unittest.TestCase):
                   "primaryCompletion":{"date":"2027-02-01","type":"ESTIMATED"}
                }]}
         notes=trials.weekly_interpretation([asset],[],None)
-        self.assertTrue(any("2027-02-01" in x["observation"] for x in notes))
+        self.assertTrue(any("2027년 2월 1일" in x["observation"] for x in notes))
         self.assertTrue(all("발표일" in x["limitation"] for x in notes))
         self.assertTrue(all(x["url"].startswith("https://") for x in notes))
     def test_no_registry_change_is_not_scientific_claim(self):
