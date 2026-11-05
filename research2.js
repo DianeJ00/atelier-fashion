@@ -147,7 +147,7 @@ function cardsTable(list){
  ${!list.length?'<div class="r2-empty">조건에 맞는 기업이 없습니다. 필터를 변경해 주세요.</div>':''}</div>`;
 }
 function detailTabs(company){
- const tabs=['사업 이해','핵심 KPI',company.sector==='바이오·제약'?'질환·파이프라인':'산업·경쟁','투자 판단'];
+ const tabs=['사업 이해','핵심 KPI',...(company.sector==='바이오·제약'?['질환·파이프라인']:[]),'투자 판단'];
  return `<div class="r2-detail-tabs">${tabs.map(t=>`<button data-r2="tab" data-val="${esc(t)}" class="${state.detailTab===t?'is-active':''}">${esc(t)}</button>`).join('')}</div>`;
 }
 function trialDate(dateStruct){
@@ -181,23 +181,25 @@ function detailBody(company){
  if(state.detailTab==='핵심 KPI')return `<div class="r2-detail-body">${window.ATELIER3?.secComparison(company.ticker)||''}<h4>업종별 핵심 지표</h4><p class="r2-muted">아래는 앞으로 점검할 지표 목록이며 최신 실적 수치를 의미하지 않습니다.</p><div class="r2-kpi-grid">${(company.kpis||[]).map((k,i)=>`<div class="r2-kpi"><span>${i+1<10?'0'+(i+1):i+1}</span><b>${esc(k)}</b><small>공식 자료 대조 대기</small></div>`).join('')}</div>
  <p class="r2-muted">서로 다른 회사의 사업·회계기간·조정 지표를 혼합해 비교하지 않습니다.</p></div>`;
  if(state.detailTab==='질환·파이프라인')return drugPanel(company);
- if(state.detailTab==='산업·경쟁'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body"><div class="r2-check"><b>사업 모델</b><span>${esc(company.domain)}</span></div><div class="r2-check"><b>수익성 검증 질문</b><span>${esc(company.focus)}</span></div>${window.ATELIER_CONSUMER?.card(company)||''}</div>`;
- if(state.detailTab==='산업·경쟁')return `<div class="r2-detail-body"><div class="r2-check"><b>산업 분류</b><span>${esc(company.domain||company.sector)}</span></div><div class="r2-check"><b>사업 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>비교 항목</b><span>${(company.kpis||[]).map(esc).join(' · ')}</span></div></div>`;
  if(state.detailTab==='투자 판단'&&window.ATELIER3)return `<div class="r2-detail-body r5-decision">${window.ATELIER3.companyDecision(company)}</div>`;
  if(state.detailTab==='투자 판단')return `<div class="r2-detail-body"><div class="r2-check"><b>투자 검증 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>가설을 훼손할 조건</b><span>${esc(company.risk)}</span></div><div class="r2-box-lite"><h4>브리프 이력</h4><p>${company.market==='한국'?'과거 담당 기업의 원본 브리프 연결 대기. 공개 저장소에 비공개 브리프 원문을 업로드하지 않습니다.':'현재는 초기 조사 항목. 정식 투자 가설로 채택·수정한 기록은 아직 없습니다.'}</p></div></div>`;
- return `<div class="r2-detail-body"><div class="r2-check"><b>사업에서 가장 중요한 질문</b><span>${esc(company.focus)}</span></div><div class="r2-check"><b>산업 내 위치</b><span>${esc(company.disease||company.domain||company.sector)} · ${esc(company.maturity||company.technology||'')}</span></div>
- <div class="r2-check"><b>주의할 위험</b><span>${esc(company.risk)}</span></div>
- <div class="r2-box-lite"><h4>자료 상태</h4><p>${esc(company.status)}. 공식 분기·임상·브랜드 지표는 별도 확인이 필요하며, 상단의 기존 패션 시세와 다른 산업을 직접 비교하지 않습니다.</p></div></div>`;
+ return `<div class="r2-detail-body r5-business">
+ <div class="r2-check"><b>사업·산업 범주</b><span>${esc(company.domain||company.disease||company.sector)}</span></div>
+ ${company.sector==='바이오·제약'? `<div class="r2-check"><b>주요 연구 분야</b><span>${esc([company.disease,...(company.secondaryDiseases||[])].filter(Boolean).join(' · '))}</span></div><div class="r2-check"><b>치료 기술</b><span>${esc(company.technology||'기술 확인 대기')}</span></div>` : ''}
+ ${company.sector==='패션'&&(company.brands||[]).length? `<div class="r2-check"><b>추적 브랜드</b><span>${(company.brands||[]).map(esc).join(' · ')}</span></div>`:''}
+ <div class="r2-box-lite"><h4>기업 이해를 위한 자료 기준</h4><p>사업 분류와 관찰 대상은 리서치 범위이며, 제품별 매출 비중이나 산업 점유율을 뜻하지 않습니다. 공식 실적은 ‘핵심 KPI’, 신약 개발 현황은 ‘질환·파이프라인’, 가설·반증은 ‘투자 판단’에서 각각 확인합니다.</p></div>
+ </div>`;
 }
 function companyDetail(company){
  if(!company)return '<div class="r2-detail r2-empty">기업을 선택해 주세요.</div>';
- const chosen=state.detailTab==='질환·파이프라인'&&company.sector!=='바이오·제약'?'사업 이해':state.detailTab==='투자 가설'?'투자 판단':state.detailTab;
+ const chosen=state.detailTab==='투자 가설'?'투자 판단':
+  ((state.detailTab==='질환·파이프라인'&&company.sector!=='바이오·제약')||state.detailTab==='산업·경쟁')?'사업 이해':state.detailTab;
  if(chosen!==state.detailTab)state.detailTab=chosen;
  const isBio=company.sector==='바이오·제약';
  return `<section class="r2-detail">
  <div class="r2-detail-header"><div class="r2-eyebrow">${esc(company.market)} · ${esc(company.sector)}</div>
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
- <p>${state.detailTab==='투자 판단'?'최신 근거와 반증 조건을 확인하고 직접 투자 판단을 기록합니다.':esc(company.focus)}</p>
+ <p>${state.detailTab==='투자 판단'?'근거와 반증 조건을 대조한 뒤 판단을 직접 기록합니다.':'사업 범주·핵심 실적·투자 판단을 분리해 살펴봅니다.'}</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
  ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
