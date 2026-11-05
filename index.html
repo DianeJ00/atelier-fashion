@@ -618,6 +618,36 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 .official-inline .link-btn{margin-left:auto;font-size:11px}
 @media(max-width:1000px){.weekly-evidence{grid-template-columns:1fr}}
 </style>
+
+<style>
+/* Source-read weekly briefing: one argument per compact editorial card */
+.brief-articles,.brief-trend-list{display:grid;grid-template-columns:1fr;gap:10px;margin:13px 0 10px}
+.brief-article{border:1px solid #dbe6f0;border-radius:10px;padding:15px 18px;background:#fff}
+.brief-article-top{display:flex;align-items:center;gap:7px;flex-wrap:wrap;color:#687f92;font-size:11px;margin-bottom:7px}
+.brief-type{font-weight:700;color:#2b629c;background:#eef5fd;border-radius:5px;padding:3px 7px}
+.brief-date{font-variant-numeric:tabular-nums}
+.brief-review{font-weight:650;border-radius:5px;padding:3px 7px;background:#f0f4f8;color:#45657d}
+.brief-review.draft{background:#fff6e6;color:#895910}
+.brief-tags{margin-left:auto;color:#577c9c;font-weight:700}
+.brief-article-title{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:7px}
+.brief-article-title h3{font-size:16px;color:#183e65;margin:0;line-height:1.4;font-weight:800}
+.brief-article-title a{font-size:12px;font-weight:700;white-space:nowrap;color:#265b98}
+.brief-observation{margin:0 0 10px;font-size:13px;line-height:1.6;color:#344c62}
+.brief-evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 12px;background:#f4f8fc;border:1px solid #e0eaf2;border-radius:8px}
+.brief-evidence-grid b{font-size:11px;color:#215d92}
+.brief-evidence-grid p{font-size:12px;line-height:1.5;color:#354e65;margin:3px 0 0}
+.brief-caution{font-size:11px;line-height:1.55;color:#61778b;margin:8px 0 0}
+.brief-caution b{color:#7a5c3c}
+.brief-origin{font-size:10px;color:#798c9e;margin-top:7px}
+.brief-source-archive{padding:12px 14px}
+.brief-source-archive>p{font-size:12px;color:#6c7e90;margin:0 0 9px}
+.brief-pending-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid #e4edf5;font-size:12px}
+.brief-pending-row span{min-width:68px;color:#6c8195}
+.brief-pending-row a{flex:1;min-width:0;color:#245b91}
+.brief-pending-row small{color:#8c9da8;max-width:125px}
+.trend-fresh .brief-article{margin-bottom:0}
+@media(max-width:740px){.brief-evidence-grid{grid-template-columns:1fr;gap:9px}.brief-article{padding:12px}.brief-article-title h3{font-size:15px}.brief-tags{margin-left:0}.brief-pending-row{flex-wrap:wrap}.brief-pending-row small{max-width:none}}
+</style>
 </head>
 <body>
 <div class="shell">
@@ -717,27 +747,25 @@ function consumerSamplePanel(){
 }
 
 function weeklyText(){
- const w=WEEKLY_BRIEF, digest=externalDigest;
- const sectionText=[`ATELIER | 주간 자료 요약`, `자동 수집 기준: ${externalUpdatedAt||'미연결'}`, `기간: ${externalPeriod||'기준 없음'}`, `모든 자동 분류는 제목 기반이며 원문 미검증`, ''];
- if(digest){
-  sectionText.push('[이번 수집의 주제별 기사·영상 제목 수]', ...(digest.topics||[]).map(x=>`• ${x.name}: ${x.count}건`),'',
-   '[기업별 새 원문과 확인 지표]',...(digest.companyFocus||[]).map(x=>`• ${x.ticker}: 수집 ${x.count}건 / 다음 공식 실적 확인: ${x.check}\n  ${x.headlines?.[0]?.title||'해당 기간 수집 원문 없음'}\n  ${x.headlines?.[0]?.url||''}`),'');
- }
+ const w=contentBrief||{},items=w.items||[],pending=w.pending||[],out=[
+  'ATELIER | 패션 투자 주간 브리프', '기간: '+(w.periodStart||'미확인')+' ~ '+(w.periodEnd||'미확인'),
+  '생성: '+(w.generatedAt||'미확인'),'원문 내용 확인 없는 제목은 요약 대상에서 제외',''];
+ if(items.length){
+  out.push('[이번 주 핵심 변화 '+items.length+'건]');
+  items.forEach((x,i)=>{
+   out.push((i+1)+'. '+x.title+' ('+x.source+' / '+x.date+' / '+x.status+')',
+    '관찰: '+x.summary,'투자 연결: '+x.impact,'실적 검증: '+x.kpi,'해석 한계: '+x.risk,
+    '원문: '+x.url,'');
+  });
+ }else out.push('[이번 주 확인된 요약 없음]','본문을 확인하지 못한 자료는 추정하지 않았습니다.','');
  if(weeklyInvestment){
-  sectionText.push('[이번 주 주요 원문 · 증거 단계별 분류]',...(weeklyInvestment?.highlights||[]).slice(0,3).map(x=>x.tier+' / '+x.ticker+' / '+x.date+' / '+x.title+'\n  관찰: '+x.context+'\n  '+x.url),'');
-  sectionText.push('[공식 SEC 실적 · 원문 링크]',...weeklyInvestment.companies.slice(0,6).map(x=>
-   x.ticker+': '+x.officialText+' / 기간 '+(x.officialPeriod||'미확인')+' / '+(x.officialSource||'공시 확인 필요')),'');
-  sectionText.push('[실적 검증 질문]',...weeklyInvestment.companies.slice(0,6).map(x=>
-   x.ticker+': 확인 '+x.nextCheck+' / 위험 '+x.riskToTest),'');
+  out.push('[공식 분기 실적 확인 상태 · 기존 저장 시세와 분리]');
+  weeklyInvestment.companies.slice(0,8).forEach(x=>out.push('• '+x.ticker+': '+x.officialText+' ('+(x.officialPeriod||'기간 미확인')+') / '+(x.officialSource||'SEC 확인 대기')));
+  out.push('');
  }
- if(consumerData){
-  sectionText.push('[공개 YouTube 댓글 표본 · 대표성 없음]','연결 상태: '+consumerData.status,
-   ...consumerData.videos.slice(0,4).map(x=>x.creator+': 표본 '+x.sampledTopLevelComments+'개 / '+x.videoUrl),'');
- }
- sectionText.push('[자동으로 발견한 원문 · 검증 필요]',...socialItems().slice(0,12).map(x=>`• ${(x.date||'').slice(0,10)} ${x.title} (${x.creator||x.platform})\n  ${x.url}`),'',
- '[이전 편집본 · 최신 수집과 구분]',`편집 ${w.edited} / ${w.period}`,...w.focus.map(x=>`• ${x.text} (${x.source})\n  ${x.url}`),'',
- '[이용 시 주의]',w.limitations,'소셜 게시물·기사 제목의 증감은 유행·매출·투자 성과를 입증하지 않습니다.');
- return sectionText.join('\n');
+ out.push('[추가 분석 대기 '+pending.length+'건]',...pending.slice(0,12).map(x=>'• '+x.title+' / '+x.reason+' / '+x.url),'',
+   '[주의] AI 요약 초안은 본문으로 교차 확인 전이며, 구체적인 매출·댓글 수치와 가설을 동일한 증거로 취급하지 않습니다.');
+ return out.join('\n');
 }
 function exportWeekly(){const blob=new Blob([weeklyText()],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='ATELIER_주간리서치_'+(externalUpdatedAt?.slice(0,10)||WEEKLY_BRIEF.edited)+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);notify('주간 리서치 요약을 저장했습니다')}
 function healthStrip(){return externalHealth.length?`<div class="source-health">${externalHealth.map(x=>`<span class="${x.status==='연결 실패'?'failed':''}">${esc(x.name)} · ${esc(x.status)} · ${Number(x.count)||0}건</span>`).join('')}</div>`:''}
@@ -906,10 +934,12 @@ function trendsPage(){
  const signals=TREND_SIGNALS;
  return `${head('패션 트렌드','유행보다, 근거가 있는 상품·소비자 변화','플랫폼 집계·전문 매체·커뮤니티·크리에이터를 구분합니다. 신호를 매출 사실로 단정하지 않습니다.','편집본 2026.11.04 · 자동 수집 별도')}
  <section class="trend-intro"><div><b>무엇을 관찰했나 → 어떤 기업과 연결되나 → 다음 실적에서 무엇을 확인하나</b><p>Lyst 등은 광범위한 플랫폼 지표, Reddit은 개별 의견, 패션 크리에이터는 스타일 해석입니다. 근거 수준에 따라 가중치를 달리합니다.</p></div><button class="btn btn-ghost btn-small" data-action="openIncoming">수집 원문 확인 →</button></section>
-  <section class="trend-fresh"><h2>이번 주 새로 수집된 패션 채널 콘텐츠</h2><p>실제 동영상·기사 제목만 표시합니다. 영상 내용·댓글을 확인하기 전에는 소비자 반응으로 간주하지 않습니다.</p>
-  ${healthStrip()}
-  ${(()=>{const latest=socialItems().filter(x=>x.platform==='YouTube'||(x.platform==='Google News'&&x.ticker==='TREND')).slice(0,6);return latest.length?`<div class="trend-fresh-list">${latest.map(x=>`<a href="${safeURL(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}<small>${esc(x.creator||x.platform)} · ${esc((x.date||'').slice(0,10))} · 미검증</small></a>`).join('')}</div>`:'<div class="weekly-auto-empty">새 영상·패션 매체 자료가 수집되지 않았습니다. 수집 실패와 관심도 부재는 다릅니다.</div>'})()}
-  </section>
+  <section class="trend-fresh"><h2>이번 주 확인한 패션·브랜드 변화</h2>
+ <p>플랫폼·공식 기업 발표·유통 전문매체의 본문을 요약해 투자 연결까지 정리. 크리에이터 영상은 자막·내용 확보 전까지 분석 완료로 표시하지 않습니다.</p>
+ ${contentBrief?.items?.length?`<div class="brief-trend-list">${contentBrief.items.filter(x=>x.kind==='trend'||x.kind==='company').slice(0,3).map(briefCard).join('')}</div>`:'<p class="weekly-evidence-empty">본문 확인된 이번 주 자료가 없습니다. 기존 검토 자료를 아래에서 확인하세요.</p>'}
+ <details class="trend-archive"><summary>원문만 수집한 패션 채널·영상 보기 (내용 검증 전)</summary>
+ ${healthStrip()}<div class="trend-fresh-list">${socialItems().filter(x=>x.platform==='YouTube'||x.ticker==='TREND').slice(0,8).map(x=>`<a href="${safeURL(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}<small>${esc(x.creator||x.platform)} · ${esc((x.date||'').slice(0,10))} · 내용 요약 전</small></a>`).join('')}</div>
+ </details></section>
   ${section('기존 검토 자료 · 편집 기준 2026.11.04')}<div class="trend-signal-list">${signals.map(x=>`<article class="trend-signal"><div class="trend-signal-meta">${badge(x.type,x.type==='커뮤니티 단일 토론'?'gold':'')} ${badge(x.level)} <span>${esc(x.date)} · ${esc(x.source)}</span></div><h2>${esc(x.title)}</h2><p class="signal-observation">${esc(x.observation)}</p><div class="signal-impact"><span><b>투자 연결</b> ${esc(x.impact)}</span><span><b>실적 검증</b> ${esc(x.check)}</span></div><div class="signal-footer"><span>관찰 기업 · ${esc(x.tickers)}</span><a href="${safeURL(x.url)}" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a></div></article>`).join('')}</div>
  <section class="card channel-panel"><div class="card-top"><div><h2 class="card-title">실제로 추적할 채널</h2><p class="card-desc">TikTok·Instagram은 임의 스크래핑 없이 공식 공개 페이지에서 확인. YouTube는 채널 RSS를 시도하며 연결 실패 시 공식 API 키가 필요.</p></div>${badge('수집 상태 구분')}</div><div class="channel-grid">${WATCH_CHANNELS.map(c=>`<a class="channel-row" href="${safeURL(c.url)}" target="_blank" rel="noopener noreferrer"><span class="channel-name">${esc(c.name)} <span aria-hidden="true">↗</span></span><span class="channel-meta">${esc(c.media)} · ${esc(c.status)}</span><span class="channel-desc">${esc(c.focus)}</span></a>`).join('')}</div><p class="source-note" style="margin-top:12px">채널 목록은 정기 관찰 대상이지 해당 채널에서 이번 주 유행을 검증했다는 의미가 아닙니다.</p></section>
  <details class="trend-archive"><summary>Lyst 2026년 3분기 인기 브랜드 20위 펼쳐보기</summary><div class="lyst-grid">${(D.lyst||[]).map(b=>`<div class="lyst-entry"><span class="rank">${b.rank}</span><span class="lyst-name">${esc(b.name)}</span><span class="lyst-delta">${typeof b.change==='number'?(b.change>0?'↑'+b.change:b.change<0?'↓'+Math.abs(b.change):'―'):esc(b.change)}</span></div>`).join('')}</div><p class="source-note" style="margin-top:10px">브랜드의 전체 매출 순위가 아닌 Lyst 플랫폼 지표입니다.</p></details>`;
