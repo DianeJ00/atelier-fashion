@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:28:04.570482+00:00",
+  "generatedAt": "2026-11-05T06:52:40.638608+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -1959,45 +1959,61 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-05T06:13:53.700505+00:00",
+  "comparisonTo": "2026-11-05T06:28:04.570482+00:00",
   "changeCount": 0,
   "changes": [],
   "weeklyInterpretation": [
     {
-      "type": "변경 없음",
-      "title": "동일 시험 등록정보에서 중요한 변경 없음",
-      "observation": "직전 수집과 비교한 동일 NCT 표본에서 진행 상태·시험 단계·주요 완료일·결과 등록 표시 변화가 확인되지 않음.",
-      "investmentCheck": "실제 기업 공지와 임상 결과 발표 여부는 별도로 확인",
-      "limitation": "상위 검색 표본에 한정되며 외부에서 새로운 임상 결과가 없었다는 뜻은 아님.",
-      "url": "https://clinicaltrials.gov/",
-      "nctId": null
-    },
-    {
-      "type": "향후 시험 일정",
-      "title": "[신경계] BIIB lecanemab의 등록 완료 예정일",
-      "observation": "등록시험 NCT03887455 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2026-12-31(예상)로 기재됨.",
-      "investmentCheck": "BIIB의 lecanemab 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
-      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "type": "앞으로 확인할 임상 일정",
+      "title": "BIIB · 초기 알츠하이머병 치료제의 3상 시험 일정",
+      "observation": "lecanemab의 초기 알츠하이머병 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2026년 12월 31일로 예상되어 있음.",
+      "investmentCheck": "BIIB의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "limitation": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT03887455",
-      "nctId": "NCT03887455"
+      "nctId": "NCT03887455",
+      "explain": "3상: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+      "expectedDate": "2026-12-31",
+      "datePrecision": "일",
+      "indication": "초기 알츠하이머병"
     },
     {
-      "type": "향후 시험 일정",
-      "title": "[비만·대사] AMGN MariTide의 등록 완료 예정일",
-      "observation": "등록시험 NCT06858839 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2027-01-21(예상)로 기재됨.",
-      "investmentCheck": "AMGN의 MariTide 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
-      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "type": "앞으로 확인할 임상 일정",
+      "title": "AMGN · 비만 치료제의 3상 시험 일정",
+      "observation": "MariTide의 비만 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 1월 21일로 예상되어 있음.",
+      "investmentCheck": "AMGN의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "limitation": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT06858839",
-      "nctId": "NCT06858839"
+      "nctId": "NCT06858839",
+      "explain": "3상: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+      "expectedDate": "2027-01-21",
+      "datePrecision": "일",
+      "indication": "비만"
     },
     {
-      "type": "향후 시험 일정",
-      "title": "[면역·염증] ABBV risankizumab의 등록 완료 예정일",
-      "observation": "등록시험 NCT06063967 (PHASE3, 진행 중·모집 종료)의 주요 평가 완료일이 2027-03(예상)로 기재됨.",
-      "investmentCheck": "ABBV의 risankizumab 관련 기업 IR과 주요 평가변수·실제 결과 발표 일정 교차 확인",
-      "limitation": "주요 평가 완료일은 결과 발표일이 아니며, 예상일은 변경될 수 있음. 임상 효과·허가 여부는 미확인.",
+      "type": "앞으로 확인할 임상 일정",
+      "title": "ABBV · 크론병(만성 장 염증질환) 치료제의 3상 시험 일정",
+      "observation": "risankizumab의 크론병(만성 장 염증질환) 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 3월로 예상되어 있음.",
+      "investmentCheck": "ABBV의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "limitation": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT06063967",
-      "nctId": "NCT06063967"
+      "nctId": "NCT06063967",
+      "explain": "3상: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+      "expectedDate": "2027-03",
+      "datePrecision": "월",
+      "indication": "크론병(만성 장 염증질환)"
+    },
+    {
+      "type": "앞으로 확인할 임상 일정",
+      "title": "SRPT · 희귀·유전 치료제의 3상 시험 일정",
+      "observation": "delandistrogene moxeparvovec의 희귀·유전 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 5월 31일로 예상되어 있음.",
+      "investmentCheck": "SRPT의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "limitation": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT05881408",
+      "nctId": "NCT05881408",
+      "explain": "3상: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+      "expectedDate": "2027-05-31",
+      "datePrecision": "일",
+      "indication": "희귀·유전"
     }
   ],
   "weeklyInterpretationPolicy": "시험 등록 상태와 예상 완료일을 한국어로 재구성한 관찰. 실제 데이터 발표·승인·성공을 뜻하지 않음.",
