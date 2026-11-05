@@ -1,0 +1,12 @@
+{
+  "generatedAt": null,
+  "source": "ClinicalTrials.gov API v2",
+  "status": "not_collected",
+  "assets": [],
+  "verifiedTrialCards": 0,
+  "errors": [],
+  "limitations": [
+    "신약 후보의 개발 단계·허가 여부는 실제 시험 등록 여부만으로 단정하지 않음",
+    "공식 임상 API를 사용한 갱신 실행 전 데이터 없음"
+  ]
+}
