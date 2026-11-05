@@ -58,7 +58,7 @@ function weekly(sector="전체",preview=false){
 }
 
 /* Thesis workspace: one company at a time, original research questions != adopted theses. */
-const thesisUI={sector:"전체",mode:"전체",search:"",selected:""};
+const thesisUI={sector:"전체",mode:"전체",search:"",selected:"",saveError:""};
 function thesisEvidence(company){
  if(!report||company.market!=="미국")return [];
  return (report.items||[]).filter(x=>x.ticker===company.ticker&&x.sector===company.sector);
@@ -154,6 +154,7 @@ function thesisEditor(c){
   '<div class="t4-save-row"><button type="button" class="t4-save" data-a3="save" data-id="'+esc(id)+'">내 판단 저장</button>'+
   '<button type="button" class="t4-clear" data-a3="clear" data-id="'+esc(id)+'">이 기업의 로컬 기록 지우기</button>'+
   '<span class="t4-save-state">'+(hasLocal?"저장 완료 · "+esc((previous.at||"").slice(0,10)):"아직 저장되지 않음")+'</span></div>'+
+  (thesisUI.saveError?'<p class="t4-save-error">'+esc(thesisUI.saveError)+'</p>':'')+
   '<p class="t4-privacy">이 화면의 작성 내용은 현재 브라우저에만 저장됩니다. 기기 간 동기화되지 않으며 브라우저 데이터를 삭제하면 사라질 수 있습니다.</p></section>'+
   '</div>';
 }
@@ -208,7 +209,7 @@ function recordCard(company,compact=false){
  '<div class="a3-review-choices" aria-label="'+esc(company.ticker)+' 담당자 판단">'+choices.map(c=>
  '<button data-a3="choose" data-id="'+esc(id)+'" data-choice="'+esc(c)+'" class="'+(selection===c?"is-selected":"")+'">'+esc(c)+'</button>').join("")+'</div>'+
  (!compact?'<label class="a3-review-note">담당자 판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="공식 근거와 다음 확인 조건을 직접 기록하세요. 이 브라우저에만 저장됩니다.">'+esc(drafts[id]?.note??old.note??"")+'</textarea></label>':
- '<label class="a3-review-note">판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="브라우저 로컬 기록">'+esc(old.note||"")+'</textarea></label>')+
+ '<label class="a3-review-note">판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="브라우저 로컬 기록">'+esc(drafts[id]?.note??old.note??"")+'</textarea></label>')+
  '<div class="a3-review-actions"><button data-a3="save" data-id="'+esc(id)+'">내 판단 저장</button><button data-a3="clear" data-id="'+esc(id)+'" class="a3-clear">로컬 기록 지우기</button></div>'+
  '<p class="a3-small">이 기록은 현재 브라우저에만 보관되며 공개 GitHub·다른 기기에 동기화되지 않습니다.</p></div>';
 }
@@ -270,11 +271,33 @@ function downloadReport(sector){
  anchor.remove();
  setTimeout(()=>URL.revokeObjectURL(href),1200);
 }
+function captureDraft(id){
+ if(!id)return {};
+ const current={...(drafts[id]||{})};
+ for(const [key,selector] of [["note","note"],["hypothesis","hypothesis"],["riskOverride","risk-override"]]){
+  const element=document.querySelector('[data-a3-'+selector+'="'+id+'"]');
+  if(element)current[key]=String(element.value||"").slice(0,2500);
+ }
+ drafts[id]=current;
+ return current;
+}
 function saveChoice(id,choice){
- const note=document.querySelector('[data-a3-note="'+id+'"]')?.value??drafts[id]?.note??records[id]?.note??"";
- records[id]={choice,note:note.slice(0,2500),at:new Date().toISOString()};
- delete drafts[id];
- try{localStorage.setItem(KEY,JSON.stringify(records))}catch(_){}
+ if(!id)return;
+ const unsaved=captureDraft(id);
+ const previous=records[id]||{};
+ const next={
+  ...previous,choice,
+  note:(unsaved.note??previous.note??"").slice(0,2500),
+  hypothesis:(unsaved.hypothesis??previous.hypothesis??"").slice(0,2500),
+  riskOverride:(unsaved.riskOverride??previous.riskOverride??"").slice(0,2500),
+  at:new Date().toISOString()
+ };
+ try{
+  localStorage.setItem(KEY,JSON.stringify({...records,[id]:next}));
+  records[id]=next;delete drafts[id];thesisUI.saveError="";
+ }catch(_){
+  thesisUI.saveError="이 브라우저에 저장하지 못했습니다. 저장 공간·개인정보 보호 설정을 확인해 주세요.";
+ }
  if(window.atelierRerender)window.atelierRerender();
 }
 document.addEventListener("click",e=>{
@@ -282,18 +305,64 @@ document.addEventListener("click",e=>{
  e.preventDefault();e.stopImmediatePropagation();
  const kind=b.dataset.a3,id=b.dataset.id;
  if(kind==="choose"){
-   const note=document.querySelector('[data-a3-note="'+id+'"]')?.value||records[id]?.note||"";
-   // Selection in memory; explicit save button persists.
-   drafts[id]={choice:b.dataset.choice,note};
+   const d=captureDraft(id);
+   drafts[id]={...d,choice:b.dataset.choice};
    if(window.atelierRerender)window.atelierRerender();
- }else if(kind==="save")saveChoice(id,drafts[id]?.choice||records[id]?.choice||"판단 보류");
- else if(kind==="clear"){
-   delete records[id];delete drafts[id];try{localStorage.setItem(KEY,JSON.stringify(records))}catch(_){}
+ }else if(kind==="save"){
+   saveChoice(id,drafts[id]?.choice||records[id]?.choice||"판단 보류");
+ }else if(kind==="clear"){
+   delete records[id];delete drafts[id];
+   try{localStorage.setItem(KEY,JSON.stringify(records));thesisUI.saveError=""}
+   catch(_){thesisUI.saveError="기록 삭제 내용을 브라우저에 저장하지 못했습니다."}
    if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="thesisSelect"){
+   captureDraft(thesisUI.selected);
+   thesisUI.selected=id;
+   if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="thesisSector"){
+   captureDraft(thesisUI.selected);
+   thesisUI.sector=b.dataset.value||"전체";
+   thesisUI.selected="";
+   if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="thesisMode"){
+   captureDraft(thesisUI.selected);
+   thesisUI.mode=b.dataset.value||"전체";
+   thesisUI.selected="";
+   if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="thesisOpenCompany"){
+   const page=window.ATELIER2?.state;
+   if(page){
+    page.selected=id;page.sector="전체";page.market="전체";
+    page.search="";page.disease="전체";page.detailTab="투자 가설";
+   }
+   if(window.atelierGotoCompanies)window.atelierGotoCompanies();
  }else if(kind==="openWeekly"){
    if(window.atelierGotoWeekly)window.atelierGotoWeekly();
  }else if(kind==="download"){
    downloadReport(b.dataset.sector||"전체");
+ }
+});
+document.addEventListener("input",e=>{
+ const el=e.target;
+ if(el?.dataset?.a3Search){
+  captureDraft(thesisUI.selected);
+  const pos=el.selectionStart;
+  thesisUI.search=el.value||"";
+  thesisUI.selected="";
+  if(window.atelierRerender)window.atelierRerender();
+  const replacement=document.querySelector("[data-a3-search]");
+  if(replacement){
+   replacement.focus();
+   try{replacement.setSelectionRange(pos,pos)}catch(_){}
+  }
+  return;
+ }
+ const fieldMap=[["a3Note","note"],["a3Hypothesis","hypothesis"],["a3RiskOverride","riskOverride"]];
+ for(const [dataKey,key] of fieldMap){
+  const id=el?.dataset?.[dataKey];
+  if(!id)continue;
+  drafts[id]={...(drafts[id]||{}),[key]:String(el.value||"").slice(0,2500)};
+  return;
  }
 });
 async function load(){
