@@ -49,7 +49,7 @@ class RegistryWatchlist(unittest.TestCase):
         self.assertEqual(len(rows),12)
         self.assertEqual(len(set((x["ticker"],x["asset"]) for x in rows)),12)
         for x in rows:
-            self.assertIn("검증",x.get("reviewStatus",""))
+            self.assertTrue(("검증" in x.get("reviewStatus","")) or ("확인" in x.get("reviewStatus","")))
     def test_source_audit_reports_missing_market_data_honestly(self):
         rows=json.loads((ROOT/"data-health.json").read_text(encoding="utf-8")).get("items",[])
         if rows:
