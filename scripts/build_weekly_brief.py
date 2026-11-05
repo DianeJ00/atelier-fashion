@@ -41,8 +41,25 @@ def short_usd(v):
 def headline_ok(row):
  title=(row.get("title") or "").lower()
  if not row.get("url") or not row.get("date"):return False
- bad=("stock price", "stock quote", "latest stock news", "share price", "wall street zen", "meta_title")
+ bad=("stock price", "stock quote", "latest stock news", "share price", "wall street zen", "meta_title",
+      "beat estimates", "what to expect", "earnings preview", "earnings report preview", "stock of the day",
+      "analyst rating", "stock ratings", "price target", "will it beat")
  return not any(word in title for word in bad)
+
+def news_value(row):
+ """Prioritize fashion business and first-party releases over market commentary."""
+ text=(row.get("title") or "").lower()
+ publisher=(row.get("creator") or "").lower()
+ score=0
+ if any(x in publisher for x in ("wwd", "business of fashion", "retail dive", "vogue", "investor relations")):
+  score+=6
+ if any(x in publisher for x in ("capri", "ralph lauren", "pvh", "levis", "levi strauss", "vf corporation")):
+  score+=4
+ if any(x in text for x in ("collab", "collection", "capsule", "launch", "campaign", "brand", "earnings", "sales", "margin", "store", "turnaround", "new product", "results")):
+  score+=3
+ if any(x in publisher for x in ("yahoo finance", "marketbeat", "tradingview", "seeking alpha")):
+  score-=6
+ return score
 
 def top3_facts(cards, consumer, articles, start):
  """Source-linked briefs; no synthetic trend direction or speculative scores."""
@@ -74,15 +91,19 @@ def top3_facts(cards, consumer, articles, start):
   })
   break
  selected=set(x["ticker"] for x in highlights)
- for row in articles:
-  ticker=row.get("ticker")
-  if ticker not in WATCH or ticker in selected or not headline_ok(row):continue
+ candidates=[x for x in articles if x.get("ticker") in WATCH
+             and x.get("ticker") not in selected and headline_ok(x) and news_value(x)>=3]
+ candidates.sort(key=lambda x:(news_value(x),x.get("date","")),reverse=True)
+ for row in candidates:
+  ticker=row["ticker"]
+  if ticker in selected:continue
   highlights.append({
    "tier":"기사 제목·미검증","ticker":ticker,"date":row.get("date","")[:10],
    "title":row.get("title",""),"context":WATCH[ticker][0]+" · 공식 IR 교차 검증 전",
    "url":row["url"],"note":"Google News RSS 발견 원문; 기사 본문 미검증",
   })
-  break
+  selected.add(ticker)
+  if len(highlights)>=3:break
  return highlights[:3]
 
 def build():
