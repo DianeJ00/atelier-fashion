@@ -118,6 +118,7 @@ def build():
         "pendingUnverifiedArticles":content.get("pendingCount",0)
     }
     output={"schemaVersion":1,"generatedAt":NOW.isoformat(),"coverage":coverage,"items":compiled,
+            "automation":{"frequency":"daily","scheduledTimeKST":"09:00","realTime":False},
             "needsAttention":sum(x["status"]!="live" for x in compiled),
             "policy":"정량 근거가 없으면 값을 만들지 않습니다. 공식 보고 분기와 시장 데이터 기준일을 구분하고, 사용권한 없는 시세의 자동 재배포를 하지 않습니다."}
     OUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

@@ -1,5 +1,8 @@
 # ATELIER 주간 패션 리서치 · GitHub에 올리는 법
 
+> **운영 갱신 안내 (2026-11-06):** 매일 오전 9시(KST)에 GitHub Actions가 연결된 출처의 새 공시·임상·뉴스·시장 데이터 수집을 시도하고 웹사이트를 재게시합니다. 이는 초 단위 실시간 정보 제공이 아닙니다. 사이트의 **출처·갱신 상태 점검**에서 마지막 점검 시각과 항목별 출처 상태를 확인하세요. 외부 시세 표시, 기사 AI 요약, 국내 DART 등은 API 인증·사용 권한이 없으면 자동 갱신되지 않습니다. 매일 API 호출로 사용량과 요금이 늘어날 수 있습니다.
+
+
 이 압축파일의 **안쪽 파일과 폴더를 GitHub 저장소 최상위 위치에 업로드**하세요. 압축파일 자체나 별도의 상위 폴더를 업로드하면 사이트가 동작하지 않을 수 있습니다.
 
 ## 0. 들어 있는 파일
@@ -35,22 +38,22 @@ scripts/
 
 1. `Settings → Pages`로 이동합니다.
 2. `Build and deployment → Source: GitHub Actions`를 선택합니다. (이 패키지는 별도 GitHub Actions 배포 작업 포함)
-3. `Actions → ATELIER weekly research and site → Run workflow → Run workflow`를 실행합니다. 첫 업로드 직후 자동 실행이 실패하더라도 Pages를 설정한 뒤 다시 실행하면 됩니다.
+3. `Actions → ATELIER daily data refresh and weekly brief → Run workflow → Run workflow`를 실행합니다. 첫 업로드 직후 자동 실행이 실패하더라도 Pages를 설정한 뒤 다시 실행하면 됩니다.
 4. 실행 결과가 녹색 체크로 완료되면 `Settings → Pages`에서 **Visit site**로 사이트를 엽니다.
 5. 게시 주소의 예시는 `https://본인아이디.github.io/atelier-fashion/`입니다.
 
-**주간 재게시 주의:** GitHub Actions가 `GITHUB_TOKEN`으로 커밋한 내용은 branch-source Pages를 자동 재배포하지 않을 수 있으므로, `Deploy from a branch` 대신 **GitHub Actions**를 선택하세요. 주간 수집과 사이트 게시는 하나의 워크플로에서 이어서 실행합니다.
+**정기 재게시 주의:** GitHub Actions가 `GITHUB_TOKEN`으로 커밋한 내용은 branch-source Pages를 자동 재배포하지 않을 수 있으므로, `Deploy from a branch` 대신 **GitHub Actions**를 선택하세요. 주간 수집과 사이트 게시는 하나의 워크플로에서 이어서 실행합니다.
 
 ## 4. 권한 문제가 발생하면
 
 Actions 로그에 `Permission denied` 또는 HTTP 403이 뜨면 `Settings → Actions → General → Workflow permissions`에서 쓰기 권한이 허용되는지 확인합니다. 공개 저장소에는 비밀키를 파일로 업로드하지 마세요.
 
-## 5. 주간 수집 기능의 정확한 범위
+## 5. 일일 수집·주간 요약 기능의 정확한 범위
 
-- 매주 **월요일 오전 9시(한국 시간)** GitHub Actions가 YouTube 일부 공개 채널 RSS와 Google News 공개 RSS를 읽고 새 제목·날짜·링크를 `weekly-research.json`에 반영한 뒤 **사이트도 배포**합니다.
+- 매일 **오전 9시(한국 시간)** GitHub Actions가 YouTube 일부 공개 채널 RSS와 Google News 공개 RSS를 읽고 새 제목·날짜·링크를 `weekly-research.json`에 반영한 뒤 **사이트도 배포**합니다.
 - 플랫폼별 접근 제한, 원문 삭제, RSS 장애에 따라 자료가 0건일 수 있습니다. 확인되지 않은 원문 제목을 소비자 의견이나 실적 증거로 취급하지 않습니다.
 - **사이트의 기존 2026-11-04 주간 투자 요약·실적·주가·가설은 자동으로 새 분석으로 바뀌지 않습니다.** RSS 원문 목록만 자동 갱신합니다.
-- YouTube 게시물의 자막·댓글 분석, TikTok·Instagram 자동 수집, SEC 정량 실적 갱신, 실시간 주가는 이 패키지에 포함되어 있지 않습니다.
+- YouTube 자막 전체·TikTok·Instagram 자동 수집과 실시간 주가는 제공하지 않습니다. SEC 공식 분기 실적은 현재 별도 수집기로 매일 신규 공시를 확인하며, 운영 KPI는 기업 IR 검토분기 스냅샷입니다.
 - 공개 RSS 수집에 별도 API 키는 필요하지 않습니다. `GITHUB_TOKEN`은 GitHub가 자동 제공하며 공유할 필요가 없습니다.
 
 기본 자료는 내부 메모·스냅샷으로, 실제 투자 판단을 위해서는 공식 공시와 원문을 재확인해야 합니다.
@@ -72,7 +75,7 @@ YouTube RSS 접속이 GitHub Actions에서 실패할 수 있습니다. 공식 AP
 1. Google Cloud 프로젝트에서 **YouTube Data API v3**를 활성화하고 API 키를 발급합니다.
 2. GitHub 저장소의 **Settings → Secrets and variables → Actions → New repository secret** 메뉴에 들어갑니다.
 3. 이름을 **YOUTUBE_API_KEY**로 입력하고 값에 API 키를 저장합니다.
-4. **Actions → ATELIER weekly research and site → Run workflow**로 새 수집을 실행합니다.
+4. **Actions → ATELIER daily data refresh and weekly brief → Run workflow**로 새 수집을 실행합니다.
 5. 사이트 **트렌드·소비자 → 새로 수집한 자료**에서 실제 채널 연결 상태를 확인합니다.
 
 **비밀키를 채팅, 코드, README, 사이트 HTML에 입력하지 마세요.** API에는 사용량 제한이 있으며 핸들 변경·권한 문제로 채널 연결이 실패할 수 있습니다. API 키가 없어도 기존 RSS 수집을 시도하지만 YouTube가 0건일 수 있습니다.
@@ -93,7 +96,7 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 - `consumer-samples.json`: 승인된 YouTube Data API 사용 시 공개 최상위 댓글 일부의 주제 키워드 집계 (작성자·원문 미저장)
 - `weekly-investment.json`: 공식 매출/공시, 새 원문, 소비자 표본 상태와 기업별 다음 검증 지표를 구분한 주간 점검표
 
-**주간 수집:** 월요일 오전 9시 KST. 수동 재수집은 GitHub Actions에서 `ATELIER weekly research and site → Run workflow`.
+**정기 수집 점검:** 매일 오전 9시 KST. 수동 재수집은 GitHub Actions에서 `ATELIER daily data refresh and weekly brief → Run workflow`.
 코드만 수정할 때는 배포만 하고 데이터를 불필요하게 재수집하지 않습니다.
 
 **SEC 접근:** 별도 키 불필요. SEC Fair Access 정책에 맞춰 GitHub `Settings → Secrets and variables → Actions`에서 `SEC_USER_AGENT`를 회사/사용자 식별자와 연락 가능한 이메일을 포함한 값으로 설정해야 SEC 자동 조회가 시작됩니다. SEC의 자동 접근 정책에 따라 연락 이메일이 없는 상태에서는 수집을 수행하지 않습니다. 비밀값을 HTML이나 채팅에 작성하지 마세요. SEC API가 차단되거나 GAAP 표준 수치가 없다면 '조회 불가/확인 필요'로 표시합니다.
@@ -122,7 +125,7 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 - **공식 SEC 확인:** 사이트에 공개되는 `official-financials.json`의 `sourceStatus`가 `ok` 또는 `partial`이고, 해당 기업 `status=quarter_verified`인지 확인합니다. `configuration_required`면 `SEC_USER_AGENT` 설정이 해당 작업에 적용되지 않은 것입니다.
 - **YouTube 댓글 확인:** `consumer-samples.json`의 `status=sampled`(또는 `sampled_with_errors`)와 `videos` 항목을 확인합니다. `key_required`라면 `YOUTUBE_API_KEY`가 작업에 전달되지 않았습니다.
 - 비밀값은 저장소의 **Settings → Secrets and variables → Actions → Repository secrets**에 등록해야 합니다. 페이지 게시용 `github-pages` 환경의 Environment secrets에만 넣으면 이 파이프라인의 수집 작업에는 전달되지 않을 수 있습니다.
-- 설정값은 사용자 본인만 관리하고, 채팅이나 공개 코드에 붙여넣지 마세요. 변경 후 **Actions → ATELIER weekly research and site → Run workflow**를 다시 실행해 소스별 상태를 확인합니다.
+- 설정값은 사용자 본인만 관리하고, 채팅이나 공개 코드에 붙여넣지 마세요. 변경 후 **Actions → ATELIER daily data refresh and weekly brief → Run workflow**를 다시 실행해 소스별 상태를 확인합니다.
 
 ## 10. 원문 내용까지 정리한 주간 브리프
 
@@ -137,7 +140,7 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 - 저작권을 보호하기 위해 기사 본문 전체, 영상 자막, 댓글 원문은 GitHub에 저장하지 않고, 짧은 독립 요약만 표시합니다.
 - 트렌드 화면의 미분석 크리에이터 영상은 접어둔 **원문 보관함**에서 확인할 수 있습니다. 이용자가 직접 보지 않은 동영상의 내용이나 댓글을 읽었다고 주장하지 않습니다.
 
-갱신 방식: GitHub **Actions → ATELIER weekly research and site → Run workflow** 수동 실행 또는 매주 월요일 09:00 한국 시간 자동 시도. Source-level errors는 API·사이트별 검증 상태를 확인해야 합니다.
+갱신 방식: GitHub **Actions → ATELIER daily data refresh and weekly brief → Run workflow** 수동 실행 또는 매일 09:00 한국 시간 자동 시도. Source-level errors는 API·사이트별 검증 상태를 확인해야 합니다.
 
 ### 최근 통합 검증
 
@@ -173,7 +176,7 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 가격 데이터 권한이 확보된 경우에만:
 1. `Settings → Secrets and variables → Actions → Repository secrets`에 `TWELVEDATA_API_KEY` 등록
 2. 별도 확인한 **외부 표시 라이선스가 유효할 경우에만** Repository variables에 `MARKET_DATA_DISPLAY_OK=1` 설정
-3. `Actions → ATELIER weekly research and site → Run workflow` 실행
+3. `Actions → ATELIER daily data refresh and weekly brief → Run workflow` 실행
 
 미국 주식/ETF 일간 가격은 Twelve Data `time_series` API에서 `adjust=all`(배당·분할 조정)으로 요청합니다. 기능은 기본적으로 **SPY·QQQ·XLK·XBI·XLY·XRT ETF 6개**의 지표를 수집하도록 작성되어 있습니다. **업종 ETF는 실제 추적 종목의 동일가중 포트폴리오가 아닙니다.** 개별 기업 52개의 수익률·기술주 상회 비율, 한국 5개 종목의 원화/달러 환산 비교는 다음 단계로 남겨둡니다.
 
@@ -195,7 +198,7 @@ S&P 500은 기술주만의 지수가 아니므로, 기술 업종 비교에는 XL
 
 - `scripts/collect_stock_relative.py`와 `stock-relative.json`을 추가했습니다. 미국 상장 47개 기업을 **SPY·QQQ·XLK 대비 동일 거래일** 종가에 기반해 비교합니다.
 - 가격 데이터는 Twelve Data `time_series`의 `adjust=all`(배당·분할 조정)을 사용하도록 요청합니다. 인허가와 표시/재배포 약관을 확인하지 못한 경우 공개 사이트에 수익률을 표시하지 않습니다.
-- 정기 GitHub Actions에서는 매주 **미국 47개 기업 전체를 약 9초 간격으로 순차 조회**하도록 설정했습니다. 외부 API 플랜·할당량 및 가격 데이터 권한에 따라 일부 종목이 빠질 수 있으며, 그 경우 누락 종목이나 산업 바스켓을 임의 보정하지 않습니다. 날짜가 다른 과거 자료는 캐시만 남기고 당기 수익률·확산도에 포함하지 않습니다.
+- 정기 GitHub Actions에서는 매일 **미국 47개 기업 전체를 약 9초 간격으로 순차 조회**하도록 설정했습니다. 외부 API 플랜·할당량 및 가격 데이터 권한에 따라 일부 종목이 빠질 수 있으며, 그 경우 누락 종목이나 산업 바스켓을 임의 보정하지 않습니다. 날짜가 다른 과거 자료는 캐시만 남기고 당기 수익률·확산도에 포함하지 않습니다.
 - 종목별 시작일과 종료일이 기준 ETF와 **완전히 일치**한 때에만 기간 수익률과 초과수익률(%p)을 계산합니다. 미국 바이오·소비재·패션 그룹의 동일가중 성과·상회 종목 수는 **해당 그룹 80% 이상 동일 기준일 자료**가 있을 때만 표시합니다.
 - 전체 시장 화면에는 6개 ETF 대리 지표와 별도로 47개 미국 주식의 동일가중 성과·기술주 상회 비중 표를 제공합니다. 개별 기업 상세의 상대 성과는 실제 연결된 종목에 대해서만 나옵니다.
 - 국내 상장 5개 종목은 한국 시세 및 원화/달러 환산 비교가 검증되기 전까지 해당 표에서 제외합니다.
@@ -212,7 +215,7 @@ S&P 500은 기술주만의 지수가 아니므로, 기술 업종 비교에는 XL
 
 GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets** `TWELVEDATA_API_KEY`와, 데이터 재배포·공개 표시 권한을 별도로 확보한 경우에 한해 **Repository variables** `MARKET_DATA_DISPLAY_OK=1`을 설정하세요. 권한 확인 없이 플래그를 켜지 않습니다.
 
-`Actions → ATELIER weekly research and site → Run workflow`에서 수동 실행하면 임상·시장 자료 갱신을 시도합니다. Github Actions의 성공 표시가 **외부 데이터 수집 성공**을 뜻하는 것은 아니므로 `clinical-trials.json`의 `status` 및 `stock-relative.json`의 `status`와 날짜를 확인합니다.
+`Actions → ATELIER daily data refresh and weekly brief → Run workflow`에서 수동 실행하면 임상·시장 자료 갱신을 시도합니다. Github Actions의 성공 표시가 **외부 데이터 수집 성공**을 뜻하는 것은 아니므로 `clinical-trials.json`의 `status` 및 `stock-relative.json`의 `status`와 날짜를 확인합니다.
 
 보안: SEC / YouTube / OpenAI / 가격 API의 비밀키를 코드·사이트·README·채팅에 붙여넣지 마세요.
 
@@ -312,7 +315,7 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - **신약 관찰 12개 약물:** `scripts/build_pipeline_review.py`는 `clinical-trials.json`의 공식 등록시험 표본에서 각 약물·회사 기준 확인된 가장 높은 시험 단계를 `research-pipeline.json`에 연결. 1~4상은 **개별 등록시험의 단계**이며 FDA·EMA 승인, 해당 적응증 전체 단계 또는 실적 증가를 의미하지 않음.
 - **미국 바이오 20개 SEC 공식 GAAP:** `scripts/collect_biotech_official.py`는 SEC에 신고된 10-Q·US-GAAP 3개월 수치만 `biotech-financials.json`에 저장하고, `scripts/build_sec_trends.py`의 동기간 전년 동기/직전 분기 비교 대상에 추가. 없으면 공란 또는 이전 확인 수치로 표시하며 외삽하지 않음.
 - **미완료 작업 투명화:** `data-health.json`과 자료실 `health.js` 패널에서 데이터별 최근 확인 날짜·확인 기업 수·자동 또는 편집 스냅샷·필요한 API/원문을 표시. 특히 소비재 15개 운영 KPI 공식 후속 분기 갱신, 패션 원문 자동 요약(OPENAI_API_KEY 필요), 국내 5개 DART·원본 브리프, 개별 47개 시세 등은 잔여 작업으로 구분.
-- **운영:** 매주 월요일 09:00 KST와 수동 재수집 또는 `[research refresh]` 커밋에서 전체 수집 후 GitHub Pages 게시. 일반 코드 푸시에서는 데이터 파일을 덮어쓰지 않음.
+- **운영:** 매일 09:00 KST와 수동 재수집 또는 `[research refresh]` 커밋에서 전체 수집 후 GitHub Pages 게시. 일반 코드 푸시에서는 데이터 파일을 덮어쓰지 않음.
 
 시장 원문: [XLK](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLK) · [XBI](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XBI) · [XLY](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLY) · [XRT](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XRT), 가격 제공 Barchart WebSol.
 

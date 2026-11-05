@@ -1,12 +1,12 @@
-name: ATELIER weekly research and site
+name: ATELIER daily data refresh and weekly brief
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Every Monday at 09:00 Korea Standard Time (UTC+9)
-    - cron: '0 0 * * 1'
+    # Daily 09:00 Korea Standard Time (00:00 UTC). GitHub may start scheduled runs late.
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -111,7 +111,7 @@ jobs:
       - name: Audit verified data coverage and unfinished source connections
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/build_data_health.py
-      - name: Save weekly source inbox in repository
+      - name: Save daily-checked source data in repository
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: |
           git config user.name 'github-actions[bot]'
@@ -121,7 +121,7 @@ jobs:
           git reset --mixed origin/main
           git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json weekly-content.json consumer-official.json biotech-financials.json sec-trends.json atelier-weekly.json market-relative.json clinical-trials.json research-pipeline.json stock-relative.json korea-dart.json data-health.json
           if ! git diff --cached --quiet; then
-            git commit -m 'chore: refresh weekly fashion source inbox'
+            git commit -m 'chore: refresh daily source verification'
             git push origin HEAD:main
           fi
           # Publish current files rather than the snapshot from workflow start.
