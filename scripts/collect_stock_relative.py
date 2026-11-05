@@ -133,7 +133,7 @@ def main():
         if idx+1<len(order):
             time.sleep(SLEEP_SEC)
     proxy={**output["companies"],"_benchmarkAsOf":output["asOf"]}
-    output["summary"]=summarize(proxy,us)
+    output["summary"]={b:summarize(proxy,us,b) for b in BENCHMARKS}
     current=sum(x.get("asOf")==output["asOf"] for x in output["companies"].values())
     output["verifiedOnBenchmarkDate"]=current
     output["status"]="ok" if current==len(symbols) and not output["errors"] else "partial"
