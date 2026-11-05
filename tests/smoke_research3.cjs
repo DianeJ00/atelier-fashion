@@ -8,7 +8,12 @@ const localStorage={getItem(k){return storage[k]??null},setItem(k,v){storage[k]=
 const listeners={};
 const document={
  addEventListener(type,fn){listeners[type]=fn},
- querySelector(selector){return selector.includes("data-a3-note")?{value:"공식 실적 비교 후 담당자가 기록"}:null}
+ querySelector(selector){
+  if(selector.includes("data-a3-hypothesis"))return {value:"예약 건수 증가 → 플랫폼 매출·FCF 개선"};
+  if(selector.includes("data-a3-risk-override"))return {value:"이용건수는 늘지만 단위 수익성 하락"};
+  if(selector.includes("data-a3-note"))return {value:"공식 실적 비교 후 담당자가 기록"};
+  return null;
+ }
 };
 const window={renders:0,atelierRerender(){this.renders++},atelierGotoWeekly(){this.renders++}};
 const today=new Date().toISOString().slice(0,10);
@@ -37,8 +42,8 @@ const feed={"atelier-weekly.json":weekly,"sec-trends.json":trend};
 const ctx={window,document,localStorage,URL,console,Date,
  fetch:async url=>({ok:true,json:async()=>feed[String(url).replace("./","")]})};
 vm.runInNewContext(read("research3.js"),ctx,{timeout:3000});
-const click=(kind,id,choice)=>{
- const b={dataset:{a3:kind,id,choice}};
+const click=(kind,id,choice,value)=>{
+ const b={dataset:{a3:kind,id,choice,value}};
  listeners.click({target:{closest:()=>b},preventDefault(){},stopImmediatePropagation(){}});
 };
 (async()=>{
@@ -54,6 +59,14 @@ const click=(kind,id,choice)=>{
  assert.ok(q.includes("+9.6%")&&q.includes("+4.3%"));
  assert.ok(q.includes("2025-07-01")&&q.includes("2026-06-30"));
  const company={id:"US:UBER",ticker:"UBER",name:"Uber",focus:"수익화",risk:"할인 경쟁"};
+ const universe=JSON.parse(read("research-universe.json")).companies;
+ assert.equal(universe.length,52);
+ const workspace=window.ATELIER3.thesisWorkspace(universe);
+ assert.ok(workspace.includes("투자 가설")&&workspace.includes("투자 논리"));
+ assert.ok(workspace.includes("새롭게 확인된 근거")&&workspace.includes("반증 조건과 다음 확인"));
+ assert.ok(workspace.includes("판단 기록")&&workspace.includes("기업 목록"));
+ assert.ok(workspace.includes("최근 원문")||workspace.includes("이번 주 근거"));
+ assert.ok(!workspace.includes("r2-thesis-grid"));
  const before=window.ATELIER3.recordCard(company);
  assert.ok(before.includes("담당자 확정 전"));
  click("choose","US:UBER","강화");
@@ -63,8 +76,24 @@ const click=(kind,id,choice)=>{
  click("save","US:UBER");
  assert.ok(window.ATELIER3.recordCard(company).includes("확정: 강화"));
  assert.ok(Object.values(storage)[0].includes("공식 실적 비교 후 담당자가 기록"));
+ const saved=JSON.parse(Object.values(storage)[0])["US:UBER"];
+ assert.equal(saved.hypothesis,"예약 건수 증가 → 플랫폼 매출·FCF 개선");
+ assert.equal(saved.riskOverride,"이용건수는 늘지만 단위 수익성 하락");
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("저장 완료"));
  click("clear","US:UBER");
  assert.ok(window.ATELIER3.recordCard(company).includes("담당자 확정 전"));
+ click("thesisMode","","","새 근거");
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("기업 목록"));
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("이번 주 근거"));
+ click("thesisSector","","","소비재·서비스");
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("Uber"));
+ assert.ok(!window.ATELIER3.thesisWorkspace(universe).includes("CeeDee Lamb"));
+ click("thesisSector","","","전체");
+ click("thesisMode","","","전체");
+ listeners.input({target:{dataset:{a3Search:"true"},value:"UBER",selectionStart:4}});
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("기업 목록 <span>1개"));
+ listeners.input({target:{dataset:{a3Search:"true"},value:"",selectionStart:0}});
+ assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("기업 목록 <span>52개"));
  assert.ok(read("index.html").includes("research3.js"));
  assert.ok(read("index.html").includes("research3.css"));
  console.log("ATELIER 2.3 smoke: weekly source, SEC period compare, local-only thesis decision PASS");
