@@ -1,0 +1,67 @@
+/* ATELIER 2.3 — source-first compact weekly reports, financial comparisons, review controls. */
+.a3-report,.a3-proposals{background:#fff;border:1px solid #dae6f2;border-radius:11px;padding:18px;margin:13px 0}
+.a3-head{display:flex;justify-content:space-between;align-items:start;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.a3-head h2{font-size:20px;color:#183f66;line-height:1.4;margin:4px 0}
+.a3-head p{font-size:13.5px;color:#68809b;line-height:1.6;margin:0}
+.a3-kicker{font-size:12px;color:#477cae;font-weight:750}
+.a3-open-weekly{font-size:13px;color:#205f9b;background:#f0f6fd;border:1px solid #c7def3;border-radius:7px;padding:9px 12px;font-weight:700;cursor:pointer}
+.a3-report-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.a3-change{background:#fbfdff;border:1px solid #dce8f1;border-radius:9px;padding:15px 16px;display:grid;gap:10px;align-content:start}
+.a3-change-top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:#718da7;font-size:11.5px}
+.a3-sector{color:#285f99;font-weight:750;background:#eaf3fc;padding:3px 8px;border-radius:5px}
+.a3-title-row{display:flex;gap:9px;align-items:start}
+.a3-number{color:#8aa7c4;font-size:14px;font-variant-numeric:tabular-nums;font-weight:850}
+.a3-title-row h3{color:#1c486e;font-size:16px;line-height:1.5;font-weight:800;margin:0}
+.a3-observation{font-size:14px!important;line-height:1.65;color:#314d69;margin:0}
+.a3-verification{background:#f1f7fd;border-radius:8px;padding:10px 12px;display:grid;gap:8px}
+.a3-verification p{font-size:13.5px!important;color:#355571;line-height:1.6;margin:0}
+.a3-verification b{font-size:12.5px;color:#236294}
+.a3-caveat,.a3-small{font-size:12px!important;line-height:1.55;color:#7b8ca0;margin:0}
+.a3-source{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid #e3eaf3;padding-top:9px}
+.a3-source span{color:#748da3;font-size:11.5px}
+.a3-source a,.a3-review-change a{font-size:12.5px;color:#245f94;font-weight:800;text-decoration:none}
+.a3-empty,.a3-source-wait,.a3-review-empty{padding:18px;background:#f6fafe;border:1px solid #e2edf5;border-radius:8px;color:#657f99;font-size:13.5px;line-height:1.65}
+.a3-upcoming{margin-top:12px;border:1px solid #e0eaf3;border-radius:8px;overflow:hidden}
+.a3-upcoming summary{padding:11px 14px;background:#f4f9fd;color:#315b82;font-size:13px;font-weight:750;cursor:pointer}
+.a3-upcoming>div{margin:10px 13px;border-bottom:1px solid #e5edf4;padding-bottom:9px;display:grid;gap:4px}
+.a3-upcoming b{font-size:13.5px;color:#24517a}
+.a3-upcoming small{font-size:12px;color:#71899f}
+.a3-upcoming p{font-size:13.5px;color:#4e6881;margin:0;line-height:1.65}
+.a3-upcoming a{font-size:12px;color:#245f95}
+.a3-sec-panel{background:#fafcff;border:1px solid #dbe8f2;border-radius:9px;padding:14px;margin:13px 0}
+.a3-sec-panel header{display:flex;justify-content:space-between;gap:8px;align-items:start;flex-wrap:wrap;margin-bottom:12px}
+.a3-sec-panel header b{font-size:14px;color:#214f7f}
+.a3-sec-panel header p{font-size:12px;color:#7890a6;margin:4px 0}
+.a3-sec-panel header a{font-size:12.5px;color:#256399;font-weight:750}
+.a3-sec-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.a3-sec-tile{padding:10px;background:#fff;border-radius:7px;border:1px solid #e1eaf3;display:grid;gap:7px}
+.a3-sec-tile>span{font-size:12px;color:#57748e;font-weight:700}
+.a3-sec-tile>b{font-size:19px;color:#235a8a;font-variant-numeric:tabular-nums}
+.a3-sec-tile>div{display:grid;gap:2px;border-top:1px solid #eef2f7;padding-top:5px}
+.a3-sec-tile>div>small{font-size:11.5px;color:#8499ad}
+.a3-sec-tile>div>strong{font-size:14px;color:#245f86;font-variant-numeric:tabular-nums}
+.a3-sec-tile>div>span,.a3-na{color:#9aa7b3;font-size:12px}
+.a3-proposals .a3-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.a3-review-card{background:#fcfdff;border:1px solid #dce8f3;border-radius:9px;padding:13px;display:grid;gap:10px}
+.a3-review-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.a3-review-head>div{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.a3-review-head b{font-size:14px;color:#245f9a}
+.a3-review-head span{font-size:13px;color:#5a7791}
+.a3-unreviewed,.a3-reviewed{font-size:12px;padding:4px 7px;border-radius:5px;background:#f0f3f8;color:#667d93}
+.a3-reviewed{color:#216e5f;background:#edf8f4}
+.a3-review-card>p{font-size:13.5px;color:#3d5973;margin:0;line-height:1.6}
+.a3-review-card>p strong{color:#2c648f}
+.a3-review-change{padding:11px;background:#eff6fc;border-radius:7px;display:grid;gap:6px}
+.a3-review-change b{font-size:12px;color:#285d87}
+.a3-review-change p{font-size:13px;color:#4b637b;margin:0}
+.a3-review-change small{font-size:11.5px;color:#768da2}
+.a3-review-change.a3-no-change{font-size:12px;color:#7b91a7;background:#f4f7fb}
+.a3-review-choices,.a3-review-actions{display:flex;gap:6px;flex-wrap:wrap}
+.a3-review-choices button,.a3-review-actions button{font:inherit;font-size:12.5px;background:white;border:1px solid #cddfec;border-radius:6px;padding:7px 10px;cursor:pointer;color:#3e6386}
+.a3-review-choices button.is-selected{background:#dcedfc;border-color:#8dbce9;color:#235d96;font-weight:800}
+.a3-review-note{display:grid;gap:5px;font-size:12px;font-weight:700;color:#56738d}
+.a3-review-note textarea{min-height:65px;width:100%;font-size:13.5px;line-height:1.6;padding:9px 11px;resize:vertical;border-radius:7px;border:1px solid #cddfed;color:#304960}
+.a3-review-actions button:first-child{background:#235c96;border-color:#235c96;color:#fff;font-weight:750}
+.a3-review-actions button.a3-clear{color:#7c8794}
+@media(max-width:1030px){.a3-report-cards,.a3-proposals .a3-review-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.a3-sec-grid{grid-template-columns:1fr}.a3-sec-tile{gap:4px}.a3-change{padding:12px}.a3-report,.a3-proposals{padding:12px}.a3-title-row h3{font-size:15px}}
