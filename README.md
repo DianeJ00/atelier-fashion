@@ -215,3 +215,14 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 `Actions → ATELIER weekly research and site → Run workflow`에서 수동 실행하면 임상·시장 자료 갱신을 시도합니다. Github Actions의 성공 표시가 **외부 데이터 수집 성공**을 뜻하는 것은 아니므로 `clinical-trials.json`의 `status` 및 `stock-relative.json`의 `status`와 날짜를 확인합니다.
 
 보안: SEC / YouTube / OpenAI / 가격 API의 비밀키를 코드·사이트·README·채팅에 붙여넣지 마세요.
+
+## 13. 2026-11-05 가독성·원문 요약·임상 설명 개선
+
+- **바이오 검색:** 치료 기술(항체·세포치료·ASO 등)별 별도 필터를 제거하고 비만·대사, 항암, 면역·염증, 신경계, 희귀·유전, 감염 등 **질환 필터만 사용**합니다. 세부 기술은 기업 상세 안에서 계속 확인할 수 있습니다.
+- **임상 주간 해석:** ClinicalTrials.gov API의 직전 등록정보와 이번 등록정보를 비교하고, 변경사항 및 주요 예상 완료일을 **한국어 관찰·투자 검증·해석 한계** 형태로 최대 4개 정리합니다. 원시 NCT 목록은 펼쳐보기로 이동합니다. 예정일은 결과 발표일이 아니며, 등록상태 변경은 성공/허가를 의미하지 않습니다.
+- **패션 새 원문 3건 추가 검토:** ANF 공식 CeeDee Lamb 컬렉션 발표, BoF의 인도 디왈리 럭셔리 캠페인, Zacks의 VSXY 예상 EPS 관련 기사를 실제 원문에서 확인해 한국어 요약을 `editorial-brief.json`에 반영했습니다. VSXY는 **회사 IR의 직전 분기 조정 EPS/매출**로 교차 확인하고, 전망 기사는 '실적 확정'으로 표시하지 않습니다.
+- **기사 피드와 보고서 연결:** `weekly-content.json`의 `reviewedInInbox`가 해당 RSS `id`와 검증한 원문 URL을 매칭합니다. 콘텐츠 분석 완료 기사는 영어 원제목 대신 **제목·내용·투자 연결·실적 검증**을 우선 표시하고, 나머지는 '원문 미확인'으로 따로 표시합니다. 편집 검토 5건은 주간 본문, 초과 확인 자료는 접힌 추가 검토 카드에 둡니다. 원문 전체를 저장하거나 그대로 복제하지 않습니다.
+- **글자 크기:** 기존 스냅샷·새로운 산업 화면 공통으로 본문을 14~15px, 보조 정보를 12~13px, 카드 제목을 16~20px 중심으로 정리. `research2.css`만 수정하면 전체 리서치 영역을 조절할 수 있습니다.
+- **자동화 범위:** 매주 새로운 기사 전체의 완성된 의미 요약은 **공개 원문 확보와 승인된 요약 API**가 필요합니다. `OPENAI_API_KEY`가 없는 경우 원문 대조 편집본만 분석 완료로 표시하고, 비검증 RSS 제목을 보고서 분석인 것처럼 보이지 않게 합니다.
+
+근거로 확인한 원문: [Abercrombie 공식 발표](https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-and-dallas-cowboys-wide-receiver-ceedee-lamb), [BoF 산업 기사](https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/), [VSXY Zacks 기사](https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-beat-estimates-161001658.html), [VSXY 기업 IR](https://victoriassecret.gcs-web.com/news-releases/news-release-details/victorias-secret-co-reports-second-quarter-2026-results).
