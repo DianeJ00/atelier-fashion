@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05",
+  "asOf": "2026-11-04",
+  "status": "source_verified_snapshot",
+  "source": "Raymond James ETF pages · Barchart WebSol (historical highs/lows tables)",
+  "sourceMethod": "공개 조회된 과거 수익률 표에서 같은 날짜의 ETF 가격변화율만 선별하여 기록",
+  "priceConvention": "ETF 시장가격 종가의 가격 수익률, 배당·세금·수수료 제외 (총수익률 아님)",
+  "autoRefreshed": false,
+  "autoRefreshNote": "2026-11-05 원문 검토 스냅샷. 정기 자동 갱신은 유효한 시장데이터 계약·외부 표시 허용 후 지원.",
+  "periodDates": {
+    "1w": "2026-10-28",
+    "1m": "2026-10-02",
+    "3m": "2026-08-04",
+    "6m": "2026-05-04",
+    "1y": "2025-11-04"
+  },
+  "periods": [
+    "1w",
+    "1m",
+    "3m",
+    "6m",
+    "1y"
+  ],
+  "returns": {
+    "SPY": {
+      "1w": -0.71,
+      "1m": -0.37,
+      "3m": -0.59,
+      "6m": 6.8,
+      "1y": 13.56
+    },
+    "QQQ": {
+      "1w": -4.64,
+      "1m": -7.69,
+      "3m": -4.41,
+      "6m": 2.83,
+      "1y": 11.74
+    },
+    "XLK": {
+      "1w": -7.59,
+      "1m": -11.67,
+      "3m": -5.56,
+      "6m": 8.92,
+      "1y": 20.09
+    },
+    "XBI": {
+      "1w": 1.01,
+      "1m": 3.02,
+      "3m": 4.75,
+      "6m": 19.18,
+      "1y": 47.26
+    },
+    "XLY": {
+      "1w": 6.07,
+      "1m": 11.17,
+      "3m": 3.42,
+      "6m": 3.92,
+      "1y": 2.73
+    },
+    "XRT": {
+      "1w": 8.05,
+      "1m": 13.42,
+      "3m": 1.48,
+      "6m": 12.09,
+      "1y": 17.34
+    }
+  },
+  "relativeByBenchmark": {
+    "SPY": {
+      "SPY": {
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 0,
+        "1y": 0
+      },
+      "QQQ": {
+        "1w": 3.93,
+        "1m": 7.32,
+        "3m": 3.82,
+        "6m": 3.97,
+        "1y": 1.82
+      },
+      "XLK": {
+        "1w": 6.88,
+        "1m": 11.3,
+        "3m": 4.97,
+        "6m": -2.12,
+        "1y": -6.53
+      }
+    },
+    "QQQ": {
+      "SPY": {
+        "1w": -3.93,
+        "1m": -7.32,
+        "3m": -3.82,
+        "6m": -3.97,
+        "1y": -1.82
+      },
+      "QQQ": {
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 0,
+        "1y": 0
+      },
+      "XLK": {
+        "1w": 2.95,
+        "1m": 3.98,
+        "3m": 1.15,
+        "6m": -6.09,
+        "1y": -8.35
+      }
+    },
+    "XLK": {
+      "SPY": {
+        "1w": -6.88,
+        "1m": -11.3,
+        "3m": -4.97,
+        "6m": 2.12,
+        "1y": 6.53
+      },
+      "QQQ": {
+        "1w": -2.95,
+        "1m": -3.98,
+        "3m": -1.15,
+        "6m": 6.09,
+        "1y": 8.35
+      },
+      "XLK": {
+        "1w": 0,
+        "1m": 0,
+        "3m": 0,
+        "6m": 0,
+        "1y": 0
+      }
+    },
+    "XBI": {
+      "SPY": {
+        "1w": 1.72,
+        "1m": 3.39,
+        "3m": 5.34,
+        "6m": 12.38,
+        "1y": 33.7
+      },
+      "QQQ": {
+        "1w": 5.65,
+        "1m": 10.71,
+        "3m": 9.16,
+        "6m": 16.35,
+        "1y": 35.52
+      },
+      "XLK": {
+        "1w": 8.6,
+        "1m": 14.69,
+        "3m": 10.31,
+        "6m": 10.26,
+        "1y": 27.17
+      }
+    },
+    "XLY": {
+      "SPY": {
+        "1w": 6.78,
+        "1m": 11.54,
+        "3m": 4.01,
+        "6m": -2.88,
+        "1y": -10.83
+      },
+      "QQQ": {
+        "1w": 10.71,
+        "1m": 18.86,
+        "3m": 7.83,
+        "6m": 1.09,
+        "1y": -9.01
+      },
+      "XLK": {
+        "1w": 13.66,
+        "1m": 22.84,
+        "3m": 8.98,
+        "6m": -5,
+        "1y": -17.36
+      }
+    },
+    "XRT": {
+      "SPY": {
+        "1w": 8.76,
+        "1m": 13.79,
+        "3m": 2.07,
+        "6m": 5.29,
+        "1y": 3.78
+      },
+      "QQQ": {
+        "1w": 12.69,
+        "1m": 21.11,
+        "3m": 5.89,
+        "6m": 9.26,
+        "1y": 5.6
+      },
+      "XLK": {
+        "1w": 15.64,
+        "1m": 25.09,
+        "3m": 7.04,
+        "6m": 3.17,
+        "1y": -2.75
+      }
+    }
+  },
+  "referenceURLs": {
+    "SPY": "https://raymondjames.websol.barchart.com/?module=etfDetail&override=&region=US&symbol=SPY",
+    "QQQ": "https://raymondjames.websol.barchart.com/?module=etfDetail&override=&region=US&symbol=QQQ",
+    "XLK": "https://raymondjames.websol.barchart.com/?module=etfDetail&override=&region=US&symbol=XLK",
+    "XBI": "https://raymondjames.websol.barchart.com/?0=NEWS&1_selected=etfQuote&module=etfDetail&region=US&symbol=XBI",
+    "XLY": "https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=&symbol=XLY",
+    "XRT": "https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XRT"
+  },
+  "referenceLabels": {
+    "SPY": "S&P 500",
+    "QQQ": "나스닥100",
+    "XLK": "기술주",
+    "XBI": "바이오",
+    "XLY": "경기소비재",
+    "XRT": "리테일"
+  },
+  "weeklyBreadth": {},
+  "errors": [],
+  "caveats": [
+    "동일 2026-11-04 거래일 기준, Barchart 표의 기초 ETF 수익률을 0.01%p 단위로 비교",
+    "가격 수익률(분배금 제외)이며 Twelve Data 배당조정 시계열과 섞지 않음",
+    "XBI·XLY·XRT는 ETF 업종 대리 지표; ATELIER 추적 47개 미국 기업 동일가중 수익률이 아님",
+    "상대강도는 수익률 차이이며 펀드 자금 유입·투자자 관심 또는 AI 투자자금 이동의 직접 증거가 아님",
+    "인용은 2026-11-04 공개 수치의 수동 대조 스냅샷; 다음 거래일 수치는 외부 차트에서 확인"
+  ]
+}
