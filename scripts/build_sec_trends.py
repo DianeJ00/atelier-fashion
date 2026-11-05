@@ -40,6 +40,9 @@ def read_verified():
         row = entry.get("sec")
         if row and row.get("status") == "quarter_verified" and row.get("quarter"):
             combined[entry["ticker"]] = row
+    for row in read("biotech-financials.json").get("companies", []):
+        if row.get("status") == "quarter_verified" and row.get("quarter"):
+            combined[row["ticker"]] = row
     return combined
 
 def close_to(target, other, lower, upper):
