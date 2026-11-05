@@ -248,7 +248,8 @@ function overviewSignals(){
  ).join('')+'</div>':'<p class="a3-empty">현재 보고기간에 원문으로 확인된 신규 사건이 없거나 자료 수집 중입니다.</p>')+'</section>';
 }
 function attentionQueue(){
- const pending=(report?.reviewCandidates||[]).filter(x=>{
+ if(!report)return '<section class="a5-attention"><div class="a5-section-head"><div><span class="a3-kicker">04 · 투자 판단</span><h2>새 근거를 검토할 기업</h2></div></div><p class="a3-empty">공식 근거와 판단 대기 목록을 불러오는 중입니다.</p></section>';
+ const pending=(report.reviewCandidates||[]).filter(x=>{
   const recorded=records[x.companyId]?.at;
   return !recorded||String(recorded).slice(0,10)<String(x.evidenceDate||"");
  });
@@ -259,7 +260,8 @@ function attentionQueue(){
  (pending.length>5?'<p class="a3-small">상위 5개 기업만 표시. 각 산업별 검토 목록은 주간 리서치에서 확인하세요.</p>':'')+'</section>';
 }
 function reviewQueue(sector="전체"){
- const all=(report?.reviewCandidates||[]).filter(x=>sector==="전체"||x.sector===sector);
+ if(!report)return '<p class="a5-queue-empty">판단 대기 목록을 불러오는 중입니다.</p>';
+ const all=(report.reviewCandidates||[]).filter(x=>sector==="전체"||x.sector===sector);
  const pending=all.filter(x=>!records[x.companyId]?.at||
   String(records[x.companyId].at).slice(0,10)<String(x.evidenceDate||""));
  if(!pending.length)return '<p class="a5-queue-empty">현재 해당 산업에 담당자 판단을 기다리는 신규 근거가 없습니다.</p>';
