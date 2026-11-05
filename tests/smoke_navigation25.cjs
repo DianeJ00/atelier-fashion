@@ -85,7 +85,7 @@ function click(key,value){
  click("company","US:UBER");
  click("tab","투자 판단");
  const decision=window.ATELIER2.companyPage();
- assert.ok(decision.includes('class="r5-decision"'));
+ assert.ok(decision.includes('class="r2-detail-body r5-decision"'));
  assert.ok(decision.includes("나의 투자 가설"));
  assert.ok(decision.includes("나의 판단 기록"));
  assert.ok(decision.includes('data-a3="save"'));
