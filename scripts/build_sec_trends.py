@@ -62,7 +62,7 @@ def comparable(facts, current, gap_range):
     for r in rows:
         if r.get("form") not in ("10-Q", "10-K"):
             continue
-        if not isinstance(r.get("val"), (int, float)) or r.get("filed", "9999") > TODAY:
+        if not isinstance(r.get("val"), (int, float)) or not r.get("filed") or r["filed"] > TODAY:
             continue
         if not r.get("start") or not r.get("end") or not 75 <= sec.period_days(r) <= 105:
             continue
@@ -87,8 +87,8 @@ def comparable(facts, current, gap_range):
 def compare(value, old):
     if old is None or not isinstance(value,(float,int)) or not isinstance(old.get("value"),(float,int)):
         return None
-    if old["value"] == 0:
-        return None
+    if old["value"] <= 0:
+        return None  # Sign-changing earnings percentages can be misleading.
     return round((value/old["value"]-1)*100,1)
 
 def metric_trend(facts, current):
