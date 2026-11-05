@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
@@ -80,9 +81,11 @@ def build():
     else:
         data=make_empty("partial")
         history={}
-        for ticker in SYMBOLS:
+        for idx,ticker in enumerate(SYMBOLS):
             try:history[ticker]=retrieve(ticker)
             except Exception as ex:data["errors"].append({"ticker":ticker,"reason":str(ex)[:95]})
+            if idx+1<len(SYMBOLS):
+                time.sleep(9.0)  # Keep a free-tier-friendly pace across ETF + stock calls.
         # Compare only closes observed on precisely the same calendar day.
         if "XLK" not in history:
             data["status"]="unavailable"
