@@ -230,3 +230,54 @@ body{font-size:15px;line-height:1.68}
 .content .social-unverified{font-size:13px;color:#74869a;line-height:1.6}
 .content .brief-extra-head{font-size:15px;color:#305d85;margin:10px 0 8px}
 .trend-fresh-list .trend-reviewed-preview{display:block;font-size:13.5px;line-height:1.6;color:#4d697e;margin:5px 0}
+
+/* 2.6 — verified market returns with exact date range and original-source access */
+.r6-market .r2-panel-head h2{font-size:21px;line-height:1.45}
+.r6-market .r2-panel-head p{font-size:14px;line-height:1.65}
+.r6-period-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:9px 0 12px}
+.r6-period-line strong{font-size:14px;color:#275e88}
+.r6-date{font-size:13px;color:#5c7993;background:#eef5fc;border-radius:5px;padding:5px 9px}
+.r6-original{font-size:13px;font-weight:700;color:#245f91;text-decoration:none}
+.r6-original:hover{text-decoration:underline}
+.r6-review-note{font-size:13.5px!important;line-height:1.7;padding:12px 14px;border-left:3px solid #7498bd;background:#f4f8fd}
+.r6-review-note b{color:#275981}
+.r6-live-market{margin-top:12px;border:1px solid #dae7f4;border-radius:8px;overflow:hidden}
+.r6-live-market>summary{font-size:14px;line-height:1.5;font-weight:750;color:#1f5a87;background:#eef5fc;padding:13px 15px;cursor:pointer}
+.r6-live-slot{min-height:85px;padding:12px}
+.r6-live-slot>.tradingview-widget-container{width:100%;min-height:405px}
+.r6-tradingview-attribution{padding:7px 2px;font-size:12px;color:#7b8ea3}
+.r6-tradingview-attribution a{color:#285f97}
+.r6-live-error{font-size:13px;line-height:1.6;color:#8a6870}
+.r6-incomplete{border:1px solid #e1eaf3;border-radius:7px;margin:11px 0;background:#f9fbfe}
+.r6-incomplete>summary{padding:11px 14px;cursor:pointer;font-size:13px;font-weight:750;color:#58768f}
+.r6-incomplete p{font-size:13.5px;line-height:1.7;padding:0 14px 14px;color:#647c92;margin:0}
+.h7-panel{border:1px solid #dbe7f1;background:#fff;border-radius:10px;padding:18px 20px;margin-bottom:17px}
+.h7-head{display:flex;align-items:start;justify-content:space-between;gap:13px;flex-wrap:wrap}
+.h7-head h2{font-size:19px;line-height:1.4;margin:4px 0;color:#235078}
+.h7-head p{font-size:13.5px;line-height:1.6;color:#7890a5;margin:0}
+.h7-eyebrow{font-size:12px;font-weight:800;color:#326da0}
+.h7-count{font-size:12px;color:#587b99;border:1px solid #d8e6f2;padding:6px 8px;border-radius:6px}
+.h7-status-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:13px 0}
+.h7-status-overview>div{border:1px solid #e3ebf3;border-radius:7px;padding:10px 12px;background:#f9fcff;display:grid;gap:4px}
+.h7-status-overview b{font-size:21px;font-variant-numeric:tabular-nums;color:#205b8b}
+.h7-status-overview span{font-size:12px;color:#728ba1}
+.h7-details{border:1px solid #dfe9f3;border-radius:8px;overflow:hidden}
+.h7-details>summary{font-size:13.5px;color:#28628e;font-weight:750;padding:12px 13px;background:#f5f9fd;cursor:pointer}
+.h7-list{display:grid;gap:8px;padding:12px}
+.h7-item{border:1px solid #e4edf5;border-radius:7px;background:#fff;padding:12px 13px;display:grid;gap:6px}
+.h7-item-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.h7-item-title strong{font-size:14px;color:#285474}
+.h7-item-title>span:last-child{font-size:12px;color:#748da2}
+.h7-status{font-size:11.5px;font-weight:750;padding:3px 7px;border-radius:5px}
+.h7-live{background:#eef8f3;color:#2d755b}
+.h7-reviewed_snapshot{background:#eef5fe;color:#245f95}
+.h7-partial{background:#fff5e8;color:#96713a}
+.h7-blocked{background:#fff0f0;color:#a65e57}
+.h7-item p{font-size:13px;line-height:1.55;color:#587089;margin:0}
+.h7-item small{font-size:12px;color:#91a0ae}
+.h7-next{font-size:12.5px;color:#56748b;line-height:1.6}
+.h7-next b{color:#4278a1}
+.h7-item>a{font-size:12px;color:#23639a;font-weight:750}
+.h7-disclaimer{font-size:12.5px;color:#8194a5;line-height:1.6;margin-top:12px}
+@media(max-width:800px){.h7-status-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.h7-panel{padding:13px}}
+@media(max-width:520px){.r6-market .r2-index-strip{grid-template-columns:1fr}.r6-market .r2-table-scroll{overflow-x:auto}.r6-market .r2-table{min-width:520px}}
