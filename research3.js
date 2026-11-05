@@ -56,6 +56,133 @@ function weekly(sector="전체",preview=false){
  future+staleLine+
  (preview?"":'<p class="a3-small">미국 소비재 운영 KPI는 검토한 분기 자료를 별도로 유지합니다. 국내 5개 담당 기업의 비공개 과거 브리프·DART는 아직 자동 연결되지 않았습니다. 보고서의 검토 제안은 매수·매도 의견이 아닙니다.</p>')+'</section>';
 }
+
+/* Thesis workspace: one company at a time, original research questions != adopted theses. */
+const thesisUI={sector:"전체",mode:"전체",search:"",selected:""};
+function thesisEvidence(company){
+ if(!report||company.market!=="미국")return [];
+ return (report.items||[]).filter(x=>x.ticker===company.ticker&&x.sector===company.sector);
+}
+function thesisStatus(id){
+ const item=records[id];
+ if(!item||!item.at)return "미기록";
+ return item.choice==="판단 보류"?"검토 보류":"판단 기록";
+}
+function thesisItems(universe){
+ const q=thesisUI.search.trim().toLowerCase();
+ return (universe||[]).filter(c=>{
+  const recent=thesisEvidence(c).length>0;
+  if(thesisUI.sector!=="전체"&&c.sector!==thesisUI.sector)return false;
+  if(thesisUI.mode==="새 근거"&&!recent)return false;
+  if(thesisUI.mode==="기록 있음"&&!records[c.id]?.at)return false;
+  if(thesisUI.mode==="미기록"&&records[c.id]?.at)return false;
+  if(!q)return true;
+  return [c.name,c.ticker,c.sector,c.focus,c.disease,c.domain,c.risk]
+    .filter(Boolean).some(x=>String(x).toLowerCase().includes(q));
+ }).sort((a,b)=>{
+  const x=thesisEvidence(a).length?1:0,y=thesisEvidence(b).length?1:0;
+  if(x!==y)return y-x;
+  const doneA=records[a.id]?.at?1:0,doneB=records[b.id]?.at?1:0;
+  if(doneA!==doneB)return doneA-doneB;
+  return a.ticker.localeCompare(b.ticker);
+ });
+}
+function thesisFilterButtons(options,active,kind){
+ return options.map(option=>'<button type="button" data-a3="'+kind+'" data-value="'+esc(option)+'" class="'+(active===option?"is-selected":"")+'" aria-pressed="'+String(active===option)+'">'+esc(option)+'</button>').join("");
+}
+function thesisCompanyList(rows){
+ if(!rows.length)return '<div class="t4-list-empty">선택한 조건에 맞는 기업이 없습니다. 산업 또는 상태 필터를 변경해 주세요.</div>';
+ return rows.map(c=>{
+  const recent=thesisEvidence(c).length;
+  const local=thesisStatus(c.id);
+  const chosen=thesisUI.selected===c.id;
+  return '<button type="button" class="t4-company'+(chosen?" is-active":"")+'" data-a3="thesisSelect" data-id="'+esc(c.id)+'" aria-pressed="'+String(chosen)+'">'+
+   '<span class="t4-company-heading"><strong>'+esc(c.ticker)+'</strong><span>'+esc(c.name)+'</span></span>'+
+   '<span class="t4-company-meta"><span>'+esc(c.sector)+'</span><span class="'+(recent?"t4-has-source":"")+'">'+(recent?"이번 주 근거 "+recent+"건":local==="미기록"?"근거 대기":esc(local))+'</span></span>'+
+   '</button>';
+ }).join("");
+}
+function thesisSourceCards(c){
+ const rows=thesisEvidence(c);
+ if(!rows.length)return '<p class="t4-evidence-empty">이번 보고기간에 해당 기업의 신규 확인 근거는 없습니다. 기존 가설이 맞거나 틀렸다는 의미는 아닙니다.</p>';
+ return rows.slice(0,3).map(x=>
+  '<article class="t4-source-card"><div class="t4-source-meta"><span>'+esc(x.eventDate)+'</span><span>'+esc(x.tier||x.eventType||"확인 자료")+'</span></div>'+
+  '<h4>'+esc(x.title)+'</h4><p>'+esc(x.observation||"")+'</p>'+
+  '<div class="t4-source-analysis"><p><b>실적·기업가치 연결</b> '+esc(x.investment||"별도 검증 필요")+'</p>'+
+  '<p><b>다음 확인 지표</b> '+esc(x.nextCheck||"공식 실적 원문 대조 필요")+'</p></div>'+
+  '<p class="t4-source-caveat">'+esc(x.caveat||"단일 자료만으로 투자 판단을 확정하지 않음.")+'</p>'+
+  '<a href="'+uri(x.sourceUrl)+'" target="_blank" rel="noopener noreferrer">공식·검토 원문 ↗</a></article>'
+ ).join("");
+}
+function safeTextArea(value,prop,id,placeholder,rows){
+ return '<textarea data-a3-'+prop+'="'+esc(id)+'" rows="'+(rows||3)+'" maxlength="2500" placeholder="'+esc(placeholder||"")+'">'+esc(value||"")+'</textarea>';
+}
+function thesisEditor(c){
+ if(!c)return '<div class="t4-no-choice">왼쪽에서 검토할 기업을 선택해 주세요.</div>';
+ const id=c.id,previous=records[id]||{},draft=drafts[id]||{};
+ const choice=draft.choice||previous.choice||"";
+ const hasLocal=Boolean(previous.at);
+ const savedHypothesis=previous.hypothesis||"";
+ const savedRisk=previous.riskOverride||"";
+ const h=draft.hypothesis??savedHypothesis,r=draft.riskOverride??savedRisk,n=draft.note??previous.note??"";
+ const sector=(c.market==="한국"?"국내 기존 담당 · ":"")+c.sector;
+ const recent=thesisEvidence(c);
+ const metrics=(c.kpis||[]).slice(0,4);
+ const finance=(c.market==="미국"&&c.sector!=="바이오·제약"?
+  '<details class="t4-sec-details"><summary>SEC 공식 분기 실적 변화 확인 (GAAP)</summary>'+secComparison(c.ticker)+'</details>':"");
+ return '<div class="t4-editor"><div class="t4-editor-header">'+
+  '<div><div class="t4-eyebrow">'+esc(sector)+'</div><h2>'+esc(c.name)+' <span>'+esc(c.ticker)+'</span></h2>'+
+  '<p>'+(savedHypothesis?'<strong>내가 작성한 투자 가설</strong>':'<strong>초기 분석 단계</strong>')+
+  ' · '+(hasLocal?"최종 기록 "+esc((previous.at||"").slice(0,10)):"담당자 판단 미저장")+'</p></div>'+
+  '<button type="button" class="t4-open-company" data-a3="thesisOpenCompany" data-id="'+esc(id)+'">기업 상세 →</button></div>'+
+  '<section class="t4-step"><div class="t4-step-heading"><span class="t4-step-num">01</span><div><h3>투자 논리</h3><p>앞으로 1~3년 실적·가치를 움직일 변화를 한 문장으로 정리</p></div></div>'+
+  '<div class="t4-baseline"><b>초기 검증 질문 · 아직 확정된 투자 가설 아님</b><p>'+esc(c.focus)+'</p></div>'+
+  '<label class="t4-field"><span>나의 투자 가설 <em>직접 작성 · 선택</em></span>'+
+  safeTextArea(h,"hypothesis",id,"예: 고객 수 증가 → 단위 수익성 개선 → FCF 확대처럼 사업과 재무의 연결을 작성",3)+'</label></section>'+
+  '<section class="t4-step"><div class="t4-step-heading"><span class="t4-step-num">02</span><div><h3>새롭게 확인된 근거</h3><p>최신 원문이 기존 가설에 어떤 정보를 더했는지 확인</p></div><span class="t4-evidence-count">'+recent.length+'건</span></div>'+
+  '<div class="t4-evidence-list">'+thesisSourceCards(c)+'</div>'+finance+'</section>'+
+  '<section class="t4-step"><div class="t4-step-heading"><span class="t4-step-num">03</span><div><h3>반증 조건과 다음 확인</h3><p>무엇이 틀어지면 투자 논리를 다시 검토해야 하는가</p></div></div>'+
+  '<div class="t4-baseline"><b>초기 위험 질문</b><p>'+esc(c.risk)+'</p></div>'+
+  '<label class="t4-field"><span>내 반증 조건 <em>직접 작성 · 선택</em></span>'+
+  safeTextArea(r,"risk-override",id,"가설이 깨지는 정량 KPI·이벤트·경쟁 상황을 구체적으로 기록",2)+'</label>'+
+  (metrics.length?'<div class="t4-kpi-strip"><b>다음 점검 KPI</b><div>'+metrics.map(k=>'<span>'+esc(k)+'</span>').join("")+'</div></div>':"")+'</section>'+
+  '<section class="t4-step t4-decision"><div class="t4-step-heading"><span class="t4-step-num">04</span><div><h3>나의 판단 기록</h3><p>자동 분석은 방향을 확정하지 않음 · 아래 선택은 저장 전까지 임시</p></div></div>'+
+  '<div class="t4-choices">'+["판단 보류","강화","유지","약화"].map(val=>
+  '<button type="button" data-a3="choose" data-id="'+esc(id)+'" data-choice="'+esc(val)+'" aria-pressed="'+String(choice===val)+'" class="'+(choice===val?"is-selected":"")+'">'+esc(val)+'</button>').join("")+'</div>'+
+  '<label class="t4-field"><span>판단 근거 / 다음 확인 일정</span>'+
+  safeTextArea(n,"note",id,"원문 확인 결과와 선택한 판단의 이유를 기록하세요.",3)+'</label>'+
+  '<div class="t4-save-row"><button type="button" class="t4-save" data-a3="save" data-id="'+esc(id)+'">내 판단 저장</button>'+
+  '<button type="button" class="t4-clear" data-a3="clear" data-id="'+esc(id)+'">이 기업의 로컬 기록 지우기</button>'+
+  '<span class="t4-save-state">'+(hasLocal?"저장 완료 · "+esc((previous.at||"").slice(0,10)):"아직 저장되지 않음")+'</span></div>'+
+  '<p class="t4-privacy">이 화면의 작성 내용은 현재 브라우저에만 저장됩니다. 기기 간 동기화되지 않으며 브라우저 데이터를 삭제하면 사라질 수 있습니다.</p></section>'+
+  '</div>';
+}
+function thesisWorkspace(universe){
+ const rows=thesisItems(universe);
+ if(!rows.some(x=>x.id===thesisUI.selected))thesisUI.selected=rows[0]?.id||"";
+ const chosen=rows.find(x=>x.id===thesisUI.selected)||null;
+ const count=universe?.length||0;
+ const newCount=(universe||[]).filter(c=>thesisEvidence(c).length).length;
+ const savedCount=(universe||[]).filter(c=>records[c.id]?.at).length;
+ const sectors=["전체","내 담당 기업","바이오·제약","소비재·서비스","패션"];
+ return '<div class="t4-workspace">'+
+  '<header class="t4-title-row"><div><span class="t4-eyebrow">ATELIER · 투자 판단 워크스페이스</span><h1>투자 가설</h1>'+
+  '<p>기업의 핵심 논리 → 새 근거 → 반증 조건 → 담당자 판단 순서로 검토합니다.</p></div>'+
+  '<span class="t4-data-note">'+esc(report?.periodStart||"자료 수집 대기")+' ~ '+esc(report?.periodEnd||"")+' · 이번 주 근거 기준</span></header>'+
+  '<div class="t4-summary">'+
+  '<div><span>추적 기업</span><strong>'+count+'</strong><small>미국 47 · 국내 5</small></div>'+
+  '<div><span>이번 주 새 근거</span><strong>'+newCount+'</strong><small>원문 확인 기업</small></div>'+
+  '<div><span>내 판단 기록</span><strong>'+savedCount+'</strong><small>현재 브라우저 기준</small></div>'+
+  '<div><span>아직 미기록</span><strong>'+(count-savedCount)+'</strong><small>미정의 기업 포함</small></div></div>'+
+  '<div class="t4-toolbar"><div class="t4-toolbar-group"><b>산업</b><div class="t4-chips">'+thesisFilterButtons(sectors,thesisUI.sector,"thesisSector")+'</div></div>'+
+  '<div class="t4-toolbar-group"><b>검토 상태</b><div class="t4-chips">'+thesisFilterButtons(["전체","새 근거","기록 있음","미기록"],thesisUI.mode,"thesisMode")+'</div></div></div>'+
+  '<div class="t4-layout"><aside class="t4-company-panel"><div class="t4-list-top"><h2>기업 목록 <span>'+rows.length+'개</span></h2>'+
+  '<label for="t4-company-search">기업·티커·가설 검색</label><input id="t4-company-search" type="search" data-a3-search="true" value="'+esc(thesisUI.search)+'" placeholder="종목명, 티커 또는 검증 질문"/></div>'+
+  '<div class="t4-company-scroll" aria-label="투자 가설 검토 기업">'+thesisCompanyList(rows)+'</div></aside>'+
+  '<main class="t4-main">'+thesisEditor(chosen)+'</main></div>'+
+  '<p class="t4-workspace-foot">초기 질문은 리서치 출발점이며 확정된 매수·매도 의견이 아닙니다. 국내 담당 기업의 비공개 브리프 원본은 아직 연결되지 않았습니다.</p></div>';
+}
+
 function reviewFor(companyId){
  const t=report?.reviewCandidates?.find(x=>x.companyId===companyId);
  return t||null;
@@ -177,6 +304,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,weekly,proposals,recordCard,secComparison,markdownReport,
+window.ATELIER3={load,overview,weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
