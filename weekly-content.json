@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T02:10:52.705022+00:00",
+  "generatedAt": "2026-11-05T06:05:47.272583+00:00",
   "periodStart": "2026-10-26",
   "periodEnd": "2026-11-05",
   "summaryPolicy": "원문이 확보된 경우만 요약. AI 초안은 검증 전이며 패션 크리에이터 영상 제목만으로 내용을 추정하지 않음.",
@@ -59,15 +59,6 @@
   ],
   "autoItems": [],
   "pending": [
-    {
-      "id": "rss-6f638d916c4b0ff",
-      "title": "What American Eagle Outfitters Holders Got Right - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQT1NQOHcyc0M0aFJ0ZWlDOWNfTGN3U0xHUE5HSGxuTlNhLXBhMzRvZldOMG1iR0d3WXFibFNLaTlJb2t3RU1wNnhXNVNiZmpUSTdRZmVWQkFDU3ZjbkJ4YnJCbDBNbXVlcS14Zk1qYkdDeEFXRHhQQXhfVUEybTdza2txa0RONmI3R2V2XzRoX0tQbXB3bnd1bzRUaVdxYTJzQWIya2JkSFVEUHQ3MkYzNUt1WFJVUGw1bzhEblNrZGJWYXkxTWfSAcsBQVVfeXFMTkNQVDZCckZBTWY5VjM2RWE2LU1rcG9FdmQyX2FzNDRKdVA1Vm8zMHZwVnRoLXM0QWZPYmd3dUtEVkJZdVpjb2NlOGYzY29ZSWJRZmNhdVVLSHBSMWd3U2dPUE8xLU5hY1FkSkpILVFDUXpkTUJBX1NwQTU0dl9pWnVoMkV0V3JGT2wxSXhJYUV0MmhfbUcxODBwV1NHVklHWmI1akROcnpIVkw3bGs1dFNXa185Z0w2S3F0NTB5bnMwNjM5T19KZ0ZwLVE?oc=5",
-      "date": "2026-11-04",
-      "source": "Simply Wall St",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
     {
       "id": "rss-6bd72c50fb616d2",
       "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
@@ -150,9 +141,9 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-07e98644ff5b6ee",
-      "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
+      "id": "rss-de447d851e8cc9a",
+      "title": "The CeeDee Lamb Edit from Abercrombie & Fitch [PHOTOS] - WWD",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlpKeDNiUHBRdHh4blE2R0FTWkE5bUtmZlFyYzZfbUFSeDRHcDhfWDB4UVM2VGpnVENUM3pCOTZmdURQRzRHWVYxcnQ3ODJXN0NCVklMRkJrMUF4MVZidjlabnFmblcta01PYUZyMlJkZ2JjcGIzRlFBMWtwR18wNHVySFRqM3pUcDJ3WEx5S0NLVy0tSDFNRm5yUVJaN0U?oc=5",
       "date": "2026-11-03",
       "source": "WWD",
       "status": "분석 대기",
@@ -164,6 +155,15 @@
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
       "date": "2026-11-03",
       "source": "Forbes",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-11e0c63c64c7f9e",
+      "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
+      "date": "2026-11-03",
+      "source": "PVH",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }

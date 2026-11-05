@@ -11,24 +11,24 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "ANF",
-      "date": "2026-11-03",
-      "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
-      "context": "Hollister 동일매장매출·영업이익률 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
       "ticker": "PVH",
       "date": "2026-11-03",
       "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
       "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "VFC",
+      "date": "2026-11-03",
+      "title": "Vans and SZA Debut Campaign - VF Corporation",
+      "context": "Vans 매출·재고 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLS1pZQ0lBNHhxZEF1a09xUDlTalJBOG5PQ3pqZU5lVU1lWTRJMVgxTVpBbWprMXRzNnNBNEhncWdzRE1jeDFYWDVJLWNQX1JlM185VnliaGVxOHFycENjLWY4ZS1oeW5jQ2dGZlpQRjA0VUk1WWVtWWFic3B1cUk?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-05T02:10:52.812669+00:00",
+  "generatedAt": "2026-11-05T06:05:47.416829+00:00",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-05",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "What American Eagle Outfitters Holders Got Right - Simply Wall St",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQT1NQOHcyc0M0aFJ0ZWlDOWNfTGN3U0xHUE5HSGxuTlNhLXBhMzRvZldOMG1iR0d3WXFibFNLaTlJb2t3RU1wNnhXNVNiZmpUSTdRZmVWQkFDU3ZjbkJ4YnJCbDBNbXVlcS14Zk1qYkdDeEFXRHhQQXhfVUEybTdza2txa0RONmI3R2V2XzRoX0tQbXB3bnd1bzRUaVdxYTJzQWIya2JkSFVEUHQ3MkYzNUt1WFJVUGw1bzhEblNrZGJWYXkxTWfSAcsBQVVfeXFMTkNQVDZCckZBTWY5VjM2RWE2LU1rcG9FdmQyX2FzNDRKdVA1Vm8zMHZwVnRoLXM0QWZPYmd3dUtEVkJZdVpjb2NlOGYzY29ZSWJRZmNhdVVLSHBSMWd3U2dPUE8xLU5hY1FkSkpILVFDUXpkTUJBX1NwQTU0dl9pWnVoMkV0V3JGT2wxSXhJYUV0MmhfbUcxODBwV1NHVklHWmI1akROcnpIVkw3bGs1dFNXa185Z0w2S3F0NTB5bnMwNjM5T19KZ0ZwLVE?oc=5",
-        "date": "2026-11-04"
+        "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
+        "date": "2026-10-31"
       },
       "consumerSampleCount": 0
     },

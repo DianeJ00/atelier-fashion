@@ -1,12 +1,1969 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-11-05T06:05:33.454727+00:00",
   "source": "ClinicalTrials.gov API v2",
-  "status": "not_collected",
-  "assets": [],
-  "verifiedTrialCards": 0,
+  "status": "ok",
+  "assets": [
+    {
+      "ticker": "LLY",
+      "asset": "tirzepatide",
+      "disease": "비만·대사",
+      "modality": "GIP·GLP-1",
+      "verifiedTrialCountInSearchWindow": 72,
+      "trials": [
+        {
+          "nctId": "NCT05433584",
+          "title": "A Study of Tirzepatide Compared With Intensified Conventional Care in Adult Participants With Type 2 Diabetes",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE4"
+          ],
+          "conditions": [
+            "Type 2 Diabetes"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-08-01",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-10-21",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-11",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change from Baseline in Hemoglobin A1c (HbA1c)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05433584"
+        },
+        {
+          "nctId": "NCT06037252",
+          "title": "A Study of Investigational Tirzepatide (LY3298176) Doses in Participants With Type 2 Diabetes and Obesity",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Type 2 Diabetes",
+            "Obesity"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-09-21",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-01-08",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2026-10",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change From Baseline in Body Weight",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06037252"
+        },
+        {
+          "nctId": "NCT06643728",
+          "title": "A Study to Investigate Weight Management With Bimagrumab (LY3985863) and Tirzepatide (LY3298176), Alone or in Combination, in Adults With Obesity or Overweight",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Obesity",
+            "Overweight"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-10-21",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-01-16",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change from Baseline in Body Weight",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06643728"
+        },
+        {
+          "nctId": "NCT06075667",
+          "title": "A Study of Tirzepatide (LY3298176) Once Weekly in Adolescent Participants Who Have Obesity or Overweight With Weight-Related Comorbidities",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Obesity",
+            "Overweight"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-10-16",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-06-02",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2029-07",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change from Baseline in Body Mass Index (BMI)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06075667"
+        },
+        {
+          "nctId": "NCT06662383",
+          "title": "A Study of Retatrutide (LY3437943) Compared to Tirzepatide (LY3298176) in Adults Who Have Obesity",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Obesity"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-11-01",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-11",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2026-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change from Baseline in Body Weight",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06662383"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "AMGN",
+      "asset": "MariTide",
+      "disease": "비만·대사",
+      "modality": "항체·복합 작용제",
+      "verifiedTrialCountInSearchWindow": 31,
+      "trials": [
+        {
+          "nctId": "NCT06660173",
+          "title": "A Study of Maridebart Cafraglutide in Adult Participants With Type 2 Diabetes Mellitus (T2DM)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Type 2 Diabetes Mellitus (T2DM)"
+          ],
+          "sponsor": "Amgen",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-11-07",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-10-06",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2026-11-10",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change From Baseline to Week 24 in Hemoglobin A1c (HbA1c)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06660173"
+        },
+        {
+          "nctId": "NCT07160257",
+          "title": "A Study to Evaluate the Effect of Maridebart Cafraglutide on Insulin Sensitivity and β-cell Function in Participants With Type 2 Diabetes Mellitus",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Type 2 Diabetes Mellitus"
+          ],
+          "sponsor": "Amgen",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-08-05",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-11-15",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-03-04",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change from Baseline in M-value from Hyperinsulinemic-euglycemic Clamp at Week 25",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07160257"
+        },
+        {
+          "nctId": "NCT07523711",
+          "title": "Effect of Maridebart Cafraglutide on How Oral Contraceptives Are Absorbed and Processed in the Body in Postmenopausal Female Participants Living With Overweight or Obesity",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Overweight",
+            "Obesity"
+          ],
+          "sponsor": "Amgen",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-04-09",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-11-18",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2026-11-18",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Maximum Observed Concentration (Cmax) of COC",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07523711"
+        },
+        {
+          "nctId": "NCT06858839",
+          "title": "Evaluation of Maridebart Cafraglutide in Adult Participants Without Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Obesity"
+          ],
+          "sponsor": "Amgen",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-03-12",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-01-21",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-04-16",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change From Baseline in Body Weight at Week 72",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06858839"
+        },
+        {
+          "nctId": "NCT06858878",
+          "title": "Efficacy and Safety of Maridebart Cafraglutide in Adult Participants With Type 2 Diabetes Mellitus Who Have Obesity or Are Overweight",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Type 2 Diabetes Mellitus (T2DM), Obesity, Overweight"
+          ],
+          "sponsor": "Amgen",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-03-17",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-01-21",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-04-16",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent Change from Baseline in Body Weight at Week 72",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06858878"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "VKTX",
+      "asset": "VK2735",
+      "disease": "비만·대사",
+      "modality": "GLP-1·복합 작용제",
+      "verifiedTrialCountInSearchWindow": 8,
+      "trials": [
+        {
+          "nctId": "NCT07838740",
+          "title": "A Phase 1 Study of VK2735 in Obese Adults Without Comorbidities",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Obese Adults"
+          ],
+          "sponsor": "Viking Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-11-18",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-05",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-07",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Evaluate the Safety and Tolerability VK2735",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07838740"
+        },
+        {
+          "nctId": "NCT07104383",
+          "title": "VK2735 for Weight Management Type 2 Diabetes Phase 3 (VANQUISH 2)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Weight Loss"
+          ],
+          "sponsor": "Viking Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-06-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-07-01",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-08-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent change in body weight from baseline to Week 78 in body weight",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07104383"
+        },
+        {
+          "nctId": "NCT07104500",
+          "title": "VK2735 for Weight Management Phase 3",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Weight Loss"
+          ],
+          "sponsor": "Viking Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-06-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-07-01",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-08-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage change in body weight from baseline for participants receiving VK2735 after 78 weeks of treatment",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07104500"
+        },
+        {
+          "nctId": "NCT07868835",
+          "title": "Oral VK2735 for Weight Management Phase 3 (SUNRISE 1)",
+          "status": "NOT_YET_RECRUITING",
+          "statusKr": "모집 전",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Weight Loss"
+          ],
+          "sponsor": "Viking Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-11",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletion": {
+            "date": "2028-07",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-08",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage change in body weight for participants receiving VK2735 orally once daily",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07868835"
+        },
+        {
+          "nctId": "NCT07868939",
+          "title": "Oral VK2735 for Weight Management in Adults With Type 2 Diabetes Mellitus Phase 3 (SUNRISE 2)",
+          "status": "NOT_YET_RECRUITING",
+          "statusKr": "모집 전",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Weight Loss"
+          ],
+          "sponsor": "Viking Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-11",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletion": {
+            "date": "2028-10",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percent change in body weight for participants with type 2 diabetes mellitus receiving VK2735 orally once daily",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07868939"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "disease": "항암",
+      "modality": "면역관문 치료",
+      "verifiedTrialCountInSearchWindow": 15,
+      "trials": [
+        {
+          "nctId": "NCT04040361",
+          "title": "Neoadjuvant Therapy of Pembrolizumab + Ramucirumab for PD-L1 Positive Stage IB-IIIA Lung Cancer (EAST ENERGY)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Non-small Cell Lung Cancer Stage IB",
+            "Non-small Cell Lung Cancer Stage II",
+            "Non-small Cell Lung Cancer Stage ⅢA"
+          ],
+          "sponsor": "National Cancer Center Hospital East",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-11-30",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2022-04-20",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Major pathologic response (MPR) rate by central review",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04040361"
+        },
+        {
+          "nctId": "NCT05296512",
+          "title": "Pembrolizumab and Lenvatinib in Clear Cell Ovarian Cancer",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Ovarian Clear Cell Carcinoma",
+            "Gynecologic Cancer"
+          ],
+          "sponsor": "Elizabeth K. Lee MD",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-09-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-09-08",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2028-11-15",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Overall Response Rate (ORR)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05296512"
+        },
+        {
+          "nctId": "NCT05977907",
+          "title": "Neoadjuvant Pembrolizumab and IO102-103 for Squamous Cell Carcinoma of the Head and Neck (SCCHN).",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Head and Neck Squamous Cell Carcinoma"
+          ],
+          "sponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-12-14",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-12",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-10-16",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Pathologic Treatment Response rate",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05977907"
+        },
+        {
+          "nctId": "NCT03407144",
+          "title": "Safety and Efficacy of Pembrolizumab (MK-3475) in Children and Young Adults With Classical Hodgkin Lymphoma (MK-3475-667/KEYNOTE-667)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Hodgkin Lymphoma"
+          ],
+          "sponsor": "Merck Sharp & Dohme LLC",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2018-04-09",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-02-12",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-02-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Objective Response Rate (ORR) in SER Participants By Risk Group (Low, High) as Assessed by Blinded Independent Central Review (BICR)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT03407144"
+        },
+        {
+          "nctId": "NCT05405595",
+          "title": "ADG126 in Combination With Pembrolizumab in Patients With Advanced/Metastatic Solid Tumors",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "conditions": [
+            "Advanced/Metastatic Solid Tumors"
+          ],
+          "sponsor": "Adagene Inc",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-06-15",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-06-30",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Maximum tolerated dose (MTD) and RP2D for ADG126 in combination with pembrolizumab.",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05405595"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "GILD",
+      "asset": "sacituzumab govitecan",
+      "disease": "항암",
+      "modality": "항체약물접합체",
+      "verifiedTrialCountInSearchWindow": 63,
+      "trials": [
+        {
+          "nctId": "NCT04454437",
+          "title": "Study of Sacituzumab Govitecan in Chinese Patients With Metastatic Triple-negative Breast Cancer Who Received at Least Two Prior Treatments",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Metastatic Triple-negative Breast Cancer"
+          ],
+          "sponsor": "Gilead Sciences",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2020-10-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2021-08-06",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Objective Response Rate (ORR) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v 1.1) By Independent Review Committee (IRC)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04454437"
+        },
+        {
+          "nctId": "NCT05089734",
+          "title": "Study of Sacituzumab Govitecan (SG) Versus Docetaxel in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Non-Small Cell Lung Cancer"
+          ],
+          "sponsor": "Gilead Sciences",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2021-11-17",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2023-11-29",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Overall Survival (OS)",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT05089734"
+        },
+        {
+          "nctId": "NCT04448886",
+          "title": "Sacituzumab Govitecan +/- Pembrolizumab In HR+ / HER2 - MBC",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Invasive Breast Cancer",
+            "Metastatic Breast Cancer",
+            "HR-Positive Breast Cancer",
+            "HER2-negative Breast Cancer"
+          ],
+          "sponsor": "Ana C Garrido-Castro, MD",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2020-09-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2024-03-09",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-06-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression Free Survival",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT04448886"
+        },
+        {
+          "nctId": "NCT03725761",
+          "title": "Sacituzumab Govitecan in Patients With Metastatic Castration-Resistant Prostate Cancer Progressing on Second Generation AR-Directed Therapy",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Prostate Cancer"
+          ],
+          "sponsor": "University of Wisconsin, Madison",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2018-10-24",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2024-04-18",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-09",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "PSA Response Rate",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03725761"
+        },
+        {
+          "nctId": "NCT05143229",
+          "title": "Alpelisib And Sacituzumab Govitecan For Treatment Of Breast Cancer",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Breast Cancer"
+          ],
+          "sponsor": "University of Kansas Medical Center",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-03-28",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-01-28",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2026-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Recommended phase II dose (RP2D) of alpelisib + sacituzumab govitecan",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05143229"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "ABBV",
+      "asset": "risankizumab",
+      "disease": "면역·염증",
+      "modality": "면역 항체",
+      "verifiedTrialCountInSearchWindow": 55,
+      "trials": [
+        {
+          "nctId": "NCT03671148",
+          "title": "A Study Comparing Risankizumab to Placebo in Participants With Active Psoriatic Arthritis Including Those Who Have a History of Inadequate Response or Intolerance to Biologic Therapy(Ies)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Psoriatic Arthritis (PsA)"
+          ],
+          "sponsor": "AbbVie",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-03-07",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2020-06-22",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2029-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants With an American College of Rheumatology 20% (ACR20) Response at Week 24",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03671148"
+        },
+        {
+          "nctId": "NCT03675308",
+          "title": "A Study Comparing Risankizumab to Placebo in Participants With Active Psoriatic Arthritis (PsA) Who Have a History of Inadequate Response to or Intolerance to at Least One Disease Modifying Anti-Rheumatic Drug (DMARD) Th",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Psoriatic Arthritis"
+          ],
+          "sponsor": "AbbVie",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-03-25",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2020-10-08",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2026-09-28",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants With an American College of Rheumatology 20% (ACR20) Response at Week 24",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03675308"
+        },
+        {
+          "nctId": "NCT06100744",
+          "title": "A Study to Assess Adverse Events, Change in Disease Activity, and How the Drug Moves Through the Body in Children With Juvenile Psoriatic Arthritis (jPsA) Receiving Subcutaneously Injected Risankizumab or Adalimumab",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Juvenile Psoriatic Arthritis"
+          ],
+          "sponsor": "AbbVie",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-07-08",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-09",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-10",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants who Achieve >= 30% Improvement in Juvenile Idiopathic Arthritis American College of Rheumatology Response Criteria (JIA-ACR 30)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06100744"
+        },
+        {
+          "nctId": "NCT07466550",
+          "title": "A Study to Assess How Intravenous and Subcutaneous Administrations of Risankizumab Moves Through the Body of Healthy Adult Participants",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Healthy Volunteer"
+          ],
+          "sponsor": "AbbVie",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-06-04",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-01",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Number of Participants with Adverse Events (AEs)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07466550"
+        },
+        {
+          "nctId": "NCT06063967",
+          "title": "A Study to Assess Adverse Events and Change in Disease Activity of Risankizumab Subcutaneous Induction Treatment for Moderately to Severely Active Crohn's Disease.",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Crohn's Disease"
+          ],
+          "sponsor": "AbbVie",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-11-15",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-03",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-03",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants With Crohn's Disease Activity Index (CDAI) Clinical Remission (CDAI < 150)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06063967"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "REGN",
+      "asset": "dupilumab",
+      "disease": "면역·염증",
+      "modality": "단클론항체",
+      "verifiedTrialCountInSearchWindow": 33,
+      "trials": [
+        {
+          "nctId": "NCT06101095",
+          "title": "A Study Assessing Esophageal Function and Remodeling With Dupilumab Compared With Placebo for 24 Weeks Followed by 104 Weeks Open Label in Adult Participants With EoE (REMOdeling With Dupilumab in Eosinophilic Esophagiti",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE4"
+          ],
+          "conditions": [
+            "Eosinophilic Oesophagitis"
+          ],
+          "sponsor": "Sanofi",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-11-29",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-11-05",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2028-02-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change from baseline in esophageal distensibility plateau as measured by Functional Lumen Imaging Probe (EndoFLIP)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06101095"
+        },
+        {
+          "nctId": "NCT06087627",
+          "title": "A Non-interventional Study to Describe the Dupilumab Long-term Treatment, Safety and Patient Reported Outcomes in Chronic Nodular Prurigo (Prurigo Nodularis) in Clinical Routine",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [],
+          "conditions": [
+            "Prurigo Nodularis"
+          ],
+          "sponsor": "Sanofi",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-12-27",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-06-29",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage (%) of participants with Investigator Global Assessment Prurigo Nodularis Stage (IGA-CPG-S) score 0 or 1 in Month 6",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06087627"
+        },
+        {
+          "nctId": "NCT05720325",
+          "title": "Dupilumab Effects Against Aeroallergen Challenge",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Asthma, Allergic"
+          ],
+          "sponsor": "The University of Texas Health Science Center at San Antonio",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-03-29",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-11-01",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-11-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Overall change in ACC HDM exposure-induced nasal airway gene expression profile",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05720325"
+        },
+        {
+          "nctId": "NCT07905547",
+          "title": "A Study to Investigate Dupixent/ Dupilumab in Adult Indian Participants With Moderate-to-severe Atopic Dermatitis",
+          "status": "NOT_YET_RECRUITING",
+          "statusKr": "모집 전",
+          "phases": [
+            "PHASE4"
+          ],
+          "conditions": [
+            "Atopic Dermatitis"
+          ],
+          "sponsor": "Sanofi",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-10-28",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletion": {
+            "date": "2027-02-07",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-08-02",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of participants who Experienced Treatment-Emergent Adverse Events (TEAEs)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07905547"
+        },
+        {
+          "nctId": "NCT03428646",
+          "title": "Study of Patients Receiving DUPIXENT® for Atopic Dermatitis (AD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [],
+          "conditions": [
+            "Dermatitis, Atopic"
+          ],
+          "sponsor": "Regeneron Pharmaceuticals",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2018-04-06",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-03-30",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-07-28",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Registry Assessment: Baseline Characteristics",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT03428646"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "BIIB",
+      "asset": "lecanemab",
+      "disease": "신경계",
+      "modality": "항체",
+      "verifiedTrialCountInSearchWindow": 10,
+      "trials": [
+        {
+          "nctId": "NCT06602258",
+          "title": "A Study of E2814 With Concurrent Lecanemab Treatment in Participants With Early Alzheimer's Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Alzheimer's Disease"
+          ],
+          "sponsor": "Eisai Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-09-30",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-12-03",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-08-18",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change From Baseline in CSF MTBR-tau-243 at 6 Months",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06602258"
+        },
+        {
+          "nctId": "NCT03887455",
+          "title": "A Study to Confirm Safety and Efficacy of Lecanemab in Participants With Early Alzheimer's Disease",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Early Alzheimer's Disease"
+          ],
+          "sponsor": "Eisai Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-03-27",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-12-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2026-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Core Study: Change from Baseline in the CDR-SB at 18 Months",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT03887455"
+        },
+        {
+          "nctId": "NCT06871839",
+          "title": "The Clinical Study of Synaptic Plasticity-based Lencanumab for the Treatment of Early Alzheimer's Disease",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [],
+          "conditions": [
+            "Alzheimer&#39;s Disease",
+            "Lecanemab",
+            "Functional Magnetic Resonance Imaging"
+          ],
+          "sponsor": "Cuibai Wei，Clinical Professor",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-03-10",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-12-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2026-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Resting-state fMRI brain network metrics (Independent Component Analysis)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06871839"
+        },
+        {
+          "nctId": "NCT01760005",
+          "title": "Dominantly Inherited Alzheimer Network Trial: An Opportunity to Prevent Dementia. A Study of Potential Disease Modifying Treatments in Individuals at Risk for or With a Type of Early Onset Alzheimer's Disease Caused by a",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ],
+          "conditions": [
+            "Alzheimers Disease",
+            "Dementia",
+            "Alzheimers Disease, Familial"
+          ],
+          "sponsor": "Washington University School of Medicine",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2012-12",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-04",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-07",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Assess cognitive efficacy in individuals with mutations causing dominantly inherited AD as measured by the change from baseline in the DIAN-Multivariate Cognitive Endpoint (DIAN-MC",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT01760005"
+        },
+        {
+          "nctId": "NCT05269394",
+          "title": "Dominantly Inherited Alzheimer Network Trial: An Opportunity to Prevent Dementia. A Study of Potential Disease Modifying Treatments in Individuals With a Type of Early Onset Alzheimer's Disease Caused by a Genetic Mutati",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ],
+          "conditions": [
+            "Alzheimers Disease",
+            "Dementia",
+            "Alzheimers Disease, Familial"
+          ],
+          "sponsor": "Washington University School of Medicine",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2021-12-22",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-04",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-07",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "The primary end point is the change from Week 24 to Week 104 and Week 208 in tau PET in the Symptomatic Population (Cohort 1).",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05269394"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "VRTX",
+      "asset": "exagamglogene autotemcel",
+      "disease": "희귀·유전",
+      "modality": "유전자 편집",
+      "verifiedTrialCountInSearchWindow": 7,
+      "trials": [
+        {
+          "nctId": "NCT05329649",
+          "title": "Evaluation of Safety and Efficacy of CTX001 in Pediatric Participants With Severe Sickle Cell Disease (SCD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Sickle Cell Disease",
+            "Hydroxyurea Failure",
+            "Hydroxyurea Intolerance",
+            "Hemoglobinopathies",
+            "Hematological Diseases"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-05-02",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-06-06",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-06-06",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Proportion of Participants who do not Have any Severe Vaso-occlusive Crises (VOCs) for at Least 12 Consecutive Months (VF12)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05329649"
+        },
+        {
+          "nctId": "NCT05477563",
+          "title": "Evaluation of Efficacy and Safety of a Single Dose of CTX001 in Participants With Transfusion-Dependent β-Thalassemia and Severe Sickle Cell Disease",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Hematologic Diseases",
+            "Genetic Diseases, Inborn",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-08-02",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-06-09",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-06-09",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Fetal Hemoglobin (HbF) Concentration Over Time",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05477563"
+        },
+        {
+          "nctId": "NCT05356195",
+          "title": "Evaluation of Safety and Efficacy of CTX001 in Pediatric Participants With Transfusion-Dependent β-Thalassemia (TDT)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Genetic Diseases, Inborn",
+            "Hematologic Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-05-03",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-11-14",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-11-14",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Proportion of Participants who Achieve Transfusion Independence for at Least 12 Consecutive Months (TI12)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05356195"
+        },
+        {
+          "nctId": "NCT04208529",
+          "title": "A Long-term Follow-up Study in Participants Who Received CTX001",
+          "status": "ENROLLING_BY_INVITATION",
+          "statusKr": "초청 모집",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Sickle Cell Disease",
+            "Hematologic Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2021-01-20",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2039-09-30",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2039-09-30",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "New malignancies",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04208529"
+        },
+        {
+          "nctId": "NCT03745287",
+          "title": "A Safety and Efficacy Study Evaluating CTX001 in Subjects With Severe Sickle Cell Disease",
+          "status": "COMPLETED",
+          "statusKr": "완료",
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ],
+          "conditions": [
+            "Sickle Cell Disease",
+            "Hematological Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2018-11-27",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-07-07",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2025-07-07",
+            "type": "ACTUAL"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants Who Have Not Experienced Any Severe Vaso-occlusive Crisis (VOC) for at Least 12 Consecutive Months (VF12) After Exa-cel Infusion",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03745287"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "ALNY",
+      "asset": "vutrisiran",
+      "disease": "희귀·유전",
+      "modality": "RNA 간섭",
+      "verifiedTrialCountInSearchWindow": 4,
+      "trials": [
+        {
+          "nctId": "NCT04153149",
+          "title": "HELIOS-B: A Study to Evaluate Vutrisiran in Patients With Transthyretin Amyloidosis With Cardiomyopathy",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Transthyretin Amyloidosis (ATTR) With Cardiomyopathy"
+          ],
+          "sponsor": "Alnylam Pharmaceuticals",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-11-26",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2024-05-08",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-01-13",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Composite Endpoint of All-Cause Mortality and Recurrent Cardiovascular (CV) Events (CV Hospitalizations and Urgent Heart Failure [HF] Visits) in the Overall Population",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT04153149"
+        },
+        {
+          "nctId": "NCT07223203",
+          "title": "TRITON-PN: A Study to Evaluate the Efficacy and Safety of Nucresiran in Patients With Hereditary Transthyretin Amyloidosis With Polyneuropathy",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Hereditary Transthyretin-Mediated Amyloidosis With Polyneuropathy",
+            "hATTR-PN"
+          ],
+          "sponsor": "Alnylam Pharmaceuticals",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-02-03",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-12-27",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2031-06-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change from Baseline in the Modified Neuropathy Impairment Score +7 (mNIS+7) Compared to the External Placebo Group from the APOLLO Study (NCT01960348) at Month 9",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07223203"
+        },
+        {
+          "nctId": "NCT06679946",
+          "title": "A Study to Evaluate Vutrisiran in Patients With Transthyretin Amyloidosis With Cardiomyopathy",
+          "status": "ENROLLING_BY_INVITATION",
+          "statusKr": "초청 모집",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Transthyretin Amyloidosis (ATTR) With Cardiomyopathy"
+          ],
+          "sponsor": "Alnylam Pharmaceuticals",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-12-03",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-03-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-03-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Frequency of Adverse Events (AEs)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06679946"
+        },
+        {
+          "nctId": "NCT03759379",
+          "title": "HELIOS-A: A Study of Vutrisiran (ALN-TTRSC02) in Patients With Hereditary Transthyretin Amyloidosis (hATTR Amyloidosis)",
+          "status": "COMPLETED",
+          "statusKr": "완료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Amyloidosis, Hereditary",
+            "Transthyretin Amyloidosis"
+          ],
+          "sponsor": "Alnylam Pharmaceuticals",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-02-14",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2020-11-10",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2025-11-05",
+            "type": "ACTUAL"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change From Baseline in the Modified Neurologic Impairment Score +7 (mNIS+7) at Month 9 Between the Vutrisiran Group (HELIOS-A) and the External Placebo Comparator Group [APOLLO (N",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03759379"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "CRSP",
+      "asset": "exagamglogene autotemcel",
+      "disease": "희귀·유전",
+      "modality": "유전자 편집",
+      "verifiedTrialCountInSearchWindow": 7,
+      "trials": [
+        {
+          "nctId": "NCT05329649",
+          "title": "Evaluation of Safety and Efficacy of CTX001 in Pediatric Participants With Severe Sickle Cell Disease (SCD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Sickle Cell Disease",
+            "Hydroxyurea Failure",
+            "Hydroxyurea Intolerance",
+            "Hemoglobinopathies",
+            "Hematological Diseases"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-05-02",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-06-06",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-06-06",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Proportion of Participants who do not Have any Severe Vaso-occlusive Crises (VOCs) for at Least 12 Consecutive Months (VF12)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05329649"
+        },
+        {
+          "nctId": "NCT05477563",
+          "title": "Evaluation of Efficacy and Safety of a Single Dose of CTX001 in Participants With Transfusion-Dependent β-Thalassemia and Severe Sickle Cell Disease",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Hematologic Diseases",
+            "Genetic Diseases, Inborn",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-08-02",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-06-09",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-06-09",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Fetal Hemoglobin (HbF) Concentration Over Time",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05477563"
+        },
+        {
+          "nctId": "NCT05356195",
+          "title": "Evaluation of Safety and Efficacy of CTX001 in Pediatric Participants With Transfusion-Dependent β-Thalassemia (TDT)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Genetic Diseases, Inborn",
+            "Hematologic Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-05-03",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-11-14",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-11-14",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Proportion of Participants who Achieve Transfusion Independence for at Least 12 Consecutive Months (TI12)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05356195"
+        },
+        {
+          "nctId": "NCT04208529",
+          "title": "A Long-term Follow-up Study in Participants Who Received CTX001",
+          "status": "ENROLLING_BY_INVITATION",
+          "statusKr": "초청 모집",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Beta-Thalassemia",
+            "Thalassemia",
+            "Sickle Cell Disease",
+            "Hematologic Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2021-01-20",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2039-09-30",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2039-09-30",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "New malignancies",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04208529"
+        },
+        {
+          "nctId": "NCT03745287",
+          "title": "A Safety and Efficacy Study Evaluating CTX001 in Subjects With Severe Sickle Cell Disease",
+          "status": "COMPLETED",
+          "statusKr": "완료",
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ],
+          "conditions": [
+            "Sickle Cell Disease",
+            "Hematological Diseases",
+            "Hemoglobinopathies"
+          ],
+          "sponsor": "Vertex Pharmaceuticals Incorporated",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2018-11-27",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-07-07",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2025-07-07",
+            "type": "ACTUAL"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants Who Have Not Experienced Any Severe Vaso-occlusive Crisis (VOC) for at Least 12 Consecutive Months (VF12) After Exa-cel Infusion",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT03745287"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    },
+    {
+      "ticker": "SRPT",
+      "asset": "delandistrogene moxeparvovec",
+      "disease": "희귀·유전",
+      "modality": "유전자 치료",
+      "verifiedTrialCountInSearchWindow": 11,
+      "trials": [
+        {
+          "nctId": "NCT06128564",
+          "title": "A Gene Delivery Study to Evaluate the Safety and Expression of Delandistrogene Moxeparvovec in Participants Under the Age of Four With Duchenne Muscular Dystrophy (DMD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Duchenne Muscular Dystrophy"
+          ],
+          "sponsor": "Hoffmann-La Roche",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-11-29",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-03-04",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2030-02-12",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Percentage of Participants with a Treatment-emergent Adverse Event (TEAE), Serious Adverse Event (SAE), and Adverse Event of Special Interest (AESI)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06128564"
+        },
+        {
+          "nctId": "NCT05881408",
+          "title": "A Gene Transfer Therapy Study to Evaluate the Safety and Efficacy of Delandistrogene Moxeparvovec (SRP-9001) in Non-Ambulatory and Ambulatory Participants With Duchenne Muscular Dystrophy (DMD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Duchenne Muscular Dystrophy"
+          ],
+          "sponsor": "Sarepta Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2023-05-31",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-05-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-06-30",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Part 1: Change From Baseline in the Total Score of Performance of Upper Limb (PUL) (Version 2.0) at Week 72",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05881408"
+        },
+        {
+          "nctId": "NCT07542314",
+          "title": "Study to Evaluate the Safety and Effectiveness of ELEVIDYS in Participants With Duchenne Muscular Dystrophy Treated in a Post-Marketing Setting",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE4"
+          ],
+          "conditions": [
+            "Duchenne Muscular Dystrophy"
+          ],
+          "sponsor": "Sarepta Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2026-10-30",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletion": {
+            "date": "2027-08-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-08-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Cohort 1: Number of Participants with ALI",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07542314"
+        },
+        {
+          "nctId": "NCT04626674",
+          "title": "A Gene Transfer Therapy Study to Evaluate the Safety of and Expression From Delandistrogene Moxeparvovec (SRP-9001) in Participants With Duchenne Muscular Dystrophy (DMD) - Non-Ambulatory Cohort",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE1"
+          ],
+          "conditions": [
+            "Duchenne Muscular Dystrophy"
+          ],
+          "sponsor": "Sarepta Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2020-11-23",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-12-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-02-29",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Part 1 (Cohorts 1 to 5): Change from Baseline in Quantity of Delandistrogene Moxeparvovec Dystrophin Expression at Week 12, as Measured by Western Blot",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04626674"
+        },
+        {
+          "nctId": "NCT06270719",
+          "title": "An Observational Study Comparing Delandistrogene Moxeparvovec (ELEVIDYS) With Standard of Care in Participants With Duchenne Muscular Dystrophy",
+          "status": "ENROLLING_BY_INVITATION",
+          "statusKr": "초청 모집",
+          "phases": [],
+          "conditions": [
+            "Duchenne Muscular Dystrophy"
+          ],
+          "sponsor": "Sarepta Therapeutics, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2024-02-07",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-12-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2038-12-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Mean Change From Baseline in Time to Walk/Run 10 Meters (10MWR) (Calculated Velocity) at Month 12",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06270719"
+        }
+      ],
+      "status": "registered_trials_found",
+      "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
+    }
+  ],
   "errors": [],
+  "verifiedTrialCards": 59,
   "limitations": [
-    "신약 후보의 개발 단계·허가 여부는 실제 시험 등록 여부만으로 단정하지 않음",
-    "공식 임상 API를 사용한 갱신 실행 전 데이터 없음"
+    "시험 등록자료는 제출자 관리 정보로 임상 성공·승인·실제 투자 가치의 검증이 아님",
+    "개별 약물명 및 등록된 후원기관이 동시에 일치한 경우에만 연결",
+    "최근 업데이트된 검색 결과 중 최대 75건/질문만 검색하므로 전체 목록이 아님",
+    "Primary completion date는 예상(ESTIMATED)일 수 있음. 날짜와 상태는 갱신될 수 있음",
+    "FDA 허가 상태·실적 매출은 ClinicalTrials.gov 등록 여부에서 추정하지 않음"
   ]
 }

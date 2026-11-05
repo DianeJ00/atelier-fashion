@@ -1,39 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
-  "status": "not_configured",
-  "source": "Twelve Data time_series (승인된 외부 표시용 라이선스 필요)",
-  "priceConvention": "adjust=all 기준 총수익률 계산 예정. 실제 데이터가 없으면 수익률 표시하지 않음.",
+  "generatedAt": "2026-11-05T06:05:33.385136+00:00",
+  "status": "key_required",
+  "source": "Twelve Data time_series (외부 표시 라이선스 필요)",
+  "priceConvention": "adjust=all · 배당·분할 조정 종가 기준, 실제 제공 시에만 계산",
   "benchmarkSymbols": [
     {
       "ticker": "SPY",
-      "label": "미국 대형주",
-      "role": "시장 기준"
+      "label": "미국 대형주"
     },
     {
       "ticker": "QQQ",
-      "label": "대형 성장주",
-      "role": "성장주 비교"
+      "label": "대형 성장주"
     },
     {
       "ticker": "XLK",
-      "label": "미국 기술주",
-      "role": "기본 비교"
+      "label": "미국 기술주"
     },
     {
       "ticker": "XBI",
-      "label": "미국 바이오",
-      "role": "섹터 대리 ETF"
+      "label": "바이오 ETF 대리"
     },
     {
       "ticker": "XLY",
-      "label": "미국 경기소비재",
-      "role": "섹터 대리 ETF"
+      "label": "경기소비재 ETF 대리"
     },
     {
       "ticker": "XRT",
-      "label": "미국 유통",
-      "role": "패션 관련 섹터 대리 ETF"
+      "label": "미국 유통 ETF 대리"
     }
   ],
   "relativeTo": "XLK",
@@ -46,11 +40,13 @@
   ],
   "returns": {},
   "relative": {},
+  "weeklyBreadth": {},
+  "asOf": null,
+  "periodDates": {},
   "errors": [],
   "caveats": [
-    "ETF는 추적 기업의 동일가중 포트폴리오 수익률이 아님",
-    "미국 증시 가격·배당 조정 기준으로 비교 예정. 국내 담당 기업은 원화 수익률 및 USD 환산 별도",
-    "초과수익률은 섹터 관심·자금 유입을 직접 입증하지 않음",
-    "현재 실제 시세 연동 전이므로 수치는 표시하지 않음"
+    "XBI·XLY·XRT는 산업 대리 ETF이며 추적 기업의 동일가중 수익률이 아님",
+    "동일 날짜의 배당·분할 조정 종가로 비교; ETF 초과수익률은 자금 유입 증거가 아님",
+    "국내 종목의 USD 환산 수익률 및 개별 종목 상회 비율은 아직 계산하지 않음"
   ]
 }

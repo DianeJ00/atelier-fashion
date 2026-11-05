@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
-  "status": "not_configured",
-  "source": "Twelve Data adjust=all, 외부 공개 표시 허가 필수",
+  "generatedAt": "2026-11-05T06:05:47.194722+00:00",
+  "status": "key_required",
+  "source": "Twelve Data daily time_series (adjust=all)",
   "asOf": null,
   "benchmarkDates": {},
   "periods": [
@@ -18,7 +18,11 @@
   "updatedThisRun": 0,
   "errors": [],
   "limitations": [
-    "실시간 종목 상대수익률이 연결되지 않았음",
-    "허가된 시세 데이터가 없으면 가격·초과수익률·상회 비율을 추정하지 않음"
+    "동일 날짜의 배당·분할 조정 종가만 비교, 공시나 사업 성장의 직접 증거가 아님",
+    "API 이용 제한으로 매 실행마다 최대 8개(설정 변경 가능) 미국 종목 갱신",
+    "종목별 데이터 기준일이 달라질 수 있으므로 동일 날짜 자료만 업종 바스켓 산출",
+    "업종 동일가중 수익률은 추적 종목 바스켓이며 XBI·XLY·XRT ETF와 다름",
+    "한국 상장 5개는 KRW 원화 가격 및 USD 환산 경로가 검증될 때까지 제외",
+    "자금 유입·AI 투자에서의 자금 회전은 가격 수익률만으로 단정할 수 없음"
   ]
 }
