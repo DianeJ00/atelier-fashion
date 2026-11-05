@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T06:05:33.454727+00:00",
+  "generatedAt": "2026-11-05T06:13:53.700505+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -1959,6 +1959,10 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
+  "comparisonTo": "2026-11-05T06:05:33.454727+00:00",
+  "changeCount": 0,
+  "changes": [],
+  "changesNote": "이전 상위 등록시험 표본과 비교. 신규 포착은 신규 임상 개시를 뜻하지 않음.",
   "limitations": [
     "시험 등록자료는 제출자 관리 정보로 임상 성공·승인·실제 투자 가치의 검증이 아님",
     "개별 약물명 및 등록된 후원기관이 동시에 일치한 경우에만 연결",
