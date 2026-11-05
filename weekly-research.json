@@ -1,23 +1,10 @@
 {
-  "generatedAt": "2026-11-05T13:17:59.928629Z",
+  "generatedAt": "2026-11-05T13:28:44.146267Z",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-05",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
-    {
-      "id": "rss-6996d8e14041782",
-      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
-      "date": "2026-11-05T13:04:16Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "Finimize",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
     {
       "id": "rss-7fd0099aad78a0b",
       "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
@@ -27,6 +14,19 @@
       "ticker": "TPR",
       "brand": "",
       "creator": "Reuters",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-6996d8e14041782",
+      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+      "date": "2026-11-05T00:17:34Z",
+      "platform": "Google News",
+      "ticker": "TPR",
+      "brand": "",
+      "creator": "Finimize",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -492,8 +492,8 @@
       }
     ],
     "uncategorizedCount": 23,
-    "previousCollectedAt": "2026-11-05T07:14:26.574398Z",
-    "newSincePrevious": 4,
+    "previousCollectedAt": "2026-11-05T13:17:59.928629Z",
+    "newSincePrevious": 0,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -501,13 +501,13 @@
         "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+            "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
+            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
             "date": "2026-11-05"
           },
           {
-            "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
-            "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
+            "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
             "date": "2026-11-05"
           }
         ]

@@ -1,13 +1,58 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
-  "status": "not_collected",
-  "source": "OpenDART filings and accounts",
+  "generatedAt": "2026-11-05T13:29:43.264220+00:00",
+  "status": "key_required",
+  "source": "OpenDART corpCode, list and fnlttSinglAcntAll",
   "count": 5,
   "verified": 0,
-  "companies": [],
+  "companies": [
+    {
+      "ticker": "950260",
+      "name": "인제니아테라퓨틱스",
+      "status": "dart_key_required",
+      "report": null,
+      "statement": null,
+      "source": "https://dart.fss.or.kr/"
+    },
+    {
+      "ticker": "278470",
+      "name": "에이피알(APR)",
+      "status": "dart_key_required",
+      "report": null,
+      "statement": null,
+      "source": "https://dart.fss.or.kr/"
+    },
+    {
+      "ticker": "003230",
+      "name": "삼양식품",
+      "status": "dart_key_required",
+      "report": null,
+      "statement": null,
+      "source": "https://dart.fss.or.kr/"
+    },
+    {
+      "ticker": "105560",
+      "name": "KB금융",
+      "status": "dart_key_required",
+      "report": null,
+      "statement": null,
+      "source": "https://dart.fss.or.kr/"
+    },
+    {
+      "ticker": "005830",
+      "name": "DB손해보험",
+      "status": "dart_key_required",
+      "report": null,
+      "statement": null,
+      "source": "https://dart.fss.or.kr/"
+    }
+  ],
   "errors": [],
   "limitations": [
-    "공식 OpenDART 인증키와 수집 작업이 준비된 후에 실제 재무 수치를 표시합니다."
+    "OpenDART의 사업·반기·분기보고서만; 사내 최신 발표와 다를 수 있음",
+    "반기·분기 손익계산서의 당기금액은 3개월, 연간은 12개월. 비교기간이 없으면 성장률을 계산하지 않음",
+    "은행·보험 매출·NIM·CET1·K-ICS·CSM 및 신약승인 정보는 자동 추정하지 않음",
+    "DART_API_KEY는 서버 비밀값. 사이트·자료 JSON에 포함하지 않음",
+    "기존 비공개 한국 커버리지 브리프 원본은 연결되지 않음"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T13:19:12.052429+00:00",
+  "generatedAt": "2026-11-05T13:29:43.034728+00:00",
   "periodStart": "2026-10-26",
   "periodEnd": "2026-11-05",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
@@ -175,20 +175,20 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-6996d8e14041782",
-      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
-      "date": "2026-11-05",
-      "source": "Finimize",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
       "id": "rss-7fd0099aad78a0b",
       "title": "Tapestry lifts annual forecasts as young shoppers snap up Coach bags - Reuters",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
       "date": "2026-11-05",
       "source": "Reuters",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-6996d8e14041782",
+      "title": "Coach Kept Tapestry Growing While Kate Spade Slipped - Finimize",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG1NWVpXZWY0ZW9BLUZVSXQxNDZTUWpsVUgyT3FWOHV5c3VHYy1HS2IxLVlSQ3hxOG5NUFRjS21MLVJZN2ZMb0tVVXhxQTNkM0Y0TUFCa3IxWVNYTi1sZXRVMjNjU2dISXdrNGJlaG1yOE9FQ1R6QnVJd3RzRFA2cC1qSGo0czFu?oc=5",
+      "date": "2026-11-05",
+      "source": "Finimize",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
