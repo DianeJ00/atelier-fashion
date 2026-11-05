@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "periodStart": null,
+  "periodEnd": null,
+  "timezone": "UTC",
+  "title": "이번 주 투자 논리를 점검할 변화",
+  "items": [],
+  "itemCount": 0,
+  "bySector": {},
+  "reviewCandidates": [],
+  "upcomingClinical": [],
+  "staleConsumerKpi": [],
+  "sourceStates": {},
+  "coverage": {
+    "tracked": 52
+  },
+  "rules": [
+    "공식 자료 수집이 끝난 변경만 표시"
+  ]
+}
