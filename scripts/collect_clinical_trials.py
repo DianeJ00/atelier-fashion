@@ -131,7 +131,59 @@ def rank(study):
     date = (study.get("primaryCompletion") or {}).get("date")
     return (priority, "-" + (date or "9999-12-31"), study.get("nctId", ""))
 
+def registered_changes(previous, current):
+    """Compare only trials present in the prior and current *limited* sample.
+
+    A newly visible NCT could have existed for years: label 'newly observed',
+    not 'new trial'. Disappearing from a limited sample is NOT a termination.
+    """
+    before = {}
+    for item in previous.get("assets", []):
+        for trial in item.get("trials", []):
+            before[(item.get("ticker"), item.get("asset"), trial.get("nctId"))] = trial
+    if not before:
+        return []
+    changes = []
+    for item in current:
+        ticker, asset = item["ticker"], item["asset"]
+        for trial in item.get("trials", []):
+            nct = trial["nctId"]
+            old = before.get((ticker,asset,nct))
+            base = {"ticker":ticker,"asset":asset,"nctId":nct,"url":trial["url"],
+                    "sourceLastUpdate":trial.get("lastUpdatePost")}
+            if old is None:
+                changes.append({**base,"type":"표본에서 새로 포착",
+                                "detail":"이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"})
+                continue
+            if old.get("status") != trial.get("status"):
+                changes.append({**base,"type":"시험 진행 상태 변경",
+                                "before":old.get("statusKr") or old.get("status"),
+                                "after":trial.get("statusKr") or trial.get("status")})
+            if old.get("phases") != trial.get("phases"):
+                changes.append({**base,"type":"등록 단계 표시 변경",
+                                "before":",".join(old.get("phases") or []),
+                                "after":",".join(trial.get("phases") or [])})
+            prior_date=old.get("primaryCompletion") or {}
+            latest_date=trial.get("primaryCompletion") or {}
+            if (prior_date.get("date"),prior_date.get("type")) != (
+                latest_date.get("date"),latest_date.get("type")
+            ):
+                changes.append({**base,"type":"주요 완료일 등록 변경",
+                                "before":(prior_date.get("date") or "미기재")+" / "+(prior_date.get("type") or "미기재"),
+                                "after":(latest_date.get("date") or "미기재")+" / "+(latest_date.get("type") or "미기재")})
+            if not old.get("hasResultsPosted") and trial.get("hasResultsPosted"):
+                changes.append({**base,"type":"시험 결과 등록 표시 확인",
+                                "detail":"ClinicalTrials.gov에 결과가 등록됨. 통계적 유효성 확인이나 허가를 의미하지 않음"})
+    order={"시험 결과 등록 표시 확인":0,"시험 진행 상태 변경":1,"주요 완료일 등록 변경":2,
+           "등록 단계 표시 변경":3,"표본에서 새로 포착":4}
+    changes.sort(key=lambda x:(order.get(x["type"],5),x.get("sourceLastUpdate") or ""),reverse=False)
+    return changes[:30]
+
 def gather():
+    try:
+        previous = json.loads(OUT.read_text(encoding="utf-8"))
+    except (OSError,ValueError):
+        previous = {}
     raw = json.loads(SEEDS.read_text(encoding="utf-8"))
     seeds = raw.get("records", [])
     cache, err, assets = {}, [], []
@@ -167,11 +219,15 @@ def gather():
             "reviewNote": "약물·후원기관이 확인된 시험 등록만 표시. 다른 후원기관 시험이나 누락된 결과는 포함되지 않을 수 있음."
         })
     total = sum(len(x["trials"]) for x in assets)
+    changes=registered_changes(previous,assets)
     result = {
         "generatedAt": NOW.isoformat(), "source": "ClinicalTrials.gov API v2",
         "status": "partial" if err else "ok",
         "assets": assets, "errors": err,
         "verifiedTrialCards": total,
+        "comparisonTo": previous.get("generatedAt"),
+        "changeCount": len(changes), "changes": changes,
+        "changesNote": "이전 상위 등록시험 표본과 비교. 신규 포착은 신규 임상 개시를 뜻하지 않음.",
         "limitations": [
             "시험 등록자료는 제출자 관리 정보로 임상 성공·승인·실제 투자 가치의 검증이 아님",
             "개별 약물명 및 등록된 후원기관이 동시에 일치한 경우에만 연결",
