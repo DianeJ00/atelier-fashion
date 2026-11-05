@@ -1,9 +1,11 @@
 {
-  "generatedAt": "2026-11-04T23:34:48.811943+00:00",
-  "source": "YouTube Data API v3 / published top-level comments",
+  "generatedAt": "2026-11-05T00:02:19.634064+00:00",
+  "source": "YouTube Data API v3",
   "status": "key_required",
-  "method": "최근 영상별 최신순 상위 댓글 최대 60개에서 주제 단어 포함 건수만 집계. 답글·삭제 댓글은 제외.",
-  "caveat": "댓글은 자기선택 편향이 있는 비대표 표본. 단어 출현은 호감·구매·매출 증가 증거가 아니며 긍부정 자동 판단 없음.",
+  "method": "브랜드 상품 리뷰 후보 최대 5개를 공식 검색, 영상당 최근 공개 최상위 댓글 최대 60건의 주제 단어만 계산",
+  "caveat": "선정 영상은 협찬·광고·편향 여부를 확인하지 않았고 댓글은 비대표 표본. 자동 감성 판단·구매율 추정 금지.",
+  "quotaNote": "YouTube search.list 5회/실행은 일반적으로 약 500 API quota units를 사용. 공식 쿼터 확인 필요.",
   "videos": [],
-  "errors": []
+  "errors": [],
+  "searches": []
 }

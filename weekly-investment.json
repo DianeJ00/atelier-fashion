@@ -1,13 +1,25 @@
 {
-  "generatedAt": "2026-11-04T23:34:48.861164+00:00",
-  "periodStart": "2026-10-28",
-  "periodEnd": "2026-11-04",
-  "classification": "공식 재무 사실 + 미검증 자료 + 투자 검증 질문",
+  "highlights": [
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "VSXY",
+      "date": "2026-11-04",
+      "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
+      "context": "PINK 성장·정가 판매 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQ2RnZUtncXJ0SGVCRkJaSC12YW5ueGdoZncycnpQeklydmdMYWRTTnZpeDNVajI1REgwMk1hZTgwUGpGMVNiZlNDN0huWVdoemxjdnlqbmN3YlBwdnI3RnE3QXFrN1hqTXdTTjlqNmR1dXVRaU9rWkpMa2pIb3pIM0pOSFBqTzg1UnZzUWZORVVjNTMxM2RxeFpEMnJLbm9wUkkw?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    }
+  ],
+  "generatedAt": "2026-11-05T00:02:19.672465+00:00",
+  "periodStart": "2026-10-29",
+  "periodEnd": "2026-11-05",
+  "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
     "unverifiedHeadlines": 34,
     "commentVideosSampled": 0,
-    "commentSamples": 0
+    "commentSamples": 0,
+    "verifiedQuarters": 0
   },
   "secStatus": "configuration_required",
   "consumerStatus": "key_required",
