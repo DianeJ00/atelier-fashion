@@ -130,3 +130,14 @@
 .r2-disease-map span{font-size:11px;color:#627f9d}
 .r2-disease-map small{font-size:10px;color:#8298ad}
 @media(max-width:650px){.r2-disease-map{grid-template-columns:repeat(2,minmax(0,1fr))}.r2-index-strip small{font-size:9px}.r2-index-strip strong{font-size:14px}.r2-index-strip>div{padding:8px}}
+
+.r2-thesis-panel{margin-bottom:13px}
+.r2-thesis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.r2-thesis-row{border:1px solid #e2ebf4;background:#fafdff;border-radius:8px;padding:12px 14px;display:grid;gap:8px}
+.r2-thesis-row>div:first-child{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap}
+.r2-thesis-row>div:first-child b{font-size:12px;color:#265e9a}
+.r2-thesis-row>div:first-child small{font-size:11px;color:#788fa5}
+.r2-thesis-row p{font-size:12px;color:#3f5872;line-height:1.55;margin:0}
+.r2-thesis-row p strong{display:block;font-size:10px;color:#718ca6;margin-bottom:3px}
+.r2-thesis-row>div:last-child{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:auto}
+@media(max-width:720px){.r2-thesis-grid{grid-template-columns:1fr}}
