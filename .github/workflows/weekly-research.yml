@@ -42,6 +42,7 @@ jobs:
         run: |
           node tests/smoke_research2.cjs
           node tests/smoke_research3.cjs
+          node tests/smoke_navigation25.cjs
       - name: Test accounting-period alignment and source provenance
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Verify SEC filings and extract quarterly GAAP facts
