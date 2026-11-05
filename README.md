@@ -123,3 +123,18 @@ TikTok·Instagram·Reddit은 **수동 검토용 공개 링크**만 제공합니�
 - **YouTube 댓글 확인:** `consumer-samples.json`의 `status=sampled`(또는 `sampled_with_errors`)와 `videos` 항목을 확인합니다. `key_required`라면 `YOUTUBE_API_KEY`가 작업에 전달되지 않았습니다.
 - 비밀값은 저장소의 **Settings → Secrets and variables → Actions → Repository secrets**에 등록해야 합니다. 페이지 게시용 `github-pages` 환경의 Environment secrets에만 넣으면 이 파이프라인의 수집 작업에는 전달되지 않을 수 있습니다.
 - 설정값은 사용자 본인만 관리하고, 채팅이나 공개 코드에 붙여넣지 마세요. 변경 후 **Actions → ATELIER weekly research and site → Run workflow**를 다시 실행해 소스별 상태를 확인합니다.
+
+## 10. 원문 내용까지 정리한 주간 브리프
+
+이번 개편부터 첫 화면에는 단순 제목·수집 건수 대신 **관찰 내용 → 투자 연결 → 실적 검증 → 해석 한계**를 하나로 묶은 한국어 요약 카드(3~5개)를 표시합니다. 자료별 **출처, 날짜, 검증 상태, 관련 기업, 원문 링크**를 함께 표시합니다.
+
+- `editorial-brief.json`: 원문을 직접 대조해 작성한 초기 편집본 (2026-11-05: Lyst 3Q26, Capri FY27 2Q, Retail Dive Old Navy). **작성일과 자료 기준일을 명시**하며 매주 자동 수정됐다고 표시하지 않습니다.
+- `scripts/build_content_brief.py`: 직접 연결된 공개 RSS 기사를 선별하고, 원문 본문을 접근 허용 범위에서만 읽은 경우 요약합니다. 현재 자동 수집 경로는 Retail Dive 공개 RSS입니다. Google News 중계 링크·YouTube 제목·전문 매체 유료 본문은 읽은 것처럼 요약하지 않습니다.
+- `weekly-content.json`: 이번 주 편집본 + 원문 기반 AI 초안 + 분석 대기 목록. **원문·자막 전체 내용은 저장하거나 GitHub Pages에 게시하지 않습니다.**
+- **OPENAI_API_KEY** (선택): 발급 후 GitHub **Settings → Secrets and variables → Actions → Repository secrets**에 입력하세요. 기본 모델은 `gpt-4.1-mini`; API 사용량에 따라 별도 과금됩니다. 저장소 파일이나 이 채팅에 비밀키를 올리지 마세요.
+- API 키가 없는 경우 **편집 검증본만 공개**하고 신규 기사 제목은 *분석 대기*로 표시합니다. 편집본도 작성일이 이번 주 범위를 벗어나면 상단 노출에서 제외합니다.
+- API가 있더라도 **원문 접근이 불가능하거나 robots.txt가 허용하지 않으면 자동 요약하지 않습니다.** AI가 만든 요약은 **AI 원문 기반 초안·미검증**으로 표시합니다. 숫자와 인용 근거에 대해 최소한의 자동 검사를 하지만 사람의 사실 검증을 대체하지 않습니다.
+- 저작권을 보호하기 위해 기사 본문 전체, 영상 자막, 댓글 원문은 GitHub에 저장하지 않고, 짧은 독립 요약만 표시합니다.
+- 트렌드 화면의 미분석 크리에이터 영상은 접어둔 **원문 보관함**에서 확인할 수 있습니다. 이용자가 직접 보지 않은 동영상의 내용이나 댓글을 읽었다고 주장하지 않습니다.
+
+갱신 방식: GitHub **Actions → ATELIER weekly research and site → Run workflow** 수동 실행 또는 매주 월요일 09:00 한국 시간 자동 시도. Source-level errors는 API·사이트별 검증 상태를 확인해야 합니다.
