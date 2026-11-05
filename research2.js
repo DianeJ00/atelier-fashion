@@ -48,16 +48,25 @@ function marketPanel(){
  }).join('');
  return `<section class="r2-panel"><div class="r2-panel-head"><div><div class="r2-eyebrow">시장 대비 산업 상대강도</div><h2>AI·기술주 대비 바이오·소비재 관심의 확산</h2><p>미국 기술주 대비 산업 ETF 성과를 비교. 개별 기업 성과·자금 유입은 별도 확인</p></div></div>
  <div class="r2-toolbar"><span>비교 지수</span>${click(allowedBenchmarks,state.benchmark,'benchmark')}<span class="r2-spacer"></span><span>기간</span>${click(periods,state.period,'period')}</div>
- <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>최근 4주 상회</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+ <div class="r2-index-strip">${allowedBenchmarks.map(sym=>`<div><small>${sym} ${sym==='SPY'?'· 미국 대형주':sym==='QQQ'?'· Nasdaq-100':'· 정보기술'}</small><strong>${signed(priceReturn(sym))}</strong></div>`).join('')}</div>
+ <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>최근 4주 XLK 상회</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
  ${marketBanner()}
  <p class="r2-foot">SPY=S&P 500 대형주 · QQQ=Nasdaq-100 성장주 대리 · XLK=정보기술 업종 · XBI/XLY/XRT=업종 대리 ETF. '상회 4주'는 4개의 주간 구간 중 기술주 대비 강세인 주의 수이며 ETF 자금 유입을 뜻하지 않음.</p>
  </section>`;
+}
+function diseaseMap(){
+ const cats=['비만·대사','항암','면역·염증','신경계','희귀·유전','백신·감염'];
+ const bios=companies().filter(x=>x.sector==='바이오·제약');
+ return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 내부의 관심 분야</h3><p>질환별로 교차 분류한 추적 기업 수. 같은 회사가 여러 분야에 포함될 수 있습니다.</p></div></div>
+ <div class="r2-disease-map">${cats.map(x=>{const matches=bios.filter(c=>c.disease===x||c.secondaryDiseases?.includes(x));return `<button data-r2="diseaseJump" data-val="${esc(x)}"><b>${esc(x)}</b><span>${matches.length}개 기업</span><small>기업·치료 기술 살펴보기 →</small></button>`}).join('')}</div>
+ <p class="r2-foot">질환별 기업 수는 주가 성과가 아닙니다. 질환별 수익률은 개별 종목의 공식 시장 데이터와 노출도를 검증한 뒤 계산할 예정입니다.</p></section>`;
 }
 function overview(){
  if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
  return `<div class="r2-overview">
  <div class="r2-stats">${countBySector().map(x=>`<button class="r2-stat" data-r2="sector" data-val="${esc(x.s)}"><strong>${x.n}</strong><span>${esc(x.s)}</span><small>기업 보기 →</small></button>`).join('')}</div>
  ${marketPanel()}
+ ${diseaseMap()}
  <div class="r2-panel r2-shortcuts"><h3>산업별 분석 기준</h3>
  <div class="r2-shortcut-grid">
  <button data-r2="sector" data-val="바이오·제약"><b>바이오·제약</b><span>질환 → 약물·기술 → 임상·허가 → 현금</span></button>
@@ -158,6 +167,7 @@ function goSector(name){
 function renderCurrent(){if(typeof window.atelierRerender==='function')window.atelierRerender()}
 function act(kind,val){
  if(kind==='sector'){goSector(val);return}
+ if(kind==='diseaseJump'){state.disease=val;state.sector='바이오·제약';state.market='전체';state.search='';state.technology='전체';state.selected='';state.legacy=false;if(window.atelierGotoCompanies)window.atelierGotoCompanies();else renderCurrent();return}
  if(kind==='legacy'){if(typeof window.atelierLegacyFashion==='function')window.atelierLegacyFashion();return}
  if(kind==='company'){state.selected=val;state.detailTab='사업 이해'}
  else if(kind==='tab'){state.detailTab=val}
