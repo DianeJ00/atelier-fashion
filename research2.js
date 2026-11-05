@@ -28,17 +28,21 @@ function relative(sym,bench=state.benchmark,term=state.period){
  const x=priceReturn(sym,term),b=priceReturn(bench,term);
  return x===null||b===null?null:Math.round((x-b)*100)/100;
 }
-function marketReady(){return ['ok','partial'].includes(prices?.status)&&!!prices?.asOf}
+function marketReady(){return ['ok','partial','source_verified_snapshot'].includes(prices?.status)&&!!prices?.asOf}
 function marketBanner(){
+ if(prices?.status==='source_verified_snapshot')
+  return `<div class="r2-data-note r6-review-note"><b>기준일 ${esc(prices.asOf)} · 실제 확인된 ETF 시장가격 수익률</b> · 배당·수수료 제외 · 원문을 대조한 날짜 고정 스냅샷(매일 자동 갱신 아님). 
+  최신 시세는 아래 TradingView 제공 화면에서 확인할 수 있습니다. 시장 상대강도는 실제 자금 유입의 증거가 아닙니다.</div>`;
  const msg=prices?.status==='key_required'?'시세 API 미설정':
  prices?.status==='display_permission_required'?'외부 표시 라이선스 확인 필요':
  prices?.status==='unavailable'?'이번 수집에서 시세 확인 실패':
- prices?.status==='partial'?'일부 ETF 시세 미확인':'배당·분할 조정 종가 자료 대기';
- return `<div class="r2-data-note">${marketReady()?'기준 종가 '+esc(prices.asOf)+' · 배당·분할 조정 ·':esc(msg)+' ·'} ETF는 산업 대리 지표이며 52개 기업 동일가중 성과가 아닙니다. 해외 ETF와 국내 종목의 원화 수익률은 직접 비교하지 않습니다.</div>`;
+ prices?.status==='partial'?'일부 ETF 시세 미확인':'가격 시계열 확인 대기';
+ return `<div class="r2-data-note">${marketReady()?'기준 종가 '+esc(prices.asOf)+' · 배당·분할 조정 ·':esc(msg)+' ·'} ETF는 산업 대리 지표입니다. 가격 성과가 자금 유입을 입증하지 않으며 국내 종목과 통화·배당 기준이 다릅니다.</div>`;
 }
-
 function stockBreadthPanel(){
  const stats=stockData?.summary?.[state.benchmark]||{};
+ if(!stats||!Object.keys(stats).length)
+  return '<details class="r6-incomplete"><summary>추적 47개 미국 종목의 상대수익률 · 시세 공급원 연결 필요</summary><p>현재 업종별 동일가중 성과와 기술주를 상회한 기업 비율은 공백으로 계산하지 않습니다. 가격 시계열과 외부 표시 허용 계약이 준비되면 동일 기준일·환산 통화로 자동 수집할 예정입니다. 개별 기업은 공식 SEC 재무 실적과 별도로 확인할 수 있습니다.</p></details>';
  const groups=['바이오·제약','소비재·서비스','패션'];
  const rows=groups.map(group=>{
   const v=stats?.[group]?.[state.period]||{};
@@ -92,23 +96,30 @@ function clinicalPanel(){
 }
 
 function marketPanel(){
+ const reviewed=prices?.status==='source_verified_snapshot';
  const rows=industryProxies.map(x=>{
  const abs=priceReturn(x.symbol),rel=relative(x.symbol);
- const breadth=prices?.weeklyBreadth?.[x.symbol];
+ const source=prices?.referenceURLs?.[x.symbol];
  return `<tr><td><b>${esc(x.sector)}</b><small>${esc(x.label)}</small></td>
  <td class="r2-num ${abs===null?'':'r2-'+(abs>=0?'up':'down')}">${signed(abs)}</td>
  <td class="r2-num ${rel===null?'':'r2-'+(rel>=0?'up':'down')}">${signed(rel)}${rel!==null?'<em>p</em>':''}</td>
- <td class="r2-num">${breadth&&breadth.weeksCompared===4?breadth.weeksOutperformed+'/4주':'—'}</td>
+ <td>${source?`<a href="${url(source)}" target="_blank" rel="noopener noreferrer" class="r6-original">가격 원문 ↗</a>`:'<span class="r2-muted">자료 연결 대기</span>'}</td>
  <td><button class="r2-link" data-r2="sector" data-val="${esc(x.sector)}">기업 보기 →</button></td></tr>`;
  }).join('');
- return `<section class="r2-panel"><div class="r2-panel-head"><div><div class="r2-eyebrow">시장 대비 산업 상대강도</div><h2>AI·기술주 대비 바이오·소비재 관심의 확산</h2><p>미국 기술주 대비 산업 ETF 성과를 비교. 개별 기업 성과·자금 유입은 별도 확인</p></div></div>
+ const dates=prices?.periodDates||{};
+ const starts=dates[state.period];
+ const label=periods.find(x=>x[0]===state.period)?.[1]||'3개월';
+ const dateInfo=starts&&prices?.asOf?`<span class="r6-date">수익률 기간 ${esc(starts)} ~ ${esc(prices.asOf)}</span>`:'';
+ return `<section class="r2-panel r6-market"><div class="r2-panel-head"><div><div class="r2-eyebrow">01 · 시장 대비 산업 상대강도</div>
+ <h2>기술주 대비 바이오·소비재·패션의 상대수익률</h2><p>가격 수익률을 같은 시작·종료 날짜로 비교합니다. 초과수익률은 자금 유입의 증거가 아닙니다.</p></div></div>
  <div class="r2-toolbar"><span>비교 지수</span>${click(allowedBenchmarks,state.benchmark,'benchmark')}<span class="r2-spacer"></span><span>기간</span>${click(periods,state.period,'period')}</div>
- <div class="r2-index-strip">${allowedBenchmarks.map(sym=>`<div><small>${sym} ${sym==='SPY'?'· 미국 대형주':sym==='QQQ'?'· Nasdaq-100':'· 정보기술'}</small><strong>${signed(priceReturn(sym))}</strong></div>`).join('')}</div>
- <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>최근 4주 XLK 상회</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+ <div class="r6-period-line"><strong>${esc(label)}</strong>${dateInfo}</div>
+ <div class="r2-index-strip">${allowedBenchmarks.map(sym=>`<div><small>${sym} ${sym==='SPY'?'· S&P 500':sym==='QQQ'?'· 나스닥100':'· 정보기술 업종'}</small><strong>${signed(priceReturn(sym))}</strong></div>`).join('')}</div>
+ <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>근거</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
  ${stockBreadthPanel()}
  ${marketBanner()}
- <p class="r2-foot">SPY=S&P 500 대형주 · QQQ=Nasdaq-100 성장주 대리 · XLK=정보기술 업종 · XBI/XLY/XRT=업종 대리 ETF. '상회 4주'는 4개의 주간 구간 중 기술주 대비 강세인 주의 수이며 ETF 자금 유입을 뜻하지 않음.</p>
- </section>`;
+ <details class="r6-live-market" data-r6-live><summary>최신 ETF 시세·3개월 추이 확인 · TradingView 제공</summary><div class="r6-live-slot" data-r6-slot><p>선택하면 TradingView의 외부 시장 데이터 화면을 불러옵니다. 실시간/지연 여부와 시세 제공 조건은 해당 업체를 따릅니다.</p></div></details>
+ <p class="r2-foot">SPY=S&P 500 · QQQ=나스닥100 · XLK=기술주 · XBI=바이오 · XLY=경기소비재 · XRT=유통 업종 대리 ETF. ${reviewed?'원문 검토 스냅샷은 자동 갱신되지 않습니다. 시세 계약·재배포 권한 확인 전까지 매주 새로운 숫자를 확정값으로 표시하지 않습니다.':'업종별 ETF는 추적 기업 동일가중 바스켓이 아닙니다.'}</p></section>`;
 }
 function diseaseMap(){
  const cats=['비만·대사','항암','면역·염증','신경계','희귀·유전','백신·감염'];
@@ -295,11 +306,12 @@ document.addEventListener('input',e=>{
  const input=$('#r2-search');if(input){input.focus();try{input.setSelectionRange(pos,pos)}catch(_){}}
 });
 async function load(){
- const all=await Promise.all(['research-universe.json','market-relative.json','research-pipeline.json','clinical-trials.json','stock-relative.json'].map(async name=>{
+ const all=await Promise.all(['research-universe.json','market-relative.json','research-pipeline.json','clinical-trials.json','stock-relative.json','market-reviewed.json'].map(async name=>{
   try{const r=await fetch('./'+name,{cache:'no-store'});return r.ok?await r.json():null}catch(_){return null}
  }));
  db=all[0]?.companies?.length===52?all[0]:null;
- prices=all[1]||null;pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
+ prices=(['ok','partial'].includes(all[1]?.status)&&all[1]?.asOf)?all[1]:(all[5]?.status==='source_verified_snapshot'?all[5]:all[1]||null);
+ pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
  renderCurrent();
  if(window.ATELIER_CONSUMER?.load)window.ATELIER_CONSUMER.load();
  if(window.ATELIER3?.load)window.ATELIER3.load();
