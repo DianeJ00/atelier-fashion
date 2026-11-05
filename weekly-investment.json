@@ -1,13 +1,13 @@
 {
   "highlights": [
     {
-      "tier": "기사 제목·미검증",
+      "tier": "공식 공시",
       "ticker": "CPRI",
       "date": "2026-10-30",
-      "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
-      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+      "title": "SEC 10-Q 매출 USD 809.0M / 전년 대비 -5.5%",
+      "context": "Michael Kors 매출·정가 판매 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
+      "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm",
+      "note": "공식 공시 사실, 세부 원문 확인 필요"
     },
     {
       "tier": "기사 제목·미검증",
@@ -28,27 +28,56 @@
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-05T00:04:25.681305+00:00",
+  "generatedAt": "2026-11-05T02:08:24.672716+00:00",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-05",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
-    "newSECReports": 0,
+    "newSECReports": 1,
     "unverifiedHeadlines": 34,
     "commentVideosSampled": 0,
     "commentSamples": 0,
-    "verifiedQuarters": 0
+    "verifiedQuarters": 12
   },
-  "secStatus": "configuration_required",
+  "secStatus": "ok",
   "consumerStatus": "key_required",
   "companies": [
     {
+      "ticker": "CPRI",
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 809.0M / 전년 대비 -5.5%",
+      "officialPeriod": "2026-06-28~2026-09-26",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "reportEnd": "2026-09-26",
+        "accession": "0001530721-26-000094",
+        "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm"
+      },
+      "newsTitleCount": 2,
+      "nextCheck": "Michael Kors 매출·정가 판매",
+      "riskToTest": "브랜드 회복 지연",
+      "headline": {
+        "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
+        "date": "2026-10-30"
+      },
+      "consumerSampleCount": 0
+    },
+    {
       "ticker": "TPR",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.92B / 전년 대비 +21.2%",
+      "officialPeriod": "2025-12-28~2026-03-28",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000011/tpr-20260328.htm",
+      "latestReport": {
+        "form": "10-K",
+        "filed": "2026-08-13",
+        "reportEnd": "2026-06-27",
+        "accession": "0001116132-26-000018",
+        "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000018/tpr-20260627.htm"
+      },
       "newsTitleCount": 1,
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
@@ -61,11 +90,17 @@
     },
     {
       "ticker": "RL",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.96B / 전년 대비 +14.0%",
+      "officialPeriod": "2026-03-29~2026-06-27",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-08-06",
+        "reportEnd": "2026-06-27",
+        "accession": "0001628280-26-053992",
+        "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026053992/rl-20260627.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
@@ -78,11 +113,17 @@
     },
     {
       "ticker": "GAP",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 3.65B / 전년 대비 -2.0%",
+      "officialPeriod": "2026-05-03~2026-08-01",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-08-28",
+        "reportEnd": "2026-08-01",
+        "accession": "0001628280-26-059345",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
@@ -95,11 +136,17 @@
     },
     {
       "ticker": "URBN",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.66B / 전년 대비 +10.4%",
+      "officialPeriod": "2026-05-01~2026-07-31",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-09",
+        "reportEnd": "2026-07-31",
+        "accession": "0001193125-26-386468",
+        "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
@@ -112,11 +159,17 @@
     },
     {
       "ticker": "LEVI",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.61B / 전년 대비 +4.3%",
+      "officialPeriod": "2026-06-01~2026-08-30",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/94845/000009484526000047/lvis-20260830.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-07",
+        "reportEnd": "2026-08-30",
+        "accession": "0000094845-26-000047",
+        "url": "https://www.sec.gov/Archives/edgar/data/94845/000009484526000047/lvis-20260830.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
@@ -128,29 +181,18 @@
       "consumerSampleCount": 0
     },
     {
-      "ticker": "CPRI",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
-      "newsTitleCount": 2,
-      "nextCheck": "Michael Kors 매출·정가 판매",
-      "riskToTest": "브랜드 회복 지연",
-      "headline": {
-        "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
-        "date": "2026-10-30"
-      },
-      "consumerSampleCount": 0
-    },
-    {
       "ticker": "VFC",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 2.70B / 전년 대비 -3.8%",
+      "officialPeriod": "2026-06-28~2026-09-26",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-10-28",
+        "reportEnd": "2026-09-26",
+        "accession": "0000103379-26-000135",
+        "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
@@ -163,11 +205,17 @@
     },
     {
       "ticker": "ANF",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.27B / 전년 대비 +4.8%",
+      "officialPeriod": "2026-05-03~2026-08-01",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-04",
+        "reportEnd": "2026-08-01",
+        "accession": "0001018840-26-000047",
+        "url": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Hollister 동일매장매출·영업이익률",
       "riskToTest": "핵심 브랜드 성장 둔화",
@@ -180,11 +228,17 @@
     },
     {
       "ticker": "AEO",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.38B / 전년 대비 +7.5%",
+      "officialPeriod": "2026-05-03~2026-08-01",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/919012/000119312526387856/aeo-20260801.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-10",
+        "reportEnd": "2026-08-01",
+        "accession": "0001193125-26-387856",
+        "url": "https://www.sec.gov/Archives/edgar/data/919012/000119312526387856/aeo-20260801.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
@@ -197,11 +251,17 @@
     },
     {
       "ticker": "PVH",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 2.10B / 전년 대비 -3.2%",
+      "officialPeriod": "2026-05-04~2026-08-02",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-02",
+        "reportEnd": "2026-08-02",
+        "accession": "0000078239-26-000056",
+        "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
@@ -214,11 +274,17 @@
     },
     {
       "ticker": "VSXY",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 1.61B / 전년 대비 +10.4%",
+      "officialPeriod": "2026-05-03~2026-08-01",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-04",
+        "reportEnd": "2026-08-01",
+        "accession": "0001856437-26-000021",
+        "url": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm"
+      },
       "newsTitleCount": 2,
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
@@ -231,11 +297,17 @@
     },
     {
       "ticker": "CAL",
-      "officialStatus": "configuration_required",
-      "officialText": "SEC 분기 매출 확인 대기",
-      "officialPeriod": null,
-      "officialSource": null,
-      "latestReport": null,
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 695.5M / 전년 대비 +5.6%",
+      "officialPeriod": "2026-05-03~2026-08-01",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-09-10",
+        "reportEnd": "2026-08-01",
+        "accession": "0000014707-26-000144",
+        "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm"
+      },
       "newsTitleCount": 0,
       "nextCheck": "Famous Footwear 동일매장매출",
       "riskToTest": "매장 부진과 차입 부담",
@@ -243,7 +315,14 @@
       "consumerSampleCount": 0
     }
   ],
-  "latestSEC": [],
+  "latestSEC": [
+    {
+      "ticker": "CPRI",
+      "form": "10-Q",
+      "filed": "2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm"
+    }
+  ],
   "rules": [
     "10-Q 약 3개월 단위 US-GAAP 수치만 공식 실적 표시",
     "GAAP와 조정 실적, 다른 회계연도와 기간, 매출과 ARR 구분",

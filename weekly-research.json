@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T00:04:20.736716Z",
+  "generatedAt": "2026-11-05T02:08:11.884936Z",
   "periodStart": "2026-10-28",
   "periodEnd": "2026-11-05",
   "reviewStatus": "unverified_headlines_only",
@@ -79,7 +79,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -93,7 +93,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -198,7 +198,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -225,7 +225,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -244,6 +244,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-d5b34b855ee61ac",
+      "title": "Jude Bellingham Strips Down for Calvin Klein After Lighting Up the World Cup - ADWEEK",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa1BRbXN2eUpSb2FUQUNpUHZ6NmdMZTBRMjZYNFI1TG9Bbkctczd6a0x4NExmNW1zbHN5Q3dOUjhXUFJxS1RzZFBRRXdSendFLWd1WjNiTWpkX1ZDQ05MOWxGYnFVb09ZeU9ReFlzSnhqMGR2b2ExekdTMGt6Uzdod1BLRlZ2RUJkakNzam5ieHI1NGpuNWtTVHg0ZUYwbFVDcVUxOTh6dWV1UlBZcFNEdw?oc=5",
+      "date": "2026-11-02T13:30:00Z",
+      "platform": "Google News",
+      "ticker": "PVH",
+      "brand": "",
+      "creator": "ADWEEK",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-b7d1f23bcbd86dd",
       "title": "Bottega Veneta SS27 Outerwear Double As Dresses",
       "url": "https://www.youtube.com/watch?v=0CrnryIVUZQ",
@@ -252,7 +265,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -292,7 +305,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -402,19 +415,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-292ba68d8af83ba",
-      "title": "Calvin Klein Net Worth - Celebrity Net Worth",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd05tZjF0eW1TX21Mb1NZY1dIcUNsTnVERzFBVnlRYmtHQW1rdDRvSFB2UmZCeWhwU3NHY1UxMTlfamRVTW0zRVgtd09lOTZjUGZOaTluZExZcUpic1NKV1ZhYW9WQ3VIU2VUaC1FLXBhWm9ONWRSZFR6bEIwM3BkbGhaZFFab0JRbWRETTYzVWczWE1DWVhyU1RHVQ?oc=5",
-      "date": "2026-10-29T07:00:00Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "Celebrity Net Worth",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-11fed69c65e7099",
       "title": "Louis Vuitton Made The Trunk For The Ballon D’Or",
       "url": "https://www.youtube.com/watch?v=8tUnj2W1rEk",
@@ -423,7 +423,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 원문 제목 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -486,7 +486,7 @@
       }
     ],
     "uncategorizedCount": 20,
-    "previousCollectedAt": "2026-11-05T00:02:12.364268Z",
+    "previousCollectedAt": "2026-11-05T00:04:20.736716Z",
     "newSincePrevious": 1,
     "companyFocus": [
       {
