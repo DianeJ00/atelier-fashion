@@ -27,7 +27,8 @@ const click=(key,value)=>callbacks.click({
  let list=win.ATELIER2.companyPage();
  assert.ok(list.includes("Eli Lilly")&&list.includes("Walmart"));
  click("sector","바이오·제약");
- assert.ok(win.ATELIER2.companyPage().includes("치료 기술"));
+ assert.ok(win.ATELIER2.companyPage().includes("관심 질환"));
+ assert.ok(!win.ATELIER2.companyPage().includes('data-r2="technology"'));
  click("diseaseJump","비만·대사");
  assert.ok(win.ATELIER2.companyPage().includes("Viking Therapeutics"));
  click("company","US:LLY");
@@ -39,6 +40,11 @@ const click=(key,value)=>callbacks.click({
    if(first)assert.ok(win.ATELIER2.companyPage().includes(first.trials[0].nctId));
  }
  assert.ok(win.ATELIER2.weeklyIntro().includes("산업별 주간 리서치"));
+ click("weeklySector","바이오·제약");
+ assert.ok(win.ATELIER2.weeklyIntro().includes("등록시험 주요 변화"));
+ if(win.ATELIER2.clinical?.weeklyInterpretation?.length){
+   assert.ok(win.ATELIER2.weeklyIntro().includes("투자 검증"));
+ }
  click("sector","내 담당 기업");
  assert.ok(win.ATELIER2.companyPage().includes("인제니아테라퓨틱스"));
  let brief=win.ATELIER2.theses();
