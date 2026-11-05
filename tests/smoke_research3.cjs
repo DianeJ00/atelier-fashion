@@ -45,6 +45,10 @@ const click=(kind,id,choice)=>{
  await window.ATELIER3.load();
  assert.ok(window.ATELIER3.overview().includes("UBER · 매출"));
  assert.ok(window.ATELIER3.weekly("전체").includes("SEC 10-Q"));
+ assert.ok(window.ATELIER3.weekly("전체").includes("주간 보고서 저장"));
+ const markdown=window.ATELIER3.markdownReport("전체");
+ assert.ok(markdown.includes("SEC 10-Q")&&markdown.includes("공식 매출 증가"));
+ assert.ok(markdown.includes("투자 연결")&&markdown.includes("원문: https://www.sec.gov/test"));
  assert.ok(!window.ATELIER3.weekly("패션").includes("UBER · 매출"));
  const q=window.ATELIER3.secComparison("UBER");
  assert.ok(q.includes("+9.6%")&&q.includes("+4.3%"));
