@@ -61,7 +61,7 @@ function trialEvents(){
  .filter(x=>x.primaryCompletion?.date&&/^\d{4}-\d{2}/.test(x.primaryCompletion.date)&&x.primaryCompletion.date>=new Date().toISOString().slice(0,10))
  .sort((a,b)=>a.primaryCompletion.date.localeCompare(b.primaryCompletion.date)).slice(0,5);
  if(!upcoming.length)return `<div class="r2-empty">확인 가능한 임상 시험의 향후 주요 완료 예정일이 없습니다. 등록되지 않은 일정은 예측하지 않습니다.</div>`;
- return `<div class="r2-trial-events">${upcoming.map(x=>`<div><span>${esc(x.ticker)} · ${esc(x.asset)}</span><a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.nctId)} ↗</a><b>${esc(x.primaryCompletion.date)}</b><small>${x.primaryCompletion.type==='ESTIMATED'?'예상 완료일':x.primaryCompletion.type==='ACTUAL'?'실제 완료일':'완료일 구분 미기재'} · ${esc(x.statusKr||x.status)}</small></div>`).join('')}</div>`;
+ return `<div class="r2-trial-events">${upcoming.map(x=>`<div><span>${esc(x.ticker)} · ${esc(x.asset)}</span><a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">임상시험 원문 ↗</a><b>${esc(x.primaryCompletion.date)}</b><small>${x.primaryCompletion.type==='ESTIMATED'?'주요 평가 완료 예상 시점':x.primaryCompletion.type==='ACTUAL'?'등록된 주요 평가 완료 시점':'완료일 구분 미기재'} · ${esc(x.statusKr||x.status)}</small><small>등록번호 ${esc(x.nctId)}</small></div>`).join('')}</div>`;
 }
 function trialChangesBlock(){
  const changes=clinicalData?.changes||[];
@@ -75,15 +75,17 @@ function clinicalDigest(){
  const entries=clinicalData?.weeklyInterpretation||[];
  if(!entries.length)return `<div class="r2-empty">이번 주 등록시험 해석 자료를 준비 중입니다. 시험 검색 원문은 기업별 화면에서 확인할 수 있습니다.</div>`;
  return `<div class="r2-clinical-digest">${entries.slice(0,4).map(x=>`<article class="r2-clinical-insight">
- <div class="r2-clinical-insight-meta"><span>${esc(x.type)}</span>${x.nctId?`<a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.nctId)} 원문 ↗</a>`:''}</div>
+ <div class="r2-clinical-insight-meta"><span>${esc(x.type)}</span>${x.url?`<a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">시험 등록정보 확인 ↗</a>`:''}</div>
  <h4>${esc(x.title)}</h4><p>${esc(x.observation)}</p>
- <p><b>투자 검증</b> · ${esc(x.investmentCheck)}</p>
+ ${x.explain?`<p class="r2-clinical-explain">${esc(x.explain)}</p>`:''}
+ <p><b>다음에 확인할 것</b> · ${esc(x.investmentCheck)}</p>
  <small>${esc(x.limitation)}</small>
+ ${x.nctId?`<small>시험 등록번호: ${esc(x.nctId)} · 원문 추적용 번호</small>`:''}
  </article>`).join('')}</div>`;
 }
 
 function clinicalPanel(){
- return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 임상시험 일정</h3><p>ClinicalTrials.gov 등록 자료 기준. 시험 완료 예정일은 임상 결과 발표일이 아닙니다.</p></div><span class="r2-asof">${esc(clinicalData?.generatedAt?.slice(0,10)||'미수집')}</span></div>
+ return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 치료제 개발·시험 일정</h3><p>어떤 질환에 대한 연구인지와 다음에 확인할 결과를 먼저 설명합니다. 자세한 시험 등록번호는 원문 링크에 표시합니다.</p></div><span class="r2-asof">${esc(clinicalData?.generatedAt?.slice(0,10)||'미수집')}</span></div>
  ${clinicalDigest()}
  <details class="r2-clinical-raw"><summary>등록시험 변경 내역·일정 원자료 펼치기</summary>${trialChangesBlock()}${trialEvents()}</details>
  <p class="r2-foot">등록 시험 ${Number(clinicalData?.verifiedTrialCards)||0}건(상위 표본) · 임상 데이터 상태 ${esc(clinicalData?.status||'조회 전')} · 원문 상태·후원기관 대조, 적응증별 데이터는 계속 보완 중</p></section>`;
@@ -169,9 +171,9 @@ function drugPanel(company){
   const trials=item?.trials||[];
   return `<div class="r2-asset-card"><div class="r2-asset-head"><b>${esc(r.asset)}</b>${pill(r.modality)}<a href="${url(r.link)}" target="_blank" rel="noopener noreferrer">전체 검색 ↗</a></div>
   ${trials.length?`<div class="r2-trial-grid">${trials.map(t=>`<div class="r2-trial-row">
-    <div><a href="${url(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.nctId)}</strong></a> ${pill((t.phases||[]).join('·')||'단계 미기재')} ${pill(t.statusKr||t.status||'상태 미기재')}</div>
+    <div><a href="${url(t.url)}" target="_blank" rel="noopener noreferrer"><strong>시험 상세 ↗</strong></a> ${pill((t.phases||[]).map(z=>({'PHASE3':'3상','PHASE2':'2상','PHASE1':'1상','PHASE4':'4상'}[z]||z)).join('·')||'단계 미기재')} ${pill(t.statusKr||t.status||'상태 미기재')}</div>
     <p>${esc(t.title)}</p>
-    <small>등록 후원: ${esc(t.sponsor||'확인 필요')}</small>
+    <small>등록 기관: ${esc(t.sponsor||'확인 필요')} · 원문 식별번호 ${esc(t.nctId)}</small>
     <small>주요 완료: ${trialDate(t.primaryCompletion)} · 결과 등록 ${t.hasResultsPosted?'있음':'확인 안 됨'}</small>
     ${t.primaryMeasure?`<small>주요 평가변수: ${esc(t.primaryMeasure)}</small>`:''}
     </div>`).join('')}</div>`:
@@ -254,7 +256,7 @@ function weeklyIntro(){
  ["내 담당 기업","원본 브리프와 DART 실적 비교","비공개 원문 연결 대기"]
  ].map(x=>`<div class="r2-weekly-tile"><b>${esc(x[0])}</b><p>${esc(x[1])}</p><small>${esc(x[2])}</small></div>`).join('')}</div>`:
  `<div class="r2-weekly-single"><b>${esc(state.weeklySector)}</b><p>${bio?health:state.weeklySector==='패션'?'아래에 기존 원문 대조 보고서를 표시합니다.':'공식 원문에 근거한 운영 KPI 분석을 연결하는 중입니다. 제목만으로 리서치를 생성하지 않습니다.'}</p></div>`}
- ${bio?`<div class="r2-weekly-clinical"><h3>등록시험 주요 변화 · 결과 발표일 아님</h3>
+ ${bio?`<div class="r2-weekly-clinical"><h3>바이오 신약 개발, 이번 주 확인할 것</h3>
  ${clinicalDigest()}
  <details class="r2-clinical-raw"><summary>NCT별 변경·완료 예정일 자세히 보기</summary>${trialChangesBlock()}${trialEvents()}</details>
  <p class="r2-foot">시험 상태·날짜는 제출자가 갱신한 등록정보입니다. 효과·안전성·기업가치 영향은 임상 결과 자료로 별도 검증해야 합니다.</p></div>`:''}
