@@ -300,3 +300,18 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - 검증: 기존 `smoke_research2.cjs`, `smoke_research3.cjs`뿐 아니라 `smoke_navigation25.cjs`에서 **4개 메뉴, 첫 화면 순서, 중복 없는 회사별 투자 판단, 임상·소비재 상세 접기**를 확인합니다.
 
 **수치 해석:** 업종 대리 ETF가 기술주보다 높게 올랐다는 사실만으로 'AI에서 자금이 실제 이동했다'고 단정하지 않습니다. 자료 제공자의 공개 표시 권한이 확보되지 않았거나 가격 데이터가 없으면 `—`를 표시합니다.
+
+## 18. ATELIER 2.6 — 시장 실수치·미완료 데이터 감사
+
+**2026-11-05 도입. 공식 자료와 기간을 분리해 표시하며, 사용 허가 없는 시세의 무단 재배포는 하지 않음.**
+
+- **시장 상대강도에 실제 수익률 표시:** `market-reviewed.json`은 Raymond James/Barchart 제공 ETF 가격 페이지의 **2026-11-04 종가 기준** SPY, QQQ, XLK, XBI, XLY, XRT 등 6개 종목에 대해 1주·1개월·3개월·6개월·1년 가격변화율을 원문 대조해 기록. 분배금·세금·수수료 제외 **가격 수익률**이며, 자동 갱신 자료가 아닌 **날짜 고정 스냅샷**임을 분명히 표시.
+- **기술주 대비 상대수익률:** 동일 기간 ETF 가격 수익률 차이(퍼센트포인트). 현재 3개월 기준 XBI +4.75%, XLK -5.56% ⇒ XBI 초과 +10.31%p, XLY +3.42% ⇒ +8.98%p, XRT +1.48% ⇒ +7.04%p. 이는 자금 이동·고객 관심 증거가 아님. ETF는 ATELIER 47개 추적 종목의 동일가중 바스켓이 아님.
+- **외부 공급사 최신 화면:** `market-live.js`가 TradingView의 공식 임베드 위젯을 사용해 ETF 가격·추이를 별도 제공. 사용자 확장 시에만 로드하며 자체 시세 수집/재배포하지 않음. 시세 지연·사용조건은 제공사의 표시 기준.
+- **장기 자동 주가 수집의 미완료 조건:** `TWELVEDATA_API_KEY` 및 외부 표시 이용권 `MARKET_DATA_DISPLAY_OK`가 모두 설정돼야 `market-relative.json`의 같은 거래일·기간·배당조정 종가가 자동 갱신됨. 개별 47개 미국 종목 상대수익률도 같은 권한 조건 필요. 자동 실시간 가격을 제공하는 것처럼 설명하지 않음.
+- **신약 관찰 12개 약물:** `scripts/build_pipeline_review.py`는 `clinical-trials.json`의 공식 등록시험 표본에서 각 약물·회사 기준 확인된 가장 높은 시험 단계를 `research-pipeline.json`에 연결. 1~4상은 **개별 등록시험의 단계**이며 FDA·EMA 승인, 해당 적응증 전체 단계 또는 실적 증가를 의미하지 않음.
+- **미국 바이오 20개 SEC 공식 GAAP:** `scripts/collect_biotech_official.py`는 SEC에 신고된 10-Q·US-GAAP 3개월 수치만 `biotech-financials.json`에 저장하고, `scripts/build_sec_trends.py`의 동기간 전년 동기/직전 분기 비교 대상에 추가. 없으면 공란 또는 이전 확인 수치로 표시하며 외삽하지 않음.
+- **미완료 작업 투명화:** `data-health.json`과 자료실 `health.js` 패널에서 데이터별 최근 확인 날짜·확인 기업 수·자동 또는 편집 스냅샷·필요한 API/원문을 표시. 특히 소비재 15개 운영 KPI 공식 후속 분기 갱신, 패션 원문 자동 요약(OPENAI_API_KEY 필요), 국내 5개 DART·원본 브리프, 개별 47개 시세 등은 잔여 작업으로 구분.
+- **운영:** 매주 월요일 09:00 KST와 수동 재수집 또는 `[research refresh]` 커밋에서 전체 수집 후 GitHub Pages 게시. 일반 코드 푸시에서는 데이터 파일을 덮어쓰지 않음.
+
+시장 원문: [XLK](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLK) · [XBI](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XBI) · [XLY](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XLY) · [XRT](https://raymondjames.websol.barchart.com/?1_selected=etfQuote&module=etfDetail&region=US&symbol=XRT), 가격 제공 Barchart WebSol.
