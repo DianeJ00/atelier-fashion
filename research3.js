@@ -3,6 +3,7 @@
 let report=null,gaap=null;
 const KEY="ATELIER_V23_THESIS_LOCAL_ONLY";
 let records={};
+const drafts={};
 try{records=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(_){records={}}
 const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const uri=s=>{try{const u=new URL(s);return u.protocol==="https:"?u.href:"#"}catch{return "#"}};
@@ -69,6 +70,7 @@ function recordCard(company,compact=false){
  const id=company.id;
  const proposal=reviewFor(id);
  const old=records[id]||{};
+ const selection=drafts[id]?.choice||old.choice||"";
  const source=proposal?.sourceUrl;
  const choices=["판단 보류","강화","유지","약화"];
  return '<div class="a3-review-card"><div class="a3-review-head"><div><b>'+esc(company.ticker)+'</b><span>'+esc(company.name)+'</span></div>'+statusLine(id)+'</div>'+
@@ -77,8 +79,8 @@ function recordCard(company,compact=false){
  (proposal?'<div class="a3-review-change"><b>새로 확인된 근거</b><p>'+esc(proposal.change)+' · '+esc(proposal.evidenceDate)+'</p><a href="'+uri(source)+'" target="_blank" rel="noopener noreferrer">공식·편집 원문 ↗</a><small>이 변화로 투자 논리가 강화·약화됐다는 결론은 아님.</small></div>':
  '<div class="a3-review-change a3-no-change">이번 주 검증된 변경 근거 없음 · 기존 가설 재확인 대기</div>')+
  '<div class="a3-review-choices" aria-label="'+esc(company.ticker)+' 담당자 판단">'+choices.map(c=>
- '<button data-a3="choose" data-id="'+esc(id)+'" data-choice="'+esc(c)+'" class="'+((old.choice||"")===c?"is-selected":"")+'">'+esc(c)+'</button>').join("")+'</div>'+
- (!compact?'<label class="a3-review-note">담당자 판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="공식 근거와 다음 확인 조건을 직접 기록하세요. 이 브라우저에만 저장됩니다.">'+esc(old.note||"")+'</textarea></label>':
+ '<button data-a3="choose" data-id="'+esc(id)+'" data-choice="'+esc(c)+'" class="'+(selection===c?"is-selected":"")+'">'+esc(c)+'</button>').join("")+'</div>'+
+ (!compact?'<label class="a3-review-note">담당자 판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="공식 근거와 다음 확인 조건을 직접 기록하세요. 이 브라우저에만 저장됩니다.">'+esc(drafts[id]?.note??old.note??"")+'</textarea></label>':
  '<label class="a3-review-note">판단 근거<textarea data-a3-note="'+esc(id)+'" rows="2" placeholder="브라우저 로컬 기록">'+esc(old.note||"")+'</textarea></label>')+
  '<div class="a3-review-actions"><button data-a3="save" data-id="'+esc(id)+'">내 판단 저장</button><button data-a3="clear" data-id="'+esc(id)+'" class="a3-clear">로컬 기록 지우기</button></div>'+
  '<p class="a3-small">이 기록은 현재 브라우저에만 보관되며 공개 GitHub·다른 기기에 동기화되지 않습니다.</p></div>';
@@ -95,8 +97,9 @@ function overview(){
  return weekly("전체",true);
 }
 function saveChoice(id,choice){
- const note=document.querySelector('[data-a3-note="'+id+'"]')?.value||records[id]?.note||"";
+ const note=document.querySelector('[data-a3-note="'+id+'"]')?.value??drafts[id]?.note??records[id]?.note??"";
  records[id]={choice,note:note.slice(0,2500),at:new Date().toISOString()};
+ delete drafts[id];
  try{localStorage.setItem(KEY,JSON.stringify(records))}catch(_){}
  if(window.atelierRerender)window.atelierRerender();
 }
@@ -107,11 +110,11 @@ document.addEventListener("click",e=>{
  if(kind==="choose"){
    const note=document.querySelector('[data-a3-note="'+id+'"]')?.value||records[id]?.note||"";
    // Selection in memory; explicit save button persists.
-   records[id]={...(records[id]||{}),choice:b.dataset.choice,note,at:records[id]?.at||""};
+   drafts[id]={choice:b.dataset.choice,note};
    if(window.atelierRerender)window.atelierRerender();
- }else if(kind==="save")saveChoice(id,records[id]?.choice||"판단 보류");
+ }else if(kind==="save")saveChoice(id,drafts[id]?.choice||records[id]?.choice||"판단 보류");
  else if(kind==="clear"){
-   delete records[id];try{localStorage.setItem(KEY,JSON.stringify(records))}catch(_){}
+   delete records[id];delete drafts[id];try{localStorage.setItem(KEY,JSON.stringify(records))}catch(_){}
    if(window.atelierRerender)window.atelierRerender();
  }else if(kind==="openWeekly"){
    if(window.atelierGotoWeekly)window.atelierGotoWeekly();
