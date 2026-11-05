@@ -34,6 +34,12 @@ jobs:
         run: python scripts/collect_weekly.py
       - name: Verify Python source syntax
         run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py
+      - name: Set up Node.js for UI smoke tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test multi-sector UI interactions
+        run: node tests/smoke_research2.cjs
       - name: Test accounting-period alignment and source provenance
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Verify SEC filings and extract quarterly GAAP facts
