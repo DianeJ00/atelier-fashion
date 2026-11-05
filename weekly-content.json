@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T02:08:24.533076+00:00",
+  "generatedAt": "2026-11-05T02:10:52.705022+00:00",
   "periodStart": "2026-10-26",
   "periodEnd": "2026-11-05",
   "summaryPolicy": "원문이 확보된 경우만 요약. AI 초안은 검증 전이며 패션 크리에이터 영상 제목만으로 내용을 추정하지 않음.",
@@ -58,8 +58,117 @@
     }
   ],
   "autoItems": [],
-  "pending": [],
-  "pendingCount": 0,
+  "pending": [
+    {
+      "id": "rss-6f638d916c4b0ff",
+      "title": "What American Eagle Outfitters Holders Got Right - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQT1NQOHcyc0M0aFJ0ZWlDOWNfTGN3U0xHUE5HSGxuTlNhLXBhMzRvZldOMG1iR0d3WXFibFNLaTlJb2t3RU1wNnhXNVNiZmpUSTdRZmVWQkFDU3ZjbkJ4YnJCbDBNbXVlcS14Zk1qYkdDeEFXRHhQQXhfVUEybTdza2txa0RONmI3R2V2XzRoX0tQbXB3bnd1bzRUaVdxYTJzQWIya2JkSFVEUHQ3MkYzNUt1WFJVUGw1bzhEblNrZGJWYXkxTWfSAcsBQVVfeXFMTkNQVDZCckZBTWY5VjM2RWE2LU1rcG9FdmQyX2FzNDRKdVA1Vm8zMHZwVnRoLXM0QWZPYmd3dUtEVkJZdVpjb2NlOGYzY29ZSWJRZmNhdVVLSHBSMWd3U2dPUE8xLU5hY1FkSkpILVFDUXpkTUJBX1NwQTU0dl9pWnVoMkV0V3JGT2wxSXhJYUV0MmhfbUcxODBwV1NHVklHWmI1akROcnpIVkw3bGs1dFNXa185Z0w2S3F0NTB5bnMwNjM5T19KZ0ZwLVE?oc=5",
+      "date": "2026-11-04",
+      "source": "Simply Wall St",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-6bd72c50fb616d2",
+      "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQ2RnZUtncXJ0SGVCRkJaSC12YW5ueGdoZncycnpQeklydmdMYWRTTnZpeDNVajI1REgwMk1hZTgwUGpGMVNiZlNDN0huWVdoemxjdnlqbmN3YlBwdnI3RnE3QXFrN1hqTXdTTjlqNmR1dXVRaU9rWkpMa2pIb3pIM0pOSFBqTzg1UnZzUWZORVVjNTMxM2RxeFpEMnJLbm9wUkkw?oc=5",
+      "date": "2026-11-04",
+      "source": "Yahoo Finance",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-bbf88fa138a5331",
+      "title": "Dallas Cowboys player CeeDee Lamb helped design an Abercrombie line featuring his No. 88. - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQU9VY0dGOFNIbzFYUUVvRDBBMEp0SXJFeUI1aElQRzN5ajVrMEZHQnZ3dXQtMnlaMDJTVkdEdmpJZTltUXY0NlpITms4c1Uwa3FhLWxiX25iWHAxb3lMY1BBT3JmTXctQTZQM3hyNVhBd0lyWU1rdEVRLUZnX2VFdzBIMHRqN2x2OVdTNzNaQXFTY0xkaW1QeE9Ja3N3SW42LUNkeHd4N21IcjJ4a1BrOUJYNElIX3dI?oc=5",
+      "date": "2026-11-04",
+      "source": "Stock Titan",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-79f91885d638102",
+      "title": "How Fashion Has ‘Turbocharged’ Its Diwali Marketing - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQW5YOVYteS04QTdCZkI4WTNNenJYSVM1XzNFSnFMVlpGOFdaMk1ERHdabFRiUk5XZUdGcTBncXJ1NDBEbDZRZXhOZkZDcVNyNWlGMGhxRXBFQTd6SHRCUHFrZ1BKXzhKay1aY1pGRENOTm9uazhKVWpJU2dwRl9DRktwVThFU0tlV3VDcHlGenE1WGs3RVMxeWphOXhTU3c?oc=5",
+      "date": "2026-11-04",
+      "source": "The Business of Fashion",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-0ebf6c2d6d9794f",
+      "title": "Ralph Lauren (RL) Q3 earnings report preview: what to look for - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV0hSNnp4UGdiWEJmaE5TVFVCYWw5Y2pUbWt2bkhSQ0l6VEx4cWRyUXNSSEFIb0UyVnAzMVR6NlZ6Q0t6S04xVHJldE45WGJnRHNTMDBQaTdRZmRUT3pJLU5DRDRvWDRIQ3hlbUJWaVdNY0VGU0U5UE91dkktdlJURFhJeFhleGNTX18zNnZuQnVJbm9ESE9JREwtdnBOUTQ1ZFlMajlJTmllVFBpckZMc3VVcFZBRWVEaWp5Mw?oc=5",
+      "date": "2026-11-04",
+      "source": "TradingView",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-77598da43620ed4",
+      "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
+      "date": "2026-11-03",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-f1a8b314babece7",
+      "title": "Ledbyher On Her Love For Fashion",
+      "url": "https://www.youtube.com/watch?v=Zz85DAl0dGQ",
+      "date": "2026-11-03",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-7140b71d4623b2c",
+      "title": "Operations Director On How Fashion Week Is Organised",
+      "url": "https://www.youtube.com/watch?v=9H5MOcJ5M_Y",
+      "date": "2026-11-03",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-4cbde890c13b0a0",
+      "title": "Victoria's Secret, IBD Stock Of The Day, Near Buy Point As Vamped-Up Wares Get Results - Investor's Business Daily",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZmw4cVpxcUVzS1VydHpkMjNENGN2MkZJUjN2YzhoMlN3ZVprWV9mSjBEU1ViazVwNGFiemZOdjcyRVlVSm1Oand4UzhMNWpLX0NwaHF2NGdXSXBVOUY4UDJNOFVlenliRjhZcUpyQUFwSlA1QlRqYUI4bmlZZWY1TF9IekVHSEljcU9TZ3hEQ01yUVgtOGdQamd2OGIxbUxLbV9PNDNTYmw?oc=5",
+      "date": "2026-11-03",
+      "source": "Investor's Business Daily",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-92bfe800826432e",
+      "title": "Best Dressed at CFDA Awards 2026 - WWD",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRXNtS0RiSWV4SDh1SDI1cWNKZG51Mm1zN2NLWE1aZGlTTERZTUhBZTlpWlZTeWlFaTZVQmYyaWZlYzRoSkY0enhnR3JPQ2czQkRvNm8tZEFyaWV6dUR6SVZXMUpPcmpRanBPeUNPYjFfdC1OeDhXNWtNVGRGZm5zbE5LZkJOWVFsc2ZzbjEwNTdtRHducnBIdmlkc1o?oc=5",
+      "date": "2026-11-03",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-07e98644ff5b6ee",
+      "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
+      "date": "2026-11-03",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-7b66e2f82ee58f5",
+      "title": "AI Strategy Lessons From Coach, Walmart And A Small Golf Brand - Forbes",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQV211Mlpoc01FRVdJTlFFOTRvbkxqMzEyM3JIam02eldRUjZ2aG03eUg5ZHZtcFJjbnI5MnJUanlBREVMb1NFc0pkRnp4eWMzQ1NicTI1c0hKZVE2dWFCNjRvdnhfRHctWlVPbWR5Y3pCZnhlUTNXanEtWmxhMXFzOGc1ak9WdzhBckdyR2tWbFp1bjNMTG0xdnl6UW9KNjdVai1sYUtWTThVMVdZOGMwNHZWRFM?oc=5",
+      "date": "2026-11-03",
+      "source": "Forbes",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    }
+  ],
+  "pendingCount": 34,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",
