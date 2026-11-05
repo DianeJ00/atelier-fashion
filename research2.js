@@ -5,7 +5,7 @@ const esc=x=>String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const url=s=>{try{const u=new URL(s);return u.protocol==='https:'?u.href:'#'}catch{return '#'}};
 const fmt=(n,d=1)=>Number.isFinite(n)?n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
 const signed=n=>Number.isFinite(n)?(n>0?'+':'')+fmt(n,2)+'%':'—';
-let db=null,prices=null,pipeline=null;
+let db=null,prices=null,pipeline=null,clinicalData=null,stockData=null;
 const state={sector:'전체',market:'전체',disease:'전체',technology:'전체',search:'',selected:'US:LLY',detailTab:'사업 이해',benchmark:'XLK',period:'3m',legacy:false,weeklySector:'전체'};
 const sectorOptions=['전체','바이오·제약','소비재·서비스','패션','내 담당 기업'];
 const periods=[['1w','1주'],['1m','1개월'],['3m','3개월'],['6m','6개월'],['1y','1년']];
@@ -36,6 +36,39 @@ function marketBanner(){
  prices?.status==='partial'?'일부 ETF 시세 미확인':'배당·분할 조정 종가 자료 대기';
  return `<div class="r2-data-note">${marketReady()?'기준 종가 '+esc(prices.asOf)+' · 배당·분할 조정 ·':esc(msg)+' ·'} ETF는 산업 대리 지표이며 52개 기업 동일가중 성과가 아닙니다. 해외 ETF와 국내 종목의 원화 수익률은 직접 비교하지 않습니다.</div>`;
 }
+
+function stockBreadthPanel(){
+ const stats=stockData?.summary?.[state.benchmark]||{};
+ const groups=['바이오·제약','소비재·서비스','패션'];
+ const rows=groups.map(group=>{
+  const v=stats?.[group]?.[state.period]||{};
+  const enough=v.ready===true&&Number.isFinite(v.equalWeightedReturn);
+  const base=priceReturn(state.benchmark);
+  const difference=enough&&base!==null?Math.round((v.equalWeightedReturn-base)*100)/100:null;
+  return `<tr><td><b>${esc(group)}</b><small>추적 종목 동일가중 · 기존 기업 구성</small></td>
+  <td class="r2-num">${enough?signed(v.equalWeightedReturn):'—'}</td>
+  <td class="r2-num">${signed(difference)}${difference!==null?'<em>p</em>':''}</td>
+  <td class="r2-num">${enough?String(v.aboveBenchmarkCount)+'/'+String(v.count):'—'}</td>
+  <td>${Number(v.count)||0}/${v.universe||'?'}개</td></tr>`;
+ }).join('');
+ return `<div class="r2-breadth"><div class="r2-breadth-title"><b>ATELIER 추적 종목 기준</b><span>개별 종목 수집률 80% 이상일 때만 바스켓 성과 표시</span></div>
+ <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>산업 바스켓</th><th>동일가중 수익률</th><th>${esc(state.benchmark)} 대비</th><th>기준 상회 기업</th><th>당기 자료 확보</th></tr></thead><tbody>${rows}</tbody></table></div>
+ <p class="r2-foot">가격·배당 조정 기준, 같은 거래일 비교. 일부 종목 수집이 늦으면 지수 대리 ETF 성과와 다르게 나타날 수 있습니다. 기준 미달은 빈값으로 표시합니다.</p></div>`;
+}
+function trialEvents(){
+ const assets=clinicalData?.assets||[];
+ const upcoming=assets.flatMap(a=>(a.trials||[]).map(t=>({ticker:a.ticker,asset:a.asset,...t})))
+ .filter(x=>x.primaryCompletion?.date&&/^\d{4}-\d{2}/.test(x.primaryCompletion.date)&&x.primaryCompletion.date>=new Date().toISOString().slice(0,10))
+ .sort((a,b)=>a.primaryCompletion.date.localeCompare(b.primaryCompletion.date)).slice(0,5);
+ if(!upcoming.length)return `<div class="r2-empty">확인 가능한 임상 시험의 향후 주요 완료 예정일이 없습니다. 등록되지 않은 일정은 예측하지 않습니다.</div>`;
+ return `<div class="r2-trial-events">${upcoming.map(x=>`<div><span>${esc(x.ticker)} · ${esc(x.asset)}</span><a href="${url(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.nctId)} ↗</a><b>${esc(x.primaryCompletion.date)}</b><small>${x.primaryCompletion.type==='ESTIMATED'?'예상 완료일':x.primaryCompletion.type==='ACTUAL'?'실제 완료일':'완료일 구분 미기재'} · ${esc(x.statusKr||x.status)}</small></div>`).join('')}</div>`;
+}
+function clinicalPanel(){
+ return `<section class="r2-panel"><div class="r2-panel-head"><div><h3>바이오 임상시험 일정</h3><p>ClinicalTrials.gov 등록 자료 기준. 시험 완료 예정일은 임상 결과 발표일이 아닙니다.</p></div><span class="r2-asof">${esc(clinicalData?.generatedAt?.slice(0,10)||'미수집')}</span></div>
+ ${trialEvents()}
+ <p class="r2-foot">등록 시험 ${Number(clinicalData?.verifiedTrialCards)||0}건(상위 표본) · 임상 데이터 상태 ${esc(clinicalData?.status||'조회 전')} · 원문 상태·후원기관 대조, 적응증별 데이터는 계속 보완 중</p></section>`;
+}
+
 function marketPanel(){
  const rows=industryProxies.map(x=>{
  const abs=priceReturn(x.symbol),rel=relative(x.symbol);
@@ -50,6 +83,7 @@ function marketPanel(){
  <div class="r2-toolbar"><span>비교 지수</span>${click(allowedBenchmarks,state.benchmark,'benchmark')}<span class="r2-spacer"></span><span>기간</span>${click(periods,state.period,'period')}</div>
  <div class="r2-index-strip">${allowedBenchmarks.map(sym=>`<div><small>${sym} ${sym==='SPY'?'· 미국 대형주':sym==='QQQ'?'· Nasdaq-100':'· 정보기술'}</small><strong>${signed(priceReturn(sym))}</strong></div>`).join('')}</div>
  <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>최근 4주 XLK 상회</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+ ${stockBreadthPanel()}
  ${marketBanner()}
  <p class="r2-foot">SPY=S&P 500 대형주 · QQQ=Nasdaq-100 성장주 대리 · XLK=정보기술 업종 · XBI/XLY/XRT=업종 대리 ETF. '상회 4주'는 4개의 주간 구간 중 기술주 대비 강세인 주의 수이며 ETF 자금 유입을 뜻하지 않음.</p>
  </section>`;
@@ -67,6 +101,7 @@ function overview(){
  <div class="r2-stats">${countBySector().map(x=>`<button class="r2-stat" data-r2="sector" data-val="${esc(x.s)}"><strong>${x.n}</strong><span>${esc(x.s)}</span><small>기업 보기 →</small></button>`).join('')}</div>
  ${marketPanel()}
  ${diseaseMap()}
+ ${clinicalPanel()}
  <div class="r2-panel r2-shortcuts"><h3>산업별 분석 기준</h3>
  <div class="r2-shortcut-grid">
  <button data-r2="sector" data-val="바이오·제약"><b>바이오·제약</b><span>질환 → 약물·기술 → 임상·허가 → 현금</span></button>
@@ -102,12 +137,31 @@ function detailTabs(company){
  const tabs=['사업 이해','핵심 KPI',company.sector==='바이오·제약'?'질환·파이프라인':'산업·경쟁','투자 가설'];
  return `<div class="r2-detail-tabs">${tabs.map(t=>`<button data-r2="tab" data-val="${esc(t)}" class="${state.detailTab===t?'is-active':''}">${esc(t)}</button>`).join('')}</div>`;
 }
+function trialDate(dateStruct){
+ if(!dateStruct?.date)return '일정 미기재';
+ return esc(dateStruct.date)+(dateStruct.type==='ESTIMATED'?' · 예상':dateStruct.type==='ACTUAL'?' · 실제':' · 날짜 구분 미기재');
+}
 function drugPanel(company){
  const rows=(pipeline?.records||[]).filter(x=>x.ticker===company.ticker);
+ const registry=clinicalData?.assets||[];
+ const extracted=registry.filter(x=>x.ticker===company.ticker);
  return `<div class="r2-detail-body"><div class="r2-disease-tags">${pill(company.disease)}${(company.secondaryDiseases||[]).map(pill).join('')}${pill(company.technology)}</div>
- <div class="r2-box-lite"><h4>개별 약물·시험 추적</h4><p>질환 분야와 치료 기전은 회사의 연구 노출을 이해하기 위한 분류. 개별 약물의 임상 단계·허가·NCT 번호는 공시 및 ClinicalTrials.gov 검증 후 표시합니다.</p></div>
- ${rows.length?`<table class="r2-mini-table"><thead><tr><th>약물 관찰 후보</th><th>치료 기술</th><th>검증 상태</th></tr></thead><tbody>${rows.map(r=>`<tr><td><a href="${url(r.link)}" target="_blank" rel="noopener noreferrer">${esc(r.asset)} ↗</a><small>${esc(r.disease)}</small></td><td>${esc(r.modality)}</td><td>공식 단계 확인 전</td></tr>`).join('')}</tbody></table>`:'<p class="r2-empty">추적할 약물·임상 등록번호를 공식 자료와 대조해 추가할 예정입니다.</p>'}
- <div class="r2-check"><b>질환별 체크</b><span>${esc(company.focus)}</span><small>효능·안전성 지표는 질환별로 정의가 다르므로 공통 점수로 합산하지 않습니다.</small></div></div>`;
+ <div class="r2-box-lite"><h4>공식 등록 임상 · ClinicalTrials.gov</h4><p>같은 약물과 후원·협력기관이 모두 확인된 시험만 연결합니다. 시험 단계는 해당 등록시험 기준으로, 기업 전체 파이프라인 개발 단계나 허가 상태를 뜻하지 않습니다.</p><small>수집 ${esc(clinicalData?.generatedAt?.slice(0,10)||'미실행')} · 상태 ${esc(clinicalData?.status||'연결 전')}</small></div>
+ ${rows.length?`<div class="r2-asset-list">${rows.map(r=>{
+  const item=extracted.find(x=>x.asset===r.asset);
+  const trials=item?.trials||[];
+  return `<div class="r2-asset-card"><div class="r2-asset-head"><b>${esc(r.asset)}</b>${pill(r.modality)}<a href="${url(r.link)}" target="_blank" rel="noopener noreferrer">전체 검색 ↗</a></div>
+  ${trials.length?`<div class="r2-trial-grid">${trials.map(t=>`<div class="r2-trial-row">
+    <div><a href="${url(t.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(t.nctId)}</strong></a> ${pill((t.phases||[]).join('·')||'단계 미기재')} ${pill(t.statusKr||t.status||'상태 미기재')}</div>
+    <p>${esc(t.title)}</p>
+    <small>등록 후원: ${esc(t.sponsor||'확인 필요')}</small>
+    <small>주요 완료: ${trialDate(t.primaryCompletion)} · 결과 등록 ${t.hasResultsPosted?'있음':'확인 안 됨'}</small>
+    ${t.primaryMeasure?`<small>주요 평가변수: ${esc(t.primaryMeasure)}</small>`:''}
+    </div>`).join('')}</div>`:
+   `<p class="r2-empty">${clinicalData?.status==='unavailable'||!clinicalData?.status||clinicalData?.status==='not_collected'?'공식 API 자료 연결 대기':'검색 범위에서 약물·기관이 함께 확인된 시험 없음. 부재·실패를 의미하지 않음'}</p>`}
+  <p class="r2-foot">${esc(r.check)} · 이 자료만으로 효능·승인 여부를 판단하지 않음</p></div>`;
+ }).join('')}</div>`:'<p class="r2-empty">약물 관찰 후보 등록 전입니다. 등록시험 검색은 아래 공식 링크를 이용해 주세요.</p>'}
+ <div class="r2-check"><b>질환별 체크</b><span>${esc(company.focus)}</span><small>시험의 주요 완료일은 결과 발표일과 다르고, 경쟁 약물의 치료효과를 일률적으로 비교할 수 없습니다.</small></div></div>`;
 }
 function detailBody(company){
  if(state.detailTab==='핵심 KPI')return `<div class="r2-detail-body"><h4>업종별 핵심 지표</h4><p class="r2-muted">아래는 앞으로 점검할 지표 목록이며 최신 실적 수치를 의미하지 않습니다.</p><div class="r2-kpi-grid">${(company.kpis||[]).map((k,i)=>`<div class="r2-kpi"><span>${i+1<10?'0'+(i+1):i+1}</span><b>${esc(k)}</b><small>공식 자료 대조 대기</small></div>`).join('')}</div>
@@ -129,7 +183,12 @@ function companyDetail(company){
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
  <p>${esc(company.focus)}</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
- <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b><small>종목별 상대 수익률 연결 전 · 업종 ETF 성과와 혼동하지 않음</small></div>
+ <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
+ ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
+ const abs=current?row?.returns?.[state.period]:null,delta=current?row?.relative?.[state.benchmark]?.[state.period]:null;
+ return Number.isFinite(abs)&&Number.isFinite(delta)?
+ `<strong>종목 ${signed(abs)} · 지수 대비 ${signed(delta)}p</strong><small>${esc(row.asOf)} · 배당 조정 · 동일 기간</small>`:
+ `<small>${company.market==='한국'?'국내 종목은 환율·원화 비교 체계 구축 전':'동일 기준일 개별 주가 확인 대기'}</small>`})()}</div>
  ${detailTabs(company)}${detailBody(company)}
  <div class="r2-detail-footer"><a href="${url(company.sourceURL)}" target="_blank" rel="noopener noreferrer">${company.market==='한국'?'DART 원문 검색':'SEC 공시 검색'} ↗</a>
  ${isBio?`<a href="https://clinicaltrials.gov/search?term=${encodeURIComponent(company.name)}" target="_blank" rel="noopener noreferrer">임상시험 검색 ↗</a>`:''}
@@ -209,12 +268,12 @@ document.addEventListener('input',e=>{
  const input=$('#r2-search');if(input){input.focus();try{input.setSelectionRange(pos,pos)}catch(_){}}
 });
 async function load(){
- const all=await Promise.all(['research-universe.json','market-relative.json','research-pipeline.json'].map(async name=>{
+ const all=await Promise.all(['research-universe.json','market-relative.json','research-pipeline.json','clinical-trials.json','stock-relative.json'].map(async name=>{
   try{const r=await fetch('./'+name,{cache:'no-store'});return r.ok?await r.json():null}catch(_){return null}
  }));
  db=all[0]?.companies?.length===52?all[0]:null;
- prices=all[1]||null;pipeline=all[2]||null;
+ prices=all[1]||null;pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
  renderCurrent();
 }
-window.ATELIER2={load,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices}};
+window.ATELIER2={load,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
 })();
