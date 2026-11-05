@@ -118,3 +118,15 @@
 @media(max-width:1100px){.r2-shortcuts .r2-shortcut-grid,.r2-weekly-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.r2-company-grid{grid-template-columns:minmax(0,1fr)}.r2-company-list{max-height:350px}.r2-stat{min-height:98px;padding:12px}.r2-stats{gap:7px}.r2-stat strong{font-size:23px}}
 @media(max-width:640px){.r2-panel{padding:13px}.r2-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.r2-shortcuts .r2-shortcut-grid,.r2-weekly-grid,.r2-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.r2-detail-header{padding:15px}.r2-detail-body{padding:12px}.r2-company-row{grid-template-columns:55px minmax(0,1fr) 32px}.r2-filter-row{align-items:flex-start}.r2-search-wrap{width:100%;min-width:100%;margin:0}.r2-bio-filter>div{display:grid}.r2-bio-filter>div>b{padding:0}.r2-detail-tabs button{padding:12px 5px;font-size:10px}}
+
+.r2-index-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:13px 0 12px}
+.r2-index-strip>div{background:#f5f9ff;border:1px solid #e0e9f5;border-radius:8px;padding:10px 12px}
+.r2-index-strip small{font-size:10px;color:#748da7;display:block}
+.r2-index-strip strong{font-size:17px;font-weight:800;color:#2b5581;display:block;margin-top:3px;font-variant-numeric:tabular-nums}
+.r2-disease-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:10px 0 0}
+.r2-disease-map button{border:1px solid #e3ebf4;background:#f9fbfe;border-radius:8px;padding:11px 12px;display:flex;flex-direction:column;gap:5px;text-align:left;cursor:pointer;font:inherit}
+.r2-disease-map button:hover{background:#eef6ff;border-color:#9dc6ee}
+.r2-disease-map b{font-size:12px;color:#244f80}
+.r2-disease-map span{font-size:11px;color:#627f9d}
+.r2-disease-map small{font-size:10px;color:#8298ad}
+@media(max-width:650px){.r2-disease-map{grid-template-columns:repeat(2,minmax(0,1fr))}.r2-index-strip small{font-size:9px}.r2-index-strip strong{font-size:14px}.r2-index-strip>div{padding:8px}}
