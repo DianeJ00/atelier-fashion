@@ -191,6 +191,7 @@ function drugPanel(company){
 }
 function detailBody(company){
  if(state.detailTab==='핵심 KPI'&&company.sector==='소비재·서비스')return `<div class="r2-detail-body">${window.ATELIER_CONSUMER?.card(company)||'<p class="r2-empty">공식 실적 수집 상태 확인 중</p>'}${window.ATELIER3?.secComparison(company.ticker)||''}<div class="r2-kpi-checklist"><h4>다음 분기 확인할 항목</h4><div class="r2-kpi-list">${(company.kpis||[]).map(x=>`<span>${esc(x)}</span>`).join('')}</div></div></div>`;
+ if(state.detailTab==='핵심 KPI'&&company.market==='한국')return `<div class="r2-detail-body">${window.ATELIER_KOREA?.card(company)||'<p class="r2-empty">OpenDART 연결 정보 확인 대기</p>'}</div>`;
  if(state.detailTab==='핵심 KPI')return `<div class="r2-detail-body">${window.ATELIER3?.secComparison(company.ticker)||''}<h4>업종별 핵심 지표</h4><p class="r2-muted">아래는 앞으로 점검할 지표 목록이며 최신 실적 수치를 의미하지 않습니다.</p><div class="r2-kpi-grid">${(company.kpis||[]).map((k,i)=>`<div class="r2-kpi"><span>${i+1<10?'0'+(i+1):i+1}</span><b>${esc(k)}</b><small>공식 자료 대조 대기</small></div>`).join('')}</div>
  <p class="r2-muted">서로 다른 회사의 사업·회계기간·조정 지표를 혼합해 비교하지 않습니다.</p></div>`;
  if(state.detailTab==='질환·파이프라인')return drugPanel(company);
@@ -316,6 +317,7 @@ async function load(){
  pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
  renderCurrent();
  if(window.ATELIER_CONSUMER?.load)window.ATELIER_CONSUMER.load();
+ if(window.ATELIER_KOREA?.load)window.ATELIER_KOREA.load();
  if(window.ATELIER3?.load)window.ATELIER3.load();
 }
 window.ATELIER2={load,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
