@@ -33,7 +33,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Verify Python source syntax
-        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py
+        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py
       - name: Test accounting-period alignment and source provenance
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Verify SEC filings and extract quarterly GAAP facts
@@ -46,6 +46,12 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_consumer.py
+      - name: Summarize eligible full article bodies only
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4.1-mini
+        run: python scripts/build_content_brief.py
       - name: Build evidence-tiered weekly investment checklist
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/build_weekly_brief.py
@@ -57,7 +63,7 @@ jobs:
           # Rebase our generated JSON on the latest main to avoid stale workflow checkouts.
           git fetch origin main
           git reset --mixed origin/main
-          git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json
+          git add weekly-research.json official-financials.json consumer-samples.json weekly-investment.json weekly-content.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh weekly fashion source inbox'
             git push origin HEAD:main
@@ -69,7 +75,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html weekly-research.json _site/
-          for source in official-financials.json consumer-samples.json weekly-investment.json; do
+          for source in official-financials.json consumer-samples.json weekly-investment.json weekly-content.json; do
             if [ -f "$source" ]; then cp "$source" _site/; fi
           done
           touch _site/.nojekyll
