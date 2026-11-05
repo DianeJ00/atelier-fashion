@@ -31,7 +31,7 @@ const click=(key,value)=>callbacks.click({
  assert.ok(win.ATELIER_CONSUMER.latest().includes("CAVA"));
  let over=win.ATELIER2.overview();
  assert.ok(over.includes("시장 대비 산업 상대강도"));
- assert.ok(over.includes("바이오 내부의 관심 분야"));
+ assert.ok(!over.includes("바이오 내부의 관심 분야"),"biotech category detail belongs in company analysis, not homepage");
  assert.ok(over.includes("SPY")&&over.includes("QQQ")&&over.includes("XLK"));
  let list=win.ATELIER2.companyPage();
  assert.ok(list.includes("Eli Lilly")&&list.includes("Walmart"));
