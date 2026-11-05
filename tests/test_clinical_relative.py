@@ -90,8 +90,10 @@ class ClinicalTrialTests(unittest.TestCase):
         self.assertTrue(all(x["url"].startswith("https://") for x in notes))
     def test_no_registry_change_is_not_scientific_claim(self):
         notes=trials.weekly_interpretation([],[],"2026-11-04T00:00:00Z")
-        self.assertEqual(notes[0]["type"],"변경 없음")
-        self.assertIn("상위 검색 표본",notes[0]["limitation"])
+        self.assertEqual(notes,[])  # no-change is metadata, never a headline
+    def test_disease_and_trial_stage_are_plain_korean(self):
+        self.assertEqual(trials.plain_condition({"conditions":["Crohn's Disease"]},"면역·염증"),"크론병(만성 장 염증질환)")
+        self.assertEqual(trials.plain_phase(["PHASE3"]),"3상")
     def test_registry_seeds_unchanged(self):
         src=json.loads((ROOT/"research-pipeline.json").read_text(encoding="utf-8"))
         self.assertEqual(len(src["records"]),12)
