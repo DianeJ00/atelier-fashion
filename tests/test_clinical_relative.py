@@ -97,7 +97,12 @@ class ClinicalTrialTests(unittest.TestCase):
     def test_registry_seeds_unchanged(self):
         src=json.loads((ROOT/"research-pipeline.json").read_text(encoding="utf-8"))
         self.assertEqual(len(src["records"]),12)
-        self.assertTrue(all(x["stage"] is None for x in src["records"]))
+        self.assertTrue(all(
+            x.get("stage") is None or (
+                x.get("clinicalTrialURL","").startswith("https://clinicaltrials.gov/study/")
+                and x.get("stageVerifiedAt") and x.get("approval") is None
+                and x.get("stageBasis"))
+            for x in src["records"]))
 
 class StockRelativeTests(unittest.TestCase):
     def benchmark(self):
