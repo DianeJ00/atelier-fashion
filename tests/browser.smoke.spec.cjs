@@ -57,6 +57,31 @@ test.describe("ATELIER published-site regression",()=>{
   const notes=await page.evaluate(()=>JSON.parse(localStorage.getItem("atelierNotes")));
   expect(notes[0].id).toBe("keep-on-reload");
  });
+ test("synthetic price event: compact overview opens company evidence without claiming a cause",async({page})=>{
+  // Fixture only: no actual financial price is fetched or attributed.
+  const feed={schemaVersion:1,status:"partial",publicDerivedAuthorized:true,
+   asOf:"2026-11-05",coverage:{screened:1,totalUS:47},eligibleEvents:1,
+   events:[{issuerId:"US:LLY",ticker:"LLY",tradeDate:"2026-11-05",
+     previousTradeDate:"2026-11-04",changePct:12.4,volatilityMultiple:3,
+     evidenceState:"공식 사건 동기간 확인 · 인과 미확정",causalityConfirmed:false,
+     source:{provider:"fictional test provider",url:"https://example.org/test"},
+     evidence:[{title:"가상 SEC 원문",sourceType:"sec_filing",
+       publishedAt:"2026-11-05",url:"https://www.sec.gov/Archives/test"}]}]};
+  await page.route("**/price-events.json",route=>route.fulfill({
+   status:200,contentType:"application/json",body:JSON.stringify(feed)
+  }));
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  const panel=page.locator(".r2-move-panel");
+  await expect(panel).toBeVisible({timeout:20000});
+  await expect(panel).toContainText("+12.40%");
+  await expect(panel).toContainText("일부 종목만 확인");
+  await panel.locator(".r2-move-company").click();
+  await expect(page.locator("#page-crumb")).toHaveText("기업 분석");
+  await expect(page.locator(".r2-move-company-box")).toContainText("인과 미확정");
+  await page.locator(".r2-move-company-box summary").click();
+  await expect(page.locator(".r2-move-company-box a").first()).toHaveAttribute(
+    "href","https://www.sec.gov/Archives/test");
+ });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});

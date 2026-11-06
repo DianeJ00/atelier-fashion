@@ -5,7 +5,7 @@ const esc=x=>String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const url=s=>{try{const u=new URL(s);return u.protocol==='https:'?u.href:'#'}catch{return '#'}};
 const fmt=(n,d=1)=>Number.isFinite(n)?n.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
 const signed=n=>Number.isFinite(n)?(n>0?'+':'')+fmt(n,2)+'%':'—';
-let db=null,prices=null,pipeline=null,clinicalData=null,stockData=null;
+let db=null,prices=null,pipeline=null,clinicalData=null,stockData=null,priceEvents=null;
 const state={sector:'전체',market:'전체',disease:'전체',technology:'전체',search:'',selected:'US:LLY',detailTab:'사업 이해',benchmark:'XLK',period:'3m',legacy:false,weeklySector:'전체'};
 const sectorOptions=['전체','바이오·제약','소비재·서비스','패션','내 담당 기업'];
 const periods=[['1w','1주'],['1m','1개월'],['3m','3개월'],['6m','6개월'],['1y','1년']];
@@ -137,10 +137,57 @@ function diseaseMap(){
  <div class="r2-disease-map">${cats.map(x=>{const matches=bios.filter(c=>c.disease===x||c.secondaryDiseases?.includes(x));return `<button data-r2="diseaseJump" data-val="${esc(x)}"><b>${esc(x)}</b><span>${matches.length}개 기업</span><small>기업·치료 기술 살펴보기 →</small></button>`}).join('')}</div>
  <p class="r2-foot">질환별 기업 수는 주가 성과가 아닙니다. 질환별 수익률은 개별 종목의 공식 시장 데이터와 노출도를 검증한 뒤 계산할 예정입니다.</p></section>`;
 }
+function moveEventEvidence(event){
+ const references=Array.isArray(event.evidence)?event.evidence:[];
+ return references.length?'<div class="r2-move-references">'+references.map(x=>
+  '<a href="'+url(x.url)+'" target="_blank" rel="noopener noreferrer">'+
+  esc(x.title||'출처 원문')+' · '+esc(String(x.publishedAt||'').slice(0,10))+' ↗</a>'
+ ).join('')+'</div>':'<p class="r2-move-unconfirmed">같은 기간에 확인된 공식 자료·검증 뉴스 없음</p>';
+}
+function moveEventRow(event,compact=false){
+ const positive=Number(event.changePct)>=0;
+ const sign=positive?'r2-move-up':'r2-move-down';
+ const change=signed(event.changePct);
+ return '<article class="r2-move-item">'+
+ '<div class="r2-move-top"><button type="button" class="r2-move-company" data-r2="openCompany" data-val="'+esc(event.issuerId)+'">'+
+ esc(event.ticker)+' · 기업 상세 →</button>'+
+ '<strong class="'+sign+'">'+change+'</strong></div>'+
+ '<small>'+esc(event.tradeDate)+' 기준 · 배당·분할 조정 종가 · 과거 변동폭 대비 '+esc(event.volatilityMultiple)+'배'+
+ (Number.isFinite(event.volumeMultiple)?' · 거래량 '+esc(event.volumeMultiple)+'배':'')+'</small>'+
+ '<details class="r2-move-evidence"><summary>'+esc(event.evidenceState||'원인 미확인')+' · 근거 보기</summary>'+
+ '<p>동일 시기 자료가 확인돼도 주가 변동 원인으로 확정하지 않습니다.</p>'+
+ moveEventEvidence(event)+'</details>'+
+ '</article>';
+}
+function moveEventsPanel(){
+ const feed=priceEvents;
+ if(!feed||!['ready','partial'].includes(feed.status)){
+  return '<details class="r2-move-disabled"><summary>일간 급등락 감지 · 시세 연동 대기</summary>'+
+  '<p>검증된 종가와 파생 수익률의 공개·저장 권한이 확보되기 전까지 알림 숫자를 생성하지 않습니다.</p></details>';
+ }
+ const events=Array.isArray(feed.events)?feed.events:[];
+ const scanned=Number(feed.coverage?.screened)||0,total=Number(feed.coverage?.totalUS)||47;
+ return '<section class="r2-panel r2-move-panel"><div class="r2-panel-head"><div>'+
+ '<h3>일간 급등락 · 확인할 움직임</h3>'+
+ '<p>'+esc(feed.asOf)+' 거래일 · '+scanned+'/'+total+'개 종목 확인'+
+ (feed.status==='partial'?' · 일부 종목만 확인, 전체 순위 아님':'')+
+ ' · 배당·분할 조정 종가 · 급등락 원인 자동 확정 안 함</p></div></div>'+
+ (events.length?'<div class="r2-move-grid">'+events.slice(0,3).map(x=>moveEventRow(x,true)).join('')+'</div>':
+ '<p class="r2-move-unconfirmed">현재 확인된 종목에서 감지 기준을 모두 충족한 후보가 없습니다.</p>')+
+ '<small class="r2-move-source">데이터: <a href="https://twelvedata.com/" target="_blank" rel="noopener noreferrer">Twelve Data</a> · 공식 자료 링크는 각 후보의 근거 보기에서 확인</small>'+
+ '</section>';
+}
+function moveEventForCompany(company){
+ const item=priceEvents?.events?.find(x=>x.issuerId===company.id&&x.tradeDate===priceEvents.asOf);
+ if(!item||!['ready','partial'].includes(priceEvents.status))return '';
+ return '<div class="r2-move-company-box"><b>가격 이벤트 · 기준일 '+esc(item.tradeDate)+'</b>'+
+ moveEventRow(item)+'</div>';
+}
 function overview(){
  if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
  return `<div class="r2-overview r5-overview">
  ${marketPanel()}
+ ${moveEventsPanel()}
  ${window.ATELIER3?.industryOverview()||''}
  ${window.ATELIER3?.overviewSignals()||''}
  ${window.ATELIER3?.attentionQueue()||''}
@@ -224,8 +271,9 @@ function companyDetail(company){
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
  <p>${state.detailTab==='투자 판단'?'근거와 반증 조건을 대조한 뒤 판단을 직접 기록합니다.':'사업 범주·핵심 실적·투자 판단을 분리해 살펴봅니다.'}</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
+ ${moveEventForCompany(company)}
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
- ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
+ ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&prices?.status!=='source_verified_snapshot'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
  const abs=current?row?.returns?.[state.period]:null,delta=current?row?.relative?.[state.benchmark]?.[state.period]:null;
  return Number.isFinite(abs)&&Number.isFinite(delta)?
  `<strong>종목 ${signed(abs)} · 지수 대비 ${signed(delta)}p</strong><small>${esc(row.asOf)} · 배당 조정 · 동일 기간</small>`:
@@ -331,11 +379,12 @@ async function loadDetails(){
  try{await detailsPromise}finally{detailsPromise=null}
 }
 async function load(){
- const all=await window.ATELIER_DATA.many(["universe","market","stocks","marketReviewed"]);
+ const all=await window.ATELIER_DATA.many(["universe","market","stocks","marketReviewed","priceEvents"]);
  db=all[0]?.companies?.length===52?all[0]:null;
  prices=window.ATELIER_DATA.effectiveMarket(all[1],all[3]);
  stockData=all[2]||null;
+ priceEvents=all[4]||null;
  renderCurrent();
 }
-window.ATELIER2={load,loadDetails,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
+window.ATELIER2={load,loadDetails,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData},get priceEvents(){return priceEvents}};
 })();

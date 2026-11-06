@@ -5,7 +5,7 @@
 const SOURCES=Object.freeze({
  universe:"research-universe.json",pipeline:"research-pipeline.json",
  market:"market-relative.json",marketReviewed:"market-reviewed.json",
- stocks:"stock-relative.json",clinical:"clinical-trials.json",
+ stocks:"stock-relative.json",priceEvents:"price-events.json",clinical:"clinical-trials.json",
  consumer:"consumer-official.json",korea:"korea-dart.json",
  weekly:"atelier-weekly.json",secTrends:"sec-trends.json",
  health:"data-health.json",research:"weekly-research.json",
@@ -72,7 +72,7 @@ function valid(name,value){
  if(!value||typeof value!=="object"||Array.isArray(value))return false;
  const arrayField=({
   universe:"companies",clinical:"assets",consumer:"companies",korea:"companies",
-  weekly:"items",secTrends:"companies",health:"items",research:"items",
+  weekly:"items",secTrends:"companies",health:"items",priceEvents:"events",research:"items",
   official:"companies",weeklyContent:"items",biotech:"companies"
  })[name];
  return !arrayField||Array.isArray(value[arrayField]);

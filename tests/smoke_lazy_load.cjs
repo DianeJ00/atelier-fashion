@@ -2,7 +2,7 @@
 const fs=require("node:fs"),path=require("node:path"),vm=require("node:vm"),assert=require("node:assert/strict");
 const root=path.resolve(__dirname,".."),read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const names=["research-universe.json","market-relative.json","market-reviewed.json",
- "stock-relative.json","research-pipeline.json","clinical-trials.json"];
+ "stock-relative.json","price-events.json","research-pipeline.json","clinical-trials.json"];
 const datasets=Object.fromEntries(names.map(x=>[x,JSON.parse(read(x))]));
 const hits=[],window={renders:0,atelierRerender(){this.renders++}};
 const document={addEventListener(){},querySelector(){return null}};
@@ -17,7 +17,7 @@ vm.runInNewContext(read("research2.js"),ctx);
 (async()=>{
  await window.ATELIER2.load();
  assert.equal(window.ATELIER2.data.companies.length,52);
- for(const file of ["research-universe.json","market-relative.json","stock-relative.json","market-reviewed.json"])
+ for(const file of ["research-universe.json","market-relative.json","stock-relative.json","market-reviewed.json","price-events.json"])
   assert.ok(hits.includes(file),"missing overview dependency "+file);
  for(const file of ["research-pipeline.json","clinical-trials.json"])
   assert.ok(!hits.includes(file),"detail fetched before navigation: "+file);

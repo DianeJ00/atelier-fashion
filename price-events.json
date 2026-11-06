@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "permission_required",
+  "publicDerivedAuthorized": false,
+  "generatedAt": "2026-11-06T00:00:00+00:00",
+  "asOf": null,
+  "source": {
+    "provider": "Twelve Data",
+    "url": "https://twelvedata.com/"
+  },
+  "coverage": {
+    "screened": 0,
+    "totalUS": 47
+  },
+  "events": [],
+  "eligibleEvents": 0,
+  "policy": "No source quotes stored. No public derived returns without explicit rights."
+}

@@ -1,3 +1,11 @@
+## 2-1 일간 급등락 감지 · 이벤트 데이터와 근거 연결 (2026-11-06)
+
+- `price-events.json`: 검증된 일간 조정종가 변동 후보와 연관된 SEC·기업 IR 원문 최대 2개. **같은 기간 발생 사건은 인과관계 확정이 아닙니다.**
+- `TWELVEDATA_API_KEY`, `MARKET_DATA_DISPLAY_OK=true` 외에, 파생 수익률 공개 허가(`MARKET_DERIVED_PUBLIC_OK=true`) 및 GitHub 저장 허가(`MARKET_DERIVED_GIT_STORAGE_OK=true`)가 별도로 확인돼야 활성화합니다. 두 변수는 실제 계약 권한 확인 후에만 설정해야 합니다.
+- 기존 개별 종목 수집기를 재사용해 API 요청을 중복 발생시키지 않습니다. 시세 권한이 없으면 공개 급등락 숫자나 가격 원자료는 비워둡니다.
+- 전체 현황에는 최상위 3건만, 기업 상세에는 해당 기업의 연관 공식 원문을 펼쳐 보여줍니다. 시세 공급원이 없는 상태에서도 사이트 UI는 정상 동작합니다.
+- `python -m unittest discover -s tests -p 'test_*.py'`, `node tests/smoke_research2.cjs`, 별도 Chromium 테스트로 검증합니다.
+
 ## 2-3B 잔여: 시세 소스 오류와 마지막 정상 확인본 보존 (2026-11-06)
 
 - 공통 `scripts/source_retention.py`가 수집 성공·직전 확인 데이터·이번 수집 실패를 분리 기록하고, **원자적 파일 교체**로 중간 실패 시 JSON이 잘리거나 사라지지 않도록 합니다.

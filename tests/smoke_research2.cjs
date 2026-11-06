@@ -5,7 +5,7 @@ const vm=require("node:vm");
 const assert=require("node:assert/strict");
 const root=path.resolve(__dirname,"..");
 const read=(name)=>fs.readFileSync(path.join(root,name),"utf8");
-const names=["research-universe.json","research-pipeline.json","market-relative.json","clinical-trials.json","stock-relative.json","consumer-official.json"];
+const names=["research-universe.json","research-pipeline.json","market-relative.json","clinical-trials.json","stock-relative.json","consumer-official.json","price-events.json"];
 const files=Object.fromEntries(names.map(x=>[x,JSON.parse(read(x))]));
 const callbacks={};
 const win={rerenders:0,atelierRerender(){this.rerenders++},atelierGotoCompanies(){this.rerenders++}};
@@ -67,6 +67,43 @@ const click=(key,value)=>callbacks.click({
  let brief=win.ATELIER2.theses();
  assert.ok(brief.includes("기존 논리와 새 근거"));
  assert.ok(brief.includes("DB손해보험"));
+ // No licensed quotes: production feed must never invent an alert or event reason.
+ win.ATELIER_DATA.invalidate("priceEvents");
+ files["price-events.json"]={
+   schemaVersion:1,status:"partial",publicDerivedAuthorized:true,
+   asOf:"2026-11-04",coverage:{screened:1,totalUS:47},
+   eligibleEvents:1,
+   events:[{
+     issuerId:"US:LLY",ticker:"LLY",tradeDate:"2026-11-04",
+     previousTradeDate:"2026-11-03",changePct:12.5,volatilityMultiple:3.1,
+     evidenceState:"공식 사건 동기간 확인 · 인과 미확정",
+     causalityConfirmed:false,source:{provider:"fixture",url:"https://example.org"},
+     evidence:[{title:"공식 보고서 원문",publishedAt:"2026-11-04",
+       sourceType:"sec_filing",url:"https://www.sec.gov/Archives/edgar/data/1/test"}]
+   }]
+ };
+ await win.ATELIER2.load();
+ const moveOverview=win.ATELIER2.overview();
+ assert.ok(moveOverview.includes("일간 급등락 · 확인할 움직임"));
+ assert.ok(moveOverview.includes("+12.50%"));
+ assert.ok(moveOverview.includes("일부 종목만 확인"));
+ assert.ok(moveOverview.includes('data-r2="openCompany"'));
+ click("sector","바이오·제약");
+ click("company","US:LLY");
+ const moveDetail=win.ATELIER2.companyPage();
+ assert.ok(moveDetail.includes("가격 이벤트 · 기준일 2026-11-04"));
+ assert.ok(moveDetail.includes("인과 미확정"));
+ assert.ok(moveDetail.includes("https://www.sec.gov/Archives/edgar/data/1/test"));
+ assert.ok(!moveDetail.includes("확정된 급등 원인"));
+ // Revoking rights removes every derived price event from the UI.
+ win.ATELIER_DATA.invalidate("priceEvents");
+ files["price-events.json"]={
+  schemaVersion:1,status:"permission_required",publicDerivedAuthorized:false,
+  asOf:null,events:[],coverage:{screened:0,totalUS:47}
+ };
+ await win.ATELIER2.load();
+ assert.ok(win.ATELIER2.overview().includes("일간 급등락 감지 · 시세 연동 대기"));
+ assert.ok(!win.ATELIER2.companyPage().includes("가격 이벤트 · 기준일"));
  assert.ok(!over.includes("NaN")&&!list.includes("undefined"));
  assert.equal(files["research-universe.json"].companies.filter(x=>x.market==="미국").length,47);
  assert.equal(files["research-universe.json"].companies.filter(x=>x.market==="한국").length,5);

@@ -15,11 +15,13 @@ from pathlib import Path
 
 import collect_market_relative as market
 import source_retention as retention
+import price_event_feed as event_feed
 
 ROOT=Path(__file__).resolve().parents[1]
 UNIVERSE=ROOT/"research-universe.json"
 BENCHMARK=ROOT/"market-relative.json"
 OUT=ROOT/"stock-relative.json"
+# Event output is colocated with OUT so injected-test runs cannot touch the public repo.
 NOW=datetime.now(timezone.utc)
 BENCHMARKS=("SPY","QQQ","XLK")
 TERMS=market.TERMS
@@ -107,6 +109,7 @@ def main():
             or not benchmark.get("asOf") or not benchmark.get("periodDates") else "partial")
     old=read_json(OUT,{})
     output=base(status,symbols)
+    can_publish_events=event_feed.licensed(market.KEY,market.DISPLAY)
     if status!="partial":
         reusable=(market.KEY and market.DISPLAY and status=="benchmark_missing"
                   and benchmark.get("status")=="stale_cached"
@@ -120,6 +123,10 @@ def main():
         else:
             retention.apply_blocked(output,old,kind="stocks",status=status,now=NOW)
         retention.atomic_write(OUT,output)
+        event_feed.publish(
+            OUT.with_name("price-events.json"),[],us,benchmark.get("asOf"),[],NOW,
+            authorized=can_publish_events,
+        )
         print("Individual relative returns: "+output["status"])
         return
     output["asOf"]=benchmark["asOf"]
@@ -131,6 +138,8 @@ def main():
         output["companies"].get(ticker,{}).get("updatedAt",""),
         ticker
     ))[:MAX_PER_RUN]
+    us_by_ticker={item["ticker"]:item for item in us}
+    observations=[]
     for idx,ticker in enumerate(order):
         try:
             bars=market.retrieve(ticker)
@@ -138,6 +147,11 @@ def main():
             if item:
                 output["companies"][ticker]=item
                 output["updatedThisRun"]+=1
+                if can_publish_events:
+                    record=event_feed.observation_from_bars(
+                        us_by_ticker[ticker],bars,benchmark["asOf"])
+                    if record is not None:
+                        observations.append(record)
             else:
                 output["errors"].append({"ticker":ticker,"reason":"missing_anchor_close"})
         except Exception as exc:
@@ -159,6 +173,14 @@ def main():
             NOW,"previous_verified_only" if current else "unavailable",output["errors"])
         output["publicDisplayAuthorized"]=True
     retention.atomic_write(OUT,output)
+    reviewed=event_feed.evidence_from_reviewed_files(ROOT) if can_publish_events else []
+    report=event_feed.publish(
+        OUT.with_name("price-events.json"),observations,us,benchmark["asOf"],reviewed,NOW,
+        authorized=can_publish_events,
+    )
+    print("Daily move scan: "+report["status"]+"; screened="+
+          str(report["coverage"]["screened"])+"/"+str(len(us))+
+          "; candidate events="+str(len(report["events"])))
     print("Individual relative: %d/%d current; updated=%d; errors=%d" %
           (current,len(symbols),output["updatedThisRun"],len(output["errors"])))
 

@@ -17,7 +17,7 @@ MAX_SOURCE_GAP_DAYS = 7
 OFFICIAL_TYPES = frozenset(("sec_filing", "company_ir", "clinical_registry"))
 NEWS_TYPES = frozenset(("trusted_news",))
 SOURCE_TYPES = OFFICIAL_TYPES | NEWS_TYPES
-PRICE_BASIS = "split_adjusted_close"
+PRICE_BASIS = "dividend_split_adjusted_close"
 
 class InvalidPriceObservation(ValueError):
     """Price records do not meet the contract required for public alerts."""

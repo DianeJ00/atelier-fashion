@@ -19,7 +19,7 @@ def row(issuer="LLY",close=112,prior=100,vol=4,trade="2026-11-05"):
   "tradeDate":trade,"previousTradeDate":"2026-11-04",
   "close":close,"previousClose":prior,
   "volatility20dPct":vol,
-  "priceBasis":"split_adjusted_close",
+  "priceBasis":"dividend_split_adjusted_close",
   "source":{"provider":"hypothetical-fixture","url":"https://example.org/test-only"}
  }
 
@@ -87,7 +87,7 @@ class PriceEventsTests(unittest.TestCase):
         self.assertEqual(r["eligibleEvents"],3)
         self.assertEqual([x["ticker"] for x in r["events"]],["LLY","RL"])
     def test_records_are_test_inputs_not_real_quotes(self):
-        self.assertEqual(p.PRICE_BASIS,"split_adjusted_close")
+        self.assertEqual(p.PRICE_BASIS,"dividend_split_adjusted_close")
         self.assertTrue(p.valid_link("https://example.org/data"))
         self.assertFalse(p.valid_link("javascript:alert(1)"))
 

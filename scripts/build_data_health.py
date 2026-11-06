@@ -39,6 +39,7 @@ def build():
     market=read("market-relative.json")
     reviewed=read("market-reviewed.json")
     stocks=read("stock-relative.json")
+    price_events=read("price-events.json")
     official=read("official-financials.json")
     consumer=read("consumer-official.json")
     biotech=read("biotech-financials.json")
@@ -84,6 +85,18 @@ def build():
              "시세 공급원 재검증 필요" if stocks.get("status")=="stale_cached" else
              "47개 종목 가격 시계열과 외부 표시 권한 확보" if stocks.get("verifiedOnBenchmarkDate",0)<47 else None,
              checked_at=stocks.get("generatedAt")),
+        item("price_alerts","일간 급등락 후보","시장",
+             "live" if price_events.get("status")=="ready" else
+             "partial" if price_events.get("status")=="partial" else "blocked",
+             (price_events.get("coverage") or {}).get("screened",0),47,
+             ("일간 종가·과거 20거래일 변동폭 검증. 급등락 후보 "+
+              str(len(price_events.get("events") or []))+"건; 공시 동시 발생은 원인 확정 아님")
+             if price_events.get("status") in ("ready","partial") else
+             "독립 파생수익률 게시·Git 공개 저장 허가가 없어 종목별 경고 생성 안 함",
+             price_events.get("asOf"),
+             "시세·파생 이벤트 공개/저장 권한 확인" if price_events.get("status") not in ("ready","partial") else None,
+             "https://twelvedata.com/",
+             checked_at=price_events.get("generatedAt")),
         item("fashion_sec","미국 패션 공식 분기 실적","공식 실적",
              "live" if sum(x.get("status")=="quarter_verified" for x in official.get("companies",[]))==12 else "partial",
              sum(x.get("status")=="quarter_verified" for x in official.get("companies",[])),

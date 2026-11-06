@@ -19,6 +19,7 @@ MANIFEST = "data-manifest.json"
 DATA_FILES = (
     "research-universe.json", "research-pipeline.json",
     "market-relative.json", "market-reviewed.json", "stock-relative.json",
+    "price-events.json",
     "clinical-trials.json", "consumer-official.json", "korea-dart.json",
     "atelier-weekly.json", "sec-trends.json", "data-health.json",
     "weekly-research.json", "official-financials.json",
@@ -210,6 +211,65 @@ def validate(records):
             errors.append("stocks: blocked result contains previous licensed figures")
         if stocks.get("verifiedOnBenchmarkDate",0):
             errors.append("stocks: blocked result claims current coverage")
+    events_feed=records.get("price-events.json", {})
+    events=events_feed.get("events")
+    event_status=events_feed.get("status")
+    event_authorized=events_feed.get("publicDerivedAuthorized") is True
+    if not isinstance(events,list):
+        errors.append("price-events: events must be an array")
+        events=[]
+    if event_status not in ("permission_required","no_verified_daily_closes","ready","partial"):
+        errors.append("price-events: invalid status")
+    coverage=events_feed.get("coverage") or {}
+    scanned=coverage.get("screened")
+    if (not isinstance(scanned,int) or isinstance(scanned,bool) or scanned<0 or scanned>47 or
+        coverage.get("totalUS")!=47):
+        errors.append("price-events: invalid screened coverage")
+    if event_status in ("permission_required","no_verified_daily_closes"):
+        if events or events_feed.get("asOf") is not None or event_authorized or scanned not in (0,):
+            errors.append("price-events: blocked state must contain no market-derived figures")
+    else:
+        if (not event_authorized or not parse_day(events_feed.get("asOf"))
+            or market.get("status") not in ("ok","partial")
+            or events_feed.get("asOf")!=market.get("asOf")
+            or not isinstance(scanned,int) or scanned==0):
+            errors.append("price-events: active data require licensed current ETF benchmark")
+        if event_status=="ready" and scanned!=47:
+            errors.append("price-events: ready requires the full 47-issuer scan")
+        if event_status=="partial" and scanned==47:
+            errors.append("price-events: full scan must be labeled ready")
+    if events_feed.get("eligibleEvents") not in (None,len(events)):
+        errors.append("price-events: candidate event count mismatch")
+    seen_events=set()
+    for event in events:
+        if not isinstance(event,dict):
+            errors.append("price-events: non-object event")
+            continue
+        event_id=event.get("issuerId")
+        record=next((x for x in companies if isinstance(x,dict) and x.get("id")==event_id),None)
+        if not record or record.get("market")!="미국" or record.get("ticker")!=event.get("ticker"):
+            errors.append("price-events: unknown event issuer")
+        if event_id in seen_events:
+            errors.append("price-events: duplicate event issuer")
+        seen_events.add(event_id)
+        if event.get("tradeDate")!=events_feed.get("asOf"):
+            errors.append("price-events: event trade date mismatch")
+        if event.get("causalityConfirmed") is not False:
+            errors.append("price-events: unproven price cause cannot be confirmed")
+        if (event.get("evidenceState") not in (
+            "원인 미확인","공식 사건 동기간 확인 · 인과 미확정",
+            "관련 뉴스 동기간 확인 · 인과 미확정"
+        ) or not isinstance(event.get("changePct"),(int,float))
+            or abs(event.get("changePct"))<8
+            or not isinstance(event.get("volatilityMultiple"),(int,float))
+            or event.get("volatilityMultiple")<2):
+            errors.append("price-events: event does not meet detection threshold")
+        if any(k in event for k in ("close","previousClose","volume","averageVolume20d")):
+            errors.append("price-events: raw provider quote must not be published")
+        for ev in event.get("evidence") or []:
+            if (not isinstance(ev,dict) or not str(ev.get("url","")).startswith("https://")
+                or str(ev.get("publishedAt",""))[:10]>str(event.get("tradeDate",""))):
+                errors.append("price-events: unverified event evidence")
     if records.get("market-reviewed.json", {}).get("status") == "source_verified_snapshot":
         if not parse_day(records["market-reviewed.json"].get("asOf")):
             errors.append("market snapshot: invalid reviewed date")
