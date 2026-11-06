@@ -51,7 +51,7 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
  assert.equal(store.effectiveMarket({status:"key_required"},reviewed),reviewed);
  assert.equal(store.effectiveMarket({status:"partial",asOf:"2026-11-06",returns:{}},reviewed),reviewed);
  for(const name of Object.values(store.sources))assert.ok(fs.existsSync(path.join(root,name)),name);
- assert.ok(read(".github/workflows/weekly-research.yml").includes("cp index.html atelier-data.js"));
+ assert.ok(read(".github/workflows/weekly-research.yml").includes("python scripts/prepare_site.py"));
  assert.ok(read("index.html").includes('<script src="./atelier-data.js"></script>'));
  // A published page must never fall back to unpinned root JSON after a new deploy.
  const pinnedId="abcdef0123456789abcd", pinnedRequests=[];
