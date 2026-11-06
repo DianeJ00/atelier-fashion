@@ -158,19 +158,51 @@ def validate(records):
             errors.append(f"data-health: bad asOf for {item.get('id')}")
     market = records.get("market-relative.json", {})
     stocks = records.get("stock-relative.json", {})
-    if market.get("status") in ("ok", "partial"):
+    price_states = ("ok", "partial", "stale_cached")
+    blocked_states = ("key_required", "display_permission_required", "benchmark_missing")
+    for name, record in (("market",market),("stocks",stocks)):
+        last=record.get("lastVerified")
+        if last is not None and (not isinstance(last,dict) or
+                                  not isinstance(last.get("asOf"),str) or
+                                  not parse_day(last.get("asOf"))):
+            errors.append(f"{name}: lastVerified metadata invalid")
+        current=record.get("status")
+        if current in price_states and record.get("publicDisplayAuthorized") is not True:
+            errors.append(f"{name}: published price figures without display authorization")
+        if current in blocked_states:
+            if record.get("asOf") is not None or record.get("publicDisplayAuthorized") is True:
+                errors.append(f"{name}: blocked output must not claim licensed current prices")
+    if market.get("status") in price_states:
         if not parse_day(market.get("asOf")):
-            errors.append("market: live feed without valid asOf")
-        if not isinstance(market.get("returns", {}).get("XLK"), dict):
+            errors.append("market: licensed returns without valid asOf")
+        if not isinstance((market.get("returns") or {}).get("XLK"),dict):
             errors.append("market: missing comparable XLK returns")
+        if market.get("status")=="stale_cached":
+            if (market.get("lastVerified") or {}).get("asOf")!=market.get("asOf"):
+                errors.append("market: stale asOf must match last verified close")
+            if not (market.get("lastAttempt") or {}).get("status"):
+                errors.append("market: stale result requires collection-failure reason")
     else:
-        # Missing a licence is not a successful price refresh.
-        if market.get("status") in ("key_required", "display_permission_required"):
-            if market.get("asOf") is not None or market.get("returns"):
-                errors.append("market: blocked feed must not claim current prices")
-    if stocks.get("status") in ("ok", "partial"):
+        if market.get("returns") or market.get("relative") or market.get("weeklyBreadth"):
+            errors.append("market: nonlicensed/unavailable output contains prices")
+        if market.get("asOf") is not None:
+            errors.append("market: unavailable result claims a verified close")
+    if stocks.get("status") in ("ok","partial"):
         if stocks.get("asOf") != market.get("asOf") or not parse_day(stocks.get("asOf")):
             errors.append("stocks: benchmark and stock asOf dates mismatch")
+        if market.get("status") not in ("ok","partial"):
+            errors.append("stocks: current comparisons require a current benchmark")
+    elif stocks.get("status")=="stale_cached":
+        if (market.get("status")!="stale_cached" or
+            stocks.get("asOf")!=market.get("asOf") or
+            stocks.get("benchmarkDates")!=market.get("periodDates") or
+            not stocks.get("companies")):
+            errors.append("stocks: stale comparisons require matching last verified ETF snapshot")
+    else:
+        if stocks.get("asOf") is not None or stocks.get("companies") or stocks.get("summary"):
+            errors.append("stocks: blocked result contains previous licensed figures")
+        if stocks.get("verifiedOnBenchmarkDate",0):
+            errors.append("stocks: blocked result claims current coverage")
     if records.get("market-reviewed.json", {}).get("status") == "source_verified_snapshot":
         if not parse_day(records["market-reviewed.json"].get("asOf")):
             errors.append("market snapshot: invalid reviewed date")

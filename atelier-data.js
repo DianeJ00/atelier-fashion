@@ -65,6 +65,11 @@ function effectiveMarket(feed,reviewed){
    &&typeof feed?.asOf==="string"
    &&Number.isFinite(feed?.returns?.XLK?.["3m"]);
  if(hasBenchmark)return feed;
+ // A dated prior verified feed can be shown ONLY with current public-display permission.
+ // Prefer the independently reviewed fixed snapshot when it is newer.
+ const stale=feed?.status==="stale_cached"&&feed?.publicDisplayAuthorized===true
+  &&typeof feed?.asOf==="string"&&Number.isFinite(feed?.returns?.XLK?.["3m"]);
+ if(stale&&(!reviewed?.asOf||feed.asOf>=reviewed.asOf))return feed;
  return reviewed?.status==="source_verified_snapshot"&&reviewed?.asOf?reviewed:(feed||null);
 }
 function sourceMeta(item){

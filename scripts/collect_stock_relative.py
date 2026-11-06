@@ -14,6 +14,7 @@ from math import ceil
 from pathlib import Path
 
 import collect_market_relative as market
+import source_retention as retention
 
 ROOT=Path(__file__).resolve().parents[1]
 UNIVERSE=ROOT/"research-universe.json"
@@ -107,8 +108,19 @@ def main():
     old=read_json(OUT,{})
     output=base(status,symbols)
     if status!="partial":
-        OUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-        print("Individual relative returns: "+status)
+        reusable=(market.KEY and market.DISPLAY and status=="benchmark_missing"
+                  and benchmark.get("status")=="stale_cached"
+                  and retention.last_good(old,kind="stocks")
+                  and old.get("asOf")==benchmark.get("asOf")
+                  and old.get("benchmarkDates")==benchmark.get("periodDates"))
+        if reusable:
+            retention.apply_stale(output,old,kind="stocks",now=NOW,
+                                  reason="benchmark_missing",
+                                  errors=[{"scope":"benchmark","reason":"prior ETF close"}])
+        else:
+            retention.apply_blocked(output,old,kind="stocks",status=status,now=NOW)
+        retention.atomic_write(OUT,output)
+        print("Individual relative returns: "+output["status"])
         return
     output["asOf"]=benchmark["asOf"]
     output["benchmarkDates"]=benchmark["periodDates"]
@@ -137,7 +149,16 @@ def main():
     current=sum(x.get("asOf")==output["asOf"] for x in output["companies"].values())
     output["verifiedOnBenchmarkDate"]=current
     output["status"]="ok" if current==len(symbols) and not output["errors"] else "partial"
-    OUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    if output["updatedThisRun"]:
+        retention.set_verified(output,kind="stocks",now=NOW)
+    else:
+        # A fully failed refresh is not a new verification, even when earlier
+        # rows happen to match the still-current benchmark trade date.
+        output["lastVerified"]=retention.last_verified(old,kind="stocks")
+        output["lastAttempt"]=retention.attempt(
+            NOW,"previous_verified_only" if current else "unavailable",output["errors"])
+        output["publicDisplayAuthorized"]=True
+    retention.atomic_write(OUT,output)
     print("Individual relative: %d/%d current; updated=%d; errors=%d" %
           (current,len(symbols),output["updatedThisRun"],len(output["errors"])))
 

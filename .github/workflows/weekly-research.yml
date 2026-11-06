@@ -35,7 +35,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Verify Python source syntax
-        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py scripts/build_pipeline_review.py scripts/collect_biotech_official.py scripts/build_data_health.py scripts/collect_korea_dart.py scripts/check_daily_freshness.py scripts/validate_release.py scripts/prepare_site.py scripts/sec_client.py
+        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py scripts/build_pipeline_review.py scripts/collect_biotech_official.py scripts/build_data_health.py scripts/collect_korea_dart.py scripts/check_daily_freshness.py scripts/validate_release.py scripts/prepare_site.py scripts/sec_client.py scripts/source_retention.py
       - name: Set up Node.js for UI smoke tests
         uses: actions/setup-node@v4
         with:

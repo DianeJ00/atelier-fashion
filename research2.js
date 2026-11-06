@@ -30,6 +30,8 @@ function relative(sym,bench=state.benchmark,term=state.period){
 }
 function marketReady(){return ['ok','partial','source_verified_snapshot'].includes(prices?.status)&&!!prices?.asOf}
 function marketBanner(){
+ if(prices?.status==='stale_cached')
+  return '<div class="r2-data-note r6-review-note"><b>이전 자동 확인 종가 · 기준일 '+esc(prices.asOf)+'</b> · 이번 거래일 가격 수집에 실패해 과거 확인본을 표시합니다. 신규 종가·현재 수익률이 아니며 시세 표시 허용 상태에서만 제공됩니다. 새 자료 확인 전 투자 판단에 주의하세요.</div>';
  if(prices?.status==='source_verified_snapshot')
   return `<div class="r2-data-note r6-review-note"><b>기준일 ${esc(prices.asOf)} · 실제 확인된 ETF 시장가격 수익률</b> · 배당·수수료 제외 · 원문을 대조한 날짜 고정 스냅샷(매일 자동 갱신 아님). 
   최신 비교 차트는 위 TradingView 화면에서 확인할 수 있습니다. 시장 상대강도는 실제 자금 유입의 증거가 아닙니다.</div>`;
@@ -40,6 +42,13 @@ function marketBanner(){
  return `<div class="r2-data-note">${marketReady()?'기준 종가 '+esc(prices.asOf)+' · 배당·분할 조정 ·':esc(msg)+' ·'} ETF는 산업 대리 지표입니다. 가격 성과가 자금 유입을 입증하지 않으며 국내 종목과 통화·배당 기준이 다릅니다.</div>`;
 }
 function stockBreadthPanel(){
+ // Never combine adjusted stock returns with a manual price-return ETF snapshot,
+ // or comparisons calculated on different trading days.
+ if(!stockData||!['ok','partial','stale_cached'].includes(stockData.status)
+    ||stockData.asOf!==prices?.asOf
+    ||prices?.status==='source_verified_snapshot'
+    ||(stockData.status==='stale_cached'&&prices?.status!=='stale_cached'))
+  return '<details class="r6-incomplete"><summary>추적 47개 미국 종목의 상대수익률 · 일치한 거래일 자료 대기</summary><p>수집 실패·시세 권한 미연결·가격 기준 불일치 시 이전 종목 수익률을 현재 ETF와 혼합하지 않습니다.</p></details>';
  const stats=stockData?.summary?.[state.benchmark]||{};
  if(!stats||!Object.keys(stats).length)
   return '<details class="r6-incomplete"><summary>추적 47개 미국 종목의 상대수익률 · 시세 공급원 연결 필요</summary><p>현재 업종별 동일가중 성과와 기술주를 상회한 기업 비율은 공백으로 계산하지 않습니다. 가격 시계열과 외부 표시 허용 계약이 준비되면 동일 기준일·환산 통화로 자동 수집할 예정입니다. 개별 기업은 공식 SEC 재무 실적과 별도로 확인할 수 있습니다.</p></details>';
@@ -55,7 +64,7 @@ function stockBreadthPanel(){
   <td class="r2-num">${enough?String(v.aboveBenchmarkCount)+'/'+String(v.count):'—'}</td>
   <td>${Number(v.count)||0}/${v.universe||'?'}개</td></tr>`;
  }).join('');
- return `<div class="r2-breadth"><div class="r2-breadth-title"><b>ATELIER 추적 종목 기준</b><span>개별 종목 수집률 80% 이상일 때만 바스켓 성과 표시</span></div>
+ return `<div class="r2-breadth"><div class="r2-breadth-title"><b>ATELIER 추적 종목 기준</b><span>${stockData?.status==='stale_cached'?'이전 거래일 확인본 · 신규 수집 실패':'개별 종목 수집률 80% 이상일 때만 바스켓 성과 표시'}</span></div>
  <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>산업 바스켓</th><th>동일가중 수익률</th><th>${esc(state.benchmark)} 대비</th><th>기준 상회 기업</th><th>당기 자료 확보</th></tr></thead><tbody>${rows}</tbody></table></div>
  <p class="r2-foot">가격·배당 조정 기준, 같은 거래일 비교. 일부 종목 수집이 늦으면 지수 대리 ETF 성과와 다르게 나타날 수 있습니다. 기준 미달은 빈값으로 표시합니다.</p></div>`;
 }

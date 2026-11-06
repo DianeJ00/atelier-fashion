@@ -50,6 +50,11 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
  assert.equal(store.effectiveMarket(live,reviewed),live);
  assert.equal(store.effectiveMarket({status:"key_required"},reviewed),reviewed);
  assert.equal(store.effectiveMarket({status:"partial",asOf:"2026-11-06",returns:{}},reviewed),reviewed);
+ const archived={status:"stale_cached",asOf:"2026-11-05",
+   publicDisplayAuthorized:true,returns:{XLK:{"3m":4}}};
+ assert.equal(store.effectiveMarket(archived,reviewed),archived);
+ assert.equal(store.effectiveMarket({...archived,publicDisplayAuthorized:false},reviewed),reviewed);
+ assert.equal(store.effectiveMarket({...archived,asOf:"2026-11-02"},reviewed),reviewed);
  for(const name of Object.values(store.sources))assert.ok(fs.existsSync(path.join(root,name)),name);
  assert.ok(read(".github/workflows/weekly-research.yml").includes("python scripts/prepare_site.py"));
  assert.ok(read("index.html").includes('<script src="./atelier-data.js"></script>'));

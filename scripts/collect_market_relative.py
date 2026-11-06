@@ -13,6 +13,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+import source_retention as retention
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"market-relative.json"
@@ -76,8 +77,18 @@ def period_return(bars, anchor, baseline_date):
     return round(100*(bars[anchor]/base-1),2) if base>0 else None
 
 def build():
+    try:
+        previous=json.loads(OUT.read_text(encoding="utf-8"))
+        if not isinstance(previous,dict):previous={}
+    except (ValueError,OSError):
+        previous={}
     if not KEY or not DISPLAY:
-        data=make_empty("key_required" if not KEY else "display_permission_required")
+        # No public quote or derived return can survive a missing display entitlement.
+        data=retention.apply_blocked(
+            make_empty("key_required" if not KEY else "display_permission_required"),
+            previous,kind="market",
+            status="key_required" if not KEY else "display_permission_required",
+            now=NOW)
     else:
         data=make_empty("partial")
         history={}
@@ -131,7 +142,30 @@ def build():
                             if x1/x0 > b1/b0:wins+=1
                     data["weeklyBreadth"][ticker]={"weeksOutperformed":wins,"weeksCompared":valid}
             data["status"]="ok" if len(history)==len(SYMBOLS) else "partial"
-    OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+        # Outage or older provider history cannot silently replace a newer, verified close.
+        unusable=not data.get("asOf") or data.get("status")=="unavailable"
+        regressed=(retention.date_ok(data.get("asOf"))
+                   and retention.date_ok(previous.get("asOf"))
+                   and previous["asOf"]>data["asOf"])
+        if unusable or regressed:
+            reason="unavailable" if unusable else "older_than_last_verified"
+            if retention.apply_stale(data,previous,kind="market",now=NOW,
+                                     reason=reason,errors=data["errors"]):
+                data["caveats"].append(
+                    "이전 자동 검증 종가를 보존: 이번 수집에서 새 거래일 종가를 확인하지 못함")
+            else:
+                data["status"]="unavailable"
+                data["asOf"]=None
+                data["returns"]={}
+                data["relative"]={}
+                data["periodDates"]={}
+                data["weeklyBreadth"]={}
+                data["lastVerified"]=retention.last_verified(previous,kind="market")
+                data["lastAttempt"]=retention.attempt(NOW,reason,data["errors"])
+                data["publicDisplayAuthorized"]=True
+        else:
+            retention.set_verified(data,kind="market",now=NOW)
+    retention.atomic_write(OUT,data)
     print("Market proxies: "+data["status"]+", as-of "+str(data.get("asOf")))
 
 if __name__=="__main__":
