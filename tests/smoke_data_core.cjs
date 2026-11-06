@@ -53,6 +53,8 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
  for(const name of Object.values(store.sources))assert.ok(fs.existsSync(path.join(root,name)),name);
  assert.ok(read(".github/workflows/weekly-research.yml").includes("python scripts/prepare_site.py"));
  assert.ok(read("index.html").includes('<script src="./atelier-data.js"></script>'));
+ assert.ok(read("index.html").includes('<script src="./legacy-fashion-data.js"></script>'));
+ assert.ok(read("index.html").includes('<script src="./legacy-fashion.js"></script>'));
  // A published page must never fall back to unpinned root JSON after a new deploy.
  const pinnedId="abcdef0123456789abcd", pinnedRequests=[];
  const pinnedWindow={ATELIER_RELEASE_ID:pinnedId};

@@ -7,6 +7,7 @@ from pathlib import Path
 from validate_release import ROOT, MANIFEST, DATA_FILES, check_manifest, sha
 
 JS_CSS = (
+    "legacy-fashion-data.js", "legacy-fashion.js",
     "atelier-data.js", "research2.js", "research2.css",
     "research3.js", "research3.css",
     "consumer2.js", "consumer2.css", "market-live.js",

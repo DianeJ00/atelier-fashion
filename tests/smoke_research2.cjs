@@ -95,6 +95,6 @@ const click=(key,value)=>callbacks.click({
  const html=read("index.html");
  assert.ok(html.includes("./research2.js")&&html.includes("./research2.css"));
  assert.ok(html.includes("./consumer2.js")&&html.includes("./consumer2.css"));
- assert.ok(html.includes("legacyCompanyPage"));
+ assert.ok(read("legacy-fashion.js").includes("legacyCompanyPage"));
  console.log("ATELIER 2.0 smoke: 52 companies, relative-benchmark scaffolding, disease filter, asset details, domestic briefing, legacy fashion OK");
 })().catch(err=>{console.error(err);process.exitCode=1});

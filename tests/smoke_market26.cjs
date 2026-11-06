@@ -54,7 +54,7 @@ function validateCommon(markup){
  assert.ok(!report.includes("배당·분할 조정 종가 기준, 실제 제공 시에만 계산"),"snapshot must never be claimed as licensed total return");
  assert.ok(headerNodes["top-datum"].textContent.includes("마지막 자료 수집 점검"));
  assert.ok(!headerNodes["top-datum"].textContent.includes("2026-11-03"),"legacy date must not be site-wide freshness");
- assert.ok(read("index.html").includes("최신 자료 점검 확인 중 · 시세는 출처별 기준일"));
+ assert.ok(read("legacy-fashion.js").includes("최신 자료 점검 확인 중 · 시세는 출처별 기준일"));
  const audit=w.ATELIER_HEALTH.panel();
  assert.ok(audit.includes("지금 실제로 확인되는 자료와 남은 작업"));
  assert.ok(read(".github/workflows/weekly-research.yml").includes("data-health.json"));
