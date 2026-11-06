@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T05:28:46.445673Z",
+  "generatedAt": "2026-11-06T05:30:27.093517Z",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-06",
   "reviewStatus": "unverified_headlines_only",
@@ -350,19 +350,6 @@
       "carriedOver": true
     },
     {
-      "id": "rss-17c8789b0d00c77",
-      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
-      "date": "2026-10-31T09:16:00Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "Investing.com UK",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-a2c2beb6d73a533",
       "title": "Gap (GAP) Q1 2027 Earnings Call Transcript - Fortune",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3Ryb3RBSGVSY28xXzNuUnQ5YVRWY0R3cEc3Z2E5bkFxaEtkcnFnalRzRl9iTi1NTEZVMUE0UXdsTDlZckRBU3FXVFR1YWdRZ2luWHNWOUcyVy0zclE?oc=5",
@@ -384,6 +371,19 @@
       "ticker": "LEVI",
       "brand": "",
       "creator": "WWD",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-c1e379ebd64ffdb",
+      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
+      "date": "2026-10-30T15:50:18Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "qz.com",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -473,7 +473,7 @@
     ],
     "uncategorizedCount": 19,
     "previousCollectedAt": "2026-11-06T05:23:36.739524Z",
-    "newSincePrevious": 0,
+    "newSincePrevious": 1,
     "companyFocus": [
       {
         "ticker": "TPR",

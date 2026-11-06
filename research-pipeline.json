@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-11-06T05:29:57.498237+00:00",
-  "registryCheckedAt": "2026-11-06T05:29:47.970588+00:00",
+  "lastChecked": "2026-11-06T05:31:44.713156+00:00",
+  "registryCheckedAt": "2026-11-06T05:31:31.178331+00:00",
   "status": "registry_compared",
   "observedStudies": 12,
   "records": [
@@ -12,24 +12,23 @@
       "modality": "GIP·GLP-1",
       "source": "LLY 공시·임상자료",
       "check": "약물별 적응증·승인 상태를 기업 IR로 구분",
-      "stage": "4상 등록시험 확인",
-      "clinicalTrialId": "NCT05433584",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=tirzepatide",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "4상 등록시험 확인",
       "trialPhaseObserved": "PHASE4",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT05433584",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT05433584",
       "trialCondition": [
         "Type 2 Diabetes"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2025-10-21",
         "type": "ACTUAL"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -39,24 +38,23 @@
       "modality": "항체·복합 작용제",
       "source": "AMGN 공식 자료",
       "check": "용량·투여주기 및 장기 안전성을 구분",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT06858878",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=MariTide",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT06858878",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT06858878",
       "trialCondition": [
         "Type 2 Diabetes Mellitus (T2DM), Obesity, Overweight"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-01-21",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -66,24 +64,23 @@
       "modality": "GLP-1·복합 작용제",
       "source": "VKTX 기업 IR",
       "check": "경구·주사 제형별 결과 구분",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT07868939",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=VK2735",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT07868939",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT07868939",
       "trialCondition": [
         "Weight Loss"
       ],
       "trialStatus": "모집 전",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2028-10",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -93,24 +90,23 @@
       "modality": "면역관문 치료",
       "source": "MRK 공식 자료",
       "check": "적응증별 특허·매출·경쟁약 비교",
-      "stage": "2상 등록시험 확인",
-      "clinicalTrialId": "NCT06493019",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=pembrolizumab",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "2상 등록시험 확인",
       "trialPhaseObserved": "PHASE2",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT06493019",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT06493019",
       "trialCondition": [
         "Anal Cancer"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-04-15",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -120,24 +116,23 @@
       "modality": "항체약물접합체",
       "source": "GILD 공식 자료",
       "check": "암종별 승인·생존지표 구분",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT05089734",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=sacituzumab%20govitecan",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT05089734",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT05089734",
       "trialCondition": [
         "Non-Small Cell Lung Cancer"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2023-11-29",
         "type": "ACTUAL"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -147,24 +142,23 @@
       "modality": "면역 항체",
       "source": "ABBV 공식 자료",
       "check": "질환별 유효성·신규 적응증 비교",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT06063967",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=risankizumab",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT06063967",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT06063967",
       "trialCondition": [
         "Crohn's Disease"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-03",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -174,24 +168,23 @@
       "modality": "단클론항체",
       "source": "REGN 공식 자료",
       "check": "적응증별 시장·처방 확대 확인",
-      "stage": "4상 등록시험 확인",
-      "clinicalTrialId": "NCT07905547",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=dupilumab",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "4상 등록시험 확인",
       "trialPhaseObserved": "PHASE4",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT07905547",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT07905547",
       "trialCondition": [
         "Atopic Dermatitis"
       ],
       "trialStatus": "모집 전",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-02-07",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -201,14 +194,12 @@
       "modality": "항체",
       "source": "BIIB 공식 자료",
       "check": "투약 현장·안전성·보험 접근성 확인",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT05269394",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=lecanemab",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT05269394",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT05269394",
       "trialCondition": [
         "Alzheimers Disease",
@@ -216,11 +207,12 @@
         "Alzheimers Disease, Familial"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2028-04",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -230,14 +222,12 @@
       "modality": "유전자 편집",
       "source": "VRTX 공식 자료",
       "check": "치료센터·실제 환자 접근성 확인",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT05356195",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=exagamglogene%20autotemcel",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT05356195",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT05356195",
       "trialCondition": [
         "Beta-Thalassemia",
@@ -247,11 +237,12 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -261,25 +252,24 @@
       "modality": "RNA 간섭",
       "source": "ALNY 공식 자료",
       "check": "적응증별 보험·환자 수 구분",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT07223203",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=vutrisiran",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT07223203",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT07223203",
       "trialCondition": [
         "Hereditary Transthyretin-Mediated Amyloidosis With Polyneuropathy",
         "hATTR-PN"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-12-27",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -289,14 +279,12 @@
       "modality": "유전자 편집",
       "source": "CRSP 공식 자료",
       "check": "공동상업화·매출 인식 분리",
-      "stage": "3상 등록시험 확인",
-      "clinicalTrialId": "NCT05356195",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=exagamglogene%20autotemcel",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "3상 등록시험 확인",
       "trialPhaseObserved": "PHASE3",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT05356195",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT05356195",
       "trialCondition": [
         "Beta-Thalassemia",
@@ -306,11 +294,12 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     },
     {
@@ -320,24 +309,23 @@
       "modality": "유전자 치료",
       "source": "SRPT 공식 자료",
       "check": "안전성·규제 업데이트 최신 확인",
-      "stage": "4상 등록시험 확인",
-      "clinicalTrialId": "NCT07542314",
-      "approval": null,
-      "verifiedAt": null,
-      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
       "link": "https://clinicaltrials.gov/search?term=delandistrogene%20moxeparvovec",
+      "reviewStatus": "등록시험 단계·원문 확인 (약물 전체 개발·승인 여부와 별개)",
+      "stage": "4상 등록시험 확인",
       "trialPhaseObserved": "PHASE4",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
+      "clinicalTrialId": "NCT07542314",
       "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT07542314",
       "trialCondition": [
         "Duchenne Muscular Dystrophy"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-06T05:29:47.970588+00:00",
+      "stageVerifiedAt": "2026-11-06T05:31:31.178331+00:00",
       "primaryCompletion": {
         "date": "2027-08-31",
         "type": "ESTIMATED"
       },
+      "approval": null,
       "approvalBasis": "품목허가·상업화 상태는 등록시험 단계로 판단하지 않음. 기업 공식 공시·FDA/EMA 별도 대조 필요"
     }
   ],
