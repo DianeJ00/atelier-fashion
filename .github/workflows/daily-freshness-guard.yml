@@ -3,11 +3,12 @@ name: ATELIER daily source freshness guard
 on:
   workflow_dispatch:
   schedule:
-    # Daily 11:00 Korea Standard Time; allow the 09:00 refresh some time to complete.
-    - cron: '0 2 * * *'
+    # Daily 17:00 KST; allow delayed GitHub schedule runs to finish before alarm.
+    - cron: '0 8 * * *'
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   verify-daily-refresh:
@@ -17,5 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validate completed daily update and critical official sources
-        run: python scripts/check_daily_freshness.py
+      - name: Validate official data and the actual scheduled workflow result
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/check_daily_freshness.py --verify-schedule

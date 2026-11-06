@@ -20,6 +20,8 @@ concurrency:
 jobs:
   collect-and-build:
     runs-on: ubuntu-latest
+    outputs:
+      verified_sha: ${{ steps.snapshot.outputs.sha }}
     steps:
       - name: Check out site source
         uses: actions/checkout@v4
@@ -134,6 +136,21 @@ jobs:
           # Publish current files rather than the snapshot from workflow start.
           git fetch origin main
           git reset --hard origin/main
+      - name: Record exact validated repository revision
+        id: snapshot
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  validate-and-package:
+    needs: collect-and-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the committed, validated release
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.collect-and-build.outputs.verified_sha }}
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Verify complete source dataset against release manifest
         run: python scripts/validate_release.py check
       - name: Prepare immutable release and Pages site
@@ -147,7 +164,7 @@ jobs:
         with:
           path: _site
   deploy:
-    needs: collect-and-build
+    needs: validate-and-package
     runs-on: ubuntu-latest
     environment:
       name: github-pages

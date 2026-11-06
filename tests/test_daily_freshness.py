@@ -32,4 +32,29 @@ class DailyFreshnessTest(unittest.TestCase):
         d["items"].append({"id":"market","status":"blocked","covered":0})
         self.assertEqual(guard.issues(d,AT),[])
 
+class ScheduledRunTest(unittest.TestCase):
+    def test_successful_schedule_is_required(self):
+        run={"event":"schedule","created_at":"2026-11-06T00:01:00Z",
+             "status":"completed","conclusion":"success"}
+        self.assertEqual(guard.schedule_issues([run],AT),[])
+    def test_manual_push_does_not_count_as_daily_schedule(self):
+        push={"event":"push","created_at":"2026-11-06T00:01:00Z",
+              "status":"completed","conclusion":"success"}
+        self.assertTrue(guard.schedule_issues([push],AT))
+    def test_failed_schedule_does_not_pass(self):
+        bad={"event":"schedule","created_at":"2026-11-06T00:02:00Z",
+             "status":"completed","conclusion":"failure"}
+        self.assertTrue(guard.schedule_issues([bad],AT))
+    def test_yesterday_success_is_not_todays_schedule(self):
+        old={"event":"schedule","created_at":"2026-11-05T00:01:00Z",
+             "status":"completed","conclusion":"success"}
+        self.assertTrue(guard.schedule_issues([old],AT))
+    def test_latest_attempt_is_authoritative(self):
+        old={"event":"schedule","created_at":"2026-11-06T00:01:00Z",
+             "status":"completed","conclusion":"success"}
+        failed={"event":"schedule","created_at":"2026-11-06T01:01:00Z",
+                "status":"completed","conclusion":"failure"}
+        self.assertTrue(guard.schedule_issues([old,failed],AT))
+
+
 if __name__=="__main__":unittest.main()
