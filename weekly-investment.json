@@ -28,13 +28,13 @@
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-06T00:32:19.909614+00:00",
+  "generatedAt": "2026-11-06T04:14:36.259106+00:00",
   "periodStart": "2026-10-30",
   "periodEnd": "2026-11-06",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 3,
-    "unverifiedHeadlines": 34,
+    "unverifiedHeadlines": 33,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -84,7 +84,7 @@
       "headline": {
         "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-        "date": "2026-11-05"
+        "date": "2026-11-06"
       },
       "consumerSampleCount": 0
     },
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
-        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
-        "date": "2026-10-31"
+        "title": "What American Eagle Outfitters Holders Got Right - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDhRcVZlNHRyRHhtSkFVM1U1N1hjZzMxNllOZWRCVWtEb1VqcTZuNTR6WnJkcVc2SXhwTXQ1d2lEdWRyanhObVBEMWxFRHNrNE1icFZNaDdCUzJVOWRLSm0tWXJkZkJzZjJrTzZtZTY5RWk2MU5PNWs3ZUhsQWh4MEJ4NEpNajcxSlZyakhTMzNUeDBSTHFZMHgtQlg3ejNGREt4Yw?oc=5",
+        "date": "2026-11-06"
       },
       "consumerSampleCount": 0
     },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T00:31:11.734470Z",
+  "generatedAt": "2026-11-06T04:13:16.752397Z",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-06",
   "reviewStatus": "unverified_headlines_only",
@@ -9,11 +9,24 @@
       "id": "rss-7d3ea0d3813a70e",
       "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-      "date": "2026-11-05T20:20:45Z",
+      "date": "2026-11-06T02:08:56Z",
       "platform": "Google News",
       "ticker": "RL",
       "brand": "",
       "creator": "WWD",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-b47138fbe0ef305",
+      "title": "What American Eagle Outfitters Holders Got Right - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDhRcVZlNHRyRHhtSkFVM1U1N1hjZzMxNllOZWRCVWtEb1VqcTZuNTR6WnJkcVc2SXhwTXQ1d2lEdWRyanhObVBEMWxFRHNrNE1icFZNaDdCUzJVOWRLSm0tWXJkZkJzZjJrTzZtZTY5RWk2MU5PNWs3ZUhsQWh4MEJ4NEpNajcxSlZyakhTMzNUeDBSTHFZMHgtQlg3ejNGREt4Yw?oc=5",
+      "date": "2026-11-06T00:21:00Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "Yahoo Finance",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -29,6 +42,19 @@
       "creator": "FashionNetwork - The World's Fashion Business News",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기업 실적",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-370008b89aab578",
+      "title": "Christie Brown Lagos Spring 2027 Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1OMHBGU0k4aGtpU2phdVBMZnRBSmQ0dWdtdlE5dTFGcjBUdHhwbkN0djZRSUtTNGI5NXk4ZVFieC1MUGlXQ3hSZjg4clJobjBIb2hCQk5kRGw2SE80X2s0SC03Z3c2UXhBenBkaUhVTXBNZzF4WVlB?oc=5",
+      "date": "2026-11-05T16:31:47Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Vogue",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review"
     },
     {
@@ -97,19 +123,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-79f91885d638102",
-      "title": "How Fashion Has ‘Turbocharged’ Its Diwali Marketing - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQW5YOVYteS04QTdCZkI4WTNNenJYSVM1XzNFSnFMVlpGOFdaMk1ERHdabFRiUk5XZUdGcTBncXJ1NDBEbDZRZXhOZkZDcVNyNWlGMGhxRXBFQTd6SHRCUHFrZ1BKXzhKay1aY1pGRENOTm9uazhKVWpJU2dwRl9DRktwVThFU0tlV3VDcHlGenE1WGs3RVMxeWphOXhTU3c?oc=5",
-      "date": "2026-11-04T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-77598da43620ed4",
       "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
@@ -131,7 +144,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -145,7 +158,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -229,19 +242,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-4697ec9b3baaec5",
-      "title": "Emmy Kasbit Lagos Spring 2027 Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9lM0tVTU9jLUtHeVRRSEdQaG4ybUt6a0xENkdISEFiVXNaaWxzaWVaRElaZVVfbWVjXzVmTGljNHFXZnFBMjNZT3BQUHltLUlteFVHLUU1R2hSSWxldld3Y3J1c25aZjgxZkVaRWg4cWMzUHc?oc=5",
-      "date": "2026-11-02T19:05:15Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Vogue",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-541409f299641ad",
       "title": "Mariah Carey Stars In Gucci’s Christmas Campaign",
       "url": "https://www.youtube.com/watch?v=auPKiKhHTXw",
@@ -250,7 +250,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -277,7 +277,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -304,7 +304,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -344,7 +344,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -384,19 +384,6 @@
       "ticker": "LEVI",
       "brand": "",
       "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-c1e379ebd64ffdb",
-      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
-      "date": "2026-10-30T15:50:18Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "qz.com",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -459,7 +446,7 @@
     "counts": [
       {
         "source": "Google News",
-        "count": 28
+        "count": 27
       },
       {
         "source": "YouTube",
@@ -484,9 +471,9 @@
         "count": 2
       }
     ],
-    "uncategorizedCount": 20,
-    "previousCollectedAt": "2026-11-05T23:11:42.819754Z",
-    "newSincePrevious": 0,
+    "uncategorizedCount": 19,
+    "previousCollectedAt": "2026-11-06T00:31:11.734470Z",
+    "newSincePrevious": 2,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -513,7 +500,7 @@
           {
             "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
             "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-            "date": "2026-11-05"
+            "date": "2026-11-06"
           },
           {
             "title": "Can Ralph Lauren and Coach Keep Winning Even as US Spending Slows? - The Business of Fashion",
@@ -612,7 +599,7 @@
       "name": "공개 뉴스·패션 매체",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 28
+      "count": 27
     }
   ],
   "errors": []

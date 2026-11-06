@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T00:32:19.696957+00:00",
+  "generatedAt": "2026-11-06T04:14:36.145758+00:00",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-06",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
@@ -178,8 +178,17 @@
       "id": "rss-7d3ea0d3813a70e",
       "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-      "date": "2026-11-05",
+      "date": "2026-11-06",
       "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-b47138fbe0ef305",
+      "title": "What American Eagle Outfitters Holders Got Right - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDhRcVZlNHRyRHhtSkFVM1U1N1hjZzMxNllOZWRCVWtEb1VqcTZuNTR6WnJkcVc2SXhwTXQ1d2lEdWRyanhObVBEMWxFRHNrNE1icFZNaDdCUzJVOWRLSm0tWXJkZkJzZjJrTzZtZTY5RWk2MU5PNWs3ZUhsQWh4MEJ4NEpNajcxSlZyakhTMzNUeDBSTHFZMHgtQlg3ejNGREt4Yw?oc=5",
+      "date": "2026-11-06",
+      "source": "Yahoo Finance",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -189,6 +198,15 @@
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdDJyWkpTUUNkSXNSamZQbWZ6Wk9yVzVCbnNXOFhhUElveDB5eWdrcjN1SFJFTDZoLXJwOC1ZbDJzZ3ZCNlFYUHBYdllRS2JOYVRGVVhXdVpSQTBURnJKZlRVcEdfengyU251MjllRkFvTF9zc3VXMXhuelFSeHhCMVNHZVcwNXdvYUgxOFBpUlRWdHNoUExvWnpyeDlnMk5rN08yb3I4ekJRdWVTUlJLVWRzMHE2NTVpWGhkWVhTdVFoRGZhZE5USDVoQkR4X0oyQXk4cnJPZw?oc=5",
       "date": "2026-11-05",
       "source": "FashionNetwork - The World's Fashion Business News",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-370008b89aab578",
+      "title": "Christie Brown Lagos Spring 2027 Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1OMHBGU0k4aGtpU2phdVBMZnRBSmQ0dWdtdlE5dTFGcjBUdHhwbkN0djZRSUtTNGI5NXk4ZVFieC1MUGlXQ3hSZjg4clJobjBIb2hCQk5kRGw2SE80X2s0SC03Z3c2UXhBenBkaUhVTXBNZzF4WVlB?oc=5",
+      "date": "2026-11-05",
+      "source": "Vogue",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -261,24 +279,6 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRXNtS0RiSWV4SDh1SDI1cWNKZG51Mm1zN2NLWE1aZGlTTERZTUhBZTlpWlZTeWlFaTZVQmYyaWZlYzRoSkY0enhnR3JPQ2czQkRvNm8tZEFyaWV6dUR6SVZXMUpPcmpRanBPeUNPYjFfdC1OeDhXNWtNVGRGZm5zbE5LZkJOWVFsc2ZzbjEwNTdtRHducnBIdmlkc1o?oc=5",
       "date": "2026-11-03",
       "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-de447d851e8cc9a",
-      "title": "The CeeDee Lamb Edit from Abercrombie & Fitch [PHOTOS] - WWD",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlpKeDNiUHBRdHh4blE2R0FTWkE5bUtmZlFyYzZfbUFSeDRHcDhfWDB4UVM2VGpnVENUM3pCOTZmdURQRzRHWVYxcnQ3ODJXN0NCVklMRkJrMUF4MVZidjlabnFmblcta01PYUZyMlJkZ2JjcGIzRlFBMWtwR18wNHVySFRqM3pUcDJ3WEx5S0NLVy0tSDFNRm5yUVJaN0U?oc=5",
-      "date": "2026-11-03",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-11e0c63c64c7f9e",
-      "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
-      "date": "2026-11-03",
-      "source": "PVH",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
