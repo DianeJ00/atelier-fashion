@@ -32,7 +32,7 @@ function marketReady(){return ['ok','partial','source_verified_snapshot'].includ
 function marketBanner(){
  if(prices?.status==='source_verified_snapshot')
   return `<div class="r2-data-note r6-review-note"><b>기준일 ${esc(prices.asOf)} · 실제 확인된 ETF 시장가격 수익률</b> · 배당·수수료 제외 · 원문을 대조한 날짜 고정 스냅샷(매일 자동 갱신 아님). 
-  최신 시세는 아래 TradingView 제공 화면에서 확인할 수 있습니다. 시장 상대강도는 실제 자금 유입의 증거가 아닙니다.</div>`;
+  최신 비교 차트는 위 TradingView 화면에서 확인할 수 있습니다. 시장 상대강도는 실제 자금 유입의 증거가 아닙니다.</div>`;
  const msg=prices?.status==='key_required'?'시세 API 미설정':
  prices?.status==='display_permission_required'?'외부 표시 라이선스 확인 필요':
  prices?.status==='unavailable'?'이번 수집에서 시세 확인 실패':
@@ -111,14 +111,14 @@ function marketPanel(){
  const label=periods.find(x=>x[0]===state.period)?.[1]||'3개월';
  const dateInfo=starts&&prices?.asOf?`<span class="r6-date">수익률 기간 ${esc(starts)} ~ ${esc(prices.asOf)}</span>`:'';
  return `<section class="r2-panel r6-market"><div class="r2-panel-head"><div><div class="r2-eyebrow">01 · 시장 대비 산업 상대강도</div>
- <h2>기술주 대비 바이오·소비재·패션의 상대수익률</h2><p>가격 수익률을 같은 시작·종료 날짜로 비교합니다. 초과수익률은 자금 유입의 증거가 아닙니다.</p></div></div>
+ <h2>기술주 대비 바이오·소비재·패션의 상대수익률</h2><p>ETF 기준 비교(XLK·XBI·XLY·XRT). XRT는 패션 전용이 아닌 미국 유통 ETF입니다. 초과수익률은 자금 유입의 증거가 아닙니다.</p></div></div>
  <div class="r2-toolbar"><span>비교 지수</span>${click(allowedBenchmarks,state.benchmark,'benchmark')}<span class="r2-spacer"></span><span>기간</span>${click(periods,state.period,'period')}</div>
- <div class="r6-period-line"><strong>${esc(label)}</strong>${dateInfo}</div>
+ <details class="r6-live-market" data-r6-live><summary>최근 거래일까지 자동 반영되는 ETF 비교 차트 보기 · TradingView</summary><div class="r6-live-slot" data-r6-slot><p>XLK(기술주)를 기준으로 XBI(바이오)·XLY(경기소비재)·XRT(유통)의 동일 기간 등락률을 비교합니다. TradingView 제공 시세는 실시간 또는 지연될 수 있습니다. 아래 숫자 표는 별도 원문 대조일 기준이며 차트와 자동 동기화되지 않습니다.</p></div></details>
+ <div class="r6-period-line"><strong>${esc(label)} · 아래 표는 별도 데이터 기준일</strong>${dateInfo}</div>
  <div class="r2-index-strip">${allowedBenchmarks.map(sym=>`<div><small>${sym} ${sym==='SPY'?'· S&P 500':sym==='QQQ'?'· 나스닥100':'· 정보기술 업종'}</small><strong>${signed(priceReturn(sym))}</strong></div>`).join('')}</div>
  <div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>관찰 산업</th><th>ETF 수익률</th><th>${esc(state.benchmark)} 대비</th><th>근거</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
  ${stockBreadthPanel()}
  ${marketBanner()}
- <details class="r6-live-market" data-r6-live><summary>최신 ETF 시세·3개월 추이 확인 · TradingView 제공</summary><div class="r6-live-slot" data-r6-slot><p>선택하면 TradingView의 외부 시장 데이터 화면을 불러옵니다. 실시간/지연 여부와 시세 제공 조건은 해당 업체를 따릅니다.</p></div></details>
  <p class="r2-foot">SPY=S&P 500 · QQQ=나스닥100 · XLK=기술주 · XBI=바이오 · XLY=경기소비재 · XRT=유통 업종 대리 ETF. ${reviewed?'원문 검토 스냅샷은 자동 갱신되지 않습니다. 시세 계약·재배포 권한 확인 전까지 매주 새로운 숫자를 확정값으로 표시하지 않습니다.':'업종별 ETF는 추적 기업 동일가중 바스켓이 아닙니다.'}</p></section>`;
 }
 function diseaseMap(){

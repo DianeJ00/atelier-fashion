@@ -31,6 +31,13 @@ vm.runInNewContext(read("health.js"),context);
  assert.ok(ret.includes("외부")||ret.includes("원문"));
  assert.ok(!ret.includes("배당·분할 조정 종가 기준, 실제 제공 시에만 계산"),"no misleading total-return description on source snapshot");
  assert.ok(ret.includes("TradingView"));
+ assert.ok(ret.includes("최근 거래일까지 자동 반영되는 ETF 비교 차트"));
+ assert.ok(ret.includes("아래 표는 별도 데이터 기준일"));
+ assert.ok(read("market-live.js").includes("embed-widget-advanced-chart.js"));
+ for(const etf of ["AMEX:XLK","AMEX:XBI","AMEX:XLY","AMEX:XRT"])
+   assert.ok(read("market-live.js").includes(etf),"comparison ETF missing: "+etf);
+ assert.ok(read("market-live.js").includes('position:"SameScale"'));
+ assert.ok(ret.includes("XRT는 패션 전용이 아닌 미국 유통 ETF"));
  assert.ok(ret.includes("추적 47개 미국 종목의 상대수익률"));
  assert.ok(!ret.includes('class="r2-breadth"'),"avoid blank 47-stock breadth table");
  assert.ok(read("index.html").includes('market-live.js'));
