@@ -665,7 +665,7 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
     </nav>
     <div class="sidebar-bottom">
       <div class="data-icon">◉ <span id="status-short">스냅샷 모드</span></div>
-      <div class="sidebar-tiny" id="snapshot-short">기준일 2026.11.03</div>
+      <div class="sidebar-tiny" id="snapshot-short">자료별 기준일 확인 중</div>
       <div class="sidebar-tiny">시세는 투자 의견이 아닙니다</div>
     </div>
   </aside>
@@ -673,7 +673,7 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
    <div class="main-shell">
     <header class="topbar">
       <div class="top-left"><button class="mobile-menu" id="mobile-menu" aria-label="메뉴 열기">☰</button><span class="crumb">ATELIER 리서치</span><span class="crumb-sep">/</span><span id="page-crumb">전체 현황</span></div>
-      <div class="top-right"><span class="live-dot" aria-hidden="true"></span><span class="top-datum" id="top-datum">2026.11.03 기준 데이터 · 실시간 아님</span></div>
+      <div class="top-right"><span class="live-dot" aria-hidden="true"></span><span class="top-datum" id="top-datum">마지막 수집 점검 확인 중 · 시세 기준 별도</span></div>
     </header>
     <main id="content" class="content" aria-live="polite"></main>
   </div>
@@ -714,11 +714,12 @@ let toastTimer;
 function notify(msg){let e=$('#toast');e.textContent=msg;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3100)}
 const badge=(t,c='')=>`<span class="pill ${c}">${esc(t)}</span>`;
 const tone=c=>c==='성장 확인'?'pos':c==='주의'?'neg':c==='실적 발표 대기'?'gold':'';
-const metaDate=D.meta?.marketDataLastRefresh?`시세 갱신 ${esc(D.meta.marketDataLastRefresh.slice(0,10))} · ${D.meta.priceSuccessCount||0}/${peers.length}`:`${esc(D.meta?.snapshotDate||'2026-11-03')} 기준 · 비실시간`;
 function start(){
- $('#top-datum').textContent=metaDate;
- $('#status-short').textContent=D.meta?.priceProvider==='twelvedata'?`API 시세 ${D.meta.priceSuccessCount||0}/${peers.length} 갱신`:'저장된 시세 · 실시간 아님';
- $('#snapshot-short').textContent='기준일 '+(D.meta?.marketDataLastRefresh||D.meta?.snapshotDate||'2026-11-03').slice(0,10);
+ // Previous 2026-11-03 value describes legacy fashion prices only, not all sources.
+ // The source-audit view replaces these placeholders after data-health.json loads.
+ $('#top-datum').textContent='최신 자료 점검 확인 중 · 시세는 출처별 기준일';
+ $('#status-short').textContent='시세 출처별 확인 중';
+ $('#snapshot-short').textContent='기존 패션 시세 '+(D.meta?.snapshotDate||'기준일 미확인').slice(0,10);
  render();loadResearchFeed();window.ATELIER2?.load();window.ATELIER_HEALTH?.load();
 }
 function head(eyebrow,title,description,side=''){return `<div class="section-head"><div><div class="eyebrow">${eyebrow}</div><h1>${title}</h1><div class="lead">${description}</div></div>${side?`<div class="small-meta">${side}</div>`:''}</div>`}

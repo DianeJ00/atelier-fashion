@@ -9,15 +9,21 @@ const inputs=[
 "consumer-official.json","data-health.json"
 ];
 const resources=Object.fromEntries(inputs.map(s=>[s,JSON.parse(read(s))]));
-const handler={};
+const handler={}, headerNodes={};
 const w={renders:0,atelierRerender(){this.renders++}};
-const context={window:w,document:{addEventListener(t,fn){handler[t]=fn}},URL,console,encodeURIComponent,
+const context={window:w,document:{addEventListener(t,fn){handler[t]=fn},getElementById(id){return headerNodes[id]??(headerNodes[id]={textContent:""})}},URL,console,encodeURIComponent,
 fetch:async s=>({ok:true,json:async()=>resources[String(s).replace("./","")]})};
 vm.runInNewContext(read("consumer2.js"),context);
 vm.runInNewContext(read("research2.js"),context);
 vm.runInNewContext(read("health.js"),context);
 (async()=>{
  await w.ATELIER2.load();await w.ATELIER_HEALTH.load();
+ assert.ok(headerNodes["top-datum"].textContent.includes("마지막 자료 수집 점검"));
+ assert.ok(headerNodes["top-datum"].textContent.includes("실시간 시세 아님")||headerNodes["top-datum"].textContent.includes("갱신 지연 확인 필요"));
+ assert.ok(!headerNodes["top-datum"].textContent.includes("2026-11-03"),"legacy fashion date must not appear as site-wide status");
+ assert.ok(headerNodes["status-short"].textContent.includes("고정 스냅샷"));
+ assert.ok(headerNodes["snapshot-short"].textContent.includes("2026-11-04"));
+ assert.ok(read("index.html").includes("최신 자료 점검 확인 중 · 시세는 출처별 기준일"));
  const prices=w.ATELIER2.prices;
  assert.equal(prices.status,"source_verified_snapshot");
  assert.equal(prices.asOf,"2026-11-04");
