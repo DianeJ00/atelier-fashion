@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T05:31:31.099946+00:00",
+  "generatedAt": "2026-11-06T06:23:03.267537+00:00",
   "status": "key_required",
   "source": "Twelve Data time_series (외부 표시 라이선스 필요)",
   "priceConvention": "adjust=all · 배당·분할 조정 종가 기준, 실제 제공 시에만 계산",
@@ -48,5 +48,12 @@
     "XBI·XLY·XRT는 산업 대리 ETF이며 추적 기업의 동일가중 수익률이 아님",
     "동일 날짜의 배당·분할 조정 종가로 비교; ETF 초과수익률은 자금 유입 증거가 아님",
     "국내 종목의 USD 환산 수익률 및 개별 종목 상회 비율은 아직 계산하지 않음"
-  ]
+  ],
+  "lastAttempt": {
+    "at": "2026-11-06T06:23:03.267537+00:00",
+    "status": "key_required",
+    "errorCount": 0
+  },
+  "lastVerified": null,
+  "publicDisplayAuthorized": false
 }

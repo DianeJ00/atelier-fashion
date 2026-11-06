@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T05:31:44.780605+00:00",
+  "generatedAt": "2026-11-06T06:23:17.368627+00:00",
   "status": "key_required",
   "source": "Twelve Data daily time_series (adjust=all)",
   "asOf": null,
@@ -24,5 +24,13 @@
     "업종 동일가중 수익률은 추적 종목 바스켓이며 XBI·XLY·XRT ETF와 다름",
     "한국 상장 5개는 KRW 원화 가격 및 USD 환산 경로가 검증될 때까지 제외",
     "자금 유입·AI 투자에서의 자금 회전은 가격 수익률만으로 단정할 수 없음"
-  ]
+  ],
+  "lastAttempt": {
+    "at": "2026-11-06T06:23:17.368627+00:00",
+    "status": "key_required",
+    "errorCount": 0
+  },
+  "lastVerified": null,
+  "publicDisplayAuthorized": false,
+  "verifiedOnBenchmarkDate": 0
 }
