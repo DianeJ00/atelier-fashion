@@ -21,6 +21,7 @@ const click=(key,value)=>callbacks.click({
 });
 (async()=>{
  await win.ATELIER2.load();
+ await win.ATELIER2.loadDetails();
  await win.ATELIER_CONSUMER.load();
  assert.equal(win.ATELIER2.data.companies.length,52);
  assert.equal(win.ATELIER_CONSUMER.data.companies.length,15);

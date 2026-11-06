@@ -1,0 +1,51 @@
+name: ATELIER real-browser regression
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'legacy-fashion.js'
+      - 'legacy-fashion-data.js'
+      - 'atelier-data.js'
+      - 'atelier-backup.js'
+      - 'research2.js'
+      - 'research3.js'
+      - 'tests/browser.smoke.spec.cjs'
+      - '.github/workflows/browser-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  chromium-desktop-mobile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild immutable Pages preview
+        run: |
+          python scripts/validate_release.py check
+          python scripts/prepare_site.py
+          python scripts/validate_release.py verify-site _site
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save @playwright/test@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Serve compiled site locally
+        run: |
+          python -m http.server 8137 --bind 127.0.0.1 --directory _site > /tmp/atelier-browser-test.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8137/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Test desktop and mobile in actual Chromium browser
+        run: npx playwright test tests/browser.smoke.spec.cjs --browser chromium --workers 1 --reporter line

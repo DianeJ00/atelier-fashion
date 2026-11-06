@@ -308,15 +308,25 @@ document.addEventListener('input',e=>{
  renderCurrent();
  const input=$('#r2-search');if(input){input.focus();try{input.setSelectionRange(pos,pos)}catch(_){}}
 });
-async function load(){
- const all=await window.ATELIER_DATA.many(["universe","market","pipeline","clinical","stocks","marketReviewed"]);
- db=all[0]?.companies?.length===52?all[0]:null;
- prices=window.ATELIER_DATA.effectiveMarket(all[1],all[5]);
- pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
- renderCurrent();
- if(window.ATELIER_CONSUMER?.load)window.ATELIER_CONSUMER.load();
- if(window.ATELIER_KOREA?.load)window.ATELIER_KOREA.load();
- if(window.ATELIER3?.load)window.ATELIER3.load();
+let detailsReady=false,detailsPromise=null;
+async function loadDetails(){
+ if(detailsReady)return;
+ if(detailsPromise)return detailsPromise;
+ detailsPromise=(async()=>{
+  const all=await window.ATELIER_DATA.many(["pipeline","clinical"]);
+  pipeline=all[0]||null;
+  clinicalData=all[1]||null;
+  detailsReady=Boolean(pipeline&&clinicalData);
+  renderCurrent();
+ })();
+ try{await detailsPromise}finally{detailsPromise=null}
 }
-window.ATELIER2={load,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
+async function load(){
+ const all=await window.ATELIER_DATA.many(["universe","market","stocks","marketReviewed"]);
+ db=all[0]?.companies?.length===52?all[0]:null;
+ prices=window.ATELIER_DATA.effectiveMarket(all[1],all[3]);
+ stockData=all[2]||null;
+ renderCurrent();
+}
+window.ATELIER2={load,loadDetails,overview,companyPage,theses,weeklyIntro,weeklyFashionEnabled,state,get loaded(){return !!db},get data(){return db},get prices(){return prices},get clinical(){return clinicalData},get stocks(){return stockData}};
 })();

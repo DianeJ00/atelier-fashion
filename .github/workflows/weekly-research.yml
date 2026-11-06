@@ -45,6 +45,8 @@ jobs:
           node --check legacy-fashion-data.js
           node --check legacy-fashion.js
           node tests/smoke_legacy_archive.cjs
+          node tests/smoke_private_backup.cjs
+          node tests/smoke_lazy_load.cjs
           node tests/smoke_data_core.cjs
           node tests/smoke_research2.cjs
           node tests/smoke_research3.cjs

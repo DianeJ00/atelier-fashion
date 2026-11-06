@@ -61,6 +61,7 @@ function click(key,value){
 }
 (async()=>{
  await window.ATELIER2.load();
+ await window.ATELIER2.loadDetails();
  await window.ATELIER3.load();
  await window.ATELIER_CONSUMER.load();
  assert.equal(window.ATELIER2.data.companies.length,52);
