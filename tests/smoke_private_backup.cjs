@@ -58,6 +58,6 @@ const api=window.ATELIER_BACKUP;assert.ok(api);
  assert.ok(read("index.html").includes('src="./atelier-backup.js"'));
  assert.ok(read("legacy-fashion.js").includes('data-personal-backup="export"'));
  assert.ok(read("legacy-fashion.js").includes('data-personal-backup="import"'));
- assert.ok(read("scripts/prepare_site.py").includes('"atelier-backup.js"'));
+ assert.ok(read("scripts/validate_release.py").includes('"atelier-backup.js"'));
  console.log("ATELIER private backup: both local stores / confirm / rollback / no network / schema PASS");
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -17,7 +17,7 @@ assert.ok(logic.includes("localStorage.getItem('atelierNotes')"));
 const html=read("index.html");
 for(const name of ["legacy-fashion-data.js","legacy-fashion.js"]){
  assert.ok(html.includes('<script src="./'+name+'"></script>'),"missing external archive script "+name);
- assert.ok(read("scripts/prepare_site.py").includes('"'+name+'"'),"must publish archive script");
+ assert.ok(read("scripts/validate_release.py").includes('"'+name+'"'),"must publish archive script");
 }
 assert.ok(html.indexOf('src="./legacy-fashion-data.js"')<html.indexOf('src="./legacy-fashion.js"'),"data before archive logic");
 assert.ok(!html.includes("window.FASHION_DATA ="),"historical snapshot must not be embedded in HTML");
