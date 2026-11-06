@@ -45,6 +45,7 @@ const ctx={
  window,document,localStorage,URL,encodeURIComponent,console,Date,
  fetch:async u=>({ok:true,json:async()=>files[String(u).replace("./","")]})
 };
+vm.runInNewContext(read("atelier-data.js"),ctx);
 vm.runInNewContext(read("consumer2.js"),ctx);
 vm.runInNewContext(read("research3.js"),ctx);
 vm.runInNewContext(read("research2.js"),ctx);

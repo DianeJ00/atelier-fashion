@@ -681,6 +681,7 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 <div id="toast" role="status"></div>
 <div id="modal-root"></div>
 <input id="import-input" type="file" accept="application/json" style="display:none"/>
+<script src="./atelier-data.js"></script>
 <script src="./consumer2.js"></script>
 <script src="./research3.js"></script>
 <script src="./market-live.js"></script>
@@ -826,8 +827,8 @@ function weeklyPanel(){
 }
 async function loadResearchFeed(){
  if(location.protocol==='file:')return;
- const names=['weekly-research.json','official-financials.json','consumer-samples.json','weekly-investment.json','weekly-content.json'];
- const result=await Promise.all(names.map(async n=>{try{let r=await fetch('./'+n,{cache:'no-store'});return r.ok?await r.json():null}catch(e){return null}}));
+ // Same canonical source access as the unified analyst workspace.
+ const result=await window.ATELIER_DATA.many(['research','official','consumerSamples','weeklyInvestment','weeklyContent']);
  const [data,official,consumer,brief,content]=result;
  if(data&&Array.isArray(data.items)){
   externalFeed=data.items.filter(x=>x&&typeof x.title==='string'&&typeof x.url==='string').slice(0,180);

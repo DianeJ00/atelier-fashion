@@ -40,6 +40,7 @@ jobs:
           node-version: '22'
       - name: Test multi-sector UI interactions
         run: |
+          node tests/smoke_data_core.cjs
           node tests/smoke_research2.cjs
           node tests/smoke_research3.cjs
           node tests/smoke_navigation25.cjs
@@ -130,7 +131,7 @@ jobs:
       - name: Prepare published files only
         run: |
           mkdir -p _site
-          cp index.html research2.js research2.css research3.js research3.css consumer2.js consumer2.css market-live.js health.js korea.js research-universe.json research-pipeline.json consumer-official.json biotech-financials.json sec-trends.json atelier-weekly.json clinical-trials.json stock-relative.json weekly-research.json market-relative.json market-reviewed.json data-health.json korea-dart.json _site/
+          cp index.html atelier-data.js research2.js research2.css research3.js research3.css consumer2.js consumer2.css market-live.js health.js korea.js research-universe.json research-pipeline.json consumer-official.json biotech-financials.json sec-trends.json atelier-weekly.json clinical-trials.json stock-relative.json weekly-research.json market-relative.json market-reviewed.json data-health.json korea-dart.json _site/
           for source in official-financials.json consumer-samples.json weekly-investment.json weekly-content.json; do
             if [ -f "$source" ]; then cp "$source" _site/; fi
           done

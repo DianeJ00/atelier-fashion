@@ -5,11 +5,10 @@ const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;"
 const safe=u=>{try{const x=new URL(u);return x.protocol==="https:"?x.href:"#"}catch{return "#"}};
 const statuses={live:"수집·공식 확인",reviewed_snapshot:"원문 검토 스냅샷",partial:"일부 확인",blocked:"연결 필요"};
 function auditLabel(){
- const d=new Date(data?.generatedAt||"");
- if(!Number.isFinite(d.getTime()))return "마지막 점검 시각 확인 불가";
- const time=new Intl.DateTimeFormat("ko-KR",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).format(d);
- const hours=(Date.now()-d.getTime())/3600000;
- return "마지막 상태 점검 "+time+" (KST) · "+(hours>36?"36시간 이상 경과, 실행 기록 확인 필요":"점검 기록 확인");
+ const time=window.ATELIER_DATA.formatKST(data?.generatedAt);
+ if(!time)return "마지막 점검 시각 확인 불가";
+ const late=window.ATELIER_DATA.olderThanHours(data.generatedAt,36);
+ return "마지막 상태 점검 "+time+" (KST) · "+(late?"36시간 이상 경과, 실행 기록 확인 필요":"점검 기록 확인");
 }
 function panel(){
  if(!data)return '<section class="h7-panel"><h2>자료 수집·검증 현황</h2><p>실제 데이터 범위를 확인하는 중입니다.</p></section>';
@@ -25,12 +24,13 @@ function panel(){
  '<details class="h7-details"><summary>전체 데이터 연결·미완료 항목 '+items.length+'건 펼쳐보기</summary>'+
  '<div class="h7-list">'+items.map(x=>{
  const fraction=x.total?'<span>'+esc(x.covered??0)+'/'+esc(x.total)+'</span>':(x.covered!=null?'<span>'+esc(x.covered)+'건</span>':'');
+ const dates=window.ATELIER_DATA.sourceMeta(x)||{};
  return '<article class="h7-item"><div class="h7-item-title"><strong>'+esc(x.label)+'</strong><span class="h7-status h7-'+esc(x.status)+'">'+esc(statuses[x.status]||x.status)+'</span>'+fraction+'</div>'+
  '<p>'+esc(x.note)+'</p>'+
- (x.checkedAt?'<small>마지막 수집 확인 '+esc(String(x.checkedAt).slice(0,10))+'</small>':'<small>수집 확인일 미기록</small>')+
- (x.asOf?'<small> · 자료 기준 '+esc(String(x.asOf).slice(0,10))+'</small>':'')+
- (x.periodRange?.earliest&&x.periodRange?.latest?
-   '<small> · 기업별 보고기간 종료 '+esc(x.periodRange.earliest)+' ~ '+esc(x.periodRange.latest)+'</small>':'')+
+ (dates.checkedAt?'<small>마지막 수집 확인 '+esc(String(dates.checkedAt).slice(0,10))+'</small>':'<small>수집 확인일 미기록</small>')+
+ (dates.asOf?'<small> · 자료 기준 '+esc(String(dates.asOf).slice(0,10))+'</small>':'')+
+ (dates.periodRange?
+   '<small> · 기업별 보고기간 종료 '+esc(dates.periodRange.earliest)+' ~ '+esc(dates.periodRange.latest)+'</small>':'')+
  (x.nextAction?'<div class="h7-next"><b>남은 작업</b> · '+esc(x.nextAction)+'</div>':'')+
  (x.source?'<a href="'+safe(x.source)+'" target="_blank" rel="noopener noreferrer">데이터 제공사·원문 ↗</a>':'')+'</article>';
  }).join("")+'</div></details>'+
@@ -46,11 +46,8 @@ function updateHeader(){
   if(sidebar)sidebar.textContent="기존 패션 시세 2026-11-03 기준";
   return;
  }
- const date=new Date(data.generatedAt||"");
- const time=Number.isFinite(date.getTime())
-  ?new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).format(date)
-  :null;
- const tooOld=time&&Date.now()-date.getTime()>36*3600000;
+ const time=window.ATELIER_DATA.formatKST(data.generatedAt);
+ const tooOld=time&&window.ATELIER_DATA.olderThanHours(data.generatedAt,36);
  const last=time?"마지막 자료 수집 점검 "+time+" KST":"마지막 점검 시각 미확인";
  if(top)top.textContent=last+(tooOld?" · 갱신 지연 확인 필요":" · 실시간 시세 아님");
  const market=(data.items||[]).find(x=>x.id==="market");
@@ -62,7 +59,7 @@ function updateHeader(){
    :"ETF 기준일 미확인 · 비실시간";
 }
 async function load(){
- try{const r=await fetch("./data-health.json",{cache:"no-store"});const d=r.ok?await r.json():null;data=d?.items?d:null}
+ try{const d=await window.ATELIER_DATA.get("health");data=d?.items?d:null}
  catch(_){data=null}
  updateHeader();
  if(typeof window.atelierRerender==="function")window.atelierRerender();

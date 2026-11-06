@@ -422,9 +422,7 @@ document.addEventListener("input",e=>{
  }
 });
 async function load(){
- const sources=await Promise.all(["atelier-weekly.json","sec-trends.json"].map(async name=>{
-  try{const r=await fetch("./"+name,{cache:"no-store"});return r.ok?await r.json():null}catch(_){return null}
- }));
+ const sources=await window.ATELIER_DATA.many(["weekly","secTrends"]);
  report=sources[0]&&Array.isArray(sources[0].items)?sources[0]:null;
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();

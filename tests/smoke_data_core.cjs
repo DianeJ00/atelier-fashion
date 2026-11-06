@@ -1,0 +1,57 @@
+/* Shared source registry: canonical IDs, concurrent requests, retry and provenance. */
+const fs=require("node:fs"),path=require("node:path"),vm=require("node:vm");
+const assert=require("node:assert/strict");
+const root=path.resolve(__dirname,"..");
+const read=p=>fs.readFileSync(path.join(root,p),"utf8");
+const hits={};
+let failOnce=true;
+const win={};
+const mockFetch=async url=>{
+ const name=String(url).replace(/^\.\//,"");
+ hits[name]=(hits[name]||0)+1;
+ if(name==="data-health.json"&&failOnce){failOnce=false;throw Error("temporary outage")}
+ return {ok:true,json:async()=>JSON.parse(read(name))};
+};
+const ctx={window:win,fetch:mockFetch,Date,Intl,Map,Promise,URL};
+vm.runInNewContext(read("atelier-data.js"),ctx);
+(async()=>{
+ const store=win.ATELIER_DATA;
+ assert.ok(store);
+ const [u1,u2,u3]=await Promise.all([store.get("universe"),store.get("universe"),store.many(["universe"])]);
+ assert.equal(hits["research-universe.json"],1);
+ assert.equal(u1,u2);
+ assert.equal(u1,u3[0]);
+ assert.equal(u1.companies.length,52);
+ assert.equal(store.companyById(u1,"US:LLY")?.ticker,"LLY");
+ assert.equal(store.companyByTicker(u1,"LLY")?.id,"US:LLY");
+ assert.equal(store.companyByTicker(u1,"105560","한국")?.id,"KR:105560");
+ assert.equal(store.companyByTicker(u1,"LLY","한국"),null);
+ assert.equal(store.companyById(u1,"US:NOTREAL"),null);
+ assert.equal(await store.get("../secret"),null);
+ assert.equal(store.sources.universe,"research-universe.json");
+ assert.equal(await store.get("health"),null);
+ assert.ok((await store.get("health"))?.items?.length>=10);
+ assert.equal(hits["data-health.json"],2);
+ assert.ok((await store.get("health"))?.items?.length>=10);
+ assert.equal(hits["data-health.json"],2);
+ store.invalidate("health");
+ assert.ok(await store.get("health"));
+ assert.equal(hits["data-health.json"],3);
+ const sample=(await store.get("health")).items.find(x=>x.id==="fashion_sec");
+ const meta=store.sourceMeta(sample);
+ assert.ok(meta.checkedAt);
+ assert.ok(meta.periodRange?.latest&&meta.periodRange?.earliest);
+ assert.equal(meta.asOf,null);
+ assert.ok(store.formatKST("2026-11-06T00:30:00Z").startsWith("2026-11-06"));
+ assert.equal(store.olderThanHours("2026-11-06T00:30:00Z",36,Date.parse("2026-11-07T00:30:00Z")),false);
+ assert.equal(store.olderThanHours("2026-11-06T00:30:00Z",12,Date.parse("2026-11-07T00:30:00Z")),true);
+ const live={status:"ok",asOf:"2026-11-06",returns:{XLK:{"3m":1}}};
+ const reviewed={status:"source_verified_snapshot",asOf:"2026-11-04"};
+ assert.equal(store.effectiveMarket(live,reviewed),live);
+ assert.equal(store.effectiveMarket({status:"key_required"},reviewed),reviewed);
+ assert.equal(store.effectiveMarket({status:"partial",asOf:"2026-11-06",returns:{}},reviewed),reviewed);
+ for(const name of Object.values(store.sources))assert.ok(fs.existsSync(path.join(root,name)),name);
+ assert.ok(read(".github/workflows/weekly-research.yml").includes("cp index.html atelier-data.js"));
+ assert.ok(read("index.html").includes('<script src="./atelier-data.js"></script>'));
+ console.log("ATELIER core: source registry / issuer IDs / request dedup / retry / provenance PASS");
+})().catch(e=>{console.error(e);process.exitCode=1});

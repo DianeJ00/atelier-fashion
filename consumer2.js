@@ -60,7 +60,7 @@ function summary(){
  +'</div><p class="c2-footer">예약액·연결 매출·동일매장매출은 서로 다른 지표이므로 숫자 크기만으로 비교할 수 없습니다.</p></section>';
 }
 async function load(){
- try{const r=await fetch("./consumer-official.json",{cache:"no-store"});const d=r.ok?await r.json():null;data=d?.companies?.length===15?d:null}
+ try{const d=await window.ATELIER_DATA.get("consumer");data=d?.companies?.length===15?d:null}
  catch(_){data=null}
  if(typeof window.atelierRerender==="function")window.atelierRerender();
 }

@@ -41,6 +41,7 @@ const trend={companies:[
 const feed={"atelier-weekly.json":weekly,"sec-trends.json":trend};
 const ctx={window,document,localStorage,URL,console,Date,
  fetch:async url=>({ok:true,json:async()=>feed[String(url).replace("./","")]})};
+vm.runInNewContext(read("atelier-data.js"),ctx,{timeout:3000});
 vm.runInNewContext(read("research3.js"),ctx,{timeout:3000});
 const click=(kind,id,choice,value)=>{
  const b={dataset:{a3:kind,id,choice,value}};

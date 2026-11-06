@@ -20,6 +20,7 @@ const context={
  URL,console,encodeURIComponent,
  fetch:async s=>({ok:true,json:async()=>resources[String(s).replace("./","")]})
 };
+vm.runInNewContext(read("atelier-data.js"),context);
 vm.runInNewContext(read("consumer2.js"),context);
 vm.runInNewContext(read("research2.js"),context);
 vm.runInNewContext(read("health.js"),context);
@@ -39,10 +40,7 @@ function validateCommon(markup){
  await w.ATELIER2.load();
  await w.ATELIER_HEALTH.load();
  const market=resources["market-relative.json"],snap=resources["market-reviewed.json"];
- const hasAuthorized=(
-  ["ok","partial"].includes(market?.status)&&Boolean(market?.asOf)
- );
- const chosen=hasAuthorized?market:snap;
+ const chosen=w.ATELIER_DATA.effectiveMarket(market,snap);
  assert.equal(w.ATELIER2.prices.status,chosen.status);
  assert.equal(w.ATELIER2.prices.asOf,chosen.asOf);
  const report=w.ATELIER2.overview();
@@ -62,6 +60,7 @@ function validateCommon(markup){
  assert.ok(read(".github/workflows/weekly-research.yml").includes("data-health.json"));
 
  // Synthetic licensed feed: this stays stable while operational market data changes.
+ w.ATELIER_DATA.invalidate("market");
  resources["market-relative.json"]={
   status:"ok",asOf:"2026-12-01",
   periodDates:{"3m":"2026-09-01"},
@@ -70,6 +69,7 @@ function validateCommon(markup){
     XRT:{"3m":8.25},SPY:{"3m":7.50},QQQ:{"3m":12.50}
   },referenceURLs:{}
  };
+ w.ATELIER_DATA.invalidate("health");
  resources["data-health.json"]={
   ...resources["data-health.json"],
   generatedAt:"2026-12-01T14:00:00+00:00",
@@ -88,6 +88,7 @@ function validateCommon(markup){
  assert.ok(headerNodes["status-short"].textContent.includes("ETF 종가 자료 수집"));
 
  // A disconnected licensed feed must not silently present empty market prices.
+ w.ATELIER_DATA.invalidate("market");
  resources["market-relative.json"]={status:"key_required",asOf:null,returns:{}};
  await w.ATELIER2.load();
  assert.equal(w.ATELIER2.prices.status,snap.status);

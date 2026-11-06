@@ -24,7 +24,7 @@ function card(company){
  '<div class="k7-kpis"><b>회사별 핵심 검증 항목</b><div>'+checks+'</div></div></section>';
 }
 async function load(){
- try{const r=await fetch("./korea-dart.json",{cache:"no-store"});const obj=r.ok?await r.json():null;data=obj?.count===5?obj:null}
+ try{const obj=await window.ATELIER_DATA.get("korea");data=obj?.count===5?obj:null}
  catch(_){data=null}
  if(typeof window.atelierRerender==="function")window.atelierRerender();
 }

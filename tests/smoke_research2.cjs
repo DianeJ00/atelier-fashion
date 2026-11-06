@@ -12,6 +12,7 @@ const win={rerenders:0,atelierRerender(){this.rerenders++},atelierGotoCompanies(
 const doc={addEventListener(type,fn){callbacks[type]=fn},querySelector(){return null}};
 const ctx={window:win,document:doc,URL,encodeURIComponent,
  fetch:async url=>({ok:true,json:async()=>files[String(url).replace("./","")]}),console};
+vm.runInNewContext(read("atelier-data.js"),ctx,{timeout:3000});
 vm.runInNewContext(read("consumer2.js"),ctx,{timeout:3000});
 vm.runInNewContext(read("research2.js"),ctx,{timeout:3000});
 const click=(key,value)=>callbacks.click({
@@ -69,11 +70,13 @@ const click=(key,value)=>callbacks.click({
  assert.equal(files["research-universe.json"].companies.filter(x=>x.market==="미국").length,47);
  assert.equal(files["research-universe.json"].companies.filter(x=>x.market==="한국").length,5);
  // Synthetic, nonproduction fixtures prove the relative-%p display is date gated.
+ win.ATELIER_DATA.invalidate("market");
  files["market-relative.json"]={
    status:"ok",asOf:"2026-11-04",periodDates:{"3m":"2026-08-05"},
    returns:{SPY:{"3m":3},QQQ:{"3m":4},XLK:{"3m":5},XBI:{"3m":7}},
    weeklyBreadth:{}
  };
+ win.ATELIER_DATA.invalidate("stocks");
  files["stock-relative.json"]={
    status:"partial",asOf:"2026-11-04",
    companies:{LLY:{asOf:"2026-11-04",returns:{"3m":8},

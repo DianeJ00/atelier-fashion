@@ -16,7 +16,7 @@ const industryProxies=[
  {sector:'패션',symbol:'XRT',label:'미국 유통 ETF 대리',count:12}
 ];
 function companies(){return db?.companies||[]}
-function at(id){return companies().find(c=>c.id===id)}
+function at(id){return window.ATELIER_DATA.companyById(db,id)}
 function click(options,value,kind){
  return options.map(t=>{const v=typeof t==='string'?t:t[0],label=typeof t==='string'?t:t[1];return `<button class="r2-chip ${value===v?'is-on':''}" data-r2="${kind}" data-val="${esc(v)}" aria-pressed="${value===v}">${esc(label)}</button>`}).join('');
 }
@@ -309,11 +309,9 @@ document.addEventListener('input',e=>{
  const input=$('#r2-search');if(input){input.focus();try{input.setSelectionRange(pos,pos)}catch(_){}}
 });
 async function load(){
- const all=await Promise.all(['research-universe.json','market-relative.json','research-pipeline.json','clinical-trials.json','stock-relative.json','market-reviewed.json'].map(async name=>{
-  try{const r=await fetch('./'+name,{cache:'no-store'});return r.ok?await r.json():null}catch(_){return null}
- }));
+ const all=await window.ATELIER_DATA.many(["universe","market","pipeline","clinical","stocks","marketReviewed"]);
  db=all[0]?.companies?.length===52?all[0]:null;
- prices=(['ok','partial'].includes(all[1]?.status)&&all[1]?.asOf)?all[1]:(all[5]?.status==='source_verified_snapshot'?all[5]:all[1]||null);
+ prices=window.ATELIER_DATA.effectiveMarket(all[1],all[5]);
  pipeline=all[2]||null;clinicalData=all[3]||null;stockData=all[4]||null;
  renderCurrent();
  if(window.ATELIER_CONSUMER?.load)window.ATELIER_CONSUMER.load();
