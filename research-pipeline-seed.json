@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "kind": "editorial_watchlist",
+  "policy": "Human-selected assets only; trial phases, registration matches and approval status are generated separately.",
+  "records": [
+    {
+      "ticker": "LLY",
+      "asset": "tirzepatide",
+      "disease": "비만·대사",
+      "modality": "GIP·GLP-1",
+      "source": "LLY 공시·임상자료",
+      "check": "약물별 적응증·승인 상태를 기업 IR로 구분",
+      "link": "https://clinicaltrials.gov/search?term=tirzepatide"
+    },
+    {
+      "ticker": "AMGN",
+      "asset": "MariTide",
+      "disease": "비만·대사",
+      "modality": "항체·복합 작용제",
+      "source": "AMGN 공식 자료",
+      "check": "용량·투여주기 및 장기 안전성을 구분",
+      "link": "https://clinicaltrials.gov/search?term=MariTide"
+    },
+    {
+      "ticker": "VKTX",
+      "asset": "VK2735",
+      "disease": "비만·대사",
+      "modality": "GLP-1·복합 작용제",
+      "source": "VKTX 기업 IR",
+      "check": "경구·주사 제형별 결과 구분",
+      "link": "https://clinicaltrials.gov/search?term=VK2735"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "disease": "항암",
+      "modality": "면역관문 치료",
+      "source": "MRK 공식 자료",
+      "check": "적응증별 특허·매출·경쟁약 비교",
+      "link": "https://clinicaltrials.gov/search?term=pembrolizumab"
+    },
+    {
+      "ticker": "GILD",
+      "asset": "sacituzumab govitecan",
+      "disease": "항암",
+      "modality": "항체약물접합체",
+      "source": "GILD 공식 자료",
+      "check": "암종별 승인·생존지표 구분",
+      "link": "https://clinicaltrials.gov/search?term=sacituzumab%20govitecan"
+    },
+    {
+      "ticker": "ABBV",
+      "asset": "risankizumab",
+      "disease": "면역·염증",
+      "modality": "면역 항체",
+      "source": "ABBV 공식 자료",
+      "check": "질환별 유효성·신규 적응증 비교",
+      "link": "https://clinicaltrials.gov/search?term=risankizumab"
+    },
+    {
+      "ticker": "REGN",
+      "asset": "dupilumab",
+      "disease": "면역·염증",
+      "modality": "단클론항체",
+      "source": "REGN 공식 자료",
+      "check": "적응증별 시장·처방 확대 확인",
+      "link": "https://clinicaltrials.gov/search?term=dupilumab"
+    },
+    {
+      "ticker": "BIIB",
+      "asset": "lecanemab",
+      "disease": "신경계",
+      "modality": "항체",
+      "source": "BIIB 공식 자료",
+      "check": "투약 현장·안전성·보험 접근성 확인",
+      "link": "https://clinicaltrials.gov/search?term=lecanemab"
+    },
+    {
+      "ticker": "VRTX",
+      "asset": "exagamglogene autotemcel",
+      "disease": "희귀·유전",
+      "modality": "유전자 편집",
+      "source": "VRTX 공식 자료",
+      "check": "치료센터·실제 환자 접근성 확인",
+      "link": "https://clinicaltrials.gov/search?term=exagamglogene%20autotemcel"
+    },
+    {
+      "ticker": "ALNY",
+      "asset": "vutrisiran",
+      "disease": "희귀·유전",
+      "modality": "RNA 간섭",
+      "source": "ALNY 공식 자료",
+      "check": "적응증별 보험·환자 수 구분",
+      "link": "https://clinicaltrials.gov/search?term=vutrisiran"
+    },
+    {
+      "ticker": "CRSP",
+      "asset": "exagamglogene autotemcel",
+      "disease": "희귀·유전",
+      "modality": "유전자 편집",
+      "source": "CRSP 공식 자료",
+      "check": "공동상업화·매출 인식 분리",
+      "link": "https://clinicaltrials.gov/search?term=exagamglogene%20autotemcel"
+    },
+    {
+      "ticker": "SRPT",
+      "asset": "delandistrogene moxeparvovec",
+      "disease": "희귀·유전",
+      "modality": "유전자 치료",
+      "source": "SRPT 공식 자료",
+      "check": "안전성·규제 업데이트 최신 확인",
+      "link": "https://clinicaltrials.gov/search?term=delandistrogene%20moxeparvovec"
+    }
+  ]
+}

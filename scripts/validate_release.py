@@ -179,9 +179,42 @@ def validate(records):
             errors.append(f"{filename}: malformed generatedAt")
     return errors
 
+def validate_pipeline_seed(root: Path, records):
+    """Human-selected watchlist must remain separate from generated trial stages."""
+    problems = []
+    try:
+        seed = json.loads((root / "research-pipeline-seed.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError, UnicodeError):
+        return ["research-pipeline-seed: missing or invalid JSON"]
+    rows = seed.get("records", [])
+    generated = records.get("research-pipeline.json", {}).get("records", [])
+    if not isinstance(rows, list) or len(rows) != 12:
+        return ["research-pipeline-seed: expected 12 editorial records"]
+    allowed = {"ticker", "asset", "disease", "modality", "source", "check", "link"}
+    pairs = set()
+    output = {(x.get("ticker"), str(x.get("asset", "")).casefold()): x
+              for x in generated if isinstance(x, dict)}
+    for row in rows:
+        if not isinstance(row, dict):
+            problems.append("research-pipeline-seed: non-object asset")
+            continue
+        if set(row) != allowed:
+            problems.append(f"research-pipeline-seed: generated or missing fields in {row.get('ticker')}")
+        pair = (row.get("ticker"), str(row.get("asset", "")).casefold())
+        if pair in pairs:
+            problems.append("research-pipeline-seed: duplicate ticker/asset")
+        pairs.add(pair)
+        target = output.get(pair)
+        if not target or any(target.get(key) != row.get(key) for key in allowed):
+            problems.append(f"research-pipeline: generated record disagrees with seed for {pair}")
+    if len(output) != len(rows):
+        problems.append("research-pipeline: generated records count differs from editorial seed")
+    return problems
+
 def build_manifest(root: Path = ROOT):
     records, errors = read_data(root)
     errors.extend(validate(records))
+    errors.extend(validate_pipeline_seed(root, records))
     if errors:
         raise ValueError("Release rejected:\n" + "\n".join(" - " + x for x in errors))
     details = {}

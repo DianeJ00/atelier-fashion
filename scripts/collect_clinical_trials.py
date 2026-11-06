@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "clinical-trials.json"
-SEEDS = ROOT / "research-pipeline.json"
+SEEDS = ROOT / "research-pipeline-seed.json"
 NOW = datetime.now(timezone.utc)
 API = "https://clinicaltrials.gov/api/v2/studies"
 AGENTS = {

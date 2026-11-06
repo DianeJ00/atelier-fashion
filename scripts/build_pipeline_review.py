@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"research-pipeline.json"
+SEED=ROOT/"research-pipeline-seed.json"
 REGISTRY=ROOT/"clinical-trials.json"
 NOW=datetime.now(timezone.utc).isoformat()
 PHASE_RANK={"EARLY_PHASE1":0.5,"PHASE1":1,"PHASE2":2,"PHASE3":3,"PHASE4":4}
@@ -35,7 +36,9 @@ def best(studies):
     _,_,_,_,phase,trial=max(ranked,key=lambda x:x[:4])
     return phase,trial
 def build():
-    base=load(OUT)
+    base=load(SEED)
+    previous={(x.get("ticker"),str(x.get("asset","")).casefold()):x
+              for x in load(OUT).get("records",[]) if isinstance(x,dict)}
     clinical=load(REGISTRY)
     assets={(r.get("ticker"),str(r.get("asset","")).casefold()):r for r in clinical.get("assets",[])}
     ready=clinical.get("status") in ("ok","partial") and bool(clinical.get("generatedAt"))
@@ -60,7 +63,13 @@ def build():
             })
         else:
             # Don't delete an existing confirmed study during a temporary registry outage.
-            if row.get("stageVerifiedAt") and row.get("clinicalTrialURL"):
+            earlier=previous.get((row.get("ticker"),str(row.get("asset","")).casefold()))
+            if earlier and earlier.get("stageVerifiedAt") and earlier.get("clinicalTrialURL"):
+                for key in ("stage","trialPhaseObserved","clinicalTrialId",
+                            "clinicalTrialURL","trialCondition","trialStatus",
+                            "stageVerifiedAt","primaryCompletion"):
+                    if key in earlier:
+                        x[key]=earlier[key]
                 x["reviewStatus"]="이전 등록시험 확인본 · 새 검색 검증 대기"
                 x["stageBasis"]="이전 수집 기준. 신규 검색 표본에서 재확인 필요"
             else:

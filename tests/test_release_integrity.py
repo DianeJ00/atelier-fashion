@@ -55,7 +55,7 @@ class ReleaseGateTests(unittest.TestCase):
             base=Path(temp)
             source=base/"source"
             source.mkdir()
-            for name in v.DATA_FILES:
+            for name in (*v.DATA_FILES, "research-pipeline-seed.json"):
                 shutil.copy2(ROOT/name,source/name)
             for name in (*prepare_site.JS_CSS,"index.html"):
                 shutil.copy2(ROOT/name,source/name)
