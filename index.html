@@ -646,6 +646,12 @@ body,.focus-price,.focus-card .ticker,.company-subname,.date-num,.detail-price,.
 .brief-pending-row small{color:#8c9da8;max-width:125px}
 .trend-fresh .brief-article{margin-bottom:0}
 @media(max-width:740px){.brief-evidence-grid{grid-template-columns:1fr;gap:9px}.brief-article{padding:12px}.brief-article-title h3{font-size:15px}.brief-tags{margin-left:0}.brief-pending-row{flex-wrap:wrap}.brief-pending-row small{max-width:none}}
+@media(max-width:760px){
+  .top-left{flex:0 0 auto;min-width:0;position:relative;z-index:2}
+  #mobile-menu{position:relative;z-index:5;flex:0 0 auto}
+  .top-right{flex:1 1 0;min-width:0;max-width:calc(100% - 140px);overflow:hidden;justify-content:flex-end;pointer-events:none}
+  .top-datum{display:block;max-width:min(40vw,150px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
 </style>
 <link rel="stylesheet" href="./research2.css"/>
 <link rel="stylesheet" href="./consumer2.css"/>
