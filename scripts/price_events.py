@@ -130,7 +130,10 @@ def scan(observations, issuers, evidence=(), *, as_of, derived_display_authorize
         if key in seen:
             raise InvalidPriceObservation("Duplicate issuer close for the same session")
         seen.add(key)
-        if abs(item["changePct"])<ABSOLUTE_MOVE_PCT or item["volatilityMultiple"]<MIN_VOLATILITY_MULTIPLE:
+        # Reject on unrounded changes; rounding 7.996% to 8.00% is not a signal.
+        raw_change=100*(float(record["close"])/float(record["previousClose"])-1)
+        if (abs(raw_change)<ABSOLUTE_MOVE_PCT or
+            abs(raw_change)/float(record["volatility20dPct"])<MIN_VOLATILITY_MULTIPLE):
             continue
         references=matching_evidence(item,evidence)
         item["evidence"]=references

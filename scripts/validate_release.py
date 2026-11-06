@@ -222,9 +222,19 @@ def validate(records):
         errors.append("price-events: invalid status")
     coverage=events_feed.get("coverage") or {}
     scanned=coverage.get("screened")
+    attempted=coverage.get("attempted")
+    not_verified=coverage.get("notVerified")
+    not_attempted=coverage.get("notAttempted")
     if (not isinstance(scanned,int) or isinstance(scanned,bool) or scanned<0 or scanned>47 or
         coverage.get("totalUS")!=47):
         errors.append("price-events: invalid screened coverage")
+    if attempted is not None and (
+        type(scanned) is not int or type(attempted) is not int or type(not_verified) is not int or
+        type(not_attempted) is not int or
+        not 0<=scanned<=attempted<=47 or
+        not_verified!=attempted-scanned or not_attempted!=47-attempted
+    ):
+        errors.append("price-events: attempted, verified and missing counts must reconcile")
     if event_status in ("permission_required","no_verified_daily_closes"):
         if events or events_feed.get("asOf") is not None or event_authorized or scanned not in (0,):
             errors.append("price-events: blocked state must contain no market-derived figures")

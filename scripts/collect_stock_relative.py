@@ -41,7 +41,7 @@ def base(status, symbols):
         "totalUS":len(symbols),"updatedThisRun":0,
         "errors":[],"limitations":[
             "동일 날짜의 배당·분할 조정 종가만 비교, 공시나 사업 성장의 직접 증거가 아님",
-            "API 이용 제한으로 매 실행마다 최대 8개(설정 변경 가능) 미국 종목 갱신",
+            "미국 종목 API 수집량은 GitHub Actions의 STOCK_MAX_SYMBOLS 설정에 따름; 실제 성공/미검증 수와 구분",
             "종목별 데이터 기준일이 달라질 수 있으므로 동일 날짜 자료만 업종 바스켓 산출",
             "업종 동일가중 수익률은 추적 종목 바스켓이며 XBI·XLY·XRT ETF와 다름",
             "한국 상장 5개는 KRW 원화 가격 및 USD 환산 경로가 검증될 때까지 제외",
@@ -176,7 +176,7 @@ def main():
     reviewed=event_feed.evidence_from_reviewed_files(ROOT) if can_publish_events else []
     report=event_feed.publish(
         OUT.with_name("price-events.json"),observations,us,benchmark["asOf"],reviewed,NOW,
-        authorized=can_publish_events,
+        authorized=can_publish_events,attempted=len(order),
     )
     print("Daily move scan: "+report["status"]+"; screened="+
           str(report["coverage"]["screened"])+"/"+str(len(us))+

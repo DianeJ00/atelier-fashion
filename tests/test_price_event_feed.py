@@ -1,6 +1,8 @@
 """2-1: ingest daily licensed series without persisting raw quotes."""
 from __future__ import annotations
 import json
+import io
+from unittest.mock import patch
 import math
 import sys
 import tempfile
@@ -12,6 +14,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 import price_event_feed as f
 import price_events as detector
+import collect_market_relative as market
 import validate_release as validator
 
 NOW=datetime(2026,11,6,12,0,tzinfo=timezone.utc)
@@ -112,5 +115,58 @@ class PriceEventFeedTests(unittest.TestCase):
          "asOf":"2026-11-05","coverage":{"screened":47,"totalUS":47},
          "events":[],"eligibleEvents":0}
         self.assertTrue([x for x in validator.validate(records) if x.startswith("price-events:")])
+
+    def test_provider_volume_is_reused_in_memory_without_new_api_calls(self):
+        dates=[]
+        day=date(2026,9,21)
+        while len(dates)<34:
+            if day.weekday()<5:
+                dates.append(day.isoformat())
+            day+=timedelta(days=1)
+        raw={"values":[{"datetime":dt,"close":str(100+i%3),
+                        "volume":str(400 if i==len(dates)-1 else 100)}
+                       for i,dt in enumerate(dates)]}
+        body=json.dumps(raw).encode("utf-8")
+        with patch.object(market,"urlopen",side_effect=lambda *_a,**_k:io.BytesIO(body)),\
+             patch.object(market,"NOW",NOW):
+            bars=market.retrieve("LLY")
+        self.assertIsInstance(bars,dict)
+        self.assertEqual(bars.volumes[dates[-1]],400)
+        observation=f.observation_from_bars(ISSUER,bars,dates[-1])
+        self.assertEqual(observation["averageVolume20d"],100)
+        self.assertEqual(observation["volume"],400)
+        event=detector.checked_observation(observation,{"US:LLY":ISSUER})
+        self.assertEqual(event["volumeMultiple"],4.0)
+        # Any incomplete 20-session volume baseline is 'not verified', not 0.
+        del bars.volumes[dates[-3]]
+        no_volume=f.observation_from_bars(ISSUER,bars,dates[-1])
+        self.assertNotIn("volume",no_volume)
+        self.assertNotIn("averageVolume20d",no_volume)
+
+    def test_stale_end_of_day_close_is_not_new_alert(self):
+        bars=synthetic_bars()
+        trade=max(bars)
+        observation=f.observation_from_bars(ISSUER,bars,trade)
+        old_now=datetime(2026,12,1,tzinfo=timezone.utc)
+        feed=f.build_feed([observation],[ISSUER],trade,[],old_now,authorized=True)
+        self.assertEqual(feed["status"],"no_verified_daily_closes")
+        self.assertIsNone(feed["asOf"])
+        self.assertEqual(feed["events"],[])
+        self.assertFalse(feed["publicDerivedAuthorized"])
+
+    def test_partial_scan_accounts_for_attempted_and_unseen_symbols(self):
+        bars=synthetic_bars()
+        trade=max(bars)
+        observation=f.observation_from_bars(ISSUER,bars,trade)
+        report=f.build_feed([observation],[ISSUER],trade,[],NOW,
+                            authorized=True,attempted=6)
+        self.assertEqual(report["status"],"partial")
+        self.assertEqual(report["coverage"]["screened"],1)
+        self.assertEqual(report["coverage"]["attempted"],6)
+        self.assertEqual(report["coverage"]["notVerified"],5)
+        self.assertEqual(report["coverage"]["notAttempted"],41)
+        with self.assertRaisesRegex(ValueError,"attempted"):
+            f.build_feed([observation],[ISSUER],trade,[],NOW,
+                         authorized=True,attempted=0)
 
 if __name__=="__main__":unittest.main()

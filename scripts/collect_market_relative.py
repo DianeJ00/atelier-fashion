@@ -18,7 +18,7 @@ import source_retention as retention
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"market-relative.json"
 KEY=os.environ.get("TWELVEDATA_API_KEY","").strip()
-DISPLAY=os.environ.get("MARKET_DATA_DISPLAY_OK","").strip()=="1"
+DISPLAY=os.environ.get("MARKET_DATA_DISPLAY_OK","").strip().lower() in ("1","true")
 SYMBOLS={"SPY":"미국 대형주","QQQ":"대형 성장주","XLK":"미국 기술주",
          "XBI":"바이오 ETF 대리","XLY":"경기소비재 ETF 대리","XRT":"미국 유통 ETF 대리"}
 TERMS={"1w":7,"1m":30,"3m":91,"6m":182,"1y":365}

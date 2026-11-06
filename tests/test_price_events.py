@@ -91,4 +91,16 @@ class PriceEventsTests(unittest.TestCase):
         self.assertTrue(p.valid_link("https://example.org/data"))
         self.assertFalse(p.valid_link("javascript:alert(1)"))
 
+    def test_rounding_does_not_create_false_price_alerts(self):
+        # 7.996% rounds to 8.00% but must not pass the actual 8% threshold.
+        just_below=row(close=107.996,vol=3)
+        found=p.scan([just_below],ISSUERS,as_of="2026-11-05",
+                     derived_display_authorized=True)
+        self.assertEqual(found["eligibleEvents"],0)
+        # 8.000% move with 4.001% mean absolute daily movement is < 2x.
+        insufficient_multiple=row(close=108,vol=4.001)
+        found=p.scan([insufficient_multiple],ISSUERS,as_of="2026-11-05",
+                     derived_display_authorized=True)
+        self.assertEqual(found["eligibleEvents"],0)
+
 if __name__=="__main__":unittest.main()

@@ -71,7 +71,7 @@ const click=(key,value)=>callbacks.click({
  win.ATELIER_DATA.invalidate("priceEvents");
  files["price-events.json"]={
    schemaVersion:1,status:"partial",publicDerivedAuthorized:true,
-   asOf:"2026-11-04",coverage:{screened:1,totalUS:47},
+   asOf:"2026-11-04",coverage:{screened:1,attempted:5,notVerified:4,notAttempted:42,totalUS:47},
    eligibleEvents:1,
    events:[{
      issuerId:"US:LLY",ticker:"LLY",tradeDate:"2026-11-04",
@@ -87,6 +87,9 @@ const click=(key,value)=>callbacks.click({
  assert.ok(moveOverview.includes("일간 급등락 · 확인할 움직임"));
  assert.ok(moveOverview.includes("+12.50%"));
  assert.ok(moveOverview.includes("일부 종목만 확인"));
+ assert.ok(moveOverview.includes("수집 시도 5개"));
+ assert.ok(moveOverview.includes("확인 실패 4개"));
+ assert.ok(moveOverview.includes("미시도 42개"));
  assert.ok(moveOverview.includes('data-r2="openCompany"'));
  click("sector","바이오·제약");
  click("company","US:LLY");

@@ -16,6 +16,7 @@ import source_retention as retention
 
 ATTRIBUTION_URL="https://twelvedata.com/"
 EXPECTED_US=47
+MAX_EVENT_AGE_DAYS=5  # UTC dates; allow extended US-market closures
 DERIVED_FLAGS=("MARKET_DERIVED_PUBLIC_OK","MARKET_DERIVED_GIT_STORAGE_OK")
 
 def licensed(key, display, environ=None):
@@ -23,7 +24,7 @@ def licensed(key, display, environ=None):
     return (bool(key) and display is True and
             all(env.get(name)=="true" for name in DERIVED_FLAGS))
 
-def empty(now,reason="permission_required"):
+def empty(now,reason="permission_required",attempted=0):
     return {
         "schemaVersion":1,
         "status":reason,
@@ -31,7 +32,8 @@ def empty(now,reason="permission_required"):
         "generatedAt":now.isoformat(),
         "asOf":None,
         "source":{"provider":"Twelve Data","url":ATTRIBUTION_URL},
-        "coverage":{"screened":0,"totalUS":EXPECTED_US},
+        "coverage":{"screened":0,"attempted":attempted,"notVerified":attempted,
+                    "notAttempted":EXPECTED_US-attempted,"totalUS":EXPECTED_US},
         "events":[],
         "eligibleEvents":0,
         "policy":"No source quotes stored. No public derived returns without explicit rights.",
@@ -53,7 +55,7 @@ def observation_from_bars(issuer,bars,anchor):
     volatility=sum(abs(100*(closes[i]/closes[i-1]-1)) for i in range(1,21))/20
     if volatility<=0:
         return None
-    return {
+    observation={
         "issuerId":issuer["id"],"ticker":issuer["ticker"],
         "tradeDate":anchor,"previousTradeDate":prev,
         "close":closes[-1],"previousClose":closes[-2],
@@ -61,6 +63,15 @@ def observation_from_bars(issuer,bars,anchor):
         "priceBasis":detector.PRICE_BASIS,
         "source":{"provider":"Twelve Data","url":ATTRIBUTION_URL},
     }
+    volumes=getattr(bars,"volumes",None)
+    if isinstance(volumes,dict):
+        # Exactly the last 20 previously verified sessions plus current session.
+        recent=dates[-21:]
+        if len(recent)==21 and all(isinstance(volumes.get(d),(int,float))
+                                   and 0<volumes[d]<float("inf") for d in recent):
+            observation["volume"]=volumes[recent[-1]]
+            observation["averageVolume20d"]=sum(volumes[d] for d in recent[:-1])/20
+    return observation
 
 def evidence_from_reviewed_files(root:Path):
     """Sources are issuer-mapped and verified by the existing official collectors.
@@ -110,30 +121,44 @@ def evidence_from_reviewed_files(root:Path):
         })
     return out
 
-def build_feed(observations,issuers,trade_date,evidence,now, *,authorized=False):
+def build_feed(observations,issuers,trade_date,evidence,now, *,authorized=False,attempted=None):
     if not authorized:
         return empty(now)
-    if not detector.day(trade_date):
+    trade=detector.day(trade_date)
+    if trade is None:
         return empty(now,"no_verified_daily_closes")
+    age=(now.date()-trade).days
+    if age<0 or age>MAX_EVENT_AGE_DAYS:
+        # An old EOD close is not a newly detected market move.
+        return empty(now,"no_verified_daily_closes")
+    attempted=len(observations) if attempted is None else attempted
+    if not isinstance(attempted,int) or isinstance(attempted,bool) or not 0<=attempted<=EXPECTED_US:
+        raise ValueError("Invalid price event scan attempt count")
+    if attempted<len(observations):
+        raise ValueError("Screened count cannot exceed attempted symbols")
     report=detector.scan(observations,issuers,evidence,as_of=trade_date,
                          derived_display_authorized=True,limit=EXPECTED_US)
     if report["status"]!="ready":
-        return empty(now,"no_verified_daily_closes")
+        return empty(now,"no_verified_daily_closes",attempted=attempted)
     count=report["screenedIssuers"]
     # No status suggests that a partial batch is the entire watchlist.
-    if count>EXPECTED_US:
-        raise ValueError("More securities than the 47-US watchlist")
+    if count>EXPECTED_US or count>attempted:
+        raise ValueError("More securities than the tracked or attempted watchlist")
     report.update({
         "generatedAt":now.isoformat(),
         "source":{"provider":"Twelve Data","url":ATTRIBUTION_URL},
-        "coverage":{"screened":count,"totalUS":EXPECTED_US},
+        "coverage":{"screened":count,"attempted":attempted,
+                    "notVerified":attempted-count,"notAttempted":EXPECTED_US-attempted,
+                    "totalUS":EXPECTED_US},
         "status":"ready" if count==EXPECTED_US else "partial",
         "publicDerivedAuthorized":True,
         "policy":"Derived changes from licensed dividend/split-adjusted closes; simultaneous news is not proof of cause.",
     })
     return report
 
-def publish(path, observations, issuers, trade_date, evidence, now, *, authorized):
-    feed=build_feed(observations,issuers,trade_date,evidence,now,authorized=authorized)
+def publish(path, observations, issuers, trade_date, evidence, now, *, authorized,
+            attempted=None):
+    feed=build_feed(observations,issuers,trade_date,evidence,now,
+                    authorized=authorized,attempted=attempted)
     retention.atomic_write(path,feed)
     return feed

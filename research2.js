@@ -167,9 +167,13 @@ function moveEventsPanel(){
  }
  const events=Array.isArray(feed.events)?feed.events:[];
  const scanned=Number(feed.coverage?.screened)||0,total=Number(feed.coverage?.totalUS)||47;
+ const attempted=Number.isInteger(feed.coverage?.attempted)?feed.coverage.attempted:null;
+ const progress=attempted===null?'':(' · 수집 시도 '+attempted+'개'+
+   (attempted>scanned?' · 확인 실패 '+(attempted-scanned)+'개':'')+
+   (attempted<total?' · 미시도 '+(total-attempted)+'개':''));
  return '<section class="r2-panel r2-move-panel"><div class="r2-panel-head"><div>'+
  '<h3>일간 급등락 · 확인할 움직임</h3>'+
- '<p>'+esc(feed.asOf)+' 거래일 · '+scanned+'/'+total+'개 종목 확인'+
+ '<p>'+esc(feed.asOf)+' 거래일 · '+scanned+'/'+total+'개 종목 확인'+progress+
  (feed.status==='partial'?' · 일부 종목만 확인, 전체 순위 아님':'')+
  ' · 배당·분할 조정 종가 · 급등락 원인 자동 확정 안 함</p></div></div>'+
  (events.length?'<div class="r2-move-grid">'+events.slice(0,3).map(x=>moveEventRow(x,true)).join('')+'</div>':
@@ -181,7 +185,7 @@ function moveEventForCompany(company){
  const item=priceEvents?.events?.find(x=>x.issuerId===company.id&&x.tradeDate===priceEvents.asOf);
  if(!item||!['ready','partial'].includes(priceEvents.status))return '';
  return '<div class="r2-move-company-box"><b>가격 이벤트 · 기준일 '+esc(item.tradeDate)+'</b>'+
- moveEventRow(item)+'</div>';
+ moveEventRow(item)+'<small class="r2-move-source">데이터 제공: <a href="https://twelvedata.com/" target="_blank" rel="noopener noreferrer">Twelve Data</a> · 동일 시점의 공식 발표가 원인으로 확정된 것은 아닙니다.</small></div>';
 }
 function overview(){
  if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
