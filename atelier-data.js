@@ -14,6 +14,11 @@ const SOURCES=Object.freeze({
  biotech:"biotech-financials.json"
 });
 const cache=new Map(),inflight=new Map();
+// Only an explicitly pinned deployed site fetches immutable release paths.
+// Developer previews and offline tests without a release marker use source JSON files.
+const releaseId=typeof window.ATELIER_RELEASE_ID==="string"
+ &&/^[a-f0-9]{20}$/.test(window.ATELIER_RELEASE_ID)
+ ?window.ATELIER_RELEASE_ID:null;
 function valid(name,value){
  if(!value||typeof value!=="object"||Array.isArray(value))return false;
  const arrayField=({
@@ -29,7 +34,7 @@ async function get(name){
  if(inflight.has(name))return inflight.get(name);
  const promise=(async()=>{
   try{
-   const response=await fetch("./"+SOURCES[name],{cache:"no-store"});
+   const response=await fetch("./"+(releaseId?"releases/"+releaseId+"/":"")+SOURCES[name],{cache:"no-store"});
    if(!response.ok)return null;
    const data=await response.json();
    if(!valid(name,data))return null;
@@ -85,7 +90,7 @@ function olderThanHours(value,hours,now=Date.now()){
  return !Number.isFinite(date.getTime())||now-date.getTime()>hours*3600000;
 }
 window.ATELIER_DATA=Object.freeze({
- sources:SOURCES,get,many,invalidate,companyById,companyByTicker,
+ sources:SOURCES,releaseId,get,many,invalidate,companyById,companyByTicker,
  effectiveMarket,sourceMeta,formatKST,olderThanHours
 });
 })();

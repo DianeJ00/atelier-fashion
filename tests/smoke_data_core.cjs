@@ -53,5 +53,19 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
  for(const name of Object.values(store.sources))assert.ok(fs.existsSync(path.join(root,name)),name);
  assert.ok(read(".github/workflows/weekly-research.yml").includes("cp index.html atelier-data.js"));
  assert.ok(read("index.html").includes('<script src="./atelier-data.js"></script>'));
+ // A published page must never fall back to unpinned root JSON after a new deploy.
+ const pinnedId="abcdef0123456789abcd", pinnedRequests=[];
+ const pinnedWindow={ATELIER_RELEASE_ID:pinnedId};
+ const pinnedContext={window:pinnedWindow,Date,Intl,Map,Promise,URL,
+   fetch:async url=>{
+     pinnedRequests.push(String(url));
+     return {ok:true,json:async()=>JSON.parse(read("research-universe.json"))};
+   }
+ };
+ vm.runInNewContext(read("atelier-data.js"),pinnedContext);
+ assert.equal(pinnedWindow.ATELIER_DATA.releaseId,pinnedId);
+ assert.equal((await pinnedWindow.ATELIER_DATA.get("universe")).companies.length,52);
+ assert.equal(pinnedRequests[0],"./releases/"+pinnedId+"/research-universe.json");
+
  console.log("ATELIER core: source registry / issuer IDs / request dedup / retry / provenance PASS");
 })().catch(e=>{console.error(e);process.exitCode=1});
