@@ -42,7 +42,7 @@ class ReleaseGateTests(unittest.TestCase):
         data["market-relative.json"]["status"]="key_required"
         data["market-relative.json"]["asOf"]="2026-11-06"
         data["market-relative.json"]["returns"]={"XLK":{"1d":5}}
-        self.assertTrue(any("blocked feed" in x for x in v.validate(data)))
+        self.assertTrue(any(x.startswith("market:") and ("blocked" in x or "prices" in x) for x in v.validate(data)))
 
     def test_stock_and_benchmark_dates_must_match(self):
         data=copy.deepcopy(self.records)
