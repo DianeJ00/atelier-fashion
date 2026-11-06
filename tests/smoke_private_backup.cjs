@@ -35,7 +35,7 @@ const api=window.ATELIER_BACKUP;assert.ok(api);
  assert.equal(storage.atelierNotes,previous.atelierNotes);
  assert.equal(storage.ATELIER_V23_THESIS_LOCAL_ONLY,previous.ATELIER_V23_THESIS_LOCAL_ONLY);
  for(const invalid of [{...copy,schema:"not-atelier"},{...copy,notes:{}},
-    {...copy,theses:[]},{...copy,theses:JSON.parse('{"__proto__":{}}')}}]){
+    {...copy,theses:[]},{...copy,theses:JSON.parse('{"__proto__":{}}')}]){
   assert.throws(()=>api.restore(invalid));
  }
  assert.equal(storage.atelierNotes,previous.atelierNotes);
