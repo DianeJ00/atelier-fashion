@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T23:13:00.225637+00:00",
-  "periodStart": "2026-10-29",
-  "periodEnd": "2026-11-05",
+  "generatedAt": "2026-11-06T00:32:19.969971+00:00",
+  "periodStart": "2026-10-30",
+  "periodEnd": "2026-11-06",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
   "items": [
@@ -271,7 +271,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-05T23:12:59.983183+00:00"
+    "fashion": "2026-11-06T00:32:19.696957+00:00"
   },
   "coverage": {
     "tracked": 52,
