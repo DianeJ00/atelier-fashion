@@ -11,7 +11,7 @@ import os
 import time
 from datetime import datetime, date, timezone
 from pathlib import Path
-from urllib.request import Request, urlopen
+import sec_client
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "official-financials.json"
@@ -38,13 +38,7 @@ METRIC_TAGS = {
 }
 
 def get_json(url: str) -> dict:
-    req = Request(url, headers={
-        "User-Agent": USER_AGENT,
-        "Accept": "application/json",
-        "Accept-Encoding": "identity",
-    })
-    with urlopen(req, timeout=18) as response:
-        return json.load(response)
+    return sec_client.get_json(url, USER_AGENT)
 
 def filings_list(data: dict) -> list:
     recent = data.get("filings", {}).get("recent", {})

@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 
 import collect_official as sec
+import sec_client
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/"consumer-kpi-baseline.json"
@@ -30,9 +31,7 @@ def load(path,default=None):
 def edgar_ticker_ciks():
     # SEC-published ticker map; not an unofficial stock quote/scraping endpoint.
     raw=sec.get_json("https://www.sec.gov/files/company_tickers.json")
-    entries=raw.values() if isinstance(raw,dict) else raw
-    return {str(item.get("ticker","")).upper():int(item["cik_str"])
-            for item in entries if item.get("ticker") and item.get("cik_str")}
+    return sec_client.ticker_ciks(raw)
 
 def snapshot_status(item,quarter):
     p=(item.get("periodEnd") or "")
