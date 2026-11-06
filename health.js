@@ -3,7 +3,7 @@
 let data=null;
 const esc=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safe=u=>{try{const x=new URL(u);return x.protocol==="https:"?x.href:"#"}catch{return "#"}};
-const statuses={live:"자동 수집·공식 대조",reviewed_snapshot:"원문 검토 스냅샷",partial:"일부 확인",blocked:"연결 필요"};
+const statuses={live:"수집·공식 확인",reviewed_snapshot:"원문 검토 스냅샷",partial:"일부 확인",blocked:"연결 필요"};
 function auditLabel(){
  const d=new Date(data?.generatedAt||"");
  if(!Number.isFinite(d.getTime()))return "마지막 점검 시각 확인 불가";
@@ -26,7 +26,11 @@ function panel(){
  '<div class="h7-list">'+items.map(x=>{
  const fraction=x.total?'<span>'+esc(x.covered??0)+'/'+esc(x.total)+'</span>':(x.covered!=null?'<span>'+esc(x.covered)+'건</span>':'');
  return '<article class="h7-item"><div class="h7-item-title"><strong>'+esc(x.label)+'</strong><span class="h7-status h7-'+esc(x.status)+'">'+esc(statuses[x.status]||x.status)+'</span>'+fraction+'</div>'+
- '<p>'+esc(x.note)+'</p>'+ (x.asOf?'<small>자료 기준 '+esc(String(x.asOf).slice(0,10))+'</small>':'<small>검증 기준일 없음</small>')+
+ '<p>'+esc(x.note)+'</p>'+
+ (x.checkedAt?'<small>마지막 수집 확인 '+esc(String(x.checkedAt).slice(0,10))+'</small>':'<small>수집 확인일 미기록</small>')+
+ (x.asOf?'<small> · 자료 기준 '+esc(String(x.asOf).slice(0,10))+'</small>':'')+
+ (x.periodRange?.earliest&&x.periodRange?.latest?
+   '<small> · 기업별 보고기간 종료 '+esc(x.periodRange.earliest)+' ~ '+esc(x.periodRange.latest)+'</small>':'')+
  (x.nextAction?'<div class="h7-next"><b>남은 작업</b> · '+esc(x.nextAction)+'</div>':'')+
  (x.source?'<a href="'+safe(x.source)+'" target="_blank" rel="noopener noreferrer">데이터 제공사·원문 ↗</a>':'')+'</article>';
  }).join("")+'</div></details>'+

@@ -30,6 +30,27 @@ class MarketVerified(unittest.TestCase):
         self.assertAlmostEqual(v["returns"]["XLY"]["3m"]-v["returns"]["XLK"]["3m"],8.98)
         self.assertTrue(any("자금 유입" in x for x in v["caveats"]))
 
+class ReportingPeriodAudit(unittest.TestCase):
+    def test_official_quarter_ending_dates_are_not_api_check_dates(self):
+        rows=[
+            {"ticker":"A","status":"quarter_verified","quarter":{"periodEnd":"2026-09-30"}},
+            {"ticker":"B","status":"quarter_verified","quarter":{"periodEnd":"2026-08-02"}},
+            {"ticker":"C","status":"stale_cached","quarter":{"periodEnd":"2026-07-01"}},
+        ]
+        self.assertEqual(health.quarter_period_range(rows),{"earliest":"2026-08-02","latest":"2026-09-30"})
+        nested=[{"sec":x} for x in rows]
+        self.assertEqual(health.quarter_period_range(nested,nested=True),{"earliest":"2026-08-02","latest":"2026-09-30"})
+
+    def test_audit_separates_check_date_and_data_as_of(self):
+        row=health.item("fashion_sec","SEC","공식 실적","live",12,12,"공식 검증",
+                        checked_at="2026-11-06T00:31:19+00:00",
+                        period_range={"earliest":"2026-08-02","latest":"2026-09-30"})
+        self.assertIsNone(row["asOf"])
+        self.assertEqual(row["checkedAt"][:10],"2026-11-06")
+        self.assertEqual(row["periodRange"]["latest"],"2026-09-30")
+        self.assertIsNone(row["ageDays"])
+
+
 class RegistryWatchlist(unittest.TestCase):
     def test_best_study_selects_highest_observed_phase(self):
         rows=[

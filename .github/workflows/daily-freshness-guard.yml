@@ -1,0 +1,21 @@
+name: ATELIER daily source freshness guard
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily 11:00 Korea Standard Time; allow the 09:00 refresh some time to complete.
+    - cron: '0 2 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-daily-refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate completed daily update and critical official sources
+        run: python scripts/check_daily_freshness.py
