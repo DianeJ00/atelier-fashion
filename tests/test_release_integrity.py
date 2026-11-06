@@ -65,6 +65,18 @@ class ReleaseGateTests(unittest.TestCase):
             self.assertEqual(v.check_site(site,source)["releaseId"],manifest["releaseId"])
             html=(site/"index.html").read_text(encoding="utf-8")
             self.assertIn('window.ATELIER_RELEASE_ID="'+manifest["releaseId"]+'"',html)
+            build=v.site_version(source,manifest)
+            self.assertIn('window.ATELIER_BUILD_ID="'+build["buildId"]+'"',html)
+            self.assertEqual(json.loads((site/"site-version.json").read_text()),build)
+            # Code-only changes must invalidate an open tab even if price data is unchanged.
+            code_path=source/"research2.js"
+            original_code=code_path.read_bytes()
+            code_path.write_bytes(original_code+b"\n// code-only update\n")
+            new_build=v.site_version(source,manifest)
+            self.assertNotEqual(new_build["buildId"],build["buildId"])
+            with self.assertRaisesRegex(ValueError,"build version mismatch"):
+                v.check_site(site,source)
+            code_path.write_bytes(original_code)
             self.assertTrue((site/"releases"/manifest["releaseId"]/"research-universe.json").is_file())
             # A valid-JSON modification after signing must fail the immutable release check.
             target=site/"releases"/manifest["releaseId"]/"research-universe.json"

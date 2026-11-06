@@ -19,6 +19,55 @@ const cache=new Map(),inflight=new Map();
 const releaseId=typeof window.ATELIER_RELEASE_ID==="string"
  &&/^[a-f0-9]{20}$/.test(window.ATELIER_RELEASE_ID)
  ?window.ATELIER_RELEASE_ID:null;
+const buildId=typeof window.ATELIER_BUILD_ID==="string"
+ &&/^[a-f0-9]{20}$/.test(window.ATELIER_BUILD_ID)
+ ?window.ATELIER_BUILD_ID:null;
+let checkPromise=null,lastVersionCheck=0,updateRequired=false;
+function explainStaleTab(message){
+ if(typeof document==="undefined"||!document.body?.prepend||document.getElementById("atelier-version-banner"))return;
+ const banner=document.createElement("aside");
+ banner.id="atelier-version-banner";
+ banner.setAttribute("role","alert");
+ banner.style.cssText="position:fixed;bottom:12px;right:12px;z-index:3000;max-width:min(94vw,420px);box-sizing:border-box;background:#172b43;color:#fff;padding:14px 16px;border-radius:12px;box-shadow:0 8px 30px #0003;display:flex;align-items:center;flex-wrap:wrap;gap:12px";
+ const description=document.createElement("span");
+ description.textContent=message;
+ const action=document.createElement("button");
+ action.type="button";
+ action.textContent="사이트 새로고침";
+ action.style.cssText="border:1px solid #fff;background:#fff;color:#172b43;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:600";
+ action.onclick=()=>window.location.reload();
+ banner.append(description,action);
+ document.body.prepend(banner);
+}
+async function checkForUpdate(force=false){
+ if(!buildId)return false;
+ if(updateRequired)return true;
+ if(checkPromise)return checkPromise;
+ if(!force&&Date.now()-lastVersionCheck<60000)return false;
+ lastVersionCheck=Date.now();
+ checkPromise=(async()=>{
+  try{
+   const response=await fetch("./site-version.json",{cache:"no-store"});
+   if(!response.ok)return false;
+   const version=await response.json();
+   if(typeof version.buildId==="string"&&version.buildId!==buildId){
+    updateRequired=true;
+    explainStaleTab("ATELIER가 새 버전으로 갱신됐습니다. 이 탭은 이전 버전이므로 새로고침하세요. 기기에 저장된 개인 기록은 유지됩니다.");
+    return true;
+   }
+  }catch(_){}
+  return false;
+ })();
+ try{return await checkPromise}finally{checkPromise=null}
+}
+if(typeof document!=="undefined"&&typeof document.addEventListener==="function"){
+ document.addEventListener("visibilitychange",()=>{
+  if(document.visibilityState==="visible")void checkForUpdate();
+ });
+}
+if(typeof window.addEventListener==="function"){
+ window.addEventListener("focus",()=>{void checkForUpdate()});
+}
 function valid(name,value){
  if(!value||typeof value!=="object"||Array.isArray(value))return false;
  const arrayField=({
@@ -35,7 +84,13 @@ async function get(name){
  const promise=(async()=>{
   try{
    const response=await fetch("./"+(releaseId?"releases/"+releaseId+"/":"")+SOURCES[name],{cache:"no-store"});
-   if(!response.ok)return null;
+   if(!response.ok){
+    if(releaseId&&response.status===404){
+     const obsolete=await checkForUpdate(true);
+     if(!obsolete)explainStaleTab("이 버전의 자료 파일을 찾지 못했습니다. 개인 기록을 유지한 채 새로고침하여 다시 연결하세요.");
+    }
+    return null;
+   }
    const data=await response.json();
    if(!valid(name,data))return null;
    cache.set(name,data);
@@ -95,7 +150,7 @@ function olderThanHours(value,hours,now=Date.now()){
  return !Number.isFinite(date.getTime())||now-date.getTime()>hours*3600000;
 }
 window.ATELIER_DATA=Object.freeze({
- sources:SOURCES,releaseId,get,many,invalidate,companyById,companyByTicker,
+ sources:SOURCES,releaseId,buildId,get,many,invalidate,checkForUpdate,companyById,companyByTicker,
  effectiveMarket,sourceMeta,formatKST,olderThanHours
 });
 })();

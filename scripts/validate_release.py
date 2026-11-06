@@ -25,6 +25,13 @@ DATA_FILES = (
     "consumer-samples.json", "weekly-investment.json",
     "weekly-content.json", "biotech-financials.json",
 )
+# All executable/style assets that affect behavior form part of the browser build ID.
+SITE_ASSETS = (
+    "legacy-fashion-data.js", "legacy-fashion.js",
+    "atelier-data.js", "atelier-backup.js", "research2.js", "research2.css",
+    "research3.js", "research3.css", "consumer2.js", "consumer2.css",
+    "market-live.js", "health.js", "korea.js",
+)
 EXPECTED = {"패션": 12, "소비재·서비스": 15, "바이오·제약": 20, "내 담당 기업": 5}
 GROUP_FILES = {
     "official-financials.json": "패션",
@@ -291,6 +298,16 @@ def check_manifest(root: Path = ROOT):
         raise ValueError("Invalid release ID")
     return actual
 
+def site_version(root: Path, manifest):
+    """Code-only deploys change buildId even if validated financial JSON is identical."""
+    source_hashes = {name: sha((root / name).read_bytes())
+                     for name in (*SITE_ASSETS, "index.html")}
+    code_hash = sha(json.dumps(source_hashes, sort_keys=True,
+                               separators=(",", ":")).encode("utf-8"))
+    build_id = sha((manifest["releaseId"] + ":" + code_hash).encode("utf-8"))[:20]
+    return {"schemaVersion": 1, "buildId": build_id,
+            "releaseId": manifest["releaseId"], "codeSha256": code_hash}
+
 def check_site(site: Path, root: Path = ROOT):
     manifest = check_manifest(root)
     found = json.loads((site / MANIFEST).read_text(encoding="utf-8"))
@@ -300,6 +317,15 @@ def check_site(site: Path, root: Path = ROOT):
     html = (site / "index.html").read_text(encoding="utf-8")
     if f'window.ATELIER_RELEASE_ID="{rid}"' not in html:
         raise ValueError("Site HTML not pinned to its release")
+    expected_version = site_version(root, manifest)
+    deployed_version = json.loads((site / "site-version.json").read_text(encoding="utf-8"))
+    if deployed_version != expected_version:
+        raise ValueError("Site code/data build version mismatch")
+    if f'window.ATELIER_BUILD_ID="{expected_version["buildId"]}"' not in html:
+        raise ValueError("Site HTML build ID not pinned to its source code")
+    for filename in SITE_ASSETS:
+        if sha((site / filename).read_bytes()) != sha((root / filename).read_bytes()):
+            raise ValueError(f"Site code file differs from tested source: {filename}")
     for filename, entry in manifest["dataFiles"].items():
         pinned = site / "releases" / rid / filename
         if not pinned.is_file() or sha(pinned.read_bytes()) != entry["sha256"]:

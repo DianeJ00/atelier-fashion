@@ -4,15 +4,10 @@ from __future__ import annotations
 import json
 import shutil
 from pathlib import Path
-from validate_release import ROOT, MANIFEST, DATA_FILES, check_manifest, sha
-
-JS_CSS = (
-    "legacy-fashion-data.js", "legacy-fashion.js",
-    "atelier-data.js", "atelier-backup.js", "research2.js", "research2.css",
-    "research3.js", "research3.css",
-    "consumer2.js", "consumer2.css", "market-live.js",
-    "health.js", "korea.js",
+from validate_release import (
+    ROOT, MANIFEST, DATA_FILES, SITE_ASSETS, check_manifest, sha, site_version,
 )
+JS_CSS = SITE_ASSETS
 MARKER = '<script src="./atelier-data.js"></script>'
 
 def prepare(root: Path = ROOT, output: Path | None = None):
@@ -34,10 +29,19 @@ def prepare(root: Path = ROOT, output: Path | None = None):
         shutil.copy2(source, site / filename)
         shutil.copy2(source, immutable / filename)
     shutil.copy2(root / MANIFEST, site / MANIFEST)
+    version = site_version(root, manifest)
+    (site / "site-version.json").write_text(
+        json.dumps(version, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     html = (root / "index.html").read_text(encoding="utf-8")
     if html.count(MARKER) != 1:
         raise ValueError("Cannot insert release ID exactly once")
-    html = html.replace(MARKER, f'<script>window.ATELIER_RELEASE_ID="{rid}";</script>\n' + MARKER)
+    html = html.replace(
+        MARKER,
+        f'<script>window.ATELIER_RELEASE_ID="{rid}";window.ATELIER_BUILD_ID="{version["buildId"]}";</script>\n'
+        + MARKER,
+    )
     (site / "index.html").write_text(html, encoding="utf-8")
     (site / ".nojekyll").touch()
     print(f"Prepared ATELIER Pages release {rid} ({len(DATA_FILES)} immutable JSON datasets)")

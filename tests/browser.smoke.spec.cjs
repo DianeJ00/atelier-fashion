@@ -39,6 +39,24 @@ test.describe("ATELIER published-site regression",()=>{
   expect(saved.notes[0].id).toBe("browser-test-note");
   expect(saved.theses["US:UBER"].choice).toBe("유지");
  });
+ test("opened old tab: detect code-only update and preserve private notes on refresh",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  const prior=await page.evaluate(()=>window.ATELIER_DATA.buildId);
+  expect(prior).toMatch(/^[a-f0-9]{20}$/);
+  await page.evaluate(()=>localStorage.setItem("atelierNotes",JSON.stringify([{id:"keep-on-reload"}])));
+  await page.route("**/site-version.json",route=>route.fulfill({
+   status:200,contentType:"application/json",
+   body:JSON.stringify({buildId:"f".repeat(20),releaseId:"f".repeat(20)})
+  }));
+  expect(await page.evaluate(()=>window.ATELIER_DATA.checkForUpdate(true))).toBe(true);
+  const warning=page.locator("#atelier-version-banner");
+  await expect(warning).toBeVisible();
+  await expect(warning).toContainText("새 버전");
+  await warning.getByRole("button",{name:"사이트 새로고침"}).click();
+  await page.waitForLoadState("domcontentloaded");
+  const notes=await page.evaluate(()=>JSON.parse(localStorage.getItem("atelierNotes")));
+  expect(notes[0].id).toBe("keep-on-reload");
+ });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});

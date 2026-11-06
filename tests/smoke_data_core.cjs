@@ -73,6 +73,41 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
  assert.equal(pinnedWindow.ATELIER_DATA.releaseId,pinnedId);
  assert.equal((await pinnedWindow.ATELIER_DATA.get("universe")).companies.length,52);
  assert.equal(pinnedRequests[0],"./releases/"+pinnedId+"/research-universe.json");
+ // A missing historical release never silently switches to the current data.
+ const oldId="a".repeat(20),newId="b".repeat(20);
+ const visual=[];
+ const oldDoc={
+   body:{prepend(node){visual.push(node)}},
+   addEventListener(){},
+   getElementById(id){return visual.find(x=>x.id===id)||null},
+   createElement(tag){return {
+     tag,children:[],setAttribute(k,v){this[k]=v},
+     append(...nodes){this.children.push(...nodes)},
+     style:{}
+   }}
+ };
+ let reloads=0;
+ const oldWindow={ATELIER_RELEASE_ID:oldId,ATELIER_BUILD_ID:oldId,
+   location:{reload(){reloads++}}};
+ const oldPaths=[];
+ const oldContext={window:oldWindow,document:oldDoc,Date,Intl,Map,Promise,URL,
+  fetch:async url=>{
+    oldPaths.push(String(url));
+    if(String(url)==="./site-version.json")
+      return {ok:true,json:async()=>({buildId:newId,releaseId:newId})};
+    return {ok:false,status:404};
+  }
+ };
+ vm.runInNewContext(read("atelier-data.js"),oldContext);
+ assert.equal(await oldWindow.ATELIER_DATA.get("universe"),null);
+ assert.equal(oldPaths[0],"./releases/"+oldId+"/research-universe.json");
+ assert.equal(oldPaths[1],"./site-version.json");
+ assert.equal(visual.length,1);
+ assert.equal(visual[0].id,"atelier-version-banner");
+ assert.ok(visual[0].children[0].textContent.includes("새 버전"));
+ visual[0].children[1].onclick();
+ assert.equal(reloads,1);
+
 
  console.log("ATELIER core: source registry / issuer IDs / request dedup / retry / provenance PASS");
 })().catch(e=>{console.error(e);process.exitCode=1});
