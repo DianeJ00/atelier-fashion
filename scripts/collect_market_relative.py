@@ -39,6 +39,13 @@ def make_empty(reason):
         ]
     }
 
+class DailyBars(dict):
+    """In-memory price history; optional daily volume stays out of public JSON."""
+    def __init__(self, closes=None, volumes=None):
+        super().__init__(closes or {})
+        self.volumes=volumes or {}
+
+
 def retrieve(ticker):
     q=urlencode({"symbol":ticker,"interval":"1day","outputsize":430,
                  "adjust":"all","apikey":KEY})
@@ -49,14 +56,23 @@ def retrieve(ticker):
     if obj.get("status")=="error" or not isinstance(obj.get("values"),list):
         raise RuntimeError("provider_no_data:"+str(obj.get("code","unknown")))
     bars={}
+    volumes={}
     for x in obj["values"]:
         dt=x.get("datetime","")
         try:
             price=float(x.get("close"))
-            if price>0 and len(dt)==10 and dt<=NOW.date().isoformat():bars[dt]=price
+            if price>0 and len(dt)==10 and dt<=NOW.date().isoformat():
+                bars[dt]=price
+                # Provider EOD volume is optional. Never store it in public JSON.
+                try:
+                    volume=float(x.get("volume"))
+                    if 0<volume<float("inf"):
+                        volumes[dt]=volume
+                except (ValueError,TypeError):
+                    pass
         except (TypeError,ValueError):continue
     if len(bars)<30:raise ValueError("insufficient_historical_bars")
-    return bars
+    return DailyBars(bars,volumes)
 
 def baseline(bars,target,max_lag=7):
     t=date.fromisoformat(target)
