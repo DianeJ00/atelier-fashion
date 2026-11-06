@@ -36,6 +36,9 @@ jobs:
           node-version: '22'
       - name: Rebuild immutable Pages preview
         run: |
+          # A source commit may add a JSON schema before the collector commits
+          # the new release manifest. Re-sign only this throwaway CI preview.
+          python scripts/validate_release.py build
           python scripts/validate_release.py check
           python scripts/prepare_site.py
           python scripts/validate_release.py verify-site _site
