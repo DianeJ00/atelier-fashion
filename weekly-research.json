@@ -1,10 +1,23 @@
 {
-  "generatedAt": "2026-11-06T04:23:11.573938Z",
+  "generatedAt": "2026-11-06T05:16:58.698477Z",
   "periodStart": "2026-10-29",
   "periodEnd": "2026-11-06",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
+    {
+      "id": "rss-efd7a04daea016c",
+      "title": "Vintage Abercrombie & Fitch Crewneck Sweatshirt Men’s XL Gray Spellout Y2K‎ Logo khorasantimes.com - khorasantimes.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYzRnc2tfOTFSU0ZvRU5JZF9yZFY3ck00RGFEVjc4emxmUkppeDdiQVBNZTMzbTh0bmR2dVQxSjBMN3hBYWtBNDhOcnlKVFNSTVlERklWOVloYTF3TFA0Tzk0YmZzWU8weGhIc3ZlQy1VelRrT0JHQ3paWlBXWG5jc21IWXVtd1N2d3JPdFVMcDlpOTdyVHIxWEdZVVFOLXVTMjNuclJrMnBpYlRlc0dEMmtRY3RKNGRldUxqSVh3?oc=5",
+      "date": "2026-11-06T04:53:03Z",
+      "platform": "Google News",
+      "ticker": "ANF",
+      "brand": "",
+      "creator": "khorasantimes.com",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
     {
       "id": "rss-7d3ea0d3813a70e",
       "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
@@ -110,19 +123,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-bbf88fa138a5331",
-      "title": "Dallas Cowboys player CeeDee Lamb helped design an Abercrombie line featuring his No. 88. - Stock Titan",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQU9VY0dGOFNIbzFYUUVvRDBBMEp0SXJFeUI1aElQRzN5ajVrMEZHQnZ3dXQtMnlaMDJTVkdEdmpJZTltUXY0NlpITms4c1Uwa3FhLWxiX25iWHAxb3lMY1BBT3JmTXctQTZQM3hyNVhBd0lyWU1rdEVRLUZnX2VFdzBIMHRqN2x2OVdTNzNaQXFTY0xkaW1QeE9Ja3N3SW42LUNkeHd4N21IcjJ4a1BrOUJYNElIX3dI?oc=5",
-      "date": "2026-11-04T13:30:00Z",
-      "platform": "Google News",
-      "ticker": "ANF",
-      "brand": "",
-      "creator": "Stock Titan",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-77598da43620ed4",
       "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
@@ -144,7 +144,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -158,7 +158,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -250,7 +250,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -277,7 +277,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -304,7 +304,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -344,7 +344,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -472,7 +472,7 @@
       }
     ],
     "uncategorizedCount": 19,
-    "previousCollectedAt": "2026-11-06T04:13:16.752397Z",
+    "previousCollectedAt": "2026-11-06T04:23:11.573938Z",
     "newSincePrevious": 1,
     "companyFocus": [
       {

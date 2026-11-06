@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T04:24:40.522111+00:00",
+  "generatedAt": "2026-11-06T05:18:17.557452+00:00",
   "periodStart": "2026-10-27",
   "periodEnd": "2026-11-06",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
@@ -175,6 +175,15 @@
   "autoItems": [],
   "pending": [
     {
+      "id": "rss-efd7a04daea016c",
+      "title": "Vintage Abercrombie & Fitch Crewneck Sweatshirt Men’s XL Gray Spellout Y2K‎ Logo khorasantimes.com - khorasantimes.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYzRnc2tfOTFSU0ZvRU5JZF9yZFY3ck00RGFEVjc4emxmUkppeDdiQVBNZTMzbTh0bmR2dVQxSjBMN3hBYWtBNDhOcnlKVFNSTVlERklWOVloYTF3TFA0Tzk0YmZzWU8weGhIc3ZlQy1VelRrT0JHQ3paWlBXWG5jc21IWXVtd1N2d3JPdFVMcDlpOTdyVHIxWEdZVVFOLXVTMjNuclJrMnBpYlRlc0dEMmtRY3RKNGRldUxqSVh3?oc=5",
+      "date": "2026-11-06",
+      "source": "khorasantimes.com",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-7d3ea0d3813a70e",
       "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
@@ -272,18 +281,9 @@
       "source": "Investor's Business Daily",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-92bfe800826432e",
-      "title": "Best Dressed at CFDA Awards 2026 - WWD",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRXNtS0RiSWV4SDh1SDI1cWNKZG51Mm1zN2NLWE1aZGlTTERZTUhBZTlpWlZTeWlFaTZVQmYyaWZlYzRoSkY0enhnR3JPQ2czQkRvNm8tZEFyaWV6dUR6SVZXMUpPcmpRanBPeUNPYjFfdC1OeDhXNWtNVGRGZm5zbE5LZkJOWVFsc2ZzbjEwNTdtRHducnBIdmlkc1o?oc=5",
-      "date": "2026-11-03",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 31,
+  "pendingCount": 32,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",
