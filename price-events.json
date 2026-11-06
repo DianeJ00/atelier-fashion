@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "permission_required",
   "publicDerivedAuthorized": false,
-  "generatedAt": "2026-11-06T07:13:59.979110+00:00",
+  "generatedAt": "2026-11-06T07:37:31.179068+00:00",
   "asOf": null,
   "source": {
     "provider": "Twelve Data",
@@ -10,6 +10,9 @@
   },
   "coverage": {
     "screened": 0,
+    "attempted": 0,
+    "notVerified": 0,
+    "notAttempted": 47,
     "totalUS": 47
   },
   "events": [],

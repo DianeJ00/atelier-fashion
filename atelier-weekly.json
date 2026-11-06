@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T07:14:00.306991+00:00",
+  "generatedAt": "2026-11-06T07:37:31.453092+00:00",
   "periodStart": "2026-10-30",
   "periodEnd": "2026-11-06",
   "timezone": "UTC",
@@ -271,7 +271,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-06T07:14:00.030886+00:00"
+    "fashion": "2026-11-06T07:37:31.253996+00:00"
   },
   "coverage": {
     "tracked": 52,

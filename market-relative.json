@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-06T07:13:50.391678+00:00",
+  "generatedAt": "2026-11-06T07:37:18.076713+00:00",
   "status": "key_required",
   "source": "Twelve Data time_series (외부 표시 라이선스 필요)",
   "priceConvention": "adjust=all · 배당·분할 조정 종가 기준, 실제 제공 시에만 계산",
@@ -50,7 +50,7 @@
     "국내 종목의 USD 환산 수익률 및 개별 종목 상회 비율은 아직 계산하지 않음"
   ],
   "lastAttempt": {
-    "at": "2026-11-06T07:13:50.391678+00:00",
+    "at": "2026-11-06T07:37:18.076713+00:00",
     "status": "key_required",
     "errorCount": 0
   },
