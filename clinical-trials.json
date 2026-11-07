@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T07:37:18.161224+00:00",
+  "generatedAt": "2026-11-07T04:58:01.100569+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -172,7 +172,7 @@
       "asset": "MariTide",
       "disease": "비만·대사",
       "modality": "항체·복합 작용제",
-      "verifiedTrialCountInSearchWindow": 31,
+      "verifiedTrialCountInSearchWindow": 32,
       "trials": [
         {
           "nctId": "NCT06660173",
@@ -495,39 +495,67 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 17,
+      "verifiedTrialCountInSearchWindow": 21,
       "trials": [
         {
-          "nctId": "NCT04040361",
-          "title": "Neoadjuvant Therapy of Pembrolizumab + Ramucirumab for PD-L1 Positive Stage IB-IIIA Lung Cancer (EAST ENERGY)",
+          "nctId": "NCT04875585",
+          "title": "Trial Exploring Combined Neoadjuvant Therapy With Pembrolizumab/Lenvatinib + Adjuvant Pembrolizumab in Pat. With NSCLC",
           "status": "ACTIVE_NOT_RECRUITING",
           "statusKr": "진행 중·모집 종료",
           "phases": [
             "PHASE2"
           ],
           "conditions": [
-            "Non-small Cell Lung Cancer Stage IB",
-            "Non-small Cell Lung Cancer Stage II",
-            "Non-small Cell Lung Cancer Stage ⅢA"
+            "Non Small Cell Lung Cancer"
           ],
-          "sponsor": "National Cancer Center Hospital East",
+          "sponsor": "Medical University Innsbruck",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2019-11-30",
+            "date": "2021-05-12",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2022-04-20",
+            "date": "2025-11-17",
             "type": "ACTUAL"
           },
           "completion": {
-            "date": "2027-12-31",
+            "date": "2030-12",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Major pathologic response (MPR) rate by central review",
+          "primaryMeasure": "Major pathological response after neoadjuvant immunotherapy in combination with angiogenesis inhibition",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT04040361"
+          "url": "https://clinicaltrials.gov/study/NCT04875585"
+        },
+        {
+          "nctId": "NCT04736706",
+          "title": "A Study of Pembrolizumab (MK-3475) in Combination With Belzutifan (MK-6482) and Lenvatinib (MK-7902), or Pembrolizumab/Quavonlimab (MK-1308A) in Combination With Lenvatinib, Versus Pembrolizumab and Lenvatinib, for Treat",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Carcinoma, Renal Cell"
+          ],
+          "sponsor": "Merck Sharp & Dohme LLC",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2021-04-14",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-02-04",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-04-22",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression Free Survival (PFS) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST 1.1) as Assessed by Blinded Independent Central Review (BICR)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT04736706"
         },
         {
           "nctId": "NCT05296512",
@@ -619,36 +647,6 @@
           "primaryMeasure": "Objective Response Rate (ORR) in SER Participants By Risk Group (Low, High) as Assessed by Blinded Independent Central Review (BICR)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT03407144"
-        },
-        {
-          "nctId": "NCT06493019",
-          "title": "Study of Pembrolizumab, Carboplatin, Paclitaxel, and Radiation for the Treatment of Early-Stage Anal Cancer",
-          "status": "RECRUITING",
-          "statusKr": "모집 중",
-          "phases": [
-            "PHASE2"
-          ],
-          "conditions": [
-            "Anal Cancer"
-          ],
-          "sponsor": "Dustin Deming",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2024-09-30",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2027-04-15",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2029-04-14",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Clinical complete response rate (cCR) following weekly carboplatin and paclitaxel in combination with pembrolizumab and radiation for the treatment of early-stage anal cancer.",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT06493019"
         }
       ],
       "status": "registered_trials_found",
@@ -1958,9 +1956,28 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-06T07:13:50.443532+00:00",
-  "changeCount": 0,
-  "changes": [],
+  "comparisonTo": "2026-11-06T07:37:18.161224+00:00",
+  "changeCount": 2,
+  "changes": [
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT04875585",
+      "url": "https://clinicaltrials.gov/study/NCT04875585",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT04736706",
+      "url": "https://clinicaltrials.gov/study/NCT04736706",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    }
+  ],
   "weeklyInterpretation": [
     {
       "type": "앞으로 확인할 임상 일정",
