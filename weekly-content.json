@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-07T04:58:12.998154+00:00",
-  "periodStart": "2026-10-28",
-  "periodEnd": "2026-11-07",
+  "generatedAt": "2026-11-08T04:52:04.358851+00:00",
+  "periodStart": "2026-10-29",
+  "periodEnd": "2026-11-08",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [
     {
@@ -48,25 +48,6 @@
       "priority": 9
     },
     {
-      "id": "lyst-q3-2026-style",
-      "date": "2026-10-28",
-      "source": "Lyst Q3 2026 Index",
-      "sourceType": "패션 플랫폼 집계",
-      "status": "원문 대조·편집",
-      "title": "개성 있는 디자인과 클래식 제품의 동시 부상",
-      "summary": "Lyst 인기 상품에서 Vans Premium Authentic 4위, Dries Van Noten 스카프 스커트 5위, Free People 블루머 팬츠 7위 기록. 유행의 단일화보다는 식별력 있는 상품에 관심이 모이는 양상.",
-      "impact": "URBN은 Free People 신제품의 정가 판매력, VFC는 Vans 개별 인기 제품과 전체 브랜드 매출의 차이를 점검.",
-      "kpi": "Free People 동일매장매출·할인율 / Vans 브랜드 매출 성장률",
-      "risk": "Lyst의 검색·상호작용·판매 혼합 지표이며 전체 소비자 구매 증가나 해당 기업 매출을 직접 증명하지 않음.",
-      "tickers": [
-        "URBN",
-        "VFC"
-      ],
-      "url": "https://www.lyst.com/the-lyst-index/Q3-26/",
-      "kind": "trend",
-      "priority": 8
-    },
-    {
       "id": "capri-fy27-q2",
       "date": "2026-10-30",
       "source": "Capri Holdings IR",
@@ -101,9 +82,7 @@
       "url": "https://www.retaildive.com/news/shakeup-old-navy-amid-merchandising-struggles-walmart/873431/",
       "kind": "company",
       "priority": 6
-    }
-  ],
-  "reviewedExtra": [
+    },
     {
       "id": "vsxy-earnings-preview-nov4",
       "date": "2026-11-04",
@@ -127,6 +106,7 @@
       "priority": 5
     }
   ],
+  "reviewedExtra": [],
   "reviewedInInbox": {
     "rss-bbf88fa138a5331": {
       "id": "anf-ceedee-edit",
@@ -175,11 +155,20 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-9dfb0182e17d087",
-      "title": "Confirmed: Martine Rose Is Balenciaga’s New Creative Director - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGh1TG83Q3VPdnBFY1I0SlBLNklpSEJlMXJKeDZXNnlPSGxRN0R4eXFUTTZvM3NTMTA1WlRSMHg1Q2dYX2VQZ1YzMlA5NFhxS182aElGU2FERXN2MjJHUENBWndzMFZ6N1F0aV9nc3JmbXlxY1pJRnlOWTA3MmhobHZBd1FFUFRza2djb1plM2Zwd2FNYWZjR0Z2VVZpTWVXQ2Jsak1GSzNlN25CNUVJ?oc=5",
+      "id": "rss-763bddb036176e7",
+      "title": "Why Is It So Hard to Build an Independent Fashion Brand? - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnZhZmZPRklmYmZEYmlnbTkwX1JRNjR4X1BlY240b2tKbU9nTlRXWXg0dGxiTXN5WGwydG5qYjA1SFdhMXNXZ2JTTUtJc3EwYzlJRlZPaE9YYTM1Z2hkbWk4ekRzVmFHcEJyOEwzd2tfZzFYNDdaT245dFJZRXJxeVZ1dTV5UFhBY2pNYldySnFjX3BMbGx6M1ZPam4tVHpjUjAwcFh1NVIyZGc?oc=5",
       "date": "2026-11-06",
       "source": "The Business of Fashion",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-290afa50af1aa32",
+      "title": "Levi's Opens New Flagship Store in Chicago: Get a Closer Look - Complex",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX1ZaZi1OSE9uRWV5bGs1MzNERG1BNlF6S3ZQbGNvMG10N2t2R0hUalFDX05abWpMeTBGelozY0pSUmNVVTJ4UW9CbEhQTGZTQ3N4SWF1V1I2MFV4VjdURFBwdFEzZ2VnUjdpNHdrcHJXcWFoNkkxS3hjYkF5NVhQcg?oc=5",
+      "date": "2026-11-06",
+      "source": "Complex",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -189,24 +178,6 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwR09JSWZVeDFpZUpnMUE5ZzlxcjNQYlFyYmRka2N5NS0wbnJWZV9FNmxCTDZRTEE0VzFDNWZRMWpSMHpfODVMaGhFeEJKOC1IZzE4VWUxdVVyWnBoal9ydGlYOVd6Z3RMTm00RnUxZW0ybHB5?oc=5",
       "date": "2026-11-06",
       "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-0f1155096786838",
-      "title": "Luxury Briefing: Ralph Lauren is putting no ceiling on selling the marketing dream - Glossy",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOendfcXhubjc3X19hUTVMdEp3X0xHLVY5aUxSaU5hMnJlQ1VjRHIza2ZRaXZpZ3kwZjhncGI3U1BTVGpMdEZYTUpfVGk0bUFSNzI4M3dKVTRNUmZqdGpEeGkwdWRROUxoY01DUlEtY21lWmhraFA4TEZGNk9YUGNySkJjaEV6UjB4MC1leDhseWktSm1MVEZhQXRHRQ?oc=5",
-      "date": "2026-11-06",
-      "source": "Glossy",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-efd7a04daea016c",
-      "title": "Vintage Abercrombie & Fitch Crewneck Sweatshirt Men’s XL Gray Spellout Y2K‎ Logo khorasantimes.com - khorasantimes.com",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYzRnc2tfOTFSU0ZvRU5JZF9yZFY3ck00RGFEVjc4emxmUkppeDdiQVBNZTMzbTh0bmR2dVQxSjBMN3hBYWtBNDhOcnlKVFNSTVlERklWOVloYTF3TFA0Tzk0YmZzWU8weGhIc3ZlQy1VelRrT0JHQ3paWlBXWG5jc21IWXVtd1N2d3JPdFVMcDlpOTdyVHIxWEdZVVFOLXVTMjNuclJrMnBpYlRlc0dEMmtRY3RKNGRldUxqSVh3?oc=5",
-      "date": "2026-11-06",
-      "source": "khorasantimes.com",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -281,9 +252,18 @@
       "source": "Vogue",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-77598da43620ed4",
+      "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
+      "date": "2026-11-03",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 33,
+  "pendingCount": 32,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

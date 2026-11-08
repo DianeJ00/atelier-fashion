@@ -1,19 +1,32 @@
 {
-  "generatedAt": "2026-11-07T04:57:07.348613Z",
-  "periodStart": "2026-10-30",
-  "periodEnd": "2026-11-07",
+  "generatedAt": "2026-11-08T04:50:55.898919Z",
+  "periodStart": "2026-10-31",
+  "periodEnd": "2026-11-08",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
     {
-      "id": "rss-9dfb0182e17d087",
-      "title": "Confirmed: Martine Rose Is Balenciaga’s New Creative Director - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGh1TG83Q3VPdnBFY1I0SlBLNklpSEJlMXJKeDZXNnlPSGxRN0R4eXFUTTZvM3NTMTA1WlRSMHg1Q2dYX2VQZ1YzMlA5NFhxS182aElGU2FERXN2MjJHUENBWndzMFZ6N1F0aV9nc3JmbXlxY1pJRnlOWTA3MmhobHZBd1FFUFRza2djb1plM2Zwd2FNYWZjR0Z2VVZpTWVXQ2Jsak1GSzNlN25CNUVJ?oc=5",
-      "date": "2026-11-06T07:01:19Z",
+      "id": "rss-763bddb036176e7",
+      "title": "Why Is It So Hard to Build an Independent Fashion Brand? - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnZhZmZPRklmYmZEYmlnbTkwX1JRNjR4X1BlY240b2tKbU9nTlRXWXg0dGxiTXN5WGwydG5qYjA1SFdhMXNXZ2JTTUtJc3EwYzlJRlZPaE9YYTM1Z2hkbWk4ekRzVmFHcEJyOEwzd2tfZzFYNDdaT245dFJZRXJxeVZ1dTV5UFhBY2pNYldySnFjX3BMbGx6M1ZPam4tVHpjUjAwcFh1NVIyZGc?oc=5",
+      "date": "2026-11-06T20:00:00Z",
       "platform": "Google News",
       "ticker": "TREND",
       "brand": "",
       "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-290afa50af1aa32",
+      "title": "Levi's Opens New Flagship Store in Chicago: Get a Closer Look - Complex",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX1ZaZi1OSE9uRWV5bGs1MzNERG1BNlF6S3ZQbGNvMG10N2t2R0hUalFDX05abWpMeTBGelozY0pSUmNVVTJ4UW9CbEhQTGZTQ3N4SWF1V1I2MFV4VjdURFBwdFEzZ2VnUjdpNHdrcHJXcWFoNkkxS3hjYkF5NVhQcg?oc=5",
+      "date": "2026-11-06T16:29:09Z",
+      "platform": "Google News",
+      "ticker": "LEVI",
+      "brand": "",
+      "creator": "Complex",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -27,32 +40,6 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-0f1155096786838",
-      "title": "Luxury Briefing: Ralph Lauren is putting no ceiling on selling the marketing dream - Glossy",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOendfcXhubjc3X19hUTVMdEp3X0xHLVY5aUxSaU5hMnJlQ1VjRHIza2ZRaXZpZ3kwZjhncGI3U1BTVGpMdEZYTUpfVGk0bUFSNzI4M3dKVTRNUmZqdGpEeGkwdWRROUxoY01DUlEtY21lWmhraFA4TEZGNk9YUGNySkJjaEV6UjB4MC1leDhseWktSm1MVEZhQXRHRQ?oc=5",
-      "date": "2026-11-06T05:03:25Z",
-      "platform": "Google News",
-      "ticker": "RL",
-      "brand": "",
-      "creator": "Glossy",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-efd7a04daea016c",
-      "title": "Vintage Abercrombie & Fitch Crewneck Sweatshirt Men’s XL Gray Spellout Y2K‎ Logo khorasantimes.com - khorasantimes.com",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOYzRnc2tfOTFSU0ZvRU5JZF9yZFY3ck00RGFEVjc4emxmUkppeDdiQVBNZTMzbTh0bmR2dVQxSjBMN3hBYWtBNDhOcnlKVFNSTVlERklWOVloYTF3TFA0Tzk0YmZzWU8weGhIc3ZlQy1VelRrT0JHQ3paWlBXWG5jc21IWXVtd1N2d3JPdFVMcDlpOTdyVHIxWEdZVVFOLXVTMjNuclJrMnBpYlRlc0dEMmtRY3RKNGRldUxqSVh3?oc=5",
-      "date": "2026-11-06T04:53:03Z",
-      "platform": "Google News",
-      "ticker": "ANF",
-      "brand": "",
-      "creator": "khorasantimes.com",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -74,7 +61,7 @@
       "id": "rss-b47138fbe0ef305",
       "title": "What American Eagle Outfitters Holders Got Right - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDhRcVZlNHRyRHhtSkFVM1U1N1hjZzMxNllOZWRCVWtEb1VqcTZuNTR6WnJkcVc2SXhwTXQ1d2lEdWRyanhObVBEMWxFRHNrNE1icFZNaDdCUzJVOWRLSm0tWXJkZkJzZjJrTzZtZTY5RWk2MU5PNWs3ZUhsQWh4MEJ4NEpNajcxSlZyakhTMzNUeDBSTHFZMHgtQlg3ejNGREt4Yw?oc=5",
-      "date": "2026-11-06T00:21:00Z",
+      "date": "2026-11-06T00:39:12Z",
       "platform": "Google News",
       "ticker": "AEO",
       "brand": "",
@@ -175,6 +162,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-bbf88fa138a5331",
+      "title": "Dallas Cowboys player CeeDee Lamb helped design an Abercrombie line featuring his No. 88. - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQU9VY0dGOFNIbzFYUUVvRDBBMEp0SXJFeUI1aElQRzN5ajVrMEZHQnZ3dXQtMnlaMDJTVkdEdmpJZTltUXY0NlpITms4c1Uwa3FhLWxiX25iWHAxb3lMY1BBT3JmTXctQTZQM3hyNVhBd0lyWU1rdEVRLUZnX2VFdzBIMHRqN2x2OVdTNzNaQXFTY0xkaW1QeE9Ja3N3SW42LUNkeHd4N21IcjJ4a1BrOUJYNElIX3dI?oc=5",
+      "date": "2026-11-04T13:30:00Z",
+      "platform": "Google News",
+      "ticker": "ANF",
+      "brand": "",
+      "creator": "Stock Titan",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-77598da43620ed4",
       "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
@@ -196,7 +196,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -210,7 +210,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "패션쇼·디자인",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -242,6 +242,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-7c8097f8702deb5",
+      "title": "Vans and SZA Debut Campaign - VF Corporation",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNS3RNdEF3dEVPQkxya3FWU1ZiZ2lMblR5Z3pZN29ETlBOM2NySTcybEIySVl5T2IxZW1mbVJCdWc5QWZkdmxmSzhCOGt3RDZfSEJyTkxfWHlhM3hNdGhyNFR1OGFwOTBxWFZuaklqYWp1ckF2YzRReUtjbUsyY1F2OXV3Wmh6RE04X0lJ?oc=5",
+      "date": "2026-11-03T13:05:42Z",
+      "platform": "Google News",
+      "ticker": "VFC",
+      "brand": "",
+      "creator": "VF Corporation",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "신발·스니커즈",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-11e0c63c64c7f9e",
       "title": "Calvin Klein Launches Icon Cotton Stretch Underwear Campaign Starring Global Football Star Jude Bellingham - PVH",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSzJlMVkzOE9CcHFKNG1MVFl5Wk1UMVBCX09IQ1FCMUJXSnlmMlp2dWFMeU81YXlyaEtCWDRGUV9mVlNOX2RaV0Jpa3pZMXlnaVhUamQ2VmdOOHVsS3JubHVIbVZoMV9saFVRUlhkY21GU0xVZ1h2djVGcFVYZ1RqVWtJd3hMZ3Q5dzU2el9mOG01TnRLVEl6UHR4VldUZGlsSFZqOW5BZGo3LUZhbXZ2US12TEdoOGxxWm9sc1Qyb0IwSDk1c1ZBOG1kLV9Ba0hlb1pOYUxmdw?oc=5",
@@ -252,19 +265,6 @@
       "creator": "PVH",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "브랜드·제품",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-7c8097f8702deb5",
-      "title": "Vans and SZA Debut Campaign - VF Corporation",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNS3RNdEF3dEVPQkxya3FWU1ZiZ2lMblR5Z3pZN29ETlBOM2NySTcybEIySVl5T2IxZW1mbVJCdWc5QWZkdmxmSzhCOGt3RDZfSEJyTkxfWHlhM3hNdGhyNFR1OGFwOTBxWFZuaklqYWp1ckF2YzRReUtjbUsyY1F2OXV3Wmh6RE04X0lJ?oc=5",
-      "date": "2026-11-03T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "VFC",
-      "brand": "",
-      "creator": "VF Corporation",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "신발·스니커즈",
       "reviewStatus": "needs_review"
     },
     {
@@ -281,6 +281,19 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-39215980eae6e34",
+      "title": "Capri Holdings returns to profit in the second quarter - World Footwear",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQjd3RDQ3VnJqbTJLUE50OVVTdFplOTAxNVhXZDBJekI5d0NjazVaS2FUNUp2alVpVkwyVFE4cDZYSDZSRTk0Qk85WXBLUENUMGN3ZjE0ZnJVVm54SDA3TGRrTEZnTmNERG00NVhmLTBjbHR5Zl9VMzFxMkVaRHhCRFhYdFlucC0wY1hNNXJWSkNVZEZLN1k0VUU5X3pDbFAzM0E?oc=5",
+      "date": "2026-11-03T00:01:15Z",
+      "platform": "Google News",
+      "ticker": "CPRI",
+      "brand": "",
+      "creator": "World Footwear",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "신발·스니커즈",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-541409f299641ad",
       "title": "Mariah Carey Stars In Gucci’s Christmas Campaign",
       "url": "https://www.youtube.com/watch?v=auPKiKhHTXw",
@@ -289,7 +302,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -316,7 +329,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -356,7 +369,7 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
@@ -375,6 +388,32 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-ef720107d78c0f9",
+      "title": "Capri returns to profit on recovering Michael Kors and solid Jimmy Choo, lifts annual forecast - FashionNetwork USA",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPY0Rtc0VwUnJ4TFl2a1V0Z2hEQV9ISFpjVW94cFV4SGpaWjVJZjRySmJUdnhfSGZFVjFUQS05aTVZMllfV1FUYXNsN1ZGRjVuLWtsMG45QzRfWmZfS1VPeDhVMVRGRGZCWFl5bjJXeEg3SkpyTHBMT2tVM0dyRjZUVHJvSnVXVjNNcWtxY3JCUDU4T0d5NTlBS2tFYTlzUGxvYWF1Z1Q4MG53X2RnZF8zbHA5NmdEbGVLbkhuTDJETUNTWXloS2dWNlZZZ3lzd2pHY0o1cXJKNG4?oc=5",
+      "date": "2026-11-02T01:06:54Z",
+      "platform": "Google News",
+      "ticker": "CPRI",
+      "brand": "",
+      "creator": "FashionNetwork USA",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-7cb0541eb36c22b",
+      "title": "Can Ralph Lauren and Coach Keep Winning Even as US Spending Slows? - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYV95eGNwbm5mdEx1M1VCVUMwTnF3b2ZrWkEtN3gyZzNaN21NSVVDdFdfcWdkdk5VZmczcWliNFNvMy1iR3hZa21mZnI0ZHNWSlZ4YnBMTl9mNHQ4NTVFRlpXcm56dVRyYVdVTTB5TVR2T2ZBZjlTR0NjMkdfQTF1aWVRYS1YNG1aTHM0M1lqa0RIX2tEVlNzaTZRbWtPU0k5SWpkbG5oN09nZEE0ek5RanV1TWJDdUU2?oc=5",
+      "date": "2026-11-01T13:00:00Z",
+      "platform": "Google News",
+      "ticker": "RL",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-fc2feb5629b1bed",
       "title": "The hoodie everyone keeps asking about",
       "url": "https://www.youtube.com/watch?v=7OK8T3gArtc",
@@ -383,10 +422,23 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Tim Dessaint",
-      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Tim Dessaint 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "carriedOver": true
+    },
+    {
+      "id": "rss-17c8789b0d00c77",
+      "title": "Form 4 American Eagle Outfitters Inc: Jennifer M. Foyle (Global Brand President-aerie) For: 28 October - Investing.com UK",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNN1dFc041Qy1NdjE2X19pc2Zuc1RScmJjeG9QZFdQOVNiQ1ROTS1yVWltZUdhSjhFU0VpMUotU1VlS0dMS3lwNVhNdmFDeDlmbWNJMnJhR3QwbTloZnhaaXdCeGtZRElUX0tfUEVvN255QXlmb2ZmalhwQ0YzR2pqVHhrazZGWmtmRk5TX05VZ2U1bjBrWWJDcVhFT1gwOUNGWTIxMkpRWU9PbVJmLVgtOU44UDVBTm5KUEpiVEhBWkpELWd0b0pPcF9aUEMwWGdpcElfR0E3ejk4MGxoanFleVE1ZjNtOHRJNkhhZ3Fn?oc=5",
+      "date": "2026-10-31T09:16:00Z",
+      "platform": "Google News",
+      "ticker": "AEO",
+      "brand": "",
+      "creator": "Investing.com UK",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-a2c2beb6d73a533",
@@ -399,58 +451,6 @@
       "creator": "Fortune",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기업 실적",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-80a027f9776324a",
-      "title": "Levi Strauss Faces Class Action Lawsuit Over Tariff Refunds - WWD",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTnlSSnRPMUstRWhzX2piOVlaWTZmMlBfX3pzckRtRHprelhSME1meE1fQWQ2WVNaM19mcVcweExUNTFrVUt1WXBEOC1vbEt5NEZaT1FjalpIdjIySzd4ay1RT2FwR1BrcXc1WHpIMGdWS2Q2N2h3aTQ3WDFWWHN3RUd2c1NBa2FLV3BKNDRLellCYUpxN1EzWmMxQjRERm1pY2ZybnMyV1FrX2c?oc=5",
-      "date": "2026-10-30T18:33:29Z",
-      "platform": "Google News",
-      "ticker": "LEVI",
-      "brand": "",
-      "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-c1e379ebd64ffdb",
-      "title": "Lingerie brands in the U.S.: 10 names shoppers know - qz.com",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8tZTFWN0cxR2xHRHNxWDk5clcycmkwZzFPUk5fTnoxYmpJZHcwbjZUVmpZM0U0SGU3WnBETW9YMzNjb3F6WklPOWVSSTI5SEd2bHVqMFdJQmhWdE1vUEh3clNWSW1QUG8?oc=5",
-      "date": "2026-10-30T15:50:18Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "qz.com",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-1036142869210c4",
-      "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
-      "date": "2026-10-30T13:00:59Z",
-      "platform": "Google News",
-      "ticker": "CPRI",
-      "brand": "",
-      "creator": "Quartz",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-fd1aa6a318fe057",
-      "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
-      "date": "2026-10-30T07:00:00Z",
-      "platform": "Google News",
-      "ticker": "CPRI",
-      "brand": "",
-      "creator": "Capri Holdings Limited - Investor Relations",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     }
   ],
@@ -481,12 +481,12 @@
       },
       {
         "name": "신발·스니커즈",
-        "count": 2
+        "count": 3
       }
     ],
-    "uncategorizedCount": 21,
-    "previousCollectedAt": "2026-11-06T07:36:22.937353Z",
-    "newSincePrevious": 8,
+    "uncategorizedCount": 20,
+    "previousCollectedAt": "2026-11-07T04:57:07.348613Z",
+    "newSincePrevious": 7,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -511,14 +511,14 @@
         "check": "평균 판매단가·아시아 매출",
         "headlines": [
           {
-            "title": "Luxury Briefing: Ralph Lauren is putting no ceiling on selling the marketing dream - Glossy",
-            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOendfcXhubjc3X19hUTVMdEp3X0xHLVY5aUxSaU5hMnJlQ1VjRHIza2ZRaXZpZ3kwZjhncGI3U1BTVGpMdEZYTUpfVGk0bUFSNzI4M3dKVTRNUmZqdGpEeGkwdWRROUxoY01DUlEtY21lWmhraFA4TEZGNk9YUGNySkJjaEV6UjB4MC1leDhseWktSm1MVEZhQXRHRQ?oc=5",
-            "date": "2026-11-06"
-          },
-          {
             "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
             "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
             "date": "2026-11-06"
+          },
+          {
+            "title": "Can Ralph Lauren and Coach Keep Winning Even as US Spending Slows? - The Business of Fashion",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQYV95eGNwbm5mdEx1M1VCVUMwTnF3b2ZrWkEtN3gyZzNaN21NSVVDdFdfcWdkdk5VZmczcWliNFNvMy1iR3hZa21mZnI0ZHNWSlZ4YnBMTl9mNHQ4NTVFRlpXcm56dVRyYVdVTTB5TVR2T2ZBZjlTR0NjMkdfQTF1aWVRYS1YNG1aTHM0M1lqa0RIX2tEVlNzaTZRbWtPU0k5SWpkbG5oN09nZEE0ek5RanV1TWJDdUU2?oc=5",
+            "date": "2026-11-01"
           }
         ]
       },
@@ -562,14 +562,14 @@
         "check": "미국 직접판매 동일매장매출·재고",
         "headlines": [
           {
+            "title": "Levi's Opens New Flagship Store in Chicago: Get a Closer Look - Complex",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX1ZaZi1OSE9uRWV5bGs1MzNERG1BNlF6S3ZQbGNvMG10N2t2R0hUalFDX05abWpMeTBGelozY0pSUmNVVTJ4UW9CbEhQTGZTQ3N4SWF1V1I2MFV4VjdURFBwdFEzZ2VnUjdpNHdrcHJXcWFoNkkxS3hjYkF5NVhQcg?oc=5",
+            "date": "2026-11-06"
+          },
+          {
             "title": "Let’s Get Fuzzy: Meet the Levi’s® Holiday Campaign - Levi Strauss & Co",
             "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBLYzhBUU16NGVFTGE0MlRZbV9ldkxLaElnMm40MVlwQW5Rd1JXNEtreXhGYXVwcExTNFNvLXUzTUtzeExmbDIwdjFBVUstVzFyXzlEc2hvUmZaRGt4MFlpS051TDZKU3U3TGc?oc=5",
             "date": "2026-11-02"
-          },
-          {
-            "title": "Levi Strauss Faces Class Action Lawsuit Over Tariff Refunds - WWD",
-            "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTnlSSnRPMUstRWhzX2piOVlaWTZmMlBfX3pzckRtRHprelhSME1meE1fQWQ2WVNaM19mcVcweExUNTFrVUt1WXBEOC1vbEt5NEZaT1FjalpIdjIySzd4ay1RT2FwR1BrcXc1WHpIMGdWS2Q2N2h3aTQ3WDFWWHN3RUd2c1NBa2FLV3BKNDRLellCYUpxN1EzWmMxQjRERm1pY2ZybnMyV1FrX2c?oc=5",
-            "date": "2026-10-30"
           }
         ]
       },
@@ -579,14 +579,14 @@
         "check": "Michael Kors 매출·정가 판매",
         "headlines": [
           {
-            "title": "Michael Kors owner Capri Holdings swung to profit and raised its full-year outlook - Quartz",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5xYWVDMS1xd2N1Ny1IVFBJaUUzR0FCbmlYNXVYV2VuaDFheUZnVnlfSFZJdmF4Z1dFYUpvZzdzcHRGWldWemFnazctRThQV3lUYnhyUmYwV1o3RFZ1WTBZQVBsNks0VEZyaHF6UDlUbGx6RmtQYVBLS0p5UQ?oc=5",
-            "date": "2026-10-30"
+            "title": "Capri Holdings returns to profit in the second quarter - World Footwear",
+            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQjd3RDQ3VnJqbTJLUE50OVVTdFplOTAxNVhXZDBJekI5d0NjazVaS2FUNUp2alVpVkwyVFE4cDZYSDZSRTk0Qk85WXBLUENUMGN3ZjE0ZnJVVm54SDA3TGRrTEZnTmNERG00NVhmLTBjbHR5Zl9VMzFxMkVaRHhCRFhYdFlucC0wY1hNNXJWSkNVZEZLN1k0VUU5X3pDbFAzM0E?oc=5",
+            "date": "2026-11-03"
           },
           {
-            "title": "Capri Holdings Limited Reports Second Quarter Fiscal 2027 Results - Capri Holdings Limited - Investor Relations",
-            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPd1BiYmM4SzQ2TXA0anNOeEFGcHh0T2dJTG9rd1k1Vjc4WkZhM25CU3V0UTdUemo1NlhsVDJyLXJQa2Fta1RuQmZtWGFpM3QxMGZTNmRjWEsxM2N4dUlJOV9lWV8tX080YjFZd3JxRFVrdnZneFh1aEd2am9KNnB1RHItRzRUMko2b3FQQzQ2TlQ5YnA3OGY2Q3cwUUVUOUtPWVc2TTk0YXFMZnlpNTFNMVkxeU5zdVBSSXpvbGoyNVVJNXA0OHF3aENtWQ?oc=5",
-            "date": "2026-10-30"
+            "title": "Capri returns to profit on recovering Michael Kors and solid Jimmy Choo, lifts annual forecast - FashionNetwork USA",
+            "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPY0Rtc0VwUnJ4TFl2a1V0Z2hEQV9ISFpjVW94cFV4SGpaWjVJZjRySmJUdnhfSGZFVjFUQS05aTVZMllfV1FUYXNsN1ZGRjVuLWtsMG45QzRfWmZfS1VPeDhVMVRGRGZCWFl5bjJXeEg3SkpyTHBMT2tVM0dyRjZUVHJvSnVXVjNNcWtxY3JCUDU4T0d5NTlBS2tFYTlzUGxvYWF1Z1Q4MG53X2RnZF8zbHA5NmdEbGVLbkhuTDJETUNTWXloS2dWNlZZZ3lzd2pHY0o1cXJKNG4?oc=5",
+            "date": "2026-11-02"
           }
         ]
       }
