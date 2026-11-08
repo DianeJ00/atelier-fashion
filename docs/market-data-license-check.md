@@ -45,3 +45,10 @@
 ## 대안
 
 외부 데이터 공개 계약을 확보하지 못하는 경우, 기존 사이트의 공급사 위젯/공식 공시 링크만 사용하고 `price-events.json`은 차단 상태로 유지합니다. 공개할 권리가 검증되지 않은 급등락률을 웹 스크래핑하거나 무료 API로 대체하지 않습니다.
+
+## 추가 확인 · 2026-11-09
+
+- Twelve Data의 2026년 가이드에는 **미국 EOD 자료에 대한 기본 API 접근**과 **외부 재배포 허가**가 별개로 안내됩니다. EOD 조회 가능 ≠ 공개 GitHub Pages 게시 가능.
+- 유료 비즈니스 요금제도 외부 재배포가 필요한 경우 별도 계약·애드온 권한을 확인해야 합니다. 공개 파생 변화율을 장기간 저장할 경우, 원래 가격이 복원되지 않아야 한다는 약관 및 계약의 보존기간·종료 후 삭제 요건을 검토해야 합니다.
+- `scripts/audit_price_alerts.py`는 적법하게 내부 분석할 수 있는 데이터를 **개인 작업 환경에서만** 평가하는 보조 도구입니다. 이 도구의 존재가 공개 저장 권한을 제공하지 않습니다.
+- 공식 참고: https://support.twelvedata.com/en/articles/9935903-us-equities-market-data , https://support.twelvedata.com/en/articles/5332349-commercial-and-personal-usage , https://twelvedata.com/terms

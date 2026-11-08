@@ -1,3 +1,9 @@
+## 2-1 비공개 품질 검증 도구 (2026-11-09)
+
+- `python scripts/audit_price_alerts.py < /private/authorized_sessions.json`: 공개 저장소 밖에서 **이용이 승인된** 47개 미국 종목의 과거 EOD 기록을 입력하면 업종별 후보 빈도·검증률·연구원 평가를 집계합니다. 원시 종가·종목별 수익률은 출력하지 않고 어떠한 네트워크 요청도 하지 않습니다.
+- 연구원 평가는 `actionable`/`noise`/`uncertain`으로 기록합니다. 최소 검토 표본 10건 미만일 때 유용성 비율을 표시하지 않으며, 인과관계 또는 실제 오탐률 확정으로 간주하지 않습니다.
+- 공개 데이터 및 신규 알림은 여전히 `permission_required` 상태. 상세 지침: `docs/2-1-private-audit.md`, 권리 조건: `docs/market-data-license-check.md`.
+
 ## 2-1 일간 급등락 감지 · 이벤트 데이터와 근거 연결 (2026-11-06)
 
 - `price-events.json`: 검증된 일간 조정종가 변동 후보와 연관된 SEC·기업 IR 원문 최대 2개. **같은 기간 발생 사건은 인과관계 확정이 아닙니다.**
