@@ -35,7 +35,7 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/collect_weekly.py
       - name: Verify Python source syntax
-        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py scripts/build_pipeline_review.py scripts/collect_biotech_official.py scripts/build_data_health.py scripts/collect_korea_dart.py scripts/check_daily_freshness.py scripts/validate_release.py scripts/prepare_site.py scripts/sec_client.py scripts/source_retention.py scripts/revision_guard.py scripts/price_events.py scripts/price_event_feed.py scripts/audit_price_alerts.py
+        run: python -m py_compile scripts/collect_weekly.py scripts/collect_official.py scripts/collect_consumer.py scripts/build_weekly_brief.py scripts/build_content_brief.py scripts/collect_market_relative.py scripts/collect_clinical_trials.py scripts/collect_stock_relative.py scripts/collect_consumer_official.py scripts/build_sec_trends.py scripts/build_atelier_weekly.py scripts/build_pipeline_review.py scripts/collect_biotech_official.py scripts/build_data_health.py scripts/collect_korea_dart.py scripts/check_daily_freshness.py scripts/validate_release.py scripts/prepare_site.py scripts/sec_client.py scripts/source_retention.py scripts/revision_guard.py scripts/price_events.py scripts/price_event_feed.py scripts/audit_price_alerts.py scripts/market_rights.py
       - name: Set up Node.js for UI smoke tests
         uses: actions/setup-node@v4
         with:
@@ -91,6 +91,18 @@ jobs:
       - name: Match twelve biotech watchlist assets with verified registry study stages
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/build_pipeline_review.py
+      - name: Validate dated written market-derived rights attestation (safe default: blocked)
+        if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
+        env:
+          TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+          MARKET_DATA_DISPLAY_OK: ${{ vars.MARKET_DATA_DISPLAY_OK }}
+          MARKET_DERIVED_PUBLIC_OK: ${{ vars.MARKET_DERIVED_PUBLIC_OK }}
+          MARKET_DERIVED_GIT_STORAGE_OK: ${{ vars.MARKET_DERIVED_GIT_STORAGE_OK }}
+          MARKET_DERIVED_LICENSE_REF: ${{ secrets.MARKET_DERIVED_LICENSE_REF }}
+          MARKET_DERIVED_LICENSE_SCOPE: ${{ vars.MARKET_DERIVED_LICENSE_SCOPE }}
+          MARKET_DERIVED_LICENSE_VALID_FROM: ${{ vars.MARKET_DERIVED_LICENSE_VALID_FROM }}
+          MARKET_DERIVED_LICENSE_VALID_UNTIL: ${{ vars.MARKET_DERIVED_LICENSE_VALID_UNTIL }}
+        run: python scripts/market_rights.py
       - name: Calculate per-stock relative returns in controlled API batches
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         env:
@@ -98,6 +110,10 @@ jobs:
           MARKET_DATA_DISPLAY_OK: ${{ vars.MARKET_DATA_DISPLAY_OK }}
           MARKET_DERIVED_PUBLIC_OK: ${{ vars.MARKET_DERIVED_PUBLIC_OK }}
           MARKET_DERIVED_GIT_STORAGE_OK: ${{ vars.MARKET_DERIVED_GIT_STORAGE_OK }}
+          MARKET_DERIVED_LICENSE_REF: ${{ secrets.MARKET_DERIVED_LICENSE_REF }}
+          MARKET_DERIVED_LICENSE_SCOPE: ${{ vars.MARKET_DERIVED_LICENSE_SCOPE }}
+          MARKET_DERIVED_LICENSE_VALID_FROM: ${{ vars.MARKET_DERIVED_LICENSE_VALID_FROM }}
+          MARKET_DERIVED_LICENSE_VALID_UNTIL: ${{ vars.MARKET_DERIVED_LICENSE_VALID_UNTIL }}
           STOCK_MAX_SYMBOLS: '47'
           STOCK_API_SLEEP_SEC: '9.0'
         run: python scripts/collect_stock_relative.py

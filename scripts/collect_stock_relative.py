@@ -109,7 +109,7 @@ def main():
             or not benchmark.get("asOf") or not benchmark.get("periodDates") else "partial")
     old=read_json(OUT,{})
     output=base(status,symbols)
-    can_publish_events=event_feed.licensed(market.KEY,market.DISPLAY)
+    can_publish_events=event_feed.licensed(market.KEY,market.DISPLAY,now=NOW)
     if status!="partial":
         reusable=(market.KEY and market.DISPLAY and status=="benchmark_missing"
                   and benchmark.get("status")=="stale_cached"

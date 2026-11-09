@@ -13,16 +13,15 @@ from pathlib import Path
 
 import price_events as detector
 import source_retention as retention
+import market_rights
 
 ATTRIBUTION_URL="https://twelvedata.com/"
 EXPECTED_US=47
 MAX_EVENT_AGE_DAYS=5  # UTC dates; allow extended US-market closures
-DERIVED_FLAGS=("MARKET_DERIVED_PUBLIC_OK","MARKET_DERIVED_GIT_STORAGE_OK")
-
-def licensed(key, display, environ=None):
-    env=os.environ if environ is None else environ
-    return (bool(key) and display is True and
-            all(env.get(name)=="true" for name in DERIVED_FLAGS))
+def licensed(key, display, environ=None, now=None):
+    """Fail closed on missing, expired, or wrong-scope written rights attestation."""
+    return market_rights.licensed(has_key=bool(key), display=display,
+                                  environ=environ, now=now)
 
 def empty(now,reason="permission_required",attempted=0):
     return {

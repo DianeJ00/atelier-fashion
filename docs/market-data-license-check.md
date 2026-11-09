@@ -52,3 +52,10 @@
 - 유료 비즈니스 요금제도 외부 재배포가 필요한 경우 별도 계약·애드온 권한을 확인해야 합니다. 공개 파생 변화율을 장기간 저장할 경우, 원래 가격이 복원되지 않아야 한다는 약관 및 계약의 보존기간·종료 후 삭제 요건을 검토해야 합니다.
 - `scripts/audit_price_alerts.py`는 적법하게 내부 분석할 수 있는 데이터를 **개인 작업 환경에서만** 평가하는 보조 도구입니다. 이 도구의 존재가 공개 저장 권한을 제공하지 않습니다.
 - 공식 참고: https://support.twelvedata.com/en/articles/9935903-us-equities-market-data , https://support.twelvedata.com/en/articles/5332349-commercial-and-personal-usage , https://twelvedata.com/terms
+
+## 2-1 계약 승인·만료일 추가 게이트 (2026-11-09)
+
+- EOD API 조회 허용과 public external display/redistribution은 별개입니다. Twelve Data 공식 미국 주식 안내는 외부 제공에 Redistribution Rights Add-On이 필요하다고 명시합니다: https://support.twelvedata.com/en/articles/9935903-us-equities-market-data
+- 별도의 서면 계약을 확보하기 전에는 **기존 두 개의 파생 데이터 허용 플래그만으로 자동 활성화되지 않습니다**. `MARKET_DERIVED_LICENSE_REF`(비공개 참조), `MARKET_DERIVED_LICENSE_SCOPE=US_EOD_DERIVED_PUBLIC_GIT`, `MARKET_DERIVED_LICENSE_VALID_FROM/UNTIL` 날짜도 필요합니다.
+- 승인 범위 불일치·승인 시작 전·만료 후·1년 이상 검토하지 않은 경우 새 급등락 게시 차단. 설정은 증빙 자체가 아니며 실제 서면 허가/거래소 규칙 준수를 운영자가 책임지고 확인해야 합니다.
+- 요구 권리와 공급사 문의 초안: [2-1 사용권 결정 문서](2-1-license-decision.md).

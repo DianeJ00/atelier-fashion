@@ -34,13 +34,24 @@ def synthetic_bars():
 
 class PriceEventFeedTests(unittest.TestCase):
     def test_separate_derived_rights_required(self):
-        env={"MARKET_DERIVED_PUBLIC_OK":"true","MARKET_DERIVED_GIT_STORAGE_OK":"true"}
-        self.assertTrue(f.licensed("configured",True,env))
-        self.assertFalse(f.licensed("configured",False,env))
-        self.assertFalse(f.licensed("",True,env))
-        self.assertFalse(f.licensed("configured",True,{"MARKET_DERIVED_PUBLIC_OK":"true"}))
+        env={
+            "MARKET_DERIVED_PUBLIC_OK":"true",
+            "MARKET_DERIVED_GIT_STORAGE_OK":"true",
+            "MARKET_DERIVED_LICENSE_REF":"synthetic-approved-in-test",
+            "MARKET_DERIVED_LICENSE_SCOPE":"US_EOD_DERIVED_PUBLIC_GIT",
+            "MARKET_DERIVED_LICENSE_VALID_FROM":"2026-11-01",
+            "MARKET_DERIVED_LICENSE_VALID_UNTIL":"2027-10-31",
+        }
+        self.assertTrue(f.licensed("configured",True,env,now=NOW))
+        self.assertFalse(f.licensed("configured",False,env,now=NOW))
+        self.assertFalse(f.licensed("",True,env,now=NOW))
         self.assertFalse(f.licensed("configured",True,
-                         {"MARKET_DERIVED_PUBLIC_OK":"TRUE","MARKET_DERIVED_GIT_STORAGE_OK":"true"}))
+                         {"MARKET_DERIVED_PUBLIC_OK":"true"},now=NOW))
+        self.assertFalse(f.licensed("configured",True,
+                         {**env,"MARKET_DERIVED_PUBLIC_OK":"TRUE"},now=NOW))
+        self.assertFalse(f.licensed("configured",True,
+                         {**env,"MARKET_DERIVED_LICENSE_VALID_UNTIL":"2026-11-05"},
+                         now=NOW))
     def test_bars_to_observation_explicit_adjusted_close(self):
         bars=synthetic_bars()
         trade=max(bars)
