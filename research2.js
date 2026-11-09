@@ -435,7 +435,7 @@ function act(kind,val){
  if(kind==='thesisSector'){state.thesisSector=val;renderCurrent();return}
  if(kind==='diseaseJump'){state.disease=val;state.sector='바이오·제약';state.market='전체';state.search='';state.technology='전체';state.selected='';state.legacy=false;if(window.atelierGotoCompanies)window.atelierGotoCompanies();else renderCurrent();return}
  if(kind==='legacy'){if(typeof window.atelierLegacyFashion==='function')window.atelierLegacyFashion();return}
- if(kind==='company'){state.selected=val;if(state.detailTab!=='나의 메모')state.detailTab='사업 이해'}
+ if(kind==='company'){state.selected=val;if(state.detailTab==='파이프라인'&&at(val)?.sector!=='바이오·제약')state.detailTab='사업 이해'}
  else if(kind==='tab'){state.detailTab=({'핵심 KPI':'실적·이슈','투자 판단':'나의 메모','질환·파이프라인':'파이프라인'})[val]||val}
  else if(kind==='market'){state.market=val;state.selected=''}
  else if(kind==='disease'){state.disease=val;state.selected=''}
