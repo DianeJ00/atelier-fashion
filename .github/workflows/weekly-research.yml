@@ -91,7 +91,7 @@ jobs:
       - name: Match twelve biotech watchlist assets with verified registry study stages
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         run: python scripts/build_pipeline_review.py
-      - name: Validate dated written market-derived rights attestation (safe default: blocked)
+      - name: Validate dated written market-derived rights attestation
         if: github.event_name != 'push' || contains(github.event.head_commit.message, '[research refresh]')
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
