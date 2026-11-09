@@ -346,3 +346,27 @@ body{font-size:15px;line-height:1.68}
 .r2-tv-error{font-size:12px;padding:18px;color:#aa4454}
 .r2-quote-privacy{display:block;font-size:10px;line-height:1.6;color:#8796a8;margin-top:8px}
 @media(max-width:640px){.r2-quote-frame:not(:empty){height:290px}.r2-quote-actions{gap:10px}}
+
+
+/* Company research first: verified figures -> dated issues -> personal notes. */
+.r2-results-issues{min-height:0}
+.r2-issues{margin:15px 0 11px;padding-top:14px;border-top:1px solid #e6edf4}
+.r2-issues-head{display:flex;justify-content:space-between;gap:10px;align-items:start;margin-bottom:11px}
+.r2-issues-head h4{font-size:15px;margin:0 0 4px;color:#193f68}
+.content .r2-issues-head p{margin:0;font-size:11px;line-height:1.55;color:#72859b}
+.r2-issues-head>span{font-size:12px;font-weight:700;color:#51799b;white-space:nowrap}
+.r2-issues-list{display:grid;gap:8px}
+.r2-issue{border:1px solid #e2eaf2;border-radius:9px;background:#fff;padding:11px 13px;display:grid;gap:6px}
+.r2-issue-meta{display:flex;flex-wrap:wrap;gap:5px 9px;align-items:center;color:#70869c;font-size:10.5px}
+.r2-issue-meta span:nth-child(2){font-weight:800}
+.r2-issue-verified{color:#2c6a56}
+.r2-issue-unverified{color:#987a36}
+.r2-issue>a{color:#1a4a78;font-size:12.5px;line-height:1.5;font-weight:750;text-decoration:none;overflow-wrap:anywhere}
+.r2-issue>a:hover{text-decoration:underline}
+.r2-issue-links{display:flex;flex-wrap:wrap;gap:10px 15px;margin:12px 0 8px}
+.r2-issue-links a{font-size:11px;color:#24619d;font-weight:700}
+.r2-issues-empty{font-size:12px;line-height:1.6;color:#72859b;background:#f6f9fc;border-radius:8px;padding:12px}
+.r2-issue-disclaimer{font-size:10.5px;line-height:1.5;color:#8292a2;display:block}
+.r2-next-kpis{margin:13px 0 2px;padding:11px 12px;border-radius:8px;background:#f5f9fd;display:grid;gap:6px}
+.r2-next-kpis b{font-size:11px;color:#577797}
+.r2-next-kpis span{font-size:12px;color:#31526e;line-height:1.55}

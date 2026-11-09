@@ -110,6 +110,50 @@ test.describe("ATELIER published-site regression",()=>{
   await page.locator("#r2-quote-load").click();
   expect(JSON.parse(await page.locator("#r2-tv-frame script").textContent()).symbols[0][1]).toBe("KRX:950260|1D");
  });
+ test("company pages: fiscal quarter, matched issues and simple dated private journal",async({page})=>{
+  await page.addInitScript(()=>{
+   localStorage.setItem("ATELIER_V23_THESIS_LOCAL_ONLY",JSON.stringify({
+    "US:LLY":{choice:"강화",riskOverride:"보험 적용 축소",note:"기존 판단 메모",
+     hypothesis:"기존 투자 논리",at:"2026-11-06T11:00:00.000Z"}
+   }));
+  });
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator("#nav [data-page=companies]").click();
+  await expect(page.locator(".r2-detail-tabs")).toBeVisible({timeout:20000});
+  await expect(page.locator(".r2-detail-tabs button")).toHaveCount(4);
+  await expect(page.locator(".r2-detail-tabs")).toContainText("사업 이해");
+  await expect(page.locator(".r2-detail-tabs")).toContainText("실적·이슈");
+  await expect(page.locator(".r2-detail-tabs")).toContainText("나의 메모");
+  await page.locator('.r2-detail-tabs button[data-val="나의 메모"]').click();
+  await expect(page.locator(".t4-quickmemo")).toBeVisible();
+  await expect(page.locator(".t4-quickmemo")).toContainText("투자 논리 · 초기 검증 질문");
+  await page.locator(".t4-legacy-details summary").click();
+  await expect(page.locator(".t4-legacy-details")).toContainText("기존 판단 메모");
+  await expect(page.locator(".t4-legacy-details")).toContainText("보험 적용 축소");
+  await page.locator('[data-a3-quick-thesis="US:LLY"]').fill("제약 신제품 판매 성장 → EPS 개선");
+  await page.locator('[data-a3-quick-entry="US:LLY"]').fill("실적 발표 원문을 확인하고 공급능력을 점검");
+  await page.locator('[data-a3="memoSave"][data-id="US:LLY"]').click();
+  await expect(page.locator(".t4-journal-entry")).toHaveCount(1);
+  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem("ATELIER_V23_THESIS_LOCAL_ONLY"))["US:LLY"]);
+  expect(saved.choice).toBe("강화");
+  expect(saved.riskOverride).toBe("보험 적용 축소");
+  expect(saved.note).toBe("기존 판단 메모");
+  expect(saved.memoEntries).toHaveLength(1);
+  expect(saved.memoEntries[0].text).toContain("실적 발표 원문");
+  expect(Number.isFinite(Date.parse(saved.memoEntries[0].at))).toBe(true);
+  await page.locator('[data-a3-quick-entry="US:LLY"]').fill("두 번째 메모는 이전 기록을 지우지 않음");
+  await page.locator('[data-a3="memoSave"][data-id="US:LLY"]').click();
+  await expect(page.locator(".t4-journal-entry")).toHaveCount(2);
+  await page.locator('.r2-company-row[data-val="US:RL"]').click();
+  await page.locator('.r2-detail-tabs button[data-val="실적·이슈"]').click();
+  await expect(page.locator(".a3-sec-panel")).toContainText("FY27 2Q",{timeout:20000});
+  await expect(page.locator(".a3-sec-panel")).toContainText("분기 종료 2026-09-26");
+  await expect(page.locator(".r2-issues")).toBeVisible();
+  await expect(page.locator(".r2-issue-links")).toContainText("Yahoo Finance 뉴스");
+  await page.locator('.r2-company-row[data-val="US:ANF"]').click();
+  await expect(page.locator(".r2-issues")).toContainText("Abercrombie",{timeout:20000});
+  await expect(page.locator(".r2-issues")).not.toContainText("확정된 주가 상승 원인");
+ });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});

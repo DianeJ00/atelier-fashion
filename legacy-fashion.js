@@ -308,7 +308,7 @@ function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{
 window.atelierRerender=render;
 window.atelierGotoWeekly=()=>{nav('insights')};
 window.atelierGotoCompanies=()=>{state.r2LegacyFashion=false;nav('companies')};
-window.atelierGotoCompanyDecision=(id)=>{const r=window.ATELIER2?.state;if(r){r.sector='전체';r.market='전체';r.disease='전체';r.search='';r.selected=id||r.selected;r.detailTab='투자 판단'}state.r2LegacyFashion=false;nav('companies')};
+window.atelierGotoCompanyDecision=(id)=>{const r=window.ATELIER2?.state;if(r){r.sector='전체';r.market='전체';r.disease='전체';r.search='';r.selected=id||r.selected;r.detailTab='나의 메모'}state.r2LegacyFashion=false;nav('companies')};
 window.atelierLegacyThesesFor=(ticker)=>(D.research?.theses||[]).filter(x=>x.ticker===ticker);
 window.atelierLegacyFashion=()=>{state.r2LegacyFashion=true;state.companyTab='peers';nav('companies')};
 // Load source groups only when the requested menu needs them.

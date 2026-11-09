@@ -245,3 +245,31 @@
  .a5-attention-list>button>span,.a5-review-rows>button>span{flex-basis:calc(100% - 60px)}
  .a5-attention-list small,.a5-review-rows>button>b{margin-left:auto}
 }
+
+
+/* Light date-stamped journal; keeps old detailed research records in storage. */
+.t4-quickmemo{display:grid;gap:13px;min-width:0}
+.t4-quickmemo-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.t4-quickmemo-head h3{margin:0;color:#193f68;font-size:16px}
+.t4-quickmemo-head small{font-size:11px;color:#7a8fa2}
+.t4-quickmemo>.t4-baseline{padding:12px 13px}
+.t4-quickmemo .t4-baseline p{font-size:13px;line-height:1.55;margin:0 0 5px}
+.t4-quickmemo .t4-baseline small{font-size:11px;color:#8094a6}
+.t4-quickmemo .t4-field{gap:6px}
+.t4-quickmemo .t4-field>span{font-size:12.5px}
+.t4-quickmemo .t4-field textarea{min-height:70px;font-size:13px;line-height:1.6}
+.t4-quickmemo .t4-save-row button{min-height:36px;font-size:12px}
+.t4-journal{display:grid;gap:8px;border-top:1px solid #e4edf5;padding-top:14px}
+.t4-journal h4{font-size:13px;color:#234e74;margin:0 0 4px}
+.t4-journal h4 small{font-size:11px;color:#8498ab;font-weight:500;margin-left:4px}
+.t4-journal-entry{border:1px solid #e2ebf3;border-radius:9px;background:#fcfdff;padding:11px 13px;display:grid;gap:6px}
+.t4-journal-meta{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.t4-journal-meta time{font-size:11px;color:#6e88a0;font-variant-numeric:tabular-nums}
+.t4-journal-meta button{border:0;background:transparent;font-size:11px;color:#9b6470;cursor:pointer}
+.content .t4-journal-entry p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55;font-size:12.5px;color:#2c4c68}
+.t4-journal-empty{font-size:12px;line-height:1.6;color:#8194a5}
+.t4-journal-archive,.t4-legacy-details{border:1px solid #e2ebf3;border-radius:8px;padding:10px 12px}
+.t4-journal-archive>summary,.t4-legacy-details>summary{font-size:12px;font-weight:700;color:#507797;cursor:pointer}
+.t4-legacy-content{display:grid;gap:6px;padding-top:11px}
+.content .t4-legacy-content p{margin:0;font-size:12px;line-height:1.6;color:#38536e;white-space:pre-wrap}
+.t4-legacy-content small{font-size:10.5px;color:#8395a6}

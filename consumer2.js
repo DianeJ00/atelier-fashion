@@ -40,7 +40,7 @@ function small(company){
  const r=get(company.ticker);if(!r)return "";
  return '<div class="c2-quick"><small>최근 검토 분기 '+esc(r.period)+'</small>'
  +(r.metrics||[]).slice(0,2).map(m=>'<span>'+esc(m.label)+' <b>'+esc(fmt(m))+'</b></span>').join("")
- +'<button data-r2="tab" data-val="핵심 KPI">지표 상세 →</button></div>';
+ +'<button data-r2="tab" data-val="실적·이슈">실적·이슈 보기 →</button></div>';
 }
 function latest(){
  const rows=(data?.companies||[]).slice().sort((a,b)=>(b.publishedAt||"").localeCompare(a.publishedAt||""));

@@ -12,6 +12,8 @@ const document={
   if(selector.includes("data-a3-hypothesis"))return {value:"예약 건수 증가 → 플랫폼 매출·FCF 개선"};
   if(selector.includes("data-a3-risk-override"))return {value:"이용건수는 늘지만 단위 수익성 하락"};
   if(selector.includes("data-a3-note"))return {value:"공식 실적 비교 후 담당자가 기록"};
+  if(selector.includes("data-a3-quick-thesis"))return {value:"광고·구독 성장으로 FCF 확대"};
+  if(selector.includes("data-a3-quick-entry"))return {value:"오늘 실적 발표와 신규계약을 확인함"};
   return null;
  }
 };
@@ -33,6 +35,7 @@ const weekly={
  upcomingClinical:[],staleConsumerKpi:[]};
 const trend={companies:[
  {ticker:"UBER",periodStart:"2026-07-01",periodEnd:"2026-09-30",
+  fiscalYear:2026,fiscalPeriod:"Q3",filed:"2026-11-05",
   url:"https://www.sec.gov/test",metrics:{
    revenue:{value:14000000000,yoy:{percent:9.6,comparison:{start:"2025-07-01",end:"2025-09-30",value:13000000000}},
            qoq:{percent:4.3,comparison:{start:"2026-04-01",end:"2026-06-30",value:13500000000}}}
@@ -59,6 +62,10 @@ const click=(kind,id,choice,value)=>{
  const q=window.ATELIER3.secComparison("UBER");
  assert.ok(q.includes("+9.6%")&&q.includes("+4.3%"));
  assert.ok(q.includes("2025-07-01")&&q.includes("2026-06-30"));
+ assert.ok(q.includes("FY26 3Q")&&q.includes("분기 종료 2026-09-30"));
+ assert.ok(!q.includes("SEC 공시 기준 분기 실적 변화"));
+ const fallback=window.ATELIER3.secComparison("UNKNOWN");
+ assert.ok(fallback.includes("수집 대기"));
  const company={id:"US:UBER",ticker:"UBER",name:"Uber",focus:"수익화",risk:"할인 경쟁"};
  const universe=JSON.parse(read("research-universe.json")).companies;
  assert.equal(universe.length,52);
@@ -81,6 +88,26 @@ const click=(kind,id,choice,value)=>{
  assert.equal(saved.hypothesis,"예약 건수 증가 → 플랫폼 매출·FCF 개선");
  assert.equal(saved.riskOverride,"이용건수는 늘지만 단위 수익성 하락");
  assert.ok(window.ATELIER3.thesisWorkspace(universe).includes("저장 완료"));
+ const journalBefore=window.ATELIER3.companyMemo(company);
+ assert.ok(journalBefore.includes("나의 메모"));
+ assert.ok(journalBefore.includes("초기 검증 질문"));
+ assert.ok(journalBefore.includes("기존 투자 판단·반증 기록 보관"));
+ assert.ok(journalBefore.includes("공식 실적 비교 후 담당자가 기록"));
+ click("memoSave","US:UBER");
+ const afterJournal=JSON.parse(storage["ATELIER_V23_THESIS_LOCAL_ONLY"])["US:UBER"];
+ assert.equal(afterJournal.hypothesis,"광고·구독 성장으로 FCF 확대");
+ assert.equal(afterJournal.memoEntries.length,1);
+ assert.equal(afterJournal.memoEntries[0].text,"오늘 실적 발표와 신규계약을 확인함");
+ assert.ok(Number.isFinite(Date.parse(afterJournal.memoEntries[0].at)));
+ assert.equal(afterJournal.choice,"강화","old decision must be preserved");
+ assert.equal(afterJournal.riskOverride,"이용건수는 늘지만 단위 수익성 하락");
+ assert.equal(afterJournal.note,"공식 실적 비교 후 담당자가 기록");
+ click("memoSave","US:UBER");
+ const two=JSON.parse(storage["ATELIER_V23_THESIS_LOCAL_ONLY"])["US:UBER"];
+ assert.equal(two.memoEntries.length,2);
+ assert.notEqual(two.memoEntries[0].id,two.memoEntries[1].id);
+ assert.ok(window.ATELIER3.companyMemo(company).includes("날짜별 기록"));
+ assert.ok(window.ATELIER3.companyMemo(company).includes("2건"));
  click("clear","US:UBER");
  assert.ok(window.ATELIER3.recordCard(company).includes("담당자 확정 전"));
  click("thesisMode","","","새 근거");

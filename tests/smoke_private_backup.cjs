@@ -2,7 +2,8 @@
 const assert=require("node:assert/strict"),fs=require("node:fs"),vm=require("node:vm"),path=require("node:path");
 const root=path.resolve(__dirname,".."),read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const storage={"atelierNotes":JSON.stringify([{id:"n1",ticker:"RL",title:"매출",url:"https://example.org/a"}]),
- "ATELIER_V23_THESIS_LOCAL_ONLY":JSON.stringify({"US:UBER":{choice:"강화",hypothesis:"FCF",note:"실적",riskOverride:"수익성"}})};
+ "ATELIER_V23_THESIS_LOCAL_ONLY":JSON.stringify({"US:UBER":{choice:"강화",hypothesis:"FCF",note:"실적",riskOverride:"수익성",
+ memoEntries:[{id:"m-previous",at:"2026-11-06T11:35:00.000Z",text:"기존 날짜별 메모"}]}})};
 const callbacks={};let shouldConfirm=true,reloads=0,failKey=null,status={textContent:""};
 const localStorage={
  getItem:k=>Object.prototype.hasOwnProperty.call(storage,k)?storage[k]:null,
@@ -22,6 +23,7 @@ const api=window.ATELIER_BACKUP;assert.ok(api);
  assert.equal(copy.schema,"atelier-private-backup-v1");
  assert.equal(copy.notes.length,1);
  assert.equal(copy.theses["US:UBER"].choice,"강화");
+ assert.equal(copy.theses["US:UBER"].memoEntries[0].text,"기존 날짜별 메모");
  const previous={...storage};
  const fresh={...copy,notes:[{id:"new",title:"신규 메모",url:"https://example.org"}],
    theses:{"US:LLY":{choice:"유지",hypothesis:"원문 검증"}}};
@@ -34,6 +36,7 @@ const api=window.ATELIER_BACKUP;assert.ok(api);
  api.restore(copy);
  assert.equal(storage.atelierNotes,previous.atelierNotes);
  assert.equal(storage.ATELIER_V23_THESIS_LOCAL_ONLY,previous.ATELIER_V23_THESIS_LOCAL_ONLY);
+ assert.equal(JSON.parse(storage.ATELIER_V23_THESIS_LOCAL_ONLY)["US:UBER"].memoEntries[0].id,"m-previous");
  for(const invalid of [{...copy,schema:"not-atelier"},{...copy,notes:{}},
     {...copy,theses:[]},{...copy,theses:JSON.parse('{"__proto__":{}}')}]){
   assert.throws(()=>api.restore(invalid));

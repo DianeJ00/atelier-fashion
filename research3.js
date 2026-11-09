@@ -16,13 +16,19 @@ const relative=(m,key)=>{
  const base=x.comparison;
  return "<strong>"+esc(pct(x.percent))+"</strong><small>비교 "+esc(base.start)+" ~ "+esc(base.end)+"</small>";
 };
+function fiscalQuarterLabel(r){
+ const year=Number(r?.fiscalYear),quarter=String(r?.fiscalPeriod||"");
+ if(Number.isInteger(year)&&year>=2000&&year<=2100&&/^Q[1-4]$/.test(quarter))
+  return "FY"+String(year).slice(-2)+" "+quarter.slice(1)+"Q";
+ return r?.periodEnd?String(r.periodEnd).slice(0,7).replace("-",".")+" 종료 분기":"회계분기 확인 대기";
+}
 function secComparison(ticker){
  const r=gaap?.companies?.find(x=>x.ticker===ticker);
  if(!r||r.status==="source_unavailable")return '<p class="a3-source-wait">SEC GAAP 분기 비교 수집 대기 · 공식 확인 이전 수익률 추정 없음</p>';
  const metrics=r.metrics||{};
  const rows=[["revenue","매출"],["operatingIncome","영업이익"],["netIncome","순이익"]].filter(([k])=>metrics[k]);
  if(!rows.length)return '<p class="a3-source-wait">비교 가능한 GAAP 계정 확인 대기</p>';
- return '<section class="a3-sec-panel"><header><div><b>SEC 공시 기준 분기 실적 변화</b><p>'+esc(r.periodStart)+' ~ '+esc(r.periodEnd)+' · 동일 계정/3개월 비교</p></div><a href="'+uri(r.url)+'" target="_blank" rel="noopener noreferrer">10-Q 원문 ↗</a></header><div class="a3-sec-grid">'+rows.map(([k,label])=>{
+ return '<section class="a3-sec-panel"><header><div><b>SEC 공식 실적 · '+esc(fiscalQuarterLabel(r))+'</b><p>분기 종료 '+esc(r.periodEnd)+' · 회계연도(FY) 기준 · 동일 계정/3개월 비교 · 접수 '+esc(r.filed||"확인 대기")+'</p></div><a href="'+uri(r.url)+'" target="_blank" rel="noopener noreferrer">10-Q 원문 ↗</a></header><div class="a3-sec-grid">'+rows.map(([k,label])=>{
  const m=metrics[k];return '<div class="a3-sec-tile"><span>'+esc(label)+'</span><b>'+esc(usd(m.value))+'</b><div><small>전년 동기</small>'+relative(m,"yoy")+'</div><div><small>직전 분기</small>'+relative(m,"qoq")+'</div></div>';
  }).join("")+'</div><p class="a3-small">GAAP 연결 회계 실적입니다. 예약액·동일매장매출·유료 가입자 등 회사 고유 KPI와 혼합하지 않습니다. 4분기의 비교 가능한 3개월 사실이 없으면 전분기 비교를 비워둡니다.</p></section>';
 }
@@ -116,6 +122,54 @@ function thesisSourceCards(c){
 }
 function safeTextArea(value,prop,id,placeholder,rows){
  return '<textarea data-a3-'+prop+'="'+esc(id)+'" rows="'+(rows||3)+'" maxlength="2500" placeholder="'+esc(placeholder||"")+'">'+esc(value||"")+'</textarea>';
+}
+/* Simple, dated company journal. The original schema and all legacy fields remain intact. */
+function memoDate(iso){
+ if(typeof iso!=="string"||!Number.isFinite(Date.parse(iso)))return "날짜 미확인";
+ return new Date(iso).toLocaleString("ko-KR",{
+  year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false
+ });
+}
+function memoEntries(record){
+ return Array.isArray(record?.memoEntries)?
+  record.memoEntries.filter(e=>e&&typeof e.id==="string"&&typeof e.text==="string"&&
+   e.text.trim()&&typeof e.at==="string"&&Number.isFinite(Date.parse(e.at))).slice(-100).reverse():[];
+}
+function memoEntryCard(entry,id){
+ return '<article class="t4-journal-entry"><div class="t4-journal-meta"><time datetime="'+esc(entry.at)+'">'+esc(memoDate(entry.at))+'</time>'+
+ '<button type="button" data-a3="memoDelete" data-id="'+esc(id)+'" data-memo-id="'+esc(entry.id)+'" aria-label="이 메모 삭제">삭제</button></div>'+
+ '<p>'+esc(entry.text)+'</p></article>';
+}
+function companyMemo(c){
+ if(!c)return '<p class="t4-no-choice">기업을 선택해 주세요.</p>';
+ const id=c.id,old=records[id]||{},entries=memoEntries(old),hyp=String(old.hypothesis||"");
+ const shown=entries.slice(0,5),more=entries.slice(5);
+ const hasLegacy=Boolean(old.note||old.riskOverride||old.choice);
+ const lastUpdate=old.at?'마지막 저장 '+esc(memoDate(old.at)):'아직 저장한 기록 없음';
+ return '<section class="t4-quickmemo">'+
+ '<div class="t4-quickmemo-head"><h3>나의 메모</h3><small>'+lastUpdate+'</small></div>'+
+ '<div class="t4-baseline"><b>투자 논리 · 초기 검증 질문</b><p>'+esc(c.focus||"기업 공식 자료를 확인한 뒤 투자 논리를 작성하세요.")+'</p>'+
+ '<small>위 문장은 출발점이며 확정된 투자 가설이 아닙니다.</small></div>'+
+ '<label class="t4-field"><span>나의 투자 논리 <em>한 줄 · 직접 수정 가능</em></span>'+
+ '<textarea data-a3-quick-thesis="'+esc(id)+'" rows="2" maxlength="600" placeholder="예: 광고 성장과 구독 수익화 → 영업이익·FCF 증가">'+esc(hyp)+'</textarea></label>'+
+ '<label class="t4-field"><span>새 메모 <em>저장 시 날짜·시각 자동 기록</em></span>'+
+ '<textarea data-a3-quick-entry="'+esc(id)+'" rows="3" maxlength="2500" placeholder="오늘 확인한 공시·이슈, 다음에 볼 숫자, 내 생각의 변화 등을 짧게 기록"></textarea></label>'+
+ '<div class="t4-save-row"><button type="button" class="t4-save" data-a3="memoSave" data-id="'+esc(id)+'">메모 저장</button>'+
+ '<span class="t4-save-state">이 기기에만 저장 · 기록은 누적 보존</span></div>'+
+ (thesisUI.saveError?'<p class="t4-save-error">'+esc(thesisUI.saveError)+'</p>':'')+
+ '<div class="t4-journal"><h4>날짜별 기록 <small>'+entries.length+'건</small></h4>'+
+ (shown.map(x=>memoEntryCard(x,id)).join("")||
+ '<p class="t4-journal-empty">저장된 날짜별 메모가 없습니다. 위에서 첫 기록을 남겨보세요.</p>')+
+ (more.length?'<details class="t4-journal-archive"><summary>이전 기록 '+more.length+'건 더 보기</summary>'+
+ more.map(x=>memoEntryCard(x,id)).join("")+'</details>':'')+
+ '</div>'+
+ (hasLegacy?'<details class="t4-legacy-details"><summary>기존 투자 판단·반증 기록 보관</summary>'+
+ '<div class="t4-legacy-content">'+(old.choice?'<p><b>기존 판단</b> '+esc(old.choice)+'</p>':'')+
+ (old.riskOverride?'<p><b>반증 조건</b> '+esc(old.riskOverride)+'</p>':'')+
+ (old.note?'<p><b>기존 판단 메모</b> '+esc(old.note)+'</p>':'')+
+ '<small>이전 형식의 원문을 그대로 보존합니다. 기존 개인 기록 백업·복원에도 포함됩니다.</small></div></details>':'')+
+ '<p class="t4-privacy">메모는 이 브라우저에만 저장되며 서버로 전송하지 않습니다. 자료실의 개인 기록 백업 기능을 이용하세요.</p>'+
+ '</section>';
 }
 function thesisEditor(c,embedded=false){
  if(!c)return '<div class="t4-no-choice">왼쪽에서 검토할 기업을 선택해 주세요.</div>';
@@ -274,7 +328,7 @@ function openCompanyDecision(id){
  const state=window.ATELIER2?.state;
  if(!state||!id)return;
  state.sector="전체";state.market="전체";state.disease="전체";state.technology="전체";state.search="";
- state.selected=id;state.detailTab="투자 판단";
+ state.selected=id;state.detailTab="나의 메모";
  if(window.atelierGotoCompanies)window.atelierGotoCompanies();
 }
 function overview(){return overviewSignals();}
@@ -358,7 +412,35 @@ document.addEventListener("click",e=>{
  const b=e.target.closest("[data-a3]");if(!b)return;
  e.preventDefault();e.stopImmediatePropagation();
  const kind=b.dataset.a3,id=b.dataset.id;
- if(kind==="choose"){
+ if(kind==="memoSave"){
+   const thesis=document.querySelector('[data-a3-quick-thesis="'+id+'"]');
+   const note=document.querySelector('[data-a3-quick-entry="'+id+'"]');
+   const previous=records[id]||{};
+   const hypothesis=String(thesis?.value??previous.hypothesis??"").trim().slice(0,600);
+   const text=String(note?.value||"").trim().slice(0,2500);
+   if(!text&&hypothesis===String(previous.hypothesis||"")){
+    thesisUI.saveError="새 메모를 쓰거나 투자 논리를 수정한 뒤 저장해 주세요.";
+   }else{
+    const now=new Date().toISOString();
+    const oldEntries=Array.isArray(previous.memoEntries)?previous.memoEntries.slice(-99):[];
+    const entries=text?[...oldEntries,{id:"m-"+Date.now()+"-"+Math.random().toString(36).slice(2,8),at:now,text}]:oldEntries;
+    const next={...previous,hypothesis,memoEntries:entries,at:now};
+    try{
+     localStorage.setItem(KEY,JSON.stringify({...records,[id]:next}));
+     records[id]=next;delete drafts[id];thesisUI.saveError="";
+    }catch(_){thesisUI.saveError="저장할 수 없습니다. 브라우저 저장 공간을 확인하고 개인 기록을 백업해 주세요."}
+   }
+   if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="memoDelete"){
+   const existing=records[id]||{},entries=Array.isArray(existing.memoEntries)?existing.memoEntries:[];
+   const key=b.dataset.memoId;
+   if(!entries.some(e=>e.id===key))return;
+   if(typeof window.confirm==="function"&&!window.confirm("선택한 날짜별 메모 한 건을 삭제할까요?"))return;
+   const next={...existing,memoEntries:entries.filter(e=>e.id!==key),at:new Date().toISOString()};
+   try{localStorage.setItem(KEY,JSON.stringify({...records,[id]:next}));records[id]=next;thesisUI.saveError=""}
+   catch(_){thesisUI.saveError="메모 삭제 내용을 저장하지 못했습니다."}
+   if(window.atelierRerender)window.atelierRerender();
+ }else if(kind==="choose"){
    const d=captureDraft(id);
    drafts[id]={...d,choice:b.dataset.choice};
    if(window.atelierRerender)window.atelierRerender();
@@ -427,6 +509,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
