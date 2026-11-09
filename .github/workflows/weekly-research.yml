@@ -48,6 +48,8 @@ jobs:
           node tests/smoke_private_backup.cjs
           node tests/smoke_lazy_load.cjs
           node tests/smoke_data_core.cjs
+          node --check atelier-quotes.js
+          node tests/smoke_quotes.cjs
           node tests/smoke_research2.cjs
           node tests/smoke_research3.cjs
           node tests/smoke_navigation25.cjs

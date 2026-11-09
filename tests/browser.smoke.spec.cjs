@@ -82,6 +82,34 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-move-company-box a").first()).toHaveAttribute(
     "href","https://www.sec.gov/Archives/test");
  });
+ test("free quote widget loads only on demand and preserves exchange symbols",async({page})=>{
+  const providerCalls=[];
+  await page.route("https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js",route=>{
+   providerCalls.push(route.request().url());
+   return route.fulfill({status:200,contentType:"text/javascript",body:"/* provider stub: do not access a price API */"});
+  });
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator("#nav [data-page=companies]").click();
+  await expect(page.locator(".r2-quote-panel")).toBeVisible({timeout:20000});
+  await expect(page.locator("#r2-tv-frame script")).toHaveCount(0);
+  await expect(page.locator('.r2-quote-actions a[href="https://finance.yahoo.com/quote/LLY/"]')).toBeVisible();
+  await expect(page.locator(".r2-quote-privacy")).toContainText("TradingView");
+  expect(providerCalls.length).toBe(0);
+  await page.locator("#r2-quote-load").click();
+  const script=page.locator('#r2-tv-frame script[src*="embed-widget-symbol-overview.js"]');
+  await expect(script).toHaveCount(1);
+  expect(JSON.parse(await script.textContent()).symbols[0][1]).toBe("NYSE:LLY|1D");
+  expect(JSON.parse(await script.textContent()).changeMode).toBe("price-and-percent");
+  await expect(page.locator("#r2-quote-load")).toBeDisabled();
+  await page.locator('.r2-company-row[data-val="US:WMT"]').click();
+  await expect(page.locator("#r2-tv-frame script")).toHaveCount(0);
+  await page.locator("#r2-quote-load").click();
+  expect(JSON.parse(await page.locator("#r2-tv-frame script").textContent()).symbols[0][1]).toBe("NASDAQ:WMT|1D");
+  await page.locator('.r2-company-row[data-val="KR:950260"]').click();
+  await expect(page.locator('.r2-quote-actions a[href="https://finance.yahoo.com/quote/950260.KQ/"]')).toBeVisible();
+  await page.locator("#r2-quote-load").click();
+  expect(JSON.parse(await page.locator("#r2-tv-frame script").textContent()).symbols[0][1]).toBe("KRX:950260|1D");
+ });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});

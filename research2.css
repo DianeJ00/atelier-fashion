@@ -327,3 +327,22 @@ body{font-size:15px;line-height:1.68}
 .r2-move-company-box{padding:12px;border:1px solid var(--line,#dce2e7);border-radius:10px;margin-top:12px}
 .r2-move-company-box>.r2-move-item{margin-top:8px}
 @media(max-width:790px){.r2-move-grid{grid-template-columns:1fr}}
+
+
+/* Provider-hosted quotes, explicitly loaded only for the selected issuer. */
+.r2-quote-panel{border:1px solid #dce6f0;border-radius:11px;background:#f9fcff;padding:13px;margin:12px 0 14px;min-width:0}
+.r2-quote-head b{font-size:13px;color:#163d65}
+.r2-quote-head p{font-size:11px;color:#6f8298;line-height:1.55;margin:5px 0 10px}
+.r2-quote-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px}
+.r2-quote-actions>a{color:#235f9f;text-decoration:underline;text-underline-offset:2px;font-size:11px;font-weight:700}
+.r2-quote-load{border:1px solid #93b7e5;border-radius:7px;background:#eaf3ff;color:#184f88;padding:8px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.r2-quote-load:hover{background:#dcecff}
+.r2-quote-load:disabled{cursor:default;opacity:.7}
+.r2-quote-frame:not(:empty){height:350px;min-width:0;margin:12px 0 4px;background:#fff;border:1px solid #dce6f0;border-radius:8px;overflow:hidden}
+.r2-quote-frame .tradingview-widget-container{width:100%;height:100%}
+.r2-quote-frame .tradingview-widget-container__widget{width:100%;height:calc(100% - 32px)}
+.r2-quote-frame .tradingview-widget-copyright{text-align:center;padding:6px 4px;font-size:10px;color:#7389a1}
+.r2-quote-frame .tradingview-widget-copyright a{color:#295c95;text-decoration:underline}
+.r2-tv-error{font-size:12px;padding:18px;color:#aa4454}
+.r2-quote-privacy{display:block;font-size:10px;line-height:1.6;color:#8796a8;margin-top:8px}
+@media(max-width:640px){.r2-quote-frame:not(:empty){height:290px}.r2-quote-actions{gap:10px}}

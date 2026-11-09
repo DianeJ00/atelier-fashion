@@ -14,6 +14,7 @@ const ctx={window:win,document:doc,URL,encodeURIComponent,
  fetch:async url=>({ok:true,json:async()=>files[String(url).replace("./","")]}),console};
 vm.runInNewContext(read("atelier-data.js"),ctx,{timeout:3000});
 vm.runInNewContext(read("consumer2.js"),ctx,{timeout:3000});
+vm.runInNewContext(read("atelier-quotes.js"),ctx,{timeout:3000});
 vm.runInNewContext(read("research2.js"),ctx,{timeout:3000});
 const click=(key,value)=>callbacks.click({
  target:{closest:()=>({dataset:{r2:key,val:value}})},
@@ -37,6 +38,10 @@ const click=(key,value)=>callbacks.click({
  assert.ok(over.includes("SPY")&&over.includes("QQQ")&&over.includes("XLK"));
  let list=win.ATELIER2.companyPage();
  assert.ok(list.includes("Eli Lilly")&&list.includes("Walmart"));
+ assert.ok(list.includes("주가 · 일간 등락률 · 차트"));
+ assert.ok(list.includes("https://finance.yahoo.com/quote/LLY/"));
+ assert.ok(list.includes("주가·차트 보기"));
+ assert.ok(!list.includes("embed-widget-symbol-overview.js"),"widget external JS loads only after click");
  click("sector","바이오·제약");
  assert.ok(win.ATELIER2.companyPage().includes("관심 질환"));
  assert.ok(!win.ATELIER2.companyPage().includes('data-r2="technology"'));

@@ -264,6 +264,20 @@ function detailBody(company){
  <div class="r2-box-lite"><h4>기업 이해를 위한 자료 기준</h4><p>사업 분류와 관찰 대상은 리서치 범위이며, 제품별 매출 비중이나 산업 점유율을 뜻하지 않습니다. 공식 실적은 ‘핵심 KPI’, 신약 개발 현황은 ‘질환·파이프라인’, 가설·반증은 ‘투자 판단’에서 각각 확인합니다.</p></div>
  </div>`;
 }
+function quotePanel(company){
+ const quote=window.ATELIER_QUOTES?.quote(company);
+ if(!quote)return '';
+ return `<section class="r2-quote-panel" aria-label="주가 및 차트">
+ <div class="r2-quote-head"><div><b>주가 · 일간 등락률 · 차트</b><p>TradingView 제공 시세 · 거래소별 지연·기준 시각은 위젯에서 확인 · ATELIER 자체 수집·저장 없음</p></div></div>
+ <div class="r2-quote-actions">
+ <button type="button" id="r2-quote-load" class="r2-quote-load" data-r2="showQuote">주가·차트 보기</button>
+ <a href="${url(quote.yahoo)}" target="_blank" rel="noopener noreferrer">Yahoo Finance ↗</a>
+ <a href="${url(quote.tradingView)}" target="_blank" rel="noopener noreferrer">TradingView ↗</a>
+ </div>
+ <div id="r2-tv-frame" class="r2-quote-frame" aria-label="${esc(company.name)} 외부 시세 차트" aria-live="polite"></div>
+ <small class="r2-quote-privacy">차트를 누르면 TradingView에 페이지 주소·종목·IP 등 접속 정보가 전달됩니다. 외부 서비스가 차트를 제공하며 ATELIER의 가격 데이터·급등락 감지와는 별개입니다.</small>
+ </section>`;
+}
 function companyDetail(company){
  if(!company)return '<div class="r2-detail r2-empty">기업을 선택해 주세요.</div>';
  const chosen=state.detailTab==='투자 가설'?'투자 판단':
@@ -276,6 +290,7 @@ function companyDetail(company){
  <p>${state.detailTab==='투자 판단'?'근거와 반증 조건을 대조한 뒤 판단을 직접 기록합니다.':'사업 범주·핵심 실적·투자 판단을 분리해 살펴봅니다.'}</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
  ${moveEventForCompany(company)}
+ ${quotePanel(company)}
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
  ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&prices?.status!=='source_verified_snapshot'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
  const abs=current?row?.returns?.[state.period]:null,delta=current?row?.relative?.[state.benchmark]?.[state.period]:null;
@@ -343,6 +358,12 @@ function goSector(name){
 }
 function renderCurrent(){if(typeof window.atelierRerender==='function')window.atelierRerender()}
 function act(kind,val){
+ if(kind==='showQuote'){
+  const active=at(state.selected);
+  const loaded=window.ATELIER_QUOTES?.mount('r2-tv-frame',active);
+  if(loaded){const button=document.getElementById?.('r2-quote-load');if(button){button.disabled=true;button.textContent='주가 차트 표시 중';}}
+  return;
+ }
  if(kind==='sector'){goSector(val);return}
  if(kind==='openCompany'){state.selected=val;state.sector='전체';state.market='전체';state.search='';state.disease='전체';state.technology='전체';state.detailTab='사업 이해';if(window.atelierGotoCompanies)window.atelierGotoCompanies();else renderCurrent();return}
  if(kind==='thesisSector'){state.thesisSector=val;renderCurrent();return}
