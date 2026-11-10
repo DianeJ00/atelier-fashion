@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T01:14:01.990632Z",
+  "generatedAt": "2026-11-10T05:02:43.700223Z",
   "periodStart": "2026-11-02",
   "periodEnd": "2026-11-10",
   "reviewStatus": "unverified_headlines_only",
@@ -19,6 +19,45 @@
       "reviewStatus": "needs_review",
       "issuerId": "KR:950260",
       "discoveryMethod": "dated_rss_title_issuer_match"
+    },
+    {
+      "id": "rss-a5a2475cef3f7ed",
+      "title": "Victoria's Secret's 47% Surge Has Wall Street Hitting The Brakes — Here’s Why UBS Downgraded VSXY Stock - Stocktwits",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVFkYWpmWTFIeVp3a01Ed0RabUdRNkFYSnRoQ3NWQzhUdFJWLTdONGk3Y0dmdWRzV1J3U2k5YkozUnNmSXdTejJBS0pVeWdJbTVmWFdWaGpTYzJDeWRmaUtEMzIyci0wdXhwVndkTXBVQnpQb2tOMnRaMFQ5NTlXX0p3NnZFQ3lEMDVMTTBPazlRTGI2TGNkUWg4WXNPSEdfWkZGTDNuVGRXQVUtT2hrM1o3TXVPSG11dzlYbnp6czY?oc=5",
+      "date": "2026-11-09T23:00:09Z",
+      "platform": "Google News",
+      "ticker": "VSXY",
+      "brand": "",
+      "creator": "Stocktwits",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-1f5dc58bc96f0d4",
+      "title": "Irish Fashionistas On The Rise Of Fashion In Ireland",
+      "url": "https://www.youtube.com/watch?v=67YyLcUpyic",
+      "date": "2026-11-09T19:48:52Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-1d256ec7adf4198",
+      "title": "Charlie Constantinou X Nike SS27",
+      "url": "https://www.youtube.com/watch?v=4gDjhdWbb-M",
+      "date": "2026-11-09T17:24:43Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-7b5b9dacb1e0b5e",
@@ -66,6 +105,19 @@
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
+      "id": "rss-aa6f246d9dd17c0",
+      "title": "Inside Zara’s Brand Makeover - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUEt4S1NDaTQ0bDJVYmlBTm9MODlUaW1SM3JOdGVaS25lcnM2VzJ0VHR6SGI1aXlFNS1xWHhrY0djOUZjcVRRTEprZ1lnQ19FNWJrMmJlSmZwc3owdWp0QVpNY1ZoQ3JJYVphVFB4dnBycG5RU1lyQnpQMDBLWmtKd3d0cENEY2pLcmc?oc=5",
+      "date": "2026-11-09T05:30:00Z",
+      "platform": "Google News",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "The Business of Fashion",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
       "id": "rss-c676d63af3324e5",
       "title": "With an approval apiece, the verdict is still out on AbbVie’s and BMS’ twin neuro buys - BioSpace",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb296OXdKTHZza2tTSlpBUWhlTkhxZG9fVHJRSktkNEgzWWo1ejBtVk9rV2EwLTdqWWdpVmZCN19oelQ2ZkQtbFJlRTB1Yk53RTRKX2NFZE1aQ1prdVUydGQ4RXBoa1JObklnVEJYczJ0eUJuMnYtRjFMUk5oVWI4TDFZejJDcVpGSkNJRWhKRTVrQXYzd1NTRzdQaGV0ci1qbWE0c3ZTWkFER1dtbC1WYjFzWTgxMmlIOWRwYzEwQ0hvOVk?oc=5",
@@ -78,6 +130,34 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ABBV",
+      "discoveryMethod": "dated_rss_title_issuer_match"
+    },
+    {
+      "id": "rss-0194173bd36cfb8",
+      "title": "Why Sarah Burton’s Givenchy Commercial Pieces Are Desirable",
+      "url": "https://www.youtube.com/watch?v=YoaEq0i5cAA",
+      "date": "2026-11-08T22:55:26Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-98ecc246f0bdea3",
+      "title": "Merck & Co., Inc. (MRK): A Top 10 Healthcare Stock to Buy Following the 2026 Democratic Midterm Sweep - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQblhpamotbVFuM0RsQTUxRnJQU2hiNUh1MjYwR0FQRFp6MEZOTk04V2pGTlNHY1BKSDhzOEhBbDA4UXhlaEZRc0JEYWZ4ZTBhQTlCLWJibWpfbGdhMlFibWhyYmZjbU5wOTJhdmJWTnFBN1ZxVE93RDdKc1ByTjF1MnptMEZ6dGI1?oc=5",
+      "date": "2026-11-08T15:34:47Z",
+      "platform": "Google News",
+      "ticker": "MRK",
+      "brand": "",
+      "creator": "Yahoo Finance",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "issuerId": "US:MRK",
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
@@ -104,6 +184,19 @@
       "creator": "Vogue",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "패션쇼·디자인",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "id": "rss-094401ba28e3770",
+      "title": "The Process Of Designing A Met Gala Look",
+      "url": "https://www.youtube.com/watch?v=uuCU9MBd4Vc",
+      "date": "2026-11-06T20:00:15Z",
+      "platform": "YouTube",
+      "ticker": "TREND",
+      "brand": "",
+      "creator": "Fashion Roadman",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
+      "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
     },
     {
@@ -143,19 +236,6 @@
       "ticker": "URBN",
       "brand": "",
       "creator": "PA Department of Community & Economic Development (.gov)",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-9dfb0182e17d087",
-      "title": "Confirmed: Martine Rose Is Balenciaga’s New Creative Director - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGh1TG83Q3VPdnBFY1I0SlBLNklpSEJlMXJKeDZXNnlPSGxRN0R4eXFUTTZvM3NTMTA1WlRSMHg1Q2dYX2VQZ1YzMlA5NFhxS182aElGU2FERXN2MjJHUENBWndzMFZ6N1F0aV9nc3JmbXlxY1pJRnlOWTA3MmhobHZBd1FFUFRza2djb1plM2Zwd2FNYWZjR0Z2VVZpTWVXQ2Jsak1GSzNlN25CNUVJ?oc=5",
-      "date": "2026-11-06T07:01:19Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
@@ -239,21 +319,6 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기업 실적",
       "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-47efbf49f112c2f",
-      "title": "Business Development Supports Merck & Co.’s (MRK) Next Growth Chapter - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcE9FOTFQazRfa2VoaldWVldaZ1A2ZnlXWEdHUTVyU08ybmxIZUNwemx5aDdNUnYwM0IxTkVqQUFpWVBMT0FrMGpKcXVqZzdFWFhzMC1LMTZBMkVXNFhzN05TWE1GaEw3OE94aDEzdXFGTDJEcDItYXQyQWZEbnByTElfWU1oTl9HdmUxaE5qTnp5Tk1pUlFQcXdLR2VucF8z?oc=5",
-      "date": "2026-11-05T17:17:02Z",
-      "platform": "Google News",
-      "ticker": "MRK",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:MRK",
-      "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
       "id": "rss-dbdb21acdbf9299",
@@ -458,10 +523,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-7140b71d4623b2c",
@@ -472,10 +536,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-2f9a9ff2db204f3",
@@ -669,10 +732,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "브랜드·제품",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-0e028428d469986",
@@ -696,25 +758,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
-    },
-    {
-      "id": "rss-f9c7e8d9d52b722",
-      "title": "5 insightful analyst questions from Starbucks’s Q3 (fiscal Q4 2026) earnings call - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbXgteG1Bcm1DemIxUTRwZVN0bGdHVTFETWlZWXhma1hIVHBjMnprT3FnYXhRTWtIMnVyVkNUOExNX2tUOXhraE1KVFllLWtiTF9pMmFyMU1oY21tWkFKcS00WUxmS3M5Vzd0ZWZiRW44YkpTMFF4ZERmVVB0dU5OYUtsTGp2djhESnp6bzdRNXZUSHhIdFZnT1hpS3dPMXJ5QklOMERVQV8?oc=5",
-      "date": "2026-11-02T16:29:36Z",
-      "platform": "Google News",
-      "ticker": "SBUX",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:SBUX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-8f268443bdfb166",
@@ -753,10 +799,9 @@
       "ticker": "TREND",
       "brand": "",
       "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지 · 이전 수집 자료 유지",
+      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
       "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "carriedOver": true
+      "reviewStatus": "needs_review"
     },
     {
       "id": "rss-9bc059d058aa094",
@@ -772,6 +817,21 @@
       "reviewStatus": "needs_review"
     },
     {
+      "id": "rss-81d5a07e11521eb",
+      "title": "Starbucks’ ‘Back to Starbucks’ Strategy Delivers Further of Sales Growth - Food & Beverage Outlook",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcTlhUUhKdDJLQ1FyV01rUVFWUTIwSUtJelltVURKNzh6c28wRE5pUHktT1FRdHRJU1djMV9LcE1kc21fZUVIblUtREpJZjB2MHozOUo1am90UFN4eVp2cGZFVExIdTVldTRidE80cXlUVFdwV1lfek0yQ1JGbmpUQ3k4Q3d0NVB5M3ZYMDZIQVFXZkp3akliX1pkRm5aQk9VcTB3a3NyYkY3OEc5NWNIMVBhTlM3MkZxNF9WMDRTWFVpYlN0NExmSA?oc=5",
+      "date": "2026-11-02T09:55:24Z",
+      "platform": "Google News",
+      "ticker": "SBUX",
+      "brand": "",
+      "creator": "Food & Beverage Outlook",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기업 실적",
+      "reviewStatus": "needs_review",
+      "issuerId": "US:SBUX",
+      "discoveryMethod": "dated_rss_title_issuer_match"
+    },
+    {
       "id": "rss-2524948c03ce7cd",
       "title": "Johnson & Johnson: A Quality Healthcare Giant, Fairly Priced For Growth (NYSE:JNJ) - Seeking Alpha",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTm9SVV9NaWRlNWpDR3MydXRxM0lObzFyQ1pQWkViMGIwbWZhWW1PdG5nTmxYdHhpbllVLURSemRTWUF5bVB5UnAtTXRlS2ItYjhmQW9fWWZ3bzRiVXlENmpwZlYwcGlJODZoVkFuNTU5cU5OQm9IcDJBRFpxaktkeldEU09jQ2FELUlkdV8tdUt0UnZBMHJTNlJTczJhZ2NFMnlKS1BYbGFNSlg4MkdsNlF3?oc=5",
@@ -785,19 +845,6 @@
       "reviewStatus": "needs_review",
       "issuerId": "US:JNJ",
       "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d1fe479af27837d",
-      "title": "2 Reasons to like VSXY and 1 to stay skeptical - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQlYwSW5ZT1djV29zbkM3eVBEekRYVVh1eGhBcFl5dGw4QkZCWjJySlk1MUpUUkl2LVRJTXZwRXhzS0kweUZYeG1LS3E4eE43U2N4eFEzS242N2tCaXQ5dlljMEhKeldUNGphV1JtX0FldU9FOWg4ZmUxa3VCYWs5NVRVNzEySXFmX3NNYk9ETVJtbnl3ZE5qZzJxSjJJQjFmMGdrY0dOU0VGN2s?oc=5",
-      "date": "2026-11-02T04:00:00Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "TradingView",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
     }
   ],
   "newsCoverage": {
@@ -845,7 +892,7 @@
       },
       {
         "source": "YouTube",
-        "count": 5
+        "count": 9
       }
     ],
     "topics": [
@@ -866,9 +913,9 @@
         "count": 3
       }
     ],
-    "uncategorizedCount": 34,
-    "previousCollectedAt": "2026-11-08T04:50:55.898919Z",
-    "newSincePrevious": 35,
+    "uncategorizedCount": 38,
+    "previousCollectedAt": "2026-11-10T01:14:01.990632Z",
+    "newSincePrevious": 8,
     "companyFocus": [
       {
         "ticker": "TPR",
@@ -979,9 +1026,9 @@
     {
       "name": "Fashion Roadman",
       "source": "YouTube RSS",
-      "status": "신규 0건 · 이전 자료 유지",
-      "count": 0,
-      "previousRetained": 5
+      "status": "수집 완료",
+      "count": 9,
+      "previousRetained": 0
     },
     {
       "name": "Tim Dessaint",

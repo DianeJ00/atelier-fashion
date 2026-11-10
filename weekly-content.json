@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T01:15:15.993422+00:00",
+  "generatedAt": "2026-11-10T05:03:52.652333+00:00",
   "periodStart": "2026-10-31",
   "periodEnd": "2026-11-10",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
@@ -146,6 +146,33 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
+      "id": "rss-a5a2475cef3f7ed",
+      "title": "Victoria's Secret's 47% Surge Has Wall Street Hitting The Brakes — Here’s Why UBS Downgraded VSXY Stock - Stocktwits",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVFkYWpmWTFIeVp3a01Ed0RabUdRNkFYSnRoQ3NWQzhUdFJWLTdONGk3Y0dmdWRzV1J3U2k5YkozUnNmSXdTejJBS0pVeWdJbTVmWFdWaGpTYzJDeWRmaUtEMzIyci0wdXhwVndkTXBVQnpQb2tOMnRaMFQ5NTlXX0p3NnZFQ3lEMDVMTTBPazlRTGI2TGNkUWg4WXNPSEdfWkZGTDNuVGRXQVUtT2hrM1o3TXVPSG11dzlYbnp6czY?oc=5",
+      "date": "2026-11-09",
+      "source": "Stocktwits",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1f5dc58bc96f0d4",
+      "title": "Irish Fashionistas On The Rise Of Fashion In Ireland",
+      "url": "https://www.youtube.com/watch?v=67YyLcUpyic",
+      "date": "2026-11-09",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-1d256ec7adf4198",
+      "title": "Charlie Constantinou X Nike SS27",
+      "url": "https://www.youtube.com/watch?v=4gDjhdWbb-M",
+      "date": "2026-11-09",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
       "id": "rss-7b5b9dacb1e0b5e",
       "title": "Exclusive: Ulta Beauty bets on health tracking with Oura in 1,000 stores - www.glossy.co",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMmxwaEJhamZNRVhXSWxRRHhXMjVfTUk4d21oUHdXX2sxT0tBN05heDBSSC1FV3pYbTF4LUdCQVZodzA1MnVjSGhfVFE1dEtEdm4zMXZmajVtWW96OFZRMXlnT3huRVY2YTBocGZJbFppY1U3cjFXc3ZlNDYwSjA0WWxB?oc=5",
@@ -173,11 +200,38 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
+      "id": "rss-aa6f246d9dd17c0",
+      "title": "Inside Zara’s Brand Makeover - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUEt4S1NDaTQ0bDJVYmlBTm9MODlUaW1SM3JOdGVaS25lcnM2VzJ0VHR6SGI1aXlFNS1xWHhrY0djOUZjcVRRTEprZ1lnQ19FNWJrMmJlSmZwc3owdWp0QVpNY1ZoQ3JJYVphVFB4dnBycG5RU1lyQnpQMDBLWmtKd3d0cENEY2pLcmc?oc=5",
+      "date": "2026-11-09",
+      "source": "The Business of Fashion",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-c676d63af3324e5",
       "title": "With an approval apiece, the verdict is still out on AbbVie’s and BMS’ twin neuro buys - BioSpace",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb296OXdKTHZza2tTSlpBUWhlTkhxZG9fVHJRSktkNEgzWWo1ejBtVk9rV2EwLTdqWWdpVmZCN19oelQ2ZkQtbFJlRTB1Yk53RTRKX2NFZE1aQ1prdVUydGQ4RXBoa1JObklnVEJYczJ0eUJuMnYtRjFMUk5oVWI4TDFZejJDcVpGSkNJRWhKRTVrQXYzd1NTRzdQaGV0ci1qbWE0c3ZTWkFER1dtbC1WYjFzWTgxMmlIOWRwYzEwQ0hvOVk?oc=5",
       "date": "2026-11-09",
       "source": "BioSpace",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-0194173bd36cfb8",
+      "title": "Why Sarah Burton’s Givenchy Commercial Pieces Are Desirable",
+      "url": "https://www.youtube.com/watch?v=YoaEq0i5cAA",
+      "date": "2026-11-08",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-98ecc246f0bdea3",
+      "title": "Merck & Co., Inc. (MRK): A Top 10 Healthcare Stock to Buy Following the 2026 Democratic Midterm Sweep - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQblhpamotbVFuM0RsQTUxRnJQU2hiNUh1MjYwR0FQRFp6MEZOTk04V2pGTlNHY1BKSDhzOEhBbDA4UXhlaEZRc0JEYWZ4ZTBhQTlCLWJibWpfbGdhMlFibWhyYmZjbU5wOTJhdmJWTnFBN1ZxVE93RDdKc1ByTjF1MnptMEZ6dGI1?oc=5",
+      "date": "2026-11-08",
+      "source": "Yahoo Finance",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -189,63 +243,9 @@
       "source": "Simply Wall St",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-576c221ba1cca20",
-      "title": "Rag & Bone Pre-Fall 2027 Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3SGZDdjlMY2t6U3hxZHh6TDREWWJYWFhVYnpXcHdXSlFpMjUzYjNiWHhGZXJUUDFaUmlkaWxESC1Rdm9HbVR4T0N0MjNQQTdGeEQwMmlkQ3EzQXN6azBMWTVqUnYwQ0dqX2c?oc=5",
-      "date": "2026-11-06",
-      "source": "Vogue",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-290afa50af1aa32",
-      "title": "Levi's Opens New Flagship Store in Chicago: Get a Closer Look - Complex",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX1ZaZi1OSE9uRWV5bGs1MzNERG1BNlF6S3ZQbGNvMG10N2t2R0hUalFDX05abWpMeTBGelozY0pSUmNVVTJ4UW9CbEhQTGZTQ3N4SWF1V1I2MFV4VjdURFBwdFEzZ2VnUjdpNHdrcHJXcWFoNkkxS3hjYkF5NVhQcg?oc=5",
-      "date": "2026-11-06",
-      "source": "Complex",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-6f68c65f56a4aca",
-      "title": "Why Hims & Hers Health Stock Was in Dire Need of This Eli Lilly Agreement - Barron's",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRlI5c1lKOTdrclVablJaY25QbmhUNkhCT050bVFnVnV4bnR0aWo5dGdUWjlCaUZFc0NmX1dYRW5JdW55dElWaThvMk5FMGU4QlduNGlpd1dKcVA4SGdHVjJBYUpEejlyUlVaQVlKV21YTlJKdWJNcmZxWUZNV1hjc3dqU0lKZw?oc=5",
-      "date": "2026-11-06",
-      "source": "Barron's",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-66c3bfb1bc57571",
-      "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
-      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
-      "date": "2026-11-06",
-      "source": "PA Department of Community & Economic Development (.gov)",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-9dfb0182e17d087",
-      "title": "Confirmed: Martine Rose Is Balenciaga’s New Creative Director - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGh1TG83Q3VPdnBFY1I0SlBLNklpSEJlMXJKeDZXNnlPSGxRN0R4eXFUTTZvM3NTMTA1WlRSMHg1Q2dYX2VQZ1YzMlA5NFhxS182aElGU2FERXN2MjJHUENBWndzMFZ6N1F0aV9nc3JmbXlxY1pJRnlOWTA3MmhobHZBd1FFUFRza2djb1plM2Zwd2FNYWZjR0Z2VVZpTWVXQ2Jsak1GSzNlN25CNUVJ?oc=5",
-      "date": "2026-11-06",
-      "source": "The Business of Fashion",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-d13d7f2afd0aa42",
-      "title": "Ralph Lauren Pre-Fall 2027: The Ultimate Wardrobe - WWD",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwR09JSWZVeDFpZUpnMUE5ZzlxcjNQYlFyYmRka2N5NS0wbnJWZV9FNmxCTDZRTEE0VzFDNWZRMWpSMHpfODVMaGhFeEJKOC1IZzE4VWUxdVVyWnBoal9ydGlYOVd6Z3RMTm00RnUxZW0ybHB5?oc=5",
-      "date": "2026-11-06",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 56,
+  "pendingCount": 60,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

@@ -28,13 +28,13 @@
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-10T01:15:16.210698+00:00",
+  "generatedAt": "2026-11-10T05:03:52.854316+00:00",
   "periodStart": "2026-11-03",
   "periodEnd": "2026-11-10",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 2,
-    "unverifiedHeadlines": 57,
+    "unverifiedHeadlines": 61,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -289,9 +289,9 @@
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "Will Victoria's Secret (VSXY) Beat Estimates Again in Its Next Earnings Report? - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQ2RnZUtncXJ0SGVCRkJaSC12YW5ueGdoZncycnpQeklydmdMYWRTTnZpeDNVajI1REgwMk1hZTgwUGpGMVNiZlNDN0huWVdoemxjdnlqbmN3YlBwdnI3RnE3QXFrN1hqTXdTTjlqNmR1dXVRaU9rWkpMa2pIb3pIM0pOSFBqTzg1UnZzUWZORVVjNTMxM2RxeFpEMnJLbm9wUkkw?oc=5",
-        "date": "2026-11-04"
+        "title": "Victoria's Secret's 47% Surge Has Wall Street Hitting The Brakes — Here’s Why UBS Downgraded VSXY Stock - Stocktwits",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVFkYWpmWTFIeVp3a01Ed0RabUdRNkFYSnRoQ3NWQzhUdFJWLTdONGk3Y0dmdWRzV1J3U2k5YkozUnNmSXdTejJBS0pVeWdJbTVmWFdWaGpTYzJDeWRmaUtEMzIyci0wdXhwVndkTXBVQnpQb2tOMnRaMFQ5NTlXX0p3NnZFQ3lEMDVMTTBPazlRTGI2TGNkUWg4WXNPSEdfWkZGTDNuVGRXQVUtT2hrM1o3TXVPSG11dzlYbnp6czY?oc=5",
+        "date": "2026-11-09"
       },
       "consumerSampleCount": 0
     },
