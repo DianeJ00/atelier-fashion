@@ -77,6 +77,37 @@ const click=(key,value)=>callbacks.click({
  assert.ok(newsDetail.includes("기사 제목 · 본문 미확인"),"RSS title must not be labeled reviewed");
  assert.ok(newsDetail.includes("Yahoo Finance 뉴스"));
  assert.ok(!newsDetail.includes("업종별 핵심 지표"),"empty KPI tiles replaced");
+ // New cross-industry RSS titles require canonical issuerId and remain unverified.
+ const rss=files["weekly-research.json"];
+ files["weekly-research.json"]={...rss,items:[
+  ...rss.items,
+  {id:"rss-fake-ll",title:"Eli Lilly reports research trial progress",
+   url:"https://news.google.com/rss/articles/ll",date:"2026-11-09T01:00:00Z",
+   platform:"Google News",ticker:"LLY",issuerId:"US:LLY",brand:"",
+   creator:"Reuters",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
+  {id:"rss-fake-cross",title:"Wrong company accidentally matched",
+   url:"https://news.google.com/rss/articles/cross",date:"2026-11-09T01:00:00Z",
+   platform:"Google News",ticker:"LLY",issuerId:"US:UBER",brand:"",
+   creator:"Wrong",reviewStatus:"needs_review"},
+  {id:"rss-fake-kr",title:"KB금융 이사회 공시 분석",
+   url:"https://news.google.com/rss/articles/kr",date:"2026-11-09T01:00:00Z",
+   platform:"Google News",ticker:"105560",issuerId:"KR:105560",brand:"",
+   creator:"연합뉴스",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"}
+ ]};
+ win.ATELIER_DATA.invalidate("research");
+ await win.ATELIER2.loadDetails();
+ click("sector","바이오·제약");
+ click("company","US:LLY");
+ click("tab","실적·이슈");
+ const llIssues=win.ATELIER2.companyPage();
+ assert.ok(llIssues.includes("Eli Lilly reports research trial progress"));
+ assert.ok(llIssues.includes("기사 제목 · 본문 미확인"));
+ assert.ok(!llIssues.includes("Wrong company accidentally matched"));
+ click("sector","내 담당 기업");
+ click("company","KR:105560");
+ click("tab","실적·이슈");
+ assert.ok(win.ATELIER2.companyPage().includes("KB금융 이사회 공시 분석"));
+
  click("sector","내 담당 기업");
  assert.ok(win.ATELIER2.companyPage().includes("인제니아테라퓨틱스"));
  let brief=win.ATELIER2.theses();

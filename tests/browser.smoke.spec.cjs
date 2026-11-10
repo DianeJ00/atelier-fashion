@@ -154,6 +154,39 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-issues")).toContainText("Abercrombie",{timeout:20000});
   await expect(page.locator(".r2-issues")).not.toContainText("확정된 주가 상승 원인");
  });
+ test("biotech and domestic RSS headlines are issuer-checked and never labeled verified",async({page})=>{
+  const feed={generatedAt:"2026-11-10T00:00:00Z",
+   reviewStatus:"unverified_headlines_only",
+   items:[
+    {id:"test-lly",platform:"Google News",ticker:"LLY",issuerId:"US:LLY",
+     title:"Eli Lilly research program update - Reuters",
+     date:"2026-11-10T00:00:00Z",creator:"Reuters",reviewStatus:"needs_review",
+     discoveryMethod:"dated_rss_title_issuer_match",
+     url:"https://news.google.com/rss/articles/test-lly"},
+    {id:"test-kr",platform:"Google News",ticker:"105560",issuerId:"KR:105560",
+     title:"KB금융 이사회 관련 기사 - 연합뉴스",date:"2026-11-10T00:00:00Z",
+     creator:"연합뉴스",reviewStatus:"needs_review",
+     discoveryMethod:"dated_rss_title_issuer_match",
+     url:"https://news.google.com/rss/articles/test-kr"},
+    {id:"test-wrong",platform:"Google News",ticker:"LLY",issuerId:"US:UBER",
+     title:"Unrelated unverified company story",date:"2026-11-10T00:00:00Z",
+     creator:"Other",reviewStatus:"needs_review",
+     url:"https://news.google.com/rss/articles/test-wrong"}
+   ]};
+  await page.route("**/weekly-research.json",route=>route.fulfill({
+   status:200,contentType:"application/json",body:JSON.stringify(feed)
+  }));
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator("#nav [data-page=companies]").click();
+  await page.locator('.r2-detail-tabs button[data-val="실적·이슈"]').click();
+  const panel=page.locator(".r2-issues");
+  await expect(panel).toContainText("Eli Lilly research program update",{timeout:20000});
+  await expect(panel).toContainText("기사 제목 · 본문 미확인");
+  await expect(panel).not.toContainText("Unrelated unverified company story");
+  await page.locator('.r2-company-row[data-val="KR:105560"]').click();
+  await expect(page.locator(".r2-issues")).toContainText("KB금융 이사회 관련 기사");
+  await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
+ });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});

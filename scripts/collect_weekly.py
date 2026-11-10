@@ -6,6 +6,7 @@ Python standard library only; intended for GitHub Actions.
 """
 from __future__ import annotations
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from hashlib import sha256
@@ -16,6 +17,7 @@ import json
 import os
 import re
 import xml.etree.ElementTree as ET
+import news_discovery as issuer_news
 
 ROOT = Path(__file__).resolve().parents[1]
 NOW = datetime.now(timezone.utc)
@@ -151,8 +153,13 @@ def youtube_api(name, handle, key):
     return found[:20]
 
 
-def news(ticker, query):
-    url = 'https://news.google.com/rss/search?' + urlencode({'q': query + ' when:8d', 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
+def news(ticker, query, *, strict=False):
+    if strict:
+        hl, gl, ceid = issuer_news.locale(ticker)
+    else:
+        hl, gl, ceid = 'en-US', 'US', 'US:en'
+    url = 'https://news.google.com/rss/search?' + urlencode(
+        {'q': query + ' when:8d', 'hl': hl, 'gl': gl, 'ceid': ceid})
     root = ET.fromstring(get(url))
     result = []
     for item in root.findall('./channel/item'):
@@ -160,10 +167,23 @@ def news(ticker, query):
         link = item.findtext('link', '')
         published = item.findtext('pubDate', '')
         publisher = item.findtext('source', 'Google News RSS')
-        row = record(title, link, published, 'Google News', ticker, '', publisher, 'Google News RSS (원문 확인 전)')
+        # Google News often appends " - Publisher" to the title; never treat
+        # that publisher name alone as proof of an issuer mention.
+        body_title = (title[:-len(publisher)-3]
+                      if publisher and title.endswith(' - '+publisher)
+                      else title)
+        if strict and not issuer_news.title_matches(ticker, body_title):
+            continue
+        row = record(title, link, published, 'Google News', ticker, '', publisher,
+                     'Google News RSS (원문 확인 전)')
         if row:
+            if strict:
+                row['issuerId'] = issuer_news.issuer_id(ticker)
+                row['discoveryMethod'] = 'dated_rss_title_issuer_match'
             result.append(row)
-    return result[:2]
+        if len(result)>=2:
+            break
+    return result
 
 
 def weekly_digest(items, previous):
@@ -207,7 +227,8 @@ def main():
         if item.get('platform') == 'YouTube' and dt and START <= dt <= NOW + timedelta(days=1):
             prior = dict(item)
             prior['carriedOver'] = True
-            prior['source'] = str(prior.get('source', 'YouTube')) + ' · 이전 수집 자료 유지'
+            if '이전 수집 자료 유지' not in str(prior.get('source', '')):
+                prior['source'] = str(prior.get('source', 'YouTube')) + ' · 이전 수집 자료 유지'
             previous_videos.append(prior)
     key = os.environ.get('YOUTUBE_API_KEY', '').strip()
     channels = API_CHANNEL_HANDLES if key else CHANNELS
@@ -239,19 +260,92 @@ def main():
         except Exception as e:
             errors.append('Fashion media '+source+': '+type(e).__name__)
             news_errors += 1
-    by_url = {}
+    # 20 biotech + 15 consumer + 5 Korea; 12 a day (6/4/2) = 4-day
+    # deterministic rotation. No paid API and no article content scraping.
+    universe=json.loads((ROOT/'research-universe.json').read_text(encoding='utf-8'))
+    issuer_news.confirm_universe(universe['companies'])
+    scheduled=issuer_news.company_specs_for(NOW.date())
+    coverage_before=previous.get('newsCoverage') or {}
+    checked_dates=coverage_before.get('lastSuccessByTicker') or {}
+    if not isinstance(checked_dates,dict):
+        checked_dates={}
+    checked_dates={k:v for k,v in checked_dates.items()
+                   if k in issuer_news.SPECS and isinstance(v,str)}
+    prior_news={}
+    for item in previous.get('items', []):
+        ticker=item.get('ticker')
+        if (ticker not in issuer_news.SPECS or
+            item.get('platform')!='Google News' or
+            item.get('issuerId')!=issuer_news.issuer_id(ticker)):
+            continue
+        date=dated(item.get('date'))
+        if (not date or not START <= date <= NOW+timedelta(days=1) or
+            not issuer_news.title_matches(ticker,item.get('title','').rsplit(' - ',1)[0])):
+            continue
+        prior_news.setdefault(ticker,[]).append(item)
+    # Keep previously checked non-due issuers' dated titles, but do not
+    # imply that these titles were fetched again today.
+    today_rows={}
+    successes=set()
+    failures=set()
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        tasks={pool.submit(news,ticker,spec[2],strict=True):ticker
+               for ticker,spec in scheduled}
+        for future in as_completed(tasks):
+            ticker=tasks[future]
+            try:
+                today_rows[ticker]=future.result()
+                successes.add(ticker)
+                checked_dates[ticker]=NOW.date().isoformat()
+            except Exception as e:
+                failures.add(ticker)
+                errors.append('Google News '+ticker+': '+type(e).__name__)
+                news_errors += 1
+    for ticker in issuer_news.SPECS:
+        if ticker in successes:
+            found.extend(today_rows[ticker])
+            continue
+        # If not scheduled or a network request failed, preserve only recent
+        # individually dated links; never silently fabricate a new check.
+        for item in prior_news.get(ticker,[]):
+            carried=dict(item)
+            carried['carriedOver']=True
+            found.append(carried)
+    by_url={}
     for row in found:
-        by_url.setdefault(row['url'], row)
-    items = sorted(by_url.values(), key=lambda x: x['date'], reverse=True)[:160]
+        # The same article may genuinely mention two tracked issuers.
+        # Never silently erase the second issuer's association.
+        by_url.setdefault((row.get('ticker'),row['url']),row)
+    items=sorted(by_url.values(), key=lambda x:x['date'],reverse=True)[:160]
+    sectors={sector:{'scheduled':sum(spec[1]==sector for _,spec in scheduled),
+                     'succeeded':sum(issuer_news.SPECS[t][1]==sector for t in successes)}
+             for sector in issuer_news.SECTOR_BUDGET}
+    news_coverage={
+        'tracked':len(issuer_news.SPECS),
+        'scheduledToday':len(scheduled),
+        'succeededToday':len(successes),
+        'failedToday':len(failures),
+        'retainedNotRechecked':sum(x.get('carriedOver') is True and
+                                    x.get('ticker') in issuer_news.SPECS for x in items),
+        'lastSuccessByTicker':checked_dates,
+        'sectorChecks':sectors,
+        'rule':'제목·발행일·종목명 교차 확인, 기사 본문 미검증. 4일 순환 수집',
+    }
     health.append({'name':'공개 뉴스·패션 매체', 'source':'Google News RSS',
                    'status':'일부 오류' if news_errors else '수집 완료',
                    'count':sum(x['platform']=='Google News' for x in items)})
+    health.append({'name':'바이오·소비재·국내 뉴스 제목','source':'Google News RSS',
+                   'status':'일부 오류' if failures else '수집 완료',
+                   'count':sum(x.get('ticker') in issuer_news.SPECS for x in items),
+                   'scheduledToday':len(scheduled),'succeededToday':len(successes),
+                   'failedToday':len(failures)})
     obj = {
         'generatedAt': NOW.isoformat().replace('+00:00', 'Z'),
         'periodStart': START.date().isoformat(), 'periodEnd': NOW.date().isoformat(),
         'reviewStatus': 'unverified_headlines_only',
         'note': '기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.',
         'items': items,
+        'newsCoverage': news_coverage,
         'weeklyDigest': weekly_digest(items, previous),
         'sourceHealth': health,
         'errors': errors,

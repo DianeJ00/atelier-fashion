@@ -270,9 +270,13 @@ function companyIssuePanel(company){
    verified:true,label:"원문 대조"});
  }
  for(const x of issueNews?.items||[]){
-  if(x.ticker!==ticker||x.platform!=="Google News")continue;
+  if(x.ticker!==ticker||x.platform!=="Google News"||
+     x.reviewStatus!=="needs_review")continue;
+  // New cross-industry sources MUST prove canonical issuer identity. Only
+  // the existing fashion headlines have legacy ticker-only records.
+  if(x.issuerId?x.issuerId!==company.id:company.sector!=="패션")continue;
   add({ticker,date:x.date,href:x.url,title:x.title,publisher:x.creator||"기사 원문",
-   verified:false,label:"기사 제목 · 본문 미확인"});
+   verified:false,label:x.carriedOver?"이전 수집 제목 · 본문 미확인":"기사 제목 · 본문 미확인"});
  }
  const verified=found.filter(x=>x.verified).sort((a,b)=>b.date.localeCompare(a.date));
  const headlines=found.filter(x=>!x.verified).sort((a,b)=>b.date.localeCompare(a.date));
@@ -283,7 +287,7 @@ function companyIssuePanel(company){
  const reuters=company.market==="미국"?
   "https://www.reuters.com/site-search/?query="+encodeURIComponent(company.name):null;
  return '<section class="r2-issues"><div class="r2-issues-head"><div><h4>최근 주요 이슈</h4>'+
- '<p>기업별 최신 확인 자료 우선 · 기사 제목은 원문 검토 전 · 게시일 기준</p></div>'+
+ '<p>공식 자료 우선 · RSS 제목은 본문 미확인 · 바이오·소비재·국내 뉴스는 4일 순환 점검</p></div>'+
  '<span>'+shown.length+'건</span></div>'+
  (shown.length?'<div class="r2-issues-list">'+shown.map(x=>
   '<article class="r2-issue"><div class="r2-issue-meta"><time datetime="'+esc(x.date)+'">'+esc(x.date)+'</time>'+

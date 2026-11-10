@@ -91,6 +91,48 @@ def validate(records):
         prefix = "US:" if company.get("market") == "미국" else "KR:" if company.get("market") == "한국" else None
         if prefix is None or company.get("id") != prefix + str(company.get("ticker", "")):
             errors.append(f"universe: invalid issuer ID mapping {company.get('id')}")
+    # Canonical issuer IDs are required for new cross-industry RSS headlines.
+    # Legacy fashion RSS titles remain tagged by ticker until their source
+    # migration, and headline discovery never counts as fact verification.
+    news_rows=records.get("weekly-research.json",{}).get("items",[])
+    if not isinstance(news_rows,list):
+        errors.append("weekly-research: expected items array")
+        news_rows=[]
+    for item in news_rows:
+        if not isinstance(item,dict):
+            errors.append("weekly-research: non-object headline")
+            continue
+        issuer=item.get("issuerId")
+        if issuer is None:
+            continue
+        ticker=item.get("ticker")
+        company=idx.get(ticker)
+        if (not company or issuer!=company.get("id") or
+            item.get("platform")!="Google News" or
+            item.get("reviewStatus")!="needs_review" or
+            item.get("discoveryMethod")!="dated_rss_title_issuer_match" or
+            not parse_day(str(item.get("date",""))[:10]) or
+            not str(item.get("url","")).startswith("https://news.google.com/rss/")):
+            errors.append(f"weekly-research: invalid issuer headline {ticker}")
+    coverage=records.get("weekly-research.json",{}).get("newsCoverage")
+    if coverage is not None:
+        if not isinstance(coverage,dict):
+            errors.append("weekly-research: invalid news coverage")
+        else:
+            queried=coverage.get("scheduledToday")
+            succeeded=coverage.get("succeededToday")
+            failed=coverage.get("failedToday")
+            if (coverage.get("tracked")!=40 or type(queried) is not int or queried!=12 or
+                type(succeeded) is not int or type(failed) is not int or
+                succeeded<0 or failed<0 or succeeded+failed!=queried):
+                errors.append("weekly-research: coverage counts inconsistent")
+            dates=coverage.get("lastSuccessByTicker")
+            if not isinstance(dates,dict):
+                errors.append("weekly-research: missing lastSuccessByTicker")
+            else:
+                if (len(dates)>40 or any(not isinstance(t,str) or t not in idx or
+                      not parse_day(x) for t,x in dates.items())):
+                    errors.append("weekly-research: invalid success dates")
     for filename, sector in GROUP_FILES.items():
         rows = records.get(filename, {}).get("companies")
         expected = EXPECTED[sector]
