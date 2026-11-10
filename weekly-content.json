@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-08T04:52:04.358851+00:00",
-  "periodStart": "2026-10-29",
-  "periodEnd": "2026-11-08",
+  "generatedAt": "2026-11-10T01:15:15.993422+00:00",
+  "periodStart": "2026-10-31",
+  "periodEnd": "2026-11-10",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [
     {
@@ -46,24 +46,6 @@
         "rss-79f91885d638102"
       ],
       "priority": 9
-    },
-    {
-      "id": "capri-fy27-q2",
-      "date": "2026-10-30",
-      "source": "Capri Holdings IR",
-      "sourceType": "기업 공식 실적 발표",
-      "status": "원문 대조·편집",
-      "title": "Capri, 정가 판매 개선에도 Michael Kors 매출 감소",
-      "summary": "2027회계연도 2분기 매출은 $809M으로 전년 대비 5.5% 감소. Michael Kors 매출은 $663M(-8.6%)이나 그룹 매출총이익률은 63.3%로 2.3%p 상승.",
-      "impact": "정가 판매 비중과 제품 구성 개선이 마진을 지지하지만, Michael Kors 외형 감소가 반전되는지 확인 필요.",
-      "kpi": "Michael Kors 매출 성장률·정가 판매율 / 그룹 매출총이익률",
-      "risk": "분기 매출에 도매 출하 시점 앞당김 약 $20M 포함. 해당 회계분기 수치이며 연간 가이던스·조정 실적과 구분.",
-      "tickers": [
-        "CPRI"
-      ],
-      "url": "https://www.capriholdings.com/news/news-details/2026/Capri-Holdings-Limited-Reports-Second-Quarter-Fiscal-2027-Results/default.aspx",
-      "kind": "results",
-      "priority": 7
     },
     {
       "id": "old-navy-merch-reset",
@@ -155,11 +137,65 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-763bddb036176e7",
-      "title": "Why Is It So Hard to Build an Independent Fashion Brand? - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnZhZmZPRklmYmZEYmlnbTkwX1JRNjR4X1BlY240b2tKbU9nTlRXWXg0dGxiTXN5WGwydG5qYjA1SFdhMXNXZ2JTTUtJc3EwYzlJRlZPaE9YYTM1Z2hkbWk4ekRzVmFHcEJyOEwzd2tfZzFYNDdaT245dFJZRXJxeVZ1dTV5UFhBY2pNYldySnFjX3BMbGx6M1ZPam4tVHpjUjAwcFh1NVIyZGc?oc=5",
+      "id": "rss-a372cf2c150f4de",
+      "title": "[Stock tracking] 인제니아테라퓨틱스 주가, IGT-302 옵션 미행사 소식에도 견조···IGT-427에 쏠린 눈 - 녹색경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rOHhfRjFwamxBOXdkdFVETlRoaE56SVR4TXhOZ2VWc1FwbjVPazhlamNSUnFrVUxBdXA2eGFicVFRMmgyQUh5MV9uNDhCc0EyVEpmNEFWeGdEdVM0azBkV0E3elBIVnZD?oc=5",
+      "date": "2026-11-10",
+      "source": "녹색경제신문",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-7b5b9dacb1e0b5e",
+      "title": "Exclusive: Ulta Beauty bets on health tracking with Oura in 1,000 stores - www.glossy.co",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMmxwaEJhamZNRVhXSWxRRHhXMjVfTUk4d21oUHdXX2sxT0tBN05heDBSSC1FV3pYbTF4LUdCQVZodzA1MnVjSGhfVFE1dEtEdm4zMXZmajVtWW96OFZRMXlnT3huRVY2YTBocGZJbFppY1U3cjFXc3ZlNDYwSjA0WWxB?oc=5",
+      "date": "2026-11-09",
+      "source": "www.glossy.co",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-53ff52b68514b27",
+      "title": "인제니아테라퓨틱스, MSD로부터 IGT-302 녹내장 적응증 옵션 미행사 공문 수령 - 디지털투데이",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1veDNzZ1ZNeXhpemd6OWJrOF8weTBMR2d0Vl9Vd0Z5ZDByZzJvNE03OXFUYUl1aGRaUnJFZzMwUlpETWJlVUdWdGczMlc3TjJoVVlhREZzODVRWkdDTHVWUFkyRWtqM1YtTjlmaDdpaUs1czlnZWFLZk00cw?oc=5",
+      "date": "2026-11-09",
+      "source": "디지털투데이",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-c04b14db5361c6c",
+      "title": "Bristol Myers Squibb Invests $2.3 Billion in Houston Campus - CHEManager",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZEcxR3EtMk1rSkl5SG5ENS1ENDdqZXJKUG8wVURBb2lIV2c4R1Mxb2pZaGtJN09vbXBFa1dkUW1DUWRpdWtLLUdCN3JlR1ZGN0M5VEFodklYVmFWWDVpVDRqOE9YRE5JbHhXSExWd3owdHpSRzh0d0QyZ3pPRDdsZ2l6NkZMMmpRMjVwYU9lVWZIRDBhcUFWMnFHN1Y?oc=5",
+      "date": "2026-11-09",
+      "source": "CHEManager",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-c676d63af3324e5",
+      "title": "With an approval apiece, the verdict is still out on AbbVie’s and BMS’ twin neuro buys - BioSpace",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb296OXdKTHZza2tTSlpBUWhlTkhxZG9fVHJRSktkNEgzWWo1ejBtVk9rV2EwLTdqWWdpVmZCN19oelQ2ZkQtbFJlRTB1Yk53RTRKX2NFZE1aQ1prdVUydGQ4RXBoa1JObklnVEJYczJ0eUJuMnYtRjFMUk5oVWI4TDFZejJDcVpGSkNJRWhKRTVrQXYzd1NTRzdQaGV0ci1qbWE0c3ZTWkFER1dtbC1WYjFzWTgxMmlIOWRwYzEwQ0hvOVk?oc=5",
+      "date": "2026-11-09",
+      "source": "BioSpace",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-74aedbfcfd93853",
+      "title": "Why Did American Eagle Outfitters (AEO) Move As Attention Builds? - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeXIxVl85OWppMmhYYVB3blJHbHdUdVNGOTlmOVpGZmFYSkpJTktELTlyV0swNzZneEVTaVNsdXM4UFJPME5Lci1XeFJlRHBxeWZXMFM4TlY1Yi1yRk5EWmNEMm9VTjZLRXNiRW5JemZjdUVaYXZ6NW1oUXIzbi1iTjE4dmNHUk12Yl9ZNkZHUGF1V3FpNzY0a3Y1NWI1cUJNa0ZsTEJUTjdNdGZudHZNUWZGWjhObGhkcHliaEtqR2lKS0tUNWZkOTVoMW1nUVd4Q2xFWTZ30gHbAUFVX3lxTE1WU3hsN0p6NXVoZVFXY2FiclUzZDBlV3JGZDRmOGFJLUxaQnBPMjhQR0p6S29SazZiN25fVXdMekVPYWtmT1RqU3pwOXhNNmNCb1Ztb3RxbmVmVEdNT1JVODNKRGctcTNLdkpZcjhkLWVUOGl4VE9tb1hGNmVXVkFVQWNlRzhHSVNVblRIV2V4T3pRUGx0cGlXcElZZDZqMG90MVM5RGtkMzJpb2M1WWdVNnp4SUdiOWZXRmZLWTlMZ18wekh4ellzZjJJS2l0NXpRUDNBY1A4bUozaw?oc=5",
+      "date": "2026-11-08",
+      "source": "Simply Wall St",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-576c221ba1cca20",
+      "title": "Rag & Bone Pre-Fall 2027 Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB3SGZDdjlMY2t6U3hxZHh6TDREWWJYWFhVYnpXcHdXSlFpMjUzYjNiWHhGZXJUUDFaUmlkaWxESC1Rdm9HbVR4T0N0MjNQQTdGeEQwMmlkQ3EzQXN6azBMWTVqUnYwQ0dqX2c?oc=5",
       "date": "2026-11-06",
-      "source": "The Business of Fashion",
+      "source": "Vogue",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -173,6 +209,33 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
+      "id": "rss-6f68c65f56a4aca",
+      "title": "Why Hims & Hers Health Stock Was in Dire Need of This Eli Lilly Agreement - Barron's",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRlI5c1lKOTdrclVablJaY25QbmhUNkhCT050bVFnVnV4bnR0aWo5dGdUWjlCaUZFc0NmX1dYRW5JdW55dElWaThvMk5FMGU4QlduNGlpd1dKcVA4SGdHVjJBYUpEejlyUlVaQVlKV21YTlJKdWJNcmZxWUZNV1hjc3dqU0lKZw?oc=5",
+      "date": "2026-11-06",
+      "source": "Barron's",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-66c3bfb1bc57571",
+      "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
+      "date": "2026-11-06",
+      "source": "PA Department of Community & Economic Development (.gov)",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-9dfb0182e17d087",
+      "title": "Confirmed: Martine Rose Is Balenciaga’s New Creative Director - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGh1TG83Q3VPdnBFY1I0SlBLNklpSEJlMXJKeDZXNnlPSGxRN0R4eXFUTTZvM3NTMTA1WlRSMHg1Q2dYX2VQZ1YzMlA5NFhxS182aElGU2FERXN2MjJHUENBWndzMFZ6N1F0aV9nc3JmbXlxY1pJRnlOWTA3MmhobHZBd1FFUFRza2djb1plM2Zwd2FNYWZjR0Z2VVZpTWVXQ2Jsak1GSzNlN25CNUVJ?oc=5",
+      "date": "2026-11-06",
+      "source": "The Business of Fashion",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-d13d7f2afd0aa42",
       "title": "Ralph Lauren Pre-Fall 2027: The Ultimate Wardrobe - WWD",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwR09JSWZVeDFpZUpnMUE5ZzlxcjNQYlFyYmRka2N5NS0wbnJWZV9FNmxCTDZRTEE0VzFDNWZRMWpSMHpfODVMaGhFeEJKOC1IZzE4VWUxdVVyWnBoal9ydGlYOVd6Z3RMTm00RnUxZW0ybHB5?oc=5",
@@ -180,90 +243,9 @@
       "source": "WWD",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-7d3ea0d3813a70e",
-      "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-      "date": "2026-11-06",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-b47138fbe0ef305",
-      "title": "What American Eagle Outfitters Holders Got Right - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRDhRcVZlNHRyRHhtSkFVM1U1N1hjZzMxNllOZWRCVWtEb1VqcTZuNTR6WnJkcVc2SXhwTXQ1d2lEdWRyanhObVBEMWxFRHNrNE1icFZNaDdCUzJVOWRLSm0tWXJkZkJzZjJrTzZtZTY5RWk2MU5PNWs3ZUhsQWh4MEJ4NEpNajcxSlZyakhTMzNUeDBSTHFZMHgtQlg3ejNGREt4Yw?oc=5",
-      "date": "2026-11-06",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-dbdb21acdbf9299",
-      "title": "Pierpaolo Piccioli Exits Balenciaga - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWTgtdUtsNDZySDVXUDZRWTZUcVVuQ0E2dHVIM3FaN1ZaYVBRMTZUdjJrbm5DUzRXR19Rc1JodDZYcHl3ODdScTFqUnEtU1RzRW1TN3VLUHZHS19tdXR1SDN0S1phMXZkakQtc1llOGJ1dnVMa2VEOUtnQk1jMmNFOXIyZUZTZFRVVkctdDRUWQ?oc=5",
-      "date": "2026-11-05",
-      "source": "The Business of Fashion",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-370008b89aab578",
-      "title": "Christie Brown Lagos Spring 2027 Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1OMHBGU0k4aGtpU2phdVBMZnRBSmQ0dWdtdlE5dTFGcjBUdHhwbkN0djZRSUtTNGI5NXk4ZVFieC1MUGlXQ3hSZjg4clJobjBIb2hCQk5kRGw2SE80X2s0SC03Z3c2UXhBenBkaUhVTXBNZzF4WVlB?oc=5",
-      "date": "2026-11-05",
-      "source": "Vogue",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-7fd0099aad78a0b",
-      "title": "Tapestry lifts outlook as young shoppers snap up Coach bags, shares jump - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
-      "date": "2026-11-05",
-      "source": "Reuters",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-601e1ce1939cb63",
-      "title": "Tapestry Revenues Hit 12% Growth Despite Kate Spade Dip - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQeEN0MHdpM3hSX0c3Z254bjhzWVV5SW5jdFVHS195WnFFeDB2T3Q1Y3Z3VmQ2dHpYcVMxaTFub1ZncnQ2VXY1RmpsUlBzWjE0Y2t1Z0NWVUplNks4Vjc5U1Z2Mzk3akxGVFhPUGI5Q0g0bW1XTFF1bVhwUXFkWFFXR2VFRWJ2dw?oc=5",
-      "date": "2026-11-05",
-      "source": "Vogue",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-db317d89a822495",
-      "title": "Urban Outfitters seeks material cost visibility from expanded technology suite - Supply Chain Dive",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMHU0Vkcxd0E2THhnX3VRdWl1TUwxR1pvdFl6S0tfU0pxemZoM2dfSmVaZzIxZi1nYXhjSGQtNDAzeWljZGdtWGNrR21ESExubkJpSW9lYmptZ1EyX3JqSmd3Zm54LTN6WVVCblJuVkU4cVh1Rmp0WmtlQnJScE53aUN4ZkRJSHBadU12aF9ZcFg4cTQxckNXam9FX2lkTGF0Vy1FUWFtS0NaN000SmdwVnI0c2xyS2wyQW1CNQ?oc=5",
-      "date": "2026-11-05",
-      "source": "Supply Chain Dive",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-f76392dbc2a541d",
-      "title": "Palmer Harding Spring 2027 Ready-to-Wear Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNV1NnSHZPME9OQUlObjRUOHF1VEVwVmlQN3pSREdjN3lPd0FuT09pOFk5QjhJRVhuUHZ2c05Mckg3OVJjTE1tSzhoVXNEdTJEemNnTkpWRE5rc05nNFFQb3dPbVRPT2FVWDBhb0NTUzR6akM0T1p2OURaZ3o3S2JTYQ?oc=5",
-      "date": "2026-11-04",
-      "source": "Vogue",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-77598da43620ed4",
-      "title": "Yeezy Returns to the Runway in Los Angeles, Showcases Flagship - WWD",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWW9pSXJnSkpGN3ZMYVBlcjNZUEQtdlNlaTBBRjY1a0R2ZndGd1FxRTVUWERiY3d5ZzROaUJ3a3o1b296MGcxaEh3MVBNRVhsVmhLM0pFcFU1YVJHZ0gwRU9wVzEwYzVNQVRLTEhUMmJEYnYyUFBXanhjQkxmYjVvZXFKTHF4U3U0VGl4ZjRHU1JGamc1VTNxZDA0Q1V3dExzaUE?oc=5",
-      "date": "2026-11-03",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 32,
+  "pendingCount": 56,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

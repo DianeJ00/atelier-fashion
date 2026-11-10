@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T04:52:04.566604+00:00",
-  "periodStart": "2026-11-01",
-  "periodEnd": "2026-11-08",
+  "generatedAt": "2026-11-10T01:15:16.255716+00:00",
+  "periodStart": "2026-11-03",
+  "periodEnd": "2026-11-10",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
   "items": [
@@ -107,6 +107,23 @@
       "priority": 5
     },
     {
+      "id": "SEC:IONS:2026-09-30",
+      "sector": "바이오·제약",
+      "ticker": "IONS",
+      "eventDate": "2026-11-09",
+      "eventType": "미국 SEC 분기 실적",
+      "tier": "공식 공시 · GAAP",
+      "title": "IONS · 매출 전년 대비 +54.9%",
+      "observation": "SEC 10-Q 분기 GAAP 매출 USD 0.24B, 전년 동기 대비 +54.9%, 직전 분기 대비 -9.4%",
+      "period": "2026-07-01 ~ 2026-09-30",
+      "investment": "RNA 기반 파트너십과 자체 제품이 이익으로 전환되는가",
+      "nextCheck": "제품·사업별 성장과 영업이익·FCF를 동일 기간으로 확인",
+      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. ",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000271/form10q.htm",
+      "sourceLabel": "SEC 10-Q",
+      "priority": 4
+    },
+    {
       "id": "SEC:MRNA:2026-09-30",
       "sector": "바이오·제약",
       "ticker": "MRNA",
@@ -122,30 +139,13 @@
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000197/mrna-20260930.htm",
       "sourceLabel": "SEC 10-Q",
       "priority": 4
-    },
-    {
-      "id": "SEC:RL:2026-09-26",
-      "sector": "패션",
-      "ticker": "RL",
-      "eventDate": "2026-11-05",
-      "eventType": "미국 SEC 분기 실적",
-      "tier": "공식 공시 · GAAP",
-      "title": "RL · 매출 전년 대비 +9.1%",
-      "observation": "SEC 10-Q 분기 GAAP 매출 USD 2.19B, 전년 동기 대비 +9.1%, 직전 분기 대비 +11.9%",
-      "period": "2026-06-28 ~ 2026-09-26",
-      "investment": "평균 판매단가·아시아 동일매장매출·재고",
-      "nextCheck": "제품·사업별 성장과 영업이익·FCF를 동일 기간으로 확인",
-      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. ",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
-      "sourceLabel": "SEC 10-Q",
-      "priority": 4
     }
   ],
   "itemCount": 8,
   "bySector": {
     "소비재·서비스": 4,
-    "바이오·제약": 1,
-    "패션": 3
+    "바이오·제약": 2,
+    "패션": 2
   },
   "reviewCandidates": [
     {
@@ -221,6 +221,18 @@
       "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
     },
     {
+      "companyId": "US:IONS",
+      "ticker": "IONS",
+      "sector": "바이오·제약",
+      "currentQuestion": "RNA 기반 파트너십과 자체 제품이 이익으로 전환되는가",
+      "contradictionToCheck": "파트너 개발·허가 지연",
+      "candidateState": "근거 검토 필요 · 방향 미판정",
+      "change": "IONS · 매출 전년 대비 +54.9%",
+      "evidenceDate": "2026-11-09",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/874015/000087401526000271/form10q.htm",
+      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
+    },
+    {
       "companyId": "US:MRNA",
       "ticker": "MRNA",
       "sector": "바이오·제약",
@@ -230,18 +242,6 @@
       "change": "MRNA · 매출 전년 대비 +29.2%",
       "evidenceDate": "2026-11-06",
       "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000197/mrna-20260930.htm",
-      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
-    },
-    {
-      "companyId": "US:RL",
-      "ticker": "RL",
-      "sector": "패션",
-      "currentQuestion": "평균 판매단가·아시아 동일매장매출·재고",
-      "contradictionToCheck": "할인율·브랜드별 성장 차이",
-      "candidateState": "근거 검토 필요 · 방향 미판정",
-      "change": "RL · 매출 전년 대비 +9.1%",
-      "evidenceDate": "2026-11-05",
-      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
       "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
     }
   ],
@@ -284,7 +284,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-08T04:52:04.358851+00:00"
+    "fashion": "2026-11-10T01:15:15.993422+00:00"
   },
   "coverage": {
     "tracked": 52,

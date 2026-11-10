@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T04:51:50.621473+00:00",
+  "generatedAt": "2026-11-10T01:15:05.971148+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -495,7 +495,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 21,
+      "verifiedTrialCountInSearchWindow": 25,
       "trials": [
         {
           "nctId": "NCT04875585",
@@ -1956,7 +1956,7 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-07T04:58:01.100569+00:00",
+  "comparisonTo": "2026-11-08T04:51:50.621473+00:00",
   "changeCount": 0,
   "changes": [],
   "weeklyInterpretation": [
