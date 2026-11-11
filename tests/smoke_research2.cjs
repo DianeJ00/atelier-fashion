@@ -19,6 +19,14 @@ const files=Object.fromEntries(names.map(x=>[x,JSON.parse(read(x))]));
    url:"https://news.google.com/rss/articles/cross",date:"2026-11-09T01:00:00Z",
    platform:"Google News",ticker:"LLY",issuerId:"US:UBER",brand:"",
    creator:"Wrong",reviewStatus:"needs_review"},
+  {id:"rss-fake-biib",title:"Dutch antitrust regulators probe Biogen over test for its MS drug - STAT",
+   url:"https://news.google.com/rss/articles/biib",date:"2026-11-09T01:00:00Z",
+   platform:"Google News",ticker:"BIIB",issuerId:"US:BIIB",brand:"",
+   creator:"STAT",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
+  {id:"rss-fake-jnj",title:"FDA grants J&J accelerated approval for head and neck cancer treatment - Reuters",
+   url:"https://news.google.com/rss/articles/jnj",date:"2026-11-09T01:00:00Z",
+   platform:"Google News",ticker:"JNJ",issuerId:"US:JNJ",brand:"",
+   creator:"Reuters",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
   {id:"rss-fake-kr",title:"KB금융 이사회 공시 분석",
    url:"https://news.google.com/rss/articles/kr",date:"2026-11-09T01:00:00Z",
    platform:"Google News",ticker:"105560",issuerId:"KR:105560",brand:"",
@@ -95,6 +103,20 @@ const click=(key,value)=>callbacks.click({
  assert.ok(newsDetail.includes("기사 제목 · 본문 미확인"),"RSS title must not be labeled reviewed");
  assert.ok(newsDetail.includes("Yahoo Finance 뉴스"));
  assert.ok(!newsDetail.includes("업종별 핵심 지표"),"empty KPI tiles replaced");
+ assert.ok(newsDetail.includes("r2-issue-gist"),"one-line context should appear under news titles");
+ click("company","US:ANF");
+ const checked=win.ATELIER2.companyPage();
+ assert.ok(checked.includes("원문 확인 요약"));
+ assert.ok(checked.includes("19개 상품의 캡슐 컬렉션"),"verified summary must reflect the actual reviewed source");
+ click("sector","바이오·제약");
+ click("company","US:BIIB");
+ const regulator=win.ATELIER2.companyPage();
+ assert.ok(regulator.includes("규제기관 조사·경쟁 이슈"));
+ assert.ok(regulator.includes("제목 기준 요지"));
+ assert.ok(!regulator.includes("규제기관 조사 확정"),"headline is not independently verified");
+ click("company","US:JNJ");
+ assert.ok(win.ATELIER2.companyPage().includes("치료제 허가·승인 관련 동향"));
+
  // New cross-industry RSS titles require canonical issuerId and remain unverified.
  click("sector","바이오·제약");
  click("company","US:LLY");
@@ -102,6 +124,7 @@ const click=(key,value)=>callbacks.click({
  const llIssues=win.ATELIER2.companyPage();
  assert.ok(llIssues.includes("Eli Lilly reports research trial progress"));
  assert.ok(llIssues.includes("기사 제목 · 본문 미확인"));
+ assert.ok(llIssues.includes("기사 제목 발췌 · 본문 미확인"),"unrecognized headlines must not fabricate a summary");
  assert.ok(!llIssues.includes("Wrong company accidentally matched"));
  click("sector","내 담당 기업");
  click("company","KR:105560");

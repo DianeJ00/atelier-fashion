@@ -152,6 +152,9 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-issue-links")).toContainText("Yahoo Finance 뉴스");
   await page.locator('.r2-company-row[data-val="US:ANF"]').click();
   await expect(page.locator(".r2-issues")).toContainText("Abercrombie",{timeout:20000});
+  await expect(page.locator(".r2-issue-gist").first()).toBeVisible();
+  await expect(page.locator(".r2-issues")).toContainText("원문 확인 요약");
+  await expect(page.locator(".r2-issues")).toContainText("19개 상품의 캡슐 컬렉션");
   await expect(page.locator(".r2-issues")).not.toContainText("확정된 주가 상승 원인");
  });
  test("biotech and domestic RSS headlines are issuer-checked and never labeled verified",async({page})=>{
@@ -182,10 +185,12 @@ test.describe("ATELIER published-site regression",()=>{
   const panel=page.locator(".r2-issues");
   await expect(panel).toContainText("Eli Lilly research program update",{timeout:20000});
   await expect(panel).toContainText("기사 제목 · 본문 미확인");
+  await expect(panel.locator(".r2-issue-gist")).toContainText("기사 제목 발췌 · 본문 미확인");
   await expect(panel).not.toContainText("Unrelated unverified company story");
   await page.locator('.r2-company-row[data-val="KR:105560"]').click();
   await expect(page.locator(".r2-issues")).toContainText("KB금융 이사회 관련 기사");
   await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
+  await expect(page.locator(".r2-issue-gist").first()).toContainText("KB금융 이사회 관련 기사");
  });
  test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});

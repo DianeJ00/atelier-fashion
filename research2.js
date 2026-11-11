@@ -249,6 +249,73 @@ function drugPanel(company){
  }).join('')}</div>`:'<p class="r2-empty">약물 관찰 후보 등록 전입니다. 등록시험 검색은 아래 공식 링크를 이용해 주세요.</p>'}
  <div class="r2-check"><b>질환별 체크</b><span>${esc(company.focus)}</span><small>시험의 주요 완료일은 결과 발표일과 다르고, 경쟁 약물의 치료효과를 일률적으로 비교할 수 없습니다.</small></div></div>`;
 }
+/* One-sentence issue context, with the evidence level kept explicit.
+ * Original-checked copy comes from editorial/official observations. Google
+ * News RSS never provides a verified article body and cannot support an
+ * AI-style factual recap or a causal explanation.
+ */
+function oneLine(text,maxLength=150){
+ const cleaned=String(text||"").replace(/\s+/g," ").trim();
+ if(!cleaned)return "";
+ const end=cleaned.search(/(?:[.!?。](?=\s|$))/);
+ const first=end>=16&&end<maxLength?cleaned.slice(0,end+1):cleaned;
+ if(first.length<=maxLength)return first;
+ const head=first.slice(0,maxLength+1);
+ const last=head.lastIndexOf(" ");
+ return head.slice(0,last>=maxLength*0.65?last:maxLength).trimEnd()+"…";
+}
+function titleTopic(title,company,publisher){
+ const companyName=String(company?.name||company?.ticker||"해당 기업");
+ // Publisher suffix is not a fact about the company's action.
+ let text=String(title||"").replace(/\s+/g," ").trim();
+ if(publisher&&text.endsWith(" - "+publisher))
+  text=text.slice(0,-publisher.length-3).trim();
+ const lower=text.toLowerCase();
+ const has=(pattern)=>pattern.test(lower);
+ let topic="";
+ // These themes deliberately avoid invented outcomes, numbers, motives or
+ // causal claims. Negation or uncertainty in a headline is not erased.
+ if(has(/(?:antitrust|competition regulator|competition authority|probe|investigat|regulatory inquiry|반독점|당국.*조사|공정위.*조사)/i))
+  topic="규제기관 조사·경쟁 이슈";
+ else if(has(/(?:fda|식약처|drug regulator|mfds)/i)&&has(/(?:approval|approve|clearance|reject|deny|승인|허가|거절)/i))
+  topic="규제기관의 치료제 허가·승인 관련 동향";
+ else if(has(/(?:clinical trial|clinical data|phase [123]|clinical study|임상|시험결과|임상시험)/i))
+  topic="임상시험·개발 일정";
+ else if(has(/(?:chief executive|new ceo|next ceo|ceo|chief financial officer|cfo|경영진|대표이사|최고경영자|사장 선임)/i))
+  topic="경영진 인사·승계";
+ else if(has(/(?:merger|acquisit|takeover|buyout|인수|합병|매각)/i))
+  topic="인수·합병 또는 사업 매각";
+ else if(has(/(?:agreement|partnership|collaborat|alliance|license deal|파트너십|협업|제휴|공급계약|계약 체결)/i))
+  topic="사업 제휴·계약";
+ else if(has(/(?:earnings|revenue|profit|quarterly results|guidance|financial results|동일매장매출|영업이익|분기 실적|실적발표|매출|실적 전망)/i))
+  topic="실적·매출·가이던스";
+ else if(has(/(?:invests?|investment|spending|facility expansion|new factory|capacity|투자|증설|신공장)/i))
+  topic="시설·사업 투자";
+ else if(has(/(?:launch|new product|unveil|rollout|introduc|new store|출시|신제품|신규 매장|신규 서비스)/i))
+  topic="제품·서비스 출시";
+ else if(has(/(?:lawsuit|litigation|settlement|court|sue |sued|소송|법원|합의금)/i))
+  topic="소송·법적 분쟁";
+ else if(has(/(?:shareholder|shares bought|shares sold|stake|analyst rating|price target|target price|주가|주식 매입|지분|목표주가|투자의견)/i))
+  topic="주가·주주·시장 평가";
+ else if(has(/(?:stores?|retail|demand|consumer|sales trend|매장|판매|소비|브랜드|수요)/i))
+  topic="판매·고객 수요";
+ if(topic){
+  return {text:companyName+" 관련 "+topic+"를 다룬 보도",basis:"제목 기준 요지"};
+ }
+ // If the headline offers no safely recognized topic, shorten it verbatim
+ // rather than fabricating a Korean explanation of unavailable article text.
+ return {text:oneLine(text,112),basis:"기사 제목 발췌 · 본문 미확인"};
+}
+function issueOneLiner(item,company){
+ if(item?.verified){
+  const fromSource=oneLine(item.summary||"",150);
+  return fromSource?
+   {text:fromSource,basis:"원문 확인 요약"}:
+   {text:"원문과 대조된 자료입니다. 구체적인 내용은 원문에서 확인하세요.",basis:"원문 확인 자료"};
+ }
+ return titleTopic(item?.title,company,item?.publisher);
+}
+
 function companyIssuePanel(company){
  const ticker=company.ticker,found=[],dedup=new Set();
  const add=(source)=>{
@@ -262,12 +329,13 @@ function companyIssuePanel(company){
   if(!(x.tier==="편집 원문 대조"||String(x.tier||"").startsWith("공식 ")))continue;
   add({ticker,date:x.eventDate,href:x.sourceUrl,title:x.title,
    publisher:x.sourceLabel||"공식·편집 원문",verified:true,
+   summary:x.observation,
    label:String(x.tier||"").startsWith("공식 ")?"공식 공시":"원문 대조"});
  }
  for(const x of [...(issueContent?.items||[]),...(issueContent?.reviewedExtra||[])]){
   if(!Array.isArray(x.tickers)||!x.tickers.includes(ticker)||x.status!=="원문 대조·편집")continue;
   add({ticker,date:x.date,href:x.url,title:x.title,publisher:x.source,
-   verified:true,label:"원문 대조"});
+   summary:x.summary,verified:true,label:"원문 대조"});
  }
  for(const x of issueNews?.items||[]){
   if(x.ticker!==ticker||x.platform!=="Google News"||
@@ -294,6 +362,8 @@ function companyIssuePanel(company){
   '<span class="'+(x.verified?'r2-issue-verified':'r2-issue-unverified')+'">'+esc(x.label)+'</span>'+
   '<span>'+esc(x.publisher||"원문")+'</span></div>'+
   '<a href="'+url(x.href)+'" target="_blank" rel="noopener noreferrer">'+esc(x.title)+' ↗</a>'+
+  (()=>{const gist=issueOneLiner(x,company);return gist.text?
+   '<p class="r2-issue-gist" title="'+esc(gist.text)+'"><span>'+esc(gist.basis)+'</span> '+esc(gist.text)+'</p>':''})()+
   '</article>').join('')+'</div>':
   '<p class="r2-issues-empty">이 기업에 연결된 최근 공시·검토 기사 또는 수집 제목이 없습니다. 최신 뉴스는 아래 원문에서 확인하세요.</p>')+
  '<div class="r2-issue-links">'+
@@ -301,7 +371,7 @@ function companyIssuePanel(company){
  (reuters?'<a href="'+url(reuters)+'" target="_blank" rel="noopener noreferrer">Reuters 관련 기사 검색 ↗</a>':'')+
  (company.sourceURL?'<a href="'+url(company.sourceURL)+'" target="_blank" rel="noopener noreferrer">'+
  (company.market==="한국"?"DART 공시 검색 ↗":"SEC 공시 검색 ↗")+'</a>':'')+
- '</div><small class="r2-issue-disclaimer">자료 수집 범위에 포함된 출처만 표시합니다. 기사 제목만으로 사실·투자 영향을 확정하지 않습니다.</small></section>';
+ '</div><small class="r2-issue-disclaimer">원문 대조 요약은 확인된 관찰문에 근거합니다. RSS는 제목의 주제만 분류하므로 세부 사실·투자 영향은 원문을 확인해야 합니다.</small></section>';
 }
 function verifiedResultPanel(company){
  let results="";
