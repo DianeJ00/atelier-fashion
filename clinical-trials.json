@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T05:03:42.397011+00:00",
+  "generatedAt": "2026-11-11T03:38:04.194206+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -495,7 +495,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 25,
+      "verifiedTrialCountInSearchWindow": 30,
       "trials": [
         {
           "nctId": "NCT04875585",
@@ -558,95 +558,96 @@
           "url": "https://clinicaltrials.gov/study/NCT04736706"
         },
         {
-          "nctId": "NCT05296512",
-          "title": "Pembrolizumab and Lenvatinib in Clear Cell Ovarian Cancer",
+          "nctId": "NCT04971499",
+          "title": "A Study of Dapansutrile Plus Pembrolizumab in Patients With PD-1 Refractory Advanced Melanoma",
           "status": "ACTIVE_NOT_RECRUITING",
           "statusKr": "진행 중·모집 종료",
           "phases": [
+            "PHASE1",
             "PHASE2"
           ],
           "conditions": [
-            "Ovarian Clear Cell Carcinoma",
-            "Gynecologic Cancer"
+            "Melanoma"
           ],
-          "sponsor": "Elizabeth K. Lee MD",
+          "sponsor": "April Salama, M.D.",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2022-09-23",
+            "date": "2022-09-06",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2026-09-08",
-            "type": "ACTUAL"
+            "date": "2027-04-30",
+            "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2028-11-15",
+            "date": "2027-04-30",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Overall Response Rate (ORR)",
+          "primaryMeasure": "Number of AEs (including SAEs and DLTs) as measured by patient interview and medical record review",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT05296512"
+          "url": "https://clinicaltrials.gov/study/NCT04971499"
         },
         {
-          "nctId": "NCT05977907",
-          "title": "Neoadjuvant Pembrolizumab and IO102-103 for Squamous Cell Carcinoma of the Head and Neck (SCCHN).",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
+          "nctId": "NCT07187778",
+          "title": "Phase II Trial of Single Agent Belzutifan or Pembrolizumab Versus Combination as Neoadjuvant Therapy in Clear Cell Renal Cell Carcinoma (BLAZE)",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
           "phases": [
             "PHASE2"
           ],
           "conditions": [
-            "Head and Neck Squamous Cell Carcinoma"
+            "Clear Cell Renal Cell Carcinoma"
           ],
-          "sponsor": "Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins",
+          "sponsor": "M.D. Anderson Cancer Center",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2023-12-14",
+            "date": "2025-12-19",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2026-12",
+            "date": "2027-07-19",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2028-10-16",
+            "date": "2029-07-19",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Pathologic Treatment Response rate",
+          "primaryMeasure": "1. Safety and Adverse Events (AEs)",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT05977907"
+          "url": "https://clinicaltrials.gov/study/NCT07187778"
         },
         {
-          "nctId": "NCT03407144",
-          "title": "Safety and Efficacy of Pembrolizumab (MK-3475) in Children and Young Adults With Classical Hodgkin Lymphoma (MK-3475-667/KEYNOTE-667)",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
+          "nctId": "NCT03618550",
+          "title": "Phase II Study of Second- Line Pembrolizumab Plus GVD for Relapsed or Refractory Hodgkin Lymphoma",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
           "phases": [
             "PHASE2"
           ],
           "conditions": [
-            "Hodgkin Lymphoma"
+            "Hodgkin Lymphoma",
+            "Relapsed or Refractory Hodgkin Lymphoma"
           ],
-          "sponsor": "Merck Sharp & Dohme LLC",
+          "sponsor": "Memorial Sloan Kettering Cancer Center",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2018-04-09",
+            "date": "2018-08-01",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2027-02-12",
+            "date": "2027-08",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2027-02-12",
+            "date": "2027-08",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Objective Response Rate (ORR) in SER Participants By Risk Group (Low, High) as Assessed by Blinded Independent Central Review (BICR)",
+          "primaryMeasure": "Complete response rate (part 1)",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT03407144"
+          "url": "https://clinicaltrials.gov/study/NCT03618550"
         }
       ],
       "status": "registered_trials_found",
@@ -1956,9 +1957,37 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-10T01:15:05.971148+00:00",
-  "changeCount": 0,
-  "changes": [],
+  "comparisonTo": "2026-11-10T05:03:42.397011+00:00",
+  "changeCount": 3,
+  "changes": [
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT04971499",
+      "url": "https://clinicaltrials.gov/study/NCT04971499",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT07187778",
+      "url": "https://clinicaltrials.gov/study/NCT07187778",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT03618550",
+      "url": "https://clinicaltrials.gov/study/NCT03618550",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    }
+  ],
   "weeklyInterpretation": [
     {
       "type": "앞으로 확인할 임상 일정",

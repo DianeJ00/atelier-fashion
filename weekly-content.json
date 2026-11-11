@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-10T05:03:52.652333+00:00",
-  "periodStart": "2026-10-31",
-  "periodEnd": "2026-11-10",
+  "generatedAt": "2026-11-11T03:38:10.256530+00:00",
+  "periodStart": "2026-11-01",
+  "periodEnd": "2026-11-11",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [
     {
@@ -137,6 +137,42 @@
   "autoItems": [],
   "pending": [
     {
+      "id": "rss-4803fb6354fecfe",
+      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
+      "date": "2026-11-11",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-9c8d3cd455f7c54",
+      "title": "Dutch antitrust regulators probe Biogen over test for its MS drug - STAT",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNXJtaDh0MjhRR2hNTl9acmRxV0xfbkF6SGpDY3NaRzA3cFROWHJDWkY3M1h1NHlXVXRCU0JyYk5UcVlNT0NoU1BQRXl3SE5ad1BlbXNQcVFaRWhSS0hLLWl3eE1rNUNGY2NtcjJ4aktXQ0FHYkQ1ODl5Smtya2tEbllNd3U4RXBENkFkSEgyMFN1SlRUNU5NMS1aNmtwWjNEdVBvb2RFSXVWYnluV1RxQ0FTSlVqYXpFeTZqcA?oc=5",
+      "date": "2026-11-10",
+      "source": "STAT",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1d26a4847b6130c",
+      "title": "97,880 Caleres, Inc. $CAL Shares Bought by Penn Capital Management Company LLC - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNDhVUkJpNmVjQ2hjdXhDTmJ4Rk1jZGpfRW1SbTVKRlpIOUZFODVZaENCWXRfRm81N1FQWlRicG9mSmZlb04yREg3VUhZSXJTb3Fva1JESnNSSWQyNWg5dWU4RjFOdDRMY1dLR2hCZGN6QnZ3YVkwZDdhcFpiNHNKMFd2bkluYmNkcnlZTV9WcmctYWMycEVLY0dCTHloaFRyRzVQTWktWVEwVWNnNWszbmZlV0J1dElxWFJPaURMVEpuaW1mT3MwVkVBMVRWek9J?oc=5",
+      "date": "2026-11-10",
+      "source": "MarketBeat",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-360f13409b0bbe1",
+      "title": "Calvin Klein unwraps the icons with Jung Kook of BTS for Holiday 2026 - Devdiscourse",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPblAxSFVSaUhuUEhmU2lMR2tkdnUwaEJhZlVEcVQ0OGRSNlhxMWhlNFhOVmQycHRrRk1YanZKRzBwcFFmZ0VXaEtBTS1WZm9ubklRd0tOdE5VY1Z0Q0lpOFhKNDZEZ2N6MGNUSExIZWFpcmNwXzBITzhnVEJJeHhoRmt2dnRZMWs2azd0NVhSQi1MelpjQ20wbThQbjlPWVhrVjhzS25NYW0zd05OWnhTRmRsMDlFcUZtVnNweW5LQ05BNVRlVFHSAcYBQVVfeXFMT25QMUhVUmlIblBIZlNpTEdrZHZ1MGhCYWZVRHFUNDhkUjZYcTFoZTRYTlZkMnB0a0ZNWGp2SkcwcHBRZmdFV2hLQU0tVmZvbm5JUXdLTnROVWNWdENJaThYSjQ2RGdjejBjVEhMSGVhaXJjcF8wSE84Z1RCSXh4aEZrdnZ0WTFrNms3dDVYUkItTHpaY0NtMG04UG45T1lYa1Y4c0tuTWFtM3dOTlp4U0ZkbDA5RXFGbVZzcHluS0NOQTVUZVRR?oc=5",
+      "date": "2026-11-10",
+      "source": "Devdiscourse",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-a372cf2c150f4de",
       "title": "[Stock tracking] 인제니아테라퓨틱스 주가, IGT-302 옵션 미행사 소식에도 견조···IGT-427에 쏠린 눈 - 녹색경제신문",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rOHhfRjFwamxBOXdkdFVETlRoaE56SVR4TXhOZ2VWc1FwbjVPazhlamNSUnFrVUxBdXA2eGFicVFRMmgyQUh5MV9uNDhCc0EyVEpmNEFWeGdEdVM0azBkV0E3elBIVnZD?oc=5",
@@ -164,6 +200,15 @@
       "reason": "영상 자막·내용 미확보"
     },
     {
+      "id": "rss-05de618443ee782",
+      "title": "Vir’s hepatitis delta combo tamps down virus as Gilead showdown looms - BioSpace",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbWtqZGVNSHNZa2VkODN4bE03QUVrX3RQQjZTSkZsWXhpd196NzZRc2VHTUFhRW1IU0x4VElxUGwtemJJM0lCTWtnUlhoVGMzcEh1Xy1YdG1CeVI2bUlNNlIxeDNyZTFURFpQSGNtX3RHLWVDMHB1WldQNThJU01CVDUwNkhwYVpFd19maUtXcGFUd1Q1UVpWakpnbWZnUklFMFBhUGh5UWdRSloyVGRZ?oc=5",
+      "date": "2026-11-09",
+      "source": "BioSpace",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-1d256ec7adf4198",
       "title": "Charlie Constantinou X Nike SS27",
       "url": "https://www.youtube.com/watch?v=4gDjhdWbb-M",
@@ -182,6 +227,15 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
+      "id": "rss-00d0ec7e9d64993",
+      "title": "Is Most-Watched Stock The Walt Disney Company (DIS) Worth Betting on Now? - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRU0wajRVZmRUdEdjTkZpclZ0V3E3NHdrZGhtSGYxNFg2Z1NWUm43blkxZGRNc3oydmlwaGNyNnZCcXJ5RW5WOGRPRUtmQkJyVnp2cHBuQ01vSnE3QURFYi1PcFQxLUpXV0phNmh6anEyLTFRWHV6MjRZUEZyd2h6Q1kxcURUc25wdEpldkxtT3dfS1RaZ3Y2ZWpINA?oc=5",
+      "date": "2026-11-09",
+      "source": "Yahoo Finance",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-53ff52b68514b27",
       "title": "인제니아테라퓨틱스, MSD로부터 IGT-302 녹내장 적응증 옵션 미행사 공문 수령 - 디지털투데이",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1veDNzZ1ZNeXhpemd6OWJrOF8weTBMR2d0Vl9Vd0Z5ZDByZzJvNE03OXFUYUl1aGRaUnJFZzMwUlpETWJlVUdWdGczMlc3TjJoVVlhREZzODVRWkdDTHVWUFkyRWtqM1YtTjlmaDdpaUs1czlnZWFLZk00cw?oc=5",
@@ -189,63 +243,9 @@
       "source": "디지털투데이",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-c04b14db5361c6c",
-      "title": "Bristol Myers Squibb Invests $2.3 Billion in Houston Campus - CHEManager",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZEcxR3EtMk1rSkl5SG5ENS1ENDdqZXJKUG8wVURBb2lIV2c4R1Mxb2pZaGtJN09vbXBFa1dkUW1DUWRpdWtLLUdCN3JlR1ZGN0M5VEFodklYVmFWWDVpVDRqOE9YRE5JbHhXSExWd3owdHpSRzh0d0QyZ3pPRDdsZ2l6NkZMMmpRMjVwYU9lVWZIRDBhcUFWMnFHN1Y?oc=5",
-      "date": "2026-11-09",
-      "source": "CHEManager",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-aa6f246d9dd17c0",
-      "title": "Inside Zara’s Brand Makeover - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUEt4S1NDaTQ0bDJVYmlBTm9MODlUaW1SM3JOdGVaS25lcnM2VzJ0VHR6SGI1aXlFNS1xWHhrY0djOUZjcVRRTEprZ1lnQ19FNWJrMmJlSmZwc3owdWp0QVpNY1ZoQ3JJYVphVFB4dnBycG5RU1lyQnpQMDBLWmtKd3d0cENEY2pLcmc?oc=5",
-      "date": "2026-11-09",
-      "source": "The Business of Fashion",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-c676d63af3324e5",
-      "title": "With an approval apiece, the verdict is still out on AbbVie’s and BMS’ twin neuro buys - BioSpace",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQb296OXdKTHZza2tTSlpBUWhlTkhxZG9fVHJRSktkNEgzWWo1ejBtVk9rV2EwLTdqWWdpVmZCN19oelQ2ZkQtbFJlRTB1Yk53RTRKX2NFZE1aQ1prdVUydGQ4RXBoa1JObklnVEJYczJ0eUJuMnYtRjFMUk5oVWI4TDFZejJDcVpGSkNJRWhKRTVrQXYzd1NTRzdQaGV0ci1qbWE0c3ZTWkFER1dtbC1WYjFzWTgxMmlIOWRwYzEwQ0hvOVk?oc=5",
-      "date": "2026-11-09",
-      "source": "BioSpace",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-0194173bd36cfb8",
-      "title": "Why Sarah Burton’s Givenchy Commercial Pieces Are Desirable",
-      "url": "https://www.youtube.com/watch?v=YoaEq0i5cAA",
-      "date": "2026-11-08",
-      "source": "Fashion Roadman",
-      "status": "분석 대기",
-      "reason": "영상 자막·내용 미확보"
-    },
-    {
-      "id": "rss-98ecc246f0bdea3",
-      "title": "Merck & Co., Inc. (MRK): A Top 10 Healthcare Stock to Buy Following the 2026 Democratic Midterm Sweep - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQblhpamotbVFuM0RsQTUxRnJQU2hiNUh1MjYwR0FQRFp6MEZOTk04V2pGTlNHY1BKSDhzOEhBbDA4UXhlaEZRc0JEYWZ4ZTBhQTlCLWJibWpfbGdhMlFibWhyYmZjbU5wOTJhdmJWTnFBN1ZxVE93RDdKc1ByTjF1MnptMEZ6dGI1?oc=5",
-      "date": "2026-11-08",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-74aedbfcfd93853",
-      "title": "Why Did American Eagle Outfitters (AEO) Move As Attention Builds? - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeXIxVl85OWppMmhYYVB3blJHbHdUdVNGOTlmOVpGZmFYSkpJTktELTlyV0swNzZneEVTaVNsdXM4UFJPME5Lci1XeFJlRHBxeWZXMFM4TlY1Yi1yRk5EWmNEMm9VTjZLRXNiRW5JemZjdUVaYXZ6NW1oUXIzbi1iTjE4dmNHUk12Yl9ZNkZHUGF1V3FpNzY0a3Y1NWI1cUJNa0ZsTEJUTjdNdGZudHZNUWZGWjhObGhkcHliaEtqR2lKS0tUNWZkOTVoMW1nUVd4Q2xFWTZ30gHbAUFVX3lxTE1WU3hsN0p6NXVoZVFXY2FiclUzZDBlV3JGZDRmOGFJLUxaQnBPMjhQR0p6S29SazZiN25fVXdMekVPYWtmT1RqU3pwOXhNNmNCb1Ztb3RxbmVmVEdNT1JVODNKRGctcTNLdkpZcjhkLWVUOGl4VE9tb1hGNmVXVkFVQWNlRzhHSVNVblRIV2V4T3pRUGx0cGlXcElZZDZqMG90MVM5RGtkMzJpb2M1WWdVNnp4SUdiOWZXRmZLWTlMZ18wekh4ellzZjJJS2l0NXpRUDNBY1A4bUozaw?oc=5",
-      "date": "2026-11-08",
-      "source": "Simply Wall St",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 60,
+  "pendingCount": 76,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-11-10T05:03:52.514047+00:00",
-  "registryCheckedAt": "2026-11-10T05:03:42.397011+00:00",
+  "lastChecked": "2026-11-11T03:38:10.103019+00:00",
+  "registryCheckedAt": "2026-11-11T03:38:04.194206+00:00",
   "status": "registry_compared",
   "observedStudies": 12,
   "records": [
@@ -23,7 +23,7 @@
         "Type 2 Diabetes"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2025-10-21",
         "type": "ACTUAL"
@@ -49,7 +49,7 @@
         "Type 2 Diabetes Mellitus (T2DM), Obesity, Overweight"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-01-21",
         "type": "ESTIMATED"
@@ -75,7 +75,7 @@
         "Weight Loss"
       ],
       "trialStatus": "모집 전",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2028-10",
         "type": "ESTIMATED"
@@ -101,7 +101,7 @@
         "Carcinoma, Renal Cell"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2026-02-04",
         "type": "ACTUAL"
@@ -127,7 +127,7 @@
         "Non-Small Cell Lung Cancer"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2023-11-29",
         "type": "ACTUAL"
@@ -153,7 +153,7 @@
         "Crohn's Disease"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-03",
         "type": "ESTIMATED"
@@ -179,7 +179,7 @@
         "Atopic Dermatitis"
       ],
       "trialStatus": "모집 전",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-02-07",
         "type": "ESTIMATED"
@@ -207,7 +207,7 @@
         "Alzheimers Disease, Familial"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2028-04",
         "type": "ESTIMATED"
@@ -237,7 +237,7 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
@@ -264,7 +264,7 @@
         "hATTR-PN"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-12-27",
         "type": "ESTIMATED"
@@ -294,7 +294,7 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
@@ -320,7 +320,7 @@
         "Duchenne Muscular Dystrophy"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-10T05:03:42.397011+00:00",
+      "stageVerifiedAt": "2026-11-11T03:38:04.194206+00:00",
       "primaryCompletion": {
         "date": "2027-08-31",
         "type": "ESTIMATED"
