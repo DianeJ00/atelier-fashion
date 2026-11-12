@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T03:38:10.191811+00:00",
+  "generatedAt": "2026-11-12T04:45:46.690543+00:00",
   "status": "key_required",
   "source": "Twelve Data daily time_series (adjust=all)",
   "asOf": null,
@@ -26,7 +26,7 @@
     "자금 유입·AI 투자에서의 자금 회전은 가격 수익률만으로 단정할 수 없음"
   ],
   "lastAttempt": {
-    "at": "2026-11-11T03:38:10.191811+00:00",
+    "at": "2026-11-12T04:45:46.690543+00:00",
     "status": "key_required",
     "errorCount": 0
   },

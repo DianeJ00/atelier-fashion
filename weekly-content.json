@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-11T03:38:10.256530+00:00",
-  "periodStart": "2026-11-01",
-  "periodEnd": "2026-11-11",
+  "generatedAt": "2026-11-12T04:45:46.755812+00:00",
+  "periodStart": "2026-11-02",
+  "periodEnd": "2026-11-12",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [
     {
@@ -137,11 +137,95 @@
   "autoItems": [],
   "pending": [
     {
+      "id": "a062e7e3d99b209f11",
+      "title": "Michael Kors, Jimmy Choo owner names new CEO",
+      "url": "https://www.retaildive.com/news/capri-holdings-michael-kors-jimmy-choo-new-ceo-justin-boxford/874377/",
+      "date": "2026-11-11",
+      "source": "Retail Dive",
+      "tickers": [
+        "CPRI"
+      ],
+      "status": "AI_API_KEY_미설정",
+      "reason": "본문 자동 요약 전"
+    },
+    {
+      "id": "rss-6b375b96224a87d",
+      "title": "SAP and VF Corp's Walldorf store runs without staff during set hours - MarketScale",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHdOZTFUX0p5UU9vZkI1eTNYSUFSUmZyb1FTMFpvaFFsdHBzclY2cTJZbFZ5anFVaUpsb1djTDFZZ2ZvaWhHQUY2ZlhSYnBPc29HaHVjN1dQTlV2SWYtaG5iczNONkY4dkk0SUdtMDNyWnVYbzBXTFdveVoybGdnNDdkenA4b29xOUc4RHRmcGJHMC1PUWd6WE1EY0pkdkItYTJWdDJNZ213OFBRZHREMHJWdw?oc=5",
+      "date": "2026-11-12",
+      "source": "MarketScale",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-0c9ea9a17b168fc",
+      "title": "Old Navy Is Caught In a Doom Loop - The Robin Report",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05LXIxN1dqbWZWeUNFdm1HOGY1eUt3VHpJbEl6OUdiSDJ5YzBOT3R6NUU1UGd6MnRWQkRzd243WV9ieUVST2U4dFh3QVRJNmJqckxDZUxxV2x6S0hFNUxNTG9rQ29PUEhmQkhnRzBB?oc=5",
+      "date": "2026-11-11",
+      "source": "The Robin Report",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1d8ea962a0e582f",
+      "title": "Eli Lilly Just Raised Its 2026 Sales Forecast to as Much as $92 Billion. But Is Viking Therapeutics the Next Big Obesity Winner? - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd3Nxckd0ZTdOb3REdFhhRzkzT0ItdDBxQ3JtaXRoNDNCNi0xUU5kckVEbVhxTmdva3k2SnZLWTJwVHFDUXliYjd1Y0xFQnF5MVlKQ0lCRDZqak5Gd1o0dEJJaDhQTi1nYW96dVdyTDJKem9qamZPTlE0NGxzejNYX3hpRUZyVVI5NjFUaFRhQTZhNnNFT3R2Mg?oc=5",
+      "date": "2026-11-11",
+      "source": "The Motley Fool",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-6a96c38a62e9b4c",
+      "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
+      "date": "2026-11-11",
+      "source": "Reuters",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-7494319ce3049d3",
+      "title": "Target stock may move 8% on earnings release By Investing.com - Investing.com Nigeria",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZHgxTDBhWENocW5vYkRTR1JhNTJHci1BUWxLWVlwajF4ZmVTeVdPVUNtYkhvQTRncU5Mb2kycTN3aHYyUUNoWUo1VlpqNFNjcHpEOE1yNkhiczRFYVhfZDFhalZ3TGhrWENUeWZ4XzZ4RF9aRU1GdEUxTW53R0h3RnJPZzFENWRYNm12WGxuR2R2dnlXVnA3aXNrV09kd1lzWndtRV83cw?oc=5",
+      "date": "2026-11-11",
+      "source": "Investing.com Nigeria",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-f4d9785c91ee225",
+      "title": "SAP and VFC Open Intelligent Fashion Store - SAP News Center",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPem5uYnBEcXFmSDRRZl9mVmlJRFhtOVBmSkdNVVU2aVpVNWRwa0MtWjBPb3h3b04yZGxPTlFnSmNHYkczSGREakVrczhwWXdnSzg5RmYyc1dBaV9oSnNpclFiZDZFNlhrUEJHVXpFTkRfRHpnZHRDX2d1bjNWZlFrWTJYYXdOQ2E4QmEw?oc=5",
+      "date": "2026-11-11",
+      "source": "SAP News Center",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-ee36eeda3951142",
+      "title": "Exelixis Bets on Zanza as Next Cancer Franchise as FDA Decision Nears - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQ2FNNjRRaTI0MHVlWGJ4enZsVkxEOHZ0ZkI0a0kya2pRTEY3LWVhQ3BRNEpvUndhVGNNOEY4ZlRtbVNlRVQtRXl6RTZSNWcxZF9NS1g0R3g2NmIyRGoweE1UN1RseWpzVUtVUDdYRDFDRHZTMjlwRmprZVdVV2NRSngxTk9tTU9VVmRHeHRfdW8xWVUzQ0llODNDZWVRT09NdlBEZTFFTDBNbk9lVTBUWG5MX0x0LWpyMVdHSmR4bmVtbFg5ODFjNW9R?oc=5",
+      "date": "2026-11-11",
+      "source": "TradingView",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-4803fb6354fecfe",
       "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
       "date": "2026-11-11",
       "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-9008caa3614434d",
+      "title": "DB손해보험, ‘교통·환경챌린지 8기’ 데모데이 열어 - 한국보험신문",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9mdFl1UnhmTm5PNnFaWlJVcmFIc2Q5ckRKa3hTWkZjXzZITGhrcEJWSUxadnNMdUtpRlAxck1FNDZITFR4Rk9LNjlGLTY0M2ZTMEJCalBjZVl4Ymd1bktmeVRPVFlBMXB3WkhZ0gFvQVVfeXFMTlJuTU1CSWUyaDJQblJheG1vS3RkYUlvN2tVcGNSUnhjeVpjcU16M3l6QWVpRlpXc2ZoMWl4UVd2T1VYRF8xTDJqZ3Z2a1dZYnVRVkduMmY0WUpnZWVsRXB2U2U0cDZoV3JRempVUzM4?oc=5",
+      "date": "2026-11-11",
+      "source": "한국보험신문",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -162,92 +246,11 @@
       "source": "MarketBeat",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-360f13409b0bbe1",
-      "title": "Calvin Klein unwraps the icons with Jung Kook of BTS for Holiday 2026 - Devdiscourse",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPblAxSFVSaUhuUEhmU2lMR2tkdnUwaEJhZlVEcVQ0OGRSNlhxMWhlNFhOVmQycHRrRk1YanZKRzBwcFFmZ0VXaEtBTS1WZm9ubklRd0tOdE5VY1Z0Q0lpOFhKNDZEZ2N6MGNUSExIZWFpcmNwXzBITzhnVEJJeHhoRmt2dnRZMWs2azd0NVhSQi1MelpjQ20wbThQbjlPWVhrVjhzS25NYW0zd05OWnhTRmRsMDlFcUZtVnNweW5LQ05BNVRlVFHSAcYBQVVfeXFMT25QMUhVUmlIblBIZlNpTEdrZHZ1MGhCYWZVRHFUNDhkUjZYcTFoZTRYTlZkMnB0a0ZNWGp2SkcwcHBRZmdFV2hLQU0tVmZvbm5JUXdLTnROVWNWdENJaThYSjQ2RGdjejBjVEhMSGVhaXJjcF8wSE84Z1RCSXh4aEZrdnZ0WTFrNms3dDVYUkItTHpaY0NtMG04UG45T1lYa1Y4c0tuTWFtM3dOTlp4U0ZkbDA5RXFGbVZzcHluS0NOQTVUZVRR?oc=5",
-      "date": "2026-11-10",
-      "source": "Devdiscourse",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-a372cf2c150f4de",
-      "title": "[Stock tracking] 인제니아테라퓨틱스 주가, IGT-302 옵션 미행사 소식에도 견조···IGT-427에 쏠린 눈 - 녹색경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5rOHhfRjFwamxBOXdkdFVETlRoaE56SVR4TXhOZ2VWc1FwbjVPazhlamNSUnFrVUxBdXA2eGFicVFRMmgyQUh5MV9uNDhCc0EyVEpmNEFWeGdEdVM0azBkV0E3elBIVnZD?oc=5",
-      "date": "2026-11-10",
-      "source": "녹색경제신문",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-a5a2475cef3f7ed",
-      "title": "Victoria's Secret's 47% Surge Has Wall Street Hitting The Brakes — Here’s Why UBS Downgraded VSXY Stock - Stocktwits",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVFkYWpmWTFIeVp3a01Ed0RabUdRNkFYSnRoQ3NWQzhUdFJWLTdONGk3Y0dmdWRzV1J3U2k5YkozUnNmSXdTejJBS0pVeWdJbTVmWFdWaGpTYzJDeWRmaUtEMzIyci0wdXhwVndkTXBVQnpQb2tOMnRaMFQ5NTlXX0p3NnZFQ3lEMDVMTTBPazlRTGI2TGNkUWg4WXNPSEdfWkZGTDNuVGRXQVUtT2hrM1o3TXVPSG11dzlYbnp6czY?oc=5",
-      "date": "2026-11-09",
-      "source": "Stocktwits",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-1f5dc58bc96f0d4",
-      "title": "Irish Fashionistas On The Rise Of Fashion In Ireland",
-      "url": "https://www.youtube.com/watch?v=67YyLcUpyic",
-      "date": "2026-11-09",
-      "source": "Fashion Roadman",
-      "status": "분석 대기",
-      "reason": "영상 자막·내용 미확보"
-    },
-    {
-      "id": "rss-05de618443ee782",
-      "title": "Vir’s hepatitis delta combo tamps down virus as Gilead showdown looms - BioSpace",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbWtqZGVNSHNZa2VkODN4bE03QUVrX3RQQjZTSkZsWXhpd196NzZRc2VHTUFhRW1IU0x4VElxUGwtemJJM0lCTWtnUlhoVGMzcEh1Xy1YdG1CeVI2bUlNNlIxeDNyZTFURFpQSGNtX3RHLWVDMHB1WldQNThJU01CVDUwNkhwYVpFd19maUtXcGFUd1Q1UVpWakpnbWZnUklFMFBhUGh5UWdRSloyVGRZ?oc=5",
-      "date": "2026-11-09",
-      "source": "BioSpace",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-1d256ec7adf4198",
-      "title": "Charlie Constantinou X Nike SS27",
-      "url": "https://www.youtube.com/watch?v=4gDjhdWbb-M",
-      "date": "2026-11-09",
-      "source": "Fashion Roadman",
-      "status": "분석 대기",
-      "reason": "영상 자막·내용 미확보"
-    },
-    {
-      "id": "rss-7b5b9dacb1e0b5e",
-      "title": "Exclusive: Ulta Beauty bets on health tracking with Oura in 1,000 stores - www.glossy.co",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMmxwaEJhamZNRVhXSWxRRHhXMjVfTUk4d21oUHdXX2sxT0tBN05heDBSSC1FV3pYbTF4LUdCQVZodzA1MnVjSGhfVFE1dEtEdm4zMXZmajVtWW96OFZRMXlnT3huRVY2YTBocGZJbFppY1U3cjFXc3ZlNDYwSjA0WWxB?oc=5",
-      "date": "2026-11-09",
-      "source": "www.glossy.co",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-00d0ec7e9d64993",
-      "title": "Is Most-Watched Stock The Walt Disney Company (DIS) Worth Betting on Now? - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRU0wajRVZmRUdEdjTkZpclZ0V3E3NHdrZGhtSGYxNFg2Z1NWUm43blkxZGRNc3oydmlwaGNyNnZCcXJ5RW5WOGRPRUtmQkJyVnp2cHBuQ01vSnE3QURFYi1PcFQxLUpXV0phNmh6anEyLTFRWHV6MjRZUEZyd2h6Q1kxcURUc25wdEpldkxtT3dfS1RaZ3Y2ZWpINA?oc=5",
-      "date": "2026-11-09",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-53ff52b68514b27",
-      "title": "인제니아테라퓨틱스, MSD로부터 IGT-302 녹내장 적응증 옵션 미행사 공문 수령 - 디지털투데이",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1veDNzZ1ZNeXhpemd6OWJrOF8weTBMR2d0Vl9Vd0Z5ZDByZzJvNE03OXFUYUl1aGRaUnJFZzMwUlpETWJlVUdWdGczMlc3TjJoVVlhREZzODVRWkdDTHVWUFkyRWtqM1YtTjlmaDdpaUs1czlnZWFLZk00cw?oc=5",
-      "date": "2026-11-09",
-      "source": "디지털투데이",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 76,
+  "pendingCount": 93,
   "sourceErrors": [],
-  "sourcesChecked": 0,
+  "sourcesChecked": 1,
   "aiStatus": "key_required",
   "editorialUpdatedAt": "2026-11-05"
 }

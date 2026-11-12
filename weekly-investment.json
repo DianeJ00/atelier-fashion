@@ -20,21 +20,21 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "ANF",
-      "date": "2026-11-03",
-      "title": "Abercrombie Creates Capsule With Cowboys’ CeeDee Lamb - WWD",
-      "context": "Hollister 동일매장매출·영업이익률 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZG51SE9lN2t6QmpJX29aMWRGb2NZSTFWVDdwMVByQTdmWnNKeHEzUUw4RF96clpKYWhQZ1Q1bHVHamZtVFdRNE5EYVhPNHF3cW5UQjRrNlRCM3RycUZFWUdRVEtHX1hJNl9YSXF4dU9TN1VpMHI0MFNwTE5LaExxN28waXhxeGlIdjVHbEQ0VVZ1MzFHdVVfbnRFblZOTnFoWG1DcWFNTk0wU1lS?oc=5",
+      "ticker": "CPRI",
+      "date": "2026-11-11",
+      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
+      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-11T03:38:10.362004+00:00",
-  "periodStart": "2026-11-04",
-  "periodEnd": "2026-11-11",
+  "generatedAt": "2026-11-12T04:45:46.864160+00:00",
+  "periodStart": "2026-11-05",
+  "periodEnd": "2026-11-12",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 2,
-    "unverifiedHeadlines": 77,
+    "unverifiedHeadlines": 93,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Old Navy flies with celebs, Gap keeps it acapella for holiday campaigns - Marketing Dive",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZlh1MkpvMkcybm5TNFBkSHYtTmc3RWp3UHc1cWNvTlhhekoySk1teVJWTHlxR2t2eHBzMW45WXhfSk0tcE54WlJDcGpzYTFrLTdjNVladGV3Q01NMFZfWDE2SHUzcC1vdk9VMGNjdHhSclRVNHNvcTg5UVp6ZEVXUndUVFFDTnNVeHcwM3dCeGxjLUJWQVBGTzhfY3hUdkJXSEY5REtQX1Y2UlRoTEhYR1Bubw?oc=5",
-        "date": "2026-11-05"
+        "title": "Old Navy Is Caught In a Doom Loop - The Robin Report",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05LXIxN1dqbWZWeUNFdm1HOGY1eUt3VHpJbEl6OUdiSDJ5YzBOT3R6NUU1UGd6MnRWQkRzd243WV9ieUVST2U4dFh3QVRJNmJqckxDZUxxV2x6S0hFNUxNTG9rQ29PUEhmQkhnRzBB?oc=5",
+        "date": "2026-11-11"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "Levi's Opens New Flagship Store in Chicago: Get a Closer Look - Complex",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX1ZaZi1OSE9uRWV5bGs1MzNERG1BNlF6S3ZQbGNvMG10N2t2R0hUalFDX05abWpMeTBGelozY0pSUmNVVTJ4UW9CbEhQTGZTQ3N4SWF1V1I2MFV4VjdURFBwdFEzZ2VnUjdpNHdrcHJXcWFoNkkxS3hjYkF5NVhQcg?oc=5",
-        "date": "2026-11-06"
+        "title": "Levi Strauss & Co. Opens Flagship Store on Michigan Avenue in Chicago - The Source Magazine",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObGgwY3ZGRThkcno5YWUtSWlSVXZGWmNmR0tyb2hWd3FnSmVzczJVcDQ0UVVQNnBCZmVDT0NrRFE0TlAtdWNaWml5UEl2WlVOWkRGZG1XOUp5SmxYTjE5Vk9Jc3dQUTg1em5peXJUVlBuRnIxVjRUTWpxWUZoaDRXZTRVMElnSjdnS0JRM2xUcw?oc=5",
+        "date": "2026-11-09"
       },
       "consumerSampleCount": 0
     },
@@ -174,8 +174,8 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
+        "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
         "date": "2026-11-11"
       },
       "consumerSampleCount": 0
@@ -197,9 +197,9 @@
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
       "headline": {
-        "title": "How Is V.F. Corporation (NYSE:VFC) Up 43.79% in a Month Despite a Vans Slump? - kalkine.ca",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOeUhOX3doMUVvNkEyUnhCTGtfdjQwQlZXOHU4eS1VSThQS2Q5TjBBaVBFUDJrUWk3V1NFOEV6TkFJMHJyUVlLUjlaMUlXUnV6TmxJdlNmaWxwOTN0MjVQX1FNb0tBTWZPazRoaDY0NHVFTndqSXZpblVSRFkwWGFOWU9oVlNvb2s0aTNMZENFUlM5cllLNkl5RGhLeUtZZzQzYVQ2OA?oc=5",
-        "date": "2026-11-05"
+        "title": "SAP and VF Corp's Walldorf store runs without staff during set hours - MarketScale",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHdOZTFUX0p5UU9vZkI1eTNYSUFSUmZyb1FTMFpvaFFsdHBzclY2cTJZbFZ5anFVaUpsb1djTDFZZ2ZvaWhHQUY2ZlhSYnBPc29HaHVjN1dQTlV2SWYtaG5iczNONkY4dkk0SUdtMDNyWnVYbzBXTFdveVoybGdnNDdkenA4b29xOUc4RHRmcGJHMC1PUWd6WE1EY0pkdkItYTJWdDJNZ213OFBRZHREMHJWdw?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
