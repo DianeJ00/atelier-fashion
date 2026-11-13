@@ -379,3 +379,7 @@ body{font-size:15px;line-height:1.68}
 @media(max-width:640px){
  .content .r2-issue-gist{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-clamp:2}
 }
+
+
+.r2-share-row{display:flex;justify-content:flex-end;padding:6px 0 2px}
+.r2-share-row .r2-link{font-size:12px;min-height:30px}
