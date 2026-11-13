@@ -188,14 +188,13 @@ function moveEventForCompany(company){
  moveEventRow(item)+'<small class="r2-move-source">데이터 제공: <a href="https://twelvedata.com/" target="_blank" rel="noopener noreferrer">Twelve Data</a> · 동일 시점의 공식 발표가 원인으로 확정된 것은 아닙니다.</small></div>';
 }
 function overview(){
- if(!db)return '<section class="r2-panel"><p class="r2-empty">통합 산업 데이터 로딩 중…</p></section>';
- return `<div class="r2-overview r5-overview">
- ${marketPanel()}
- ${moveEventsPanel()}
- ${window.ATELIER3?.industryOverview()||''}
- ${window.ATELIER3?.overviewSignals()||''}
- ${window.ATELIER3?.attentionQueue()||''}
- </div>`;
+ if(!db)return '<div class="desk-loading">자료 연결 중…</div>';
+ return '<div class="r2-overview desk-overview">'+
+  '<div class="desk-core-grid">'+(window.ATELIER3?.overviewSignals()||"")+(window.ATELIER3?.attentionQueue()||"")+'</div>'+
+  (window.ATELIER3?.industryOverview()||"")+
+  '<details class="desk-market-details"><summary><span><b>시장 상대강도</b><small>ETF · 기간별 비교</small></span><span class="desk-expand-icon" aria-hidden="true">+</span></summary>'+
+  '<div class="desk-market-content">'+marketPanel()+moveEventsPanel()+'</div></details>'+
+  '</div>';
 }
 function visibleCompanies(){
  const search=state.search.trim().toLowerCase();
@@ -211,7 +210,7 @@ function bioFilters(){
  if(state.sector!=='바이오·제약')return '';
  const groups=db?.diseaseGroups||[];
  return `<div class="r2-bio-filter"><div><b>관심 질환</b><div class="r2-filter-wrap">${click(['전체',...groups],state.disease,'disease')}</div></div>
- <small>먼저 질환별로 기업을 선택하세요. 치료 기술은 기업 상세의 질환·파이프라인 화면에만 표시합니다.</small></div>`;
+ </div>`;
 }
 function cardsTable(list){
  return `<div class="r2-company-list" role="list" aria-label="기업 목록">${list.slice(0,80).map(x=>`<button role="listitem" class="r2-company-row ${state.selected===x.id?'is-selected':''}" data-r2="company" data-val="${esc(x.id)}"><span class="r2-ticker">${esc(x.ticker)}</span><span class="r2-company-name"><b>${esc(x.name)}</b><small>${esc(x.disease||x.domain||x.sector)}</small></span><span class="r2-market">${esc(x.market)}</span></button>`).join('')}
@@ -432,9 +431,9 @@ function companyDetail(company){
  return `<section class="r2-detail">
  <div class="r2-detail-header"><div class="r2-eyebrow">${esc(company.market)} · ${esc(company.sector)}</div>
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
- <p>사업 범주와 검증 질문 → 공식 실적·주요 이슈 → 나의 기록 순서로 확인</p>
+ 
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
- <div class="r2-share-row"><button type="button" class="r2-link" data-r2="shareCompany">현재 기업·탭 링크 복사 ↗</button></div>
+ <div class="r2-share-row"><button type="button" class="r2-link" data-r2="shareCompany">공유 ↗</button></div>
   ${moveEventForCompany(company)}
  ${quotePanel(company)}
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
@@ -451,19 +450,20 @@ function companyDetail(company){
  </div></section>`;
 }
 function companyPage(){
- if(!db)return '<p class="r2-empty">추적 기업 데이터 연결 중입니다.</p>';
+ if(!db)return '<p class="r2-empty">기업 목록 연결 중…</p>';
  const list=visibleCompanies();
- if(!list.some(x=>x.id===state.selected))state.selected=list[0]?.id||'';
+ if(!list.some(x=>x.id===state.selected))state.selected=list[0]?.id||"";
  const c=at(state.selected);
- return `<div class="r2-page"><div class="r2-page-head"><div class="r2-eyebrow">기업 분석 · 52종목 통합 관리</div><h1>산업마다 다른 성장 변수와 반증 조건</h1><p>미국 바이오 20 · 소비재 15 · 기존 패션 12 · 한국 기존 담당 5. 공식 실적을 확인하기 전까지 수치는 임의 입력하지 않습니다.</p></div>
- <div class="r2-panel r2-filters"><div class="r2-filter-wrap">${click(sectorOptions,state.sector,'sector')}</div>
- <div class="r2-filter-row"><label>상장 시장</label><div class="r2-filter-wrap">${click(['전체','미국','한국'],state.market,'market')}</div><div class="r2-search-wrap"><input id="r2-search" value="${esc(state.search)}" type="search" aria-label="기업 또는 제품 검색" placeholder="기업·티커·질환·브랜드 검색"/></div></div>
- ${bioFilters()}<div class="r2-filter-meta">결과 <b>${list.length}</b>개 / 전체 52개 · 바이오 질환 및 기술은 교차 분류</div></div>
- <div class="r2-company-grid"><div>${cardsTable(list)}</div><div>${companyDetail(c)}</div></div>
- <p class="r2-foot">국내 담당 기업은 국내 상장 기준. 바이오 기업의 분류는 대표 노출만 표시하며 임상 적응증·단계를 확정한 자료가 아닙니다. 기존 패션 상세 분석은 해당 기업 선택 후 열 수 있습니다.</p>
- </div>`;
+ return '<div class="r2-page">'+
+  '<div class="desk-page-title"><h1>기업 분석</h1><span>'+list.length+' / '+companies().length+'개 기업</span></div>'+
+  '<div class="r2-panel r2-filters"><div class="r2-filter-wrap">'+click(sectorOptions,state.sector,"sector")+'</div>'+
+  '<div class="r2-filter-row"><label>시장</label><div class="r2-filter-wrap">'+click(["전체","미국","한국"],state.market,"market")+'</div>'+
+  '<div class="r2-search-wrap"><input id="r2-search" value="'+esc(state.search)+'" type="search" aria-label="기업 또는 제품 검색" placeholder="기업·티커·질환·브랜드 검색"/></div></div>'+
+  bioFilters()+'</div>'+
+  '<div class="r2-company-grid"><div>'+cardsTable(list)+'</div><div>'+companyDetail(c)+'</div></div>'+
+  '<p class="r2-foot">기업별 실적·임상은 자료 기준일 및 원문을 확인하세요. 과거 편집 자료는 현재 수치와 구분합니다.</p>'+
+  '</div>';
 }
-
 function theses(){
  if(!db)return '<p class="r2-empty">기업별 투자 가설의 기준 정보를 불러오는 중입니다.</p>';
  if(window.ATELIER3?.thesisWorkspace)return window.ATELIER3.thesisWorkspace(companies());
@@ -486,7 +486,7 @@ function weeklyIntro(){
  const bio=sector==='바이오·제약';
  const consumer=sector==='소비재·서비스';
  return `<section class="r5-weekly">
- <div class="r5-weekly-head"><div><div class="r2-eyebrow">원문을 확인한 산업별 변화</div><h2>이번 주 투자 리서치</h2><p>이번 주 발생한 사건과 과거 실적·향후 일정을 구분합니다. 자세한 해석은 아래 공식 근거에서 확인하세요.</p></div></div>
+ <div class="desk-page-title"><h1>주간 리서치</h1><span>${esc(window.ATELIER3?.report?.periodStart||"")} – ${esc(window.ATELIER3?.report?.periodEnd||"")}</span></div>
  <div class="r2-filter-wrap r5-weekly-filter">${click(sectorOptions,sector,'weeklySector')}</div>
  ${window.ATELIER3?.weekly(sector,false)||'<p class="r2-empty">통합 주간 보고서 연결 대기</p>'}
  ${window.ATELIER3?.reviewQueue(sector)||''}
