@@ -82,6 +82,105 @@ function secReadout(r){
  if(a==="down")return "매출 감소 확인";
  return "공식 분기 수치 확인";
 }
+
+/* Company-specific earnings lens; issuer operating KPIs are editorial snapshots, not GAAP accounts. */
+function companyKpiLabels(company){
+ const k=(company?.kpis||[]).filter(Boolean);
+ return k.length?k.slice(0,3):["매출·수익성","사업별 핵심 지표","현금흐름"];
+}
+function issuerSnapshot(company,secRow){
+ if(company?.sector!=="소비재·서비스")return null;
+ const r=window.ATELIER_CONSUMER?.get?.(company.ticker);
+ if(!r?.metrics?.length)return null;
+ const same=!!(r.periodEnd&&secRow?.periodEnd&&r.periodEnd===secRow.periodEnd);
+ const older=!!(r.periodEnd&&secRow?.periodEnd&&r.periodEnd<secRow.periodEnd);
+ return {row:r,status:same?"동일 분기":older?"과거 분기":"기간 별도 대조"};
+}
+function issuerMetricValue(m){
+ if(!Number.isFinite(m?.value))return "—";
+ const v=format(m.value,2);
+ const n=m.value;
+ switch(m.unit){
+  case "USD B":return "$"+v+"B";
+  case "USD M":return "$"+v+"M";
+  case "USD per share":return "$"+v;
+  case "%":return v+"%";
+  case "billion trips":return format(n*10,1)+"억 건";
+  case "million nights":return v+"백만 숙박일";
+  case "stores":return format(n,0)+"개";
+  default:return v+" "+(m.unit||"");
+ }
+}
+function companyEarningsLens(company){
+ if(!company)return "";
+ const sec=gaap?.companies?.find(r=>r.ticker===company.ticker);
+ const labels=companyKpiLabels(company);
+ const section=company.sector==="바이오·제약"?
+   "제품별 매출·임상·현금 흐름":company.sector==="패션"?
+   "브랜드·정가 판매·재고":company.sector==="소비재·서비스"?
+   "사업별 운영 지표":"기업별 핵심 지표";
+ return '<section class="e8-lens"><div class="e8-lens-top"><h3>실적에서 먼저 볼 것</h3><span>'+esc(section)+'</span></div>'+
+  '<div class="e8-focus"><strong>핵심 질문</strong><span>'+esc(company.focus||"사업별 주요 변화 확인")+'</span></div>'+
+  '<div class="e8-kpi-line"><b>확인 지표</b><span>'+labels.map(x=>'<em>'+esc(x)+'</em>').join("")+'</span></div>'+
+  (company.risk?'<div class="e8-risk"><b>반증·주의</b><span>'+esc(company.risk)+'</span></div>':"")+
+  (company.market==="한국"?'<p class="e8-source-state">국내 DART 최신 실적 숫자는 아직 연결되지 않았습니다.</p>':
+   company.sector==="바이오·제약"?'<p class="e8-source-state">연결 GAAP 숫자와 제품별 매출·임상 결과는 별개입니다. 임상 진행 상황은 파이프라인 탭에서 확인하세요.</p>':
+   company.sector==="패션"?'<p class="e8-source-state">브랜드별 성장·정가 판매·재고는 연결 GAAP 손익과 별도 확인이 필요한 지표입니다.</p>':"")+
+  '</section>';
+}
+function issuerLensBlock(company,secRow){
+ if(!company)return "";
+ const labels=companyKpiLabels(company);
+ const snapshot=issuerSnapshot(company,secRow);
+ const values=snapshot?.row?.metrics||[];
+ const caution=snapshot?.status==="동일 분기"?"같은 분기 공식 발표 지표":
+   snapshot?.status==="과거 분기"?"이전 분기 공식 발표 · 최신 SEC와 구분":"발표 분기 종료일 대조 필요";
+ const sectorNote=company.sector==="바이오·제약"?"제품 매출·임상·허가 지표는 연결 GAAP 매출로 대신할 수 없음":
+  company.sector==="패션"?"브랜드별 매출·동일매장매출·할인·재고 수치는 연결 GAAP 손익과 별도 확인":
+  company.sector==="소비재·서비스"?"예약액·동일매장매출·매장 마진 등은 연결 매출과 정의가 다름":"";
+ const facts=values.length?'<div class="e8-issuer-facts">'+values.slice(0,3).map(m=>
+  '<div class="e8-issuer-fact"><span>'+esc(m.label)+'</span><strong>'+esc(issuerMetricValue(m))+'</strong>'+
+  '<small>'+esc(m.change||"")+'</small><small>'+esc(m.basis||"")+'</small></div>'
+ ).join("")+'</div>':"<div class=\"e8-pending-kpis\">"+
+  labels.map(x=>'<span>'+esc(x)+' <small>개별 수치 확인 전</small></span>').join("")+"</div>";
+ return '<section class="e8-issuer-block"><div class="e8-block-heading"><b>기업별 확인 지표</b><span>'+
+  esc(company.sector||"")+'</span></div>'+
+  (company.focus?'<div class="e8-block-focus">'+esc(company.focus)+'</div>':"")+
+  (values.length?'<div class="e8-metric-caption">'+esc(snapshot.row.period||"기간 미확인")+' · '+esc(caution)+'</div>':"")+
+  facts+
+  (values.length?'<div class="e8-issuer-source"><a href="'+uri(snapshot.row.sourceURL)+'" target="_blank" rel="noopener noreferrer">회사 발표 원문</a></div>':"")+
+  (sectorNote?'<p class="e8-sector-note">'+esc(sectorNote)+'</p>':"")+
+  (company.risk?'<div class="e8-block-risk"><b>위험 확인</b><span>'+esc(company.risk)+'</span></div>':"")+
+  '</section>';
+}
+let secSectorFilter="전체";
+function applySecArchiveFilter(){
+ const search=(document.getElementById("sec-archive-search")?.value||"").trim().toLowerCase();
+ const rows=document.querySelectorAll(".sec-record-list .sec-record");
+ let count=0;
+ rows.forEach(el=>{
+  const visible=(secSectorFilter==="전체"||el.dataset.sector===secSectorFilter)&&
+   (el.getAttribute("data-search")||"").includes(search);
+  el.hidden=!visible;
+  if(visible)count++;
+ });
+ document.querySelectorAll("[data-sec-sector]").forEach(b=>{
+  const active=b.dataset.secSector===secSectorFilter;
+  b.classList.toggle("is-current",active);
+  b.setAttribute("aria-pressed",active?"true":"false");
+ });
+ const label=document.getElementById("sec-visible-count");
+ if(label)label.textContent=count+"개 기업";
+ const empty=document.getElementById("sec-search-empty");
+ if(empty)empty.hidden=count!==0;
+}
+document.addEventListener("click",event=>{
+ const b=event.target?.closest?.("[data-sec-sector]");
+ if(!b)return;
+ secSectorFilter=b.dataset.secSector||"전체";
+ applySecArchiveFilter();
+});
+
 function secArchive(universe=[]){
  const rows=(gaap?.companies||[]).filter(r=>r.status==="period_compared"&&Number.isFinite(r.metrics?.revenue?.value))
   .sort((a,b)=>String(b.filed||"").localeCompare(String(a.filed||""))||String(a.ticker).localeCompare(String(b.ticker)));
@@ -98,16 +197,17 @@ function secArchive(universe=[]){
   const focus=co?.focus||"";
   const columns=[["매출",revenue],["영업이익",operating],["순이익",net]].map(([name,m])=>
    '<div class="sec-metric"><span>'+esc(name)+'</span><strong>'+secNumber(m?.value)+'</strong><small>전년 동기 '+esc(secDelta(m))+'</small></div>').join("");
-  return '<details class="sec-record" data-search="'+esc([r.ticker,actualName,co?.sector||""].join(" ").toLowerCase())+'">'+
+  return '<details class="sec-record" data-sector="'+esc(co?.sector||"미분류")+'" data-search="'+esc([r.ticker,actualName,co?.sector||"",co?.focus||"",...(co?.kpis||[])].join(" ").toLowerCase())+'">'+
    '<summary><span class="sec-identity"><b>'+esc(r.ticker)+'</b><span>'+esc(actualName)+'</span></span>'+
    '<span class="sec-period">'+esc(period)+'</span>'+
-   '<span class="sec-readout">'+esc(headline)+'</span>'+
+   '<span class="sec-readout">'+esc(headline)+'<small>'+esc((co?.kpis||[])[0]||"")+'</small></span>'+
    '<span class="sec-primary">'+esc(secDelta(revenue))+'<small>매출 전년 대비</small></span>'+
    '<span class="sec-chevron" aria-hidden="true">⌄</span></summary>'+
    '<div class="sec-record-body"><div class="sec-metrics">'+columns+'</div>'+
    '<div class="sec-result-line"><b>실적 해석</b><span>'+esc(headline)+' · 영업이익률 '+esc(margin)+'</span></div>'+
    (focus?'<div class="sec-result-line"><b>검증 관점</b><span>'+esc(focus)+' <small>· 기존 관찰 질문, 이번 분기 검증 완료를 뜻하지 않음</small></span></div>':"")+
    (check?'<div class="sec-result-line"><b>다음 확인 지표</b><span>'+esc(check)+' <small>· 투자 검증 질문, 공시 확정 사실 아님</small></span></div>':"")+
+   issuerLensBlock(co,r)+
    '<div class="sec-record-footer"><span>3개월 GAAP · '+esc(r.periodStart||"")+" ~ "+esc(r.periodEnd||"")+' · 접수 '+esc(r.filed||"")+'</span>'+
    '<a href="'+uri(r.url)+'" target="_blank" rel="noopener noreferrer">SEC 공시 원문 ↗</a></div></div></details>';
  };
@@ -115,6 +215,8 @@ function secArchive(universe=[]){
   '<span>미국 기업 '+rows.length+'개 · '+esc(String(gaap?.generatedAt||"").slice(0,10))+' 자료</span></div>'+
   '<div class="sec-workbench-head"><strong>기업별 최근 분기 실적</strong>'+
   '<span>매출 · 영업이익 · 순이익</span></div>'+
+  '<div class="e8-sector-filter" role="group" aria-label="산업별 분기 실적">'+["전체","바이오·제약","소비재·서비스","패션"].map(x=>
+   '<button type="button" data-sec-sector="'+esc(x)+'" class="'+(secSectorFilter===x?'is-current':'')+'" aria-pressed="'+(secSectorFilter===x?'true':'false')+'">'+esc(x)+'</button>').join("")+'</div>'+ 
   '<div class="sec-find"><input type="search" id="sec-archive-search" autocomplete="off" aria-label="SEC 분기 실적 기업 검색" placeholder="기업명 · 티커 · 산업 검색"/>'+
   '<span id="sec-visible-count">'+rows.length+'개 기업</span></div>'+
   '<div class="sec-list-heading"><span>기업</span><span>회계 분기</span><span>확인된 변화</span><span>매출 증감</span><span></span></div>'+
@@ -124,19 +226,7 @@ function secArchive(universe=[]){
   '</section>';
 }
 document.addEventListener("input",event=>{
- if(event.target?.id!=="sec-archive-search")return;
- const search=String(event.target.value||"").trim().toLowerCase();
- const items=document.querySelectorAll(".sec-record-list .sec-record");
- let visible=0;
- items.forEach(el=>{
-  const match=(el.getAttribute("data-search")||"").includes(search);
-  el.hidden=!match;
-  if(match)visible++;
- });
- const count=document.getElementById("sec-visible-count");
- if(count)count.textContent=visible+"개 기업";
- const empty=document.getElementById("sec-search-empty");
- if(empty)empty.hidden=visible>0;
+ if(event.target?.id==="sec-archive-search")applySecArchiveFilter();
 });
 
 function secComparison(ticker){
@@ -684,6 +774,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyEarningsLens,issuerLensBlock,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
