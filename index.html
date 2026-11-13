@@ -904,6 +904,18 @@ body{background:var(--desk-bg)!important;color:var(--desk-ink);
  .desk-sector-top,.a5-industry,.header-search{transition:none!important}
 }
 
+
+
+/* Detailed quotes remain accessible but no longer push company analysis below the fold. */
+#content .desk-price-details{margin:16px 20px 20px;border:1px solid #dce5e0;border-radius:8px;background:#fff;overflow:hidden}
+#content .desk-price-details>summary{display:flex;align-items:center;justify-content:space-between;list-style:none;
+  padding:12px 16px;font-size:13px;font-weight:750;color:#2a645d;cursor:pointer;background:#f8faf8}
+#content .desk-price-details>summary::-webkit-details-marker{display:none}
+#content .desk-price-details>summary span{font-size:18px;line-height:1;color:#61867e;transition:transform .15s}
+#content .desk-price-details[open]>summary span{transform:rotate(45deg)}
+#content .desk-price-details .r2-quote-panel{margin:0;border:0;border-top:1px solid #edf1ed;box-shadow:none}
+#content .desk-price-details .r2-comparison-mini{margin:8px 16px 16px}
+@media(max-width:560px){#content .desk-price-details{margin:13px 12px}}
 </style>
 </head>
 <body>
