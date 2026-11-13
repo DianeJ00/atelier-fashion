@@ -95,16 +95,28 @@ function click(key,value){
  assert.ok(decision.includes("새 메모"));
  assert.ok(decision.includes("초기 검증 질문"));
  assert.ok(decision.includes('data-a3="memoSave"'));
- assert.ok(decision.includes('data-a3="reviewEvidence"'),"new official evidence has an explicit review control");
- const reviewed=window.ATELIER3.records;
- reviewed["US:ANF"]={...(reviewed["US:ANF"]||{}),at:"2026-11-13T12:00:00Z",memoEntries:[{id:"memo-only",at:"2026-11-13T12:00:00Z",text:"memo is not evidence review"}]};
- assert.ok(window.ATELIER3.attentionQueue().includes('data-id="US:ANF"'),"memo edit alone cannot clear review queue");
- const confirmButton={dataset:{a3:"reviewEvidence",id:"US:ANF"},textContent:"",disabled:false,classList:{add(){}}};
- const confirmEvent={target:{closest(selector){return selector==="[data-a3]"?confirmButton:null}},preventDefault(){},stopImmediatePropagation(){}};
- for(const fn of listeners.click||[])fn(confirmEvent);
- assert.ok(reviewed["US:ANF"].reviewedEvidence,"explicit review is stored separately");
- assert.equal(reviewed["US:ANF"].at,"2026-11-13T12:00:00Z","confirming evidence does not change memo timestamp");
- assert.ok(!window.ATELIER3.attentionQueue().includes('data-id="US:ANF"'),"review completion clears current evidence from queue");
+ // The weekly candidates rotate; verify the first actual candidate, not a fixed ticker.
+ const candidate=(files["atelier-weekly.json"].reviewCandidates||[])[0];
+ if(candidate){
+  click("sector","전체");
+  click("company",candidate.companyId);
+  click("tab","나의 메모");
+  const evidenceHTML=window.ATELIER2.companyPage();
+  assert.ok(evidenceHTML.includes('data-a3="reviewEvidence"'),"new evidence has explicit review control");
+  const reviewed=window.ATELIER3.records;
+  reviewed[candidate.companyId]={...(reviewed[candidate.companyId]||{}),at:"2026-11-13T12:00:00Z",
+   memoEntries:[{id:"memo-only",at:"2026-11-13T12:00:00Z",text:"memo is not evidence review"}]};
+  assert.ok(window.ATELIER3.attentionQueue().includes('data-id="'+candidate.companyId+'"'),"memo edit alone must not clear review queue");
+  const confirmButton={dataset:{a3:"reviewEvidence",id:candidate.companyId},textContent:"",disabled:false,classList:{add(){}}};
+  const confirmEvent={target:{closest(selector){return selector==="[data-a3]"?confirmButton:null}},preventDefault(){},stopImmediatePropagation(){}};
+  for(const fn of listeners.click||[])fn(confirmEvent);
+  assert.ok(reviewed[candidate.companyId].reviewedEvidence,"review state is stored separately");
+  assert.equal(reviewed[candidate.companyId].at,"2026-11-13T12:00:00Z","review does not alter memo timestamp");
+  assert.ok(!window.ATELIER3.attentionQueue().includes('data-id="'+candidate.companyId+'"'),"confirmed evidence leaves review queue");
+  click("sector","소비재·서비스");
+  click("company","US:UBER");
+  click("tab","나의 메모");
+ }
  assert.equal((decision.match(/class="t4-step-num"/g)||[]).length,0,"simple journal replaces four-step embedded view");
  assert.ok(!decision.includes("a3-review-card"),"no duplicate mini review");
  assert.ok(!decision.includes("t4-editor-header"),"company title is not repeated in embedded view");
