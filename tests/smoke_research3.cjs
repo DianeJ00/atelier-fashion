@@ -89,7 +89,7 @@ const click=(kind,id,choice,value)=>{
   sourceURL:"https://example.org/issuer-q2"
  })};
  const dated=window.ATELIER3.issuerLensBlock(universe.find(c=>c.ticker==="UBER"),trend.companies[0]);
- assert.ok(dated.includes("과거 분기"),"older issuer KPI cannot be presented as the latest SEC quarter");
+ assert.ok(dated.includes("이전 분기 공식 발표"),"older issuer KPI cannot be presented as the latest SEC quarter");
  assert.ok(dated.includes("$59.8B")&&dated.includes("총예약액"),"official non-GAAP operating metric is identifiable");
  assert.ok(dated.includes("매출과 정의가 다름"),"prevent mixing gross bookings with GAAP revenue");
  const workspace=window.ATELIER3.thesisWorkspace(universe);
