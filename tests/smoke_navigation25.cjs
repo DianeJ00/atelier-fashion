@@ -69,15 +69,17 @@ function click(key,value){
  const order=[
    home.indexOf("시장 대비 산업 상대강도"),
    home.indexOf("산업별 핵심 변화"),
-   home.indexOf("원문으로 확인한 변화 TOP 3"),
+   home.indexOf("먼저 확인할 변화 3건"),
    home.indexOf("새 근거를 검토할 기업")
  ];
- assert.ok(order.every(v=>v>=0),"all four stages visible");
+ assert.ok(order.every(v=>v>=0),"all four current stages visible");
  assert.deepEqual(order,order.slice().sort((a,b)=>a-b),"market -> industry -> signals -> decision");
  assert.ok(!home.includes("바이오 치료제 개발·시험 일정"),"no homepage clinical detail duplicate");
  assert.ok(!home.includes("산업별 분석 기준"),"no duplicate shortcut section");
  assert.ok(!home.includes("미국 소비재 공식 실적 요약"),"no duplicate issuer KPI report on home");
  assert.ok(!home.includes('class="a3-change"'),"homepage only headlines, not verbose weekly cards");
+ assert.ok(home.includes("공식 공시 우선"),"home explains ranking policy");
+ assert.ok(!home.includes("원문으로 확인한 변화 TOP 3"),"avoid ungrounded investment ranking");
  assert.equal((home.match(/class="a5-industry"/g)||[]).length,4);
  const weeklyAll=window.ATELIER2.weeklyIntro();
  assert.ok(weeklyAll.includes("산업별")||weeklyAll.includes("이번 주 투자 리서치"));
@@ -93,6 +95,16 @@ function click(key,value){
  assert.ok(decision.includes("새 메모"));
  assert.ok(decision.includes("초기 검증 질문"));
  assert.ok(decision.includes('data-a3="memoSave"'));
+ assert.ok(decision.includes('data-a3="reviewEvidence"'),"new official evidence has an explicit review control");
+ const reviewed=window.ATELIER3.records;
+ reviewed["US:ANF"]={...(reviewed["US:ANF"]||{}),at:"2026-11-13T12:00:00Z",memoEntries:[{id:"memo-only",at:"2026-11-13T12:00:00Z",text:"memo is not evidence review"}]};
+ assert.ok(window.ATELIER3.attentionQueue().includes('data-id="US:ANF"'),"memo edit alone cannot clear review queue");
+ const confirmButton={dataset:{a3:"reviewEvidence",id:"US:ANF"},textContent:"",disabled:false,classList:{add(){}}};
+ const confirmEvent={target:{closest(selector){return selector==="[data-a3]"?confirmButton:null}},preventDefault(){},stopImmediatePropagation(){}};
+ for(const fn of listeners.click||[])fn(confirmEvent);
+ assert.ok(reviewed["US:ANF"].reviewedEvidence,"explicit review is stored separately");
+ assert.equal(reviewed["US:ANF"].at,"2026-11-13T12:00:00Z","confirming evidence does not change memo timestamp");
+ assert.ok(!window.ATELIER3.attentionQueue().includes('data-id="US:ANF"'),"review completion clears current evidence from queue");
  assert.equal((decision.match(/class="t4-step-num"/g)||[]).length,0,"simple journal replaces four-step embedded view");
  assert.ok(!decision.includes("a3-review-card"),"no duplicate mini review");
  assert.ok(!decision.includes("t4-editor-header"),"company title is not repeated in embedded view");
@@ -110,5 +122,5 @@ function click(key,value){
  const consumerWeekly=window.ATELIER2.weeklyIntro();
  assert.ok(consumerWeekly.includes("소비재 15개 기업"));
  assert.ok(consumerWeekly.includes("<details"),"deep source data is folded by default");
- console.log("ATELIER navigation: market-first overview, simple dated memo, source-tagged issues, four navigation items PASS");
+ console.log("ATELIER navigation: verified-first signals, separate evidence review, source-tagged issues, four navigation items PASS");
 })().catch(err=>{console.error(err);process.exitCode=1});
