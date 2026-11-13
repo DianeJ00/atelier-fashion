@@ -383,7 +383,7 @@ function verifiedResultPanel(company){
    (window.ATELIER3?.secComparison(company.ticker)||"");
  }
  const kpis=(company.kpis||[]).slice(0,2);
- return '<div class="r2-detail-body r2-results-issues">'+results+companyIssuePanel(company)+
+ return '<div class="r2-detail-body r2-results-issues">'+results+(window.ATELIER3?.peerComparison?.(company,companies())||'')+companyIssuePanel(company)+
  (kpis.length?'<div class="r2-next-kpis"><b>다음 실적에서 확인</b><span>'+
  kpis.map(esc).join(' · ')+'</span></div>':'')+'</div>';
 }
@@ -393,14 +393,19 @@ function detailBody(company){
  if(state.detailTab==="투자 판단"||state.detailTab==="나의 메모")
   return '<div class="r2-detail-body r5-decision">'+
    (window.ATELIER3?.companyMemo(company)||'<p class="r2-empty">개인 메모를 불러오는 중입니다.</p>')+'</div>';
+ const fields=[
+  ["사업·산업 범주",company.domain||company.disease||company.sector],
+  ...(company.sector==="바이오·제약"?[
+   ["주요 연구 분야",[company.disease,...(company.secondaryDiseases||[])].filter(Boolean).join(" · ")],
+   ["치료 기술",company.technology||"공식 확인 필요"]]:[]),
+  ...(company.sector==="패션"&&(company.brands||[]).length?[["추적 브랜드",company.brands.join(" · ")]]:[]),
+  ["핵심 검증 질문",company.focus||"공식 자료 확인 필요"],
+  ["다음 실적 확인 지표",(company.kpis||[]).join(" · ")||"등록된 지표 없음"],
+  ["현재 주의할 변수",company.risk||"공식 자료 확인 필요"]
+ ];
  return '<div class="r2-detail-body r5-business">'+
- '<div class="r2-check"><b>사업·산업 범주</b><span>'+esc(company.domain||company.disease||company.sector)+'</span></div>'+
- (company.sector==="바이오·제약"?'<div class="r2-check"><b>주요 연구 분야</b><span>'+
- esc([company.disease,...(company.secondaryDiseases||[])].filter(Boolean).join(" · "))+'</span></div>'+
- '<div class="r2-check"><b>치료 기술</b><span>'+esc(company.technology||"기술 확인 대기")+'</span></div>':"")+
- (company.sector==="패션"&&(company.brands||[]).length?
- '<div class="r2-check"><b>추적 브랜드</b><span>'+company.brands.map(esc).join(" · ")+'</span></div>':"")+
- '<div class="r2-box-lite"><h4>사업 구조를 확인하는 순서</h4><p>기업별 매출·수익 구조는 공식 실적과 사업보고서에서 확인합니다. 최신 수치·주요 발표는 「실적·이슈」, 직접 기록은 「나의 메모」에 모았습니다.</p></div></div>';
+  fields.map(([label,value])=>'<div class="r2-check"><b>'+esc(label)+'</b><span>'+esc(value)+'</span></div>').join("")+
+  '<div class="r2-box-lite"><h4>자료 해석 기준</h4><p>위 검증 질문·관찰 변수는 투자 분석을 위한 초기 분류이며 확정된 실적 전망이 아닙니다. 수치와 최신 원문은 「실적·이슈」에서 확인하고 내 판단은 「나의 메모」에 보관하세요.</p></div></div>';
 }
 function quotePanel(company){
  const quote=window.ATELIER_QUOTES?.quote(company);
@@ -427,9 +432,10 @@ function companyDetail(company){
  return `<section class="r2-detail">
  <div class="r2-detail-header"><div class="r2-eyebrow">${esc(company.market)} · ${esc(company.sector)}</div>
  <h2>${esc(company.name)} <small>${esc(company.ticker)}</small></h2>
- <p>무엇을 하는 기업인지 → 최근 실적·주요 이슈 → 나의 기록 순서로 확인</p>
+ <p>사업 범주와 검증 질문 → 공식 실적·주요 이슈 → 나의 기록 순서로 확인</p>
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
- ${moveEventForCompany(company)}
+ <div class="r2-share-row"><button type="button" class="r2-link" data-r2="shareCompany">현재 기업·탭 링크 복사 ↗</button></div>
+  ${moveEventForCompany(company)}
  ${quotePanel(company)}
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
  ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&prices?.status!=='source_verified_snapshot'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
@@ -498,6 +504,21 @@ function goSector(name){
 }
 function renderCurrent(){if(typeof window.atelierRerender==='function')window.atelierRerender()}
 function act(kind,val){
+ if(kind==="shareCompany"){
+  const link=new URL(window.location.href);
+  link.searchParams.set("company",state.selected);
+  link.searchParams.set("tab",state.detailTab);
+  const button=document.querySelector('[data-r2="shareCompany"]');
+  if(typeof navigator!=="undefined"&&navigator.clipboard?.writeText){
+   navigator.clipboard.writeText(link.toString()).then(()=>{
+    if(button)button.textContent="기업 링크 복사됨 ✓";
+   }).catch(()=>{if(button)button.textContent="링크 복사 실패 · 주소창에서 복사해 주세요";});
+  }else if(typeof window.prompt==="function"){
+   window.prompt("기업 분석 링크",link.toString());
+  }
+  return;
+ }
+
  if(kind==='showQuote'){
   const active=at(state.selected);
   const loaded=window.ATELIER_QUOTES?.mount('r2-tv-frame',active);
