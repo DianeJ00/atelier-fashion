@@ -170,8 +170,17 @@ async function loadResearchFeed(){
  render();
 }
 function overview(){
- return `${head('전체 현황','시장 상대강도에서 기업별 투자 판단까지','시장 흐름을 먼저 확인하고, 산업별 변화와 검토할 기업을 선택하세요.','시장 데이터는 이용 가능 여부·기준일을 구분')}
- ${window.ATELIER2?.overview()||''}`;
+ const report=window.ATELIER3?.report;
+ const tracked=window.ATELIER2?.data?.companies?.length;
+ const count=report?.items?.length;
+ const period=report?.periodEnd||"";
+ return '<header class="desk-hero"><div class="desk-overline"><span class="desk-pulse" aria-hidden="true"></span> INVESTMENT RESEARCH</div>'+
+  '<div class="desk-hero-body"><h1>리서치 데스크</h1><div class="desk-hero-stats">'+
+  '<span><strong>'+esc(tracked??"—")+'</strong> 기업</span>'+
+  '<span><strong>'+esc(count??"—")+'</strong> 검증 근거</span>'+
+  (period?'<span class="desk-hero-date">'+esc(period)+'</span>':"")+
+  '</div></div></header>'+
+  (window.ATELIER2?.overview()||"");
 }
 function legacyOverviewArchive(){
  const focus=['TPR','LEVI','GAP','URBN'].map(t=>peers.find(p=>p.ticker===t)).filter(Boolean);
@@ -319,7 +328,13 @@ function insightsPage(){
  const tabs=[['trends','시장 트렌드'],['incoming','새로 수집한 자료 ('+socialItems().length+')'],['verified','소비자 근거 ('+evidenceAll().length+')']];
  return `${window.ATELIER2?.weeklyIntro()||''}<div class="section-tabs" role="tablist" aria-label="패션 산업 상세 메뉴">${tabs.map(([id,label])=>`<button role="tab" aria-selected="${state.insightTab===id}" class="section-tab ${state.insightTab===id?'active':''}" data-action="insightTab" data-insight-tab="${id}">${label}</button>`).join('')}</div>` + (state.insightTab==='trends'?trendsPage():state.insightTab==='incoming'?socialFeed():consumerSamplePanel()+evidencePage());
 }
-function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{const active=b.dataset.page===state.page;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('#page-crumb').textContent=pages[state.page]||'전체 현황';let html=({overview:overview,insights:insightsPage,companies:companyPage,hub:hubPage}[state.page]||overview)();$('#content').innerHTML=html}
+function syncQuickSearchOptions(){
+ const options=document.getElementById("quick-company-options");
+ const universe=window.ATELIER2?.data?.companies||[];
+ if(!options||!universe.length||options.childElementCount===universe.length)return;
+ options.innerHTML=universe.map(c=>'<option value="'+esc(c.ticker)+'" label="'+esc(c.name)+'"></option>').join('');
+}
+function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{const active=b.dataset.page===state.page;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('#page-crumb').textContent=pages[state.page]||'전체 현황';let html=({overview:overview,insights:insightsPage,companies:companyPage,hub:hubPage}[state.page]||overview)();$('#content').innerHTML=html;syncQuickSearchOptions()}
 window.atelierRerender=render;
 window.atelierGotoWeekly=()=>{nav('insights')};
 window.atelierGotoCompanies=()=>{state.r2LegacyFashion=false;nav('companies')};
@@ -385,5 +400,28 @@ document.addEventListener('submit',e=>{if(e.target.getAttribute('id')!=='note-fo
 $('#import-input').addEventListener('change',async e=>{let file=e.target.files?.[0];if(!file)return;try{let data=JSON.parse(await file.text());if(!Array.isArray(data.notes))throw Error('notes array missing');let clean=data.notes.filter(x=>x&&typeof x==='object'&&typeof x.title==='string'&&typeof x.url==='string').slice(0,1000).map(x=>({...x,platform:String(x.platform||'직접 관찰').slice(0,80),title:String(x.title).slice(0,400),detail:String(x.detail||'').slice(0,3000)}));notes=[...clean,...notes].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);saveNotes();notify(`${clean.length}건 불러옴`);nav('evidence')}catch(ex){notify('올바른 노트 JSON 파일을 선택해주세요')}e.target.value=''});
 $('#mobile-menu').addEventListener('click',()=>{const open=$('#sidebar').classList.toggle('open');document.body.classList.toggle('menu-open',open)});$('#nav-backdrop').addEventListener('click',()=>{$('#sidebar').classList.remove('open');document.body.classList.remove('menu-open')});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#modal-root').innerHTML='';if(e.key==='Enter'&&e.target.matches('.focus-card'))e.target.click()});
+const quickSearch=document.getElementById("quick-company-search");
+if(quickSearch){
+ quickSearch.addEventListener("keydown",event=>{
+  if(event.key!=="Enter")return;
+  event.preventDefault();
+  const query=String(quickSearch.value||"").trim().toLowerCase();
+  if(!query)return;
+  const universe=window.ATELIER2?.data?.companies||[];
+  const exact=universe.find(x=>x.ticker.toLowerCase()===query||x.name.toLowerCase()===query);
+  const found=exact||universe.find(x=>x.ticker.toLowerCase().startsWith(query)||x.name.toLowerCase().includes(query));
+  if(!found){notify(universe.length?"검색 결과 없음":"기업 목록 연결 중");return}
+  const details=window.ATELIER2.state;
+  Object.assign(details,{selected:found.id,sector:"전체",market:"전체",disease:"전체",search:"",detailTab:"실적·이슈"});
+  quickSearch.value="";
+  nav("companies");
+ });
+}
+document.addEventListener("keydown",event=>{
+ if(event.key!=="/"||event.altKey||event.ctrlKey||event.metaKey)return;
+ if(event.target?.closest?.("input,textarea,select,[contenteditable]"))return;
+ if(!quickSearch)return;
+ event.preventDefault();quickSearch.focus();
+});
 start();
 })();
