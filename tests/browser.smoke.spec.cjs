@@ -24,6 +24,15 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".sec-record")).toHaveCount(47,{timeout:20000});
   await expect(page.locator(".h7-panel")).toHaveCount(0);
   await expect(page.locator("#sec-visible-count")).toHaveText("47개 기업");
+  await expect(page.locator("[data-sec-sector]")).toHaveCount(4);
+  await page.locator('[data-sec-sector="바이오·제약"]').click();
+  await expect(page.locator("#sec-visible-count")).toHaveText("20개 기업");
+  await page.locator('[data-sec-sector="패션"]').click();
+  await expect(page.locator("#sec-visible-count")).toHaveText("12개 기업");
+  await page.locator('[data-sec-sector="소비재·서비스"]').click();
+  await expect(page.locator("#sec-visible-count")).toHaveText("15개 기업");
+  await page.locator('[data-sec-sector="전체"]').click();
+  await expect(page.locator("#sec-visible-count")).toHaveText("47개 기업");
   await page.locator("#sec-archive-search").fill("CAVA");
   const items=page.locator(".sec-record:visible");
   await expect(items).toHaveCount(1);
@@ -32,6 +41,10 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(items.first()).toContainText("$356.4M");
   await expect(items.first()).toContainText("영업이익률");
   await expect(items.first()).toContainText("다음 확인 지표");
+  await expect(items.first()).toContainText("동일매장매출 성장률",{timeout:20000});
+  await expect(items.first()).toContainText("운영 점포 수");
+  await expect(items.first()).toContainText("매장 수준 이익률");
+  await expect(items.first()).toContainText("회사 발표 원문");
   await expect(items.first().locator(".sec-record-footer a")).toHaveAttribute("href",/sec\.gov/);
   await page.locator("#sec-archive-search").fill("zzzzzz");
   await expect(page.locator("#sec-visible-count")).toHaveText("0개 기업");
@@ -39,6 +52,29 @@ test.describe("ATELIER published-site regression",()=>{
   await page.locator('[data-action="hubTab"][data-hub-tab="settings"]').click();
   await expect(page.locator(".hub-audit-details")).toBeVisible();
   await expect(page.locator(".h7-panel")).toBeHidden();
+ });
+ test("neutral navigation and company selection, with sector earnings checks",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator("#nav [data-page=companies]").click();
+  await expect(page.locator(".r2-company-row.is-selected")).toBeVisible({timeout:20000});
+  const active=await page.locator("#nav .nav-item.active").evaluate(el=>{
+   const c=getComputedStyle(el);
+   return {bg:c.backgroundColor,radius:c.borderRadius};
+  });
+  expect(active.bg).toMatch(/^rgba?\(0,\s*0,\s*0,\s*0\)$/);
+  expect(active.radius).toBe("0px");
+  const selected=await page.locator(".r2-company-row.is-selected").evaluate(el=>{
+   const c=getComputedStyle(el);
+   return {borderLeft:c.borderLeftWidth,background:c.backgroundColor};
+  });
+  expect(selected.borderLeft).toBe("0px");
+  expect(selected.background).toBe("rgb(242, 242, 240)");
+  await page.locator('.r2-company-row[data-val="US:LLY"]').click();
+  await page.locator('[data-r2="tab"][data-val="실적·이슈"]').click();
+  await expect(page.locator(".e8-lens")).toContainText("신약 판매·처방 성장");
+  await expect(page.locator(".e8-lens")).toContainText("임상");
+  await page.locator('.r2-company-row[data-val="US:RL"]').click();
+  await expect(page.locator(".e8-lens")).toContainText("정가 판매·마진");
  });
  test("desktop: 52 companies, weekly navigation, private backup round trip",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
