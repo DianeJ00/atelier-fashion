@@ -95,6 +95,7 @@ function secArchive(universe=[]){
   const headline=secReadout(r);
   const period=fiscalQuarterLabel(r);
   const check=(co?.kpis||[]).slice(0,2).join(" · ");
+  const focus=co?.focus||"";
   const columns=[["매출",revenue],["영업이익",operating],["순이익",net]].map(([name,m])=>
    '<div class="sec-metric"><span>'+esc(name)+'</span><strong>'+secNumber(m?.value)+'</strong><small>전년 동기 '+esc(secDelta(m))+'</small></div>').join("");
   return '<details class="sec-record" data-search="'+esc([r.ticker,actualName,co?.sector||""].join(" ").toLowerCase())+'">'+
@@ -105,6 +106,7 @@ function secArchive(universe=[]){
    '<span class="sec-chevron" aria-hidden="true">⌄</span></summary>'+
    '<div class="sec-record-body"><div class="sec-metrics">'+columns+'</div>'+
    '<div class="sec-result-line"><b>실적 해석</b><span>'+esc(headline)+' · 영업이익률 '+esc(margin)+'</span></div>'+
+   (focus?'<div class="sec-result-line"><b>검증 관점</b><span>'+esc(focus)+' <small>· 기존 관찰 질문, 이번 분기 검증 완료를 뜻하지 않음</small></span></div>':"")+
    (check?'<div class="sec-result-line"><b>다음 확인 지표</b><span>'+esc(check)+' <small>· 투자 검증 질문, 공시 확정 사실 아님</small></span></div>':"")+
    '<div class="sec-record-footer"><span>3개월 GAAP · '+esc(r.periodStart||"")+" ~ "+esc(r.periodEnd||"")+' · 접수 '+esc(r.filed||"")+'</span>'+
    '<a href="'+uri(r.url)+'" target="_blank" rel="noopener noreferrer">SEC 공시 원문 ↗</a></div></div></details>';
