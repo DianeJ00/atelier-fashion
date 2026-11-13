@@ -331,38 +331,54 @@ function proposals(companies,filter="전체"){
  return '<section class="a3-proposals"><div class="a3-head"><div><span class="a3-kicker">근거 변화 추적 · 담당자 결정 전</span><h2>검토가 필요한 투자 가설 '+evidence.length+'건</h2><p>매수·매도·가설 강화 여부를 자동 확정하지 않습니다. 각 근거를 확인한 뒤 판단을 저장하세요.</p></div></div><div class="a3-review-grid">'+evidence.slice(0,10).map(c=>recordCard(c)).join("")+'</div></section>';
 }
 function industryOverview(){
+ const data=window.ATELIER2?.data?.companies||[];
  const blocks=[
-  {sector:"바이오·제약",count:20,hint:"신약 개발·임상·허가"},
-  {sector:"소비재·서비스",count:15,hint:"방문·구독·예약과 수익화"},
-  {sector:"패션",count:12,hint:"상품 반응·정가 판매·재고"},
-  {sector:"내 담당 기업",count:5,hint:"기존 국내 브리프 · 최신 DART 미연결"}
+  {sector:"바이오·제약",fallback:20},
+  {sector:"소비재·서비스",fallback:15},
+  {sector:"패션",fallback:12},
+  {sector:"내 담당 기업",fallback:5}
  ];
- return '<section class="a5-industries"><div class="a5-section-head"><div><span class="a3-kicker">02 · 산업별 점검</span><h2>산업별 핵심 변화</h2><p>새 근거가 확인된 경우만 요약합니다. 산업별 상세 숫자·원문은 해당 메뉴로 이동해 확인하세요.</p></div></div>'+
- '<div class="a5-industry-grid">'+blocks.map(x=>{
-  const recent=(report?.items||[]).find(a=>a.sector===x.sector);
-  const evidence=recent?'<p><b>최근 확인</b> '+esc(recent.title)+'</p><small>'+esc(recent.eventDate)+' · '+esc(recent.eventType||"검증 근거")+'</small>':
-   '<p class="a5-no-signal">최근 7일 신규 검증 근거 없음</p><small>자료 부재는 산업 전망의 변화 없음과 다릅니다.</small>';
-  return '<article class="a5-industry"><div class="a5-industry-top"><div><h3>'+esc(x.sector)+'</h3><span>'+esc(x.hint)+'</span></div><strong>'+x.count+'개</strong></div>'+
-  evidence+'<button type="button" data-a3="goSector" data-sector="'+esc(x.sector)+'">기업 분석 보기 →</button></article>';
- }).join('')+'</div></section>';
+ return '<section class="a5-industries desk-industries"><div class="desk-section-heading"><h2>산업별</h2><span>기업 탐색</span></div>'+
+  '<div class="a5-industry-grid">'+blocks.map(x=>{
+   const count=data.length?data.filter(c=>c.sector===x.sector).length:x.fallback;
+   const latest=(report?.items||[]).find(r=>r.sector===x.sector);
+   const line=latest?esc(latest.ticker+" · "+latest.title):"신규 확인 근거 없음";
+   return '<button type="button" class="a5-industry" data-a3="goSector" data-sector="'+esc(x.sector)+'">'+
+    '<span class="desk-sector-top"><strong>'+esc(x.sector)+'</strong><b>'+count+'</b></span>'+
+    '<span class="desk-sector-summary">'+line+'</span>'+
+    '<span class="desk-sector-foot">기업 보기 <span aria-hidden="true">↗</span></span></button>';
+  }).join('')+'</div></section>';
 }
 function overviewSignals(){
  const verified=(report?.items||[]).filter(x=>String(x.tier||"").startsWith("공식 ")||x.tier==="편집 원문 대조");
  const rank=x=>String(x.tier||"").startsWith("공식 ")?0:1;
  const items=verified.slice().sort((a,b)=>rank(a)-rank(b)||String(b.eventDate||"").localeCompare(String(a.eventDate||""))).slice(0,3);
- return '<section class="a5-overview-signals"><div class="a5-section-head"><div><span class="a3-kicker">03 · 검토 우선 근거</span><h2>먼저 확인할 변화 3건</h2><p>공식 공시 우선, 같은 검증 수준에서는 최근 사건 순서입니다. 주가 영향이나 투자 매력도 순위는 아닙니다.</p></div><button type="button" data-a3="openWeekly">전체 주간 보고서 →</button></div>'+
- (items.length?'<div class="a5-signal-list">'+items.map((x,i)=>
- '<div class="a5-signal"><span class="a5-signal-num">'+String(i+1).padStart(2,"0")+'</span><div><b>'+esc(x.title)+'</b><small>'+esc(x.sector)+' · '+esc(x.eventDate)+' · '+esc(x.tier||x.eventType)+'</small><small>선정 기준: '+(rank(x)===0?'공식 공시·실적 확인':'편집 원문 확인')+'</small></div></div>'
- ).join('')+'</div>':'<p class="a3-empty">현재 보고기간에 원문으로 확인된 신규 사건이 없거나 자료 수집 중입니다.</p>')+'</section>';
+ const universe=window.ATELIER2?.data?.companies||[];
+ return '<section class="a5-overview-signals desk-signals"><div class="desk-panel-heading">'+
+  '<div class="desk-heading-main"><span class="desk-panel-n">01</span><h2>새로 확인된 변화</h2></div>'+
+  '<button type="button" data-a3="openWeekly" class="desk-text-action">전체 보기 <span aria-hidden="true">↗</span></button></div>'+
+  (items.length?'<div class="a5-signal-list">'+items.map((x,i)=>{
+   const issuer=universe.find(c=>c.ticker===x.ticker&&c.sector===x.sector);
+   const official=rank(x)===0;
+   return '<button type="button" class="a5-signal" data-a3="openSignalCompany" data-id="'+esc(issuer?.id||"")+'">'+
+    '<span class="a5-signal-num">'+String(i+1).padStart(2,"0")+'</span>'+
+    '<span class="desk-signal-main"><span class="desk-signal-meta"><span class="desk-signal-ticker">'+esc(x.ticker||x.sector)+'</span><span>'+esc(x.eventDate)+'</span><span>'+esc(official?"공식 공시":"원문 검토")+'</span></span>'+
+    '<strong>'+esc(x.title)+'</strong></span><span class="desk-signal-arrow" aria-hidden="true">↗</span></button>';
+  }).join('')+'</div>':
+  '<p class="desk-empty">새로 확인된 근거 없음</p>')+
+  '<div class="desk-panel-note">공식 자료 우선 · 같은 검증 수준은 최근 순</div></section>';
 }
 function attentionQueue(){
- if(!report)return '<section class="a5-attention"><div class="a5-section-head"><div><span class="a3-kicker">04 · 투자 판단</span><h2>새 근거를 검토할 기업</h2></div></div><p class="a3-empty">공식 근거와 판단 대기 목록을 불러오는 중입니다.</p></section>';
- const pending=(report.reviewCandidates||[]).filter(x=>!evidenceReviewed(x.companyId,x));
- return '<section class="a5-attention"><div class="a5-section-head"><div><span class="a3-kicker">04 · 투자 판단</span><h2>새 근거를 검토할 기업</h2><p>근거가 생겼지만 담당자가 아직 확인하지 않은 기업입니다. 자동으로 강화·약화를 판정하지 않습니다.</p></div><span class="a5-count">'+pending.length+'개</span></div>'+
- (pending.length?'<div class="a5-attention-list">'+pending.slice(0,5).map(x=>
- '<button type="button" data-a3="goDecision" data-id="'+esc(x.companyId)+'"><b>'+esc(x.ticker)+'</b><span>'+esc(x.change)+'</span><small>투자 판단 검토 →</small></button>'
- ).join('')+'</div>':'<p class="a3-empty">현재 새 근거에 따른 미검토 기업이 없습니다. 전체 기업은 기업 분석에서 확인하세요.</p>')+
- (pending.length>5?'<p class="a3-small">상위 5개 기업만 표시. 각 산업별 검토 목록은 주간 리서치에서 확인하세요.</p>':'')+'</section>';
+ const pending=(report?.reviewCandidates||[]).filter(x=>!evidenceReviewed(x.companyId,x));
+ return '<section class="a5-attention desk-attention"><div class="desk-panel-heading">'+
+  '<div class="desk-heading-main"><span class="desk-panel-n">02</span><h2>검토할 기업</h2></div>'+
+  '<span class="a5-count">'+pending.length+'</span></div>'+
+  (pending.length?'<div class="a5-attention-list">'+pending.slice(0,5).map(x=>
+   '<button type="button" data-a3="goDecision" data-id="'+esc(x.companyId)+'"><b>'+esc(x.ticker)+'</b>'+
+   '<span>'+esc(x.change)+'</span><span class="desk-review-arrow" aria-hidden="true">↗</span></button>'
+  ).join('')+'</div>':'<div class="desk-empty">검토 대기 없음</div>')+
+  (pending.length>5?'<button type="button" data-a3="openWeekly" class="desk-review-more">전체 '+pending.length+'건 보기 ↗</button>':'')+
+  '<div class="desk-panel-note">메모 저장과 근거 검토는 별도 관리</div></section>';
 }
 function reviewQueue(sector="전체"){
  if(!report)return '<p class="a5-queue-empty">판단 대기 목록을 불러오는 중입니다.</p>';
@@ -524,7 +540,14 @@ document.addEventListener("click",e=>{
    if(window.atelierRerender)window.atelierRerender();
  }else if(kind==="thesisOpenCompany"||kind==="goDecision"){
    openCompanyDecision(id);
- }else if(kind==="goSector"){
+ }else if(kind==="openSignalCompany"){
+   const state=window.ATELIER2?.state;
+   if(state&&id){
+    state.sector="전체";state.market="전체";state.disease="전체";state.search="";
+    state.selected=id;state.detailTab="실적·이슈";
+    if(window.atelierGotoCompanies)window.atelierGotoCompanies();
+   }else if(window.atelierGotoWeekly)window.atelierGotoWeekly();
+  }else if(kind==="goSector"){
    const state=window.ATELIER2?.state;
    if(state){
     state.sector=b.dataset.sector||"전체";state.market="전체";state.disease="전체";
