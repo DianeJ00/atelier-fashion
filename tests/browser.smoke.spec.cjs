@@ -2,6 +2,21 @@ const {test,expect}=require("@playwright/test");
 const {readFile}=require("node:fs/promises");
 const BASE="http://127.0.0.1:8137/";
 test.describe("ATELIER published-site regression",()=>{
+ test("research desk: concise overview and global ticker jump",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await expect(page.locator(".desk-hero h1")).toHaveText("리서치 데스크");
+  await expect(page.locator(".desk-core-grid")).toBeVisible({timeout:20000});
+  await expect(page.locator(".a5-signal").first()).toBeVisible({timeout:20000});
+  await expect(page.locator(".desk-market-details")).not.toHaveAttribute("open");
+  await expect(page.locator("body")).not.toContainText("시장 상대강도에서 기업별 투자 판단까지");
+  await expect(page.locator("#quick-company-options option")).toHaveCount(52,{timeout:20000});
+  await page.locator("#quick-company-search").fill("LLY");
+  await page.locator("#quick-company-search").press("Enter");
+  await expect(page.locator("#page-crumb")).toHaveText("기업 분석");
+  await expect(page.locator(".r2-detail-header")).toContainText("Eli Lilly");
+  await expect(page.locator(".r2-detail-tabs button.is-active")).toHaveText("실적·이슈");
+ });
+
  test("desktop: 52 companies, weekly navigation, private backup round trip",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
   await expect(page.locator("#nav [data-page=overview]")).toBeVisible();
@@ -71,6 +86,8 @@ test.describe("ATELIER published-site regression",()=>{
    status:200,contentType:"application/json",body:JSON.stringify(feed)
   }));
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await expect(page.locator(".desk-market-details")).toBeVisible({timeout:20000});
+  await page.locator(".desk-market-details > summary").click();
   const panel=page.locator(".r2-move-panel");
   await expect(panel).toBeVisible({timeout:20000});
   await expect(panel).toContainText("+12.40%");
@@ -90,7 +107,9 @@ test.describe("ATELIER published-site regression",()=>{
   });
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
   await page.locator("#nav [data-page=companies]").click();
-  await expect(page.locator(".r2-quote-panel")).toBeVisible({timeout:20000});
+  await expect(page.locator(".desk-price-details")).toBeVisible({timeout:20000});
+  await page.locator(".desk-price-details > summary").click();
+  await expect(page.locator(".r2-quote-panel")).toBeVisible();
   await expect(page.locator("#r2-tv-frame script")).toHaveCount(0);
   await expect(page.locator('.r2-quote-actions a[href="https://finance.yahoo.com/quote/LLY/"]')).toBeVisible();
   await expect(page.locator(".r2-quote-privacy")).toContainText("TradingView");
@@ -102,10 +121,12 @@ test.describe("ATELIER published-site regression",()=>{
   expect(JSON.parse(await script.textContent()).changeMode).toBe("price-and-percent");
   await expect(page.locator("#r2-quote-load")).toBeDisabled();
   await page.locator('.r2-company-row[data-val="US:WMT"]').click();
+  await page.locator(".desk-price-details > summary").click();
   await expect(page.locator("#r2-tv-frame script")).toHaveCount(0);
   await page.locator("#r2-quote-load").click();
   expect(JSON.parse(await page.locator("#r2-tv-frame script").textContent()).symbols[0][1]).toBe("NASDAQ:WMT|1D");
   await page.locator('.r2-company-row[data-val="KR:950260"]').click();
+  await page.locator(".desk-price-details > summary").click();
   await expect(page.locator('.r2-quote-actions a[href="https://finance.yahoo.com/quote/950260.KQ/"]')).toBeVisible();
   await page.locator("#r2-quote-load").click();
   expect(JSON.parse(await page.locator("#r2-tv-frame script").textContent()).symbols[0][1]).toBe("KRX:950260|1D");
@@ -192,15 +213,14 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
   await expect(page.locator(".r2-issue-gist").first()).toContainText("KB금융 이사회 관련 기사");
  });
- test("mobile 390px: menu, companies, hub and collapsed backup",async({page})=>{
+ test("mobile 390px: horizontal navigation, companies, hub and backup",async({page})=>{
   await page.setViewportSize({width:390,height:844});
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
-  await expect(page.locator("#mobile-menu")).toBeVisible();
-  await page.locator("#mobile-menu").click();
+  await expect(page.locator("#nav [data-page=companies]")).toBeVisible();
+  await expect(page.locator("#mobile-menu")).toBeHidden();
   await page.locator("#nav [data-page=companies]").click();
   await expect(page.locator("#page-crumb")).toHaveText("기업 분석");
   await expect(page.locator(".r2-company-list")).toBeVisible({timeout:20000});
-  await page.locator("#mobile-menu").click();
   await page.locator("#nav [data-page=hub]").click();
   await expect(page.locator("#page-crumb")).toHaveText("자료실");
   const backup=page.locator("details").filter({hasText:"개인 기록 백업·복원"}).first();
