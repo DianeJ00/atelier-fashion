@@ -75,7 +75,7 @@ const click=(kind,id,choice,value)=>{
  assert.ok(secDesk.includes("SEC 공시·분기 실적"));
  assert.ok(secDesk.includes("매출 증가, 영업이익 감소"),"summary derived from revenue and operating profit, not speculation");
  assert.ok(secDesk.includes("영업이익률"),"operating margin shown as arithmetic");
- assert.ok(secDesk.includes("전년 동기 -20.0%"),"verified GAAP year comparison preserved");
+ assert.ok(secDesk.includes("전년 동기 -20%"),"verified GAAP year comparison preserved");
  assert.ok(secDesk.includes("https://www.sec.gov/test"),"original filing links are retained");
  assert.ok(!secDesk.includes("AI 수혜")&&!secDesk.includes("매수 추천"),"no invented cause or recommendation");
  const workspace=window.ATELIER3.thesisWorkspace(universe);
