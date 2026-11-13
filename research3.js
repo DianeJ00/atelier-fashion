@@ -44,6 +44,99 @@ function peerComparison(company,universe){
   '<div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>기업</th><th>분기 종료</th><th>매출</th><th>전년 동기</th><th>영업이익률</th><th>근거</th></tr></thead><tbody>'+html+'</tbody></table></div>'+
   '<p class="r2-foot">SEC GAAP 기준·기업별 최신 확인 분기. 보고기간·사업 구성은 다르며 같은 산업 그룹이 직접 경쟁사를 뜻하지는 않습니다. 영업이익률은 영업이익/매출 계산치입니다.</p></details>';
 }
+/* SEC workbench: numerical summaries come only from matched quarter GAAP facts. */
+function secNumber(v){
+ if(!Number.isFinite(v))return "—";
+ const a=Math.abs(v),sign=v<0?"−":"";
+ return sign+"$"+(a>=1e9?format(a/1e9,2)+"B":a>=1e6?format(a/1e6,1)+"M":format(a,0));
+}
+function secDelta(m){
+ if(!Number.isFinite(m?.value)||!Number.isFinite(m?.yoy?.comparison?.value))return "전년 비교 없음";
+ const current=m.value,prior=m.yoy.comparison.value;
+ if(prior>0&&current<0)return "적자 전환";
+ if(prior<0&&current>0)return "흑자 전환";
+ if(prior<0&&current<0)return Math.abs(current)<Math.abs(prior)?"적자 축소":Math.abs(current)>Math.abs(prior)?"적자 확대":"적자 동일";
+ if(prior===0&&current!==0)return "비교 기준 0";
+ if(Number.isFinite(m.yoy.percent))return pct(m.yoy.percent);
+ return current===prior?"변동 없음":"전년 비교 없음";
+}
+function secDirection(m){
+ if(!Number.isFinite(m?.value)||!Number.isFinite(m?.yoy?.comparison?.value))return null;
+ const prior=m.yoy.comparison.value,current=m.value;
+ if(prior>=0&&current<0)return "loss";
+ if(prior<0&&current>=0)return "recovery";
+ if(prior<0&&current<0)return Math.abs(current)<Math.abs(prior)?"recovery":Math.abs(current)>Math.abs(prior)?"loss":"flat";
+ return current>prior?"up":current<prior?"down":"flat";
+}
+function secReadout(r){
+ const revenue=r.metrics?.revenue,operating=r.metrics?.operatingIncome;
+ const a=secDirection(revenue),b=secDirection(operating);
+ if(a==="up"&&b==="up")return "매출·영업이익 동반 증가";
+ if(a==="up"&&b==="down")return "매출 증가, 영업이익 감소";
+ if(a==="down"&&b==="up")return "매출 감소, 영업이익 개선";
+ if(a==="down"&&b==="down")return "매출·영업이익 동반 감소";
+ if(a==="up"&&b==="loss")return "매출 증가에도 영업손익 악화";
+ if(b==="loss")return "영업손익 악화 확인";
+ if(b==="recovery")return "영업손익 개선 확인";
+ if(a==="up")return "매출 증가 확인";
+ if(a==="down")return "매출 감소 확인";
+ return "공식 분기 수치 확인";
+}
+function secArchive(universe=[]){
+ const rows=(gaap?.companies||[]).filter(r=>r.status==="period_compared"&&Number.isFinite(r.metrics?.revenue?.value))
+  .sort((a,b)=>String(b.filed||"").localeCompare(String(a.filed||""))||String(a.ticker).localeCompare(String(b.ticker)));
+ if(!rows.length)return '<section class="sec-explorer"><div class="desk-page-title"><h1>SEC 공시·분기 실적</h1></div><p class="sec-empty">공식 분기 자료를 불러오는 중입니다.</p></section>';
+ const names=new Map(universe.map(c=>[c.ticker,c]));
+ const renderRow=r=>{
+  const co=names.get(r.ticker),metrics=r.metrics||{};
+  const revenue=metrics.revenue,operating=metrics.operatingIncome,net=metrics.netIncome;
+  const margin=Number.isFinite(operating?.value)&&revenue?.value>0?format(operating.value/revenue.value*100,1)+"%":"—";
+  const actualName=co?.name||r.companyName||r.ticker;
+  const headline=secReadout(r);
+  const period=fiscalQuarterLabel(r);
+  const check=(co?.kpis||[]).slice(0,2).join(" · ");
+  const columns=[["매출",revenue],["영업이익",operating],["순이익",net]].map(([name,m])=>
+   '<div class="sec-metric"><span>'+esc(name)+'</span><strong>'+secNumber(m?.value)+'</strong><small>전년 동기 '+esc(secDelta(m))+'</small></div>').join("");
+  return '<details class="sec-record" data-search="'+esc([r.ticker,actualName,co?.sector||""].join(" ").toLowerCase())+'">'+
+   '<summary><span class="sec-identity"><b>'+esc(r.ticker)+'</b><span>'+esc(actualName)+'</span></span>'+
+   '<span class="sec-period">'+esc(period)+'</span>'+
+   '<span class="sec-readout">'+esc(headline)+'</span>'+
+   '<span class="sec-primary">'+esc(secDelta(revenue))+'<small>매출 전년 대비</small></span>'+
+   '<span class="sec-chevron" aria-hidden="true">⌄</span></summary>'+
+   '<div class="sec-record-body"><div class="sec-metrics">'+columns+'</div>'+
+   '<div class="sec-result-line"><b>실적 해석</b><span>'+esc(headline)+' · 영업이익률 '+esc(margin)+'</span></div>'+
+   (check?'<div class="sec-result-line"><b>다음 확인 지표</b><span>'+esc(check)+' <small>· 투자 검증 질문, 공시 확정 사실 아님</small></span></div>':"")+
+   '<div class="sec-record-footer"><span>3개월 GAAP · '+esc(r.periodStart||"")+" ~ "+esc(r.periodEnd||"")+' · 접수 '+esc(r.filed||"")+'</span>'+
+   '<a href="'+uri(r.url)+'" target="_blank" rel="noopener noreferrer">SEC 공시 원문 ↗</a></div></div></details>';
+ };
+ return '<section class="sec-explorer"><div class="desk-page-title"><h1>SEC 공시·분기 실적</h1>'+
+  '<span>미국 기업 '+rows.length+'개 · '+esc(String(gaap?.generatedAt||"").slice(0,10))+' 자료</span></div>'+
+  '<div class="sec-workbench-head"><strong>기업별 최근 분기 실적</strong>'+
+  '<span>매출 · 영업이익 · 순이익</span></div>'+
+  '<div class="sec-find"><input type="search" id="sec-archive-search" autocomplete="off" aria-label="SEC 분기 실적 기업 검색" placeholder="기업명 · 티커 · 산업 검색"/>'+
+  '<span id="sec-visible-count">'+rows.length+'개 기업</span></div>'+
+  '<div class="sec-list-heading"><span>기업</span><span>회계 분기</span><span>확인된 변화</span><span>매출 증감</span><span></span></div>'+
+  '<div class="sec-record-list">'+rows.map(renderRow).join("")+'</div>'+
+  '<p class="sec-empty" id="sec-search-empty" hidden>검색 결과 없음</p>'+
+  '<p class="sec-method-note">SEC GAAP 약 3개월 분기 기준. 전년 동기와 동일 계정을 비교한 결과이며, ‘실적 해석’은 수치의 증감만 표현합니다. 원인·가이던스·투자 판단은 원문과 회사 발표 자료를 추가 확인해야 합니다. 한국 기업 DART 실적은 현재 이 목록에 포함되지 않습니다.</p>'+
+  '</section>';
+}
+document.addEventListener("input",event=>{
+ if(event.target?.id!=="sec-archive-search")return;
+ const search=String(event.target.value||"").trim().toLowerCase();
+ const items=document.querySelectorAll(".sec-record-list .sec-record");
+ let visible=0;
+ items.forEach(el=>{
+  const match=(el.getAttribute("data-search")||"").includes(search);
+  el.hidden=!match;
+  if(match)visible++;
+ });
+ const count=document.getElementById("sec-visible-count");
+ if(count)count.textContent=visible+"개 기업";
+ const empty=document.getElementById("sec-search-empty");
+ if(empty)empty.hidden=visible>0;
+});
+
 function secComparison(ticker){
  const r=gaap?.companies?.find(x=>x.ticker===ticker);
  if(!r||r.status==="source_unavailable")return '<p class="a3-source-wait">SEC GAAP 분기 비교 수집 대기 · 공식 확인 이전 수익률 추정 없음</p>';
@@ -589,6 +682,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
