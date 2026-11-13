@@ -93,7 +93,7 @@ function issuerSnapshot(company,secRow){
  const r=window.ATELIER_CONSUMER?.get?.(company.ticker);
  if(!r?.metrics?.length)return null;
  const same=!!(r.periodEnd&&secRow?.periodEnd&&r.periodEnd===secRow.periodEnd);
- const older=!!(r.periodEnd&&secRow?.periodEnd&&r.periodEnd<secRow.periodEnd);
+ const older=r.operatingKpiStatus==="older_than_latest_10q"||!!(r.periodEnd&&secRow?.periodEnd&&r.periodEnd<secRow.periodEnd);
  return {row:r,status:same?"동일 분기":older?"과거 분기":"기간 별도 대조"};
 }
 function issuerMetricValue(m){
@@ -182,6 +182,7 @@ document.addEventListener("click",event=>{
 });
 
 function secArchive(universe=[]){
+ secSectorFilter="전체";
  const rows=(gaap?.companies||[]).filter(r=>r.status==="period_compared"&&Number.isFinite(r.metrics?.revenue?.value))
   .sort((a,b)=>String(b.filed||"").localeCompare(String(a.filed||""))||String(a.ticker).localeCompare(String(b.ticker)));
  if(!rows.length)return '<section class="sec-explorer"><div class="desk-page-title"><h1>SEC 공시·분기 실적</h1></div><p class="sec-empty">공식 분기 자료를 불러오는 중입니다.</p></section>';
