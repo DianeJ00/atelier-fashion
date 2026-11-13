@@ -78,6 +78,20 @@ const click=(kind,id,choice,value)=>{
  assert.ok(secDesk.includes("전년 동기 -20%"),"verified GAAP year comparison preserved");
  assert.ok(secDesk.includes("https://www.sec.gov/test"),"original filing links are retained");
  assert.ok(!secDesk.includes("AI 수혜")&&!secDesk.includes("매수 추천"),"no invented cause or recommendation");
+ const pharma=universe.find(c=>c.ticker==="LLY"),fashion=universe.find(c=>c.ticker==="RL");
+ assert.ok(window.ATELIER3.companyEarningsLens(pharma).includes("제품별 매출·임상"),"pharma does not use generic retail KPI");
+ assert.ok(window.ATELIER3.companyEarningsLens(fashion).includes("정가 판매·마진"),"fashion checks sales quality");
+ assert.ok(window.ATELIER3.issuerLensBlock(pharma,trend.companies[0]).includes("개별 수치 확인 전"),
+  "do not invent product-specific earnings when SEC has only consolidated accounts");
+ window.ATELIER_CONSUMER={get:()=>({
+  period:"2026 Q2",periodEnd:"2026-06-30",
+  metrics:[{label:"총예약액",value:59.8,unit:"USD B",change:"20% 증가",basis:"운영 KPI · 매출 아님"}],
+  sourceURL:"https://example.org/issuer-q2"
+ })};
+ const dated=window.ATELIER3.issuerLensBlock(universe.find(c=>c.ticker==="UBER"),trend.companies[0]);
+ assert.ok(dated.includes("과거 분기"),"older issuer KPI cannot be presented as the latest SEC quarter");
+ assert.ok(dated.includes("$59.8B")&&dated.includes("총예약액"),"official non-GAAP operating metric is identifiable");
+ assert.ok(dated.includes("매출과 정의가 다름"),"prevent mixing gross bookings with GAAP revenue");
  const workspace=window.ATELIER3.thesisWorkspace(universe);
  assert.ok(workspace.includes("투자 가설")&&workspace.includes("투자 논리"));
  assert.ok(workspace.includes("새롭게 확인된 근거")&&workspace.includes("반증 조건과 다음 확인"));
