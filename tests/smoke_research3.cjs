@@ -34,11 +34,13 @@ const weekly={
    sourceUrl:"https://www.sec.gov/test"}],
  upcomingClinical:[],staleConsumerKpi:[]};
 const trend={companies:[
- {ticker:"UBER",periodStart:"2026-07-01",periodEnd:"2026-09-30",
+ {ticker:"UBER",status:"period_compared",periodStart:"2026-07-01",periodEnd:"2026-09-30",
   fiscalYear:2026,fiscalPeriod:"Q3",filed:"2026-11-05",
   url:"https://www.sec.gov/test",metrics:{
    revenue:{value:14000000000,yoy:{percent:9.6,comparison:{start:"2025-07-01",end:"2025-09-30",value:13000000000}},
-           qoq:{percent:4.3,comparison:{start:"2026-04-01",end:"2026-06-30",value:13500000000}}}
+           qoq:{percent:4.3,comparison:{start:"2026-04-01",end:"2026-06-30",value:13500000000}}},
+   operatingIncome:{value:200000000,yoy:{percent:-20,comparison:{value:250000000}}},
+   netIncome:{value:130000000,yoy:{percent:5,comparison:{value:123809523}}}
   }}
  ]};
 const feed={"atelier-weekly.json":weekly,"sec-trends.json":trend};
@@ -69,6 +71,13 @@ const click=(kind,id,choice,value)=>{
  const company={id:"US:UBER",ticker:"UBER",name:"Uber",focus:"수익화",risk:"할인 경쟁"};
  const universe=JSON.parse(read("research-universe.json")).companies;
  assert.equal(universe.length,52);
+ const secDesk=window.ATELIER3.secArchive(universe);
+ assert.ok(secDesk.includes("SEC 공시·분기 실적"));
+ assert.ok(secDesk.includes("매출 증가, 영업이익 감소"),"summary derived from revenue and operating profit, not speculation");
+ assert.ok(secDesk.includes("영업이익률"),"operating margin shown as arithmetic");
+ assert.ok(secDesk.includes("전년 동기 -20.0%"),"verified GAAP year comparison preserved");
+ assert.ok(secDesk.includes("https://www.sec.gov/test"),"original filing links are retained");
+ assert.ok(!secDesk.includes("AI 수혜")&&!secDesk.includes("매수 추천"),"no invented cause or recommendation");
  const workspace=window.ATELIER3.thesisWorkspace(universe);
  assert.ok(workspace.includes("투자 가설")&&workspace.includes("투자 논리"));
  assert.ok(workspace.includes("새롭게 확인된 근거")&&workspace.includes("반증 조건과 다음 확인"));
