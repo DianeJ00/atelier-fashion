@@ -22,6 +22,28 @@ function fiscalQuarterLabel(r){
   return "FY"+String(year).slice(-2)+" "+quarter.slice(1)+"Q";
  return r?.periodEnd?String(r.periodEnd).slice(0,7).replace("-",".")+" 종료 분기":"회계분기 확인 대기";
 }
+function peerComparison(company,universe){
+ if(company?.market!=="미국"||!gaap?.companies?.length)return "";
+ const listed=(universe||[]).filter(x=>x.market==="미국"&&x.sector===company.sector);
+ const resolved=listed.map(c=>({company:c,row:gaap.companies.find(r=>r.ticker===c.ticker)}))
+  .filter(x=>Number.isFinite(x.row?.metrics?.revenue?.value));
+ const selected=resolved.find(x=>x.company.id===company.id);
+ if(!selected)return "";
+ const others=resolved.filter(x=>x.company.id!==company.id)
+  .sort((a,b)=>String(b.row.filed||"").localeCompare(String(a.row.filed||""))).slice(0,4);
+ const rows=[selected,...others];
+ const html=rows.map(x=>{
+  const revenue=x.row.metrics.revenue,operating=x.row.metrics.operatingIncome;
+  const margin=Number.isFinite(operating?.value)&&revenue.value>0?format(operating.value/revenue.value*100,1)+"%":"—";
+  const yoy=Number.isFinite(revenue.yoy?.percent)?pct(revenue.yoy.percent):"—";
+  return '<tr'+(x.company.id===company.id?' class="a3-peer-selected"':'')+'><td><b>'+esc(x.company.ticker)+'</b><small>'+esc(x.company.name)+'</small></td>'+
+   '<td>'+esc(x.row.periodEnd||"—")+'</td><td>'+esc(usd(revenue.value))+'</td><td>'+esc(yoy)+'</td><td>'+esc(margin)+'</td>'+
+   '<td><a href="'+uri(x.row.url)+'" target="_blank" rel="noopener noreferrer">SEC 원문 ↗</a></td></tr>';
+ }).join("");
+ return '<details class="a3-peer-compare"><summary>같은 산업 그룹의 공식 분기 실적 비교 ('+rows.length+'개)</summary>'+
+  '<div class="r2-table-scroll"><table class="r2-table"><thead><tr><th>기업</th><th>분기 종료</th><th>매출</th><th>전년 동기</th><th>영업이익률</th><th>근거</th></tr></thead><tbody>'+html+'</tbody></table></div>'+
+  '<p class="r2-foot">SEC GAAP 기준·기업별 최신 확인 분기. 보고기간·사업 구성은 다르며 같은 산업 그룹이 직접 경쟁사를 뜻하지는 않습니다. 영업이익률은 영업이익/매출 계산치입니다.</p></details>';
+}
 function secComparison(ticker){
  const r=gaap?.companies?.find(x=>x.ticker===ticker);
  if(!r||r.status==="source_unavailable")return '<p class="a3-source-wait">SEC GAAP 분기 비교 수집 대기 · 공식 확인 이전 수익률 추정 없음</p>';
@@ -150,6 +172,15 @@ function companyMemo(c){
  '<div class="t4-quickmemo-head"><h3>나의 메모</h3><small>'+lastUpdate+'</small></div>'+
  '<div class="t4-baseline"><b>투자 논리 · 초기 검증 질문</b><p>'+esc(c.focus||"기업 공식 자료를 확인한 뒤 투자 논리를 작성하세요.")+'</p>'+
  '<small>위 문장은 출발점이며 확정된 투자 가설이 아닙니다.</small></div>'+
+ (()=>{const event=reviewFor(id);if(!event)return "";
+  const done=evidenceReviewed(id,event);
+  return '<section class="t4-evidence-review"><div><b>새로 확인할 근거</b><small>'+esc(event.evidenceDate||"날짜 미확인")+'</small></div>'+
+   '<p>'+esc(event.change||"원문 확인 필요")+'</p>'+
+   '<a href="'+uri(event.sourceUrl)+'" target="_blank" rel="noopener noreferrer">근거 원문 확인 ↗</a>'+
+   (done?'<span class="t4-evidence-done">검토 완료로 기록됨</span>':
+   '<button type="button" data-a3="reviewEvidence" data-id="'+esc(id)+'">원문 검토 후 확인 완료</button>')+
+   '<small>메모와 독립된 확인 상태이며, 투자 판단 강화·약화를 자동 확정하지 않습니다.</small></section>';
+ })()+
  '<label class="t4-field"><span>나의 투자 논리 <em>한 줄 · 직접 수정 가능</em></span>'+
  '<textarea data-a3-quick-thesis="'+esc(id)+'" rows="2" maxlength="600" placeholder="예: 광고 성장과 구독 수익화 → 영업이익·FCF 증가">'+esc(hyp)+'</textarea></label>'+
  '<label class="t4-field"><span>새 메모 <em>저장 시 날짜·시각 자동 기록</em></span>'+
@@ -246,6 +277,27 @@ function reviewFor(companyId){
  const t=report?.reviewCandidates?.find(x=>x.companyId===companyId);
  return t||null;
 }
+/* A memo edit is not proof that the investor reviewed the latest evidence. */
+function evidenceKey(event){
+ return [event?.evidenceDate||"",event?.sourceUrl||"",event?.change||""].join("|");
+}
+function evidenceReviewed(id,event){
+ return !!(event&&records[id]?.reviewedEvidence?.[evidenceKey(event)]);
+}
+function markEvidenceReviewed(id){
+ const event=reviewFor(id);
+ if(!event)return false;
+ const existing=records[id]||{};
+ const next={...existing,reviewedEvidence:{...(existing.reviewedEvidence||{}),[evidenceKey(event)]:new Date().toISOString()}};
+ try{
+  localStorage.setItem(KEY,JSON.stringify({...records,[id]:next}));
+  records[id]=next;thesisUI.saveError="";
+  return true;
+ }catch(_){
+  thesisUI.saveError="검토 확인 상태를 저장하지 못했습니다. 브라우저 저장 공간을 확인해 주세요.";
+  return false;
+ }
+}
 function statusLine(id){
  const item=records[id];
  if(!item)return '<span class="a3-unreviewed">담당자 확정 전</span>';
@@ -295,18 +347,17 @@ function industryOverview(){
  }).join('')+'</div></section>';
 }
 function overviewSignals(){
- const items=(report?.items||[]).slice(0,3);
- return '<section class="a5-overview-signals"><div class="a5-section-head"><div><span class="a3-kicker">03 · 이번 주 투자 신호</span><h2>원문으로 확인한 변화 TOP 3</h2><p>핵심 제목만 제공합니다. 사실·실적 영향·해석 한계는 주간 리서치에서 확인하세요.</p></div><button type="button" data-a3="openWeekly">전체 주간 보고서 →</button></div>'+
+ const verified=(report?.items||[]).filter(x=>String(x.tier||"").startsWith("공식 ")||x.tier==="편집 원문 대조");
+ const rank=x=>String(x.tier||"").startsWith("공식 ")?0:1;
+ const items=verified.slice().sort((a,b)=>rank(a)-rank(b)||String(b.eventDate||"").localeCompare(String(a.eventDate||""))).slice(0,3);
+ return '<section class="a5-overview-signals"><div class="a5-section-head"><div><span class="a3-kicker">03 · 검토 우선 근거</span><h2>먼저 확인할 변화 3건</h2><p>공식 공시 우선, 같은 검증 수준에서는 최근 사건 순서입니다. 주가 영향이나 투자 매력도 순위는 아닙니다.</p></div><button type="button" data-a3="openWeekly">전체 주간 보고서 →</button></div>'+
  (items.length?'<div class="a5-signal-list">'+items.map((x,i)=>
- '<div class="a5-signal"><span class="a5-signal-num">'+String(i+1).padStart(2,"0")+'</span><div><b>'+esc(x.title)+'</b><small>'+esc(x.sector)+' · '+esc(x.eventDate)+' · '+esc(x.tier||x.eventType)+'</small></div></div>'
+ '<div class="a5-signal"><span class="a5-signal-num">'+String(i+1).padStart(2,"0")+'</span><div><b>'+esc(x.title)+'</b><small>'+esc(x.sector)+' · '+esc(x.eventDate)+' · '+esc(x.tier||x.eventType)+'</small><small>선정 기준: '+(rank(x)===0?'공식 공시·실적 확인':'편집 원문 확인')+'</small></div></div>'
  ).join('')+'</div>':'<p class="a3-empty">현재 보고기간에 원문으로 확인된 신규 사건이 없거나 자료 수집 중입니다.</p>')+'</section>';
 }
 function attentionQueue(){
  if(!report)return '<section class="a5-attention"><div class="a5-section-head"><div><span class="a3-kicker">04 · 투자 판단</span><h2>새 근거를 검토할 기업</h2></div></div><p class="a3-empty">공식 근거와 판단 대기 목록을 불러오는 중입니다.</p></section>';
- const pending=(report.reviewCandidates||[]).filter(x=>{
-  const recorded=records[x.companyId]?.at;
-  return !recorded||String(recorded).slice(0,10)<String(x.evidenceDate||"");
- });
+ const pending=(report.reviewCandidates||[]).filter(x=>!evidenceReviewed(x.companyId,x));
  return '<section class="a5-attention"><div class="a5-section-head"><div><span class="a3-kicker">04 · 투자 판단</span><h2>새 근거를 검토할 기업</h2><p>근거가 생겼지만 담당자가 아직 확인하지 않은 기업입니다. 자동으로 강화·약화를 판정하지 않습니다.</p></div><span class="a5-count">'+pending.length+'개</span></div>'+
  (pending.length?'<div class="a5-attention-list">'+pending.slice(0,5).map(x=>
  '<button type="button" data-a3="goDecision" data-id="'+esc(x.companyId)+'"><b>'+esc(x.ticker)+'</b><span>'+esc(x.change)+'</span><small>투자 판단 검토 →</small></button>'
@@ -316,8 +367,7 @@ function attentionQueue(){
 function reviewQueue(sector="전체"){
  if(!report)return '<p class="a5-queue-empty">판단 대기 목록을 불러오는 중입니다.</p>';
  const all=(report.reviewCandidates||[]).filter(x=>sector==="전체"||x.sector===sector);
- const pending=all.filter(x=>!records[x.companyId]?.at||
-  String(records[x.companyId].at).slice(0,10)<String(x.evidenceDate||""));
+ const pending=all.filter(x=>!evidenceReviewed(x.companyId,x));
  if(!pending.length)return '<p class="a5-queue-empty">현재 해당 산업에 담당자 판단을 기다리는 신규 근거가 없습니다.</p>';
  return '<section class="a5-review-queue"><div class="a5-section-head"><div><h3>판단이 필요한 기업</h3><p>가설 결론은 기업별 「투자 판단」에서 직접 확정합니다.</p></div><span class="a5-count">'+pending.length+'개</span></div>'+
  '<div class="a5-review-rows">'+pending.map(x=>
@@ -412,7 +462,14 @@ document.addEventListener("click",e=>{
  const b=e.target.closest("[data-a3]");if(!b)return;
  e.preventDefault();e.stopImmediatePropagation();
  const kind=b.dataset.a3,id=b.dataset.id;
- if(kind==="memoSave"){
+ if(kind==="reviewEvidence"){
+  if(markEvidenceReviewed(id)){
+   b.textContent="근거 검토 완료로 기록됨";b.disabled=true;b.classList.add("is-reviewed");
+  }else{
+   const line=b.closest(".t4-evidence-review")?.querySelector("small:last-child");
+   if(line)line.textContent=thesisUI.saveError;
+  }
+ }else if(kind==="memoSave"){
    const thesis=document.querySelector('[data-a3-quick-thesis="'+id+'"]');
    const note=document.querySelector('[data-a3-quick-entry="'+id+'"]');
    const previous=records[id]||{};
@@ -509,6 +566,6 @@ async function load(){
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get records(){return records}};
 })();
