@@ -17,6 +17,29 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-detail-tabs button.is-active")).toHaveText("실적·이슈");
  });
 
+ test("SEC archive: verified quarter summary, searchable coverage and hidden operations",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator("#nav [data-page=hub]").click();
+  await expect(page.locator('.hub-tab.active[data-hub-tab="official"]')).toBeVisible();
+  await expect(page.locator(".sec-record")).toHaveCount(47,{timeout:20000});
+  await expect(page.locator(".h7-panel")).toHaveCount(0);
+  await expect(page.locator("#sec-visible-count")).toHaveText("47개 기업");
+  await page.locator("#sec-archive-search").fill("CAVA");
+  const items=page.locator(".sec-record:visible");
+  await expect(items).toHaveCount(1);
+  await expect(items.first()).toContainText("매출 증가, 영업이익 감소");
+  await items.first().locator("summary").click();
+  await expect(items.first()).toContainText("$356.4M");
+  await expect(items.first()).toContainText("영업이익률");
+  await expect(items.first()).toContainText("다음 확인 지표");
+  await expect(items.first().locator(".sec-record-footer a")).toHaveAttribute("href",/sec\.gov/);
+  await page.locator("#sec-archive-search").fill("zzzzzz");
+  await expect(page.locator("#sec-visible-count")).toHaveText("0개 기업");
+  await expect(page.locator("#sec-search-empty")).toBeVisible();
+  await page.locator('[data-action="hubTab"][data-hub-tab="settings"]').click();
+  await expect(page.locator(".hub-audit-details")).toBeVisible();
+  await expect(page.locator(".h7-panel")).toBeHidden();
+ });
  test("desktop: 52 companies, weekly navigation, private backup round trip",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
   await expect(page.locator("#nav [data-page=overview]")).toBeVisible();
@@ -26,6 +49,7 @@ test.describe("ATELIER published-site regression",()=>{
   await page.locator("#nav [data-page=insights]").click();
   await expect(page.locator("#page-crumb")).toHaveText("주간 리서치");
   await page.locator("#nav [data-page=hub]").click();
+  await page.locator('[data-action="hubTab"][data-hub-tab="settings"]').click();
   const archive=page.locator("details").filter({hasText:"개인 기록 백업·복원"}).first();
   await archive.locator("summary").click();
   await expect(page.locator('[data-personal-backup="export"]')).toBeVisible();
@@ -222,6 +246,7 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator("#page-crumb")).toHaveText("기업 분석");
   await expect(page.locator(".r2-company-list")).toBeVisible({timeout:20000});
   await page.locator("#nav [data-page=hub]").click();
+  await page.locator('[data-action="hubTab"][data-hub-tab="settings"]').click();
   await expect(page.locator("#page-crumb")).toHaveText("자료실");
   const backup=page.locator("details").filter({hasText:"개인 기록 백업·복원"}).first();
   await backup.locator("summary").click();
