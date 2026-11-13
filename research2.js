@@ -373,18 +373,15 @@ function companyIssuePanel(company){
  '</div><small class="r2-issue-disclaimer">원문 대조 요약은 확인된 관찰문에 근거합니다. RSS는 제목의 주제만 분류하므로 세부 사실·투자 영향은 원문을 확인해야 합니다.</small></section>';
 }
 function verifiedResultPanel(company){
- let results="";
- if(company.market==="한국"){
-  results=window.ATELIER_KOREA?.card(company)||'<p class="r2-issues-empty">국내 DART 공식 재무자료 연결 대기</p>';
- }else{
-  results=(company.sector==="소비재·서비스"?
-   window.ATELIER_CONSUMER?.card(company)||"":"")+
-   (window.ATELIER3?.secComparison(company.ticker)||"");
- }
- const kpis=(company.kpis||[]).slice(0,2);
- return '<div class="r2-detail-body r2-results-issues">'+results+(window.ATELIER3?.peerComparison?.(company,companies())||'')+companyIssuePanel(company)+
- (kpis.length?'<div class="r2-next-kpis"><b>다음 실적에서 확인</b><span>'+
- kpis.map(esc).join(' · ')+'</span></div>':'')+'</div>';
+ const guide=window.ATELIER3?.companyEarningsLens?.(company)||"";
+ const official=company.market==="한국"?
+  (window.ATELIER_KOREA?.card(company)||'<p class="r2-issues-empty">국내 DART 공식 재무자료 연결 대기</p>'):
+  ((company.sector==="소비재·서비스"?(window.ATELIER_CONSUMER?.card(company)||""):"")+
+   (window.ATELIER3?.secComparison(company.ticker)||""));
+ const peers=window.ATELIER3?.peerComparison?.(company,companies())||"";
+ return '<div class="r2-detail-body r2-results-issues">'+guide+
+  '<div class="e8-financial-label"><b>공식 확인 실적</b><span>보고기간·GAAP 및 회사 운영지표 구분</span></div>'+
+  official+peers+companyIssuePanel(company)+'</div>';
 }
 function detailBody(company){
  if(state.detailTab==="핵심 KPI"||state.detailTab==="실적·이슈")return verifiedResultPanel(company);
@@ -435,7 +432,7 @@ function companyDetail(company){
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
  <div class="r2-share-row"><button type="button" class="r2-link" data-r2="shareCompany">공유 ↗</button></div>
   ${moveEventForCompany(company)}
- ${company.sector==='소비재·서비스'?window.ATELIER_CONSUMER?.small(company)||'':''}
+ 
  ${detailTabs(company)}${detailBody(company)}
  <details class="desk-price-details"><summary>주가 · 차트 및 시장 비교 <span aria-hidden="true">+</span></summary>
  ${quotePanel(company)}
