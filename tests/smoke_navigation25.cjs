@@ -67,22 +67,24 @@ function click(key,value){
  assert.equal(window.ATELIER2.data.companies.length,52);
  const home=window.ATELIER2.overview();
  const order=[
-   home.indexOf("시장 대비 산업 상대강도"),
-   home.indexOf("산업별 핵심 변화"),
-   home.indexOf("먼저 확인할 변화 3건"),
-   home.indexOf("새 근거를 검토할 기업")
+   home.indexOf("새로 확인된 변화"),
+   home.indexOf("검토할 기업"),
+   home.indexOf("산업별"),
+   home.indexOf("시장 상대강도")
  ];
- assert.ok(order.every(v=>v>=0),"all four current stages visible");
- assert.deepEqual(order,order.slice().sort((a,b)=>a-b),"market -> industry -> signals -> decision");
+ assert.ok(order.every(v=>v>=0),"all four research sections available");
+ assert.deepEqual(order,order.slice().sort((a,b)=>a-b),"changes -> review queue -> industries -> market");
+ assert.ok(home.includes('class="desk-market-details"'),"market detail is collapsed by default");
+ assert.ok(home.includes('data-a3="openSignalCompany"'),"signals open company evidence");
  assert.ok(!home.includes("바이오 치료제 개발·시험 일정"),"no homepage clinical detail duplicate");
  assert.ok(!home.includes("산업별 분석 기준"),"no duplicate shortcut section");
  assert.ok(!home.includes("미국 소비재 공식 실적 요약"),"no duplicate issuer KPI report on home");
  assert.ok(!home.includes('class="a3-change"'),"homepage only headlines, not verbose weekly cards");
- assert.ok(home.includes("공식 공시 우선"),"home explains ranking policy");
+ assert.ok(home.includes("공식 자료 우선"),"home explains ranking policy");
  assert.ok(!home.includes("원문으로 확인한 변화 TOP 3"),"avoid ungrounded investment ranking");
  assert.equal((home.match(/class="a5-industry"/g)||[]).length,4);
  const weeklyAll=window.ATELIER2.weeklyIntro();
- assert.ok(weeklyAll.includes("산업별")||weeklyAll.includes("이번 주 투자 리서치"));
+ assert.ok(weeklyAll.includes("주간 리서치"));
  assert.equal((weeklyAll.match(/class="a3-report"/g)||[]).length,1);
  assert.ok(weeklyAll.includes("판단이 필요한 기업")||weeklyAll.includes("담당자 판단"));
  assert.ok(!weeklyAll.includes('class="r2-weekly-grid"'),"no decorative repeated industry tiles");
