@@ -83,7 +83,7 @@ const click=(key,value)=>callbacks.click({
    const first=clinical.assets.find(x=>x.ticker==="LLY"&&x.trials?.length);
    if(first)assert.ok(win.ATELIER2.companyPage().includes(first.trials[0].nctId));
  }
- assert.ok(win.ATELIER2.weeklyIntro().includes("이번 주 투자 리서치"));
+ assert.ok(win.ATELIER2.weeklyIntro().includes("주간 리서치"));
  click("weeklySector","바이오·제약");
  assert.ok(win.ATELIER2.weeklyIntro().includes("바이오 등록시험 · 질환별 연구 일정·원자료 자세히 보기"));
  if(win.ATELIER2.clinical?.weeklyInterpretation?.length){
