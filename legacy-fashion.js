@@ -20,7 +20,7 @@ const peers=D.peers||[];
 const groups=['전체',...new Set(peers.map(p=>p.group))];
 const pages={overview:'전체 현황',insights:'주간 리서치',companies:'기업 분석',hub:'자료실'};
 let notes=[];try{notes=JSON.parse(localStorage.getItem('atelierNotes')||'[]')||[]}catch{notes=[]}
-let state={r2LegacyFashion:false,page:'overview',selected:'TPR',group:'전체',brandGroup:'전체',search:'',brandSearch:'',sortKey:'ticker',sortDir:1,notesPlatform:'전체',notesTicker:'전체',notesTone:'전체',notesStatus:'전체',notesQuery:'',notesBrand:'전체',notesOrder:'recent',newsTicker:'전체',trendTab:'lyst',hubTab:'calendar',companyTab:'peers',insightTab:'trends',brandLimit:12,advancedOpen:false,thesisTicker:'전체',socialTicker:'전체',socialPlatform:'전체',socialQuery:'',socialLimit:25,evidenceTab:'incoming'};
+let state={r2LegacyFashion:false,page:'overview',selected:'TPR',group:'전체',brandGroup:'전체',search:'',brandSearch:'',sortKey:'ticker',sortDir:1,notesPlatform:'전체',notesTicker:'전체',notesTone:'전체',notesStatus:'전체',notesQuery:'',notesBrand:'전체',notesOrder:'recent',newsTicker:'전체',trendTab:'lyst',hubTab:'official',companyTab:'peers',insightTab:'trends',brandLimit:12,advancedOpen:false,thesisTicker:'전체',socialTicker:'전체',socialPlatform:'전체',socialQuery:'',socialLimit:25,evidenceTab:'incoming'};
 let toastTimer;
 function notify(msg){let e=$('#toast');e.textContent=msg;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3100)}
 const badge=(t,c='')=>`<span class="pill ${c}">${esc(t)}</span>`;
@@ -67,12 +67,8 @@ function financialSummary(){
  <p class="source-note">GAAP 기준 분기 매출. 기업 간 회계기간과 집계 기준 차이에 주의하세요. 기존 시세·PER은 과거 스냅샷입니다.</p></section>`;
 }
 function officialPage(){
- const rows=officialData?.sourceStatus==='configuration_required'?[]:(officialData?.companies||[]),checks=weeklyInvestment?.companies||[];
- return `${head('공식 실적','SEC 공시·분기 실적','10-Q 공시의 제출번호와 일치하는 약 3개월 US-GAAP 숫자만 표시합니다. 조정 실적·브랜드 매출은 별도 검증 대상입니다.',officialData?.generatedAt?'조회 '+esc(officialData.generatedAt.slice(0,10)):'SEC 조회 대기')}
- <div class="data-alert">GAAP와 조정 실적, FY/CY, 분기·누적을 섞지 않습니다. SEC 접근이 거절되면 미확인으로 표시합니다. <b>자동 조회 시작:</b> GitHub → Settings → Secrets and variables → Actions에서 <code>SEC_USER_AGENT</code> (식별 이름 및 연락 이메일)를 설정하세요. <a target="_blank" rel="noopener noreferrer" href="https://github.com/DianeJ00/atelier-fashion/settings/secrets/actions">설정 열기 ↗</a></div>
- <div class="table-wrap"><table class="peer-table official-table"><thead><tr><th>기업</th><th>최신 보고서</th><th>확인된 10-Q 분기 매출</th><th>전년 동기</th><th>다음 검증</th><th>SEC 출처</th></tr></thead><tbody>
- ${rows.length?rows.map(x=>{let v=x.quarter?.metrics?.revenue,ok=x.status==='quarter_verified'&&v,l=x.latestReport||{},c=checks.find(z=>z.ticker===x.ticker);return `<tr><td class="ticker-cell">${esc(x.ticker)}<em>${esc(x.companyName||'')}</em></td><td>${esc(l.form||'—')} · ${esc(l.filed||'')}</td><td><b>${ok?officialUsd(v.value):'확인 대기'}</b><div class="source-note">${ok?esc(x.quarter.periodStart+' ~ '+x.quarter.periodEnd):'분기 사실 검증 전'}</div></td><td class="mono">${ok&&typeof v.yoyPercent==='number'?pct(v.yoyPercent):'—'}</td><td>${esc(c?.nextCheck||'공시 원문 대조')}</td><td>${l.url?`<a href="${safeURL(l.url)}" target="_blank" rel="noopener noreferrer">SEC 원문 ↗</a>`:'—'}</td></tr>`}).join(''):'<tr><td colspan="6">SEC_USER_AGENT를 설정한 뒤 수집을 실행하면 공식 공시와 분기 실적을 확인할 수 있습니다.</td></tr>'}
- </tbody></table></div><p class="source-note" style="margin-top:11px">수집 상태: ${esc(officialData?.sourceStatus||'미실행')} · ${esc(officialData?.method||'SEC EDGAR 원본 기준')} · 공시가 없어도 추정치로 대체하지 않습니다.</p>`;
+ const records=window.ATELIER3?.secArchive?.(window.ATELIER2?.data?.companies||[]);
+ return records||'<div class="sec-explorer"><div class="desk-page-title"><h1>SEC 공시·분기 실적</h1></div><p class="sec-empty">공식 실적을 불러오는 중입니다.</p></div>';
 }
 function consumerSamplePanel(){
  const d=consumerData||{},rows=d.videos||[],num=rows.reduce((a,x)=>a+(x.sampledTopLevelComments||0),0);
@@ -314,7 +310,7 @@ function personalBackupControls(){
  '<button type="button" class="btn btn-ghost btn-small" data-personal-backup="import">전체 기록 복원</button></div>'+
  '<p id="personal-backup-status" role="status" style="margin-top:10px;font-size:12px"></p></div></details>';
 }
-function hubPage(){const summary=window.ATELIER_HEALTH?.panel()||'';const tabs=[['calendar','실적 일정'],['official','공식 실적·이전 스냅샷'],['feed','공시·뉴스 원문'],['settings','데이터 연결 상태']];return summary+personalBackupControls()+`<div class="hub-tabbar" role="tablist" aria-label="리서치 운영"><span>자료실</span>${tabs.map(([id,label])=>`<button role="tab" aria-selected="${state.hubTab===id}" class="hub-tab ${state.hubTab===id?'active':''}" data-action="hubTab" data-hub-tab="${id}">${label}</button>`).join('')}</div>`+({'feed':feedPage,'calendar':calendarPage,'official':officialPage,'settings':settingsPage}[state.hubTab]||calendarPage)()+(state.hubTab==='official'?legacyOverviewArchive():'')}
+function hubPage(){const tabs=[['official','SEC 공시·분기 실적'],['calendar','실적 일정'],['feed','공시·뉴스 원문'],['settings','데이터 관리']];return `<div class="hub-tabbar" role="tablist" aria-label="리서치 운영"><span>자료실</span>${tabs.map(([id,label])=>`<button role="tab" aria-selected="${state.hubTab===id}" class="hub-tab ${state.hubTab===id?'active':''}" data-action="hubTab" data-hub-tab="${id}">${label}</button>`).join('')}</div>`+({'feed':feedPage,'calendar':calendarPage,'official':officialPage,'settings':settingsPage}[state.hubTab]||calendarPage)()+(state.hubTab==='settings'?personalBackupControls()+'<details class="hub-audit-details"><summary>데이터 수집·점검 기록</summary>'+(window.ATELIER_HEALTH?.panel()||'')+'</details>':'')}
 function legacyCompanyPage(){
  const tabs=[['peers','기업 비교'],['brands','브랜드별 분석']];
  return `<div class="section-tabs" role="tablist" aria-label="기업·브랜드 메뉴">${tabs.map(([id,label])=>`<button role="tab" aria-selected="${state.companyTab===id}" class="section-tab ${state.companyTab===id?'active':''}" data-action="companyTab" data-company-tab="${id}">${label}</button>`).join('')}</div>` + (state.companyTab==='brands'?brandsPage():peersPage());
