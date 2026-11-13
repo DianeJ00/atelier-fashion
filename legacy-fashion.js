@@ -338,7 +338,7 @@ window.atelierGotoCompanyDecision=(id)=>{const r=window.ATELIER2?.state;if(r){r.
 window.atelierLegacyThesesFor=(ticker)=>(D.research?.theses||[]).filter(x=>x.ticker===ticker);
 window.atelierLegacyFashion=()=>{state.r2LegacyFashion=true;state.companyTab='peers';nav('companies')};
 // Load source groups only when the requested menu needs them.
-let extraRequested=false,detailRequested=false,issuerRequested=false;
+let extraRequested=false,detailRequested=false,issuerRequested=false,consumerRequested=false;
 function primePageData(page){
  if((page==='insights'||page==='hub')&&!extraRequested){
   extraRequested=true;
@@ -348,12 +348,13 @@ function primePageData(page){
   detailRequested=true;
   Promise.resolve(window.ATELIER2?.loadDetails?.()).catch(()=>{detailRequested=false});
  }
+ if((page==='companies'||page==='hub')&&!consumerRequested){
+  consumerRequested=true;
+  Promise.resolve(window.ATELIER_CONSUMER?.load?.()).catch(()=>{consumerRequested=false});
+ }
  if(page==='companies'&&!issuerRequested){
   issuerRequested=true;
-  Promise.all([
-   Promise.resolve(window.ATELIER_CONSUMER?.load?.()),
-   Promise.resolve(window.ATELIER_KOREA?.load?.())
-  ]).catch(()=>{issuerRequested=false});
+  Promise.resolve(window.ATELIER_KOREA?.load?.()).catch(()=>{issuerRequested=false});
  }
 }
 function nav(page){if(page==='theses'){window.atelierGotoCompanyDecision();return}if(['peers','brands'].includes(page)){state.companyTab=page;page='companies'}if(page==='trends'){state.insightTab='trends';page='insights'}if(page==='evidence'){state.insightTab='verified';page='insights'}if(['feed','calendar','official','settings'].includes(page)){state.hubTab=page;page='hub'}if(!pages[page])return;state.page=page;primePageData(page);document.querySelector('#sidebar')?.classList.remove('open');document.body.classList.remove('menu-open');render();window.scrollTo({top:0,behavior:'smooth'})}
