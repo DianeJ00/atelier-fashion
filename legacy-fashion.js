@@ -31,6 +31,21 @@ function start(){
  $('#top-datum').textContent='최신 자료 점검 확인 중 · 시세는 출처별 기준일';
  $('#status-short').textContent='시세 출처별 확인 중';
  $('#snapshot-short').textContent='기존 패션 시세 '+(D.meta?.snapshotDate||'기준일 미확인').slice(0,10);
+ // A copied company URL opens the exact analysis panel on a fresh page load.
+ const params=typeof URLSearchParams!=="undefined"&&window.location?.search?
+  new URLSearchParams(window.location.search):null;
+ const companyId=params?.get("company")||"";
+ const requestedTab=params?.get("tab")||"사업 이해";
+ if(/^(US|KR):[A-Za-z0-9._-]{1,32}$/.test(companyId)){
+  const detail=window.ATELIER2?.state;
+  if(detail){
+   detail.selected=companyId;detail.sector="전체";detail.market="전체";
+   detail.disease="전체";detail.search="";
+   detail.detailTab=["사업 이해","실적·이슈","파이프라인","나의 메모"].includes(requestedTab)?requestedTab:"사업 이해";
+   state.page="companies";
+   primePageData("companies");
+  }
+ }
  render();window.ATELIER2?.load();window.ATELIER3?.load();window.ATELIER_HEALTH?.load();
 }
 function head(eyebrow,title,description,side=''){return `<div class="section-head"><div><div class="eyebrow">${eyebrow}</div><h1>${title}</h1><div class="lead">${description}</div></div>${side?`<div class="small-meta">${side}</div>`:''}</div>`}
