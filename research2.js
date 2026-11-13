@@ -435,6 +435,9 @@ function companyDetail(company){
  <div class="r2-disease-tags">${pill(company.domain||company.disease||company.sector)}${isBio?pill(company.technology):''}${company.market==='한국'?pill('기존 담당 기업'):''}</div></div>
  <div class="r2-share-row"><button type="button" class="r2-link" data-r2="shareCompany">공유 ↗</button></div>
   ${moveEventForCompany(company)}
+ ${company.sector==='소비재·서비스'?window.ATELIER_CONSUMER?.small(company)||'':''}
+ ${detailTabs(company)}${detailBody(company)}
+ <details class="desk-price-details"><summary>주가 · 차트 및 시장 비교 <span aria-hidden="true">+</span></summary>
  ${quotePanel(company)}
  <div class="r2-comparison-mini"><span>지수 비교</span><b>${esc(state.benchmark)} · ${esc(periods.find(x=>x[0]===state.period)?.[1]||'3개월')}</b>
  ${(()=>{const row=stockData?.companies?.[company.ticker],current=company.market==='미국'&&prices?.status!=='source_verified_snapshot'&&stockData?.asOf&&stockData.asOf===prices?.asOf&&row?.asOf===stockData.asOf;
@@ -442,8 +445,8 @@ function companyDetail(company){
  return Number.isFinite(abs)&&Number.isFinite(delta)?
  `<strong>종목 ${signed(abs)} · 지수 대비 ${signed(delta)}p</strong><small>${esc(row.asOf)} · 배당 조정 · 동일 기간</small>`:
  `<small>${company.market==='한국'?'국내 종목은 환율·원화 비교 체계 구축 전':'동일 기준일 개별 주가 확인 대기'}</small>`})()}</div>
- ${company.sector==='소비재·서비스'?window.ATELIER_CONSUMER?.small(company)||'':''}
- ${detailTabs(company)}${detailBody(company)}
+
+ </details>
  <div class="r2-detail-footer"><a href="${url(company.sourceURL)}" target="_blank" rel="noopener noreferrer">${company.market==='한국'?'DART 원문 검색':'SEC 공시 검색'} ↗</a>
  ${isBio?`<a href="https://clinicaltrials.gov/search?term=${encodeURIComponent(company.name)}" target="_blank" rel="noopener noreferrer">임상시험 검색 ↗</a>`:''}
  ${company.sector==='패션'?'<button class="r2-link" data-r2="legacy">기존 패션 브랜드 분석 열기 →</button>':''}
