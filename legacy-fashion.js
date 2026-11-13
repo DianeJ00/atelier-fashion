@@ -174,7 +174,7 @@ function overview(){
  const tracked=window.ATELIER2?.data?.companies?.length;
  const count=report?.items?.length;
  const period=report?.periodEnd||"";
- return '<header class="desk-hero"><div class="desk-overline"><span class="desk-pulse" aria-hidden="true"></span> INVESTMENT RESEARCH</div>'+
+ return '<header class="desk-hero">'+
   '<div class="desk-hero-body"><h1>리서치 데스크</h1><div class="desk-hero-stats">'+
   '<span><strong>'+esc(tracked??"—")+'</strong> 기업</span>'+
   '<span><strong>'+esc(count??"—")+'</strong> 검증 근거</span>'+
