@@ -8,27 +8,28 @@ const read=(name)=>fs.readFileSync(path.join(root,name),"utf8");
 const names=["research-universe.json","research-pipeline.json","market-relative.json","clinical-trials.json","stock-relative.json","consumer-official.json","price-events.json","weekly-research.json","weekly-content.json"];
 const files=Object.fromEntries(names.map(x=>[x,JSON.parse(read(x))]));
 // Inject the synthetic multi-industry RSS feed BEFORE the lazy detail cache is populated.
+const fixtureDate=new Date().toISOString();
  const rss=files["weekly-research.json"];
  files["weekly-research.json"]={...rss,items:[
   ...rss.items,
   {id:"rss-fake-ll",title:"Eli Lilly reports research trial progress",
-   url:"https://news.google.com/rss/articles/ll",date:"2026-11-09T01:00:00Z",
+   url:"https://news.google.com/rss/articles/ll",date:fixtureDate,
    platform:"Google News",ticker:"LLY",issuerId:"US:LLY",brand:"",
    creator:"Reuters",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
   {id:"rss-fake-cross",title:"Wrong company accidentally matched",
-   url:"https://news.google.com/rss/articles/cross",date:"2026-11-09T01:00:00Z",
+   url:"https://news.google.com/rss/articles/cross",date:fixtureDate,
    platform:"Google News",ticker:"LLY",issuerId:"US:UBER",brand:"",
    creator:"Wrong",reviewStatus:"needs_review"},
   {id:"rss-fake-biib",title:"Dutch antitrust regulators probe Biogen over test for its MS drug - STAT",
-   url:"https://news.google.com/rss/articles/biib",date:"2026-11-09T01:00:00Z",
+   url:"https://news.google.com/rss/articles/biib",date:fixtureDate,
    platform:"Google News",ticker:"BIIB",issuerId:"US:BIIB",brand:"",
    creator:"STAT",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
   {id:"rss-fake-jnj",title:"FDA grants J&J accelerated approval for head and neck cancer treatment - Reuters",
-   url:"https://news.google.com/rss/articles/jnj",date:"2026-11-09T01:00:00Z",
+   url:"https://news.google.com/rss/articles/jnj",date:fixtureDate,
    platform:"Google News",ticker:"JNJ",issuerId:"US:JNJ",brand:"",
    creator:"Reuters",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"},
   {id:"rss-fake-kr",title:"KB금융 이사회 공시 분석",
-   url:"https://news.google.com/rss/articles/kr",date:"2026-11-09T01:00:00Z",
+   url:"https://news.google.com/rss/articles/kr",date:fixtureDate,
    platform:"Google News",ticker:"105560",issuerId:"KR:105560",brand:"",
    creator:"연합뉴스",reviewStatus:"needs_review",discoveryMethod:"dated_rss_title_issuer_match"}
  ]};
