@@ -318,9 +318,12 @@ function feedPage(){
   if(!distinct.has(key))distinct.set(key,row);
  }
  const q=state.newsQuery.toLowerCase().trim();
+ // An exact ticker search means issuer identity, not merely a mention in another company's headline.
+ const exactTicker=q&&[...universe.keys()].some(t=>t.toLowerCase()===q);
  const matching=[...distinct.values()].filter(x=>
    (state.newsSector==="전체"||x.sector===state.newsSector)&&
-   (!q||[x.ticker,universe.get(x.ticker)?.name,x.title,x.creator].some(v=>String(v||"").toLowerCase().includes(q)))
+   (!q||(exactTicker?x.ticker.toLowerCase()===q:
+    [x.ticker,universe.get(x.ticker)?.name,x.title,x.creator].some(v=>String(v||"").toLowerCase().includes(q))))
  ).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
  const visible=matching.slice(0,state.issueLimit);
  const fmt=raw?.generatedAt?new Date(raw.generatedAt):null;
