@@ -133,7 +133,7 @@ def validate(records):
             if (not isinstance(success_times,dict) or len(success_times)>40 or
                 any(t not in idx or not isinstance(value,str) or
                     not value.endswith("Z") or
-                    not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z",value)
+                    not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z",value)
                     for t,value in success_times.items())):
                 errors.append("weekly-research: invalid issuer success timestamps")
             dates=coverage.get("lastSuccessByTicker")
