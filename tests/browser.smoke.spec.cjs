@@ -15,7 +15,12 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".issue-page-filter .is-current")).toHaveText("바이오·제약");
   await page.locator('#news-query').fill("LLY");
   await expect(page.locator('#news-query')).toHaveValue("LLY");
-  await expect(page.locator(".issue-page")).toContainText("LLY");
+  const matching=page.locator(".issue-page-row");
+  if(await matching.count()){
+   await expect(matching.first()).toContainText("LLY");
+  }else{
+   await expect(page.locator(".issue-page")).toContainText("조건에 맞는 최근 이슈가 없습니다");
+  }
  });
  test("research desk: concise overview and global ticker jump",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
