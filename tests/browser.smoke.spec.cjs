@@ -101,6 +101,7 @@ test.describe("ATELIER published-site regression",()=>{
   expect(backup.notes[0].id).toBe("browser-test-note");
   expect(backup.theses["US:UBER"].choice).toBe("유지");
   // Restore the same content only after explicit browser confirmation.
+  const reloaded=page.waitForEvent("load");
   const dialog=page.waitForEvent("dialog");
   const upload=page.locator("#personal-backup-input").setInputFiles({
    name:"ATELIER_restore.json",mimeType:"application/json",
@@ -109,7 +110,8 @@ test.describe("ATELIER published-site regression",()=>{
   const confirmation=await dialog;
   await confirmation.accept();
   await upload;
-  await page.waitForLoadState("domcontentloaded");
+  await reloaded;
+  await expect(page.locator("#nav [data-page=overview]")).toBeVisible();
   const saved=await page.evaluate(()=>({
    notes:JSON.parse(localStorage.getItem("atelierNotes")),
    theses:JSON.parse(localStorage.getItem("ATELIER_V23_THESIS_LOCAL_ONLY"))
@@ -272,7 +274,7 @@ test.describe("ATELIER published-site regression",()=>{
   const panel=page.locator(".r2-issues");
   await expect(panel).toContainText("Eli Lilly research program update",{timeout:20000});
   await expect(panel).toContainText("기사 제목 · 본문 미확인");
-  await expect(panel.locator(".r2-issue-gist")).toContainText("기사 제목 발췌 · 본문 미확인");
+  await expect(panel.locator(".r2-issue-gist").filter({hasText:"기사 제목 발췌 · 본문 미확인"})).toHaveCount(1);
   await expect(panel).not.toContainText("Unrelated unverified company story");
   await page.locator('.r2-company-row[data-val="KR:105560"]').click();
   await expect(page.locator(".r2-issues")).toContainText("KB금융 이사회 관련 기사");
