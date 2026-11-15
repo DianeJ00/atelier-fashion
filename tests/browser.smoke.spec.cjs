@@ -2,6 +2,21 @@ const {test,expect}=require("@playwright/test");
 const {readFile}=require("node:fs/promises");
 const BASE="http://127.0.0.1:8137/";
 test.describe("ATELIER published-site regression",()=>{
+ test("rapid issue desk keeps source level visible and opens searchable cross-sector inbox",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await expect(page.locator(".desk-issues")).toBeVisible({timeout:20000});
+  await expect(page.locator(".desk-issues")).toContainText("본문·투자 영향 미검증");
+  await page.locator('[data-a3="openIssues"]').click();
+  await expect(page.locator('#page-crumb')).toHaveText("자료실");
+  await expect(page.locator('[data-hub-tab="feed"].active')).toBeVisible();
+  await expect(page.locator(".issue-page")).toBeVisible({timeout:20000});
+  await expect(page.locator(".issue-page-foot")).toContainText("기사 본문");
+  await page.locator('[data-action="issueSector"][data-value="바이오·제약"]').click();
+  await expect(page.locator(".issue-page-filter .is-current")).toHaveText("바이오·제약");
+  await page.locator('#news-query').fill("LLY");
+  await expect(page.locator('#news-query')).toHaveValue("LLY");
+  await expect(page.locator(".issue-page")).toContainText("LLY");
+ });
  test("research desk: concise overview and global ticker jump",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
   await expect(page.locator(".desk-hero h1")).toHaveText("리서치 데스크");
