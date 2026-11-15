@@ -122,10 +122,20 @@ def validate(records):
             queried=coverage.get("scheduledToday")
             succeeded=coverage.get("succeededToday")
             failed=coverage.get("failedToday")
-            if (coverage.get("tracked")!=40 or type(queried) is not int or queried!=12 or
+            mode=coverage.get("runMode","rotating_daily")
+            expected_count={"rotating_daily":12,"full_watchlist":40}.get(mode)
+            if (coverage.get("tracked")!=40 or type(queried) is not int or
+                expected_count is None or queried!=expected_count or
                 type(succeeded) is not int or type(failed) is not int or
                 succeeded<0 or failed<0 or succeeded+failed!=queried):
                 errors.append("weekly-research: coverage counts inconsistent")
+            success_times=coverage.get("lastSuccessAtByTicker",{})
+            if (not isinstance(success_times,dict) or len(success_times)>40 or
+                any(t not in idx or not isinstance(value,str) or
+                    not value.endswith("Z") or
+                    not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z",value)
+                    for t,value in success_times.items())):
+                errors.append("weekly-research: invalid issuer success timestamps")
             dates=coverage.get("lastSuccessByTicker")
             if not isinstance(dates,dict):
                 errors.append("weekly-research: missing lastSuccessByTicker")
