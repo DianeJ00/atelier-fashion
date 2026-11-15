@@ -98,6 +98,41 @@ class CompanyNewsDiscoveryTests(unittest.TestCase):
         self.assertEqual(korean[0]["issuerId"],"KR:003230")
         self.assertIn("ceid=KR%3Ako",get.call_args.args[0])
 
+    def test_rapid_mode_checks_all_forty_issuer_identities_in_one_run(self):
+        """Rapid scheduled checks retain headline-only status and issuer evidence."""
+        universe=json.loads((ROOT/"research-universe.json").read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as dtmp:
+            out=Path(dtmp)/"weekly-research.json"
+            now=datetime.now(timezone.utc).replace(microsecond=0)
+            def stub(ticker,query,*,strict=False):
+                if not strict:return []
+                return [{
+                    "id":"rss-fast-"+ticker,"title":d.SPECS[ticker][3][0]+" reports company earnings",
+                    "url":"https://news.google.com/rss/articles/fast-"+ticker,
+                    "date":now.isoformat().replace("+00:00","Z"),"platform":"Google News",
+                    "ticker":ticker,"issuerId":d.issuer_id(ticker),
+                    "brand":"","creator":"test feed",
+                    "source":"Google News RSS (원문 확인 전)",
+                    "topic":"기업 실적","reviewStatus":"needs_review",
+                    "discoveryMethod":"dated_rss_title_issuer_match"
+                }]
+            with patch.dict("os.environ",{"ATELIER_FAST_ISSUES":"1"}),\
+                 patch.object(collector,"OUT",out),\
+                 patch.object(collector,"NOW",now),\
+                 patch.object(collector,"START",now-timedelta(days=8)),\
+                 patch.object(collector,"news",side_effect=stub),\
+                 patch.object(collector,"youtube",return_value=[]),\
+                 patch.object(collector,"ROOT",ROOT):
+                collector.main()
+            result=json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(result["newsCoverage"]["scheduledToday"],40)
+            self.assertEqual(result["newsCoverage"]["succeededToday"],40)
+            self.assertEqual(result["newsCoverage"]["runMode"],"full_watchlist")
+            self.assertEqual(len(result["newsCoverage"]["lastSuccessAtByTicker"]),40)
+            self.assertEqual({r["ticker"] for r in result["items"]},set(d.SPECS))
+            self.assertTrue(all(r["reviewStatus"]=="needs_review" for r in result["items"]))
+            self.assertTrue(all(r["issuerId"]==d.issuer_id(r["ticker"]) for r in result["items"]))
+
     def test_main_rotates_and_preserves_only_recent_dated_issuer_links(self):
         universe=json.loads((ROOT/"research-universe.json").read_text(encoding="utf-8"))
         start=date(2026,11,10)
