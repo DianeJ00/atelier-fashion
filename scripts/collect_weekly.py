@@ -181,7 +181,7 @@ def news(ticker, query, *, strict=False):
                 row['issuerId'] = issuer_news.issuer_id(ticker)
                 row['discoveryMethod'] = 'dated_rss_title_issuer_match'
             result.append(row)
-        if len(result)>=2:
+        if len(result)>=(4 if os.environ.get('ATELIER_FAST_ISSUES')=='1' else 2):
             break
     return result
 
@@ -212,6 +212,7 @@ def weekly_digest(items, previous):
 
 
 def main():
+    fast = os.environ.get('ATELIER_FAST_ISSUES') == '1'
     previous = {}
     if OUT.exists():
         try:
@@ -248,25 +249,36 @@ def main():
                            'status': '연결 실패 · 이전 자료 유지' if prior else '연결 실패',
                            'count': 0, 'previousRetained': len(prior)})
     news_errors = 0
-    for ticker, query in COMPANIES.items():
-        try:
-            found.extend(news(ticker, query))
-        except Exception as e:
-            errors.append('Google News '+ticker+': '+type(e).__name__)
-            news_errors += 1
-    for source, query in MEDIA_QUERIES.items():
-        try:
-            found.extend(news('TREND', query))
-        except Exception as e:
-            errors.append('Fashion media '+source+': '+type(e).__name__)
-            news_errors += 1
+    # On rapid passes, fetch all fashion issuers and specialist media concurrently.
+    fashion_tasks=[(ticker,query) for ticker,query in COMPANIES.items()]
+    media_tasks=[('TREND',query) for query in MEDIA_QUERIES.values()]
+    if fast:
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            tasks={pool.submit(news,ticker,query):(ticker,query)
+                   for ticker,query in fashion_tasks+media_tasks}
+            for future in as_completed(tasks):
+                ticker,query=tasks[future]
+                try:found.extend(future.result())
+                except Exception as e:
+                    errors.append('Google News '+ticker+': '+type(e).__name__)
+                    news_errors+=1
+    else:
+        for ticker,query in fashion_tasks+media_tasks:
+            try:found.extend(news(ticker,query))
+            except Exception as e:
+                errors.append('Google News '+ticker+': '+type(e).__name__)
+                news_errors+=1
     # 20 biotech + 15 consumer + 5 Korea; 12 a day (6/4/2) = 4-day
     # deterministic rotation. No paid API and no article content scraping.
     universe=json.loads((ROOT/'research-universe.json').read_text(encoding='utf-8'))
     issuer_news.confirm_universe(universe['companies'])
-    scheduled=issuer_news.company_specs_for(NOW.date())
+    scheduled=(list(issuer_news.SPECS.items()) if fast
+               else issuer_news.company_specs_for(NOW.date()))
     coverage_before=previous.get('newsCoverage') or {}
     checked_dates=coverage_before.get('lastSuccessByTicker') or {}
+    checked_at=coverage_before.get('lastSuccessAtByTicker') or {}
+    if not isinstance(checked_at,dict):checked_at={}
+    checked_at={k:v for k,v in checked_at.items() if k in issuer_news.SPECS and isinstance(v,str)}
     if not isinstance(checked_dates,dict):
         checked_dates={}
     checked_dates={k:v for k,v in checked_dates.items()
@@ -288,7 +300,7 @@ def main():
     today_rows={}
     successes=set()
     failures=set()
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=8 if fast else 4) as pool:
         tasks={pool.submit(news,ticker,spec[2],strict=True):ticker
                for ticker,spec in scheduled}
         for future in as_completed(tasks):
@@ -297,6 +309,7 @@ def main():
                 today_rows[ticker]=future.result()
                 successes.add(ticker)
                 checked_dates[ticker]=NOW.date().isoformat()
+                checked_at[ticker]=NOW.isoformat().replace('+00:00','Z')
             except Exception as e:
                 failures.add(ticker)
                 errors.append('Google News '+ticker+': '+type(e).__name__)
@@ -316,7 +329,7 @@ def main():
         # The same article may genuinely mention two tracked issuers.
         # Never silently erase the second issuer's association.
         by_url.setdefault((row.get('ticker'),row['url']),row)
-    items=sorted(by_url.values(), key=lambda x:x['date'],reverse=True)[:160]
+    items=sorted(by_url.values(), key=lambda x:x['date'],reverse=True)[:320 if fast else 160]
     sectors={sector:{'scheduled':sum(spec[1]==sector for _,spec in scheduled),
                      'succeeded':sum(issuer_news.SPECS[t][1]==sector for t in successes)}
              for sector in issuer_news.SECTOR_BUDGET}
@@ -328,8 +341,12 @@ def main():
         'retainedNotRechecked':sum(x.get('carriedOver') is True and
                                     x.get('ticker') in issuer_news.SPECS for x in items),
         'lastSuccessByTicker':checked_dates,
+        'lastSuccessAtByTicker':checked_at,
+        'runMode':'full_watchlist' if fast else 'rotating_daily',
+        'attemptedAt':NOW.isoformat().replace('+00:00','Z'),
         'sectorChecks':sectors,
-        'rule':'제목·발행일·종목명 교차 확인, 기사 본문 미검증. 4일 순환 수집',
+        'rule':('제목·발행일·종목명 대조, 기사 본문 미검증. 40개 기업 일괄 수집'
+                if fast else '제목·발행일·종목명 대조, 기사 본문 미검증. 4일 순환 수집'),
     }
     health.append({'name':'공개 뉴스·패션 매체', 'source':'Google News RSS',
                    'status':'일부 오류' if news_errors else '수집 완료',
