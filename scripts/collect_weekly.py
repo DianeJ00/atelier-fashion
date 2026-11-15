@@ -368,7 +368,9 @@ def main():
         'errors': errors,
     }
     OUT.write_text(json.dumps(obj, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-    print(f'Collected {len(items)} unverified headlines, {len(errors)} source errors; wrote {OUT}')
+    print(f'Collected {len(items)} unverified headlines from {len(scheduled)} scheduled issuers '
+          f'({len(successes)} successful), mode={"full_watchlist" if fast else "rotating_daily"}, '
+          f'{len(errors)} source errors; wrote {OUT}')
 
 
 if __name__ == '__main__':
