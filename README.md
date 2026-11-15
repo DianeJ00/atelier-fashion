@@ -406,3 +406,13 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - 공시 자동 수집을 위한 공식 가이드: [OpenDART 공시검색](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS001&apiId=2019001), [단일회사 재무제표](https://opendart.fss.or.kr/guide/detail.do?apiGrpCd=DS003&apiId=2019020).
 
 - **2.6.1 갱신 검증:** 시장 ETF 원문 스냅샷, SEC 미국 47사, 바이오 등록시험 12건, 국내 OpenDART 연결 상태, 회사별 출처 감사 항목을 정기 갱신에서 함께 검사합니다. API 키 누락은 비밀키를 추측하거나 외부로 전송하지 않고 미연결 상태로 남깁니다.
+
+
+### 리서치 데스크: 빠른 이슈 수집 (2026-11)
+
+- **매일 09:00 KST**: SEC 실적, 임상, 정규 데이터 점검 및 투자 근거 검증 파이프라인.
+- **추가로 매일 01:00·05:00·13:00·17:00·21:00 KST**: 가벼운 공개 RSS 기사 제목 수집. 이 작업은 SEC·시세·임상 정밀 점검을 반복하지 않음. GitHub Actions 예약 실행은 지연될 수 있으며 실시간 뉴스 반영을 보장하지 않음.
+- 빠른 수집은 추적 기업 **52개(패션 12개 + 나머지 40개)**를 한 번에 검색하고, 종목 식별·발행일을 대조하여 최근 8일 내 제목을 저장. 일일 정규 수집의 40개사 순환 점검은 유지.
+- weekly-research.json의 newsCoverage에서 실제 점검·성공 건수, 종목별 마지막 확인 시각, 이전에 수집된 제목 여부 확인. 연결 실패를 신규 확인으로 표시하지 않음.
+- 사이트 첫 화면 「새로 포착된 이슈」와 자료실 → 공시·뉴스 이슈에 빠른 목록 반영. 미확인 RSS 제목은 공식 공시·분기 실적과 구분하며 매매 의견이나 기사 본문 요약으로 취급하지 않음.
+- GitHub Actions → ATELIER daily verification and rapid issue updates → Run workflow에서 issues_only를 선택해 이슈만 수동 갱신할 수도 있음.
