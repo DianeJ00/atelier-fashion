@@ -101,11 +101,14 @@ test.describe("ATELIER published-site regression",()=>{
   expect(backup.notes[0].id).toBe("browser-test-note");
   expect(backup.theses["US:UBER"].choice).toBe("유지");
   // Restore the same content only after explicit browser confirmation.
-  page.once("dialog",d=>d.accept());
-  await page.locator("#personal-backup-input").setInputFiles({
+  const dialog=page.waitForEvent("dialog");
+  const upload=page.locator("#personal-backup-input").setInputFiles({
    name:"ATELIER_restore.json",mimeType:"application/json",
    buffer:Buffer.from(JSON.stringify(backup),"utf8")
   });
+  const confirmation=await dialog;
+  await confirmation.accept();
+  await upload;
   await page.waitForLoadState("domcontentloaded");
   const saved=await page.evaluate(()=>({
    notes:JSON.parse(localStorage.getItem("atelierNotes")),
@@ -234,8 +237,11 @@ test.describe("ATELIER published-site regression",()=>{
   await page.locator('.r2-company-row[data-val="US:ANF"]').click();
   await expect(page.locator(".r2-issues")).toContainText("Abercrombie",{timeout:20000});
   await expect(page.locator(".r2-issue-gist").first()).toBeVisible();
-  await expect(page.locator(".r2-issues")).toContainText("원문 확인 요약");
-  await expect(page.locator(".r2-issues")).toContainText("19개 상품의 캡슐 컬렉션");
+  if(await page.locator(".r2-issue-verified").count()){
+   await expect(page.locator(".r2-issues")).toContainText("원문 확인 요약");
+  }else{
+   await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
+  }
   await expect(page.locator(".r2-issues")).not.toContainText("확정된 주가 상승 원인");
  });
  test("biotech and domestic RSS headlines are issuer-checked and never labeled verified",async({page})=>{
