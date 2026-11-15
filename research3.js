@@ -1,6 +1,6 @@
 /* ATELIER 2.3 — evidence-first weekly research and local thesis adjudication. */
 (()=>{"use strict";
-let report=null,gaap=null;
+let report=null,gaap=null,issueFeed=null;
 const KEY="ATELIER_V23_THESIS_LOCAL_ONLY";
 let records={};
 const drafts={};
@@ -554,6 +554,33 @@ function overviewSignals(){
   '<p class="desk-empty">새로 확인된 근거 없음</p>')+
   '<div class="desk-panel-note">공식 자료 우선 · 같은 검증 수준은 최근 순</div></section>';
 }
+function newestIssues(){
+ const news=(issueFeed?.items||[]).filter(x=>x.platform==="Google News"&&x.reviewStatus==="needs_review"&&x.ticker&&x.url&&x.date);
+ const known=new Map((window.ATELIER2?.data?.companies||[]).map(c=>[c.ticker,c]));
+ const seen=new Set(),perCompany=new Map(),perSector=new Map(),items=[];
+ news.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).forEach(x=>{
+  const company=known.get(x.ticker);
+  if(!company||x.issuerId&&x.issuerId!==company.id||!x.issuerId&&company.sector!=="패션")return;
+  const key=x.ticker+"|"+x.url,sector=company.sector;
+  if(items.length>=12||seen.has(key)||(perCompany.get(x.ticker)||0)>=2||(perSector.get(sector)||0)>=6)return;
+  seen.add(key);perCompany.set(x.ticker,(perCompany.get(x.ticker)||0)+1);
+  perSector.set(sector,(perSector.get(sector)||0)+1);
+  items.push(x);
+ });
+ const coverage=issueFeed?.newsCoverage||{};
+ const date=issueFeed?.generatedAt?new Date(issueFeed.generatedAt):null;
+ const time=date&&!Number.isNaN(date.getTime())?date.toLocaleString("ko-KR",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}):"수집 시각 확인 대기";
+ const state=Number.isInteger(coverage.succeededToday)&&Number.isInteger(coverage.scheduledToday)?" · 점검 성공 "+coverage.succeededToday+"/"+coverage.scheduledToday:"";
+ return '<section class="desk-issues"><div class="desk-issues-header"><div><h2>새로 포착된 이슈</h2><span>'+esc(time)+esc(state)+'</span></div>'+
+  '<button type="button" data-a3="openIssues">전체 보기 ↗</button></div>'+
+  (items.length?'<div class="desk-issue-list">'+items.map(x=>
+    '<div class="desk-issue-row"><span class="desk-issue-ticker">'+esc(x.ticker)+'</span>'+
+    '<a href="'+uri(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.title)+'</a>'+
+    '<span class="desk-issue-source">'+esc(x.creator||"뉴스 RSS")+' · '+esc(String(x.date).slice(0,10))+'</span></div>'
+   ).join('')+'</div>':
+   '<p class="desk-empty">'+(issueFeed?"최근 8일 내 수집한 종목 기사 제목이 없습니다.":"기사 제목을 연결하는 중입니다.")+'</p>')+
+  '<p class="desk-issue-disclaimer">뉴스 제목 자동 수집 · 본문·투자 영향 미검증 · 공식 실적과 별도</p></section>';
+}
 function attentionQueue(){
  const pending=(report?.reviewCandidates||[]).filter(x=>!evidenceReviewed(x.companyId,x));
  return '<section class="a5-attention desk-attention"><div class="desk-panel-heading">'+
@@ -740,6 +767,8 @@ document.addEventListener("click",e=>{
     state.selected="";state.search="";state.detailTab="사업 이해";
    }
    if(window.atelierGotoCompanies)window.atelierGotoCompanies();
+ }else if(kind==="openIssues"){
+   if(window.atelierGotoIssues)window.atelierGotoIssues();
  }else if(kind==="openWeekly"){
    if(window.atelierGotoWeekly)window.atelierGotoWeekly();
  }else if(kind==="download"){
@@ -770,11 +799,12 @@ document.addEventListener("input",e=>{
  }
 });
 async function load(){
- const sources=await window.ATELIER_DATA.many(["weekly","secTrends"]);
+ const sources=await window.ATELIER_DATA.many(["weekly","secTrends","research"]);
  report=sources[0]&&Array.isArray(sources[0].items)?sources[0]:null;
  gaap=sources[1]&&Array.isArray(sources[1].companies)?sources[1]:null;
+ issueFeed=sources[2]&&Array.isArray(sources[2].items)?sources[2]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyEarningsLens,issuerLensBlock,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
- get report(){return report},get gaap(){return gaap},get records(){return records}};
+window.ATELIER3={load,overview,industryOverview,overviewSignals,newestIssues,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyEarningsLens,issuerLensBlock,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+ get report(){return report},get gaap(){return gaap},get issues(){return issueFeed},get records(){return records}};
 })();
