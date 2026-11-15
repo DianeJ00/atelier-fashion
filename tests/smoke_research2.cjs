@@ -106,8 +106,13 @@ const click=(key,value)=>callbacks.click({
  assert.ok(newsDetail.includes("r2-issue-gist"),"one-line context should appear under news titles");
  click("company","US:ANF");
  const checked=win.ATELIER2.companyPage();
- assert.ok(checked.includes("원문 확인 요약"));
- assert.ok(checked.includes("19개 상품의 캡슐 컬렉션"),"verified summary must reflect the actual reviewed source");
+ assert.ok(checked.includes("최근 주요 이슈"));
+ // Editorial items are dated: do not demand a frozen article beyond its source period.
+ if(checked.includes("19개 상품의 캡슐 컬렉션"))
+   assert.ok(checked.includes("원문 확인 요약"),"verified items retain their source label");
+ else
+   assert.ok(checked.includes("기사 제목 · 본문 미확인")||checked.includes("원문 대조"),
+     "expired editorial coverage is never relabeled as freshly reviewed");
  click("sector","바이오·제약");
  click("company","US:BIIB");
  const regulator=win.ATELIER2.companyPage();
