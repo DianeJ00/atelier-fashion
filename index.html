@@ -1078,6 +1078,57 @@ body,.shell,.main-shell{background:#f8f8f7!important;color:#282a29!important}
  #content .e8-sector-filter{gap:12px}
 }
 
+
+
+/* Rapid issue feeds: plain data rows, no decorative selection pills. */
+#content .desk-issues{background:#fff;border:1px solid #e1e3e0;border-radius:3px;margin:20px 0 0;box-shadow:none;min-width:0}
+#content .desk-issues-header{display:flex;align-items:center;justify-content:space-between;gap:15px;
+ padding:17px 21px;border-bottom:1px solid #e7e8e6}
+#content .desk-issues-header>div{display:flex;gap:7px 15px;align-items:baseline;flex-wrap:wrap}
+#content .desk-issues-header h2{font-size:16px;margin:0;color:#292b29;font-weight:750}
+#content .desk-issues-header span{color:#878c87;font-size:11px}
+#content .desk-issues-header button{font-size:12px;background:transparent;border:0;color:#454945;cursor:pointer;padding:3px;white-space:nowrap}
+#content .desk-issue-row{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(135px,210px);align-items:center;
+ gap:15px;padding:10px 21px;border-bottom:1px solid #eceeeb;min-height:46px}
+#content .desk-issue-row:last-child{border-bottom:0}
+#content .desk-issue-ticker{font-family:ui-monospace,monospace;font-size:12px;font-weight:750;color:#444844}
+#content .desk-issue-row a{min-width:0;font-size:13px;line-height:1.48;color:#333634!important;
+ text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#content .desk-issue-row a:hover{text-decoration:underline;text-underline-offset:3px}
+#content .desk-issue-source{font-size:11px;color:#929692;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#content .desk-issue-disclaimer{margin:0;padding:10px 20px;color:#888d87;font-size:11px;border-top:1px solid #eee}
+#content .issue-page{min-width:0}
+#content .issue-page-filter{display:flex;gap:16px;align-items:center;justify-content:space-between;
+ margin:4px 0 17px;flex-wrap:wrap;border-bottom:1px solid #e5e7e4}
+#content .issue-sector-options{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#content .issue-sector-options button{padding:11px 2px;font-size:12px;font-weight:500;cursor:pointer;
+ border:0;border-bottom:1px solid transparent;background:transparent;color:#7a7e7a}
+#content .issue-sector-options button.is-current{color:#292b29;font-weight:750;border-bottom-color:#333}
+#content .issue-page-filter input{flex:1;min-width:170px;max-width:285px;background:#fff;border:1px solid #dedfdb;
+ border-radius:2px;color:#333;padding:8px 10px;font-family:inherit;font-size:12px}
+#content .issue-page-list{border:1px solid #e5e7e4;background:#fff;border-radius:2px}
+#content .issue-page-row{display:grid;grid-template-columns:116px 65px minmax(0,1fr);gap:13px;
+ align-items:start;padding:13px 16px;border-bottom:1px solid #eeefec}
+#content .issue-page-row:last-child{border-bottom:0}
+#content .issue-page-type{font-size:11px;color:#888c87;line-height:1.6}
+#content .issue-page-ticker{font:700 12px/1.6 ui-monospace,monospace;color:#515551}
+#content .issue-page-story{min-width:0}
+#content .issue-page-story a{font-size:13px;color:#303330!important;line-height:1.5;text-decoration:none}
+#content .issue-page-story a:hover{text-decoration:underline}
+#content .issue-page-story small{display:block;margin-top:4px;color:#929691;font-size:11px}
+#content .issue-page-more{width:100%;padding:14px;border:1px solid #e4e6e2;background:#fff;color:#383c38;
+ margin:8px 0 0;font-size:12px;cursor:pointer}
+#content .issue-page-foot{font-size:11px;line-height:1.65;color:#8b918b;margin:12px 0}
+@media(max-width:760px){
+ #content .desk-issue-row{grid-template-columns:55px minmax(0,1fr);gap:5px 9px;padding:11px 13px}
+ #content .desk-issue-source{grid-column:2;text-align:left}
+ #content .desk-issues-header{padding:14px 13px}
+ #content .issue-page-row{grid-template-columns:82px minmax(0,1fr);gap:4px 9px;padding:12px}
+ #content .issue-page-ticker{grid-column:1;grid-row:2}
+ #content .issue-page-story{grid-column:2;grid-row:1/span 2}
+ #content .issue-page-filter input{max-width:none;width:100%;flex-basis:100%;margin-bottom:10px}
+ #content .issue-sector-options{gap:10px}
+}
 </style>
 </head>
 <body>
