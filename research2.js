@@ -191,6 +191,7 @@ function overview(){
  if(!db)return '<div class="desk-loading">자료 연결 중…</div>';
  return '<div class="r2-overview desk-overview">'+
   '<div class="desk-core-grid">'+(window.ATELIER3?.overviewSignals()||"")+(window.ATELIER3?.attentionQueue()||"")+'</div>'+
+  (window.ATELIER3?.newestIssues()||"")+
   (window.ATELIER3?.industryOverview()||"")+
   '<details class="desk-market-details"><summary><span><b>시장 상대강도</b><small>ETF · 기간별 비교</small></span><span class="desk-expand-icon" aria-hidden="true">+</span></summary>'+
   '<div class="desk-market-content">'+marketPanel()+moveEventsPanel()+'</div></details>'+
