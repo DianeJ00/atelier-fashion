@@ -1,254 +1,127 @@
 {
-  "generatedAt": "2026-11-12T04:45:46.755812+00:00",
-  "periodStart": "2026-11-02",
-  "periodEnd": "2026-11-12",
+  "generatedAt": "2026-11-15T03:39:52.041430+00:00",
+  "periodStart": "2026-11-05",
+  "periodEnd": "2026-11-15",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
-  "items": [
-    {
-      "id": "anf-ceedee-edit",
-      "date": "2026-11-04",
-      "source": "Abercrombie & Fitch IR",
-      "sourceType": "기업 공식 신상품 발표",
-      "status": "원문 대조·편집",
-      "title": "Abercrombie, NFL 스타 협업을 판매 가능한 상품으로 연결",
-      "summary": "Abercrombie가 Dallas Cowboys 선수 CeeDee Lamb와 공동 기획한 19개 상품의 캡슐 컬렉션을 발표. 아우터·니트·셔츠 등 클래식 스타일을 2026년 홀리데이 판매에 투입.",
-      "impact": "ANF가 유명인 캠페인을 단순 홍보가 아니라 남성복 상품 판매로 전환할 수 있는지 확인할 사례.",
-      "kpi": "Abercrombie 브랜드 동일매장매출·남성복 성장 / 4분기 정가 판매·매출총이익률",
-      "risk": "제품 출시와 파트너십 자체는 소비자 구매량이나 매출 증가를 의미하지 않음.",
-      "tickers": [
-        "ANF"
-      ],
-      "url": "https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-and-dallas-cowboys-wide-receiver-ceedee-lamb",
-      "kind": "company",
-      "inboxIds": [
-        "rss-bbf88fa138a5331"
-      ],
-      "priority": 10
-    },
-    {
-      "id": "diwali-luxury-2026",
-      "date": "2026-11-04",
-      "source": "The Business of Fashion",
-      "sourceType": "패션 산업 전문매체 · 공개 원문",
-      "status": "원문 대조·편집",
-      "title": "인도 명절 소비를 겨냥한 럭셔리 브랜드의 현지화",
-      "summary": "BoF에 따르면 Bulgari·Jimmy Choo·Michael Kors 등 럭셔리 브랜드가 인도 디왈리 축제에 맞춘 제품·행사·캠페인을 확대. 브랜드 인지도 경쟁이 인도 및 해외 인도계 소비자까지 확장되는 양상.",
-      "impact": "CPRI의 Michael Kors·Jimmy Choo, RL의 인도 유통 파트너 매출 확대 가능성과 지역별 수익성 확인이 필요.",
-      "kpi": "인도·아시아 매출 성장률 / 명절 시즌 정가 판매·판매량 / 브랜드별 기여도",
-      "risk": "축제 판매 전망은 산업 단위 추정이고 홍보 활동은 실제 브랜드 매출 증가를 입증하지 않음. 공개 확인 가능한 기사 범위만 반영.",
-      "tickers": [
-        "CPRI",
-        "RL"
-      ],
-      "url": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/",
-      "kind": "trend",
-      "inboxIds": [
-        "rss-79f91885d638102"
-      ],
-      "priority": 9
-    },
-    {
-      "id": "old-navy-merch-reset",
-      "date": "2026-11-02",
-      "source": "Retail Dive",
-      "sourceType": "유통 산업 전문 매체",
-      "status": "원문 대조·편집",
-      "title": "Old Navy, 여성 상품기획 재편으로 수요 회복 시도",
-      "summary": "Retail Dive 보도에 따르면 Old Navy는 여성 상품기획 책임자를 새로 선임. 앞선 2분기 매출과 동일매장매출이 각각 4% 감소했고 상품 구성·가격 대응이 과제로 지목.",
-      "impact": "GAP의 핵심 브랜드인 Old Navy가 단순 광고 화제성보다 상품 적중률·매장 트래픽을 회복하는지가 중요.",
-      "kpi": "Old Navy 동일매장매출·방문객 수 / 판촉 의존도",
-      "risk": "인사 변화는 회복의 결과가 아닌 대응 조치. 향후 분기 실적에서 개선 여부 확인 필요.",
-      "tickers": [
-        "GAP"
-      ],
-      "url": "https://www.retaildive.com/news/shakeup-old-navy-amid-merchandising-struggles-walmart/873431/",
-      "kind": "company",
-      "priority": 6
-    },
-    {
-      "id": "vsxy-earnings-preview-nov4",
-      "date": "2026-11-04",
-      "source": "Zacks / Victoria's Secret IR",
-      "sourceType": "증권사 전망 기사 + 회사 공식 실적 대조",
-      "status": "원문 대조·편집",
-      "title": "Victoria's Secret, 과거 EPS 서프라이즈보다 정가 판매 지속성이 관건",
-      "summary": "Zacks는 최근 두 분기의 예상 EPS 상회 이력과 다음 분기 서프라이즈 가능성을 분석. 회사 공식 발표상 2026년 2분기 조정 EPS는 $0.95, 매출은 $1.611B(+10%)였으나 다음 실적 개선이 확정된 것은 아님.",
-      "impact": "VSXY의 매출 성장과 브랜드 회복이 재고 할인 축소·조정 영업이익 개선으로 지속되는지 확인이 핵심.",
-      "kpi": "2026년 3분기 매출 가이던스 $1.57~1.60B 대비 실제 / 동일매장매출 / 조정 영업이익",
-      "risk": "Zacks의 서프라이즈 예상은 전망 모델이며 회사 가이던스가 아님. 조정 EPS와 GAAP EPS 혼동 금지.",
-      "tickers": [
-        "VSXY"
-      ],
-      "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-beat-estimates-161001658.html",
-      "secondaryUrl": "https://victoriassecret.gcs-web.com/news-releases/news-release-details/victorias-secret-co-reports-second-quarter-2026-results",
-      "kind": "results",
-      "inboxIds": [
-        "rss-6bd72c50fb616d2"
-      ],
-      "priority": 5
-    }
-  ],
+  "items": [],
   "reviewedExtra": [],
-  "reviewedInInbox": {
-    "rss-bbf88fa138a5331": {
-      "id": "anf-ceedee-edit",
-      "title": "Abercrombie, NFL 스타 협업을 판매 가능한 상품으로 연결",
-      "summary": "Abercrombie가 Dallas Cowboys 선수 CeeDee Lamb와 공동 기획한 19개 상품의 캡슐 컬렉션을 발표. 아우터·니트·셔츠 등 클래식 스타일을 2026년 홀리데이 판매에 투입.",
-      "impact": "ANF가 유명인 캠페인을 단순 홍보가 아니라 남성복 상품 판매로 전환할 수 있는지 확인할 사례.",
-      "kpi": "Abercrombie 브랜드 동일매장매출·남성복 성장 / 4분기 정가 판매·매출총이익률",
-      "risk": "제품 출시와 파트너십 자체는 소비자 구매량이나 매출 증가를 의미하지 않음.",
-      "source": "Abercrombie & Fitch IR",
-      "sourceType": "기업 공식 신상품 발표",
-      "url": "https://abercrombieandfitchcompany.gcs-web.com/news-releases/news-release-details/abercrombie-fitch-and-dallas-cowboys-wide-receiver-ceedee-lamb",
-      "secondaryUrl": null,
-      "reviewedAt": "2026-11-05",
-      "status": "원문 대조·편집"
-    },
-    "rss-79f91885d638102": {
-      "id": "diwali-luxury-2026",
-      "title": "인도 명절 소비를 겨냥한 럭셔리 브랜드의 현지화",
-      "summary": "BoF에 따르면 Bulgari·Jimmy Choo·Michael Kors 등 럭셔리 브랜드가 인도 디왈리 축제에 맞춘 제품·행사·캠페인을 확대. 브랜드 인지도 경쟁이 인도 및 해외 인도계 소비자까지 확장되는 양상.",
-      "impact": "CPRI의 Michael Kors·Jimmy Choo, RL의 인도 유통 파트너 매출 확대 가능성과 지역별 수익성 확인이 필요.",
-      "kpi": "인도·아시아 매출 성장률 / 명절 시즌 정가 판매·판매량 / 브랜드별 기여도",
-      "risk": "축제 판매 전망은 산업 단위 추정이고 홍보 활동은 실제 브랜드 매출 증가를 입증하지 않음. 공개 확인 가능한 기사 범위만 반영.",
-      "source": "The Business of Fashion",
-      "sourceType": "패션 산업 전문매체 · 공개 원문",
-      "url": "https://businessoffashion-businessoffashion-prod.web.arc-cdn.net/articles/global-markets/fashion-diwali-marketing-india-diaspora/",
-      "secondaryUrl": null,
-      "reviewedAt": "2026-11-05",
-      "status": "원문 대조·편집"
-    },
-    "rss-6bd72c50fb616d2": {
-      "id": "vsxy-earnings-preview-nov4",
-      "title": "Victoria's Secret, 과거 EPS 서프라이즈보다 정가 판매 지속성이 관건",
-      "summary": "Zacks는 최근 두 분기의 예상 EPS 상회 이력과 다음 분기 서프라이즈 가능성을 분석. 회사 공식 발표상 2026년 2분기 조정 EPS는 $0.95, 매출은 $1.611B(+10%)였으나 다음 실적 개선이 확정된 것은 아님.",
-      "impact": "VSXY의 매출 성장과 브랜드 회복이 재고 할인 축소·조정 영업이익 개선으로 지속되는지 확인이 핵심.",
-      "kpi": "2026년 3분기 매출 가이던스 $1.57~1.60B 대비 실제 / 동일매장매출 / 조정 영업이익",
-      "risk": "Zacks의 서프라이즈 예상은 전망 모델이며 회사 가이던스가 아님. 조정 EPS와 GAAP EPS 혼동 금지.",
-      "source": "Zacks / Victoria's Secret IR",
-      "sourceType": "증권사 전망 기사 + 회사 공식 실적 대조",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/victorias-secret-vsxy-beat-estimates-161001658.html",
-      "secondaryUrl": "https://victoriassecret.gcs-web.com/news-releases/news-release-details/victorias-secret-co-reports-second-quarter-2026-results",
-      "reviewedAt": "2026-11-05",
-      "status": "원문 대조·편집"
-    }
-  },
-  "reviewedSourceCount": 3,
+  "reviewedInInbox": {},
+  "reviewedSourceCount": 0,
   "autoItems": [],
   "pending": [
     {
-      "id": "a062e7e3d99b209f11",
-      "title": "Michael Kors, Jimmy Choo owner names new CEO",
-      "url": "https://www.retaildive.com/news/capri-holdings-michael-kors-jimmy-choo-new-ceo-justin-boxford/874377/",
-      "date": "2026-11-11",
+      "id": "be9e420ca82ae0a15e",
+      "title": "Calvin Klein, Tommy Hilfiger owner to cut 4% of workforce",
+      "url": "https://www.retaildive.com/news/calvin-klein-tommy-hilfiger-owner-to-cut-4-of-workforce/874492/",
+      "date": "2026-11-12",
       "source": "Retail Dive",
       "tickers": [
-        "CPRI"
+        "PVH"
       ],
       "status": "AI_API_KEY_미설정",
       "reason": "본문 자동 요약 전"
     },
     {
-      "id": "rss-6b375b96224a87d",
-      "title": "SAP and VF Corp's Walldorf store runs without staff during set hours - MarketScale",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHdOZTFUX0p5UU9vZkI1eTNYSUFSUmZyb1FTMFpvaFFsdHBzclY2cTJZbFZ5anFVaUpsb1djTDFZZ2ZvaWhHQUY2ZlhSYnBPc29HaHVjN1dQTlV2SWYtaG5iczNONkY4dkk0SUdtMDNyWnVYbzBXTFdveVoybGdnNDdkenA4b29xOUc4RHRmcGJHMC1PUWd6WE1EY0pkdkItYTJWdDJNZ213OFBRZHREMHJWdw?oc=5",
-      "date": "2026-11-12",
-      "source": "MarketScale",
+      "id": "rss-608fe7f0f969c75",
+      "title": "2,642 shares are proposed for sale by Incyte (Nasdaq: INCY) officer Pablo Cagnoni. - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNOWU3UFBpUTdDNVZSMnNqSm41T2dONXZHcnJpeUdFZnc5TFBDRmhqVUJ4TncwUWJ5WmluN01yUXVldWVSNmhtUlRBalRWVkRUZW5JaThFSW9LQ3dzYVhFdm5LYW91dGNEQTRfUnNUcXNCQWFrLXBVSTIwZ2psVklPa1lKMlZZNzNkRF9VTDVuUHlRQQ?oc=5",
+      "date": "2026-11-14",
+      "source": "Stock Titan",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-0c9ea9a17b168fc",
-      "title": "Old Navy Is Caught In a Doom Loop - The Robin Report",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05LXIxN1dqbWZWeUNFdm1HOGY1eUt3VHpJbEl6OUdiSDJ5YzBOT3R6NUU1UGd6MnRWQkRzd243WV9ieUVST2U4dFh3QVRJNmJqckxDZUxxV2x6S0hFNUxNTG9rQ29PUEhmQkhnRzBB?oc=5",
-      "date": "2026-11-11",
-      "source": "The Robin Report",
+      "id": "rss-ae9e7af3dd3e252",
+      "title": "The best movies on Netflix streaming now (November 2026) - Boston.com",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdXRzNkJEdC1xWUY3RllQMkZaY0pHSTVVUk1aWXY2SGdLWFZJTHlJM2xqbUFEVjhieTRrdnhxWk9oaHZJSXp3cGo5RGltclhqRGRUbGNTVHpYOXhfVzRYd2JTbmxTdlVKUkpRMkVsSmw2ekVhM1l3S0R1eHBZclRLeGJ1cU54dmdZWS1TZlZuMA?oc=5",
+      "date": "2026-11-14",
+      "source": "Boston.com",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-1d8ea962a0e582f",
-      "title": "Eli Lilly Just Raised Its 2026 Sales Forecast to as Much as $92 Billion. But Is Viking Therapeutics the Next Big Obesity Winner? - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOd3Nxckd0ZTdOb3REdFhhRzkzT0ItdDBxQ3JtaXRoNDNCNi0xUU5kckVEbVhxTmdva3k2SnZLWTJwVHFDUXliYjd1Y0xFQnF5MVlKQ0lCRDZqak5Gd1o0dEJJaDhQTi1nYW96dVdyTDJKem9qamZPTlE0NGxzejNYX3hpRUZyVVI5NjFUaFRhQTZhNnNFT3R2Mg?oc=5",
-      "date": "2026-11-11",
-      "source": "The Motley Fool",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-6a96c38a62e9b4c",
-      "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
-      "date": "2026-11-11",
-      "source": "Reuters",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-7494319ce3049d3",
-      "title": "Target stock may move 8% on earnings release By Investing.com - Investing.com Nigeria",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZHgxTDBhWENocW5vYkRTR1JhNTJHci1BUWxLWVlwajF4ZmVTeVdPVUNtYkhvQTRncU5Mb2kycTN3aHYyUUNoWUo1VlpqNFNjcHpEOE1yNkhiczRFYVhfZDFhalZ3TGhrWENUeWZ4XzZ4RF9aRU1GdEUxTW53R0h3RnJPZzFENWRYNm12WGxuR2R2dnlXVnA3aXNrV09kd1lzWndtRV83cw?oc=5",
-      "date": "2026-11-11",
-      "source": "Investing.com Nigeria",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-f4d9785c91ee225",
-      "title": "SAP and VFC Open Intelligent Fashion Store - SAP News Center",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPem5uYnBEcXFmSDRRZl9mVmlJRFhtOVBmSkdNVVU2aVpVNWRwa0MtWjBPb3h3b04yZGxPTlFnSmNHYkczSGREakVrczhwWXdnSzg5RmYyc1dBaV9oSnNpclFiZDZFNlhrUEJHVXpFTkRfRHpnZHRDX2d1bjNWZlFrWTJYYXdOQ2E4QmEw?oc=5",
-      "date": "2026-11-11",
-      "source": "SAP News Center",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-ee36eeda3951142",
-      "title": "Exelixis Bets on Zanza as Next Cancer Franchise as FDA Decision Nears - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQ2FNNjRRaTI0MHVlWGJ4enZsVkxEOHZ0ZkI0a0kya2pRTEY3LWVhQ3BRNEpvUndhVGNNOEY4ZlRtbVNlRVQtRXl6RTZSNWcxZF9NS1g0R3g2NmIyRGoweE1UN1RseWpzVUtVUDdYRDFDRHZTMjlwRmprZVdVV2NRSngxTk9tTU9VVmRHeHRfdW8xWVUzQ0llODNDZWVRT09NdlBEZTFFTDBNbk9lVTBUWG5MX0x0LWpyMVdHSmR4bmVtbFg5ODFjNW9R?oc=5",
-      "date": "2026-11-11",
-      "source": "TradingView",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-4803fb6354fecfe",
-      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
-      "date": "2026-11-11",
+      "id": "rss-fd86484a3d59fc4",
+      "title": "Remembering Toukie Smith, a Trailblazer Who Redefined Runway Beauty - WWD",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObDAwem8wQUx0S296dW92alpaaHdkdk90MDJmVm9VVUxqMWpTMGhzM2dXeWVOVjFYRWJ0RG1QaU1uR3EtbWZBX2NZNkx0OVBMSTc5dDU3N0tDN1ZuNlFZeGNwZE53d2tLRTdvd2dDbXE1SC0tbEtIMloyWjVTM285Y0pfVW9RNllVdEU0N1VCMHZVOXpjd2xHUzlrQzdQbFVQZkVHSThvZGd3cWlwUm40?oc=5",
+      "date": "2026-11-14",
       "source": "WWD",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-9008caa3614434d",
-      "title": "DB손해보험, ‘교통·환경챌린지 8기’ 데모데이 열어 - 한국보험신문",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9mdFl1UnhmTm5PNnFaWlJVcmFIc2Q5ckRKa3hTWkZjXzZITGhrcEJWSUxadnNMdUtpRlAxck1FNDZITFR4Rk9LNjlGLTY0M2ZTMEJCalBjZVl4Ymd1bktmeVRPVFlBMXB3WkhZ0gFvQVVfeXFMTlJuTU1CSWUyaDJQblJheG1vS3RkYUlvN2tVcGNSUnhjeVpjcU16M3l6QWVpRlpXc2ZoMWl4UVd2T1VYRF8xTDJqZ3Z2a1dZYnVRVkduMmY0WUpnZWVsRXB2U2U0cDZoV3JRempVUzM4?oc=5",
-      "date": "2026-11-11",
-      "source": "한국보험신문",
+      "id": "rss-9e4baf652ecbddd",
+      "title": "Booking Holdings vs. GameStop: Which Consumer Stock Is a Better Buy for 2027? - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdDBQVzB6eG9lQ0QyMnppSzB2blFaaWQySkcwR2pKS2w2clVRX21fUm9YQmRGY1JFWkJxVmw1SHpPT2U0NERxM29NOTFUSHI5MTYtMnpfMHdyN0I2VlFCNTNSN0dMc0QwODhhZnFWeGFQTDFGczJpRVJJaUllck1leWl2NVh3VmtvMzcyZjNWZThuOWdyd2E2ZEVvZVBCbVlmVnQyb21IdENxeXhucE12bFhnMThkZ0gxRkRJRnYwek5VVzZkT3c?oc=5",
+      "date": "2026-11-14",
+      "source": "The Motley Fool",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-9c8d3cd455f7c54",
-      "title": "Dutch antitrust regulators probe Biogen over test for its MS drug - STAT",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNXJtaDh0MjhRR2hNTl9acmRxV0xfbkF6SGpDY3NaRzA3cFROWHJDWkY3M1h1NHlXVXRCU0JyYk5UcVlNT0NoU1BQRXl3SE5ad1BlbXNQcVFaRWhSS0hLLWl3eE1rNUNGY2NtcjJ4aktXQ0FHYkQ1ODl5Smtya2tEbllNd3U4RXBENkFkSEgyMFN1SlRUNU5NMS1aNmtwWjNEdVBvb2RFSXVWYnluV1RxQ0FTSlVqYXpFeTZqcA?oc=5",
-      "date": "2026-11-10",
-      "source": "STAT",
+      "id": "rss-78bdf0a1ebee396",
+      "title": "From Guarding Stars to The Altruists : What to Watch on Netflix - Netflix",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOV2ZYRm5lT1oxVEZ6Um1UZVQ0Q3ZQcGs1QXdMaWR4LVNJclNkZ2VKNXFpR2FmUWVLLW1sbWJwczl2Snk4aE0zU2ZHWTJRNlhtWU1NRUtEeVliQUZGakxpNGp6Z1Z2NktRM1BHMWtQelNDbFZzLXFxYlhPZTQ0NjVZbV9KZ2ludUk?oc=5",
+      "date": "2026-11-13",
+      "source": "Netflix",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-1d26a4847b6130c",
-      "title": "97,880 Caleres, Inc. $CAL Shares Bought by Penn Capital Management Company LLC - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNDhVUkJpNmVjQ2hjdXhDTmJ4Rk1jZGpfRW1SbTVKRlpIOUZFODVZaENCWXRfRm81N1FQWlRicG9mSmZlb04yREg3VUhZSXJTb3Fva1JESnNSSWQyNWg5dWU4RjFOdDRMY1dLR2hCZGN6QnZ3YVkwZDdhcFpiNHNKMFd2bkluYmNkcnlZTV9WcmctYWMycEVLY0dCTHloaFRyRzVQTWktWVEwVWNnNWszbmZlV0J1dElxWFJPaURMVEpuaW1mT3MwVkVBMVRWek9J?oc=5",
-      "date": "2026-11-10",
-      "source": "MarketBeat",
+      "id": "rss-265c22974b92fee",
+      "title": "Ferrari Spring 2027 Ready-to-Wear Collection - Vogue",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9TcDc3VzBieHJxVG9tVV9fYms5WjNwNlUtN2VYT0g0MXpMa3lwNkY1S0VIR0Fjby1SSTZSdDRPZXE0MEt3bVdlRWE2Q0NKLWExQUtSVERwVm9vSUc0V3RsYzkyeXA3QS15bDU5MzJLX2JnTUJqNkRsYQ?oc=5",
+      "date": "2026-11-13",
+      "source": "Vogue",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-7e8b5612c19f3e8",
+      "title": "Neurocrine Biosciences Shares Rose Even As Profit Fell - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRldvRXZQMFRyMnFsUGh0d01VUDJCam9tanVIeFAwTmpaSS11dVlHbEZoSUNvbUhxY3ViTDg3TGg1TmVESnhLelltU1hXU0syX2lpX2NnLU9wRmx4NkNjZHduanZRdnFZaHhTQzluN3VmZmt0Y2JTQUtWeFNxWktXcXI3Ri1KUWFoV1pWVkIyWmlaWGhobVlQYXpRa0pKY1pmLUhGYVBlQTJJMXh6Z0xxZjg5NVdOcjR4NlY0and2R0NRWmc4MHVySWU2STFqNXpUend5eFNaMVhzNk5PUFlXZ0ZVdHDSAeoBQVVfeXFMT3ZSMW94b3NhVm9GUTVZaW5GVEZLbVB2YU4yb3VyR09tMzlSYm1JUkkxTjlHclRPNkJfS1BxUFNBcmpIcmh5OE9EOWpOZU5OaTBJOWhzNEI4U2xEU01jTVdtc2xvSXZuY3NqRTAtSXcwdF9ENkpraFVxcVQ1SVEwZ3Q3MUhTM0VCdlNpeGxNOU5TRDZOZVFlUmt3OVNnUDFuTmlNdFdlR05iNFR2UXl6dFJhT0w5SlpNUEpOWGdITWE1UnM4aWx3Q3V1bHdITmJYbmkwYmx1Z1JtZlV3b1VMcDJDLWdDZjZ4aklB?oc=5",
+      "date": "2026-11-13",
+      "source": "Simply Wall St",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-214b0eac2a9ba69",
+      "title": "Ferrari Spring 2027: Revving Up in New York City - WWD",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84N0daSlJLbnNGS2JuYzV6ZkJ0eVJhZ2tMb1lobFBoS24yYVVBM0dIQWFZbjdMWFZHckYybG5nZXNMdUs2b2lJZVRQNXB1SDZVeDhGaHhsOTdfRWFENEEtN0I5aGVic2t1bmJJ?oc=5",
+      "date": "2026-11-13",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-d671889403e4bfe",
+      "title": "Disney to Report Q4 Earnings: What's in Store for the Stock? - Yahoo Finance Singapore",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRHFjNjlnekFLdUJBLWJkMVlENFZ6SVJ4YVota2VhYjhoQU9PNnphb1pNelc5Szk4OVN4ZW1GNl9OMEQwU3NSaU9zVlp4NnpQNi13TFJGcjJhYUc4V2NvYWxvbTlGQ09hLVdmWF9FRlk4XzU4aUZ3a09vb3pLS2hkcm8xQUszMGc?oc=5",
+      "date": "2026-11-13",
+      "source": "Yahoo Finance Singapore",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-720f83a6f1a891a",
+      "title": "What American Eagle Outfitters Bulls Got Right - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTlQSDBTcHg0VlpVaHZhRFdhdU4xN3NYQnpoNzh3aHBsTHBWWDUyU21lc3dUOTBBa1hyNkdQY1c0LW16Qlc5c3dLYm5QQmhBVElzOGFpdHJLNDd4N1dKcXNxZERlOEgwWkcwSjJyZzUtSG91VzFLSUNLNE8wWDNkZXhWTzUtLWhnbm91U05QZ0syZ2xQdjNfNkhJenZsQ1huUkFYRjNRNHduT2psd3RjQTJ2ZGtaSVg5cEluRUFpajRKMmvSAcgBQVVfeXFMTWxKaHIyekR4NGtNaEQ3OTBzSkhFaVg5VzVIWDNzQVJCeFdpWUUwN0Z0VHVqbFBiM1E3YW5hTVZkM08wb2RWM2s3aHhVdnpvUWpoU3lzNnJVS3VRMlZUbHd2WTZBMHIwWkR5YktsUlA3T3l0V3RBVU5CZXdWRkZxa1BIQjBsVnMxRVduU24wbFEyOEJWLTN0TW1ZaDR0TWVoM3JVVlVya2Vqc1AyWFgxU1hrMFMtb25zelhHSUduM0lhcU5EUzVoZ0U?oc=5",
+      "date": "2026-11-12",
+      "source": "Simply Wall St",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-d01a201e65c32e3",
+      "title": "VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei10MDF1Z21mSDZvWHVYRXM0YUwtQ2VEcERUUllYZm5iSFJJUkVEVE1JWmt3NWhlcVBTZTRjclEyWVNHdmN2d0hjbTVJazUzN2lCLXZwTVhMTDZ1b1VJMEJpSVhFTFZJdkVWRGt4d0hfMG1uQ01SeTFaaXdtNzBZeE9kRGY0d0RpemV3dDRQd0EybVkzcjBRY3RMdi1PM0ExOXpPX2lhSHY?oc=5",
+      "date": "2026-11-12",
+      "source": "Yahoo Finance",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 93,
+  "pendingCount": 70,
   "sourceErrors": [],
   "sourcesChecked": 1,
   "aiStatus": "key_required",

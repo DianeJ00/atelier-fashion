@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "releaseId": "b1210f82d72068a6f007",
-  "contentSha256": "b1210f82d72068a6f007fb6b3f020c7cfafaab453b5bf58b4f0825743bf79bde",
-  "builtAt": "2026-11-12T04:45:47.057856+00:00",
+  "releaseId": "6a93c09ad6a40194ce0c",
+  "contentSha256": "6a93c09ad6a40194ce0c2db16a9209f189bed557db7106bf833fd0cecef14ff9",
+  "builtAt": "2026-11-15T03:39:52.396248+00:00",
   "dataFiles": {
     "research-universe.json": {
       "sha256": "3732bad63165856d6707f40816759f84178395574f099b2bca5eced78f569255",
@@ -12,17 +12,17 @@
       "status": null
     },
     "research-pipeline.json": {
-      "sha256": "aa623a596fd4e0fe75fc48bf48d8394c40fbe3de7209d52435662d4fa73847b5",
-      "bytes": 15018,
+      "sha256": "51108510574947e5a35a1d2de6e18614c74b2112f0195fc45dc97bc44451e7e6",
+      "bytes": 15011,
       "asOf": null,
       "generatedAt": null,
       "status": "registry_compared"
     },
     "market-relative.json": {
-      "sha256": "c5432ffc5305c3449fc09b6963d37aaa57eab909c563ce663ad3fd2cb7e4f402",
+      "sha256": "f32c10d5a35ce536880fa82367e27eb73228b17f0c2ee8f9d5bce6b2412f548a",
       "bytes": 1482,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:41.190277+00:00",
+      "generatedAt": "2026-11-15T03:39:46.202652+00:00",
       "status": "key_required"
     },
     "market-reviewed.json": {
@@ -33,101 +33,101 @@
       "status": "source_verified_snapshot"
     },
     "stock-relative.json": {
-      "sha256": "f1c04823ef1daf57bfd1a4d5a93f1965083a255796ce02767b5a8f40716125f4",
+      "sha256": "fac743aeb0bd36957906b691563e2a68f9ed5fc73cda31e5dc70ce72010d39b8",
       "bytes": 1262,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.690543+00:00",
+      "generatedAt": "2026-11-15T03:39:51.952438+00:00",
       "status": "key_required"
     },
     "price-events.json": {
-      "sha256": "099e2c627ba38b46eab0930e49c7e622726d47ac37c8683938d105f71a528227",
+      "sha256": "6c62be791d0960594c8759b1c8fec175b65c1bff205b21f321ba5f95da4dfbe1",
       "bytes": 506,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.690543+00:00",
+      "generatedAt": "2026-11-15T03:39:51.952438+00:00",
       "status": "permission_required"
     },
     "clinical-trials.json": {
-      "sha256": "2257266b42570355560069354a2c23e95e119e355dd9bd7ff1b104736ee99b51",
-      "bytes": 78328,
+      "sha256": "3fc57df61f52b4a4efda18e11534fd380b84124c11d514e130d3427a2b091318",
+      "bytes": 80371,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:41.250126+00:00",
+      "generatedAt": "2026-11-15T03:39:46.278523+00:00",
       "status": "ok"
     },
     "consumer-official.json": {
-      "sha256": "bcf63da2459b81d9510ef088ec0f79d99a817c100d3d17207b83bc7831eee910",
+      "sha256": "901e854d994d499852242c4da5ddd9fead27dd8389ce18c5408aafc0674883e4",
       "bytes": 70264,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:44:58.390402+00:00",
+      "generatedAt": "2026-11-15T03:39:07.262773+00:00",
       "status": "ok"
     },
     "korea-dart.json": {
-      "sha256": "cf009700e8ead3bb1f0c5cb4b035998331515ba6addcb99141949524157b1a75",
+      "sha256": "6ac6d04de974b5ed75ccb2ad6d0d51129e66dda9a8588e001d3e385749e88dad",
       "bytes": 1770,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.968791+00:00",
+      "generatedAt": "2026-11-15T03:39:52.289678+00:00",
       "status": "key_required"
     },
     "atelier-weekly.json": {
-      "sha256": "234eabaf5fba7e1dec0388241d8db4487ed87b30ab84cad128029f6b5d8c692e",
-      "bytes": 15242,
+      "sha256": "d424b56ec368eb62cc6b55784499172c7f9c332df210120700f872c91ae39c46",
+      "bytes": 6526,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.907381+00:00",
+      "generatedAt": "2026-11-15T03:39:52.215917+00:00",
       "status": null
     },
     "sec-trends.json": {
-      "sha256": "2734f558acd48bbeda48c1bcea970620b53064f247b64225b959ef56528bd338",
+      "sha256": "e1834c06de73b748ca03f7686a0def719e09ca6a339a3f4544e6a05364cb9e40",
       "bytes": 143341,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:26.689154+00:00",
+      "generatedAt": "2026-11-15T03:39:31.404455+00:00",
       "status": "ok"
     },
     "data-health.json": {
-      "sha256": "763a84b908e8bf842521c3795b8f664062aacad7126801f4824d19736d17832c",
-      "bytes": 6980,
+      "sha256": "2f2af39b5ade33b452fdc35f8f6b451d296a2c91b9710d4f9685bb2e1f5300dc",
+      "bytes": 6977,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:47.008202+00:00",
+      "generatedAt": "2026-11-15T03:39:52.335697+00:00",
       "status": null
     },
     "weekly-research.json": {
-      "sha256": "74e972ce1a824120cf87df38578cf02730e29a0ea7ed2b4e875eca3e3021b37b",
-      "bytes": 84189,
+      "sha256": "1b744c1c44f5ee55385d371697dd2f11b83694be7b3f9ac21e1c9d8e6810020c",
+      "bytes": 63228,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:44:41.693857Z",
+      "generatedAt": "2026-11-15T03:38:50.716447Z",
       "status": null
     },
     "official-financials.json": {
-      "sha256": "62c79ff6cd33cc5151d45ead2105db9092178b1bb7530f6baecc94a6e74cfb54",
+      "sha256": "183c6f18efd593d403d3f2dc8ef26303180cc4cf607a07fce444d45778b7f9b1",
       "bytes": 37763,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:44:48.926279+00:00",
+      "generatedAt": "2026-11-15T03:38:58.076422+00:00",
       "status": "ok"
     },
     "consumer-samples.json": {
-      "sha256": "c49ce4d6a3046b74f14254fbcbc80258af31c4b04bc2fe681a44ffe17c3b53ee",
+      "sha256": "ce9f98ede4a73db401ba8d945ff8666bee001131883fc54eef1786d0114a5550",
       "bytes": 622,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:41.132243+00:00",
+      "generatedAt": "2026-11-15T03:39:46.130103+00:00",
       "status": "key_required"
     },
     "weekly-investment.json": {
-      "sha256": "38541bf615f0136cb2113a4309c4981d6ce04f758f45340975a246a40ace911d",
-      "bytes": 18345,
+      "sha256": "3d113888b39e8da709c6359c8779e0e76c1e826804c49348ba7b5e16ae270dba",
+      "bytes": 17506,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.864160+00:00",
+      "generatedAt": "2026-11-15T03:39:52.170921+00:00",
       "status": null
     },
     "weekly-content.json": {
-      "sha256": "ca579a8b2505997b9f1fa89f882e120b1ce0814215bd6d0cc70a9e172e1b1458",
-      "bytes": 16475,
+      "sha256": "cc193f37074dc5e01e22d2041349980da5ce2b21eb25c1136eef194d2114b864",
+      "bytes": 7971,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:46.755812+00:00",
+      "generatedAt": "2026-11-15T03:39:52.041430+00:00",
       "status": null
     },
     "biotech-financials.json": {
-      "sha256": "287ecabab50532b6b8e41459516e175911251fc4ca9a2128b91213f24ce71f8c",
+      "sha256": "1aaf55ca1f200aea9672570f61b613fe81a30f3f17058200a8ade83d9808c48a",
       "bytes": 62647,
       "asOf": null,
-      "generatedAt": "2026-11-12T04:45:08.928769+00:00",
+      "generatedAt": "2026-11-15T03:39:16.892933+00:00",
       "status": "ok"
     }
   },

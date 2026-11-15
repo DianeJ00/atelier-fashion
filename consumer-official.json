@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T04:44:58.390402+00:00",
+  "generatedAt": "2026-11-15T03:39:07.262773+00:00",
   "editedKpiAsOf": "2026-11-05",
   "source": "기업 공식 실적 발표(업종 KPI) + 선택적 SEC 10-Q·XBRL",
   "status": "ok",
@@ -128,7 +128,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-04",
@@ -259,7 +259,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-21",
@@ -374,7 +374,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-05",
@@ -495,7 +495,7 @@
             "netIncome": null
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-03",
@@ -626,7 +626,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -757,7 +757,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -888,7 +888,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-06-03",
@@ -1009,7 +1009,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -1140,7 +1140,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1271,7 +1271,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-29",
@@ -1325,13 +1325,20 @@
         "companyName": "STARBUCKS CORP",
         "status": "quarter_verified",
         "latestReport": {
-          "form": "10-Q",
-          "filed": "2026-07-29",
-          "reportEnd": "2026-06-28",
-          "accession": "0000829224-26-000130",
-          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000130/sbux-20260628.htm"
+          "form": "10-K",
+          "filed": "2026-11-12",
+          "reportEnd": "2026-09-27",
+          "accession": "0000829224-26-000162",
+          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000162/sbux-20260927.htm"
         },
         "recentReports": [
+          {
+            "form": "10-K",
+            "filed": "2026-11-12",
+            "reportEnd": "2026-09-27",
+            "accession": "0000829224-26-000162",
+            "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000162/sbux-20260927.htm"
+          },
           {
             "form": "10-Q",
             "filed": "2026-07-29",
@@ -1345,13 +1352,6 @@
             "reportEnd": "2026-03-29",
             "accession": "0000829224-26-000080",
             "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000080/sbux-20260329.htm"
-          },
-          {
-            "form": "10-Q",
-            "filed": "2026-01-28",
-            "reportEnd": "2025-12-28",
-            "accession": "0000829224-26-000011",
-            "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000011/sbux-20251228.htm"
           }
         ],
         "quarter": {
@@ -1402,7 +1402,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-07-29",
@@ -1533,7 +1533,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1664,7 +1664,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-27",
@@ -1795,7 +1795,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-02",
@@ -1926,7 +1926,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-12T04:44:58.390336+00:00",
+        "verifiedAt": "2026-11-15T03:39:07.262629+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-09-10",

@@ -1,40 +1,40 @@
 {
   "highlights": [
     {
-      "tier": "공식 공시",
-      "ticker": "TPR",
-      "date": "2026-11-05",
-      "title": "SEC 10-Q 매출 USD 1.89B / 전년 대비 +11.1%",
-      "context": "Coach 성장·Kate Spade 손익 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
-      "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm",
-      "note": "공식 공시 사실, 세부 원문 확인 필요"
-    },
-    {
-      "tier": "공식 공시",
-      "ticker": "RL",
-      "date": "2026-11-05",
-      "title": "SEC 10-Q 매출 USD 2.19B / 전년 대비 +9.1%",
-      "context": "평균 판매단가·아시아 수요 · GAAP 법인 단위; 브랜드별 지표 별도 확인",
-      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm",
-      "note": "공식 공시 사실, 세부 원문 확인 필요"
+      "tier": "기사 제목·미검증",
+      "ticker": "PVH",
+      "date": "2026-11-12",
+      "title": "PVH Simplifies, Cutting 4% of Global Workforce - WWD",
+      "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONW1xY0E4Q0lUY0NkckZkSklsblhkWDR5MjVuYkhJbU9DQXJURUdqSnZsci1qU1dJbkU3NEJSSUN0eU4yYVJDbFNNaFgteUtkMklOMmVvQzIxYXZ1YnhPdGJXMlNnWktnbWZyWnNlU2lzc0JGcEM1Zk1JSDFILWNIY3VHUDlJSlFmSzAwMnZScDhxR0FUYjFBck50Zw?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     },
     {
       "tier": "기사 제목·미검증",
       "ticker": "CPRI",
-      "date": "2026-11-11",
+      "date": "2026-11-10",
       "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
       "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "LEVI",
+      "date": "2026-11-09",
+      "title": "Levi’s Introduces AI Hiring Agent to Streamline Recruitment - WWD",
+      "context": "미국 직접판매 동일매장매출·재고 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMWlkYlRhWl9HYUZocW1nUDdaOXBMVUs2aVlJOTQtNExhQ1k4b3A5dlR3UFFST0h4X19CUEFrcGFLX2tmUjVrTzVhYThLUHZVbmhQN0pnSGZuS0xHWkxxZENnQW1BVmlkOWVQVjBpZnFrUENQb2MzdE5UQUJzUXlEZXNKdWJCaEV1c3phaHlIemk1NnNRR2FKVHZIam9YM3MtZ1VCM1diY1RfdmZJYzBMSFFVZw?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-12T04:45:46.864160+00:00",
-  "periodStart": "2026-11-05",
-  "periodEnd": "2026-11-12",
+  "generatedAt": "2026-11-15T03:39:52.170921+00:00",
+  "periodStart": "2026-11-08",
+  "periodEnd": "2026-11-15",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
-    "newSECReports": 2,
-    "unverifiedHeadlines": 93,
+    "newSECReports": 0,
+    "unverifiedHeadlines": 69,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -59,9 +59,9 @@
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
-        "title": "Tapestry lifts outlook as young shoppers snap up Coach bags, shares jump - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNLTUxZVQ4czNyRzFEVW1rcl85TkNOX3U4elBwWmpVR0lWMEFRRkI1Z190XzlMeW5UVXNMS0ZrMU83a3pCZlFWY0RUUTQtZkM2Ujlkc056eDJFbjhadDRmczZsd2FJdjJRcjgzVHIzN2FTUzRvOERxdzh6bDVDSVplVVU5SGZuR000SldCLWxjV2FjT3BHd2JyYWFSTDNhZVgwclR4aGxJMjFvVTVnbHBnZUhTZFltdldwQlhOU0xBSDNkM0hr?oc=5",
-        "date": "2026-11-05"
+        "title": "| Coach sees $10 bn path as Tapestry posts beat-and-raise quarter - Fibre2Fashion",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQMUE2c3NCb0tXSGRLLVVSSVBEYXRnZ1g0RDZKcjRlTHV4WW5YNk1wcEM4MjRTVE5MSGZKdnpLU3h3LUJBSl9QWS1SUllsTDZ6bmZSejlDSEdDYVBwWTd5dnZyZnNobGNnT3RTVUo1eVB1TTRGQlc4aVZxREIybUhpMXo5RDN2ZW4tNmZ0clZMZ0ZnMXBYcHZrS29xRHJkcDFEMUVaNjNMT2VXVE54YkhJY1lzeHduZHJZNmRRa3VFdE1TaU1fRmcwTXVYWXFCcGhSMGVUTGllTWo1cGlXQndRTQ?oc=5",
+        "date": "2026-11-10"
       },
       "consumerSampleCount": 0
     },
@@ -82,9 +82,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Ralph Lauren Tops Forecasts in Q2 and Raises Its Outlook - WWD",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX3hRUlBWQTMwaExBcE1SX2F5anRWNXF3OFQyZlJCeXRidDV5bkFSSk9MRl9mWksyWnZRMlRBSzNuSnJxT0poZ005T2YzcG1ST1BwUmxvUVdBM3hXaTQtTjdUV2xKUGZFTlhoYTFUS1luMEtxZ0lMdkR4TmJUSk1JV19jLW9XaTlybXVhaVhpNUhwOVBlTWhtMVk0cmVsYlBUenc?oc=5",
-        "date": "2026-11-06"
+        "title": "Ralph Lauren Warns Inflation-Weary European Shoppers Are Pulling Back - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZkJMRmhwMGVnbm9aU183VUp3R2ZVTHMwcWtIbTAzUlo1UkdCVVMyMWV1VFZneTlUQldmYm5BNG82MnVpUy1nTFJNdEdsWE9QcjFnWXZSOXJOYlVSOFlRYUZueC1QTERHcHF2YWpBVVg0VzFkQmRKUjJTdFQ5MEkycnZjVUYxVzFDNFZGS21oc0NtVXhIcE85NEttM29KME1j?oc=5",
+        "date": "2026-11-08"
       },
       "consumerSampleCount": 0
     },
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Old Navy Is Caught In a Doom Loop - The Robin Report",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE05LXIxN1dqbWZWeUNFdm1HOGY1eUt3VHpJbEl6OUdiSDJ5YzBOT3R6NUU1UGd6MnRWQkRzd243WV9ieUVST2U4dFh3QVRJNmJqckxDZUxxV2x6S0hFNUxNTG9rQ29PUEhmQkhnRzBB?oc=5",
-        "date": "2026-11-11"
+        "title": "Bridging Gaps to Create a Better World - Gap Inc.",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUGdHbFBZV0ZGUmdyd3F2TkJIOC1nV3lpX242QTVxbThUTHF4WUtTNzY3MVNFamFhUHFoV21reTJ2SEZOMWp6bGptVmxwTWVOdXR5N3lmdXdVZTZ0LXdqY1AtcHhQdEhtTmk3LVNOQ2x5cjRNUDdMNkktOWpYUm5QZFNPbEJLYnk4Y2JDbg?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -128,9 +128,9 @@
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
-        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
-        "date": "2026-11-06"
+        "title": "Nuuly Wants to Make the ‘Spring Awakening’ Revival a Fashion Moment - Fashionista",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KUXB0ck9uRE5CdVg3SzRzTW5tTHl3a1A5cTZQamgtVnBaQS1ZbGpJLWVxSDJsaExNMnh2X2F4aDJ4SEtsNFphSVNOUWtPaENBb2hUNGk2NFJyUk96MGVvYTEya3BOTGcwSG1ocXp0aFlnUEpnbEE?oc=5",
+        "date": "2026-11-10"
       },
       "consumerSampleCount": 0
     },
@@ -174,9 +174,9 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
-        "date": "2026-11-11"
+        "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
+        "date": "2026-11-10"
       },
       "consumerSampleCount": 0
     },
@@ -197,8 +197,8 @@
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
       "headline": {
-        "title": "SAP and VF Corp's Walldorf store runs without staff during set hours - MarketScale",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHdOZTFUX0p5UU9vZkI1eTNYSUFSUmZyb1FTMFpvaFFsdHBzclY2cTJZbFZ5anFVaUpsb1djTDFZZ2ZvaWhHQUY2ZlhSYnBPc29HaHVjN1dQTlV2SWYtaG5iczNONkY4dkk0SUdtMDNyWnVYbzBXTFdveVoybGdnNDdkenA4b29xOUc4RHRmcGJHMC1PUWd6WE1EY0pkdkItYTJWdDJNZ213OFBRZHREMHJWdw?oc=5",
+        "title": "VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei10MDF1Z21mSDZvWHVYRXM0YUwtQ2VEcERUUllYZm5iSFJJUkVEVE1JWmt3NWhlcVBTZTRjclEyWVNHdmN2d0hjbTVJazUzN2lCLXZwTVhMTDZ1b1VJMEJpSVhFTFZJdkVWRGt4d0hfMG1uQ01SeTFaaXdtNzBZeE9kRGY0d0RpemV3dDRQd0EybVkzcjBRY3RMdi1PM0ExOXpPX2lhSHY?oc=5",
         "date": "2026-11-12"
       },
       "consumerSampleCount": 0
@@ -216,13 +216,13 @@
         "accession": "0001018840-26-000047",
         "url": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 1,
       "nextCheck": "Hollister 동일매장매출·영업이익률",
       "riskToTest": "핵심 브랜드 성장 둔화",
       "headline": {
-        "title": "Abercrombie & Fitch launches co-designed collection with CeeDee Lamb - Fashion United",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRnVoVjlaRUNDOWJFX3pvN3JYbHc4UTZMbnNxUy1qWThxSVF3cm15Zlp5QWlGZEtTWVJzaDVDUGI1RFZVSm5ZY0dTRm5maGxxMklKUTBTdjVoUFQ5ZmprWHdVMHE5XzFSMU5HUzVmSHhqamtrNDhsay1TaVRoVHNLeDVsemlHMHo2VjRQVk5wcUVsTWdWbVZ3MXNkb19WcWVzNlZpeXItR0h1VG5Fb201VGRHZjNmeWtHMndj?oc=5",
-        "date": "2026-11-05"
+        "title": "OPINION | How Abercrombie & Fitch is gendering good quality - thedaonline.com",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZnY3b1d6SWFfQWtEUEs1a0NaVHI0cDRtNHM2alFBOW1GZGR3ajVMSlJGeHhUU2pSMENjSUZkUzZGR3hxSmx1WXZjRERVX2RILTZiQ0ZLUm1vc2w1WVg2SE9iR3NKemxxWFYxTGVINnVvTWlMNG1iV3M2cW9pZUNDcUNuRDZzN29pT29nNXAyVzRMZE1aaUN0ZTUwRWY3czBYekFkNXBuUFlmMzQ0cmxDemp4WjJfMFJFT3p3N2NkRHQ2TDJTRlFOSkdfMjNTS1AtUl9HMjhFMVg?oc=5",
+        "date": "2026-11-07"
       },
       "consumerSampleCount": 0
     },
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "Why Did American Eagle Outfitters (AEO) Move As Attention Builds? - Simply Wall St",
-        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOeXIxVl85OWppMmhYYVB3blJHbHdUdVNGOTlmOVpGZmFYSkpJTktELTlyV0swNzZneEVTaVNsdXM4UFJPME5Lci1XeFJlRHBxeWZXMFM4TlY1Yi1yRk5EWmNEMm9VTjZLRXNiRW5JemZjdUVaYXZ6NW1oUXIzbi1iTjE4dmNHUk12Yl9ZNkZHUGF1V3FpNzY0a3Y1NWI1cUJNa0ZsTEJUTjdNdGZudHZNUWZGWjhObGhkcHliaEtqR2lKS0tUNWZkOTVoMW1nUVd4Q2xFWTZ30gHbAUFVX3lxTE1WU3hsN0p6NXVoZVFXY2FiclUzZDBlV3JGZDRmOGFJLUxaQnBPMjhQR0p6S29SazZiN25fVXdMekVPYWtmT1RqU3pwOXhNNmNCb1Ztb3RxbmVmVEdNT1JVODNKRGctcTNLdkpZcjhkLWVUOGl4VE9tb1hGNmVXVkFVQWNlRzhHSVNVblRIV2V4T3pRUGx0cGlXcElZZDZqMG90MVM5RGtkMzJpb2M1WWdVNnp4SUdiOWZXRmZLWTlMZ18wekh4ellzZjJJS2l0NXpRUDNBY1A4bUozaw?oc=5",
-        "date": "2026-11-08"
+        "title": "What American Eagle Outfitters Bulls Got Right - Simply Wall St",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTlQSDBTcHg0VlpVaHZhRFdhdU4xN3NYQnpoNzh3aHBsTHBWWDUyU21lc3dUOTBBa1hyNkdQY1c0LW16Qlc5c3dLYm5QQmhBVElzOGFpdHJLNDd4N1dKcXNxZERlOEgwWkcwSjJyZzUtSG91VzFLSUNLNE8wWDNkZXhWTzUtLWhnbm91U05QZ0syZ2xQdjNfNkhJenZsQ1huUkFYRjNRNHduT2psd3RjQTJ2ZGtaSVg5cEluRUFpajRKMmvSAcgBQVVfeXFMTWxKaHIyekR4NGtNaEQ3OTBzSkhFaVg5VzVIWDNzQVJCeFdpWUUwN0Z0VHVqbFBiM1E3YW5hTVZkM08wb2RWM2s3aHhVdnpvUWpoU3lzNnJVS3VRMlZUbHd2WTZBMHIwWkR5YktsUlA3T3l0V3RBVU5CZXdWRkZxa1BIQjBsVnMxRVduU24wbFEyOEJWLTN0TW1ZaDR0TWVoM3JVVlVya2Vqc1AyWFgxU1hrMFMtb25zelhHSUduM0lhcU5EUzVoZ0U?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -266,9 +266,9 @@
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
-        "title": "Calvin Klein unwraps the icons with Jung Kook of BTS for Holiday 2026 - Devdiscourse",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPblAxSFVSaUhuUEhmU2lMR2tkdnUwaEJhZlVEcVQ0OGRSNlhxMWhlNFhOVmQycHRrRk1YanZKRzBwcFFmZ0VXaEtBTS1WZm9ubklRd0tOdE5VY1Z0Q0lpOFhKNDZEZ2N6MGNUSExIZWFpcmNwXzBITzhnVEJJeHhoRmt2dnRZMWs2azd0NVhSQi1MelpjQ20wbThQbjlPWVhrVjhzS25NYW0zd05OWnhTRmRsMDlFcUZtVnNweW5LQ05BNVRlVFHSAcYBQVVfeXFMT25QMUhVUmlIblBIZlNpTEdrZHZ1MGhCYWZVRHFUNDhkUjZYcTFoZTRYTlZkMnB0a0ZNWGp2SkcwcHBRZmdFV2hLQU0tVmZvbm5JUXdLTnROVWNWdENJaThYSjQ2RGdjejBjVEhMSGVhaXJjcF8wSE84Z1RCSXh4aEZrdnZ0WTFrNms3dDVYUkItTHpaY0NtMG04UG45T1lYa1Y4c0tuTWFtM3dOTlp4U0ZkbDA5RXFGbVZzcHluS0NOQTVUZVRR?oc=5",
-        "date": "2026-11-10"
+        "title": "Must Read: PVH Corp. To Cut 4% of Global Workforce, Burberry Revenue Rises 6% in First Half - Fashionista",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1GZVp1ekFIS1NMbUpENUZ3TF9JM2hoNEhMemR0SnRsTkpQVXJRMDUxWWc0UUVXYXNQVWFLLTh4MUg1MGVWZVhxZ0Z5bWFPeXBlVHlDWmZDNzM3U1Ut?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -289,9 +289,9 @@
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "Victoria's Secret's 47% Surge Has Wall Street Hitting The Brakes — Here’s Why UBS Downgraded VSXY Stock - Stocktwits",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaVFkYWpmWTFIeVp3a01Ed0RabUdRNkFYSnRoQ3NWQzhUdFJWLTdONGk3Y0dmdWRzV1J3U2k5YkozUnNmSXdTejJBS0pVeWdJbTVmWFdWaGpTYzJDeWRmaUtEMzIyci0wdXhwVndkTXBVQnpQb2tOMnRaMFQ5NTlXX0p3NnZFQ3lEMDVMTTBPazlRTGI2TGNkUWg4WXNPSEdfWkZGTDNuVGRXQVUtT2hrM1o3TXVPSG11dzlYbnp6czY?oc=5",
-        "date": "2026-11-09"
+        "title": "Bank of America Drops Shock Take on Victoria's Secret Stock After Rally - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMUJPb1dDR3RIVGtpZmtuV0E4R0V3UmhxMDgxcjFndkNoTkVoeWtsVGNldmw4LVk3cjRtVlFCaXljNllfWWVpVHpVbDZGUjJVLWMxYXN6UzNuVi1mYVZESEdackdoUkVobGptOU9qSUd0MDQtNGkxMmlvdUk3TTRUclJjNlhyUzBPUlEtSThlakJ4dHFOdXBkc3hNT0s2MEJ1?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -319,20 +319,7 @@
       "consumerSampleCount": 0
     }
   ],
-  "latestSEC": [
-    {
-      "ticker": "RL",
-      "form": "10-Q",
-      "filed": "2026-11-05",
-      "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm"
-    },
-    {
-      "ticker": "TPR",
-      "form": "10-Q",
-      "filed": "2026-11-05",
-      "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
-    }
-  ],
+  "latestSEC": [],
   "rules": [
     "10-Q 약 3개월 단위 US-GAAP 수치만 공식 실적 표시",
     "GAAP와 조정 실적, 다른 회계연도와 기간, 매출과 ARR 구분",
