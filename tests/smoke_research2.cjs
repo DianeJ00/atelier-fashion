@@ -120,7 +120,11 @@ const click=(key,value)=>callbacks.click({
  assert.ok(regulator.includes("제목 기준 요지"));
  assert.ok(!regulator.includes("규제기관 조사 확정"),"headline is not independently verified");
  click("company","US:JNJ");
- assert.ok(win.ATELIER2.companyPage().includes("치료제 허가·승인 관련 동향"));
+ const jnj=win.ATELIER2.companyPage();
+ assert.ok(jnj.includes("최근 주요 이슈")&&jnj.includes("SEC 공시"),
+   "disappeared dated article must not hide the official source fallback");
+ if(jnj.includes("치료제 허가·승인 관련 동향"))
+   assert.ok(jnj.includes("기사 제목 · 본문 미확인"),"RSS title never becomes a verified approval");
 
  // New cross-industry RSS titles require canonical issuerId and remain unverified.
  click("sector","바이오·제약");
