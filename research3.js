@@ -543,16 +543,15 @@ function recentOfficialEvents(){
  const all=(gaap?.companies||[]).filter(r=>{
   const company=universe.get(r.ticker);
   return company&&r.status==="period_compared"&&r.filed>=begin&&r.filed<=end&&
-   Number.isFinite(r.metrics?.revenue?.yoy?.percent)&&
-   Number.isFinite(r.metrics?.revenue?.value)&&
+   (Number.isFinite(r.metrics?.revenue?.value)||Number.isFinite(r.metrics?.operatingIncome?.value))&&
    typeof r.url==="string"&&r.url.startsWith("https://www.sec.gov/");
  });
  const score=r=>{
-  const revenue=r.metrics.revenue.yoy.percent;
+  const revenue=r.metrics?.revenue?.yoy?.percent;
   const operating=r.metrics?.operatingIncome?.yoy?.percent;
   const divergence=Number.isFinite(operating)&&revenue*operating<0?25:0;
   const profitSwing=Number.isFinite(operating)?Math.min(Math.abs(operating),80)/8:0;
-  return divergence+Math.min(Math.abs(revenue),60)/6+profitSwing;
+  return divergence+(Number.isFinite(revenue)?Math.min(Math.abs(revenue),60)/6:0)+profitSwing;
  };
  const sectors=["바이오·제약","소비재·서비스","패션"];
  const pools=new Map(sectors.map(sector=>[sector,all.filter(r=>universe.get(r.ticker).sector===sector)
@@ -568,7 +567,8 @@ function recentOfficialEvents(){
 }
 function officialChangeLine(r){
  const revenue=r.metrics?.revenue,operating=r.metrics?.operatingIncome;
- const revenueLine="매출 "+pct(revenue.yoy.percent);
+ const revenueLine=Number.isFinite(revenue?.yoy?.percent)?"매출 "+pct(revenue.yoy.percent):
+  revenue?.value===0?"매출 없음":Number.isFinite(revenue?.value)?"매출 "+secNumber(revenue.value):"매출 비교 불가";
  const yoy=operating?.yoy?.percent;
  if(Number.isFinite(yoy))return revenueLine+" · 영업이익 "+pct(yoy);
  if(Number.isFinite(operating?.value)&&operating.value<0)
