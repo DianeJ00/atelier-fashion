@@ -168,12 +168,12 @@ async function loadResearchFeed(){
 function overview(){
  const report=window.ATELIER3?.report;
  const tracked=window.ATELIER2?.data?.companies?.length;
- const count=report?.items?.length;
+ const count=window.ATELIER3?.recentOfficialEvents?.()?.all?.length;
  const period=report?.periodEnd||"";
  return '<header class="desk-hero">'+
   '<div class="desk-hero-body"><h1>리서치 데스크</h1><div class="desk-hero-stats">'+
   '<span><strong>'+esc(tracked??"—")+'</strong> 기업</span>'+
-  '<span><strong>'+esc(count??"—")+'</strong> 검증 근거</span>'+
+  '<span><strong>'+esc(count??"—")+'</strong> 최근 30일 SEC 공시</span>'+
   (period?'<span class="desk-hero-date">'+esc(period)+'</span>':"")+
   '</div></div></header>'+
   (window.ATELIER2?.overview()||"");
@@ -375,6 +375,7 @@ function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{
 window.atelierRerender=render;
 window.atelierGotoWeekly=()=>{nav('insights')};
 window.atelierGotoIssues=()=>{state.hubTab='feed';nav('hub')};
+window.atelierGotoOfficial=()=>{state.hubTab='official';nav('hub')};
 window.atelierGotoCompanies=()=>{state.r2LegacyFashion=false;nav('companies')};
 window.atelierGotoCompanyDecision=(id)=>{const r=window.ATELIER2?.state;if(r){r.sector='전체';r.market='전체';r.disease='전체';r.search='';r.selected=id||r.selected;r.detailTab='나의 메모'}state.r2LegacyFashion=false;nav('companies')};
 window.atelierLegacyThesesFor=(ticker)=>(D.research?.theses||[]).filter(x=>x.ticker===ticker);
