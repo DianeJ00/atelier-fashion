@@ -535,24 +535,65 @@ function industryOverview(){
     '<span class="desk-sector-foot">기업 보기 <span aria-hidden="true">↗</span></span></button>';
   }).join('')+'</div></section>';
 }
+/* Recent SEC evidence is not the same thing as a filing newly made this week. */
+function recentOfficialEvents(){
+ const universe=new Map((window.ATELIER2?.data?.companies||[]).map(c=>[c.ticker,c]));
+ const today=new Date(),end=today.toISOString().slice(0,10);
+ const begin=new Date(today.getTime()-30*86400000).toISOString().slice(0,10);
+ const all=(gaap?.companies||[]).filter(r=>{
+  const company=universe.get(r.ticker);
+  return company&&r.status==="period_compared"&&r.filed>=begin&&r.filed<=end&&
+   Number.isFinite(r.metrics?.revenue?.yoy?.percent)&&
+   Number.isFinite(r.metrics?.revenue?.value)&&
+   typeof r.url==="string"&&r.url.startsWith("https://www.sec.gov/");
+ });
+ const score=r=>{
+  const revenue=r.metrics.revenue.yoy.percent;
+  const operating=r.metrics?.operatingIncome?.yoy?.percent;
+  const divergence=Number.isFinite(operating)&&revenue*operating<0?25:0;
+  const profitSwing=Number.isFinite(operating)?Math.min(Math.abs(operating),80)/8:0;
+  return divergence+Math.min(Math.abs(revenue),60)/6+profitSwing;
+ };
+ const sectors=["바이오·제약","소비재·서비스","패션"];
+ const pools=new Map(sectors.map(sector=>[sector,all.filter(r=>universe.get(r.ticker).sector===sector)
+  .sort((x,y)=>String(y.filed).localeCompare(String(x.filed))||score(y)-score(x))]));
+ const selected=[];
+ for(let round=0;round<4;round++){
+  for(const sector of sectors){
+   const found=pools.get(sector)?.[round];
+   if(found)selected.push(found);
+  }
+ }
+ return {all,selected,universe};
+}
+function officialChangeLine(r){
+ const revenue=r.metrics?.revenue,operating=r.metrics?.operatingIncome;
+ const revenueLine="매출 "+pct(revenue.yoy.percent);
+ const yoy=operating?.yoy?.percent;
+ if(Number.isFinite(yoy))return revenueLine+" · 영업이익 "+pct(yoy);
+ if(Number.isFinite(operating?.value)&&operating.value<0)
+  return revenueLine+" · 영업손실 "+secNumber(Math.abs(operating.value));
+ if(Number.isFinite(operating?.value))
+  return revenueLine+" · 영업이익 "+secNumber(operating.value);
+ return revenueLine+" · 사업별 지표 추가 확인";
+}
 function overviewSignals(){
- const verified=(report?.items||[]).filter(x=>String(x.tier||"").startsWith("공식 ")||x.tier==="편집 원문 대조");
- const rank=x=>String(x.tier||"").startsWith("공식 ")?0:1;
- const items=verified.slice().sort((a,b)=>rank(a)-rank(b)||String(b.eventDate||"").localeCompare(String(a.eventDate||""))).slice(0,3);
- const universe=window.ATELIER2?.data?.companies||[];
+ const {all,selected,universe}=recentOfficialEvents();
+ const items=selected.slice(0,4);
  return '<section class="a5-overview-signals desk-signals"><div class="desk-panel-heading">'+
-  '<div class="desk-heading-main"><span class="desk-panel-n">01</span><h2>새로 확인된 변화</h2></div>'+
-  '<button type="button" data-a3="openWeekly" class="desk-text-action">전체 보기 <span aria-hidden="true">↗</span></button></div>'+
-  (items.length?'<div class="a5-signal-list">'+items.map((x,i)=>{
-   const issuer=universe.find(c=>c.ticker===x.ticker&&c.sector===x.sector);
-   const official=rank(x)===0;
-   return '<button type="button" class="a5-signal" data-a3="openSignalCompany" data-id="'+esc(issuer?.id||"")+'">'+
+  '<div class="desk-heading-main"><span class="desk-panel-n">01</span><h2>최근 공식 실적</h2></div>'+
+  '<button type="button" data-a3="openOfficial" class="desk-text-action">전체 '+all.length+'건 보기 ↗</button></div>'+
+  (items.length?'<div class="a5-signal-list">'+items.map((r,i)=>{
+   const company=universe.get(r.ticker);
+   return '<button type="button" class="a5-signal" data-a3="openSignalCompany" data-id="'+esc(company?.id||"")+'">'+
     '<span class="a5-signal-num">'+String(i+1).padStart(2,"0")+'</span>'+
-    '<span class="desk-signal-main"><span class="desk-signal-meta"><span class="desk-signal-ticker">'+esc(x.ticker||x.sector)+'</span><span>'+esc(x.eventDate)+'</span><span>'+esc(official?"공식 공시":"원문 검토")+'</span></span>'+
-    '<strong>'+esc(x.title)+'</strong></span><span class="desk-signal-arrow" aria-hidden="true">↗</span></button>';
-  }).join('')+'</div>':
-  '<p class="desk-empty">새로 확인된 근거 없음</p>')+
-  '<div class="desk-panel-note">공식 자료 우선 · 같은 검증 수준은 최근 순</div></section>';
+    '<span class="desk-signal-main"><span class="desk-signal-meta"><span class="desk-signal-ticker">'+esc(r.ticker)+'</span>'+
+    '<span>'+esc(r.filed)+'</span><span>'+esc(company?.sector||"")+'</span></span>'+
+    '<strong>'+esc(officialChangeLine(r))+'</strong></span>'+
+    '<span class="desk-signal-arrow" aria-hidden="true">↗</span></button>';
+  }).join("")+'</div>':
+  '<p class="desk-empty">최근 30일 내 SEC 분기 실적 연결 없음</p>')+
+  '<div class="desk-panel-note">최근 30일 제출 · SEC GAAP · 제출일 기준, 당일 발생 이슈 아님</div></section>';
 }
 function newestIssues(){
  const news=(issueFeed?.items||[]).filter(x=>x.platform==="Google News"&&x.reviewStatus==="needs_review"&&x.ticker&&x.url&&x.date);
@@ -582,16 +623,17 @@ function newestIssues(){
   '<p class="desk-issue-disclaimer">뉴스 제목 자동 수집 · 본문·투자 영향 미검증 · 공식 실적과 별도</p></section>';
 }
 function attentionQueue(){
- const pending=(report?.reviewCandidates||[]).filter(x=>!evidenceReviewed(x.companyId,x));
+ const {selected,universe}=recentOfficialEvents();
+ const more=selected.slice(4,8);
  return '<section class="a5-attention desk-attention"><div class="desk-panel-heading">'+
-  '<div class="desk-heading-main"><span class="desk-panel-n">02</span><h2>검토할 기업</h2></div>'+
-  '<span class="a5-count">'+pending.length+'</span></div>'+
-  (pending.length?'<div class="a5-attention-list">'+pending.slice(0,5).map(x=>
-   '<button type="button" data-a3="goDecision" data-id="'+esc(x.companyId)+'"><b>'+esc(x.ticker)+'</b>'+
-   '<span>'+esc(x.change)+'</span><span class="desk-review-arrow" aria-hidden="true">↗</span></button>'
-  ).join('')+'</div>':'<div class="desk-empty">검토 대기 없음</div>')+
-  (pending.length>5?'<button type="button" data-a3="openWeekly" class="desk-review-more">전체 '+pending.length+'건 보기 ↗</button>':'')+
-  '<div class="desk-panel-note">메모 저장과 근거 검토는 별도 관리</div></section>';
+  '<div class="desk-heading-main"><span class="desk-panel-n">02</span><h2>이어 볼 기업</h2></div>'+
+  '<span class="a5-count">'+more.length+'</span></div>'+
+  (more.length?'<div class="a5-attention-list">'+more.map(r=>
+   '<button type="button" data-a3="openSignalCompany" data-id="'+esc(universe.get(r.ticker)?.id||"")+'"><b>'+esc(r.ticker)+'</b>'+
+   '<span>'+esc(officialChangeLine(r))+'<small>'+esc(r.filed)+' · '+esc(universe.get(r.ticker)?.sector||"")+'</small></span>'+
+   '<span class="desk-review-arrow" aria-hidden="true">↗</span></button>'
+  ).join('')+'</div>':'<div class="desk-empty">추가 공식 실적 없음</div>')+
+  '<div class="desk-panel-note">확인된 최근 공시 · 기업 선택 시 원문과 사업별 실적 확인</div></section>';
 }
 function reviewQueue(sector="전체"){
  if(!report)return '<p class="a5-queue-empty">판단 대기 목록을 불러오는 중입니다.</p>';
@@ -767,6 +809,8 @@ document.addEventListener("click",e=>{
     state.selected="";state.search="";state.detailTab="사업 이해";
    }
    if(window.atelierGotoCompanies)window.atelierGotoCompanies();
+ }else if(kind==="openOfficial"){
+   if(window.atelierGotoOfficial)window.atelierGotoOfficial();
  }else if(kind==="openIssues"){
    if(window.atelierGotoIssues)window.atelierGotoIssues();
  }else if(kind==="openWeekly"){
@@ -805,6 +849,6 @@ async function load(){
  issueFeed=sources[2]&&Array.isArray(sources[2].items)?sources[2]:null;
  if(window.atelierRerender)window.atelierRerender();
 }
-window.ATELIER3={load,overview,industryOverview,overviewSignals,newestIssues,attentionQueue,reviewQueue,companyMemo,peerComparison,secArchive,companyEarningsLens,issuerLensBlock,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
+window.ATELIER3={load,overview,industryOverview,overviewSignals,newestIssues,attentionQueue,recentOfficialEvents,reviewQueue,companyMemo,peerComparison,secArchive,companyEarningsLens,issuerLensBlock,companyDecision:(c)=>thesisEditor(c,true),weekly,proposals,recordCard,thesisWorkspace,secComparison,markdownReport,
  get report(){return report},get gaap(){return gaap},get issues(){return issueFeed},get records(){return records}};
 })();
