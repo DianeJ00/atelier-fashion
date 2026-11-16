@@ -257,12 +257,16 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator(".r2-issues")).toBeVisible();
   await expect(page.locator(".r2-issue-links")).toContainText("Yahoo Finance 뉴스");
   await page.locator('.r2-company-row[data-val="US:ANF"]').click();
-  await expect(page.locator(".r2-issues")).toContainText("Abercrombie",{timeout:20000});
-  await expect(page.locator(".r2-issue-gist").first()).toBeVisible();
-  if(await page.locator(".r2-issue-verified").count()){
-   await expect(page.locator(".r2-issues")).toContainText("원문 확인 요약");
+  // An issuer may have zero recent linked articles; never fabricate one for the test.
+  await expect(page.locator(".r2-issues")).toBeVisible();
+  if(await page.locator(".r2-issue-gist").count()){
+   await expect(page.locator(".r2-issue-gist").first()).toBeVisible();
+   if(await page.locator(".r2-issue-verified").count())
+    await expect(page.locator(".r2-issues")).toContainText("원문 확인 요약");
+   else
+    await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
   }else{
-   await expect(page.locator(".r2-issues")).toContainText("기사 제목 · 본문 미확인");
+   await expect(page.locator(".r2-issues")).toContainText("최근 공시·검토 기사 또는 수집 제목이 없습니다");
   }
   await expect(page.locator(".r2-issues")).not.toContainText("확정된 주가 상승 원인");
  });
