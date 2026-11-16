@@ -67,8 +67,8 @@ function click(key,value){
  assert.equal(window.ATELIER2.data.companies.length,52);
  const home=window.ATELIER2.overview();
  const order=[
-   home.indexOf("새로 확인된 변화"),
-   home.indexOf("검토할 기업"),
+   home.indexOf("최근 공식 실적"),
+   home.indexOf("이어 볼 기업"),
    home.indexOf("산업별"),
    home.indexOf("시장 상대강도")
  ];
@@ -80,7 +80,8 @@ function click(key,value){
  assert.ok(!home.includes("산업별 분석 기준"),"no duplicate shortcut section");
  assert.ok(!home.includes("미국 소비재 공식 실적 요약"),"no duplicate issuer KPI report on home");
  assert.ok(!home.includes('class="a3-change"'),"homepage only headlines, not verbose weekly cards");
- assert.ok(home.includes("공식 자료 우선"),"home explains ranking policy");
+ assert.ok(home.includes("최근 30일 제출")&&home.includes("SEC GAAP"),"recent filing dates must not be treated as brand-new news");
+ assert.ok(home.includes('data-a3="openOfficial"'),"source archive must open from recent official results");
  assert.ok(!home.includes("원문으로 확인한 변화 TOP 3"),"avoid ungrounded investment ranking");
  assert.equal((home.match(/class="a5-industry"/g)||[]).length,4);
  const weeklyAll=window.ATELIER2.weeklyIntro();
@@ -108,7 +109,7 @@ function click(key,value){
   const reviewed=window.ATELIER3.records;
   reviewed[candidate.companyId]={...(reviewed[candidate.companyId]||{}),at:"2026-11-13T12:00:00Z",
    memoEntries:[{id:"memo-only",at:"2026-11-13T12:00:00Z",text:"memo is not evidence review"}]};
-  assert.ok(window.ATELIER3.attentionQueue().includes('data-id="'+candidate.companyId+'"'),"memo edit alone must not clear review queue");
+  assert.ok(window.ATELIER3.reviewQueue().includes('data-id="'+candidate.companyId+'"'),"memo edit alone must not clear review queue");
   const confirmButton={dataset:{a3:"reviewEvidence",id:candidate.companyId},textContent:"",disabled:false,classList:{add(){}}};
   const confirmEvent={target:{closest(selector){return selector==="[data-a3]"?confirmButton:null}},preventDefault(){},stopImmediatePropagation(){}};
   for(const fn of listeners.click||[])fn(confirmEvent);
