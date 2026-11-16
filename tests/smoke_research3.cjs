@@ -17,7 +17,7 @@ const document={
   return null;
  }
 };
-const window={renders:0,atelierRerender(){this.renders++},atelierGotoWeekly(){this.renders++}};
+const window={renders:0,atelierRerender(){this.renders++},atelierGotoWeekly(){this.renders++},ATELIER2:{data:{companies:[{ticker:"UBER",id:"US:UBER",sector:"소비재·서비스"}]}}};
 const today=new Date().toISOString().slice(0,10);
 const weekly={
  schemaVersion:1,periodStart:today,periodEnd:today,items:[
@@ -35,7 +35,7 @@ const weekly={
  upcomingClinical:[],staleConsumerKpi:[]};
 const trend={companies:[
  {ticker:"UBER",status:"period_compared",periodStart:"2026-07-01",periodEnd:"2026-09-30",
-  fiscalYear:2026,fiscalPeriod:"Q3",filed:"2026-11-05",
+  fiscalYear:2026,fiscalPeriod:"Q3",filed:today,
   url:"https://www.sec.gov/test",metrics:{
    revenue:{value:14000000000,yoy:{percent:9.6,comparison:{start:"2025-07-01",end:"2025-09-30",value:13000000000}},
            qoq:{percent:4.3,comparison:{start:"2026-04-01",end:"2026-06-30",value:13500000000}}},
@@ -54,7 +54,12 @@ const click=(kind,id,choice,value)=>{
 };
 (async()=>{
  await window.ATELIER3.load();
- assert.ok(window.ATELIER3.overview().includes("UBER · 매출"));
+ assert.ok(window.ATELIER3.overview().includes("매출 +9.6%"),"official recent revenue should show a verified change");
+ assert.ok(window.ATELIER3.overview().includes("영업이익 -20%"),"include countervailing operating result");
+ assert.equal(window.ATELIER3.recentOfficialEvents().all.length,1);
+ trend.companies[0].filed="2026-01-01";
+ assert.equal(window.ATELIER3.recentOfficialEvents().all.length,0,"old filings cannot be called recent");
+ trend.companies[0].filed=today;
  assert.ok(window.ATELIER3.weekly("전체").includes("SEC 10-Q"));
  assert.ok(window.ATELIER3.weekly("전체").includes("주간 보고서 저장"));
  const markdown=window.ATELIER3.markdownReport("전체");
