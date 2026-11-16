@@ -1,27 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T03:39:52.215917+00:00",
-  "periodStart": "2026-11-08",
-  "periodEnd": "2026-11-15",
+  "generatedAt": "2026-11-16T03:38:57.938061+00:00",
+  "periodStart": "2026-11-09",
+  "periodEnd": "2026-11-16",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
   "items": [
-    {
-      "id": "CT:LLY:NCT05433584:시험 결과 등록 표시 확인",
-      "sector": "바이오·제약",
-      "ticker": "LLY",
-      "eventDate": "2026-11-15",
-      "eventType": "임상 등록정보 변경",
-      "tier": "공식 등록정보 · 결과 미확인",
-      "title": "LLY tirzepatide · 시험 결과 등록 표시 확인",
-      "observation": "ClinicalTrials.gov 등록 시험에서 ClinicalTrials.gov에 결과가 등록됨. 통계적 유효성 확인이나 허가를 의미하지 않음 항목 확인.",
-      "investment": "개발 단계·주요 일정 변경이 기존 투자 가설에 미치는 영향 점검",
-      "nextCheck": "시험 등록 원문 및 회사 IR에서 실제 임상 결과·안전성 발표 여부 교차 확인",
-      "caveat": "시험 등록정보 변경은 성공, 허가 또는 매출 증가를 의미하지 않음.",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT05433584",
-      "sourceLabel": "ClinicalTrials.gov",
-      "priority": 7
-    },
     {
       "id": "SEC:IONS:2026-09-30",
       "sector": "바이오·제약",
@@ -40,25 +24,13 @@
       "priority": 4
     }
   ],
-  "itemCount": 2,
+  "itemCount": 1,
   "bySector": {
     "소비재·서비스": 0,
-    "바이오·제약": 2,
+    "바이오·제약": 1,
     "패션": 0
   },
   "reviewCandidates": [
-    {
-      "companyId": "US:LLY",
-      "ticker": "LLY",
-      "sector": "바이오·제약",
-      "currentQuestion": "비만 신약의 공급·처방과 파이프라인 경쟁력",
-      "contradictionToCheck": "가격·보험 적용과 경쟁 복합제 영향",
-      "candidateState": "근거 검토 필요 · 방향 미판정",
-      "change": "LLY tirzepatide · 시험 결과 등록 표시 확인",
-      "evidenceDate": "2026-11-15",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT05433584",
-      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
-    },
     {
       "companyId": "US:IONS",
       "ticker": "IONS",
@@ -96,6 +68,14 @@
       "nextCheck": "ABBV의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
       "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT06063967"
+    },
+    {
+      "title": "SRPT · 희귀·유전 치료제의 3상 시험 일정",
+      "date": "2027-05-31",
+      "observation": "delandistrogene moxeparvovec의 희귀·유전 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 5월 31일로 예상되어 있음.",
+      "nextCheck": "SRPT의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT05881408"
     }
   ],
   "staleConsumerKpi": [],
@@ -103,7 +83,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-15T03:39:52.041430+00:00"
+    "fashion": "2026-11-16T03:38:57.674515+00:00"
   },
   "coverage": {
     "tracked": 52,

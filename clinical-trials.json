@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T03:39:46.278523+00:00",
+  "generatedAt": "2026-11-16T03:38:47.624838+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -1963,74 +1963,10 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-12T04:45:41.250126+00:00",
-  "changeCount": 6,
-  "changes": [
-    {
-      "ticker": "LLY",
-      "asset": "tirzepatide",
-      "nctId": "NCT05433584",
-      "url": "https://clinicaltrials.gov/study/NCT05433584",
-      "sourceLastUpdate": null,
-      "type": "시험 결과 등록 표시 확인",
-      "detail": "ClinicalTrials.gov에 결과가 등록됨. 통계적 유효성 확인이나 허가를 의미하지 않음"
-    },
-    {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT06345729",
-      "url": "https://clinicaltrials.gov/study/NCT06345729",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT02332668",
-      "url": "https://clinicaltrials.gov/study/NCT02332668",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT05356741",
-      "url": "https://clinicaltrials.gov/study/NCT05356741",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT05562830",
-      "url": "https://clinicaltrials.gov/study/NCT05562830",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT06843447",
-      "url": "https://clinicaltrials.gov/study/NCT06843447",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    }
-  ],
+  "comparisonTo": "2026-11-15T03:39:46.278523+00:00",
+  "changeCount": 0,
+  "changes": [],
   "weeklyInterpretation": [
-    {
-      "type": "등록정보 변경",
-      "title": "[LLY tirzepatide] 시험 결과 등록 표시 확인",
-      "observation": "ClinicalTrials.gov의 NCT05433584 등록 정보에서 ClinicalTrials.gov에 결과가 등록됨. 통계적 유효성 확인이나 허가를 의미하지 않음 항목이 변경됨.",
-      "investmentCheck": "시험 등록 내용과 기업 IR의 후속 안내를 대조하고 실제 결과 발표·안전성 데이터를 확인",
-      "limitation": "등록 정보의 변경은 긍정적 결과·허가·매출을 뜻하지 않음.",
-      "url": "https://clinicaltrials.gov/study/NCT05433584",
-      "nctId": "NCT05433584"
-    },
     {
       "type": "앞으로 확인할 임상 일정",
       "title": "BIIB · 초기 알츠하이머병 치료제의 3상 시험 일정",
@@ -2069,6 +2005,19 @@
       "expectedDate": "2027-03",
       "datePrecision": "월",
       "indication": "크론병(만성 장 염증질환)"
+    },
+    {
+      "type": "앞으로 확인할 임상 일정",
+      "title": "SRPT · 희귀·유전 치료제의 3상 시험 일정",
+      "observation": "delandistrogene moxeparvovec의 희귀·유전 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 5월 31일로 예상되어 있음.",
+      "investmentCheck": "SRPT의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "limitation": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT05881408",
+      "nctId": "NCT05881408",
+      "explain": "3상: 참여 환자에서 치료 효과·안전성을 평가하는 임상시험 단계. 시험 등록번호는 원문을 찾기 위한 식별자.",
+      "expectedDate": "2027-05-31",
+      "datePrecision": "일",
+      "indication": "희귀·유전"
     }
   ],
   "weeklyInterpretationPolicy": "시험 등록 상태와 예상 완료일을 한국어로 재구성한 관찰. 실제 데이터 발표·승인·성공을 뜻하지 않음.",

@@ -2,20 +2,20 @@
   "highlights": [
     {
       "tier": "기사 제목·미검증",
+      "ticker": "CPRI",
+      "date": "2026-11-11",
+      "title": "Capri Holdings Limited Announces CEO Succession Plan - Capri Holdings Limited - Investor Relations",
+      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYjc4VjJ0Y041N3p6WjdOcUphWFFHTjBmYlROblE5NXRyVVNLbjNnUDhVUnlrTDFHMnh0OHlhU1ZKbmxJVjQ0VnJGTVk4cHdJOFZxbmxnY0JGNHNXaXZhQlB3LTN5Ung2a3owM29kSzFXeGZiLUVxSXE5am4xdFpHRWpZT0JfcktIbXJHT245dTQwQzlVYnNHZm1XMjhxZjBmcy1VNE9LRW00MHI3QzBQbzZ6ZDhmWGI3WWc?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
       "ticker": "PVH",
       "date": "2026-11-12",
       "title": "PVH Simplifies, Cutting 4% of Global Workforce - WWD",
       "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONW1xY0E4Q0lUY0NkckZkSklsblhkWDR5MjVuYkhJbU9DQXJURUdqSnZsci1qU1dJbkU3NEJSSUN0eU4yYVJDbFNNaFgteUtkMklOMmVvQzIxYXZ1YnhPdGJXMlNnWktnbWZyWnNlU2lzc0JGcEM1Zk1JSDFILWNIY3VHUDlJSlFmSzAwMnZScDhxR0FUYjFBck50Zw?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
-      "ticker": "CPRI",
-      "date": "2026-11-10",
-      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
-      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     },
     {
@@ -28,13 +28,13 @@
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-15T03:39:52.170921+00:00",
-  "periodStart": "2026-11-08",
-  "periodEnd": "2026-11-15",
+  "generatedAt": "2026-11-16T03:38:57.892696+00:00",
+  "periodStart": "2026-11-09",
+  "periodEnd": "2026-11-16",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
-    "unverifiedHeadlines": 69,
+    "unverifiedHeadlines": 160,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -55,7 +55,7 @@
         "accession": "0001116132-26-000031",
         "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 1,
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
@@ -82,9 +82,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Ralph Lauren Warns Inflation-Weary European Shoppers Are Pulling Back - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZkJMRmhwMGVnbm9aU183VUp3R2ZVTHMwcWtIbTAzUlo1UkdCVVMyMWV1VFZneTlUQldmYm5BNG82MnVpUy1nTFJNdEdsWE9QcjFnWXZSOXJOYlVSOFlRYUZueC1QTERHcHF2YWpBVVg0VzFkQmRKUjJTdFQ5MEkycnZjVUYxVzFDNFZGS21oc0NtVXhIcE85NEttM29KME1j?oc=5",
-        "date": "2026-11-08"
+        "title": "Earnings Insights 3Q26, Week 2: Premium Brand Owners Ralph Lauren, Estée Lauder and Tapestry Raise Outlooks; Ahold Delhaize Lowers EPS Guidance - Coresight Research",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSSnZwSWNZTW01NTFMZ19lVzdBNjZ1b3NUdGZQdFpHQlVjWFU3MTZyYVd4LUUxOW1nTVEtdnp3dGktOEV4WFRoSmh4MlJDcTQxZGpCNnlLUWZpVWU2ZXdsSDFQRWhCdzA?oc=5",
+        "date": "2026-11-11"
       },
       "consumerSampleCount": 0
     },
@@ -105,8 +105,8 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Bridging Gaps to Create a Better World - Gap Inc.",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUGdHbFBZV0ZGUmdyd3F2TkJIOC1nV3lpX242QTVxbThUTHF4WUtTNzY3MVNFamFhUHFoV21reTJ2SEZOMWp6bGptVmxwTWVOdXR5N3lmdXdVZTZ0LXdqY1AtcHhQdEhtTmk3LVNOQ2x5cjRNUDdMNkktOWpYUm5QZFNPbEJLYnk4Y2JDbg?oc=5",
+        "title": "GAP: Gap, Inc. Latest Stock Price, Analysis, News and Trading Ideas - Stocktwits",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UcW43a0RQdWZJRXRqaXZMVU9IX3ozVU5iRnZpcFRuWTU0dDduYjc5clVlQTRBUE5HaXZvVTFnUDMwazZYeGF1RQ?oc=5",
         "date": "2026-11-12"
       },
       "consumerSampleCount": 0
@@ -128,9 +128,9 @@
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "Nuuly Wants to Make the ‘Spring Awakening’ Revival a Fashion Moment - Fashionista",
-        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KUXB0ck9uRE5CdVg3SzRzTW5tTHl3a1A5cTZQamgtVnBaQS1ZbGpJLWVxSDJsaExNMnh2X2F4aDJ4SEtsNFphSVNOUWtPaENBb2hUNGk2NFJyUk96MGVvYTEya3BOTGcwSG1ocXp0aFlnUEpnbEE?oc=5",
-        "date": "2026-11-10"
+        "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
+        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
+        "date": "2026-11-13"
       },
       "consumerSampleCount": 0
     },
@@ -174,9 +174,9 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
-        "date": "2026-11-10"
+        "title": "Capri Holdings Limited Announces CEO Succession Plan - Capri Holdings Limited - Investor Relations",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYjc4VjJ0Y041N3p6WjdOcUphWFFHTjBmYlROblE5NXRyVVNLbjNnUDhVUnlrTDFHMnh0OHlhU1ZKbmxJVjQ0VnJGTVk4cHdJOFZxbmxnY0JGNHNXaXZhQlB3LTN5Ung2a3owM29kSzFXeGZiLUVxSXE5am4xdFpHRWpZT0JfcktIbXJHT245dTQwQzlVYnNHZm1XMjhxZjBmcy1VNE9LRW00MHI3QzBQbzZ6ZDhmWGI3WWc?oc=5",
+        "date": "2026-11-11"
       },
       "consumerSampleCount": 0
     },
@@ -216,14 +216,10 @@
         "accession": "0001018840-26-000047",
         "url": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 0,
       "nextCheck": "Hollister 동일매장매출·영업이익률",
       "riskToTest": "핵심 브랜드 성장 둔화",
-      "headline": {
-        "title": "OPINION | How Abercrombie & Fitch is gendering good quality - thedaonline.com",
-        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZnY3b1d6SWFfQWtEUEs1a0NaVHI0cDRtNHM2alFBOW1GZGR3ajVMSlJGeHhUU2pSMENjSUZkUzZGR3hxSmx1WXZjRERVX2RILTZiQ0ZLUm1vc2w1WVg2SE9iR3NKemxxWFYxTGVINnVvTWlMNG1iV3M2cW9pZUNDcUNuRDZzN29pT29nNXAyVzRMZE1aaUN0ZTUwRWY3czBYekFkNXBuUFlmMzQ0cmxDemp4WjJfMFJFT3p3N2NkRHQ2TDJTRlFOSkdfMjNTS1AtUl9HMjhFMVg?oc=5",
-        "date": "2026-11-07"
-      },
+      "headline": null,
       "consumerSampleCount": 0
     },
     {
@@ -266,9 +262,9 @@
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
-        "title": "Must Read: PVH Corp. To Cut 4% of Global Workforce, Burberry Revenue Rises 6% in First Half - Fashionista",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1GZVp1ekFIS1NMbUpENUZ3TF9JM2hoNEhMemR0SnRsTkpQVXJRMDUxWWc0UUVXYXNQVWFLLTh4MUg1MGVWZVhxZ0Z5bWFPeXBlVHlDWmZDNzM3U1Ut?oc=5",
-        "date": "2026-11-12"
+        "title": "PVH announces the loss of more than a thousand jobs - FashionNetwork USA",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMjR4MXlXcUdrTzdUanZKakhfVWV6TW5kWUFlMk9iQXd1VjM0ekRRcHVIanBhWkpFcHc0ZUZremRnZ0xKSG5XYXhZaGR6ZDdadlVwNGxlRnBUU1RabWZxeE9VQ3hNMk8wWDJ4d3N1UUxxVGtxbWlIS2l6TnluenFhcE9UTGhpaUZYcWNTSWtfbXdpY1ZjREFydkdORUI1SVpt?oc=5",
+        "date": "2026-11-13"
       },
       "consumerSampleCount": 0
     },
@@ -289,9 +285,9 @@
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "Bank of America Drops Shock Take on Victoria's Secret Stock After Rally - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMUJPb1dDR3RIVGtpZmtuV0E4R0V3UmhxMDgxcjFndkNoTkVoeWtsVGNldmw4LVk3cjRtVlFCaXljNllfWWVpVHpVbDZGUjJVLWMxYXN6UzNuVi1mYVZESEdackdoUkVobGptOU9qSUd0MDQtNGkxMmlvdUk3TTRUclJjNlhyUzBPUlEtSThlakJ4dHFOdXBkc3hNT0s2MEJ1?oc=5",
-        "date": "2026-11-12"
+        "title": "For Victoria’s Secret, inclusivity has become sexy — and a solid business strategy - NBC News",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU2gxcXZQZDRZUHZVd1hsRzVITUtCdHlEVXEwb1VCcWxhN2g0T1RoYjlCTXpDaDZTZ1BOMFpzZUFTVk51Tnd6VlFuT0tycTFSLXZBWDIyRi1pNkNXTTlybFNWclFTcTdzbzVOcVdoZzhRTDNzQ2w4UGhhc1FxYURuWUZ0aXRrS2JUZU9iZHUtMXpTczBC?oc=5",
+        "date": "2026-11-14"
       },
       "consumerSampleCount": 0
     },
