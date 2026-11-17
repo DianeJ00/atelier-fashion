@@ -11,26 +11,26 @@
     },
     {
       "tier": "기사 제목·미검증",
+      "ticker": "RL",
+      "date": "2026-11-16",
+      "title": "Key Takeaways From Luxury’s Q3 Earnings - Vogue",
+      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAyRjdycGFCd25iX25Qbm5mNXFpUnk1Y0dNaUprSkdBZnpoaFctMHZIaVVSN0NZOEJwQjhTWmU3VFFxRW1SbHlBZ1dkUmRTR19FMFowb0JFYlF1ZHV0TkdBazJOalZ5aXBLZHI3OHdJdWlCWWJjUVpF?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
       "ticker": "PVH",
       "date": "2026-11-12",
       "title": "PVH Simplifies, Cutting 4% of Global Workforce - WWD",
       "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONW1xY0E4Q0lUY0NkckZkSklsblhkWDR5MjVuYkhJbU9DQXJURUdqSnZsci1qU1dJbkU3NEJSSUN0eU4yYVJDbFNNaFgteUtkMklOMmVvQzIxYXZ1YnhPdGJXMlNnWktnbWZyWnNlU2lzc0JGcEM1Zk1JSDFILWNIY3VHUDlJSlFmSzAwMnZScDhxR0FUYjFBck50Zw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
-      "ticker": "LEVI",
-      "date": "2026-11-09",
-      "title": "Levi’s Introduces AI Hiring Agent to Streamline Recruitment - WWD",
-      "context": "미국 직접판매 동일매장매출·재고 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMWlkYlRhWl9HYUZocW1nUDdaOXBMVUs2aVlJOTQtNExhQ1k4b3A5dlR3UFFST0h4X19CUEFrcGFLX2tmUjVrTzVhYThLUHZVbmhQN0pnSGZuS0xHWkxxZENnQW1BVmlkOWVQVjBpZnFrUENQb2MzdE5UQUJzUXlEZXNKdWJCaEV1c3phaHlIemk1NnNRR2FKVHZIam9YM3MtZ1VCM1diY1RfdmZJYzBMSFFVZw?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-16T03:38:57.892696+00:00",
-  "periodStart": "2026-11-09",
-  "periodEnd": "2026-11-16",
+  "generatedAt": "2026-11-17T05:36:20.523746+00:00",
+  "periodStart": "2026-11-10",
+  "periodEnd": "2026-11-17",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
@@ -82,9 +82,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Earnings Insights 3Q26, Week 2: Premium Brand Owners Ralph Lauren, Estée Lauder and Tapestry Raise Outlooks; Ahold Delhaize Lowers EPS Guidance - Coresight Research",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBSSnZwSWNZTW01NTFMZ19lVzdBNjZ1b3NUdGZQdFpHQlVjWFU3MTZyYVd4LUUxOW1nTVEtdnp3dGktOEV4WFRoSmh4MlJDcTQxZGpCNnlLUWZpVWU2ZXdsSDFQRWhCdzA?oc=5",
-        "date": "2026-11-11"
+        "title": "Key Takeaways From Luxury’s Q3 Earnings - Vogue",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAyRjdycGFCd25iX25Qbm5mNXFpUnk1Y0dNaUprSkdBZnpoaFctMHZIaVVSN0NZOEJwQjhTWmU3VFFxRW1SbHlBZ1dkUmRTR19FMFowb0JFYlF1ZHV0TkdBazJOalZ5aXBLZHI3OHdJdWlCWWJjUVpF?oc=5",
+        "date": "2026-11-16"
       },
       "consumerSampleCount": 0
     },
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "GAP: Gap, Inc. Latest Stock Price, Analysis, News and Trading Ideas - Stocktwits",
-        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UcW43a0RQdWZJRXRqaXZMVU9IX3ozVU5iRnZpcFRuWTU0dDduYjc5clVlQTRBUE5HaXZvVTFnUDMwazZYeGF1RQ?oc=5",
-        "date": "2026-11-12"
+        "title": "Gap Inc. Announces Fourth Quarter Dividend - www.chewelahindependent.com",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPb21adXJadTJzS3c2VEpIMzhVS1laOHFmWkF5VTFwb19lQm5DMjZ0OGVnaGpUMUQ3TkRFc0JCQlFKbXktM2ZleVB4eC1TVWhEODBvVWdkRk1XREYwNXdNZEFvdXRPb3N1NkduLS11UHJCbklpNzFYMUJWR1lqcmdpNGlZaW1ERi1FREhFOFNZSHlWTE96bEx5NnUxeHNzOXdlc3hGSjAzNXRHZFF3bDF6NzRlUEEyUDNqMU83T2pkb25adGUyY1BzdW5jNktNZ2lfNnUyejBSUzdVNUpBQVRfR195bmhjMGRjajNkSW9LYw?oc=5",
+        "date": "2026-11-11"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "Levi Strauss & Co. Opens Flagship Store on Michigan Avenue in Chicago - The Source Magazine",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObGgwY3ZGRThkcno5YWUtSWlSVXZGWmNmR0tyb2hWd3FnSmVzczJVcDQ0UVVQNnBCZmVDT0NrRFE0TlAtdWNaWml5UEl2WlVOWkRGZG1XOUp5SmxYTjE5Vk9Jc3dQUTg1em5peXJUVlBuRnIxVjRUTWpxWUZoaDRXZTRVMElnSjdnS0JRM2xUcw?oc=5",
-        "date": "2026-11-09"
+        "title": "One Stitch, One Bead: A Contemporary Indigenous Levi’s® Jacket Added to the Levi Strauss & Co. Archives - Levi Strauss & Co",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaHJzVU82SkpLT2VBMEQ1WjFZT2MtcllxWENxc0JwekFNb2x0MGh2N3lKRmRoQU14TnBiUHVXNUtvRUpjZEViSngxUUtHQ0hQeFlNejlLTkhJaTA0SkYwTzQ5ajMybkc4ZjdZSlF2Tm1aTktfZzQ1dGJZUW1NMHlkbTBn?oc=5",
+        "date": "2026-11-15"
       },
       "consumerSampleCount": 0
     },
@@ -193,14 +193,10 @@
         "accession": "0000103379-26-000135",
         "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 0,
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
-      "headline": {
-        "title": "VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei10MDF1Z21mSDZvWHVYRXM0YUwtQ2VEcERUUllYZm5iSFJJUkVEVE1JWmt3NWhlcVBTZTRjclEyWVNHdmN2d0hjbTVJazUzN2lCLXZwTVhMTDZ1b1VJMEJpSVhFTFZJdkVWRGt4d0hfMG1uQ01SeTFaaXdtNzBZeE9kRGY0d0RpemV3dDRQd0EybVkzcjBRY3RMdi1PM0ExOXpPX2lhSHY?oc=5",
-        "date": "2026-11-12"
-      },
+      "headline": null,
       "consumerSampleCount": 0
     },
     {
@@ -281,14 +277,10 @@
         "accession": "0001856437-26-000021",
         "url": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 0,
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
-      "headline": {
-        "title": "For Victoria’s Secret, inclusivity has become sexy — and a solid business strategy - NBC News",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU2gxcXZQZDRZUHZVd1hsRzVITUtCdHlEVXEwb1VCcWxhN2g0T1RoYjlCTXpDaDZTZ1BOMFpzZUFTVk51Tnd6VlFuT0tycTFSLXZBWDIyRi1pNkNXTTlybFNWclFTcTdzbzVOcVdoZzhRTDNzQ2w4UGhhc1FxYURuWUZ0aXRrS2JUZU9iZHUtMXpTczBC?oc=5",
-        "date": "2026-11-14"
-      },
+      "headline": null,
       "consumerSampleCount": 0
     },
     {
