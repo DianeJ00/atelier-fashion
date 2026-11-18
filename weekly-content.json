@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-17T05:36:20.451168+00:00",
-  "periodStart": "2026-11-07",
-  "periodEnd": "2026-11-17",
+  "generatedAt": "2026-11-18T05:00:06.783084+00:00",
+  "periodStart": "2026-11-08",
+  "periodEnd": "2026-11-18",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [],
   "reviewedExtra": [],
@@ -9,6 +9,69 @@
   "reviewedSourceCount": 0,
   "autoItems": [],
   "pending": [
+    {
+      "id": "rss-45fc1af57f1afdd",
+      "title": "Johnson & Johnson vs. Vertex Pharmaceuticals: Which Healthcare Stock Is a Better Buy for 2027? - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQXUyN0FVWEdfYURrM3RDaVR5WjB5dFJNRXA5aFU0d2RNbURpbnJyOUZXZ1hoUmVBTm1mSE5OdDVoOF9xdWNZNUtGQXZ1QnladjFxZXdGb1lNeHdYX1NjZ2FOUnY0WXo2ZjctWHVUcEJmN2ZzNHVxTlVDMVhfeld4QmpVWnlFZW9VUXpmRko2eXBFcHNNLVE1M0xJYS05Q1kzOGJ2d1FlREc3Vmg0R2I5cldjbmRSNzBSOXdBc1ZPVGp1dDRLZjg1SE42VkZwU25WR3V3dERsQWVFQQ?oc=5",
+      "date": "2026-11-17",
+      "source": "The Motley Fool",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-571632d62ae4dfc",
+      "title": "Neurocrine Biosciences (NDQ:NBIX): The Market Still Values It Like An INGREZZA-Only Company, But Consensus Sees Something Much Bigger - Stocks Down Under",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ZYlRBNWxsV1hPeTZQZjJKT0l3d2NCakRNR2NrRldHRnlwUzM1NUZqQUxzT3haTWEyWFZQNEJUQ1ZSQUJnNVBNSzdGNXpyalFqSUltV2VWdlAzdVlISW1fMzJRTUctRTdablJha1FKSzgxdFVLS0ln?oc=5",
+      "date": "2026-11-17",
+      "source": "Stocks Down Under",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-3ac781fb4b9cdcc",
+      "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain - ESG Dive",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS0N0cHdpV3BQNHZjVlJVLUpQaEtQNFJNS1FFQTJVV282TkZGYzhERFlGUV9kcTJDY2pucnpLTnNPR1NqQ3FfcGhFelBPUzlvUXBzX1pNblZHVUMxY1BxTi14cHp6M05VNU0tNlFvREFTcW1FcjU4b2lFSkE1T1hXOG9ZUjNTcjVsU01hdzBNeFQwQ3lhQm0zSjE2SUNfTlVXdm5KeHNpQXFPZw?oc=5",
+      "date": "2026-11-17",
+      "source": "ESG Dive",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-82af867a1f7694d",
+      "title": "Why Jensen Huang’s $960K Leather Jacket Broke The Internet",
+      "url": "https://www.youtube.com/watch?v=10KhEHXkWUE",
+      "date": "2026-11-17",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-e88359bd8b1b361",
+      "title": "[단독] 'K-뷰티 대장주' 에이피알, 더마 브랜드 '닥터멜락신' 인수 검토 - 더팩트",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mWEFLenZvQTBfZlRGV0c5aHhfWjZLNWt4Um9aNUFNMThfLTVDbmFLMUV1SkxOVnZORUVLMFJpQmxOeTI1X2RyYTE4ck9hSVdQMTdzM3o2NU5GUdIBVEFVX3lxTE5IbUtPOC1ZYUgwc3MyTVRRVVJlZnV2Z3Y2VXg5aHE0MHR5ODRfQ05sQ1lhOVJvdm91WldkdzVtZDAtbUV3ZVEtdGk5VV9OQ0tSaWVxVA?oc=5",
+      "date": "2026-11-17",
+      "source": "더팩트",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-818af26a0327cb4",
+      "title": "The Mighty Middle Market - The Business of Fashion",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPeXFra0QzT2VJdzhqeGJHV2J4Q3JHTWhhdGxVNWYtLXI2T2NoVVI1Z1RTUkVPT01xdE0wZDQ1MEREbGRZeVBJSm1ZWkZPWmRfdV9aVWJlMTBYYl9yRmpxTi1ISHZWODd6UmNwUHBrVkJWYS1yRlV1ZWpReEJJVWxnSlBLTER3Sk1JX0llWUJZTTY2WEo4?oc=5",
+      "date": "2026-11-17",
+      "source": "The Business of Fashion",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1aa344b3053c5b6",
+      "title": "\"불닭이 진짜 황금알 낳는 닭이었네\"…삼양식품 '잭팟' - 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YWVQRXM5cW1POGFFR1JiZDZ0Y3AyeFVld2cxbklWVFljTFNEalpaM3lpeFF6bDZEVkJrXzgxTVVlRXMzTVotUW1qc1VzM3lHc0hiem5vRE9ndw?oc=5",
+      "date": "2026-11-16",
+      "source": "한국경제",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
     {
       "id": "rss-7c8343f890e6c98",
       "title": "What Is Driving Alnylam Stock? - Trefis",
@@ -19,20 +82,20 @@
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
+      "id": "rss-5f021f58f572e6c",
+      "title": "EXCLUSIVE: Ralph Lauren to Hold Runway Show on June 10 - WWD",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSnMwWjRWVVBFTmFoVlpVOV9SQWpYLVhiOWdGQlRiZGFZX2tLZWRQUkVabWh3TDVPcm5Icl9sMGZQRDRFQ21CQmtfRjhVblp3UmdvbTZLcnpWUHpVcUJIbE1POTFjcjN1NWVQRjNuRjk0eV9laERpMGlNZ1Q2dEtoVWM0bkl2ZlFPaWc?oc=5",
+      "date": "2026-11-16",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-186799f44ee4b75",
       "title": "Disney Earnings Loom as Nvidia Drama Steals Wall Street's Spotlight - BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8zS2RDT3VqbkZ1TmtKS1dyZm5vY1JLalV2VWNHNzF4a1BESFd6UnA3S2NLbUE1d2dtZjhUeTJvM1Z4Y3Z1N1A4ejBVR1o3bGpmZGstRm0zMnZGaFVFbW80TEtObEhHbVNuM0tJV2d4cGNLS3k5NUE?oc=5",
       "date": "2026-11-16",
       "source": "BigGo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-9a2fed745f5154d",
-      "title": "Restoration Hardware plans second luxury showroom with fine dining in South Florida - The Business Journals",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQnZDQ2M4Y1BDb1lENGJQWkFyYkV2cFowRl9jdGtLWk42SEwya2ZaUkJUUTBoYXJMTDk1NTJhLUFFTTJSeWxfSS1RMTQ1dWV2YUlyQVZ3X1NnNXI2NTc2OGVna0t4Tm9QZHo5VVYwWDZ0czBHcGQxQ2ZoVkNUZnVaNHRuWU82WUp1VU9DTU9tTEt3UndkQTd3VEV1Ri1nVGI4XzQ0bw?oc=5",
-      "date": "2026-11-16",
-      "source": "The Business Journals",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -53,72 +116,9 @@
       "source": "TradingView",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-19b5554bbc611f7",
-      "title": "AbbVie (ABBV) Expands Its Pipeline With New AI Drug Discovery Partnerships - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZVhZeUEzSDNmZ3o2TGtmd1RUSWFkemJiSG4tWnVja3VBaXBDRllhWGRiS2RXUFZwNzd2RU4wMU9uUUExR3FZMGNwLWplbTUyc1FwUFNPUTBUbnRwUGN4TDR3eDJQNWlIWTdqWlhVSHBzZFBsWFU0X1lTZ2xwbkVZNEpOLXNuQmQ4S3JxR2dRaEM4SVJia0NB?oc=5",
-      "date": "2026-11-16",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-50b1c6b9d8d3daa",
-      "title": "Dow Jones Biotech Giant Amgen In Buy Zone Amid Ongoing Stock Market Weakness - Investor's Business Daily",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMGJCRDJlQ0RjaXh4RGNDclc3OTF5SmhLVU9CUE1DMmFxY3Zsb1h1T0hMbEJNb0JUSGVrNGVPeVdxOVg1T29zMnRyTUNpUGM2QVZ5WURfdmtva0FoYlo5N2NDWXYwR0g2T1I3VjZtWjAxdFp6UFExa1hqTFpOX1JiZmV6eE01OVQtVXJrcA?oc=5",
-      "date": "2026-11-16",
-      "source": "Investor's Business Daily",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-c5fda00653e1cf1",
-      "title": "Uber Stock Has One Thing Left To Prove - Trefis",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSldpb2dwODFHQWRWdzFRd3lpMnpYWERKOWFfY2dJSkx3NUc4RUl5LVpQckJ5YUd6NENRX3NYMnBxTC1aQUtDLXhYNnY0WWRwbG83THNYLXd4b3pSNVFoZ0w4NUg2Mi13akROWXoxWWNRRURYV05PWWRvOWxST29hai1XU0hlVHc3UGFOQ3h1YzMyOVVsRmdIUml5SHR1cDdt?oc=5",
-      "date": "2026-11-16",
-      "source": "Trefis",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-9ec677a8f9995e7",
-      "title": "J&J bets $2.2B on Ollin’s vision loss drug - BioPharma Dive",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQkR5V3UzbExGT0QwOS10OU41NDdsZ0ZqODZzMjJnZmV3NlFtYnZBbFF2cjFyYVBCdXdvOXVBbmg1bWhrWVdzSG41c1dpTXQtMF81RnZ0N0NrdVBfdnF0MHFHWVlkOEFsNnEtSjV6cTBwMFpna1M5RFdDYmF5UEJGZ1dsRVJHLUx3QkVmOWpkcXVnTXBpWVhFbGRaNVIwSWpBUkFtSA?oc=5",
-      "date": "2026-11-16",
-      "source": "BioPharma Dive",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-160c0ff06971a4e",
-      "title": "TRIMTECH lands $411M Biogen deal for neurodegeneration protein degraders - European Biotechnology Magazine",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPOGlPazllZ0dydWZhNVctMkUzWjExUnJFNno0VG9PTVZkclhIcTJ4NUgyX2tkeXVTdjR3MnpBdlpMUERCdkZCX0JZZDRDbjBJcTdQaDdqbEVUZ29WQ1NQNzFYNXI1ZU0yM3FMdWY3UGNTRUZQU01RcjlvOHEyeVhDd1hQUjBCZUltZkpFNVUxQ1hDc2lFcFlrZzBzbmlreVhVUUt2aG5SbzFGMVhEeHE2U2NkWWRiX2k2WXNV?oc=5",
-      "date": "2026-11-16",
-      "source": "European Biotechnology Magazine",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-42378adf9df97f5",
-      "title": "Dear Target Stock Fans, Mark Your Calendars for November 18 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNdkViTXNDV3kxWjk1aWVQNGg2bTJCNWNUanloeFl2dlJ3aVZUYlMzTkZBLV9RUW5wMVgyTG9yRTRmWnlLSllULVBkcmJGVlY1VUotdVFLS01GSU1UNDRmZkpYWWZQY29ETGdOX3JnYVFyQTU3S2hXWVUtMF9MNS1RQ2h6eXpnLVpYNWFxX1ZFZXRMUkhqR3pj?oc=5",
-      "date": "2026-11-16",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-34181fac78cf333",
-      "title": "Uber Technologies (UBER): Earnings Compound at Nearly Double the Rate of Top-Line Growth - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbHZ1UmNIVl8weGpGdVdSMm5aUU43dUx6Y3lMNUotSEM1TU5rS1lNZnk5Q2RITF9kTk9IVUVqeEdfaHZGc3FUMFYzRGMtSDkyZVJQbEpTSS0tUkRaN19XUHJUM1FTQ1U0M1EzLVR2dDNBU3VtM1VTMWo3MDQ5akphZmVISDIycDJqc1poN0ZoeWJoQWpaemNLQjFhQjFzeFQwZGhCeTlidFM?oc=5",
-      "date": "2026-11-16",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 160,
+  "pendingCount": 133,
   "sourceErrors": [],
   "sourcesChecked": 0,
   "aiStatus": "key_required",

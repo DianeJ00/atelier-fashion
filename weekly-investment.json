@@ -2,39 +2,39 @@
   "highlights": [
     {
       "tier": "기사 제목·미검증",
-      "ticker": "CPRI",
-      "date": "2026-11-11",
-      "title": "Capri Holdings Limited Announces CEO Succession Plan - Capri Holdings Limited - Investor Relations",
-      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYjc4VjJ0Y041N3p6WjdOcUphWFFHTjBmYlROblE5NXRyVVNLbjNnUDhVUnlrTDFHMnh0OHlhU1ZKbmxJVjQ0VnJGTVk4cHdJOFZxbmxnY0JGNHNXaXZhQlB3LTN5Ung2a3owM29kSzFXeGZiLUVxSXE5am4xdFpHRWpZT0JfcktIbXJHT245dTQwQzlVYnNHZm1XMjhxZjBmcy1VNE9LRW00MHI3QzBQbzZ6ZDhmWGI3WWc?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
-      "ticker": "RL",
-      "date": "2026-11-16",
-      "title": "Key Takeaways From Luxury’s Q3 Earnings - Vogue",
-      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAyRjdycGFCd25iX25Qbm5mNXFpUnk1Y0dNaUprSkdBZnpoaFctMHZIaVVSN0NZOEJwQjhTWmU3VFFxRW1SbHlBZ1dkUmRTR19FMFowb0JFYlF1ZHV0TkdBazJOalZ5aXBLZHI3OHdJdWlCWWJjUVpF?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
       "ticker": "PVH",
       "date": "2026-11-12",
       "title": "PVH Simplifies, Cutting 4% of Global Workforce - WWD",
       "context": "Calvin Klein·Tommy 매출 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONW1xY0E4Q0lUY0NkckZkSklsblhkWDR5MjVuYkhJbU9DQXJURUdqSnZsci1qU1dJbkU3NEJSSUN0eU4yYVJDbFNNaFgteUtkMklOMmVvQzIxYXZ1YnhPdGJXMlNnWktnbWZyWnNlU2lzc0JGcEM1Zk1JSDFILWNIY3VHUDlJSlFmSzAwMnZScDhxR0FUYjFBck50Zw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "RL",
+      "date": "2026-11-12",
+      "title": "Coach, Ralph Lauren Defy China Retail Slump - The Business of Fashion",
+      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUUo2WmxhcmlheWZXUjFYNzZwZzhJUEtxYjY2ODUxbnMyVVgwSkNhVDg5c2VHNE1odU1FcTlJd2FIYzRKSjBaUF9TaG0xeXBpR1hELVNjZ3VHRzlUbHhHaHFXTkNrZTdSd2VJRjFVNWlibWhUenJleFI4TmRrdndTZjYtR1pTTWxNM0c1S2N1c0RiTms?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "CPRI",
+      "date": "2026-11-10",
+      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
+      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-17T05:36:20.523746+00:00",
-  "periodStart": "2026-11-10",
-  "periodEnd": "2026-11-17",
+  "generatedAt": "2026-11-18T05:00:06.956743+00:00",
+  "periodStart": "2026-11-11",
+  "periodEnd": "2026-11-18",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
-    "unverifiedHeadlines": 160,
+    "unverifiedHeadlines": 133,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -55,13 +55,13 @@
         "accession": "0001116132-26-000031",
         "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
-        "title": "| Coach sees $10 bn path as Tapestry posts beat-and-raise quarter - Fibre2Fashion",
-        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQMUE2c3NCb0tXSGRLLVVSSVBEYXRnZ1g0RDZKcjRlTHV4WW5YNk1wcEM4MjRTVE5MSGZKdnpLU3h3LUJBSl9QWS1SUllsTDZ6bmZSejlDSEdDYVBwWTd5dnZyZnNobGNnT3RTVUo1eVB1TTRGQlc4aVZxREIybUhpMXo5RDN2ZW4tNmZ0clZMZ0ZnMXBYcHZrS29xRHJkcDFEMUVaNjNMT2VXVE54YkhJY1lzeHduZHJZNmRRa3VFdE1TaU1fRmcwTXVYWXFCcGhSMGVUTGllTWo1cGlXQndRTQ?oc=5",
-        "date": "2026-11-10"
+        "title": "Is Wall Street Bullish or Bearish on Tapestry Stock? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZzFCU0NVaGtrbV91LWxWMmFGTW40LVF3Zlc4VXdsWXhEMngzaFhZOTZNd2ExaDdFQmlQU3JQSmxUVFNqVHRzWjA0Ykw2TFZlRnMwbzczMDR5MlM5Mm5oODZqWW5FcWZ2cXdCTGxBcmpEYk5SQVZUZV8tc3BneW9fOXloVFB1aFhhVDhYWDI0X0VfeTdLdVJNYmpEQVBHTXh2Rno4?oc=5",
+        "date": "2026-11-13"
       },
       "consumerSampleCount": 0
     },
@@ -82,9 +82,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Key Takeaways From Luxury’s Q3 Earnings - Vogue",
-        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAyRjdycGFCd25iX25Qbm5mNXFpUnk1Y0dNaUprSkdBZnpoaFctMHZIaVVSN0NZOEJwQjhTWmU3VFFxRW1SbHlBZ1dkUmRTR19FMFowb0JFYlF1ZHV0TkdBazJOalZ5aXBLZHI3OHdJdWlCWWJjUVpF?oc=5",
-        "date": "2026-11-16"
+        "title": "Coach, Ralph Lauren Defy China Retail Slump - The Business of Fashion",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUUo2WmxhcmlheWZXUjFYNzZwZzhJUEtxYjY2ODUxbnMyVVgwSkNhVDg5c2VHNE1odU1FcTlJd2FIYzRKSjBaUF9TaG0xeXBpR1hELVNjZ3VHRzlUbHhHaHFXTkNrZTdSd2VJRjFVNWlibWhUenJleFI4TmRrdndTZjYtR1pTTWxNM0c1S2N1c0RiTms?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Gap Inc. Announces Fourth Quarter Dividend - www.chewelahindependent.com",
-        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPb21adXJadTJzS3c2VEpIMzhVS1laOHFmWkF5VTFwb19lQm5DMjZ0OGVnaGpUMUQ3TkRFc0JCQlFKbXktM2ZleVB4eC1TVWhEODBvVWdkRk1XREYwNXdNZEFvdXRPb3N1NkduLS11UHJCbklpNzFYMUJWR1lqcmdpNGlZaW1ERi1FREhFOFNZSHlWTE96bEx5NnUxeHNzOXdlc3hGSjAzNXRHZFF3bDF6NzRlUEEyUDNqMU83T2pkb25adGUyY1BzdW5jNktNZ2lfNnUyejBSUzdVNUpBQVRfR195bmhjMGRjajNkSW9LYw?oc=5",
-        "date": "2026-11-11"
+        "title": "Bridging Gaps to Create a Better World - Gap Inc.",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUGdHbFBZV0ZGUmdyd3F2TkJIOC1nV3lpX242QTVxbThUTHF4WUtTNzY3MVNFamFhUHFoV21reTJ2SEZOMWp6bGptVmxwTWVOdXR5N3lmdXdVZTZ0LXdqY1AtcHhQdEhtTmk3LVNOQ2x5cjRNUDdMNkktOWpYUm5QZFNPbEJLYnk4Y2JDbg?oc=5",
+        "date": "2026-11-12"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "One Stitch, One Bead: A Contemporary Indigenous Levi’s® Jacket Added to the Levi Strauss & Co. Archives - Levi Strauss & Co",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaHJzVU82SkpLT2VBMEQ1WjFZT2MtcllxWENxc0JwekFNb2x0MGh2N3lKRmRoQU14TnBiUHVXNUtvRUpjZEViSngxUUtHQ0hQeFlNejlLTkhJaTA0SkYwTzQ5ajMybkc4ZjdZSlF2Tm1aTktfZzQ1dGJZUW1NMHlkbTBn?oc=5",
-        "date": "2026-11-15"
+        "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain - ESG Dive",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS0N0cHdpV3BQNHZjVlJVLUpQaEtQNFJNS1FFQTJVV282TkZGYzhERFlGUV9kcTJDY2pucnpLTnNPR1NqQ3FfcGhFelBPUzlvUXBzX1pNblZHVUMxY1BxTi14cHp6M05VNU0tNlFvREFTcW1FcjU4b2lFSkE1T1hXOG9ZUjNTcjVsU01hdzBNeFQwQ3lhQm0zSjE2SUNfTlVXdm5KeHNpQXFPZw?oc=5",
+        "date": "2026-11-17"
       },
       "consumerSampleCount": 0
     },
@@ -174,8 +174,8 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Capri Holdings Limited Announces CEO Succession Plan - Capri Holdings Limited - Investor Relations",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYjc4VjJ0Y041N3p6WjdOcUphWFFHTjBmYlROblE5NXRyVVNLbjNnUDhVUnlrTDFHMnh0OHlhU1ZKbmxJVjQ0VnJGTVk4cHdJOFZxbmxnY0JGNHNXaXZhQlB3LTN5Ung2a3owM29kSzFXeGZiLUVxSXE5am4xdFpHRWpZT0JfcktIbXJHT245dTQwQzlVYnNHZm1XMjhxZjBmcy1VNE9LRW00MHI3QzBQbzZ6ZDhmWGI3WWc?oc=5",
+        "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
         "date": "2026-11-11"
       },
       "consumerSampleCount": 0
@@ -193,10 +193,14 @@
         "accession": "0000103379-26-000135",
         "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm"
       },
-      "newsTitleCount": 0,
+      "newsTitleCount": 2,
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
-      "headline": null,
+      "headline": {
+        "title": "VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei10MDF1Z21mSDZvWHVYRXM0YUwtQ2VEcERUUllYZm5iSFJJUkVEVE1JWmt3NWhlcVBTZTRjclEyWVNHdmN2d0hjbTVJazUzN2lCLXZwTVhMTDZ1b1VJMEJpSVhFTFZJdkVWRGt4d0hfMG1uQ01SeTFaaXdtNzBZeE9kRGY0d0RpemV3dDRQd0EybVkzcjBRY3RMdi1PM0ExOXpPX2lhSHY?oc=5",
+        "date": "2026-11-12"
+      },
       "consumerSampleCount": 0
     },
     {
@@ -277,10 +281,14 @@
         "accession": "0001856437-26-000021",
         "url": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm"
       },
-      "newsTitleCount": 0,
+      "newsTitleCount": 2,
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
-      "headline": null,
+      "headline": {
+        "title": "Victoria’s Secret rally leaves limited upside, Bank of America warns - Proactive financial news",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTFRZSF9JNF9jTVdNVk9pXzBrVlN4b0RReVFjZFZubG5oS1otbS1BclFuY1FmS0g2SF96SzgwbVkwY251WklfbEY1cDdLc2k2QlRITGFBNHFlbUlrX2RzenVsZGRfeG5SdTBkUVlaajRvX203UFJIcjM0a2ZVMmxvZS1fRFlfb0xUSGpNSTluVW9TMW5MejRrVUtuSlNHN1ZYNkZEa29DcGZRSnhkczF2bE5VWk03QVc0TGxHY0FmMHVMUkd5NzVYajhlc1NBNzhMX1NsSQ?oc=5",
+        "date": "2026-11-12"
+      },
       "consumerSampleCount": 0
     },
     {

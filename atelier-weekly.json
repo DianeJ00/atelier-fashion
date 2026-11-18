@@ -1,64 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T05:36:20.553055+00:00",
-  "periodStart": "2026-11-10",
-  "periodEnd": "2026-11-17",
+  "generatedAt": "2026-11-18T05:00:06.993086+00:00",
+  "periodStart": "2026-11-11",
+  "periodEnd": "2026-11-18",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
-  "items": [
-    {
-      "id": "CT:VKTX:NCT07868835:시험 진행 상태 변경",
-      "sector": "바이오·제약",
-      "ticker": "VKTX",
-      "eventDate": "2026-11-17",
-      "eventType": "임상 등록정보 변경",
-      "tier": "공식 등록정보 · 결과 미확인",
-      "title": "VKTX VK2735 · 시험 진행 상태 변경",
-      "observation": "ClinicalTrials.gov 등록 시험에서 모집 전 → 모집 중 항목 확인.",
-      "investment": "개발 단계·주요 일정 변경이 기존 투자 가설에 미치는 영향 점검",
-      "nextCheck": "시험 등록 원문 및 회사 IR에서 실제 임상 결과·안전성 발표 여부 교차 확인",
-      "caveat": "시험 등록정보 변경은 성공, 허가 또는 매출 증가를 의미하지 않음.",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07868835",
-      "sourceLabel": "ClinicalTrials.gov",
-      "priority": 7
-    },
-    {
-      "id": "CT:VKTX:NCT07868939:시험 진행 상태 변경",
-      "sector": "바이오·제약",
-      "ticker": "VKTX",
-      "eventDate": "2026-11-17",
-      "eventType": "임상 등록정보 변경",
-      "tier": "공식 등록정보 · 결과 미확인",
-      "title": "VKTX VK2735 · 시험 진행 상태 변경",
-      "observation": "ClinicalTrials.gov 등록 시험에서 모집 전 → 모집 중 항목 확인.",
-      "investment": "개발 단계·주요 일정 변경이 기존 투자 가설에 미치는 영향 점검",
-      "nextCheck": "시험 등록 원문 및 회사 IR에서 실제 임상 결과·안전성 발표 여부 교차 확인",
-      "caveat": "시험 등록정보 변경은 성공, 허가 또는 매출 증가를 의미하지 않음.",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07868939",
-      "sourceLabel": "ClinicalTrials.gov",
-      "priority": 7
-    }
-  ],
-  "itemCount": 2,
+  "items": [],
+  "itemCount": 0,
   "bySector": {
     "소비재·서비스": 0,
-    "바이오·제약": 2,
+    "바이오·제약": 0,
     "패션": 0
   },
-  "reviewCandidates": [
-    {
-      "companyId": "US:VKTX",
-      "ticker": "VKTX",
-      "sector": "바이오·제약",
-      "currentQuestion": "비만 후보의 효능·부작용·생산 계획이 경쟁력을 입증하는가",
-      "contradictionToCheck": "개발 지연·자본 조달·상업화 부담",
-      "candidateState": "근거 검토 필요 · 방향 미판정",
-      "change": "VKTX VK2735 · 시험 진행 상태 변경",
-      "evidenceDate": "2026-11-17",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07868835",
-      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
-    }
-  ],
+  "reviewCandidates": [],
   "upcomingClinical": [
     {
       "title": "BIIB · 초기 알츠하이머병 치료제의 3상 시험 일정",
@@ -75,6 +29,22 @@
       "nextCheck": "AMGN의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
       "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT06858839"
+    },
+    {
+      "title": "ABBV · 크론병(만성 장 염증질환) 치료제의 3상 시험 일정",
+      "date": "2027-03",
+      "observation": "risankizumab의 크론병(만성 장 염증질환) 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 3월로 예상되어 있음.",
+      "nextCheck": "ABBV의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT06063967"
+    },
+    {
+      "title": "SRPT · 희귀·유전 치료제의 3상 시험 일정",
+      "date": "2027-05-31",
+      "observation": "delandistrogene moxeparvovec의 희귀·유전 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 5월 31일로 예상되어 있음.",
+      "nextCheck": "SRPT의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT05881408"
     }
   ],
   "staleConsumerKpi": [],
@@ -82,7 +52,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-17T05:36:20.451168+00:00"
+    "fashion": "2026-11-18T05:00:06.783084+00:00"
   },
   "coverage": {
     "tracked": 52,

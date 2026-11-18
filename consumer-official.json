@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T05:35:40.882745+00:00",
+  "generatedAt": "2026-11-18T04:59:14.816513+00:00",
   "editedKpiAsOf": "2026-11-05",
   "source": "기업 공식 실적 발표(업종 KPI) + 선택적 SEC 10-Q·XBRL",
   "status": "ok",
@@ -128,7 +128,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-04",
@@ -259,7 +259,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-21",
@@ -297,13 +297,20 @@
         "companyName": "Walt Disney Co",
         "status": "quarter_verified",
         "latestReport": {
-          "form": "10-Q",
-          "filed": "2026-08-05",
-          "reportEnd": "2026-06-27",
-          "accession": "0001744489-26-000057",
-          "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000057/dis-20260627.htm"
+          "form": "10-K",
+          "filed": "2026-11-17",
+          "reportEnd": "2026-10-03",
+          "accession": "0001744489-26-000066",
+          "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000066/dis-20261003.htm"
         },
         "recentReports": [
+          {
+            "form": "10-K",
+            "filed": "2026-11-17",
+            "reportEnd": "2026-10-03",
+            "accession": "0001744489-26-000066",
+            "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000066/dis-20261003.htm"
+          },
           {
             "form": "10-Q",
             "filed": "2026-08-05",
@@ -317,13 +324,6 @@
             "reportEnd": "2026-03-28",
             "accession": "0001744489-26-000037",
             "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000037/dis-20260328.htm"
-          },
-          {
-            "form": "10-Q",
-            "filed": "2026-02-02",
-            "reportEnd": "2025-12-27",
-            "accession": "0001744489-26-000019",
-            "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000019/dis-20251227.htm"
           }
         ],
         "quarter": {
@@ -374,7 +374,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-05",
@@ -495,7 +495,7 @@
             "netIncome": null
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-03",
@@ -626,7 +626,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -757,7 +757,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -888,7 +888,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-06-03",
@@ -1009,7 +1009,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -1140,7 +1140,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1271,7 +1271,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-29",
@@ -1402,7 +1402,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-07-29",
@@ -1533,7 +1533,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1664,7 +1664,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-27",
@@ -1795,7 +1795,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-02",
@@ -1926,7 +1926,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-17T05:35:40.882690+00:00",
+        "verifiedAt": "2026-11-18T04:59:14.816428+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-09-10",
