@@ -30,6 +30,12 @@ CHANNELS = {
 }
 # Optional YouTube API access can resolve channel handles directly, avoiding stale IDs.
 API_CHANNEL_HANDLES = {'Fashion Roadman': '@FashionRoadman', 'Tim Dessaint': '@timdessaint', 'HauteLeMode': '@hautelemode'}
+INDUSTRY_QUERIES = {
+    '우주·위성': '(SpaceX OR Starlink OR Rocket Lab OR NASA) (satellite OR launch OR contract)',
+    '바이오·제약': '(FDA OR clinical trial OR drug approval) biotechnology pharmaceutical industry',
+    '소비재·서비스': '(retail OR consumer spending OR restaurants OR streaming) earnings demand',
+    '패션': '(luxury fashion OR apparel OR clothing brands) sales demand inventory',
+}
 MEDIA_QUERIES = {
     'Vogue Runway': 'site:vogue.com/fashion-shows runway collection',
     'WWD': 'site:wwd.com fashion trend runway',
@@ -324,6 +330,32 @@ def main():
             carried=dict(item)
             carried['carriedOver']=True
             found.append(carried)
+    # Independent sector events: a SpaceX/NASA story matters even before any
+    # associated issuer is in the SEC-tracked watchlist. RSS titles only.
+    industry_checks={}
+    prior_industry=[dict(x) for x in previous.get('items',[])
+                    if x.get('discoveryMethod')=='sector_rss_title'
+                    and x.get('sector') in INDUSTRY_QUERIES
+                    and dated(x.get('date')) and START<=dated(x['date'])<=NOW+timedelta(days=1)]
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        tasks={pool.submit(news,'INDUSTRY',query):sector
+               for sector,query in INDUSTRY_QUERIES.items()}
+        for future in as_completed(tasks):
+            sector=tasks[future]
+            try:
+                rows=future.result()
+                for row in rows:
+                    row['sector']=sector
+                    row['discoveryMethod']='sector_rss_title'
+                    row['source']='산업 뉴스 RSS 제목 · 기사 본문 미검증'
+                found.extend(rows)
+                industry_checks[sector]='ok'
+            except Exception as e:
+                errors.append('Industry RSS '+sector+': '+type(e).__name__)
+                industry_checks[sector]='failed'
+                found.extend([{**x,'carriedOver':True} for x in prior_industry
+                              if x['sector']==sector])
+    # Existing fixed watchlist counts exclude these industry-only headlines.
     by_url={}
     for row in found:
         # The same article may genuinely mention two tracked issuers.
@@ -345,6 +377,7 @@ def main():
         'runMode':'full_watchlist' if fast else 'rotating_daily',
         'attemptedAt':NOW.isoformat().replace('+00:00','Z'),
         'sectorChecks':sectors,
+        'industryChecks':industry_checks,
         'rule':('제목·발행일·종목명 대조, 기사 본문 미검증. 40개 기업 일괄 수집'
                 if fast else '제목·발행일·종목명 대조, 기사 본문 미검증. 4일 순환 수집'),
     }
