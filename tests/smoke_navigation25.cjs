@@ -16,7 +16,7 @@ const legacyStart=legacy.indexOf("function overview(){");
 const legacyEnd=legacy.indexOf("function legacyOverviewArchive(){");
 assert.ok(legacyStart>=0&&legacyEnd>legacyStart);
 const homeSource=legacy.slice(legacyStart,legacyEnd);
-assert.ok(homeSource.includes("window.ATELIER2?.overview()"));
+assert.ok(homeSource.includes("window.ATELIER_INDUSTRIES?.desk?.()"),"desk shows news then earnings, not decorative old dashboard");
 assert.ok(!homeSource.includes("weeklyPanel()"));
 assert.ok(!homeSource.includes("financialSummary()"));
 const dataPaths=[
@@ -89,7 +89,7 @@ function click(key,value){
  const themes=window.ATELIER_INDUSTRIES;
  assert.ok(themes,"themed sector research engine registered");
  const space=themes.render();
- assert.ok(space.includes('iw-theme-space')&&space.includes("SpaceX")&&space.includes("산업 연결 구조"));
+ assert.ok(space.includes('iw-theme-space')&&space.includes("SpaceX")&&space.includes("산업 구조"));
  assert.ok(space.includes("공식 데이터 연결 전"),"space preview must not fake imported fundamentals");
  themes.select("바이오·제약");
  const bio=themes.render();
@@ -98,13 +98,17 @@ function click(key,value){
  themes.select("소비재·서비스");
  const consumerStudio=themes.render();
  assert.ok(consumerStudio.includes("iw-theme-consumer")&&consumerStudio.includes("iw-consumer-funnel"));
- assert.ok(consumerStudio.includes("고객·방문")&&consumerStudio.includes("현금 창출"));
+ assert.ok(consumerStudio.includes("고객")&&consumerStudio.includes("현금"),"consumer economics are textual, not fabricated percentage bars");
  themes.select("패션");
  const fashionStudio=themes.render();
  assert.ok(fashionStudio.includes("iw-theme-fashion")&&fashionStudio.includes("iw-fashion-matrix"));
  assert.ok(fashionStudio.includes("브랜드별 매출"));
  assert.ok(!fashionStudio.includes("[object Object]"),"brand names render as text");
  assert.ok(html.includes("./industry-studio.css")&&html.includes("./industry-studio.js"));
+ const simple=themes.desk();
+ assert.ok(simple.includes("최신 산업 뉴스")&&simple.includes("최근 기업 실적"));
+ assert.ok(!simple.includes("desk-core-grid")&&!simple.includes("시장 상대강도"),"remove unnecessary front page panels");
+ assert.ok(simple.includes("뉴스 본문 내용과 투자 영향은 원문에서 확인"),"do not invent article summaries");
 
  const weeklyAll=window.ATELIER2.weeklyIntro();
  assert.ok(weeklyAll.includes("주간 리서치"));
