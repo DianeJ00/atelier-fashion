@@ -518,22 +518,23 @@ function proposals(companies,filter="전체"){
 }
 function industryOverview(){
  const data=window.ATELIER2?.data?.companies||[];
- const blocks=[
-  {sector:"바이오·제약",fallback:20},
-  {sector:"소비재·서비스",fallback:15},
-  {sector:"패션",fallback:12},
-  {sector:"내 담당 기업",fallback:5}
+ const sectors=[
+  {name:"우주·위성",slug:"space",description:"발사 · 위성 제작 · Starlink · 데이터",preparing:true},
+  {name:"바이오·제약",slug:"bio",description:"임상 · 허가 · 제품 매출"},
+  {name:"소비재·서비스",slug:"consumer",description:"고객 · 거래 · 단위경제성"},
+  {name:"패션",slug:"fashion",description:"브랜드 · 지역 · 채널 · 재고"}
  ];
- return '<section class="a5-industries desk-industries"><div class="desk-section-heading"><h2>산업별</h2><span>기업 탐색</span></div>'+
-  '<div class="a5-industry-grid">'+blocks.map(x=>{
-   const count=data.length?data.filter(c=>c.sector===x.sector).length:x.fallback;
-   const latest=(report?.items||[]).find(r=>r.sector===x.sector);
-   const line=latest?esc(latest.ticker+" · "+latest.title):"신규 확인 근거 없음";
-   return '<button type="button" class="a5-industry" data-a3="goSector" data-sector="'+esc(x.sector)+'">'+
-    '<span class="desk-sector-top"><strong>'+esc(x.sector)+'</strong><b>'+count+'</b></span>'+
-    '<span class="desk-sector-summary">'+line+'</span>'+
-    '<span class="desk-sector-foot">기업 보기 <span aria-hidden="true">↗</span></span></button>';
-  }).join('')+'</div></section>';
+ return '<section class="a5-industries desk-industries"><div class="desk-section-heading"><h2>산업 리서치</h2><span>산업 구조 · 변화 · 기업</span></div>'+
+ '<div class="a5-industry-grid">'+sectors.map(x=>{
+  const count=data.filter(c=>c.sector===x.name).length;
+  const latest=(report?.items||[]).find(r=>r.sector===x.name);
+  const subtitle=x.preparing?"SpaceX 중심 · 공식 데이터 연결 준비":
+   latest?x.description+" · 최근 검증 "+String(latest.eventDate||"") :x.description;
+  return '<button type="button" class="a5-industry iw-entry-'+x.slug+'" data-a3="goSector" data-sector="'+esc(x.name)+'">'+
+   '<span class="desk-sector-top"><strong>'+esc(x.name)+'</strong><b>'+(x.preparing?"—":data.length?count:"—")+'</b></span>'+
+   '<span class="desk-sector-summary">'+esc(subtitle)+'</span>'+
+   '<span class="desk-sector-foot">산업 보기 <span aria-hidden="true">↗</span></span></button>';
+ }).join('')+'</div></section>';
 }
 /* Recent SEC evidence is not the same thing as a filing newly made this week. */
 function recentOfficialEvents(){
@@ -803,12 +804,9 @@ document.addEventListener("click",e=>{
     if(window.atelierGotoCompanies)window.atelierGotoCompanies();
    }else if(window.atelierGotoWeekly)window.atelierGotoWeekly();
   }else if(kind==="goSector"){
-   const state=window.ATELIER2?.state;
-   if(state){
-    state.sector=b.dataset.sector||"전체";state.market="전체";state.disease="전체";
-    state.selected="";state.search="";state.detailTab="사업 이해";
-   }
-   if(window.atelierGotoCompanies)window.atelierGotoCompanies();
+   const sector=b.dataset.sector||"우주·위성";
+   if(window.atelierGotoIndustry)window.atelierGotoIndustry(sector);
+   else if(window.atelierGotoCompanies)window.atelierGotoCompanies();
  }else if(kind==="openOfficial"){
    if(window.atelierGotoOfficial)window.atelierGotoOfficial();
  }else if(kind==="openIssues"){
