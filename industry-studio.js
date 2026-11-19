@@ -29,36 +29,27 @@
   ).join("")+'</div>';
  }
  function spaceMap(){
-  return '<div class="iw-architecture iw-space-map" role="img" aria-label="SpaceX를 중심으로 발사, 위성 제조, 통신, 데이터가 연결되는 산업 구조">'+
-   '<div class="iw-orbit-ring iw-orbit-a"></div><div class="iw-orbit-ring iw-orbit-b"></div>'+
-   '<svg class="iw-orbit-lines" viewBox="0 0 660 340" preserveAspectRatio="none" aria-hidden="true"><path d="M330 170 L115 75 M330 170 L545 75 M330 170 L115 265 M330 170 L545 265" /></svg>'+
-   '<div class="iw-space-node iw-space-core"><small>산업의 기준기업</small><strong>SpaceX</strong><span>발사 · Starlink · 우주 시스템</span></div>'+
-   '<div class="iw-space-node iw-space-launch"><small>01</small><strong>발사·운송</strong><span>수송 빈도 · 재사용 비용</span></div>'+
-   '<div class="iw-space-node iw-space-build"><small>02</small><strong>위성 제조</strong><span>제작 수주 · 납품 마진</span></div>'+
-   '<div class="iw-space-node iw-space-network"><small>03</small><strong>통신 서비스</strong><span>가입자 · 통신망 수익성</span></div>'+
-   '<div class="iw-space-node iw-space-data"><small>04</small><strong>영상·데이터</strong><span>계약 · 반복 매출</span></div>'+
-   '</div><div class="iw-figure-foot">산업 연결 구조 · 기업별 매출 비중이나 계약 관계를 확정한 도표는 아님</div>';
+  const parts=[["발사·운송","SpaceX · Rocket Lab · Firefly"],["위성·우주선 제작","SpaceX · MDA · Intuitive Machines"],
+   ["통신·서비스","Starlink · AST SpaceMobile · Iridium"],["영상·데이터","Planet Labs · BlackSky"]];
+  return '<div class="iw-architecture iw-space-map" aria-label="우주산업 4개 사업영역">'+
+    parts.map(p=>'<div class="iw-space-line"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>').join("")+'</div>';
  }
  function bioTimeline(){
-  const steps=[["01","기초연구","표적·기전"],["02","전임상","독성·효능"],["03","임상 1·2상","안전성·초기 효능"],["04","임상 3상","확증 데이터"],["05","허가·출시","규제·보험"],["06","상업화","처방·제품 매출"]];
-  return '<div class="iw-architecture iw-bio-timeline" aria-label="의약품 연구개발부터 상업화까지의 일반적인 단계">'+
-   steps.map((x,i)=>'<div class="iw-bio-stage"><div class="iw-bio-index">'+x[0]+'</div><div class="iw-bio-stage-content"><strong>'+x[1]+'</strong><span>'+x[2]+'</span></div></div>').join("")+
-   '</div><div class="iw-figure-foot">일반적인 개발 단계 · 개별 기업 파이프라인의 실제 단계는 기업별 공식 자료로 확인</div>';
+  const steps=[["연구·전임상","표적·기전·안전성"],["임상 1·2상","안전성·초기 효능"],["임상 3상","확증 데이터"],
+   ["허가","규제·보험"],["상업화","처방·제품 매출"]];
+  return '<div class="iw-architecture iw-bio-timeline">'+
+   steps.map(p=>'<div class="iw-structure-line"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>').join("")+'</div>';
  }
  function consumerFunnel(){
-  const steps=[["고객·방문","이용자·매장 유입","100%"],["거래·이용","주문·예약·구매 빈도","82%"],["수익 전환","거래당 매출·가격·수수료","64%"],["사업 이익","원가·인건비·판관비 차감","46%"],["현금 창출","운전자본·CAPEX 반영","30%"]];
-  return '<div class="iw-architecture iw-consumer-funnel" aria-label="소비자 행동이 기업 매출과 현금흐름으로 전환되는 분석 단계">'+
-   steps.map((x,i)=>'<div class="iw-consumer-step"><span class="iw-consumer-stage">'+String(i+1).padStart(2,"0")+'</span>'+
-   '<div class="iw-consumer-bar-track"><div class="iw-consumer-bar" style="width:'+x[2]+'"><strong>'+x[0]+'</strong></div></div>'+
-   '<span class="iw-consumer-meaning">'+x[1]+'</span></div>').join("")+
-   '</div><div class="iw-figure-foot">폭은 개념적 설명용 · 실제 전환율·손익 구성 수치 아님</div>';
+  const parts=[["고객","이용자·방문"],["거래","예약·주문·구매 빈도"],["매출","가격·수수료·전환"],["이익·현금","마진·CAPEX·FCF"]];
+  return '<div class="iw-architecture iw-consumer-funnel">'+
+   parts.map(p=>'<div class="iw-structure-line"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>').join("")+'</div>';
  }
  function fashionMatrix(){
-  const rows=[["브랜드","주력·신규 브랜드 성장","브랜드별 매출"],["지역","북미·유럽·아시아","지역별 매출"],["채널","직영·도매·온라인","채널별 수익성"],["판매 품질","정가 판매·할인","재고·총이익률"]];
-  return '<div class="iw-architecture iw-fashion-matrix" aria-label="패션산업에서 브랜드, 지역, 채널, 판매 품질을 교차 확인하는 분석 매트릭스">'+
-   '<div class="iw-fashion-columnheads"><span>분석 축</span><span>무엇이 변하는가</span><span>검증할 숫자</span></div>'+
-   rows.map((x,i)=>'<div class="iw-fashion-matrixrow iw-fashion-row-'+i+'"><strong>'+x[0]+'</strong><span>'+x[1]+'</span><span>'+x[2]+'</span></div>').join("")+
-   '</div><div class="iw-figure-foot">실제 기업별 지역·브랜드 성과가 아닌 비교할 관점</div>';
+  const parts=[["브랜드","핵심·신규 브랜드별 매출"],["지역","북미·유럽·아시아"],["채널","직영·도매·온라인"],
+   ["판매 품질","정가 판매·할인·재고"]];
+  return '<div class="iw-architecture iw-fashion-matrix">'+
+   parts.map(p=>'<div class="iw-structure-line"><b>'+esc(p[0])+'</b><span>'+esc(p[1])+'</span></div>').join("")+'</div>';
  }
  const figures={space:spaceMap,bio:bioTimeline,consumer:consumerFunnel,fashion:fashionMatrix};
  const drivers={
@@ -119,20 +110,16 @@
    }).join("")+'</div></section>';
  }
  function render(){
-  const meta=SECTORS.find(s=>s.key===selected)||SECTORS[0];
-  const tracked=companyData().filter(c=>c.sector===selected).length;
-  const figure=figures[meta.slug]();
-  return '<div class="iw-page iw-theme-'+meta.slug+'" data-active-sector="'+esc(meta.key)+'">'+
-   '<div class="iw-studio-top"><div class="iw-studio-eyebrow">ATELIER / INDUSTRIES</div>'+selector()+'</div>'+
-   '<header class="iw-masthead"><div><div class="iw-overline">'+esc(meta.en)+'</div><h1>'+esc(meta.heading)+'</h1>'+
-   '<p class="iw-lead">'+esc(meta.lead)+'</p><p class="iw-question">'+esc(meta.question)+'</p></div>'+
-   '<div class="iw-masthead-aside"><span>RESEARCH FIELD</span><b>'+ (meta.slug==="space"?"INDUSTRY 01":"추적 "+tracked+"개 기업") +'</b></div></header>'+
-   '<div class="iw-main-grid"><section class="iw-system"><div class="iw-module-heading"><span>INDUSTRY STRUCTURE</span><h2>'+(
-    meta.slug==="space"?"산업 연결 구조":meta.slug==="bio"?"개발·상업화 시간축":meta.slug==="consumer"?"성장의 수익화 경로":"브랜드 × 지역 × 채널")+
-    '</h2></div>'+figure+'</section>'+radar(meta.slug)+'</div>'+
-   '<div class="iw-bottom-grid">'+pulse(meta.key,meta.slug)+rows(meta.key,meta.slug)+'</div>'+
-   '</div>';
+  const m=SECTORS.find(s=>s.key===selected)||SECTORS[0];
+  const name=m.slug==="space"?"발사·제조·통신·데이터":m.slug==="bio"?"연구·임상·허가·상업화":
+    m.slug==="consumer"?"고객·거래·이익·현금":"브랜드·지역·판매채널";
+  return '<div class="iw-page iw-theme-'+m.slug+'" data-active-sector="'+esc(m.key)+'">'+selector()+
+   '<header class="iw-masthead"><h1>'+esc(m.heading)+'</h1><p>'+esc(m.lead)+'</p></header>'+
+   '<section class="iw-simple-structure"><h2>산업 구조 <small>'+esc(name)+'</small></h2>'+figures[m.slug]()+
+   '<div class="iw-focus-terms">'+drivers[m.slug].map(x=>'<span>'+esc(x[0])+'</span>').join("")+'</div></section>'+
+   pulse(m.key,m.slug)+rows(m.key,m.slug)+'</div>';
  }
+
  document.addEventListener("click",e=>{
   const b=e.target?.closest?.("[data-iw-sector],[data-iw-company],[data-iw-companies],[data-iw-weekly]");
   if(!b)return;
