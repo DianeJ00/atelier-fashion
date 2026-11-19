@@ -6,7 +6,7 @@ const read=p=>fs.readFileSync(path.join(root,p),"utf8");
 const html=read("index.html");
 const legacy=read("legacy-fashion.js");
 const nav=[...html.matchAll(/<button class="nav-item(?: active)?" data-page="([^"]+)"/g)].map(x=>x[1]);
-assert.deepEqual(nav,["overview","insights","companies","hub"]);
+assert.deepEqual(nav,["overview","industry","companies","hub"]);
 assert.ok(!nav.includes("theses"));
 assert.ok(legacy.includes("function legacyOverviewArchive()"));
 assert.ok(legacy.includes("window.atelierLegacyThesesFor="));
@@ -50,6 +50,7 @@ vm.runInNewContext(read("atelier-data.js"),ctx);
 vm.runInNewContext(read("consumer2.js"),ctx);
 vm.runInNewContext(read("research3.js"),ctx);
 vm.runInNewContext(read("research2.js"),ctx);
+vm.runInNewContext(read("industry-studio.js"),ctx);
 function click(key,value){
  let stopped=false;
  const b={dataset:{r2:key,val:value,a3:key,id:value,choice:value}};
@@ -69,7 +70,7 @@ function click(key,value){
  const order=[
    home.indexOf("최근 공식 실적"),
    home.indexOf("이어 볼 기업"),
-   home.indexOf("산업별"),
+   home.indexOf("산업 리서치"),
    home.indexOf("시장 상대강도")
  ];
  assert.ok(order.every(v=>v>=0),"all four research sections available");
@@ -83,7 +84,28 @@ function click(key,value){
  assert.ok(home.includes("최근 30일 제출")&&home.includes("SEC GAAP"),"recent filing dates must not be treated as brand-new news");
  assert.ok(home.includes('data-a3="openOfficial"'),"source archive must open from recent official results");
  assert.ok(!home.includes("원문으로 확인한 변화 TOP 3"),"avoid ungrounded investment ranking");
- assert.equal((home.match(/class="a5-industry"/g)||[]).length,4);
+ assert.equal((home.match(/class="a5-industry iw-entry-/g)||[]).length,4);
+ assert.ok(home.includes('data-sector="우주·위성"'),"SpaceX-centered industry entry is visible");
+ const themes=window.ATELIER_INDUSTRIES;
+ assert.ok(themes,"themed sector research engine registered");
+ const space=themes.render();
+ assert.ok(space.includes('iw-theme-space')&&space.includes("SpaceX")&&space.includes("산업 연결 구조"));
+ assert.ok(space.includes("공식 데이터 연결 전"),"space preview must not fake imported fundamentals");
+ themes.select("바이오·제약");
+ const bio=themes.render();
+ assert.ok(bio.includes("iw-theme-bio")&&bio.includes("iw-bio-timeline")&&bio.includes("임상 3상"));
+ assert.ok(bio.includes("기업 트래킹")&&bio.includes("LLY"));
+ themes.select("소비재·서비스");
+ const consumerStudio=themes.render();
+ assert.ok(consumerStudio.includes("iw-theme-consumer")&&consumerStudio.includes("iw-consumer-funnel"));
+ assert.ok(consumerStudio.includes("고객·방문")&&consumerStudio.includes("현금 창출"));
+ themes.select("패션");
+ const fashionStudio=themes.render();
+ assert.ok(fashionStudio.includes("iw-theme-fashion")&&fashionStudio.includes("iw-fashion-matrix"));
+ assert.ok(fashionStudio.includes("브랜드별 매출"));
+ assert.ok(!fashionStudio.includes("[object Object]"),"brand names render as text");
+ assert.ok(html.includes("./industry-studio.css")&&html.includes("./industry-studio.js"));
+
  const weeklyAll=window.ATELIER2.weeklyIntro();
  assert.ok(weeklyAll.includes("주간 리서치"));
  assert.equal((weeklyAll.match(/class="a3-report"/g)||[]).length,1);
@@ -137,5 +159,5 @@ function click(key,value){
  const consumerWeekly=window.ATELIER2.weeklyIntro();
  assert.ok(consumerWeekly.includes("소비재 15개 기업"));
  assert.ok(consumerWeekly.includes("<details"),"deep source data is folded by default");
- console.log("ATELIER navigation: verified-first signals, separate evidence review, source-tagged issues, four navigation items PASS");
+ console.log("ATELIER navigation: sector-first studios, verified evidence, memo separation and 4-item navigation PASS");
 })().catch(err=>{console.error(err);process.exitCode=1});
