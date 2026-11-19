@@ -166,17 +166,7 @@ async function loadResearchFeed(){
  render();
 }
 function overview(){
- const report=window.ATELIER3?.report;
- const tracked=window.ATELIER2?.data?.companies?.length;
- const count=window.ATELIER3?.recentOfficialEvents?.()?.all?.length;
- const period=report?.periodEnd||"";
- return '<header class="desk-hero">'+
-  '<div class="desk-hero-body"><h1>리서치 데스크</h1><div class="desk-hero-stats">'+
-  '<span><strong>'+esc(tracked??"—")+'</strong> 기업</span>'+
-  '<span><strong>'+esc(count??"—")+'</strong> 최근 30일 SEC 공시</span>'+
-  (period?'<span class="desk-hero-date">'+esc(period)+'</span>':"")+
-  '</div></div></header>'+
-  (window.ATELIER2?.overview()||"");
+ return window.ATELIER_INDUSTRIES?.desk?.()||'<div class="desk-loading">산업 뉴스 연결 중</div>';
 }
 function legacyOverviewArchive(){
  const focus=['TPR','LEVI','GAP','URBN'].map(t=>peers.find(p=>p.ticker===t)).filter(Boolean);
