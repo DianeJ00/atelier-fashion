@@ -30,7 +30,7 @@ DATA_FILES = (
 SITE_ASSETS = (
     "legacy-fashion-data.js", "legacy-fashion.js",
     "atelier-data.js", "atelier-backup.js", "atelier-quotes.js", "research2.js", "research2.css",
-    "research3.js", "research3.css", "consumer2.js", "consumer2.css",
+    "research3.js", "research3.css", "industry-studio.js", "industry-studio.css", "consumer2.js", "consumer2.css",
     "market-live.js", "health.js", "korea.js",
 )
 EXPECTED = {"패션": 12, "소비재·서비스": 15, "바이오·제약": 20, "내 담당 기업": 5}
