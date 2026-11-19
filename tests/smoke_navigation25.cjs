@@ -94,7 +94,7 @@ function click(key,value){
  themes.select("바이오·제약");
  const bio=themes.render();
  assert.ok(bio.includes("iw-theme-bio")&&bio.includes("iw-bio-timeline")&&bio.includes("임상 3상"));
- assert.ok(bio.includes("기업 트래킹")&&bio.includes("LLY"));
+ assert.ok(bio.includes("기업 트래킹")&&bio.includes("20"),"all 20 biotech companies are represented in the sector view");
  themes.select("소비재·서비스");
  const consumerStudio=themes.render();
  assert.ok(consumerStudio.includes("iw-theme-consumer")&&consumerStudio.includes("iw-consumer-funnel"));
