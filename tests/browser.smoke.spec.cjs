@@ -96,13 +96,45 @@ test.describe("ATELIER published-site regression",()=>{
   await page.locator('.r2-company-row[data-val="US:RL"]').click();
   await expect(page.locator(".e8-lens")).toContainText("정가 판매·마진");
  });
+ test("four distinct industry studios: SpaceX architecture, pharma stages, consumer economics, fashion matrix",async({page})=>{
+  await page.goto(BASE,{waitUntil:"domcontentloaded"});
+  await page.locator('#nav [data-page="industry"]').click();
+  await expect(page.locator("#page-crumb")).toHaveText("산업 리서치");
+  const studio=page.locator(".iw-page");
+  await expect(studio).toHaveAttribute("data-active-sector","우주·위성");
+  await expect(studio.locator(".iw-space-core")).toContainText("SpaceX");
+  await expect(studio).toContainText("공식 데이터 연결 전");
+  const colors=[];
+  for(const [sector,theme,diagram,count] of [
+   ["우주·위성","space",".iw-space-map",null],
+   ["바이오·제약","bio",".iw-bio-timeline","20"],
+   ["소비재·서비스","consumer",".iw-consumer-funnel","15"],
+   ["패션","fashion",".iw-fashion-matrix","12"]
+  ]){
+   await page.locator('[data-iw-sector="'+sector+'"]').click();
+   await expect(studio).toHaveClass(new RegExp("iw-theme-"+theme));
+   await expect(studio.locator(diagram)).toBeVisible();
+   if(count)await expect(studio.locator(".iw-watchlist h2")).toContainText(count);
+   colors.push(await studio.locator(".iw-masthead").evaluate(el=>getComputedStyle(el).backgroundColor));
+  }
+  expect(new Set(colors).size).toBe(4);
+  await page.locator('[data-iw-sector="바이오·제약"]').click();
+  const row=page.locator(".iw-company-entry[data-iw-company]").first();
+  await expect(row).toBeVisible();
+  await row.click();
+  await expect(page.locator("#page-crumb")).toHaveText("기업 분석");
+  await expect(page.locator(".r2-detail")).toBeVisible();
+ });
  test("desktop: 52 companies, weekly navigation, private backup round trip",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
   await expect(page.locator("#nav [data-page=overview]")).toBeVisible();
   await page.locator("#nav [data-page=companies]").click();
   await expect(page.locator(".r2-company-list")).toBeVisible({timeout:20000});
   await expect(page.locator(".r2-company-row").first()).toBeVisible();
-  await page.locator("#nav [data-page=insights]").click();
+  await page.locator("#nav [data-page=industry]").click();
+  await expect(page.locator(".iw-page")).toBeVisible();
+  await page.locator('[data-iw-sector="바이오·제약"]').click();
+  await page.locator('[data-iw-weekly="바이오·제약"]').click();
   await expect(page.locator("#page-crumb")).toHaveText("주간 리서치");
   await page.locator("#nav [data-page=hub]").click();
   await page.locator('[data-action="hubTab"][data-hub-tab="settings"]').click();
