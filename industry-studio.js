@@ -10,7 +10,7 @@
   {key:"소비재·서비스",slug:"consumer",en:"CONSUMER ECONOMICS",heading:"소비재·서비스",lead:"고객 행동이 수익성으로 바뀌는 구조",question:"고객·거래량의 증가가 매출 증가를 넘어 영업이익과 FCF 개선으로 이어지는가"},
   {key:"패션",slug:"fashion",en:"BRAND ECONOMICS",heading:"패션",lead:"브랜드 · 지역 · 판매채널",question:"어느 브랜드가 어느 시장에서 정가 판매와 마진을 지키며 성장하는가"}
  ];
- let selected="우주·위성";
+ let selected="우주·위성",deskSector="전체";
  function esc(x){return String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
  function url(x){
   try{const u=new URL(x);return /^https?:$/.test(u.protocol)?esc(u.href):"#";}catch(_){return "#";}
@@ -63,28 +63,70 @@
    drivers[slug].map((a,i)=>'<div class="iw-driver"><span>'+String(i+1).padStart(2,"0")+'</span><div><strong>'+esc(a[0])+'</strong><p>'+esc(a[1])+'</p></div></div>').join("")+
    '</aside>';
  }
- function officialFor(sector){
-  return sourceData().filter(x=>x.sector===sector&&x.sourceUrl&&x.eventDate)
-   .slice().sort((a,b)=>String(b.eventDate).localeCompare(String(a.eventDate))).slice(0,3).map(x=>
-    {return {ticker:x.ticker,day:x.eventDate,label:"원문 확인",title:x.title,source:x.sourceUrl};});
+
+ const sectors=["우주·위성","바이오·제약","소비재·서비스","패션"];
+ function newsItems(sector="전체",limit=12){
+  const known=new Map(companyData().map(c=>[c.ticker,c]));
+  const seen=new Set(),perSector=new Map(),perTicker=new Map();
+  const rows=(window.ATELIER3?.issues?.items||[]).filter(x=>
+    x.platform==="Google News"&&x.reviewStatus==="needs_review"&&x.title&&x.url&&x.date
+  ).map(x=>{
+    const c=known.get(x.ticker);
+    const group=x.discoveryMethod==="sector_rss_title"?x.sector:
+      c&&(!x.issuerId||x.issuerId===c.id)?c.sector:null;
+    return {...x,group};
+  }).filter(x=>sectors.includes(x.group)&&(sector==="전체"||x.group===sector))
+   .sort((a,b)=>String(b.date).localeCompare(String(a.date))||
+      Number(/^(Reuters|Yahoo Finance)$/i.test(b.creator||""))-Number(/^(Reuters|Yahoo Finance)$/i.test(a.creator||"")));
+  const out=[];
+  for(const x of rows){
+   const group=x.group,publication=x.creator||"뉴스 출처 미표기";
+   const title=String(x.title).replace(/\s+-\s+[^-]+$/,"");
+   const key=group+"|"+title.toLowerCase();
+   if(seen.has(key)||out.length>=limit||(perSector.get(group)||0)>=(sector==="전체"?4:limit))continue;
+   if(x.ticker!=="INDUSTRY"&&(perTicker.get(x.ticker)||0)>=2)continue;
+   seen.add(key);perSector.set(group,(perSector.get(group)||0)+1);
+   if(x.ticker!=="INDUSTRY")perTicker.set(x.ticker,(perTicker.get(x.ticker)||0)+1);
+   out.push({sector:group,title,date:String(x.date).slice(0,10),creator:publication,
+     url:x.url,ticker:x.ticker==="INDUSTRY"?"":x.ticker});
+  }
+  return out;
  }
- function newsFor(sector){
-  const known=new Map(companyData().map(x=>[x.ticker,x]));
-  return rssData().filter(x=>x.platform==="Google News"&&x.reviewStatus==="needs_review"&&
-   known.get(x.ticker)?.sector===sector&&x.url&&x.date&&(!x.issuerId||x.issuerId===known.get(x.ticker)?.id))
-   .sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,4).map(x=>
-    ({ticker:x.ticker,day:String(x.date).slice(0,10),label:"제목만 수집",title:x.title,source:x.url}));
+ function newsRow(x,showSector=false){
+  return '<article class="iw-news-row"><div class="iw-news-meta"><time>'+esc(x.date)+'</time>'+
+    '<span>'+esc(x.creator)+'</span>'+(showSector?'<span>'+esc(x.sector)+'</span>':"")+
+    (x.ticker?'<span>'+esc(x.ticker)+'</span>':"")+'</div>'+
+    '<a href="'+url(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.title)+'</a></article>';
  }
  function pulse(sector,slug){
-  const verified=officialFor(sector),raw=newsFor(sector);
-  const all=[...verified,...raw].sort((a,b)=>String(b.day).localeCompare(String(a.day))).slice(0,6);
-  const body=all.length?all.map(x=>'<div class="iw-event"><div class="iw-event-meta"><time>'+esc(x.day)+'</time><span>'+esc(x.label)+'</span><b>'+esc(x.ticker||sector)+'</b></div>'+
-   '<a href="'+url(x.source)+'" target="_blank" rel="noopener noreferrer">'+esc(x.title)+'</a></div>').join(""):
-   '<div class="iw-quiet">'+(slug==="space"?"우주산업의 공식 이슈 수집 연결 전입니다. 확인되지 않은 사건을 최신 이슈로 표시하지 않습니다.":"현재 연결된 산업별 신규 근거가 없습니다.")+'</div>';
-  return '<section class="iw-events"><div class="iw-module-heading iw-heading-flex"><div><span>INDUSTRY WATCH</span><h2>산업 변화</h2></div>'+
-   (slug==="space"?"":'<button type="button" data-iw-weekly="'+esc(sector)+'">주간 리서치 보기 ↗</button>')+'</div>'+
-   body+'<p class="iw-evidence-foot">날짜·원문 상태 구분 · 제목만 수집한 기사는 본문과 투자 영향 미검증</p></section>';
+  const rows=newsItems(sector,9);
+  return '<section class="iw-events"><div class="iw-module-heading iw-heading-flex"><h2>최근 산업 뉴스</h2></div>'+
+   (rows.length?rows.map(x=>newsRow(x)).join(""):
+     '<p class="iw-quiet">'+(slug==="space"?"우주산업 뉴스 수집 대기":"최근 수집된 관련 뉴스가 없습니다.")+'</p>')+
+   '<p class="iw-evidence-foot">Reuters · Yahoo Finance 등 공개 뉴스 RSS 제목 · 본문 미검증</p></section>';
  }
+ function desk(){
+  const rows=newsItems(deskSector,12);
+  const universe=new Map(companyData().map(c=>[c.ticker,c]));
+  const official=(window.ATELIER3?.recentOfficialEvents?.()?.selected||[]).slice(0,6);
+  return '<div class="iw-desk"><header class="iw-desk-head"><h1>리서치 데스크</h1></header>'+
+   '<section class="iw-desk-news"><div class="iw-section-title"><h2>최신 산업 뉴스</h2>'+
+   '<button type="button" data-iw-open-sector>산업별 보기</button></div>'+
+   '<div class="iw-desk-filter">'+["전체",...sectors].map(t=>
+    '<button type="button" data-iw-desk-sector="'+esc(t)+'" aria-pressed="'+(deskSector===t)+'">'+esc(t)+'</button>').join("")+'</div>'+
+   (rows.length?rows.map(x=>newsRow(x,true)).join(""):'<p class="iw-quiet">관련 기사 제목이 없습니다.</p>')+
+   '<p class="iw-evidence-foot">제목·발행일·언론사 표시 · 뉴스 본문 내용과 투자 영향은 원문에서 확인</p></section>'+
+   '<section class="iw-desk-results"><div class="iw-section-title"><h2>최근 기업 실적</h2>'+
+   '<button type="button" data-iw-official>SEC 실적 전체 보기</button></div>'+
+   official.map(r=>{
+    const c=universe.get(r.ticker),rev=r.metrics?.revenue?.yoy?.percent,op=r.metrics?.operatingIncome?.yoy?.percent;
+    const change=[Number.isFinite(rev)?"매출 "+(rev>0?"+":"")+rev.toFixed(1)+"%":null,
+      Number.isFinite(op)?"영업이익 "+(op>0?"+":"")+op.toFixed(1)+"%":null].filter(Boolean).join(" · ")||"GAAP 실적";
+    return '<button type="button" class="iw-result-row" data-iw-company="'+esc(c?.id||"")+'">'+
+      '<strong>'+esc(r.ticker)+'</strong><span>'+esc(change)+'</span><time>'+esc(r.filed)+'</time></button>';
+   }).join("")+'<p class="iw-evidence-foot">최근 30일 SEC 공시 · 전년 동기 대비 GAAP</p></section></div>';
+ }
+
  function rows(sector,slug){
   if(slug==="space"){
    const groups=[["산업 기준기업","SpaceX","발사·Starlink·우주 인프라"],["발사·제조","Rocket Lab","발사체·위성 시스템"],["달 탐사","Intuitive Machines","우주 운송·탐사 인프라"],["위성통신","AST SpaceMobile","휴대전화 직접 연결"],["우주 데이터","Planet Labs","지구관측·데이터"]];
@@ -121,9 +163,12 @@
  }
 
  document.addEventListener("click",e=>{
-  const b=e.target?.closest?.("[data-iw-sector],[data-iw-company],[data-iw-companies],[data-iw-weekly]");
+  const b=e.target?.closest?.("[data-iw-sector],[data-iw-company],[data-iw-companies],[data-iw-weekly],[data-iw-desk-sector],[data-iw-open-sector],[data-iw-official]");
   if(!b)return;
   if(b.dataset.iwSector){setSector(b.dataset.iwSector);return;}
+  if(b.dataset.iwDeskSector){deskSector=b.dataset.iwDeskSector;window.atelierRerender?.();return;}
+  if(b.hasAttribute("data-iw-open-sector")){window.atelierGotoIndustry?.();return;}
+  if(b.hasAttribute("data-iw-official")){window.atelierGotoOfficial?.();return;}
   if(b.dataset.iwCompany){
    const st=window.ATELIER2?.state;
    if(st){st.sector="전체";st.market="전체";st.search="";st.disease="전체";st.selected=b.dataset.iwCompany;st.detailTab="실적·이슈";}
@@ -140,5 +185,5 @@
    window.atelierGotoWeekly?.();
   }
  });
- window.ATELIER_INDUSTRIES={render,select:setSector,get selected(){return selected},SECTORS:SECTORS.map(s=>({key:s.key,slug:s.slug}))};
+ window.ATELIER_INDUSTRIES={render,desk,newsItems,select:setSector,get selected(){return selected},SECTORS:SECTORS.map(s=>({key:s.key,slug:s.slug}))};
 })();
