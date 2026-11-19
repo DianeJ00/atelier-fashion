@@ -100,7 +100,7 @@
  }
  function pulse(sector,slug){
   const rows=newsItems(sector,9);
-  return '<section class="iw-events"><div class="iw-module-heading iw-heading-flex"><h2>최근 산업 뉴스</h2></div>'+
+  return '<section class="iw-events"><div class="iw-module-heading iw-heading-flex"><h2>최근 산업 뉴스</h2>'+(slug!=="space"?'<button type="button" data-iw-weekly="'+esc(sector)+'">주간 리서치</button>':"")+'</div>'+
    (rows.length?rows.map(x=>newsRow(x)).join(""):
      '<p class="iw-quiet">'+(slug==="space"?"우주산업 뉴스 수집 대기":"최근 수집된 관련 뉴스가 없습니다.")+'</p>')+
    '<p class="iw-evidence-foot">Reuters · Yahoo Finance 등 공개 뉴스 RSS 제목 · 본문 미검증</p></section>';
