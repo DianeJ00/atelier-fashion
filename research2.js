@@ -455,7 +455,9 @@ function companyPage(){
  const list=visibleCompanies();
  if(!list.some(x=>x.id===state.selected))state.selected=list[0]?.id||"";
  const c=at(state.selected);
- return '<div class="r2-page">'+
+ const themeSector=state.sector==="전체"?c?.sector:state.sector;
+ const industryTheme=themeSector==="바이오·제약"?"bio":themeSector==="소비재·서비스"?"consumer":themeSector==="패션"?"fashion":"neutral";
+ return '<div class="r2-page iw-company-'+industryTheme+'">'+
   '<div class="desk-page-title"><h1>기업 분석</h1><span>'+list.length+' / '+companies().length+'개 기업</span></div>'+
   '<div class="r2-panel r2-filters"><div class="r2-filter-wrap">'+click(sectorOptions,state.sector,"sector")+'</div>'+
   '<div class="r2-filter-row"><label>시장</label><div class="r2-filter-wrap">'+click(["전체","미국","한국"],state.market,"market")+'</div>'+
