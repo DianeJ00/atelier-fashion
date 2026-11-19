@@ -18,6 +18,8 @@ on:
       - '.github/workflows/weekly-research.yml'
       - 'research2.js'
       - 'research3.js'
+      - 'industry-studio.js'
+      - 'industry-studio.css'
       - 'tests/browser.smoke.spec.cjs'
       - '.github/workflows/browser-smoke.yml'
 
