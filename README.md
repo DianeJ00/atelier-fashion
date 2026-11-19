@@ -416,3 +416,10 @@ GitHub `Settings → Secrets and variables → Actions`의 **Repository secrets*
 - weekly-research.json의 newsCoverage에서 실제 점검·성공 건수, 종목별 마지막 확인 시각, 이전에 수집된 제목 여부 확인. 연결 실패를 신규 확인으로 표시하지 않음.
 - 사이트 첫 화면 「새로 포착된 이슈」와 자료실 → 공시·뉴스 이슈에 빠른 목록 반영. 미확인 RSS 제목은 공식 공시·분기 실적과 구분하며 매매 의견이나 기사 본문 요약으로 취급하지 않음.
 - GitHub Actions → ATELIER daily verification and rapid issue updates → Run workflow에서 issues_only를 선택해 이슈만 수동 갱신할 수도 있음.
+
+### 산업별 뉴스 리서치 화면 (2026-11-19)
+
+- 첫 화면은 산업별 뉴스 기사 제목·출처·발행일과 최근 SEC 실적만 표시합니다. 기사 제목을 투자 영향이 검증된 사실처럼 요약하지 않습니다.
+- 산업 상세 화면은 색상만 달리하고 `산업 구조 → 관련 뉴스 → 기업` 순으로 단순화했습니다. 읽기 어려운 궤도 도식·임의 퍼널 비율은 제거했습니다.
+- 공개 Google News RSS를 통해 4개 산업(우주·위성 포함)의 공통 이슈를 별도 수집합니다. Reuters·Yahoo Finance 등을 표시하되, 이는 수집된 언론사 출처이지 기사 본문을 검증했다는 의미는 아닙니다.
+- 기존 52개 공식 기업 분석·SEC 실적·개인 메모는 유지되며, SpaceX 등 우주기업 재무자료는 별도 연결 전입니다.
