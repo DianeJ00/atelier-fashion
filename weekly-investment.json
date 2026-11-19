@@ -2,6 +2,15 @@
   "highlights": [
     {
       "tier": "기사 제목·미검증",
+      "ticker": "VFC",
+      "date": "2026-11-18",
+      "title": "Inside Vans’ New Milan Store: Local Design Meets Skate Heritage - VF Corporation",
+      "context": "Vans 매출·재고 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcjZ4N29nYmFtTG14WUV4LTdlRklqNGdFYUtNTHg2ZzFGZGFtZkVlN3I4aFdZRDl0T3ZFSllwZ3NQZjFKczl0RHBwRFd5T0xYakY3TWtrY2ZTdUk1OHhGMDZsTzNISFRiRDBXdG5UdmNyTHE5OVBmTFI4WVBnVTZSTHFSemNyZmk5NzV1UnFHc2N3cWdOY0NFOXV1SWhmMWNicFVGeU9QRTJ2dUtqVjdRRnh5LTZHMjN3?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
       "ticker": "PVH",
       "date": "2026-11-12",
       "title": "PVH Simplifies, Cutting 4% of Global Workforce - WWD",
@@ -17,24 +26,15 @@
       "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUUo2WmxhcmlheWZXUjFYNzZwZzhJUEtxYjY2ODUxbnMyVVgwSkNhVDg5c2VHNE1odU1FcTlJd2FIYzRKSjBaUF9TaG0xeXBpR1hELVNjZ3VHRzlUbHhHaHFXTkNrZTdSd2VJRjFVNWlibWhUenJleFI4TmRrdndTZjYtR1pTTWxNM0c1S2N1c0RiTms?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
-      "ticker": "CPRI",
-      "date": "2026-11-10",
-      "title": "Justin Boxford Said to Become Next CEO of Michael Kors Parent Capri - WWD",
-      "context": "Michael Kors 매출·정가 판매 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaGQzMzhkX21EY2NhU20yejhET3BKRC1CdW9mSUgxSmV1QWFTeUZ0eE1pa2NoUHVYdUVFMXA5aXNFOHBtNTRsOFhlaXRVRkNnZE9wMmJPeWNsdWJ2WEgzNnpjMFlwWlpBNUFYZUIzMFVXXzhRb1pXN2lYdEpvRVlHbWRXMHh5T0xVRVlvYWgzNklPWWMyRDJScUJQOWxfQQ?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-18T05:00:06.956743+00:00",
-  "periodStart": "2026-11-11",
-  "periodEnd": "2026-11-18",
+  "generatedAt": "2026-11-19T04:54:45.654398+00:00",
+  "periodStart": "2026-11-12",
+  "periodEnd": "2026-11-19",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
-    "unverifiedHeadlines": 133,
+    "unverifiedHeadlines": 160,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -59,9 +59,9 @@
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
-        "title": "Is Wall Street Bullish or Bearish on Tapestry Stock? - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZzFCU0NVaGtrbV91LWxWMmFGTW40LVF3Zlc4VXdsWXhEMngzaFhZOTZNd2ExaDdFQmlQU3JQSmxUVFNqVHRzWjA0Ykw2TFZlRnMwbzczMDR5MlM5Mm5oODZqWW5FcWZ2cXdCTGxBcmpEYk5SQVZUZV8tc3BneW9fOXloVFB1aFhhVDhYWDI0X0VfeTdLdVJNYmpEQVBHTXh2Rno4?oc=5",
-        "date": "2026-11-13"
+        "title": "Tapestry: Coach Keeps Impressing, But I Am Running Out Of Patience For Kate Spade (TPR) - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOV1M4bXg1V24wY0YxNlF5NzdQejdqdUhFcVR3aXd1d0x0SzRNWEVIM0pjWlRMTEJTNFFIY0xZSXljZjJmODdlQmp2cmFRamVwdUQ2ajRwdWFXSjI2N2dhcVdPNlBYOV9BWUE3bEkyTWpBWkVMREVKRHc1XzZVSV9VVVZtUjd0LXpudlVpdE9uQ0ZwejhrdmNWMXZ5YzNpUVp6TG1xZVRRb1ZzMnk2bVlNaDJUUVhiVTNxdk9peg?oc=5",
+        "date": "2026-11-18"
       },
       "consumerSampleCount": 0
     },
@@ -82,9 +82,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Coach, Ralph Lauren Defy China Retail Slump - The Business of Fashion",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUUo2WmxhcmlheWZXUjFYNzZwZzhJUEtxYjY2ODUxbnMyVVgwSkNhVDg5c2VHNE1odU1FcTlJd2FIYzRKSjBaUF9TaG0xeXBpR1hELVNjZ3VHRzlUbHhHaHFXTkNrZTdSd2VJRjFVNWlibWhUenJleFI4TmRrdndTZjYtR1pTTWxNM0c1S2N1c0RiTms?oc=5",
-        "date": "2026-11-12"
+        "title": "Behind the All-American Ralph Lauren Brand Is a French C.E.O. - The New York Times",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMm1FUnQ2blpSeHJCNGVZVFlaNWxrRDA0LUQ4cm5HaWk4aXlDcVpFc0hkM3dSREdaWG44M1BOSTJ2eWQtZFJmZENWQVA0RWp1bmxxbHpxRjVzR1lGM0xBZHZSOHRKOG1JMGx1cnNTbnk1R0tBSmhPQVJCYXkyUWZ0UVl3?oc=5",
+        "date": "2026-11-15"
       },
       "consumerSampleCount": 0
     },
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Bridging Gaps to Create a Better World - Gap Inc.",
-        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUGdHbFBZV0ZGUmdyd3F2TkJIOC1nV3lpX242QTVxbThUTHF4WUtTNzY3MVNFamFhUHFoV21reTJ2SEZOMWp6bGptVmxwTWVOdXR5N3lmdXdVZTZ0LXdqY1AtcHhQdEhtTmk3LVNOQ2x5cjRNUDdMNkktOWpYUm5QZFNPbEJLYnk4Y2JDbg?oc=5",
-        "date": "2026-11-12"
+        "title": "Gap (GAP) Q1 2027 Earnings Call Transcript - Fortune",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkR3Ryb3RBSGVSY28xXzNuUnQ5YVRWY0R3cEc3Z2E5bkFxaEtkcnFnalRzRl9iTi1NTEZVMUE0UXdsTDlZckRBU3FXVFR1YWdRZ2luWHNWOUcyVy0zclE?oc=5",
+        "date": "2026-11-17"
       },
       "consumerSampleCount": 0
     },
@@ -128,9 +128,9 @@
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "Governor Shapiro Secures Major New Investment from Urban Outfitters, Inc., Expanding Operations in Pennsylvania and Creating at Least 1,050 New Jobs in Philadelphia and Bucks County - PA Department of Community & Economic Developm",
-        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQOWpBQi1iM2wxOHVvRGpNM3FRRnpXT2pjRWRzWVo2Y2dCTWUxZWVtT2R2VlNyMUZ5amtyamp3X3R1SXZ2dkExVVZ2ejR1QmV2SlA5aFVxLTlyVjBsanVDZ0VYWjhEUnY3OWJMR2QwTGNma1JGWHhjQ2o2QVE2NUJFVVZnOUtob1R6U09TdFdQaGltemFoeXdMVXd5MnlqVm9DdjRFX0Nod3A2MjJpTHl3WjB4Uk0yZHN4ZnZycmVvVmQ2Z1VQSlNOZDlEaWthWEdDTWo5N0JfN2VaeGdpSGFIODBDRFRrQWRRbk0teEZoeFFNVDN3XzRJT040azdLZi1jd2JyQ2FOYVV6N2V2bTZaQTMycGFKeVZtYmtuZ0FMRVpUN3JaTGl3aEhFZXZEd0hQ?oc=5",
-        "date": "2026-11-13"
+        "title": "One person’s old outfit is another's new wardrobe - The Cavalier Daily",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczNrcVdnNm5vNWxpTGVTWTZRZVlPajhxZ1VMZGgyUEJFU3VMT3dyY2Z3SjI4R2ZfWWp3Tl92Y0Rxa2l2QTV3OEZMVkRZeWVFQkdSWUo5NDVkT3NnUmV0ZVJLY3RoM1VBSVJjV1NwMzd3b1NsRHdXMUhrSjlvZlVsUVAyUGdwVERDU3dhYzZnemtLQnZMWURFVA?oc=5",
+        "date": "2026-11-17"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain - ESG Dive",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS0N0cHdpV3BQNHZjVlJVLUpQaEtQNFJNS1FFQTJVV282TkZGYzhERFlGUV9kcTJDY2pucnpLTnNPR1NqQ3FfcGhFelBPUzlvUXBzX1pNblZHVUMxY1BxTi14cHp6M05VNU0tNlFvREFTcW1FcjU4b2lFSkE1T1hXOG9ZUjNTcjVsU01hdzBNeFQwQ3lhQm0zSjE2SUNfTlVXdm5KeHNpQXFPZw?oc=5",
-        "date": "2026-11-17"
+        "title": "Levi’s® Celebrates 60 Years in Mexico - Levi Strauss & Co",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aeVA3OUlfTVI2QW50bEs4Nlhha3Q4UmV2NXB0SjlHVkVUTnZjWWNmOGEzd1FLQUFBdmx6VmdZUDUwS3NtaEVheUFUajVsUUVDekY1emFRRHRWNWlENjExR2pB?oc=5",
+        "date": "2026-11-18"
       },
       "consumerSampleCount": 0
     },
@@ -170,14 +170,10 @@
         "accession": "0001530721-26-000094",
         "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 0,
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
-      "headline": {
-        "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Reuters",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbnVPbFN4ei1qNWxuWFRyN0FCRVpnRjFyYnYtaG1MYTdyVWRrSjJyWXJQZk1HY1V0cTFHUEhvMW1faFFnSDhsaVptMGZnS0pLVDNOa09obnZpRjZXZ1QwallWMjFRZlZqeGU2aElOcFpfc0dxbWdjcjlRR2JCU0NXaU9zOWN5eHpOSWFXLWwzdW4tZ1o3MzJtR2o4dk96YzJxN2FZMF9uWktTd0p6eDI4dDJoMm1yRnBBNmZhcVNOaDlBcy1EQnhKb1FYZVUwV1U?oc=5",
-        "date": "2026-11-11"
-      },
+      "headline": null,
       "consumerSampleCount": 0
     },
     {
@@ -193,13 +189,13 @@
         "accession": "0000103379-26-000135",
         "url": "https://www.sec.gov/Archives/edgar/data/103379/000010337926000135/vfc-20260926.htm"
       },
-      "newsTitleCount": 2,
+      "newsTitleCount": 1,
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
       "headline": {
-        "title": "VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei10MDF1Z21mSDZvWHVYRXM0YUwtQ2VEcERUUllYZm5iSFJJUkVEVE1JWmt3NWhlcVBTZTRjclEyWVNHdmN2d0hjbTVJazUzN2lCLXZwTVhMTDZ1b1VJMEJpSVhFTFZJdkVWRGt4d0hfMG1uQ01SeTFaaXdtNzBZeE9kRGY0d0RpemV3dDRQd0EybVkzcjBRY3RMdi1PM0ExOXpPX2lhSHY?oc=5",
-        "date": "2026-11-12"
+        "title": "Inside Vans’ New Milan Store: Local Design Meets Skate Heritage - VF Corporation",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcjZ4N29nYmFtTG14WUV4LTdlRklqNGdFYUtNTHg2ZzFGZGFtZkVlN3I4aFdZRDl0T3ZFSllwZ3NQZjFKczl0RHBwRFd5T0xYakY3TWtrY2ZTdUk1OHhGMDZsTzNISFRiRDBXdG5UdmNyTHE5OVBmTFI4WVBnVTZSTHFSemNyZmk5NzV1UnFHc2N3cWdOY0NFOXV1SWhmMWNicFVGeU9QRTJ2dUtqVjdRRnh5LTZHMjN3?oc=5",
+        "date": "2026-11-18"
       },
       "consumerSampleCount": 0
     },
@@ -216,10 +212,14 @@
         "accession": "0001018840-26-000047",
         "url": "https://www.sec.gov/Archives/edgar/data/1018840/000101884026000047/anf-20260801.htm"
       },
-      "newsTitleCount": 0,
+      "newsTitleCount": 1,
       "nextCheck": "Hollister 동일매장매출·영업이익률",
       "riskToTest": "핵심 브랜드 성장 둔화",
-      "headline": null,
+      "headline": {
+        "title": "Abercrombie & Fitch Opens Two-Level Store at Dedham’s Legacy Place - Boston Real Estate Times",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbGtRZXhLX1RIOEFBcG9RUEtuQ0RUWm5TOU84eU5oYlNqczdOYWtQcTNlTk5mT1FVSFN1SWktYVBLY2hCZWVHY1Q1N3FFRk1fMFZtcklqaWZqM2h1WHhKckRlTkJmZ21hcUJtcUU0V3k4anFSSEthM24ta3hoUTlLUjBCZElBYXJVMFlYUXN6NHZBSHlZVG1QU2twam5fd2s?oc=5",
+        "date": "2026-11-18"
+      },
       "consumerSampleCount": 0
     },
     {
@@ -239,9 +239,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "What American Eagle Outfitters Bulls Got Right - Simply Wall St",
-        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTlQSDBTcHg0VlpVaHZhRFdhdU4xN3NYQnpoNzh3aHBsTHBWWDUyU21lc3dUOTBBa1hyNkdQY1c0LW16Qlc5c3dLYm5QQmhBVElzOGFpdHJLNDd4N1dKcXNxZERlOEgwWkcwSjJyZzUtSG91VzFLSUNLNE8wWDNkZXhWTzUtLWhnbm91U05QZ0syZ2xQdjNfNkhJenZsQ1huUkFYRjNRNHduT2psd3RjQTJ2ZGtaSVg5cEluRUFpajRKMmvSAcgBQVVfeXFMTWxKaHIyekR4NGtNaEQ3OTBzSkhFaVg5VzVIWDNzQVJCeFdpWUUwN0Z0VHVqbFBiM1E3YW5hTVZkM08wb2RWM2s3aHhVdnpvUWpoU3lzNnJVS3VRMlZUbHd2WTZBMHIwWkR5YktsUlA3T3l0V3RBVU5CZXdWRkZxa1BIQjBsVnMxRVduU24wbFEyOEJWLTN0TW1ZaDR0TWVoM3JVVlVya2Vqc1AyWFgxU1hrMFMtb25zelhHSUduM0lhcU5EUzVoZ0U?oc=5",
-        "date": "2026-11-12"
+        "title": "AEO Inc. to Report Third Quarter Fiscal 2026 Results on December 2, 2026 - Business Wire",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPWEk5a3RDcmpteFB4ejZla1JQVEJKckUtU0k5RTdkMEtwYVV2UmRpbVhyNXd1MENNWlhaUmEzOWJ6d3JPVFREeHVIb0libHZUdWdkMFpqai1RX3VqOHYwTzF4OE9kOVhCVHpiY1hpNTJ1MW9RMlpvclU1Y2NyLTF1Y2E0N1dvMjBMVjh3U2c4amZSdm5aU2FkTlQtWFhERDR0b3o5N1puVi05cWNmTHVkdC1LU1Rnb3dzSVluazBaX2hfdWIzcjMw?oc=5",
+        "date": "2026-11-18"
       },
       "consumerSampleCount": 0
     },
@@ -304,13 +304,13 @@
         "accession": "0000014707-26-000144",
         "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Famous Footwear 동일매장매출",
       "riskToTest": "매장 부진과 차입 부담",
       "headline": {
-        "title": "97,880 Caleres, Inc. $CAL Shares Bought by Penn Capital Management Company LLC - MarketBeat",
-        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNDhVUkJpNmVjQ2hjdXhDTmJ4Rk1jZGpfRW1SbTVKRlpIOUZFODVZaENCWXRfRm81N1FQWlRicG9mSmZlb04yREg3VUhZSXJTb3Fva1JESnNSSWQyNWg5dWU4RjFOdDRMY1dLR2hCZGN6QnZ3YVkwZDdhcFpiNHNKMFd2bkluYmNkcnlZTV9WcmctYWMycEVLY0dCTHloaFRyRzVQTWktWVEwVWNnNWszbmZlV0J1dElxWFJPaURMVEpuaW1mT3MwVkVBMVRWek9J?oc=5",
-        "date": "2026-11-10"
+        "title": "Caleres (NYSE:CAL) Shares Cross Below 50-Day Moving Average - Should You Sell? - MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNalh1TmxFQmtMY1BZRHZYMkhwMmo4UEV5VkU4REIzSS1FSEdoc0xMSDZhdXlGZVFjdklpODVwSi1ORDV6ZV9tNnNzbkdtSzUtd2Z2bE50YVVmV0pjRGthNmlySXhIdVF4dy1pU0NyeW9YR2w2LVRmbEE0OFYwUEhJR0JmMVNpc084SjRkOGV6TS1vZ2t3VUhsYWV5ak5lRFdXdGwySUJMdm5ITEM0Y0REMl9lLWJtbUc0M1ZZT0NjdmoyT3VmbjUtMk0yWlJmUQ?oc=5",
+        "date": "2026-11-18"
       },
       "consumerSampleCount": 0
     }
