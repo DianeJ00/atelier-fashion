@@ -4,9 +4,10 @@ const BASE="http://127.0.0.1:8137/";
 test.describe("ATELIER published-site regression",()=>{
  test("rapid issue desk keeps source level visible and opens searchable cross-sector inbox",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
-  await expect(page.locator(".desk-issues")).toBeVisible({timeout:20000});
-  await expect(page.locator(".desk-issues")).toContainText("본문·투자 영향 미검증");
-  await page.locator('[data-a3="openIssues"]').click();
+  await expect(page.locator(".iw-desk-news")).toBeVisible({timeout:20000});
+  await expect(page.locator(".iw-desk-news")).toContainText("뉴스 본문 내용과 투자 영향은 원문에서 확인");
+  await page.locator("#nav [data-page=hub]").click();
+   await page.locator('[data-action="hubTab"][data-hub-tab="feed"]').click();
   await expect(page.locator('#page-crumb')).toHaveText("자료실");
   await expect(page.locator('[data-hub-tab="feed"].active')).toBeVisible();
   await expect(page.locator(".issue-page")).toBeVisible({timeout:20000});
@@ -24,10 +25,10 @@ test.describe("ATELIER published-site regression",()=>{
  });
  test("research desk: concise overview and global ticker jump",async({page})=>{
   await page.goto(BASE,{waitUntil:"domcontentloaded"});
-  await expect(page.locator(".desk-hero h1")).toHaveText("리서치 데스크");
-  await expect(page.locator(".desk-core-grid")).toBeVisible({timeout:20000});
-  await expect(page.locator(".a5-signal").first()).toBeVisible({timeout:20000});
-  await expect(page.locator(".desk-market-details")).not.toHaveAttribute("open");
+  await expect(page.locator(".iw-desk-head h1")).toHaveText("리서치 데스크");
+  await expect(page.locator(".iw-desk-news")).toBeVisible({timeout:20000});
+  await expect(page.locator(".iw-desk-results")).toBeVisible({timeout:20000});
+  await expect(page.locator(".desk-market-details")).toHaveCount(0);
   await expect(page.locator("body")).not.toContainText("시장 상대강도에서 기업별 투자 판단까지");
   await expect(page.locator("#quick-company-options option")).toHaveCount(52,{timeout:20000});
   await page.locator("#quick-company-search").fill("LLY");
@@ -102,7 +103,7 @@ test.describe("ATELIER published-site regression",()=>{
   await expect(page.locator("#page-crumb")).toHaveText("산업 리서치");
   const studio=page.locator(".iw-page");
   await expect(studio).toHaveAttribute("data-active-sector","우주·위성");
-  await expect(studio.locator(".iw-space-core")).toContainText("SpaceX");
+  await expect(studio.locator(".iw-space-map")).toContainText("SpaceX");
   await expect(studio).toContainText("공식 데이터 연결 전");
   const colors=[];
   for(const [sector,theme,diagram,count] of [
@@ -118,6 +119,14 @@ test.describe("ATELIER published-site regression",()=>{
    colors.push(await studio.locator(".iw-masthead").evaluate(el=>getComputedStyle(el).backgroundColor));
   }
   expect(new Set(colors).size).toBe(4);
+  const appearance=await page.locator(".iw-masthead h1").evaluate(el=>({
+    font:getComputedStyle(el).fontFamily,
+    size:parseFloat(getComputedStyle(el).fontSize)
+  }));
+  expect(appearance.size).toBeGreaterThanOrEqual(27);
+  expect(appearance.font).not.toContain("Georgia");
+  await expect(page.locator(".iw-orbit-ring")).toHaveCount(0);
+
   await page.locator('[data-iw-sector="바이오·제약"]').click();
   const row=page.locator(".iw-company-entry[data-iw-company]").first();
   await expect(row).toBeVisible();
