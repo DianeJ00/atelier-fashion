@@ -75,9 +75,16 @@
     const group=x.discoveryMethod==="sector_rss_title"?x.sector:
       c&&(!x.issuerId||x.issuerId===c.id)?c.sector:null;
     return {...x,group};
-  }).filter(x=>sectors.includes(x.group)&&(sector==="전체"||x.group===sector))
-   .sort((a,b)=>String(b.date).localeCompare(String(a.date))||
-      Number(/^(Reuters|Yahoo Finance)$/i.test(b.creator||""))-Number(/^(Reuters|Yahoo Finance)$/i.test(a.creator||"")));
+  }).filter(x=>sectors.includes(x.group)&&(sector==="전체"||x.group===sector));
+  const rank=x=>{
+    const source=String(x.creator||""),headline=String(x.title||"");
+    const reputable=/^(Reuters|Yahoo Finance)$/i.test(source)?16:
+      /^(Bloomberg|Bloomberg.com|Financial Times|CNBC|WSJ|The Wall Street Journal|Barron's|AP News)$/i.test(source)?9:0;
+    const business=/earnings|revenue|profit|margin|sales|guidance|forecasts?|FDA|approval|clinical|trial|launch|starship|contract|acquisition|subscriber|demand|retail spending|tariff|satellite|results/i.test(headline)?8:0;
+    const distraction=/we tried|pumpkin pie|is hiring|open jobs|buy point|shares cross|stock moved|stock may trade|which stock is a better|price target|technical analysis/i.test(headline)?-25:0;
+    return Math.floor(Date.parse(x.date)/86400000)*8+reputable+business+distraction;
+  };
+  rows.sort((a,b)=>rank(b)-rank(a)||String(b.date).localeCompare(String(a.date)));
   const out=[];
   for(const x of rows){
    const group=x.group,publication=x.creator||"뉴스 출처 미표기";
