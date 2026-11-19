@@ -213,3 +213,18 @@ button.iw-company-entry:hover{background:#fafaf8}
  .iw-space-candidates .iw-company-pending{display:none}
 }
 @media(prefers-reduced-motion:reduce){.iw-page *{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Continuity: company documents inherit the sector's restrained typographic signature. */
+#content .r2-page.iw-company-bio{--company-accent:#377b59;--company-quiet:#eff6f0}
+#content .r2-page.iw-company-consumer{--company-accent:#b26835;--company-quiet:#fcf3e7}
+#content .r2-page.iw-company-fashion{--company-accent:#94506a;--company-quiet:#faf0f3}
+#content .r2-page.iw-company-neutral{--company-accent:#555d59;--company-quiet:#f6f7f5}
+#content .r2-page[class*="iw-company-"] .r2-detail-header{border-top:2px solid var(--company-accent)!important}
+#content .r2-page[class*="iw-company-"] .r2-detail-tabs button.is-active{
+ color:var(--company-accent)!important;border-bottom-color:var(--company-accent)!important;
+ box-shadow:none!important;background:transparent!important}
+#content .r2-page[class*="iw-company-"] .r2-detail-header .r2-eyebrow{
+ color:var(--company-accent)!important;font-weight:650!important}
+#content .r2-page[class*="iw-company-"] .e8-lens-top h3{
+ color:var(--company-accent)!important}
