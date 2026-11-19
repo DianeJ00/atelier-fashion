@@ -18,7 +18,7 @@ const readableCheck=x=>String(x||'').replace(/DTC comps/g,'직접판매 동일�
 const rpos=p=>Math.max(0,Math.min(100,(p.price-p.low52)/(p.high52-p.low52)*100||0));
 const peers=D.peers||[];
 const groups=['전체',...new Set(peers.map(p=>p.group))];
-const pages={overview:'전체 현황',insights:'주간 리서치',companies:'기업 분석',hub:'자료실'};
+const pages={overview:'리서치 데스크',industry:'산업 리서치',insights:'주간 리서치',companies:'기업 분석',hub:'자료실'};
 let notes=[];try{notes=JSON.parse(localStorage.getItem('atelierNotes')||'[]')||[]}catch{notes=[]}
 let state={r2LegacyFashion:false,page:'overview',selected:'TPR',group:'전체',brandGroup:'전체',search:'',brandSearch:'',sortKey:'ticker',sortDir:1,notesPlatform:'전체',notesTicker:'전체',notesTone:'전체',notesStatus:'전체',notesQuery:'',notesBrand:'전체',notesOrder:'recent',newsTicker:'전체',newsSector:'전체',newsQuery:'',issueLimit:30,trendTab:'lyst',hubTab:'official',companyTab:'peers',insightTab:'trends',brandLimit:12,advancedOpen:false,thesisTicker:'전체',socialTicker:'전체',socialPlatform:'전체',socialQuery:'',socialLimit:25,evidenceTab:'incoming'};
 let toastTimer;
@@ -371,9 +371,10 @@ function syncQuickSearchOptions(){
  if(!options||!universe.length||options.childElementCount===universe.length)return;
  options.innerHTML=universe.map(c=>'<option value="'+esc(c.ticker)+'" label="'+esc(c.name)+'"></option>').join('');
 }
-function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{const active=b.dataset.page===state.page;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('#page-crumb').textContent=pages[state.page]||'전체 현황';let html=({overview:overview,insights:insightsPage,companies:companyPage,hub:hubPage}[state.page]||overview)();$('#content').innerHTML=html;syncQuickSearchOptions()}
+function render(){document.querySelectorAll('[data-page].nav-item').forEach(b=>{const active=b.dataset.page===(state.page==='insights'?'industry':state.page);b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});$('#page-crumb').textContent=pages[state.page]||'전체 현황';let html=({overview:overview,industry:()=>window.ATELIER_INDUSTRIES?.render?.()||'<p>산업 화면 연결 중</p>',insights:insightsPage,companies:companyPage,hub:hubPage}[state.page]||overview)();$('#content').innerHTML=html;syncQuickSearchOptions()}
 window.atelierRerender=render;
 window.atelierGotoWeekly=()=>{nav('insights')};
+window.atelierGotoIndustry=(sector)=>{if(sector)window.ATELIER_INDUSTRIES?.select?.(sector);nav('industry')};
 window.atelierGotoIssues=()=>{state.hubTab='feed';nav('hub')};
 window.atelierGotoOfficial=()=>{state.hubTab='official';nav('hub')};
 window.atelierGotoCompanies=()=>{state.r2LegacyFashion=false;nav('companies')};
@@ -387,7 +388,7 @@ function primePageData(page){
   extraRequested=true;
   loadResearchFeed().catch(()=>{extraRequested=false});
  }
- if((page==='insights'||page==='companies')&&!detailRequested){
+ if((page==='insights'||page==='industry'||page==='companies')&&!detailRequested){
   detailRequested=true;
   Promise.resolve(window.ATELIER2?.loadDetails?.()).catch(()=>{detailRequested=false});
  }
