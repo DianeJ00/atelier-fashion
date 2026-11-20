@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-11-19T04:54:45.309557+00:00",
-  "registryCheckedAt": "2026-11-19T04:54:35.957330+00:00",
+  "lastChecked": "2026-11-20T04:45:26.309634+00:00",
+  "registryCheckedAt": "2026-11-20T04:45:11.155740+00:00",
   "status": "registry_compared",
   "observedStudies": 12,
   "records": [
@@ -23,7 +23,7 @@
         "Type 2 Diabetes"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2025-10-21",
         "type": "ACTUAL"
@@ -49,7 +49,7 @@
         "Type 2 Diabetes Mellitus (T2DM), Obesity, Overweight"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-01-21",
         "type": "ESTIMATED"
@@ -75,7 +75,7 @@
         "Weight Loss"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2028-10",
         "type": "ESTIMATED"
@@ -95,19 +95,16 @@
       "stage": "2상 등록시험 확인",
       "trialPhaseObserved": "PHASE2",
       "stageBasis": "동일 약물·후원기관으로 연결된 표본 중 단계가 가장 높은 등록시험 기준",
-      "clinicalTrialId": "NCT02332668",
-      "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT02332668",
+      "clinicalTrialId": "NCT07793942",
+      "clinicalTrialURL": "https://clinicaltrials.gov/study/NCT07793942",
       "trialCondition": [
-        "Melanoma",
-        "Lymphoma",
-        "Solid Tumor",
-        "Classical Hodgkin Lymphoma",
-        "Microsatellite-instability-high Solid Tumor"
+        "Malignant Neoplam",
+        "Advanced Solid Tumors"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
-        "date": "2028-02-02",
+        "date": "2028-09-26",
         "type": "ESTIMATED"
       },
       "approval": null,
@@ -131,7 +128,7 @@
         "Non-Small Cell Lung Cancer"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2023-11-29",
         "type": "ACTUAL"
@@ -157,7 +154,7 @@
         "Crohn's Disease"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-03",
         "type": "ESTIMATED"
@@ -183,7 +180,7 @@
         "Atopic Dermatitis"
       ],
       "trialStatus": "모집 전",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-02-07",
         "type": "ESTIMATED"
@@ -211,7 +208,7 @@
         "Alzheimers Disease, Familial"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2028-04",
         "type": "ESTIMATED"
@@ -241,7 +238,7 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
@@ -268,7 +265,7 @@
         "hATTR-PN"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-12-27",
         "type": "ESTIMATED"
@@ -298,7 +295,7 @@
         "Hemoglobinopathies"
       ],
       "trialStatus": "진행 중·모집 종료",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-11-14",
         "type": "ESTIMATED"
@@ -324,7 +321,7 @@
         "Duchenne Muscular Dystrophy"
       ],
       "trialStatus": "모집 중",
-      "stageVerifiedAt": "2026-11-19T04:54:35.957330+00:00",
+      "stageVerifiedAt": "2026-11-20T04:45:11.155740+00:00",
       "primaryCompletion": {
         "date": "2027-08-31",
         "type": "ESTIMATED"

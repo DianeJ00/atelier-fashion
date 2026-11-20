@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T04:54:35.957330+00:00",
+  "generatedAt": "2026-11-20T04:45:11.155740+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -496,70 +496,40 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 27,
+      "verifiedTrialCountInSearchWindow": 22,
       "trials": [
         {
-          "nctId": "NCT04652076",
-          "title": "GYNecological Cancers Treated With NETrin mAbs in Combination With Chemotherapy and /or Pembrolizumab",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
-          "phases": [
-            "PHASE1",
-            "PHASE2"
-          ],
-          "conditions": [
-            "Endometrial Carcinoma",
-            "Cervix Carcinoma"
-          ],
-          "sponsor": "NETRIS Pharma",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2020-12-14",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2025-10-30",
-            "type": "ACTUAL"
-          },
-          "completion": {
-            "date": "2026-12-31",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "DLT occurrence",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT04652076"
-        },
-        {
-          "nctId": "NCT05491226",
-          "title": "Reinvigorating TNBC Response to Immunotherapy With Combination Myeloid Inhibition and Radiation",
+          "nctId": "NCT07276880",
+          "title": "Preoperative Chemotherapy, Pembrolizumab and Low or High Dose RADiation in an Expansion Cohort of Node(+), Triple Negative Breast Cancer",
           "status": "RECRUITING",
           "statusKr": "모집 중",
           "phases": [
             "PHASE2"
           ],
           "conditions": [
-            "TNBC - Triple-Negative Breast Cancer",
-            "Breast Cancer"
+            "Breast Cancer",
+            "Triple Negative Breast Cancer (TNBC)",
+            "HER2-Negative Breast Carcinoma",
+            "Node-positive Breast Cancer"
           ],
-          "sponsor": "Stephen Shiao",
+          "sponsor": "UNC Lineberger Comprehensive Cancer Center",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2023-11-17",
+            "date": "2026-03-17",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2026-12-01",
+            "date": "2027-11",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2026-12-01",
+            "date": "2032-01",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Pathological complete response (pCR) rate.",
+          "primaryMeasure": "Nodal Pathologic Complete Response rate(pCR)",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT05491226"
+          "url": "https://clinicaltrials.gov/study/NCT07276880"
         },
         {
           "nctId": "NCT04645602",
@@ -628,39 +598,65 @@
           "url": "https://clinicaltrials.gov/study/NCT06502743"
         },
         {
-          "nctId": "NCT02332668",
-          "title": "A Study of Pembrolizumab (MK-3475) in Pediatric Participants With an Advanced Solid Tumor or Lymphoma (MK-3475-051/KEYNOTE-051)",
+          "nctId": "NCT06983743",
+          "title": "A Study of ERAS-0015 in Patients With Advanced or Metastatic Solid Tumors",
           "status": "RECRUITING",
           "statusKr": "모집 중",
           "phases": [
-            "PHASE1",
+            "PHASE1"
+          ],
+          "conditions": [
+            "Metastatic Solid Tumors"
+          ],
+          "sponsor": "Erasca, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-06-05",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-05-01",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-12-01",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Dose Limiting Toxicities (DLT)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06983743"
+        },
+        {
+          "nctId": "NCT07793942",
+          "title": "A Clinical Trial of MK-2010 Alone and With Other Treatments in Participants With Advanced Solid Tumors (MK-2010-002)",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
             "PHASE2"
           ],
           "conditions": [
-            "Melanoma",
-            "Lymphoma",
-            "Solid Tumor",
-            "Classical Hodgkin Lymphoma",
-            "Microsatellite-instability-high Solid Tumor"
+            "Malignant Neoplam",
+            "Advanced Solid Tumors"
           ],
           "sponsor": "Merck Sharp & Dohme LLC",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2015-03-19",
+            "date": "2026-10-21",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2028-02-02",
+            "date": "2028-09-26",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2028-02-02",
+            "date": "2030-07-28",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Objective Response Rate (ORR) by Response Evaluation Criteria in Solid Tumors and Other Lymphoma Version 1.1 (RECIST 1.1) per Site Assessment (Each Disease Indication Evaluated Sep",
+          "primaryMeasure": "Number of Participants with Adverse Events (AEs)",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT02332668"
+          "url": "https://clinicaltrials.gov/study/NCT07793942"
         }
       ],
       "status": "registered_trials_found",
@@ -671,7 +667,7 @@
       "asset": "sacituzumab govitecan",
       "disease": "항암",
       "modality": "항체약물접합체",
-      "verifiedTrialCountInSearchWindow": 63,
+      "verifiedTrialCountInSearchWindow": 64,
       "trials": [
         {
           "nctId": "NCT04454437",
@@ -996,7 +992,7 @@
       "asset": "dupilumab",
       "disease": "면역·염증",
       "modality": "단클론항체",
-      "verifiedTrialCountInSearchWindow": 33,
+      "verifiedTrialCountInSearchWindow": 34,
       "trials": [
         {
           "nctId": "NCT06101095",
@@ -1970,14 +1966,32 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-18T04:59:52.182279+00:00",
-  "changeCount": 1,
+  "comparisonTo": "2026-11-19T04:54:35.957330+00:00",
+  "changeCount": 3,
   "changes": [
     {
       "ticker": "MRK",
       "asset": "pembrolizumab",
-      "nctId": "NCT02332668",
-      "url": "https://clinicaltrials.gov/study/NCT02332668",
+      "nctId": "NCT07276880",
+      "url": "https://clinicaltrials.gov/study/NCT07276880",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT06983743",
+      "url": "https://clinicaltrials.gov/study/NCT06983743",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT07793942",
+      "url": "https://clinicaltrials.gov/study/NCT07793942",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
