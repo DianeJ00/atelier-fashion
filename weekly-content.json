@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-20T04:45:26.478884+00:00",
-  "periodStart": "2026-11-10",
-  "periodEnd": "2026-11-20",
+  "generatedAt": "2026-11-21T04:40:11.550067+00:00",
+  "periodStart": "2026-11-11",
+  "periodEnd": "2026-11-21",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [],
   "reviewedExtra": [],
@@ -10,11 +10,71 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-adcd2faa4b879ad",
-      "title": "Florida court tosses Tampa General Hospital's suit against Eli Lilly over 340B discounts - Fierce Healthcare",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZFpUMWVRNllzSXgza2RWb3JwTHluLVpKS3RGbXloSVZCNlcyWW9VQnpVczBQd28wYjdfenItUmdqa2VIaElMNkVkOVRjRVVoWW5FR0tua1UxaktuZ0ZFT1VDUzFTNkxKaTd5aG95dnJYdF82b01hU1laaFU1WmZxNktBUVFydTloZUU5d19VTklPZWsteVVndmRYNEtxa1BDTW8tc0o3NDh2WWM?oc=5",
+      "id": "7a0996c2d6a25c2974",
+      "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine",
+      "url": "https://www.retaildive.com/news/old-navy-recovery-gap-shines-q3-earnings-warm-weather/875291/",
       "date": "2026-11-20",
-      "source": "Fierce Healthcare",
+      "source": "Retail Dive",
+      "tickers": [
+        "GAP"
+      ],
+      "status": "AI_API_KEY_미설정",
+      "reason": "본문 자동 요약 전"
+    },
+    {
+      "id": "ab01aec52486facf3d",
+      "title": "Vuori exec to lead struggling Athleta",
+      "url": "https://www.retaildive.com/news/vuori-exec-ceo-athleta-sales-declines-q3-earnings/875279/",
+      "date": "2026-11-20",
+      "source": "Retail Dive",
+      "tickers": [
+        "GAP"
+      ],
+      "status": "AI_API_KEY_미설정",
+      "reason": "본문 자동 요약 전"
+    },
+    {
+      "id": "rss-4df0d9f2a0f8b67",
+      "title": "Chipotle Mexican Grill vs. Hershey: Which Consumer Stock Is a Better Buy for 2027? - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaERNOTJSeFAzamRaRWFFQkRBODh6b3kzTFNTejExWWluUTFnVWVfQkVWekFDYU9RY1BHdGd3ZFdTNFhNM1RjMDhCTUlOVmpkQTBJLWVmSmF4ZUpvSmE2OC1DZ1V3UWRUMHoxLVNoYkhCYmhTeVgtMTdLUi0zamNFLW8tRHl5d2lWVkpvNzJ1YW9ycTYwcEhybkxGeVRMMUk?oc=5",
+      "date": "2026-11-21",
+      "source": "Yahoo Finance",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-934ffe0dd2f87f3",
+      "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine - Retail Dive",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHY1YXJVSXY1clNXNEM5X0xfTjlVZlRSWWdhTHBURzBEN1NFSEZaLTZCWU16TEEyMmw2UFdsNzNpMGZpTk5MalgwTWVXWkhXVXljandsTlNlZDY4dXQweWRqSVh6aFVNUDNqTmRFdm9jbGxWUjJYUklBVW4wY0l3YnFyNlJBTS1STFREQkxPT1FrS0xMNlFlaA?oc=5",
+      "date": "2026-11-20",
+      "source": "Retail Dive",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1c386da731d2e28",
+      "title": "Chipotle Stock Looks Cheaper On 2027 Profit, If Sales Deliver - Trefis",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNWh6Q1pCLTFCQy1lV215Ml9uQzhEb3VyM1M4UVNXUDFNRXdBNVU3amZLZ3RmUU9rVW1YNXR4VFZMZ0xVdk11ek5ZVnBCZmw5NWtpZUdNYWdjdDNsWm0zeFZrcWlFVG1PaWZhN25DV2M2SHFPRmtiVGVmSTZfdm4zSEx0NlRuWnJlZFJGeW9Ic0FrbFc2YjRqVEZGeHpOTndLWVlrUU9pcVdKYlJtQ2UxMlllbnlwWjNVUWF5LQ?oc=5",
+      "date": "2026-11-20",
+      "source": "Trefis",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-94f288f85ffe3cc",
+      "title": "How Burberry Is Winning In China While LVMH Collapses",
+      "url": "https://www.youtube.com/watch?v=dr5VvPL_u4Q",
+      "date": "2026-11-20",
+      "source": "Fashion Roadman",
+      "status": "분석 대기",
+      "reason": "영상 자막·내용 미확보"
+    },
+    {
+      "id": "rss-c0c5515f1ebfbe8",
+      "title": "Big drugmakers tell House committee they will halt clinical trials at some hospitals in China - STAT",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZGI0Y3BxUnl3djl4M1pTTG1UVHo2TFBLRUFWTTIwZHFNaUFZa1V3ZjJIcThQV2xDRXdHQklmZ2FaTThIaGNhNjRKNHlBc2JaYUJ0S0MySjEwTkphSFFXZm5rdS0zYUJpQWxXZHQ5Q09RLVhLNlJ2TTlhYVU5RzUyX251TkhSa1YwdmdNYmp4TThvMkR5Rl9KeTFJTmZfbmpoeng5NnhZLXRINm9GLVJKMXMxeWZkMV9wMFBoOUJGOA?oc=5",
+      "date": "2026-11-20",
+      "source": "STAT",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -22,105 +82,51 @@
       "id": "rss-30146833399f603",
       "title": "Gap Cuts Outlook on Weakness at Banana Republic and Old Navy - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc3R0ZlRvWmVleGNscG9HLVhNNnIwMU02dUNmem1QWmdPMVFEV01Qb19XNFNCX2pyQmZZWDFvQ2xmYXRCajNaN3Vnb3g5eVNQbm11NlZpWi1TdWwzbk5RYXdlNS1PVkNyOElnbGtBcWlOZDlGSmRjYTBuYVJGVER0RFBFbGRNWVg0RFJnLUJaMHZ0WGR6SFNEem95Zng2eWhSeVNkYlpTZGJMZ3NXc1AxUQ?oc=5",
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "source": "Bloomberg.com",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-2772f68efc97762",
-      "title": "Caleres names new Famous Footwear president, cuts Q3 outlook - Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOOVBJYTFWbzZybElKNl9OQndlNXFjUDg4QjhNMkZnLWNQem1fYVBETHVLUGNjV28xNkpoTTZEYXAxWENKcGhaWjlzSHRUMjliZVB1YjYwdUtQYkItRHpRUkdNUXhwUE1tem5WZ0t6ZzZiTFpBd0JiTm54WmhXS3JGNjdFOXRfeDFQSm5GNHJ4T0ZOMWZFU2xhc3h5LWpGWFdNcUpvM0JlRzhpUlVkSzdET0JMZ0gzamc?oc=5",
-      "date": "2026-11-19",
-      "source": "Investing.com",
+      "id": "rss-b15a34d0cce0064",
+      "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork - The World's Fashion Business News",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNHotdGdUUjlCczdrV0xHUjZSNnN6VHJRbElBdVpNTkN2VGxfVjNXSVB4UUhaSVBuNjBndjZfaTRneEN1b011eUZfX2VaN0ltVjl0aUxLR2R4enFwQklTeXQtS09zZXI2b1JRdmY3QlRiTk51aVQ2b2VBX1hDM0NfUmNFMkJqTWZkVUtkZlhNcjFDa0FoMUdET1Q1UFN3N3V5MlF4N2Q5aHBVUmxYUEpRMEtCdWlQRUlXT0FKVTlWTy0?oc=5",
+      "date": "2026-11-20",
+      "source": "FashionNetwork - The World's Fashion Business News",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-970355065d95fba",
-      "title": "David Law Will Take the Reins at Famous Footwear as Brian Costello Retires - WWD",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVnY4QkNnVzhEbXF2MnUtaVN2X2RGWHNjSFhMX2VEZW5kR29fb0V0eEpoQnMxOUtiTC1YaDR3UHNJSFRyMVZzaUUyZTVNenBkM3lpSUsxa3RWamNNdWF2Qk01V2QtZzdzYm5NZkxiVjg5Nk10bnZwZV9aQldRU2U1T01FQmY4VnQ4Rkt0eURLQmFyWWFDZzZuWjJPd2s0R1BiWmlKcG9sX0VmMVZadFNsSmVHZ1BlVzBQUWhiVA?oc=5",
-      "date": "2026-11-19",
+      "id": "rss-d05d8ab6541e846",
+      "title": "Cabi Enters Next Chapter, Taps Stylist Erin Walsh for Yearlong Partnership - WWD",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONzJWa3ZhaWQ5MTczc3VnaFoyYWgwRkh3TnhOaXhZcHNYWVFGcFo3T1RXTTBOeVJpRkNLXzUyQ0NhUzE1UlV0ZVd0VXh5ZUx6eGx5anRlVHIwaUpPV3hRaVpjUlhzZWUzRUwwSmJHMWtEV3J5ZEJBazU2TWRWRE1CZ0hJTUN4WjRzVkVMZUd0MlliWTh6WmxEcWRaX2VTYnhEOXdTWW1NcUZhZHRWNmlV?oc=5",
+      "date": "2026-11-20",
       "source": "WWD",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-b3ca3bf575495f2",
-      "title": "Ulta Beauty to Report Third Quarter Fiscal 2026 Results and Participate in an Upcoming Investor Conference - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPeU0tdkc3T0UwNnNJNWlrU1c5T01CUE4tWVl3blRFbkNTLUhveTB4aWctUzZYVmdqNjA1T2t2bVB2Z0FMWUZpTWNWWmpYS25EV21pcWFJSC1WTVY1MDFJYlBURS1pdXN1TWtMSDFaNmpabXUxeVRfby1PUmhfaWdzQVVTVFdWNkZuS0dlUXF5ekd1bGU3WmEtd3l2cnByMFEtUzVXT1FaeU5tRGU3UDVFNDU1V0UxRkVCcGg1dE1McGQwSEpyaHJYYjRfMWx1NHJNZzYyVGJtbmU0QWdjN1Z6RUw2QTd4akpScy1aZnBhQ3JmektrZ3c?oc=5",
-      "date": "2026-11-19",
-      "source": "Business Wire",
+      "id": "rss-849f1d2cc419ab7",
+      "title": "Ulta Beauty (ULTA) Adds Japanese Double Cleansing Displays To 400 Stores - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSUVGZzRtbUhDUzk1dm1Yc3Fnem5FNzdEekpFZlpndE5BbUIxT1pvc0hFV2xCazhJNnZocUNZcjZaQkpuNVZlMlJBVHh6NS1VaUpOQ2dVV3FsWlNSaTFvUGVFR2JqNkhUQXRDZ1RZZmZ6OVhqV2N6Z3Q1R0swUU1mUzQ5YmVNYVFqU0w5YkI3MkkxTGhMQXQzRUFxaw?oc=5",
+      "date": "2026-11-20",
+      "source": "Yahoo Finance",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-e9a2ba427ab3093",
-      "title": "Holiday Shoppers Seek Affordability at Walmart, Target and Other Retailers - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNT0drRFRLUldFNzlZVWRNNU1DVllVbm9fd2Y4UG1xd0xuLUZpUmJ0dlhMU3oxUU9IRUtCS0JTNnJnUk53bkZrWDhIRTNoXzRGUlpoNXQ1dGp0TEJscUl1bDducXZuZFJaV09ZazhXMWIzdm9OQW5fLWJvdXZnUTgzVXQ0Q2RKT1RJVlAyZ3lCeURYVmhfbW1j?oc=5",
-      "date": "2026-11-19",
-      "source": "The New York Times",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-b0c04e07f0a8d0d",
-      "title": "Merck & Co signs AI drug design deal with Isomorphic Labs days after its $5 billion raise - The Pharma Letter",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOcGdPQVhJRHBBV1Y5d0FGOVQ2RkZXd3JCNDBFRFhmbzN4Mks5MWRMVDdNSGN5SDFqWGpRNjV4TFZRVDI5eS1aTXM4WDFUR1pFT3RQWmVmaXFJLVpWV0IzbXJMQldNR0REaU55cHNSU1V0b0t1bzNFRkF0aDJEbGxtVzdLRXJkWVVsaktCaFFxdlZMcUlReUFIUG5QUnJjWGU2bU5xcmhoUkJGTGlzRy1aQjA4OHZzMHYyM1ZGVFlmTXJzNUlMWlU2Y013?oc=5",
-      "date": "2026-11-19",
-      "source": "The Pharma Letter",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-cc4291b1fd5ba05",
-      "title": "Exelixis (EXEL) Stock May Be Below Fair Value After Cancer Study Data - Yahoo Finance Singapore",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNemcySHZleHNWV21lLVFwRDNGUHlHb3c4elZQcTNlRFB5eHhPTmZSb05RbFgyaGZQQkJicnlYRkJxeGd1XzdnanJobTFObzZFSGc3LVpqUTBUQTdBV0RtR21UUmZNSUVQUWU0a0RoNVZuUU1NRjEzb2ljLUNKOEdUUnR1WHo?oc=5",
-      "date": "2026-11-19",
-      "source": "Yahoo Finance Singapore",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-888749e648dcaeb",
-      "title": "Stock Traders Buy High Volume of Put Options on Estee Lauder Companies (NYSE:EL) - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZzJlSnoyaW5QOE1vTXpIdU5vUHZZQnI1eEFwOGFQRWtKQzRLbXBlSTFUNEtsN0JTYVhHNnU1Y1dtZnY3WXppTTJzdUpIaVlGWGJVamo2dTR2N1hzb0lLMnoxcnpTYW9OMTFDSWQ4QlliSmFxWE5paDlUNmt5WmJFU2ZqWTVSY2plV3VVNjJ5SnVYSF9OZmxxeTUwMmx0RzNkdTJLRjZNYWRCRzUtelBHc0xyMDZiVXoxam1COWpSZG9oNmhWUm9xTUJYelJXVDFxQmdkb09iVQ?oc=5",
-      "date": "2026-11-19",
-      "source": "MarketBeat",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-76bf28213a842c3",
-      "title": "Regeneron breaks into neurology with FDA nod in crowded myasthenia gravis - Fierce Pharma",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObV9VWXhRNzNobFZsNUY5czJPSVdMSHpEMXI5OWhRdFBkOGNkWjVMYk1JNzNyMDVSVVhrWDFYaWNHMVBGSmtlYkM4MEMzcXc4U1VZYS1OaFhldjFKSkxtM3paVG9pUnFLdE41dC1QbXowRmwyZ25nekdKazVpcDViVFpvUmVlNFVtSEVnckp4ZURmTUh1Smx3di0tZDFlMWZnRGZ1Ym1hNGxGOTByNGU0SzBB?oc=5",
-      "date": "2026-11-19",
-      "source": "Fierce Pharma",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-79d9604ada34f48",
-      "title": "2026 Fashion Awards Nominees, Ranked",
-      "url": "https://www.youtube.com/watch?v=YsQWnA057Bk",
-      "date": "2026-11-19",
-      "source": "Fashion Roadman",
-      "status": "분석 대기",
-      "reason": "영상 자막·내용 미확보"
-    },
-    {
-      "id": "rss-c991f014e0c95f8",
-      "title": "Walmart’s Digital Sales Are Now Driving Its Growth, Not Stores - WSJ",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOb1NMeEgtRlBKbmh5MGpoTmJfNUUtLS1QNUgxeTJnUlh2NTJvSjY3dndxekJzZXFxRFF3TkkxLWxpUG4zSmxTVGdyUFh6bC1uem5EWkprRWlQS01JdkNaT2xXd3l5eTM2bE9HU3IxR1BadWhwNHRmQ2xhRjhTZ0NRSHlhcUZUT1RBN2c?oc=5",
-      "date": "2026-11-19",
-      "source": "WSJ",
+      "id": "rss-38cbf25fad82f89",
+      "title": "KB금융, 이재근 선임안 통과…양종희 \"고객 필요로 할 금융 준비\" - 비즈워치",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE85WjZ2UGFfalJqZWdjamFKRVpidVpWYTNKaDM5LTdFX3F5T3h5Sl9HMEZwMWhmN181X0E1S1ZuNEREU2VUVU1fbTZRakgzSnJraUxaRjJSMmNWZ3BjeEJ2UnNlV3FLS2ZCV2p3?oc=5",
+      "date": "2026-11-20",
+      "source": "비즈워치",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 160,
+  "pendingCount": 146,
   "sourceErrors": [],
-  "sourcesChecked": 0,
+  "sourcesChecked": 2,
   "aiStatus": "key_required",
   "editorialUpdatedAt": "2026-11-05"
 }

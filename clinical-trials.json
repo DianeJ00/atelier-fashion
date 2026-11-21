@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T04:45:11.155740+00:00",
+  "generatedAt": "2026-11-21T04:40:05.302923+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -39,37 +39,6 @@
           "primaryMeasure": "Change From Baseline in Hemoglobin A1c (HbA1c)",
           "hasResultsPosted": true,
           "url": "https://clinicaltrials.gov/study/NCT05433584"
-        },
-        {
-          "nctId": "NCT06037252",
-          "title": "A Study of Investigational Tirzepatide (LY3298176) Doses in Participants With Type 2 Diabetes and Obesity",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
-          "phases": [
-            "PHASE2"
-          ],
-          "conditions": [
-            "Type 2 Diabetes",
-            "Obesity"
-          ],
-          "sponsor": "Eli Lilly and Company",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2023-09-21",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2026-01-08",
-            "type": "ACTUAL"
-          },
-          "completion": {
-            "date": "2026-10",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Percent Change From Baseline in Body Weight",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT06037252"
         },
         {
           "nctId": "NCT06075667",
@@ -163,6 +132,38 @@
           "primaryMeasure": "Change from Baseline in Hemoglobin A1c (HbA1c)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT06914895"
+        },
+        {
+          "nctId": "NCT06962280",
+          "title": "A Long-Term Study of Tirzepatide (LY3298176) in Adults With Type 1 Diabetes and Obesity or Overweight",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Type 1 Diabetes",
+            "Obesity",
+            "Overweight"
+          ],
+          "sponsor": "Eli Lilly and Company",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-05-12",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2026-11",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-07",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Change from Baseline in Hemoglobin A1c (HbA1c)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06962280"
         }
       ],
       "status": "registered_trials_found",
@@ -496,7 +497,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 22,
+      "verifiedTrialCountInSearchWindow": 18,
       "trials": [
         {
           "nctId": "NCT07276880",
@@ -532,131 +533,125 @@
           "url": "https://clinicaltrials.gov/study/NCT07276880"
         },
         {
-          "nctId": "NCT04645602",
-          "title": "Merck IIT: RRP Pembro and Lenvatinib",
+          "nctId": "NCT06422143",
+          "title": "Pembrolizumab With or Without Maintenance Sacituzumab Tirumotecan (Sac-TMT; MK-2870) in Metastatic Squamous Non-small Cell Lung Cancer (NSCLC) [MK-2870-023]",
           "status": "RECRUITING",
           "statusKr": "모집 중",
           "phases": [
-            "PHASE2"
+            "PHASE3"
           ],
           "conditions": [
-            "Human Papilloma Virus",
-            "Recurrent Respiratory Papillomatosis",
-            "Pulmonary Disease"
-          ],
-          "sponsor": "Yale University",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2025-07-18",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2027-12",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2027-12",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Objective Response Rate (ORR)",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT04645602"
-        },
-        {
-          "nctId": "NCT06502743",
-          "title": "First-line Carboplatin and Paclitaxel in Combination With Pembrolizumab, Followed by Maintenance Pembrolizumab With or Without Nesuparib, in Patients With Newly Diagnosed Advanced or Recurrent MMR-proficient (pMMR) Endom",
-          "status": "RECRUITING",
-          "statusKr": "모집 중",
-          "phases": [
-            "PHASE2"
-          ],
-          "conditions": [
-            "Endometrial Cancer",
-            "Recurrent Endometrial Carcinoma",
-            "Endometrial Carcinoma",
-            "Gynecologycal Cancer",
-            "Endometrial Neoplasms"
-          ],
-          "sponsor": "Yonsei University",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2024-09-12",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2027-12-27",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2027-12-27",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Dose-limiting toxicities",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT06502743"
-        },
-        {
-          "nctId": "NCT06983743",
-          "title": "A Study of ERAS-0015 in Patients With Advanced or Metastatic Solid Tumors",
-          "status": "RECRUITING",
-          "statusKr": "모집 중",
-          "phases": [
-            "PHASE1"
-          ],
-          "conditions": [
-            "Metastatic Solid Tumors"
-          ],
-          "sponsor": "Erasca, Inc.",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2025-06-05",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2028-05-01",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2028-12-01",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Dose Limiting Toxicities (DLT)",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT06983743"
-        },
-        {
-          "nctId": "NCT07793942",
-          "title": "A Clinical Trial of MK-2010 Alone and With Other Treatments in Participants With Advanced Solid Tumors (MK-2010-002)",
-          "status": "RECRUITING",
-          "statusKr": "모집 중",
-          "phases": [
-            "PHASE2"
-          ],
-          "conditions": [
-            "Malignant Neoplam",
-            "Advanced Solid Tumors"
+            "Non-small Cell Lung Cancer",
+            "NSCLC"
           ],
           "sponsor": "Merck Sharp & Dohme LLC",
           "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
           "start": {
-            "date": "2026-10-21",
+            "date": "2024-06-10",
             "type": "ACTUAL"
           },
           "primaryCompletion": {
-            "date": "2028-09-26",
+            "date": "2029-01-12",
             "type": "ESTIMATED"
           },
           "completion": {
-            "date": "2030-07-28",
+            "date": "2031-08-15",
             "type": "ESTIMATED"
           },
           "lastUpdatePost": null,
-          "primaryMeasure": "Number of Participants with Adverse Events (AEs)",
+          "primaryMeasure": "Overall survival (OS)",
           "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT07793942"
+          "url": "https://clinicaltrials.gov/study/NCT06422143"
+        },
+        {
+          "nctId": "NCT05215340",
+          "title": "Study of Dato-DXd Plus Pembrolizumab vs Pembrolizumab Alone in the First-line Treatment of Subjects With Advanced or Metastatic NSCLC Without Actionable Genomic Alterations",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Metastatic Non Small Cell Lung Cancer"
+          ],
+          "sponsor": "Daiichi Sankyo",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-03-04",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2030-03-04",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2032-03-04",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression-free Survival Based on Blinded Independent Central Review in Participants With Non-Squamous Histology Who Were Administered Dato-DXd in Combination With Pembrolizumab C",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05215340"
+        },
+        {
+          "nctId": "NCT06899126",
+          "title": "Study of Trastuzumab Deruxtecan, Pembrolizumab, and Platinum-based Chemotherapy in First-line HER2 Overexpressing Non-small Cell Lung Cancer",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Non-small Cell Lung Cancer"
+          ],
+          "sponsor": "Daiichi Sankyo",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-10-24",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2030-04-24",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2032-11-24",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression Free Survival by Blinded Independent Central Review",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06899126"
+        },
+        {
+          "nctId": "NCT06841354",
+          "title": "A Study of Sacituzumab Tirumotecan (Sac-TMT, MK-2870) as Monotherapy and in Combination With Pembrolizumab (MK-3475) in Participants With Triple-Negative Breast Cancer (MK-2870-011/TroFuse-011)",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE3"
+          ],
+          "conditions": [
+            "Triple Negative Breast Neoplasms"
+          ],
+          "sponsor": "Merck Sharp & Dohme LLC",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-03-16",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2030-05-18",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2030-05-18",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression-Free Survival (PFS) (sac-TMT versus treatment of physician's choice (TPC); sac-TMT plus pembrolizumab versus TPC)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT06841354"
         }
       ],
       "status": "registered_trials_found",
@@ -1966,14 +1961,14 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-19T04:54:35.957330+00:00",
-  "changeCount": 3,
+  "comparisonTo": "2026-11-20T04:45:11.155740+00:00",
+  "changeCount": 5,
   "changes": [
     {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT07276880",
-      "url": "https://clinicaltrials.gov/study/NCT07276880",
+      "ticker": "LLY",
+      "asset": "tirzepatide",
+      "nctId": "NCT06962280",
+      "url": "https://clinicaltrials.gov/study/NCT06962280",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
@@ -1981,8 +1976,8 @@
     {
       "ticker": "MRK",
       "asset": "pembrolizumab",
-      "nctId": "NCT06983743",
-      "url": "https://clinicaltrials.gov/study/NCT06983743",
+      "nctId": "NCT06422143",
+      "url": "https://clinicaltrials.gov/study/NCT06422143",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
@@ -1990,8 +1985,26 @@
     {
       "ticker": "MRK",
       "asset": "pembrolizumab",
-      "nctId": "NCT07793942",
-      "url": "https://clinicaltrials.gov/study/NCT07793942",
+      "nctId": "NCT05215340",
+      "url": "https://clinicaltrials.gov/study/NCT05215340",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT06899126",
+      "url": "https://clinicaltrials.gov/study/NCT06899126",
+      "sourceLastUpdate": null,
+      "type": "표본에서 새로 포착",
+      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
+    },
+    {
+      "ticker": "MRK",
+      "asset": "pembrolizumab",
+      "nctId": "NCT06841354",
+      "url": "https://clinicaltrials.gov/study/NCT06841354",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"

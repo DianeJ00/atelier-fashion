@@ -20,21 +20,21 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "CAL",
-      "date": "2026-11-19",
-      "title": "David Law Will Take the Reins at Famous Footwear as Brian Costello Retires - WWD",
-      "context": "Famous Footwear 동일매장매출 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVnY4QkNnVzhEbXF2MnUtaVN2X2RGWHNjSFhMX2VEZW5kR29fb0V0eEpoQnMxOUtiTC1YaDR3UHNJSFRyMVZzaUUyZTVNenBkM3lpSUsxa3RWamNNdWF2Qk01V2QtZzdzYm5NZkxiVjg5Nk10bnZwZV9aQldRU2U1T01FQmY4VnQ4Rkt0eURLQmFyWWFDZzZuWjJPd2s0R1BiWmlKcG9sX0VmMVZadFNsSmVHZ1BlVzBQUWhiVA?oc=5",
+      "ticker": "GAP",
+      "date": "2026-11-20",
+      "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine - Retail Dive",
+      "context": "Old Navy 동일매장매출·Athleta · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHY1YXJVSXY1clNXNEM5X0xfTjlVZlRSWWdhTHBURzBEN1NFSEZaLTZCWU16TEEyMmw2UFdsNzNpMGZpTk5MalgwTWVXWkhXVXljandsTlNlZDY4dXQweWRqSVh6aFVNUDNqTmRFdm9jbGxWUjJYUklBVW4wY0l3YnFyNlJBTS1STFREQkxPT1FrS0xMNlFlaA?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-20T04:45:26.632813+00:00",
-  "periodStart": "2026-11-13",
-  "periodEnd": "2026-11-20",
+  "generatedAt": "2026-11-21T04:40:11.723034+00:00",
+  "periodStart": "2026-11-14",
+  "periodEnd": "2026-11-21",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 0,
-    "unverifiedHeadlines": 160,
+    "unverifiedHeadlines": 144,
     "commentVideosSampled": 0,
     "commentSamples": 0,
     "verifiedQuarters": 12
@@ -78,7 +78,7 @@
         "accession": "0001628280-26-070697",
         "url": "https://www.sec.gov/Archives/edgar/data/1037038/000162828026070697/rl-20260926.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
@@ -105,9 +105,9 @@
       "nextCheck": "Old Navy 동일매장매출·Athleta",
       "riskToTest": "최대 브랜드 부진과 할인 확대",
       "headline": {
-        "title": "Gap Cuts Outlook on Weakness at Banana Republic and Old Navy - Bloomberg.com",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc3R0ZlRvWmVleGNscG9HLVhNNnIwMU02dUNmem1QWmdPMVFEV01Qb19XNFNCX2pyQmZZWDFvQ2xmYXRCajNaN3Vnb3g5eVNQbm11NlZpWi1TdWwzbk5RYXdlNS1PVkNyOElnbGtBcWlOZDlGSmRjYTBuYVJGVER0RFBFbGRNWVg0RFJnLUJaMHZ0WGR6SFNEem95Zng2eWhSeVNkYlpTZGJMZ3NXc1AxUQ?oc=5",
-        "date": "2026-11-19"
+        "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine - Retail Dive",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHY1YXJVSXY1clNXNEM5X0xfTjlVZlRSWWdhTHBURzBEN1NFSEZaLTZCWU16TEEyMmw2UFdsNzNpMGZpTk5MalgwTWVXWkhXVXljandsTlNlZDY4dXQweWRqSVh6aFVNUDNqTmRFdm9jbGxWUjJYUklBVW4wY0l3YnFyNlJBTS1STFREQkxPT1FrS0xMNlFlaA?oc=5",
+        "date": "2026-11-20"
       },
       "consumerSampleCount": 0
     },
@@ -174,9 +174,9 @@
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Capri Focused on Restoring Brand Health of Michael Kors and Jimmy Choo - Morningstar",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMXcwTlRqQWtJdXEzY2k0RFBuOVNEMmVLNmNHd1A0QUZEUVhGMUtndU5uQ2xWYTB6bWY0VEthYkkxYWFTU2Zpc0l3anRwV3dJdTZ2eVVEakVaTmY0OGtidUxzZzVseFRFdFl0ZWVxNkZwUWkzVDlsQVFEUlcxRENGd2I0MEcyQ3RVNEVuZ3lmTXRjTTBZLVhTaE1WMXpUbW54YjBMQ2p4UkpZWUw1NUhmdmdrZTlGZVVJdHEtZ2xtbw?oc=5",
-        "date": "2026-11-13"
+        "title": "Justin Boxford’s Corner Office Pay at Capri - WWD",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSUE1ODB6MG1pM3htSzg5WGFNdVlSM0hQcnpEM2lVYnFvb2lrTllEcDU3RDVNdTg2aDU5Q1gwV0l5WEsxNnBaY1hzS2libktOeUp0SEJBRUZUVzRrNkRaUzRHbmRpYkFLMkRibzVGbGNmNWQ4bEdHd2tBMW0xV3V3aFRROGtZS3lIQ0ExZFNYbkZFeVhucGRjRS1oRGs1YzJMSGFDZjZndV84ZHljd1E?oc=5",
+        "date": "2026-11-16"
       },
       "consumerSampleCount": 0
     },
@@ -262,7 +262,7 @@
         "accession": "0000078239-26-000056",
         "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823926000056/pvh-20260802.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
@@ -285,13 +285,13 @@
         "accession": "0001856437-26-000021",
         "url": "https://www.sec.gov/Archives/edgar/data/1856437/000185643726000021/vsco-20260801.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "Victoria’s Secret Stock: Downgraded on Valuation Concerns - Barron's",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdUhVRHpwMFp5SzF0dDRpUHhQVzJiaEFPc0JlcUQtbk1DMUp3N05QZ1hMcHhZS2lraDQ3UDVDQ1FvcVhEZUQzUWhsN21RbEdqVGlManRpc3dWLUtob21lV0dpVVVHMGJpS3c1c0NuOGpXcWFwVy1LWmxmWmI0ejY5OTRoS1hUYXkyWi1fa3Z5cW1aMWF6?oc=5",
-        "date": "2026-11-12"
+        "title": "Victoria's Secret (VSXY) Upgraded to Strong Buy: Here's Why - Yahoo Finance Singapore",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZldvTFE2ZTV6Z1dTTEVUdkhxTVpzcnhxVjZoOE1jNENzWjV4UnM2ZGJPQnA4NWFYYTRWWFEzVVhOaktDUm9rdzI3bHdRNUlSM2dMdVNQUnFob1VZcTY3alhlV0c4SUJpQmVXOFlIVFJudGVGUmNEcWt1TXg2TVpNMUlKWVZtVVdCNjBHQnpqcw?oc=5",
+        "date": "2026-11-19"
       },
       "consumerSampleCount": 0
     },
@@ -312,9 +312,9 @@
       "nextCheck": "Famous Footwear 동일매장매출",
       "riskToTest": "매장 부진과 차입 부담",
       "headline": {
-        "title": "Caleres names new Famous Footwear president, cuts Q3 outlook - Investing.com",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOOVBJYTFWbzZybElKNl9OQndlNXFjUDg4QjhNMkZnLWNQem1fYVBETHVLUGNjV28xNkpoTTZEYXAxWENKcGhaWjlzSHRUMjliZVB1YjYwdUtQYkItRHpRUkdNUXhwUE1tem5WZ0t6ZzZiTFpBd0JiTm54WmhXS3JGNjdFOXRfeDFQSm5GNHJ4T0ZOMWZFU2xhc3h5LWpGWFdNcUpvM0JlRzhpUlVkSzdET0JMZ0gzamc?oc=5",
-        "date": "2026-11-19"
+        "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork - The World's Fashion Business News",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNHotdGdUUjlCczdrV0xHUjZSNnN6VHJRbElBdVpNTkN2VGxfVjNXSVB4UUhaSVBuNjBndjZfaTRneEN1b011eUZfX2VaN0ltVjl0aUxLR2R4enFwQklTeXQtS09zZXI2b1JRdmY3QlRiTk51aVQ2b2VBX1hDM0NfUmNFMkJqTWZkVUtkZlhNcjFDa0FoMUdET1Q1UFN3N3V5MlF4N2Q5aHBVUmxYUEpRMEtCdWlQRUlXT0FKVTlWTy0?oc=5",
+        "date": "2026-11-20"
       },
       "consumerSampleCount": 0
     }
