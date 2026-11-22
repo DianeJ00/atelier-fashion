@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-21T04:40:11.550067+00:00",
-  "periodStart": "2026-11-11",
-  "periodEnd": "2026-11-21",
+  "generatedAt": "2026-11-22T03:55:31.207580+00:00",
+  "periodStart": "2026-11-12",
+  "periodEnd": "2026-11-22",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [],
   "reviewedExtra": [],
@@ -34,11 +34,83 @@
       "reason": "본문 자동 요약 전"
     },
     {
+      "id": "rss-339727ef6dfcd4a",
+      "title": "CAVA vs. On: Which Consumer Stock Is a Better Buy for 2027? - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTkZKOVQ1anJxQVRsRXRFZUZPOHhENmotS1RlU1d3RUM0eEJabmNyX2FCNGJVV2I4bWlrb2I3QVRmdnZtQzRSZmpWWjNtYWNZRHhabXAwRl9kU0hzbTVfUkxPR2JYYm0yM2ZrUHJlTF9fbEFjTUZnY2N1d2gtQVJ1UWplNk9QNExPS1JkU0ZubmljZUtLdFc3c0NHNW9RYzkyMlJBUzFEWExIbUFHX0E?oc=5",
+      "date": "2026-11-21",
+      "source": "The Motley Fool",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-ad626ca0b544f10",
+      "title": "Police pursue burglars who struck an Ulta Beauty store - NBC News",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPckdYWlJCQ0t0TVBtMHVYZGZjbXhMUEo1QW11aGZJNGJuMnd1NjZWMllOVTg0WFZvSzBqSEVUZ3R2VWVoRVlYSUMtTkVhRUxKVktJSFhpUlpqWnVJUDBQR3BsWTFFNHI1Mjl5a0xoVXJ3dkdhcUpZb1psTjUxYUw2OEpTaE16R2tBaGk5NlVPQkR1MmkxaVBKNHliaDk3T3NDN0NjQTF2RQ?oc=5",
+      "date": "2026-11-21",
+      "source": "NBC News",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-bc032f94d3de22e",
+      "title": "Alnylam Pharmaceuticals (NASDAQ:ALNY) Screens as a Balanced Affordable Growth Candidate - ChartMill",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZVkwcUdiRF92Y3ZTcHZTa2g5dkFXLS01NGdiUkdHemN3b1FQcmJwUm5meGF1ejNFWTNwZ3ozaVpSLTVYaVFpNmI3TF9ZV0Qzc3JkVkFCaTZEdU1PRGJKZDk0cGlsemh5bzVEV0hWX2l3U05CdU1WcE02QzlNUnVBLTFoNno1RllVYXZhSVMwM3c1QmlQeVBrVXNjQjNkNGQwU3hTeXNzMmQ4eFdCQUsxSTBSV2xWM201YjNqTGgtT0dPbHY0ZE1pX2lMSXlDNlNTOWc?oc=5",
+      "date": "2026-11-21",
+      "source": "ChartMill",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
       "id": "rss-4df0d9f2a0f8b67",
       "title": "Chipotle Mexican Grill vs. Hershey: Which Consumer Stock Is a Better Buy for 2027? - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNaERNOTJSeFAzamRaRWFFQkRBODh6b3kzTFNTejExWWluUTFnVWVfQkVWekFDYU9RY1BHdGd3ZFdTNFhNM1RjMDhCTUlOVmpkQTBJLWVmSmF4ZUpvSmE2OC1DZ1V3UWRUMHoxLVNoYkhCYmhTeVgtMTdLUi0zamNFLW8tRHl5d2lWVkpvNzJ1YW9ycTYwcEhybkxGeVRMMUk?oc=5",
       "date": "2026-11-21",
       "source": "Yahoo Finance",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-fc898945d79b3a2",
+      "title": "Alnylam Pharmaceuticals Expands Sales Force to Accelerate AMVUTTRA Demand - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxONTNVM3k2c3hEenhpTmV5SFQyRGJVRDR1UlROcUJkak52ak5tb3FmRjRMSkRRQ182RzRfNFFhamtNcldiR0xuOHlhUzNncV8wTGJWZHBrMmFLal9ZRGhQR0JoSkRvVm9EaS1WSUNnRld1d3V6NmVWakVEcGJvUVBCWVk5SThaZWtobzBCVUhzU3NzcmhKSUt1bXZac1lzNDdabkdNWHoxWXludEZBekZFMXlXTGNxUnNTMVFJYXU4ZXBYSm5XRXp2V1NwR2VTX0k?oc=5",
+      "date": "2026-11-20",
+      "source": "TradingView",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-3777fb5343806cd",
+      "title": "What Target, Walmart Earnings Tell Us About Retail and Consumers - Barron's",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONlBTN3h6eGxTY2tDcmJhSjd5UGczWnMtSUdXczl0SnhMcUJfZTQwcmp6ZmU4UzBSNHhVS2dncEFLcTZoM3l5T0xGZEVJU0tDNk9GQ29rRWhMOFVRQ2lQOU1MTFVQQ2VXRzlRcDNSZS11T2ZrMmo3SXRPajBzUW9veXhfX0h1SkN4eU1HRHoyRzJxQQ?oc=5",
+      "date": "2026-11-20",
+      "source": "Barron's",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-c30b9a95022000b",
+      "title": "As Women's Sports Boom, e.l.f. Beauty Goes All In - American Salon",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZEI2VURJanFORnBBbTduUmhJQzBiSUNfemZXNWVUOXVNbzh6TGYtZEQ5OGNtenhmcW5UTURPcVB2LTFtLWktQmJTVUVqNUM2MGJtOFY3MXFpcDF4WUJ2TDRQQ3J6eVNJM05iZmFBdHBaOXp4YVk4eWRsVHYyem5pdkRVMkZXZDQ?oc=5",
+      "date": "2026-11-20",
+      "source": "American Salon",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-42f9ab39c424e85",
+      "title": "Merck scores US, German wins over Halozyme in Keytruda Qlex patent fight - Fierce Pharma",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcGo1TGI3ckVMTGRwY2JTYzlNYnJNTERSd2J3OW9wSWF2WndlcGpGZlFMUHpSdS1ZbG9MMlByaWFQbU9kTU5od0kwODBnd0JxWWhOMTBybEQyYmNjb2Q5MWVzQWpHbFdSczJVT0hLUzY4LW5YdUhpYjJyWHI3ZDE1SmRrN1hiUU1hT0FPOS1qV3NVc2JPOTlaTG9CZTBsSFhUbmVWOGUtcw?oc=5",
+      "date": "2026-11-20",
+      "source": "Fierce Pharma",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-7989640c60cd167",
+      "title": "EXCLUSIVE: Kylie Jenner Is Opening Khy’s First Pop-up in Los Angeles - WWD",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQOGN1TE8zdllCMzk3eXRrMVhJTDJWWEpFYm9EWUNvZVc0bUp0b05Ma2JiTERmZU1reDE4bWlQenFuWno5eTA1QWRaMWNrbHdmRWZ6YXgzUlVVYTF6M0FkbE9aUE0zS1RibU1Xc1hsUjZjdkNYd195aEFOVElmSVlmZEVlSUlLTlRvUXk5UklOUjhtcG9fNGxyUDgyT1F0LS1F?oc=5",
+      "date": "2026-11-20",
+      "source": "WWD",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
@@ -50,81 +122,9 @@
       "source": "Retail Dive",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-1c386da731d2e28",
-      "title": "Chipotle Stock Looks Cheaper On 2027 Profit, If Sales Deliver - Trefis",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNWh6Q1pCLTFCQy1lV215Ml9uQzhEb3VyM1M4UVNXUDFNRXdBNVU3amZLZ3RmUU9rVW1YNXR4VFZMZ0xVdk11ek5ZVnBCZmw5NWtpZUdNYWdjdDNsWm0zeFZrcWlFVG1PaWZhN25DV2M2SHFPRmtiVGVmSTZfdm4zSEx0NlRuWnJlZFJGeW9Ic0FrbFc2YjRqVEZGeHpOTndLWVlrUU9pcVdKYlJtQ2UxMlllbnlwWjNVUWF5LQ?oc=5",
-      "date": "2026-11-20",
-      "source": "Trefis",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-94f288f85ffe3cc",
-      "title": "How Burberry Is Winning In China While LVMH Collapses",
-      "url": "https://www.youtube.com/watch?v=dr5VvPL_u4Q",
-      "date": "2026-11-20",
-      "source": "Fashion Roadman",
-      "status": "분석 대기",
-      "reason": "영상 자막·내용 미확보"
-    },
-    {
-      "id": "rss-c0c5515f1ebfbe8",
-      "title": "Big drugmakers tell House committee they will halt clinical trials at some hospitals in China - STAT",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZGI0Y3BxUnl3djl4M1pTTG1UVHo2TFBLRUFWTTIwZHFNaUFZa1V3ZjJIcThQV2xDRXdHQklmZ2FaTThIaGNhNjRKNHlBc2JaYUJ0S0MySjEwTkphSFFXZm5rdS0zYUJpQWxXZHQ5Q09RLVhLNlJ2TTlhYVU5RzUyX251TkhSa1YwdmdNYmp4TThvMkR5Rl9KeTFJTmZfbmpoeng5NnhZLXRINm9GLVJKMXMxeWZkMV9wMFBoOUJGOA?oc=5",
-      "date": "2026-11-20",
-      "source": "STAT",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-30146833399f603",
-      "title": "Gap Cuts Outlook on Weakness at Banana Republic and Old Navy - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc3R0ZlRvWmVleGNscG9HLVhNNnIwMU02dUNmem1QWmdPMVFEV01Qb19XNFNCX2pyQmZZWDFvQ2xmYXRCajNaN3Vnb3g5eVNQbm11NlZpWi1TdWwzbk5RYXdlNS1PVkNyOElnbGtBcWlOZDlGSmRjYTBuYVJGVER0RFBFbGRNWVg0RFJnLUJaMHZ0WGR6SFNEem95Zng2eWhSeVNkYlpTZGJMZ3NXc1AxUQ?oc=5",
-      "date": "2026-11-20",
-      "source": "Bloomberg.com",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-b15a34d0cce0064",
-      "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork - The World's Fashion Business News",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNHotdGdUUjlCczdrV0xHUjZSNnN6VHJRbElBdVpNTkN2VGxfVjNXSVB4UUhaSVBuNjBndjZfaTRneEN1b011eUZfX2VaN0ltVjl0aUxLR2R4enFwQklTeXQtS09zZXI2b1JRdmY3QlRiTk51aVQ2b2VBX1hDM0NfUmNFMkJqTWZkVUtkZlhNcjFDa0FoMUdET1Q1UFN3N3V5MlF4N2Q5aHBVUmxYUEpRMEtCdWlQRUlXT0FKVTlWTy0?oc=5",
-      "date": "2026-11-20",
-      "source": "FashionNetwork - The World's Fashion Business News",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-d05d8ab6541e846",
-      "title": "Cabi Enters Next Chapter, Taps Stylist Erin Walsh for Yearlong Partnership - WWD",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONzJWa3ZhaWQ5MTczc3VnaFoyYWgwRkh3TnhOaXhZcHNYWVFGcFo3T1RXTTBOeVJpRkNLXzUyQ0NhUzE1UlV0ZVd0VXh5ZUx6eGx5anRlVHIwaUpPV3hRaVpjUlhzZWUzRUwwSmJHMWtEV3J5ZEJBazU2TWRWRE1CZ0hJTUN4WjRzVkVMZUd0MlliWTh6WmxEcWRaX2VTYnhEOXdTWW1NcUZhZHRWNmlV?oc=5",
-      "date": "2026-11-20",
-      "source": "WWD",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-849f1d2cc419ab7",
-      "title": "Ulta Beauty (ULTA) Adds Japanese Double Cleansing Displays To 400 Stores - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSUVGZzRtbUhDUzk1dm1Yc3Fnem5FNzdEekpFZlpndE5BbUIxT1pvc0hFV2xCazhJNnZocUNZcjZaQkpuNVZlMlJBVHh6NS1VaUpOQ2dVV3FsWlNSaTFvUGVFR2JqNkhUQXRDZ1RZZmZ6OVhqV2N6Z3Q1R0swUU1mUzQ5YmVNYVFqU0w5YkI3MkkxTGhMQXQzRUFxaw?oc=5",
-      "date": "2026-11-20",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-38cbf25fad82f89",
-      "title": "KB금융, 이재근 선임안 통과…양종희 \"고객 필요로 할 금융 준비\" - 비즈워치",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE85WjZ2UGFfalJqZWdjamFKRVpidVpWYTNKaDM5LTdFX3F5T3h5Sl9HMEZwMWhmN181X0E1S1ZuNEREU2VUVU1fbTZRakgzSnJraUxaRjJSMmNWZ3BjeEJ2UnNlV3FLS2ZCV2p3?oc=5",
-      "date": "2026-11-20",
-      "source": "비즈워치",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }
   ],
-  "pendingCount": 146,
+  "pendingCount": 160,
   "sourceErrors": [],
   "sourcesChecked": 2,
   "aiStatus": "key_required",

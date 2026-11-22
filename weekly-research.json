@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-21T21:26:48.473542Z",
-  "periodStart": "2026-11-13",
-  "periodEnd": "2026-11-21",
+  "generatedAt": "2026-11-22T03:54:11.314368Z",
+  "periodStart": "2026-11-14",
+  "periodEnd": "2026-11-22",
   "reviewStatus": "unverified_headlines_only",
   "note": "기사·영상 제목을 자동 발견·분류. 트렌드 확정, 소비자 의견 분석, 재무 실적 검증 아님.",
   "items": [
@@ -18,7 +18,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CAVA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-ad626ca0b544f10",
@@ -33,7 +34,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ULTA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-bc032f94d3de22e",
@@ -48,20 +50,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ALNY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-ecd7e477d56f757",
-      "title": "Boston Partners Buys New Position in Urban Outfitters, Inc. $URBN - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNEtSNENBR3FfOEh3cUVORk1yZWlVZWpvckN1WXkyTXBhclZHWEd6WEFERER6dTZrczFmNEFyYTYwM3BxSWVoYzl1S2x2QWFrWThzT1UzNHBvYUtyTV9FLVg3UXlLM3Z1Nmc5aDFFZkFpTVpiY2hGVFZkUUZGR0NTcHYtQ3pGWmdoN2gxc3lYb0tWN05NRjVkdUZjZVRRMDhtcUp3WHZ3TEZPM2NzOVhRZEVVTjgzNVllTnB3NmFEZ3I?oc=5",
-      "date": "2026-11-21T09:48:32Z",
-      "platform": "Google News",
-      "ticker": "URBN",
-      "brand": "",
-      "creator": "MarketBeat",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-4df0d9f2a0f8b67",
@@ -76,48 +66,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CMG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-6c4f2ae18c67f65",
-      "title": "Capri Holdings Stock Has A New CEO Has The Bull Case Changed? - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQV0NnUlFQSEJZWjlzT1BhODNjSnRHOTlsWTNwTDl0Mm5zLTJkbmhnTzQ3bllTOHpMOE1iQ0dLcVdsOHJYeU9xSDd4cjItRFA1N0tIX2NpbVprUXNYVGdkdS05WFZRdGUzdHQyTERQd1FYazdsM0NnYmdVeFNvS205c3N4elRQcHY1NG11d0JfNkFXdnhHcU9BSkRR?oc=5",
-      "date": "2026-11-21T00:14:00Z",
-      "platform": "Google News",
-      "ticker": "CPRI",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-016229507a5e568",
-      "title": "Wait, These 19 Cute Levi’s Finds Will Be Your New Wardrobe Favorites - Who What Wear",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVTVBUnJYRWI2OVd4c2pEbEhKRzNoQTc5X0lMV2V1TGdVbGo4Q1RQQXlLZTZ5ekVNcEkxNks3aWdkaUR6Qm1ONEtveEFiaXI4QURwTXRWellpOGtRWXhUR3MtM2RuR2U3aVBFSDVxM3FMRlZzWWtxME5SamFCNmZFazItWVhYVE9XUWc?oc=5",
-      "date": "2026-11-20T23:59:00Z",
-      "platform": "Google News",
-      "ticker": "LEVI",
-      "brand": "",
-      "creator": "Who What Wear",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-86ee6e4c6787c0e",
-      "title": "Luxury’s Black Friday Comes Early - Puck",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE05dmhBTTF5NFpnNHppbmlqckhHT1lGaFplQjNvNkZpYkJFV3V2a2ZVekM5ajBHZmc4LWZCRGxpSTZyX3N2NGo5Z1ZVQ1JWaHpBcTVTUTgxeHdlT20wOEtHUEZ6bUVEbFZKRkN3bC1FTXJJRUl4?oc=5",
-      "date": "2026-11-20T22:44:20Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "Puck",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "패션",
-      "discoveryMethod": "sector_rss_title"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-fc898945d79b3a2",
@@ -132,22 +82,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:ALNY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-23f18b6d21d4f4a",
-      "title": "Missed Exelixis's Run? What Holders Had To Believe - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTHFhQ3NhQW51ODBFUHJ6MDFLZ29UcTZnc1dXUTVCLXNXQUs1SXlvRkxPWFlRMTJWZGIxMlhlbzgzQkxNLVliR3V5RDgwT0FCSU1EWlJVWFI3VUNPcjVGTGd4T0ZnbUhQb2RycGk2TXBjUlBZMGRDUWpIMlZ1X2lJeXQ2UFdQV25QVEwwQUNKT3FsVTJWSVlldzVjMnFTdlV4UTdzaVBIUFEyYUQ3VG1RcHktbXFKWUIxTXp4NExOdE1WN2pZZjRQME5n?oc=5",
-      "date": "2026-11-20T20:08:48Z",
-      "platform": "Google News",
-      "ticker": "EXEL",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:EXEL",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3777fb5343806cd",
@@ -162,7 +98,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:WMT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3777fb5343806cd",
@@ -177,7 +114,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:TGT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-c30b9a95022000b",
@@ -192,7 +130,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ELF",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-42f9ab39c424e85",
@@ -207,7 +146,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:MRK",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-7989640c60cd167",
@@ -236,21 +176,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-611f2e9ecbd7ee0",
-      "title": "When Should You Buy Uber Stock? - Trefis",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNY241bjQ3X040S01xV2NmZEx0ZEFMWmkxTVdNeXZSeFhsdU9QUWI3TFNpTGJuYVo2OVpwVUY1d2pNZXlfN0NXdlRGZzU3NXFyTXg3Z1ZxV0xaLXd0VHBoMVg0T3F2VWtaUHRBQ3hrT3oybE5jdUM3LTlsNjFxZVI2eTY4Vy0wZTczVjJINFNvaUUxMHRqX3c?oc=5",
-      "date": "2026-11-20T17:07:18Z",
-      "platform": "Google News",
-      "ticker": "UBER",
-      "brand": "",
-      "creator": "Trefis",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:UBER",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
       "id": "rss-f9b3a34069a7b7c",
       "title": "Costco Shares Lift Higher on Sales, Warehouse Growth - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNFZTWHJjaGxCV09LcFlfYkMxQ1U1MmNSaXNNSTZrTXU1VDBzTDY1bGxlN1plMV9WaUN5VFh3M19DamNJZVlsdk9SLW1WVzZETmdaeHo2MFhzRWdDNFF1V2F2NVVHZ0paVmVZb2lYcm1xVElaOXNSSDk2dDZKcF9rSzdGallWVVE3eG44QTRmV3lLRXNUeDZ3RUpQYXk?oc=5",
@@ -263,7 +188,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:COST",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-667aa1af2011257",
@@ -291,7 +217,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:CMG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-94f288f85ffe3cc",
@@ -319,33 +246,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:PFE",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-81661ce26c2266e",
-      "title": "Gap stock pops even as warm fall weather leads the retail giant to cut its forecast - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPLUtJa3VHWlN5S1ZJRnlfbTJISUR4ZmVmd1p6LVI1MURFQU1scGpFY0Nic2xfN19pbUNaT1NSQ1BCNjNmeEZUaU1qRWNOUVVxV1p6aXpnOTAyU2RXbUEyTldSLTQxWG5qdXAtLThIQ3MxX01Uak1Qd2k5RmRNZFdHakYxMUxqSF94VVFHb1p2bXNxNjJlTkJ1ZWNPR1VIbVVMUHBsYV9BMEUtRVdsUkN5SDQ0NExfcmM2UlNlT1BLdExwOEFYQV95aWJ1ckRNV21qNUV0OVBtTHZRUnZJaFRhZA?oc=5",
-      "date": "2026-11-20T14:46:20Z",
-      "platform": "Google News",
-      "ticker": "GAP",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-88117aa52bf8518",
-      "title": "Caleres Cuts Q3 Earnings Outlook As Famous Footwear Sales Decline, Announces Leadership Change - Benzinga",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcEFCNFFFaWZCeERubXFVODFwb3lYZko4a1JPUEgyNVFXNnBtYk1pbTYwTjBpQzhiQUZsZVY2TjkwTVc3SGZDNl9BV2Z5NlJpSEpQZ1UyZFRudGVzWUhSMjAzVWo2bjNLdHM4SjZyTDIybTVrM2xIYkVzalNzRjNvdVZWbXl6aTRnc1FRSk5EUnpFcHlaREdWbDhjR0JaOUh0S2JobzRGZnR5NXVxcGJzaW1zVndvdEpWWW5xS3h1d1paRnM0Vk5oV0dZWTJkMlBVZlU4NWdTUFJQYjdlWmE4Q1VoVVA?oc=5",
-      "date": "2026-11-20T13:21:37Z",
-      "platform": "Google News",
-      "ticker": "CAL",
-      "brand": "",
-      "creator": "Benzinga",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "신발·스니커즈",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-34e418ddfdd382d",
@@ -360,22 +262,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:COST",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-b61128b272d8aa9",
-      "title": "Ionis Pharmaceuticals Pushes TRYNGOLZA Access as Insurer Requirements Slow Launch - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVklCcnB0TXkzaHhtQWZmMGxndGpNUlhnOGtfS0dzY3I0RE95YkgwVTR5OXZlVC03QXh3cjlsLWE3ZXk5TlVMdzFZLWRvbzd0Qi1LSWpNVnhYN1FiR1MwNW85SU9rLVZBT0ROVnByS0d2TUdrVGZqWTRsUTlRQmJUbXZTRzFsYWQ0UHdjZmxRb2haQzBYYkt2bzhtcTBzTWszTkpNeml5bG83dw?oc=5",
-      "date": "2026-11-20T13:12:10Z",
-      "platform": "Google News",
-      "ticker": "IONS",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "브랜드·제품",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:IONS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-6eaa1e7e008fa3c",
@@ -390,20 +278,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CMG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-612b19e8b4b333b",
-      "title": "EXCLUSIVE: Kate Madden, Daughter of Nicole Richie and Joel Madden, Signs With The Lions - WWD",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVUZJb210SkotRG14WWpPWFBIc2xoSy1aaHROUGdaYXNsVWRXT3hPNWZ6OFpnUUg1SUxOSkE0Tnk3Mjc0ZHdvaXR0SEpPNVdXZG95aW1WSmMwNFJ1d01zZklfNzZpQmRFTE0zMlJwOU5tc2dPYWp5Ni1mWHFobjFfcTRKNzJFazlBVGVyYWpXbEdvQ05JcE00am1IT1puRlNXejdUX3JZNlJKcGpfb2c?oc=5",
-      "date": "2026-11-20T12:00:45Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-c0c5515f1ebfbe8",
@@ -434,21 +310,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-3400d3357884de9",
-      "title": "Faster trials, less red tape. If Europe doesn’t act, patients could miss out on new treatments - EU Perspectives",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOc202dlRVY0ZEZDZKQlQ2T3UxRWxPX01lai1aUVBfZFp4TmRrQjNVZnJjeGhzR0psVV9WRFFjVjhMTWRIRExIeHhsSlRZcmJKeFZxak9NZjNVc3FEZTFwWGdVcW1lWThpVEVoYUpfb3VIdXI5VEtaajg3dksyUVI3WHp3eUhaZThNbzRtWE9KZUdMNG5wWmc?oc=5",
-      "date": "2026-11-20T11:00:52Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "EU Perspectives",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "바이오·제약",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
       "id": "rss-70acb4809070ff0",
       "title": "What Are Estee Lauder Investors Betting On? - Trefis",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSDdGWnZINDJoTE5OT082T0w5WG9FM2lqYzd1VzBUSlR2bUhWYms3bXFNYzF1dnR6REs5LWJwcG00ZFl3N1ZicFQ3eTJyTTJUb19ZWmJBTUF3TDNIYm9pSFBwa2I2cHdlRzhzeU43V0pONGNRSVdqb1cwcGNaY3AtZUYteEwxblBGUVIzUno3UDFEdHkwTE1GdmJPTDBiaVUtN3RN?oc=5",
@@ -476,20 +337,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:MRK",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-f9cb3180999258c",
-      "title": "V.F. Targets $9.8 Billion in Revenue as Vans Turnaround Takes Shape - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeFc4SU1jOU0tQVpWVjYwLVVOUXo4RFVITW9ac1RUOU9XT3Z0Q0hlRzVoUzNyZlQ0SmRLbmFsWmJIR2FQd3VFRFF1Qnp0VE9sUURBMjd1OGFaV1BPdmlyMlRnZ2pYQmZPSUdESl9aWm1MaDFlaUREbTAzQnI5SDJJbHJSM1d4MTA?oc=5",
-      "date": "2026-11-20T10:12:08Z",
-      "platform": "Google News",
-      "ticker": "VFC",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "신발·스니커즈",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b5e9bf55a33433f",
@@ -504,22 +353,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:278470",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-57eef59d782a736",
-      "title": "Uber Technologies (UBER) Q1 2026 Earnings Call Transcript - Fortune",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZYmFTNWc5VU9nQ1c2MV9wZ2dWU0thRzB6cGZsMDI5X2VHSU5EX0lXbm1EVnBwSjFtOHBINlRPT0RWZ0I0UFZKWmljSzRZbkp3Qm1rUkhzX2thcWVzY3VJdXo1TU90SmVFV3djaWpUT1o?oc=5",
-      "date": "2026-11-20T09:06:58Z",
-      "platform": "Google News",
-      "ticker": "UBER",
-      "brand": "",
-      "creator": "Fortune",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:UBER",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-57e89cdcd5cd134",
@@ -534,7 +369,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:105560",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-18477db7b69e8ba",
@@ -549,76 +385,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ELF",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d4710e4f9d4adaa",
-      "title": "Ralph Lauren Corporation (NYSE:RL) Stock Has Average Target Price of $448.20 - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNd3I0aHRjT0xCcFNfNFRHcjNOYjVyeWNnMk95dl9CeXM1cUxYNG1ZVkpubHp0TmhYZV9tSURuQjdwMXhZUTdnRF9ORV8xMjFaWjFMcHVUcnFHQmU5MjM5RURvTXY3QVpUYVJZcW9pVjljZFZIcHhCQnFGazhYcThLaW5sVzVxb0wzbnVGLVNlQkRRcFNuYVQ2akFZLTVXZmFHR0RoNDJVQ2xqQlp1dDU2UUNYMFFXR0tUOC1zWW1scDJHNzFCT3lOUDluWDVobVNKbEE?oc=5",
-      "date": "2026-11-20T07:39:08Z",
-      "platform": "Google News",
-      "ticker": "RL",
-      "brand": "",
-      "creator": "MarketBeat",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-2217e4dcfa8fce5",
-      "title": "What Drove Estee Lauder (NYSE:EL) to a Fiscal Q1 Earnings Beat? - Kalkine Media",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNak5VcWczUFQ3RHdFSVlVYlhEc01lNld5TEgyZGhJaTdSSE40Uk9DdU1VNnB4eDBpV2FyYU51cndxLVJpcVpDT21VUDh3clJpdC1IWWFwNElId212WTZsbGdWWVRaWHd5cWlQYzBVbm5CR3ZhNjJRMUtKTXVSQm9ZMnZsaURVWEstdTRiV1ZfU0VaVXNBck1CMEd5TkdySE81UE9fSHV3?oc=5",
-      "date": "2026-11-20T07:36:00Z",
-      "platform": "Google News",
-      "ticker": "EL",
-      "brand": "",
-      "creator": "Kalkine Media",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:EL",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-e0b7bc3dcc708fd",
-      "title": "DB손해보험, 보험사기 잡는다…조사조직통합·이상징후시스템 강화 - 시사오늘",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE01MDBrNzhreWFKLTNtVzVQNURieFBmUUVaVVQ2U0ZncnBfcTktemQzSHVaQVF3VGFlZ1BGWWtFZG5kVU1SaV9yUVNUNUh3Z1dEbTdmV25jdXRYUGYzOTUyZzAyc0FKSV9xM1J3?oc=5",
-      "date": "2026-11-20T06:52:47Z",
-      "platform": "Google News",
-      "ticker": "005830",
-      "brand": "",
-      "creator": "시사오늘",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "KR:005830",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d027a58bed04d87",
-      "title": "EXCLUSIVE: Dior Names Stray Kids Member Hyunjin as Brand Ambassador - WWD",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZlVmcUJheEdGc0QyNGRUZW1seTBxUXAtMEJ2ZmNFVHl1VFV6WGNVWGItMXZmMFR1U0FMdl8wOWw1N3NEQTBvZGxqLS1sQTJING9ObVZQYW9uX3NxSndOeUpNcjRoQ2k2OFc5aExRbnRsZEp5cWxYVE9EVkFrUWlsS2ItMzRISzhRblNGQjZBdVNTSzlkX2dDTjNPVjVBc1dNbDRUVjdqeUdKX28?oc=5",
-      "date": "2026-11-20T06:03:19Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "WWD",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-44df1bf245ce860",
-      "title": "From Practical Gifts to Wellness Moments: Holiday Trends to Watch for 2026 - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVGZPT3diWUc2ZGo1VXF2dmZuc0hsQk9kbWNJQjlSNE9qSWppRV8zZXZfT0RtdEQ3RUdxcGlVX19fdXJ3NV9OZ19scnFoWkRPVWRPTDJSc0FlczFvSll4bkZFZ0JaN3FoU013RmluZnc3c01tYnM4anZVd3hwNDNQZkRLV3RuZVJsTFBHWVpINTRNS0JZVnJQcThubHZxVWZtZTQ1MWxB?oc=5",
-      "date": "2026-11-20T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "RL",
-      "brand": "",
-      "creator": "Vogue",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b15a34d0cce0064",
@@ -659,7 +427,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ULTA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-38cbf25fad82f89",
@@ -674,7 +443,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:105560",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-f67907a67025d81",
@@ -689,7 +459,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:105560",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-c2944b35a7f8969",
@@ -704,7 +475,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SRPT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-683cf90fba733a8",
@@ -734,20 +506,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:JNJ",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-2772f68efc97762",
-      "title": "Caleres names new Famous Footwear president, cuts Q3 outlook - Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOOVBJYTFWbzZybElKNl9OQndlNXFjUDg4QjhNMkZnLWNQem1fYVBETHVLUGNjV28xNkpoTTZEYXAxWENKcGhaWjlzSHRUMjliZVB1YjYwdUtQYkItRHpRUkdNUXhwUE1tem5WZ0t6ZzZiTFpBd0JiTm54WmhXS3JGNjdFOXRfeDFQSm5GNHJ4T0ZOMWZFU2xhc3h5LWpGWFdNcUpvM0JlRzhpUlVkSzdET0JMZ0gzamc?oc=5",
-      "date": "2026-11-19T22:47:37Z",
-      "platform": "Google News",
-      "ticker": "CAL",
-      "brand": "",
-      "creator": "Investing.com",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "신발·스니커즈",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-970355065d95fba",
@@ -775,7 +535,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:REGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-442d5d7d5d7021d",
@@ -790,20 +551,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:COST",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d4ae76175a7f1b3",
-      "title": "Gap names new Athleta CEO, says Old Navy turnaround is seeing signs of progress - CNBC",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rYjNkd0cySWNmNi05OFZyaWxNSXhVX1FlbkxFT2ZGWjZweGdONHN0SXFFOWNDcXhXeTd0ZzZDX2l2X1J6dlR6ZTFjYXNfQ3pGWEVZNzduR3pmX3h5bzF4Vnc3WUwxTjdWeVlpU3JR0gFzQVVfeXFMT1plNENiaktIT0pDX01WeXRFU2dQaUsza1poQk1IdDgyODU3bEkwckU5MHpDTUd5LWc1SjZNQnpLYXVWUE1lWHBvS1FpX1pSY3pwbjNZaUZvT1R3VTVCNVFoTFNSYXBady1qUlZGTUNkMGNKSQ?oc=5",
-      "date": "2026-11-19T21:15:38Z",
-      "platform": "Google News",
-      "ticker": "GAP",
-      "brand": "",
-      "creator": "CNBC",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3f00dd6d1e66b38",
@@ -819,19 +568,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-a8f07ff664f2cf7",
-      "title": "The 5 Best Dividend Stocks to Buy Now and Hold for the Next Decade - The Globe and Mail",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQb2NGR2taU0hpbXQ1dHVCYmNReGlFejBNc1U0U0JwNVVDUE5HWU9QUFZVNWpNMVNsTVdlcUNLZmlLU3EteUVETGN4eVpVeURzeXA2RER5YjdaTmtWYk5uanpiaVhzTzg3ckJNdFMwcVQzbHJCTHhnYVdXeWU4a1hfNlJnd1gtNjJPSjJwOG5XdTNsMXB6RFZGeUFCcUtPTC16QVcybVNvX0tUWDhGaGxpWVhlZlNxRUxiOGVXZmpFdVg1dkw0LVkyX2tSZkYySUJMWjl4c0N4VS12RmsyczFRVk5Sck0?oc=5",
-      "date": "2026-11-19T19:49:16Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "The Globe and Mail",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-eaa643298808404",
       "title": "Biogen unblurs life with Friedreich ataxia in patient-centered Skyclarys campaign - Fierce Pharma",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQX1V2bUtueXNkaUppSXQ4Z1IyT2NTLVBqOElzUS1qNUIzbldhRklleVdVYXZRRmpEaEV5Zms1dHoyU0VPbWVnNDZHUGRhTkM0dnJmNVRjNlNxTEhYVUhlTTZMOE5NY3J5Z00wNHk1YzZrM3RoNW1CUEdnNzZ6SUJwdWVETlRISC1NVVpPZWpKSk16WTkyQ1NoSUpzWU42dFcyNE5zci1aMldSYzBibDVUaUhn?oc=5",
@@ -844,20 +580,8 @@
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "issuerId": "US:BIIB",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-8c44e3cfbae5822",
-      "title": "Tom Ford Resort 2027 Menswear Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9mYkZSQXpwYml0ZVBTQnFmQ2dsbHVUdWNraGhPQzV5MEFFNFEwbW5BOWllQ1dOVFVVb21FcGNqSWlidFhma2RTZzBkclM1NnFNSHp1MUdPbnVzLTJLWGNHZzNCRXRRSFA3ZlpsdGNCV0pGZkk?oc=5",
-      "date": "2026-11-19T19:22:24Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Vogue",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-dbb16f2c4e7aa7e",
@@ -872,7 +596,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:WMT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-a290804348a2a28",
@@ -902,7 +627,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:MRK",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b841624a28ba98f",
@@ -918,21 +644,6 @@
       "reviewStatus": "needs_review"
     },
     {
-      "id": "rss-0bd61bf558d0182",
-      "title": "Is ‘Hunger Games: Sunrise on the Reaping’ streaming on Netflix or Amazon Prime? - Decider",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPTVlrN0lZZjNGeE4xQVN6U1IzQk4ySnBUc2ZoZS01REwwdmhhZVhxbDVaNW1RTTFfd3NyOFNuOUZMZzBtQ3hERERlMk03NVU1M2lpNEp4NkZQOGw3bW9YOE5vNHlpZlY3a2hGUXlsa3lKQVlEYU9xYUNRaTVxQkt2QTVfekZrSGtZSWVpWWoyUHZGLXhOMlRPM3dKRVdQYkprYlhLRGEwSQ?oc=5",
-      "date": "2026-11-19T16:30:00Z",
-      "platform": "Google News",
-      "ticker": "NFLX",
-      "brand": "",
-      "creator": "Decider",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:NFLX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
       "id": "rss-76bf28213a842c3",
       "title": "Regeneron breaks into neurology with FDA nod in crowded myasthenia gravis - Fierce Pharma",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObV9VWXhRNzNobFZsNUY5czJPSVdMSHpEMXI5OWhRdFBkOGNkWjVMYk1JNzNyMDVSVVhrWDFYaWNHMVBGSmtlYkM4MEMzcXc4U1VZYS1OaFhldjFKSkxtM3paVG9pUnFLdE41dC1QbXowRmwyZ25nekdKazVpcDViVFpvUmVlNFVtSEVnckp4ZURmTUh1Smx3di0tZDFlMWZnRGZ1Ym1hNGxGOTByNGU0SzBB?oc=5",
@@ -945,7 +656,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:REGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-79d9604ada34f48",
@@ -986,7 +698,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SBUX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-88c71aee338747e",
@@ -1001,20 +714,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:JNJ",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-35d24b3901db4d7",
-      "title": "The 5 Best Dividend Stocks to Buy Now and Hold for the Next Decade - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPek9wNlNTMXFHTXgwa1ppVlFfV0RTSEpzbkVfV2VpUWhweURnbTNkc3ZjN05IOUxfRzlpZVV1dVhHUnUzQkVjZ0RBR09rNW5VR2s3U0lRZkl1Vko1ZFFsLXZ3Wlo0eUtjM3NMRzhkR0dPNDJBVldRelByVGZjLVpHUDczR01wTV9CTUcyaHh0REVEU0UzejlRLWUwRzJHZHpic3NFZUh4dTFwUjFZX0E?oc=5",
-      "date": "2026-11-19T15:45:02Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "The Motley Fool",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-c991f014e0c95f8",
@@ -1029,7 +730,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:WMT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-107d6f4cfc8e0b9",
@@ -1044,7 +746,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:GILD",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-d2c4ed7e7fdb2c4",
@@ -1059,22 +762,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:REGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-72f08686846f88e",
-      "title": "Rocket Lab Sold Out Neutron Through the 2030s Before It Ever Flew. Here’s Why the Stock Fell After Earnings Anyway. - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQb1VrR2c2WFBwVTUxOFBEaUttaTRieUxlQVBWZFhLTU1kN2ZhaS02dW9EdG1xVHRxMi12RVplU2ctZlB2TFVsLUFvUU5IdjFvMjZPcTdtUm5vQU5sSjBleVY0di1NeXlPZDdMSHFHemYzM21kN1V0M1Y1SEsxdXdCdVJsYkw5VFFSbnpZNHJLY25yS3lYUFdTV2hn?oc=5",
-      "date": "2026-11-19T15:05:02Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "sector": "우주·위성",
-      "discoveryMethod": "sector_rss_title"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-d108a411598cf7c",
@@ -1089,7 +778,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BMY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b21b2981903026a",
@@ -1104,22 +794,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SRPT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-a2089940945046b",
-      "title": "39 of the Best Movies on Netflix You Should Stream Now - CNET",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLXNrZVdlUGIyRWxpeUJ6YVVHYXJLMWxUVzZJVWNFTFR0NGxicTNRcmFqRUhEWDQtbUNWaFJDTld3WkhsRDRienpIT0VrZXAyeDdZSENRTTF6czVLTVRsVkFwSXI3UUxiaEFVYkF0bHVXdHBYeVhxVGpJa1g2ZWNEUWhEVmVVU2puYkhpalo2VVlBdFJqRHhaalFSdw?oc=5",
-      "date": "2026-11-19T14:00:00Z",
-      "platform": "Google News",
-      "ticker": "NFLX",
-      "brand": "",
-      "creator": "CNET",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:NFLX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-eb36b6b3a8c0a33",
@@ -1134,20 +810,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:LLY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-ea97b3fffb947aa",
-      "title": "PVH Corp. to Host Conference Call to Discuss Third Quarter 2026 Earnings Results - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZHJIS3ZIUlVmb2xRRkItYVY3UWp4VHJkM1BPMjZ2X0E2X0pNUXUxWWxwZ0l0bDEwNk53LWdDQ3BTbC1qVUREM2d3OEw2TE5YWkxOMlhua0JVV2lUc1lVUXZyQzh1N0d6ZURDcHd5R3Q1QWNxTldZSEFrTG1pd0hoOXpsREtCcDZmMWVkQ1d1TVkyNDJ0dDBjVVE3eXg2aDh6allUalFvM0VJaTR4REpOWUFBMjlNb3JOaXBYcG1JV3pBLThrZl8xaEtHWEMwcGhJSjR3?oc=5",
-      "date": "2026-11-19T13:30:00Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "Business Wire",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-146e3c4a8e9bf59",
@@ -1175,35 +839,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:MRK",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-055bc80f8ce81d1",
-      "title": "Bath & Body Works: Fiscal Q3 Earnings Snapshot - KVUE",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQzhzbDZNeDZlUVVZd2xncy1lZEVsTGYta0VYRmVwSUpsZWVUUnZUV3VMbDhhUzhpNFVLVGJFSEdoVi1MQ1pvd1BWY3BpbTdSWnhkZWlTelhsWVJWeDdGYVpqRktveXJlRVFYYW5sMjhBLXZIcG5xbHkzM2pYMGVCNlNwQmdvTzlXbXdJNXlzOGZQZC1Nd0VXNHdRRzliTWFWN2dOc0tqeV9TT2lBMTFJRVB4WVNrMFBwWXpRc0oyV1ZROHRESG12XzNzVFhkb1hjYzgyNFRicURaZw?oc=5",
-      "date": "2026-11-19T12:58:02Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "KVUE",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-08071c7b77dd1a3",
-      "title": "Don't Ignore The Insider Selling In Incyte - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRS15TG54NzJpV3dOY3VRRHpCazVXYm5vNmVxaEczNVB1czlDZFFabnZGVFp2MUQxa1hJZUg4YzE0VWlGcTI0RTNMb2tURzgtNzV1c3F0d2pYbjVpbWNJa29IT0l5ZWtLTURDaVdRSXV0NldQTEMzMGZNdTRRUndxUXpuc1dDMklIWkMtRi1Nc2tDMXEwS2Z3VDRFRnJiY0RUd1RzTlIzckt5S1Z6akRQWUhKSDNuUjBpRzh4MjB5R07SAcYBQVVfeXFMTnFPc04yeE1xN2o4cXBXSkxFa2hQcm5wTVh6dVFQamt0Qkg0MHNJcndTODlVOWVFM2szOV9iR0dVLVhQeEhCSjA3TUdqQ1doWVQwdWl5RmhYS25kbl95TTZuelRaQTBOSmdqM3NES0JuRHg5WUtWY2JVQS1EREFFOEwtcHRlXzVxYlN5djI1LTZLLXdDM1FIQ2ctTjNQSkVFVDZuUFFYeXl0Y0Y5Wl9oYmZqQUFMQ0JKeDhMcnlQc3VzV01RZThn?oc=5",
-      "date": "2026-11-19T10:55:31Z",
-      "platform": "Google News",
-      "ticker": "INCY",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:INCY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-e4de7048b1e5637",
@@ -1218,7 +855,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ABBV",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-245af00cb8e24aa",
@@ -1233,7 +871,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ABBV",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-adcd2faa4b879ad",
@@ -1248,7 +887,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:LLY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-232df6793134516",
@@ -1263,7 +903,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:TGT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-a28bdfb17ca083d",
@@ -1278,7 +919,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ABBV",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-a28bdfb17ca083d",
@@ -1293,7 +935,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:AMGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-fc4c67784d0b60e",
@@ -1308,7 +951,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:003230",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-671a0c38739f48f",
@@ -1337,21 +981,6 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-3f1f47c29681c98",
-      "title": "RH (RH) Stock Forecasts - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOelcycC1WTlJtRENGVjJ5c2xucHZ5YThxdmxKa1M0S3hPYy13MTBhZHp4VGdIYlRQNTBaOFhvbmdySGwtTEl0cUtiNVMxMUFodl95ZE9UTUdBd1VYLTNucWowTFlPSVJPbGhNbXJpdVNMZ29ORUVVVlBIdTVld1dmejZ3NnE1SVBYS1VnSDBROA?oc=5",
-      "date": "2026-11-19T05:14:51Z",
-      "platform": "Google News",
-      "ticker": "RH",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:RH",
-      "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
       "id": "rss-0ee8b582166038d",
@@ -1422,7 +1051,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ELF",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-ea5302e35572a51",
@@ -1455,19 +1085,6 @@
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
-      "id": "rss-18baec6eec7bcb1",
-      "title": "PVH’s reorganization means 1,000 fewer jobs - La conceria.it",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVmI1Y0twQ19oc0h0aElma3pvTzN2ci1CbFVwdUFnSjkwblFERTBQcEtJek9HU2xpZXJ2cHlvZ1dkMm8wZXhjNVpPLXlJZ3FJLS1UdjROQUsxSW1BOUxKNWFHUXBOTUUwYmRMSTNqWVlpNnZwNFVscklaSFJnSm9uQ1BuU29XZw?oc=5",
-      "date": "2026-11-19T00:16:16Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "La conceria.it",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-b74fc4393c6e7a8",
       "title": "Inside Vans’ Milan Store: Local Design Meets Skate Heritage - VF Corporation",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY3dMN3ZVWjBfR3UxS0pvSklnb0RuVVBaU0h4NXZIUm5aV3ByaEljYlI0QkxNOUFmNDBidHJZTDJaMkRqM0JlU1o2UF9WSVpyTW1aZUotNktGR3NlSGZOX0YyeWRsaENCNE5EY3dWV2Z0NFh5YjFzU25BQWlmbU9EX2ZjV21FMHVQR2JLMVZxMG9mcFNkQ1I4dWxscnBDNkg5Q2hFSDlkdlZYN0xNV1dJX2tNcw?oc=5",
@@ -1479,21 +1096,6 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "신발·스니커즈",
       "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-4ff739eecd43e77",
-      "title": "What China’s Gene-Editing Deaths Reveal About Its Biotech Industry - Noema Magazine",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZjNITlJMV2ZwY1puVHRGR2g5X2s5QjVyZm85U1lDczFNUzR5Nzl5OVBsbWNCMmE5cUZ5VVA3eGxoMTQ3dW9VbU43OTVTQ0xJd3FRSzUtb0MyQ2lfU0hWOV9VVlhQOGtTZ1JvUjc4X0ZvemF6alVkVGxKNlN2VXA4d0VkNFVzUjNQVzZHYzhrQWZuUURj?oc=5",
-      "date": "2026-11-18T22:37:02Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "Noema Magazine",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "바이오·제약",
-      "discoveryMethod": "sector_rss_title"
     },
     {
       "id": "rss-f32ded7c29be2d5",
@@ -1508,20 +1110,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:TJX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-a6b7c1e431c02bf",
-      "title": "American Eagle Outfitters sets Q3FY26 results date for December 2 - scanx.trade",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVzRFOWl6UHJqRUtlMjhmSkZDMlhrSGhNczJKcENkSDVxYmtsR2l6S2dRRjdiQm5RQkNFRTk4RkM0QjlyMUQtM2VMNlk0cW9hOWhQYmFBa1lJZTJBYWxXMnZoakJ2c09PaXZfcmpNTWZtbUpUUWlyRWdNS1hhdWJ3a2Z5RUp2X1FxVWlNcU5fOHlVWXpoajU3QVhrMlVabU4yM2RKdlhWdHMxMGlJTEt6UF93cTRHdHRVdkE?oc=5",
-      "date": "2026-11-18T22:33:16Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "scanx.trade",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-77d546a687dd0f4",
@@ -1536,7 +1126,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BKNG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-614f88b528b5969",
@@ -1566,7 +1157,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CAVA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-37b40fd892cd355",
@@ -1635,7 +1227,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SRPT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-1621226be490910",
@@ -1650,7 +1243,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:LLY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-43cd46b9c29b69e",
@@ -1680,7 +1274,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:WMT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-6db942c1128081e",
@@ -1710,7 +1305,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:TJX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-5f18955e4e49820",
@@ -1751,22 +1347,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:TGT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-b19a123620035a0",
-      "title": "Target Earnings Spotlight Changing Role of Physical Stores in Retail - PYMNTS.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYlAwcWd1LUpzcmpLVFZrZ1ppaUZEdHcydGQ1N2JjRlhtejNqUW5fNm96UFc2VlMtb09SVlRTaXJreXdONk00MFJCNFRtZjZnVGp6anhwVF9hVUZSTlVTMWstWmplOWN4UXZpRjZuTlFQR09BMlhoYldIZEtUTHVOYjhweWlmc2tnd1hKZThFbTFKT1lUajdPWGxla3p0NlZqQjh0MmJHelg2UQ?oc=5",
-      "date": "2026-11-18T16:08:31Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "PYMNTS.com",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "sector": "소비재·서비스",
-      "discoveryMethod": "sector_rss_title"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3f0094d03c57f5f",
@@ -1809,7 +1391,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BIIB",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-d52c7ea175d1448",
@@ -1824,7 +1407,8 @@
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "issuerId": "US:ULTA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-d04e64b43d6b513",
@@ -1839,7 +1423,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:GILD",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3ace13b0d549b3a",
@@ -1854,7 +1439,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:PFE",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3965a62e85ea505",
@@ -1869,7 +1455,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BKNG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b6f68fa2c2cd33c",
@@ -1884,7 +1471,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:TJX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-981d05ef65c0a20",
@@ -1899,7 +1487,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BIIB",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-6a253f5f86b54e5",
@@ -1914,7 +1503,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:SBUX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-100706189d61525",
@@ -1929,20 +1519,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:TJX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-fefa0c4922027e2",
-      "title": "Urban Outfitters (NASDAQ:URBN) Stock Breaks Below Fifty Day Moving Average - Here's What Happened - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUE4wVVN6MGdZdTZoeE1kN01jTzFoT0o3NDkwNE51LTdVcWxybXZZOW9BUHJxdG5VY1pqZEVLRjlFbkhQWkRwdzRMWnlJclk3dHhha0FiLTZab1ZXU2FPTU1qbF9lOWhWNEY1V2ZoblpJQS1TUlZHZ1oxY2k2LXFNQVNDOGk2LWZlVnNWaXlHNWJkVUc4SWMtSVhTVEtpWnJ3RmRXcC0xMms5ZWdMdkpwOHNYaFFoeWplYndQNnNIUjhTeHU4bE1LT3htNHhhbjN6aFNPYl92amdKNVlXbzE0NHl5dVVqTnM?oc=5",
-      "date": "2026-11-18T11:34:52Z",
-      "platform": "Google News",
-      "ticker": "URBN",
-      "brand": "",
-      "creator": "MarketBeat",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-67715ed54cd0517",
@@ -1957,7 +1535,8 @@
       "topic": "브랜드·제품",
       "reviewStatus": "needs_review",
       "issuerId": "US:VRTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-ac340700cd73c2f",
@@ -1972,7 +1551,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:003230",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b216a960fce2eee",
@@ -2002,7 +1582,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BMY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-24803041e64803f",
@@ -2017,7 +1598,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:003230",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-305730fdd2f924b",
@@ -2032,7 +1614,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:105560",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-18ded5a59002abf",
@@ -2047,20 +1630,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BKNG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-36f35dd0aff12e3",
-      "title": "The Attico Resort 2027 Collection - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE10dDlBSnhFaE5IOEZFaGhGa3dTcVhiZWJpRjRDc0VCY1hCSEx3TVVvQ0hmWHlWZUZKLXB2UHJULUtsVFRKaFFELXNLYWptWTRXdkgwaERJcnp3ZnZDeHFWeVNLOWk?oc=5",
-      "date": "2026-11-18T05:05:43Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Vogue",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "패션쇼·디자인",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-935b5033579f9e2",
@@ -2075,7 +1646,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:TGT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-33b3e475e4598cd",
@@ -2118,7 +1690,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:VRTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-a3202341e94cf60",
@@ -2133,7 +1706,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BIIB",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-baf9fa0416ee65b",
@@ -2148,7 +1722,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:COST",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-f5ae3d4476c7451",
@@ -2178,7 +1753,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:VRTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-af395ab2e288edb",
@@ -2193,7 +1769,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:VRTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3b823b9e48b89e0",
@@ -2208,7 +1785,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:REGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b54a04c7004ba64",
@@ -2223,13 +1801,14 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:DIS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-3ac781fb4b9cdcc",
       "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain - ESG Dive",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS0N0cHdpV3BQNHZjVlJVLUpQaEtQNFJNS1FFQTJVV282TkZGYzhERFlGUV9kcTJDY2pucnpLTnNPR1NqQ3FfcGhFelBPUzlvUXBzX1pNblZHVUMxY1BxTi14cHp6M05VNU0tNlFvREFTcW1FcjU4b2lFSkE1T1hXOG9ZUjNTcjVsU01hdzBNeFQwQ3lhQm0zSjE2SUNfTlVXdm5KeHNpQXFPZw?oc=5",
-      "date": "2026-11-17T17:57:04Z",
+      "date": "2026-11-17T17:57:17Z",
       "platform": "Google News",
       "ticker": "LEVI",
       "brand": "",
@@ -2251,7 +1830,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ULTA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-8e9e87733afe3ce",
@@ -2266,7 +1846,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:LLY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-42adde37cf086ae",
@@ -2281,22 +1862,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:PFE",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-20f616ded5fb7ce",
-      "title": "Neurocrine Biosciences at Jefferies Global Healthcare Conference: growth broadens By Investing.com - Investing.com Canada",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNOE9DMmZ6NmVJLVg0SUJ1dWlBLUxmWDBrejVISGRoRG92bTNfd0taS3hGR1RxcVhESjB0U2wwbWpNS2dPd1VPdnZQTkVYbjNNREZHd0FjWnd0REpkTTJrb1hubTR5WjExN1RoRXIySWtqYm9SbGxpMWJ6cmkwT1VZcWxtTng0NERVX0hLR05oVHRNal9QYVVEMTR1NWVwSnhGM1ZuUGh1UGstaTRpV0VMVUVmc1RhS2trZkZndDNDSmxvRHp0QlZBREZfLS03blFxQ0FMeTdINUQ?oc=5",
-      "date": "2026-11-17T16:41:20Z",
-      "platform": "Google News",
-      "ticker": "NBIX",
-      "brand": "",
-      "creator": "Investing.com Canada",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:NBIX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-6af9a3c610e68ba",
@@ -2311,7 +1878,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SRPT",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-82af867a1f7694d",
@@ -2339,22 +1907,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:DIS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-a92f73d93580e53",
-      "title": "US October Retail Sales Rise Just 0.2% as Auto and Furniture Demand Freezes; Core Spending Still Holds Up - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9mMElUeFNoNkp4Rk0yU0l1YTEyYWpibE13bUxMMEtuSVJEeXN2cHd2aWg5NHJwTlFUaEVHQ2lkQTBFWWluZHQ3UWk0cXVsNTE2Rmp2S3I2bDFFc0pTSWlVM2E4R0ZwQVRIdUJBRnVmUHkwQWJUeFE?oc=5",
-      "date": "2026-11-17T15:25:00Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "BigGo Finance",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "sector": "소비재·서비스",
-      "discoveryMethod": "sector_rss_title"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-d8b2d35dc0eb150",
@@ -2369,7 +1923,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:SBUX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-0614b70cb801790",
@@ -2384,7 +1939,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:AMGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-f64fa9d21b9d170",
@@ -2399,7 +1955,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:BKNG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-4ae79a9a137b68f",
@@ -2414,7 +1971,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:DIS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-c4818e599b091a9",
@@ -2444,20 +2002,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:GILD",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-86b6f3c217dc974",
-      "title": "Clinton Is Hiring: 20+ Open Jobs At Town Hall, The Outlets And Local Businesses - Patch",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcnlodGVNSENzdF90cTJhSXN4OGFkbUtpUjRuSkdySzh1TEt6MEVqWGoxanBaR3hOZ0tGMFN4X0JGNnpqMjJDRW9KVmxaZWNYWEMtaTAwZmU5UTdQRHpPLUp2Um5WS09JWm9ZRVcwbkl0VnhaSFdjRTRaR2s2MTd0bkR6WHA3WTNuaHlITGhWZVlPdmVnblhPSTkzTTdSbkRzUXfSAcYBQVVfeXFMUG03VDNVSlh3LXBsNHBIT0M0OFlsVVI0cFk2WTJhbmRYY1UxUHMzLVBJcHVwSjVWcmxVN3Fhc2lOX1psUHY5OWtZZUF2dVlNVVE4TmJfU01aUjlYc1ZMMERLM3Vjb0ZMcy1sZFRrd2FrOHU1UE1DMWx4MVN1dnp5UXZIMjYzN2tsa2ZrSEFfY2NJVjVHbVhqMy1EUTBjcld0YmZySFlqcUR4SkV3d3BTQ0hTaFE0WGNHdkdKdTl4QVJfR1h5Mmpn?oc=5",
-      "date": "2026-11-17T12:31:38Z",
-      "platform": "Google News",
-      "ticker": "AEO",
-      "brand": "",
-      "creator": "Patch",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-8a302b30b3afa78",
@@ -2472,7 +2018,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:DIS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-01ab8fb21c0fcad",
@@ -2487,7 +2034,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CRSP",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-4b1ae321f549f44",
@@ -2535,21 +2083,6 @@
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
-      "id": "rss-6d86300ee629de9",
-      "title": "Ionis Pharmaceuticals (NasdaqGS:IONS) Stock Forecast & Analyst Predictions - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPLWxnNWpoWTU2clVNZklwMkt4WkxEN25DRWZVcS1nejVYV1lGaVo3QXBuTmhhR2xKcVlYMzRuRUl0QzZJc0FyN1hndzNqNV83aC1NX1ZsZUtEVXd0UmtvWU1TQ2xLYjFUVWhzMk94Q3lLbGtpMzJqT2hycGc4SkNOUk1rVDFXdlRZV21pUkM4Zno4RlpYRHNtZGYyRUc?oc=5",
-      "date": "2026-11-17T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "IONS",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:IONS",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
       "id": "rss-898e4152ed38640",
       "title": "CAVA Group (NYSE:CAVA) Stock Forecast & Analyst Predictions - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcEE2UTcwQ1U3TXRlZUdkc0JsR0M4eWNYd3VTQ2JDS2Q4QW5rX3lNakllT09JbHA1Q3E4TTh3TzlvaHJNRFI5aVpsRUxIMmtfUzJpM1dNNUd6QldBYy1mLTBNY2YzMmM3YjV2TU1ubTJhaUphQVFNcWlCNDAySzdhOEpnOA?oc=5",
@@ -2562,7 +2095,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CAVA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-678ef5bf16808b6",
@@ -2577,7 +2111,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:CMG",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-36851e7f8f182c7",
@@ -2607,7 +2142,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:CAVA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-e88359bd8b1b361",
@@ -2622,20 +2158,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:278470",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-434f1ea514723c1",
-      "title": "The Global Battle to Be the Next Contemporary Powerhouse - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPelVQMWVoVWUwWi11Skg2MHBNdkJHV3VicG1kODRCX1FTNEVRSENxMm5qaVVZZXlaZGJYcFFmdDdteGY2bVhSTV85UDRPYVI5NGFZNVp5dGg2NTEtaWRlbG5PeUF5N1VTUk0wTjcxOENBSHpHWkxxZnNPWEdIQzgxVWYwakl1ZV9xbEdxV2wxUHk5YVJQOHdIelJDZG5HQ1BUbFNUWWJsdUprdw?oc=5",
-      "date": "2026-11-17T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-818af26a0327cb4",
@@ -2676,7 +2200,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:278470",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-50a6f9e524e925f",
@@ -2694,19 +2219,6 @@
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
-      "id": "rss-990830645c6f85a",
-      "title": "Victoria's Secret (VSXY) Could Be 6% Overvalued On Raised Full Year Guidance - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaFcwNnExU3dQUjgzSHZ1bEdJZEVWNTh2dkVzcldkNnNnSDEtTXRrY0VjT1hwMmZoT1VtdjlJUkcwWXdSaDExekREbHRrS3BaWVZUY3BHdXh2bDRWMWhoYXFvV3V1YWRzQjBZbFhBT2l3aUZFdWk0ZGh2azFmbTlWRFZhUXlyelBBUTJocGJ3ajd6SGgtVThzeUZB?oc=5",
-      "date": "2026-11-17T00:21:00Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review"
-    },
-    {
       "id": "rss-1aa344b3053c5b6",
       "title": "\"불닭이 진짜 황금알 낳는 닭이었네\"…삼양식품 '잭팟' - 한국경제",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12YWVQRXM5cW1POGFFR1JiZDZ0Y3AyeFVld2cxbklWVFljTFNEalpaM3lpeFF6bDZEVkJrXzgxTVVlRXMzTVotUW1qc1VzM3lHc0hiem5vRE9ndw?oc=5",
@@ -2719,7 +2231,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "KR:003230",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-be41cf027b2eee3",
@@ -2734,37 +2247,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ALNY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-96f8aac37aa15cb",
-      "title": "Is Moderna's Cancer Vaccine a Game Changer for the Stock? - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQamIyQmdmZW80Y01VbW05ZVJPUXVlZHh6aWhOOFhaX0FZdFFnRTVXSk95T3pyVUlqT0NQd2J0bEhTOFBmSmJ0MXc2WFVOTllULVBWa3V1OXQ4cU5uVzJRR2JfdXJESkJ1R0dyS1FjNGh0a0lJSjcwaktPMDJmVFVnVUtmdGh4OXh2VC10VERjd0Q5NDZoTnZhY3RzZVZSUFNI?oc=5",
-      "date": "2026-11-16T22:07:02Z",
-      "platform": "Google News",
-      "ticker": "MRNA",
-      "brand": "",
-      "creator": "The Motley Fool",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:MRNA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-5ae226ce3ebfe5d",
-      "title": "Incyte (INCY) Gains European Commission Approval for Povofortay in Hidradenitis Suppurativa Treatment - GuruFocus",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPa3FaSGpwSV8zUXZtbXQ3VXJwck9rWFZ0eGNkN1JyUXY0WG16bm5Fd0FTaW5HTjItbklKSi1ZUm5ycVZqTU9vaWZsMmVhaUdnQlIteE5HUHlHakJrWDdPMkdPTldqeXh4OUNaeWkxU2luOGxTZEtrYTJqUXZfVUQ3bXVMN19kMF9mMzdkOE04UTFCcmlGcnk2ZF9GQWVzYUxvYm9tM2lERk5Ra3R1cUg2M3l1X2l0MVBMWUFXRXhackhnT0YwYS1wS3VjWjJOdmg1SEpKMA?oc=5",
-      "date": "2026-11-16T22:04:42Z",
-      "platform": "Google News",
-      "ticker": "INCY",
-      "brand": "",
-      "creator": "GuruFocus",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:INCY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-7c8343f890e6c98",
@@ -2779,7 +2263,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ALNY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-b4f353329c26fe1",
@@ -2794,22 +2279,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ELF",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-32485f4fe4f044d",
-      "title": "Viking Therapeutics Erases Takeover-Driven Gain as VK2735 Obesity Data Fails to Impress - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBfQ01qRnp5T0hGdi1NUm1NYjQ5czRDeGp2Ujc5S0JoRFllUDNpcmE4THJHSEQwV3FYZEpwekY3UWFqNlhSbGRWY1RWN01tM2dnRVAwZDI3b3V0TEpVZXFSM1p2bklqdUFJN1VMaUcyTjZCUE8yeGc?oc=5",
-      "date": "2026-11-16T19:35:00Z",
-      "platform": "Google News",
-      "ticker": "VKTX",
-      "brand": "",
-      "creator": "BigGo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:VKTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-aca71ea8e1cefaa",
@@ -2850,22 +2321,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:ABBV",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-a163a4288e03416",
-      "title": "Restoration Hardware plans second luxury showroom with fine dining in South Florida - The Business Journals",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR2s3U1l3dWFuVFFwc3NYV2VEYmk2SjJjSE1DdC1zOFFUcDlmdTZrUmtJWHowcWtBdUtMYWNPU1dacWFfNDZiTHFWajh1QUQ3RXBMUUJnWHZEMlo1WG1DblFfMzR3dzB3RWdFSC1hS205ZUVGQ2d2VTJpQk9uQldzQ3Z5Yll6cjJpVDZ5X1cxbmZ6MGR0UzZXZkctQkZuTUZkbnY4QQ?oc=5",
-      "date": "2026-11-16T18:15:00Z",
-      "platform": "Google News",
-      "ticker": "RH",
-      "brand": "",
-      "creator": "The Business Journals",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:RH",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-50b1c6b9d8d3daa",
@@ -2880,6 +2337,22 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:AMGN",
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
+    },
+    {
+      "id": "rss-c5fda00653e1cf1",
+      "title": "Uber Stock Has One Thing Left To Prove - Trefis",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSldpb2dwODFHQWRWdzFRd3lpMnpYWERKOWFfY2dJSkx3NUc4RUl5LVpQckJ5YUd6NENRX3NYMnBxTC1aQUtDLXhYNnY0WWRwbG83THNYLXd4b3pSNVFoZ0w4NUg2Mi13akROWXoxWWNRRURYV05PWWRvOWxST29hai1XU0hlVHc3UGFOQ3h1YzMyOVVsRmdIUml5SHR1cDdt?oc=5",
+      "date": "2026-11-16T17:47:36Z",
+      "platform": "Google News",
+      "ticker": "UBER",
+      "brand": "",
+      "creator": "Trefis",
+      "source": "Google News RSS (원문 확인 전)",
+      "topic": "기타 뉴스·콘텐츠",
+      "reviewStatus": "needs_review",
+      "issuerId": "US:UBER",
       "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
@@ -2895,7 +2368,8 @@
       "topic": "기업 실적",
       "reviewStatus": "needs_review",
       "issuerId": "US:SBUX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-e5b677b9144eb29",
@@ -2925,7 +2399,8 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:JNJ",
-      "discoveryMethod": "dated_rss_title_issuer_match"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     },
     {
       "id": "rss-2e2e2342f5db149",
@@ -2939,21 +2414,6 @@
       "source": "Google News RSS (원문 확인 전)",
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-b14310b51e43e23",
-      "title": "Estée Lauder Companies (EL) Following Q1 Beat And Higher Guidance Is The Stock Fully Valued - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPZ2NTM19Qb0plYkpYTHVDc1pmQWxtWUE4ZHRZUkRTbjNOb0hzUEphQ3g5RGRZT0FnRXE0LWZMR2c2Nk1RUVB2VEJqeE8xTHFEck5KNnFjWlM2S0tZNWlHdnd1eGcyMy1sZkRFeVNHYmY1UmM0a2t1R3ZFdGVtc1V3cURDY2JFVVVCbTVBcmtKRldnYzJCZnM1S0xibHh4UUsxdVZIcXc1V0N1a0g3cGlodnJ3U0IzY1dSbS1OV2s1b0xTRk1Jd1djZ2k5bHdJVHRHVW9rd9IB2gFBVV95cUxQOC1sd253ZVBjbk41dm9KSnJzV244YzNINnA4NU16V3VqNTVCMkhsY0tzbThiQUtuTDNFM2loWXh1U2E1d1hqQmx4T1V1NWJmc2tYR3FvZTh4M0hXTlJlVzF0OHA0cTNyb3BGWFR1ZEgyUEROS1lWdGswNUFUM2t0ckt6bGNfNUt6WGc1czhZenlDeE95dnI5c1BGZUhMN3dMc0tBbDZzX1FuYnVJb0hvTUY0eHA2R0cyTFVIQkZoR2I4NFYyWlY0QXdDTEtyQk9CaWluX1d6R3N3QQ?oc=5",
-      "date": "2026-11-16T15:20:15Z",
-      "platform": "Google News",
-      "ticker": "EL",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:EL",
-      "discoveryMethod": "dated_rss_title_issuer_match"
     },
     {
       "id": "rss-34181fac78cf333",
@@ -2983,443 +2443,16 @@
       "topic": "기타 뉴스·콘텐츠",
       "reviewStatus": "needs_review",
       "issuerId": "US:JNJ",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-69b37d42f0b0171",
-      "title": "Should You Buy Neurocrine Biosciences Stock For Its Cash? - Trefis",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRHN0czJnblNUOFJudTVPLXl3bi0yaF80X3VPbFZCNDNqY2E1QjAtZGxFOTNJSHZvSEsxbFJhVVAyX0xtUkhkeTJkdzU4M2RndWlRLWRqbWtHdEE5ZGZPbVFQbElVYVlmeUM2bDNvZFpuN1kwU1RQNkdZcE43RXBCeEYxZ3hkRkhkS1BjTHdoZlJnanJ6SlMzeFNUNW1JeExFMTE0N1QyaHJrWlA1Y09CWUJrU3A2UVhB?oc=5",
-      "date": "2026-11-16T09:43:32Z",
-      "platform": "Google News",
-      "ticker": "NBIX",
-      "brand": "",
-      "creator": "Trefis",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:NBIX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-09bcb41795ca385",
-      "title": "Tapestry Inc (NYSE:TPR): A Quality Dividend Profile for Income Investors - ChartMill",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPYlVLb2xDV0cwRmVXMm5tR0ZLMG9oLVZ2WjlTUEs5MzRaa1pRS09OeTNKekQ3eHpkajZyWWk0aWxELW5rcXNWajNNak9hUHliY1owRkxla1o5bkV5cDgyWWk2ekNFc044dGV1eU5DeFljTWQ4QVhXSzM5cmgxcFVETTB0eWtVOWtCdTkxWThqb1ppcjVTUS11cURValctZTFKTUFyLTlVLXpvVmJOODgwZXJQM3NRbEw5cHFZ?oc=5",
-      "date": "2026-11-16T09:21:01Z",
-      "platform": "Google News",
-      "ticker": "TPR",
-      "brand": "",
-      "creator": "ChartMill",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-fb572877fb572d1",
-      "title": "[보험사 풍향계] DB손해보험, 인터넷 전용 미니암보험 출시 外 - 에너지경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRSXdtajF3cG8wOElkaFpMTUJ0eFIxQkhjQjJIVndVcl9xSWZ5a0IwdV9XODQ4bUc1Um51Z3F1bE8zckJvSzlLQW1zdm90ZzBZeWRvbEVmcWdER2c?oc=5",
-      "date": "2026-11-16T08:31:35Z",
-      "platform": "Google News",
-      "ticker": "005830",
-      "brand": "",
-      "creator": "에너지경제신문",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "KR:005830",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-b710fa616670941",
-      "title": "The Science Behind Blue Jeans' Classic Color - Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBSdEFvYUlZb1ZEVFBaXzI5dzZvV05kQjFDZVIyZU5MbVNDeVFSXy1oeFppODkySV9KeHY2M042cDlLNlA5M3J0U1MxNTRYTnR0UGc4akRiajlIUTVrek5FTw?oc=5",
-      "date": "2026-11-16T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "LEVI",
-      "brand": "",
-      "creator": "Britannica",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "데님·핏",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-dbbfeaed4b0e31f",
-      "title": "Singzyme wins 2025 Amgen x NSG Golden Ticket Award - Singapore Economic Development Board (EDB)",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOd3JwODBiakJWa0pkZG9meC04bjNJZ1ZkWmZfcDVidkRWV2Zua1N3RG5JMDBvdTZWWFdMdzZ2TjM0dnVxWTZaeHNsbDFDUTdaQXg4S083ODBwb1FGUGRBaHFJSUFqX20xYy1YUWllXzVwcndsd0hKdUs5YkdkVUEzTUl5RmdYMDR2LURYZjNNRnJLTzQ?oc=5",
-      "date": "2026-11-16T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "AMGN",
-      "brand": "",
-      "creator": "Singapore Economic Development Board (EDB)",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:AMGN",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-83fe3b12447bfd7",
-      "title": "Neurocrine Biosciences (NasdaqGS:NBIX) Stock Forecast & Analyst Predictions - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUl9pVHZNZVlRSzZUa2RraS1YYUdCV282eFl5MmgtSTdYQjk0VmsycXhDczhpN2poR2plN0JObTZLdkFWbnkxRlRod1p4YVl1Ul96VVJfU05id0Y4b0JsbkpMQUd4NUZYSXBzOFRIV1hXSl9vNkhCR2w0U0E1anhzYmRhbC1PWXgzX0ZqZlNycTFSQ0pqOTdxN0h4M2lmQQ?oc=5",
-      "date": "2026-11-16T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "NBIX",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:NBIX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-f9dc81226e8dc8f",
-      "title": "화장품·기기에 반도체까지···에이피알 '뷰티테크' 확장 - 뉴스웨이",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9YUkd3Y0tjaFc3YUdDZlVuZHRlaU9QT3o0VHk2cC1zS0xteFcydW1jdzJTU2laSlpxTlJMUFdqaTFBUEFwSGE1RXhtbHhJNUZnNTJncDNYSWgtUTAwQ0ZWMHVjOE9YMjI5RVE?oc=5",
-      "date": "2026-11-16T07:08:22Z",
-      "platform": "Google News",
-      "ticker": "278470",
-      "brand": "",
-      "creator": "뉴스웨이",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "KR:278470",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-f03dbfb585e89f3",
-      "title": "SAP and VF Corporation test out AI and automation technology powered S.Fashion physical store - Retail Technology Innovation Hub",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxON2NnRm9Mb0J2WUpIeDljcldRWWpOVy1jeG5kUWxZLXFCLVRqMXNqLWFETnFWT1FUTDNzbUhxRkZTSFZsblR3ZzB2REkycjEtN1NybWR6QVJpSmVDelVGc19PZmZ3c191WTVrYy05aGZ2VXdoUGFLODZhVUF6aFJsbjFnTFd4dFFUMDdjQUNfa2lVU2hLTng5Tm16UXVLRzZCMDhueG1KelhzUFpneG1DZzBGUGN2NVlWNkNvY21hamRKbGVvcUdmOTlKWXZMOWZXWFpTRlV4UWNGZDRK?oc=5",
-      "date": "2026-11-16T05:39:32Z",
-      "platform": "Google News",
-      "ticker": "VFC",
-      "brand": "",
-      "creator": "Retail Technology Innovation Hub",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-357548ff44fc314",
-      "title": "Key Takeaways From Luxury’s Q3 Earnings - Vogue",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAyRjdycGFCd25iX25Qbm5mNXFpUnk1Y0dNaUprSkdBZnpoaFctMHZIaVVSN0NZOEJwQjhTWmU3VFFxRW1SbHlBZ1dkUmRTR19FMFowb0JFYlF1ZHV0TkdBazJOalZ5aXBLZHI3OHdJdWlCWWJjUVpF?oc=5",
-      "date": "2026-11-16T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "RL",
-      "brand": "",
-      "creator": "Vogue",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기업 실적",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-acb124f33471041",
-      "title": "The Fashion Consumer in 2026 - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX2NENzVUbHRIVWMtRC12M2Rhd2tsVThES3NIZ3pYYlFScThNaC1QYVU1Q2JxQmE4OFJkV1prOWVOcHBLOTJPUExpTG9WX2pYSXFmdEkyOC16LTRrT1hBSVRpWFZVdjl5cmI2OTU3Ui1CREZQbFN2amt0aDh4SFIzc0JtSEpzdjBuWGE5YmowZDhhbkxOSFdHcUVR?oc=5",
-      "date": "2026-11-16T05:30:00Z",
-      "platform": "Google News",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-85afc358dc9230e",
-      "title": "Fashion Sourcing Is Big Business. Luxury Is Catching On. - The Business of Fashion",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcktJMTUxUW1JdTFMM1JpNXhOeGtGZlYzTzlKUHdfWUZocHBOSWVfV0RVLWQ5cjdVMXRUb3lEWjJWUHBiREJjVWxHbmRkcG1kclhqSU80NlFBTWRwZUJ3b1dQaE1XNDdrSExSYTRpbU1oY2NwR1kxRFowU1pVM1NaaQ?oc=5",
-      "date": "2026-11-16T05:27:00Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "The Business of Fashion",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "패션",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
-      "id": "rss-13f1107f300fa40",
-      "title": "PVH Corp to cut 4 percent of global workforce in corporate restructuring plan - Fashion United",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSnI3M2RWQTdkMjRwZ01VekRUUjVSblBkN3dkaFJnNWpHTkhXYkJEcXkzUnZjZ2VVOThzcTEtR294ZVdDSGxSQWk2Y05uYWlxYU1xM3dYTkVXeUluVjFjWDlKaVlKd09mVkVYd3QtNUhodWxTNklLWUwyZ1NaS3VjNzFRUHdES0oxdV95S1RTanQtRmxUUkE1eEVVRjc0Znh0Um9pWWZyU1Z3WW5DSGpTa3BWT3NDcVhKTXZJNHI2VTRHM0tKcWp6bUpB?oc=5",
-      "date": "2026-11-16T05:01:14Z",
-      "platform": "Google News",
-      "ticker": "PVH",
-      "brand": "",
-      "creator": "Fashion United",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-6a7c0e3cbc5827c",
-      "title": "F.D.A. Rejects Closely Watched Lung Cancer Drug From China - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQOVd2cEJobjZyaWdnc0I5Q1Q0WEtQYW1WT2QxbHNJWGxPblJFZU42OHp0SkZrWWVKb18yY3h4Q1ZWM0phUmRvWVl0ZU1QbEtPdFdQc0ZfNnF1UlRiWWc2bUdWazh5N2ttRG1qY3BQUVdzMEJwcDRtRVNCdWlqS0NhaA?oc=5",
-      "date": "2026-11-15T20:33:07Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "The New York Times",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "바이오·제약",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
-      "id": "rss-13cde432aa3f286",
-      "title": "Viking Therapeutics Highlights Clinical Data from VK2735 Obesity Program at ObesityWeek® 2026 - PR Newswire",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOTW80NEtWa19yQmpUNXJ0ZFpPNDhhdmtDOXhBRUZlNVhSeHdrMzNCaDdTOW9YSUZpTkt1OE40ZU1WT082QW5VZDg4T1hPV1pZdXktVjlZekdGdlUxc2lReFlkZU1OVnVoMXZpakJkZHMxemFhaVU1N1JYaW9RNW1PZTM5V0JieVUxaFdBdXBlUUVCMGtwcmQ4QWdYUjVlcTg3ZUZGZ1dmcXR6N25ycEEtNW5yTHdBeEpwb1ZuVDRHNVZPc0d1S1dLWnBQaUJiZDNIZEY1QUJzWk9xOVh0dS1tSVlR?oc=5",
-      "date": "2026-11-15T17:05:00Z",
-      "platform": "Google News",
-      "ticker": "VKTX",
-      "brand": "",
-      "creator": "PR Newswire",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:VKTX",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-b48f55847eed045",
-      "title": "Op-Ed: If We Want Plus-Size Fashion to Survive, We Have to Support the Brands We Already Have - The Curvy Fashionista",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WU0h6Tk9YMU16OVhOVWNUM3d6eUdTWHFxNzE5TnFyTWMybTJpQlZmcGV3REJlUjBrYU16SW5sVS1HV252WjNUVjVRNURabUZVOS1wUE4yRHAxWm5ZOWlTQTdpSWVRMG5EUThPajNHNUYzR0k?oc=5",
-      "date": "2026-11-15T13:00:00Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "The Curvy Fashionista",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "패션",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
-      "id": "rss-3fcad5f50b4fbc5",
-      "title": "Pfizer Inc. - Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ZZEgwamNVdk1xRVlpLUFVYzd2MFQzSFpreHplYk9tTjVpenNob3p2aWFibjk0TGxOZGJMWTdkVDdrQVZteVp4Y0NuT3RibGUtNTIwMUtB?oc=5",
-      "date": "2026-11-15T11:32:00Z",
-      "platform": "Google News",
-      "ticker": "PFE",
-      "brand": "",
-      "creator": "Britannica",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:PFE",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-32694c190b71ebd",
-      "title": "Behind the All-American Ralph Lauren Brand Is a French C.E.O. - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMm1FUnQ2blpSeHJCNGVZVFlaNWxrRDA0LUQ4cm5HaWk4aXlDcVpFc0hkM3dSREdaWG44M1BOSTJ2eWQtZFJmZENWQVA0RWp1bmxxbHpxRjVzR1lGM0xBZHZSOHRKOG1JMGx1cnNTbnk1R0tBSmhPQVJCYXkyUWZ0UVl3?oc=5",
-      "date": "2026-11-15T10:00:51Z",
-      "platform": "Google News",
-      "ticker": "RL",
-      "brand": "",
-      "creator": "The New York Times",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-f84a851b0a26c36",
-      "title": "Exelixis (EXEL) Stock May Trade At A Discount On Fresh Cancer Research - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxObHc5eGZ0WEV5MUYxRkZhd040WjgxcUhnT2lxdUx3aTVBTmdoOGdCOVBtUG9yYmFaRDRLMzRTeE1fOU9lZEd1RlRVTmlYdUVEd0U0RDBCMjZQbzBfRW5mcGJ3VGczQkJOWFRKT0lEc25Sd1ZENFlhUkJhb0k3c3M2ODlXVlJSZ0VBOEtxYlZ1dktuUFBjenJZQVVWdllPOUk4RUVqaGxHYldXWVFoVHh5QU9lU2F1VzE3RTM5MU03M1JlMjBEV0hDNTkwUUxMZnc0Uzlya1pVNmXSAd4BQVVfeXFMTXRqM1JkOHg4N2ZzZHRzYlg0cGxoMU5hRWJfX0lSRk5qMWJIVnlEQ3RYZmVjbUYzeUhtb1l1dkcyT3hkak5YM3VjNDdFa1dZdDAycFFReGMxaklMeUwxT2tLbmZ4N3U1dDBKby1aZ3lpczlfSXZ0R0FoMFVXYVpBeDNqM3hqTkVjOFJoaHlHWllFbjVZTkwyanloekt6UjE3MjZFeWkxb0lEcDZBNjRDaG5WRHRxakpERnBtQmNMUnRCRlJOM3Q5UG9nWmtvTHMxUzBrZm9VTV9xcjBOWHRR?oc=5",
-      "date": "2026-11-15T08:25:03Z",
-      "platform": "Google News",
-      "ticker": "EXEL",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:EXEL",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-9b9f02590091d43",
-      "title": "Estée Lauder Companies (NYSE:EL) Stock Forecast & Analyst Predictions - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbHhLaHUxempTd1pPUWRQdy1IVDFrdmg1WXpCbmtMMW5LWjFJZG1CRGpVbFBQZFc3R1lSMWNhZnJFYThaUkczeFl4OEFBRS1ueUFGSVhUa1R2eDJ5RzNfWlJmcVJqSlNzZmxJck0wQ2laclIzbkhIa0xMMEpWTG12NXlIU1puUQ?oc=5",
-      "date": "2026-11-15T08:00:00Z",
-      "platform": "Google News",
-      "ticker": "EL",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:EL",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-689218a51c3268f",
-      "title": "Gilead Sciences (GILD) Wins Bixlenvo Approval With Another FDA Call Due In December - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOb21MTU1vSEgyanAySnFKbTdWVVpZMXZCUGQ2YnNSSTFZMTR3d2VjRVFJNVdwQnBwYzIzNkpZQk16VjlfYks4UWtCcHdTaDZ6Qy1GblRYRVJUcklKYmZCSmpzbkNvX2xuYTc2T2dKanJrV3BFQVI1NVZYc19tYmRERDJRM3FLRkxyc0pCcW9mU0lqQktrczc5ZHRMRzV0TlJRR3ppalFLMzZtcmdMUUJONmhQV3JMQlA3MUZMc0FtN1BpbGZXQXYwcmo3ZE15Y3BHckphZ1hBSG5WTDhYVF8yUmtWRdIB6AFBVV95cUxPUGpTQUFZcVFYc0JjNUV1eXByTGUycm9CR1FFXzh1RlJlNUE1cExyUFJaRUdkejdJQ1dieVMzTXdaYTlnSTVaVW1oU21YNTVBbHpzQWpHVWlsMm5ORWxQNVBmZkgyS2szSVJsNTgwZ2U4elk5M1Z6QXBaYUNtZzFpUlhDQ01mbC04NnFVOWlTRUJ4cC1NaUR4ekY2WjJ6N29nSDZpRTM5UmswMjAtVUpiVy1GVC1rNUZsQ2VtVFBfMHZDT01NbklOekZlb1JPYm5taElfTEhORnBxMlhrZlNnbzI0dEFuSF9u?oc=5",
-      "date": "2026-11-15T07:29:50Z",
-      "platform": "Google News",
-      "ticker": "GILD",
-      "brand": "",
-      "creator": "Simply Wall St",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:GILD",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d6a4fbbbc550fec",
-      "title": "Uber Technologies: Profits Are Compounding While The Stock Falls (NYSE:UBER) - Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOVZ6ZXp0UEJBNGw0cUs3SG5rYkZLaE8tZzJXcS12TnV3UEdsSmhwSDRFQVFLMFVQaGlLcWZLNWx6OFNIMm9TRjFVMHphb1Z1RklnLWFvQTZVZnpPVm5iOUdxejUydXVFWWlhejlkQUc4bXBuMUVPaU0weWliV1FpSl9XYkczeFA5NVhlRXBFaUdfUWNYTmtkZXVXbU1Dd3U2YmZTYXhSMA?oc=5",
-      "date": "2026-11-15T06:01:38Z",
-      "platform": "Google News",
-      "ticker": "UBER",
-      "brand": "",
-      "creator": "Seeking Alpha",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:UBER",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-35dd4edc8324cd1",
-      "title": "Moderna RSV Shot 82% Effective Against Hospitalization in Veterans 50 and Older, but Infection Protection Fell With Age - Medical Daily",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxON2FjUV9JU3dsZkY4ZnJKZVp3dXBTeDhGTDN3Zkk0eUV5R0MwbHlCWUl0WDZieWNtS0tMRng1MXVTVEljQ0t3TU11ZjlleFVmNmNMd3VzQ3hjOVpYZ0M2M0hRcGQ5Yi15U18yZF9UUEplczZTVGtsdVRjSFJ1UVJPUEhGbmJKVXFOeENIVGJpdWxWcjdoa0U1QTNETGFfUl9E?oc=5",
-      "date": "2026-11-15T02:02:36Z",
-      "platform": "Google News",
-      "ticker": "MRNA",
-      "brand": "",
-      "creator": "Medical Daily",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:MRNA",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-d801f89b4852c92",
-      "title": "Elon Musk’s SpaceX catches Starship rocket upper stage from space - BBC",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5xRWtMclJGOUN4a1pnTFRiMEZjQzJsTkJtT092RlpLSTk5ZndsTUZMenBQRVRwSS1fVjNPNUV1ejQ3b3YtWGIwTk1EYTJ3aUo2eEJOd2E2X1NKQ0E?oc=5",
-      "date": "2026-11-14T22:15:52Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "BBC",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "sector": "우주·위성",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
-      "id": "rss-6ac58ba5a1c00df",
-      "title": "Bristol Myers Squibb's Growth Portfolio Now Brings In $7.7 Billion a Quarter. Here's Why That Changes the Stock's Story. - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONVUxOUh2OXVhOTQxRzZTQjNXS1V0VUh2YVNMR0wzZ1V4SU9NRHVxVGtrd0hPTXhhdm5rejlIMmlSa0ctWFRpaGRJbVJYM0ZKR1RfVkJLdldubHRhbFo3TGRXVXp4c1NxWnd5Vk1adS1BeGZKZ3RkNWNUcWhXRjd1RWpJNlpkeTI2LUlibDFUam1TT20tMHd6MkNnUHV5TDZpMU1sZkpn?oc=5",
-      "date": "2026-11-14T13:35:00Z",
-      "platform": "Google News",
-      "ticker": "BMY",
-      "brand": "",
-      "creator": "Yahoo Finance",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:BMY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-f5fcf37e11ae6df",
-      "title": "Bristol Myers Squibb's Growth Portfolio Now Brings In $7.7 Billion a Quarter. Here's Why That Changes the Stock's Story. - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORk9rZVBva3hxR3F6SjdILTdYSVZhbWVtaGtod25HdUtudms5S2VOazg4a3NUT2Vmc0lkYWJKa0Q4UUQ1UG9Yamp0SDVPWHdieV9hR05fbl9SZEhDX1dGUEg1UklHQnJJZGZxWkg5bWg1T05hMnp6QXdFaWRMWDBHR2lqYXN2YlgtelRLcVFKRkFiVTNEVDZz?oc=5",
-      "date": "2026-11-14T13:15:00Z",
-      "platform": "Google News",
-      "ticker": "BMY",
-      "brand": "",
-      "creator": "The Motley Fool",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review",
-      "issuerId": "US:BMY",
-      "discoveryMethod": "dated_rss_title_issuer_match"
-    },
-    {
-      "id": "rss-b8b7ffd01de0939",
-      "title": "For Victoria’s Secret, inclusivity has become sexy — and a solid business strategy - NBC News",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU2gxcXZQZDRZUHZVd1hsRzVITUtCdHlEVXEwb1VCcWxhN2g0T1RoYjlCTXpDaDZTZ1BOMFpzZUFTVk51Tnd6VlFuT0tycTFSLXZBWDIyRi1pNkNXTTlybFNWclFTcTdzbzVOcVdoZzhRTDNzQ2w4UGhhc1FxYURuWUZ0aXRrS2JUZU9iZHUtMXpTczBC?oc=5",
-      "date": "2026-11-14T11:00:40Z",
-      "platform": "Google News",
-      "ticker": "VSXY",
-      "brand": "",
-      "creator": "NBC News",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-eb956d292e4d8b3",
-      "title": "Rocket Lab Hits 100 Electron Launches, Fastest Commercial Rocket to Reach the Milestone - Rocket Lab",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdzlCRk12QmNDU2p6V3ktUFBqR3dkMTVMVjRfdGVnVFQzWVNGTUVvNnU1cEU2TWZQZC1NblF2bkU4X3kyMVVjbEIwd3h6T1FSaUxON292aFdwWVc2R3F5ZXFpZGI4Wjd4MWxXbjJzaGE5Mi00NG1mVDE2YXprcjE3WnRHeF9SWnhfNTFTUEV5ZmhUOEZhdklMTDdaOUlxczgzSWUyeWo0M1FCbWpnMTVhdmlnMzVtLUZtSElKYk5n?oc=5",
-      "date": "2026-11-14T07:19:25Z",
-      "platform": "Google News",
-      "ticker": "INDUSTRY",
-      "brand": "",
-      "creator": "Rocket Lab",
-      "source": "산업 뉴스 RSS 제목 · 기사 본문 미검증",
-      "topic": "브랜드·제품",
-      "reviewStatus": "needs_review",
-      "sector": "우주·위성",
-      "discoveryMethod": "sector_rss_title"
-    },
-    {
-      "id": "rss-cd0f2a7bedf58c7",
-      "title": "The Margiela x Rimowa Cash Grab, NVIDIA & Fake Hedi Slimane Jacket + More",
-      "url": "https://www.youtube.com/watch?v=nsb_HQ6EJ54",
-      "date": "2026-11-14T05:09:25Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-de30cdb370eb098",
-      "title": "Capri Holdings names longtime Estee Lauder executive Justin Boxford CEO - Central Oregon Daily",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQRGFvU2pRX281cGtTenFLajBYWE4xaEwwMTE5UDhEemVoaXlucFZtVzVEa0tLdXB0ZDZPYkc3VlkxR2VPUF9HTWFtN3A3SlB4SjBxYTJiMWN3ZFNnSWp6WU9vXzVxSzN5blRIY290YlEzekYweXB0X2JKY0FiMVZGZVlsTXlIWDhZN3NaSXh1YnhRN25CRjhiSURFR1Z6enExTnFXS1FBYzMzVnFBYXJGWnJKZGJYbTVXSXZDZmthWm9PeWxWTHJsYXBZRmJWQlI1X21CWTJuVzFPUmN5XzlKWEI4TUpVSWpUVlR1Wk05MXZocHVjLTgycHo0U1FkcHM?oc=5",
-      "date": "2026-11-14T01:40:00Z",
-      "platform": "Google News",
-      "ticker": "CPRI",
-      "brand": "",
-      "creator": "Central Oregon Daily",
-      "source": "Google News RSS (원문 확인 전)",
-      "topic": "기타 뉴스·콘텐츠",
-      "reviewStatus": "needs_review"
-    },
-    {
-      "id": "rss-62e6cc0c328212c",
-      "title": "Why The Margiela X Rimowa Collab Doesn’t Make Sense",
-      "url": "https://www.youtube.com/watch?v=3SgybZFJ6Iw",
-      "date": "2026-11-13T22:00:25Z",
-      "platform": "YouTube",
-      "ticker": "TREND",
-      "brand": "",
-      "creator": "Fashion Roadman",
-      "source": "Fashion Roadman 공식 채널 RSS · 제목만 확인",
-      "topic": "브랜드·제품",
-      "reviewStatus": "needs_review"
+      "discoveryMethod": "dated_rss_title_issuer_match",
+      "carriedOver": true
     }
   ],
   "newsCoverage": {
     "tracked": 40,
-    "scheduledToday": 40,
-    "succeededToday": 40,
+    "scheduledToday": 12,
+    "succeededToday": 12,
     "failedToday": 0,
-    "retainedNotRechecked": 0,
+    "retainedNotRechecked": 103,
     "lastSuccessByTicker": {
       "ABBV": "2026-11-21",
       "MRK": "2026-11-21",
@@ -3430,8 +2463,8 @@
       "PFE": "2026-11-21",
       "ELF": "2026-11-21",
       "ULTA": "2026-11-21",
-      "EL": "2026-11-21",
-      "950260": "2026-11-21",
+      "EL": "2026-11-22",
+      "950260": "2026-11-22",
       "278470": "2026-11-21",
       "GILD": "2026-11-21",
       "VRTX": "2026-11-21",
@@ -3439,23 +2472,23 @@
       "AMGN": "2026-11-21",
       "BIIB": "2026-11-21",
       "ALNY": "2026-11-21",
-      "UBER": "2026-11-21",
-      "RH": "2026-11-21",
+      "UBER": "2026-11-22",
+      "RH": "2026-11-22",
       "DIS": "2026-11-21",
-      "NFLX": "2026-11-21",
+      "NFLX": "2026-11-22",
       "105560": "2026-11-21",
       "003230": "2026-11-21",
-      "VKTX": "2026-11-21",
-      "INCY": "2026-11-21",
-      "IONS": "2026-11-21",
-      "NBIX": "2026-11-21",
-      "EXEL": "2026-11-21",
+      "VKTX": "2026-11-22",
+      "INCY": "2026-11-22",
+      "IONS": "2026-11-22",
+      "NBIX": "2026-11-22",
+      "EXEL": "2026-11-22",
       "BKNG": "2026-11-21",
       "WMT": "2026-11-21",
-      "MRNA": "2026-11-21",
+      "MRNA": "2026-11-22",
       "TGT": "2026-11-21",
       "COST": "2026-11-21",
-      "005830": "2026-11-21",
+      "005830": "2026-11-22",
       "SRPT": "2026-11-21",
       "CRSP": "2026-11-21",
       "TJX": "2026-11-21",
@@ -3472,21 +2505,21 @@
       "PFE": "2026-11-21T21:26:48.473542Z",
       "LLY": "2026-11-21T21:26:48.473542Z",
       "BIIB": "2026-11-21T21:26:48.473542Z",
-      "VKTX": "2026-11-21T21:26:48.473542Z",
+      "VKTX": "2026-11-22T03:54:11.314368Z",
       "ALNY": "2026-11-21T21:26:48.473542Z",
-      "NBIX": "2026-11-21T21:26:48.473542Z",
+      "NBIX": "2026-11-22T03:54:11.314368Z",
       "REGN": "2026-11-21T21:26:48.473542Z",
       "VRTX": "2026-11-21T21:26:48.473542Z",
-      "INCY": "2026-11-21T21:26:48.473542Z",
-      "IONS": "2026-11-21T21:26:48.473542Z",
-      "EXEL": "2026-11-21T21:26:48.473542Z",
+      "INCY": "2026-11-22T03:54:11.314368Z",
+      "IONS": "2026-11-22T03:54:11.314368Z",
+      "EXEL": "2026-11-22T03:54:11.314368Z",
       "SRPT": "2026-11-21T21:26:48.473542Z",
       "CRSP": "2026-11-21T21:26:48.473542Z",
-      "UBER": "2026-11-21T21:26:48.473542Z",
-      "MRNA": "2026-11-21T21:26:48.473542Z",
+      "UBER": "2026-11-22T03:54:11.314368Z",
+      "MRNA": "2026-11-22T03:54:11.314368Z",
       "DIS": "2026-11-21T21:26:48.473542Z",
       "BKNG": "2026-11-21T21:26:48.473542Z",
-      "NFLX": "2026-11-21T21:26:48.473542Z",
+      "NFLX": "2026-11-22T03:54:11.314368Z",
       "TJX": "2026-11-21T21:26:48.473542Z",
       "TGT": "2026-11-21T21:26:48.473542Z",
       "WMT": "2026-11-21T21:26:48.473542Z",
@@ -3495,110 +2528,88 @@
       "SBUX": "2026-11-21T21:26:48.473542Z",
       "ELF": "2026-11-21T21:26:48.473542Z",
       "COST": "2026-11-21T21:26:48.473542Z",
-      "EL": "2026-11-21T21:26:48.473542Z",
+      "EL": "2026-11-22T03:54:11.314368Z",
       "ULTA": "2026-11-21T21:26:48.473542Z",
-      "950260": "2026-11-21T21:26:48.473542Z",
-      "RH": "2026-11-21T21:26:48.473542Z",
+      "950260": "2026-11-22T03:54:11.314368Z",
+      "RH": "2026-11-22T03:54:11.314368Z",
       "105560": "2026-11-21T21:26:48.473542Z",
       "278470": "2026-11-21T21:26:48.473542Z",
       "003230": "2026-11-21T21:26:48.473542Z",
-      "005830": "2026-11-21T21:26:48.473542Z"
+      "005830": "2026-11-22T03:54:11.314368Z"
     },
-    "runMode": "full_watchlist",
-    "attemptedAt": "2026-11-21T21:26:48.473542Z",
+    "runMode": "rotating_daily",
+    "attemptedAt": "2026-11-22T03:54:11.314368Z",
     "sectorChecks": {
       "바이오·제약": {
-        "scheduled": 20,
-        "succeeded": 20
+        "scheduled": 6,
+        "succeeded": 6
       },
       "소비재·서비스": {
-        "scheduled": 15,
-        "succeeded": 15
+        "scheduled": 4,
+        "succeeded": 4
       },
       "내 담당 기업": {
-        "scheduled": 5,
-        "succeeded": 5
+        "scheduled": 2,
+        "succeeded": 2
       }
     },
     "industryChecks": {
-      "소비재·서비스": "ok",
       "바이오·제약": "ok",
+      "소비재·서비스": "ok",
       "우주·위성": "ok",
       "패션": "ok"
     },
-    "rule": "제목·발행일·종목명 대조, 기사 본문 미검증. 40개 기업 일괄 수집"
+    "rule": "제목·발행일·종목명 대조, 기사 본문 미검증. 4일 순환 수집"
   },
   "weeklyDigest": {
     "status": "자동 요약 · 원문 미검증",
     "counts": [
       {
         "source": "Google News",
-        "count": 227
+        "count": 153
       },
       {
         "source": "YouTube",
-        "count": 9
+        "count": 7
       }
     ],
     "topics": [
       {
         "name": "기업 실적",
-        "count": 31
+        "count": 21
       },
       {
         "name": "브랜드·제품",
-        "count": 11
+        "count": 8
       },
       {
         "name": "패션쇼·디자인",
-        "count": 6
+        "count": 4
       },
       {
         "name": "신발·스니커즈",
-        "count": 6
+        "count": 3
       }
     ],
-    "uncategorizedCount": 181,
-    "previousCollectedAt": "2026-11-21T12:06:57.729393Z",
-    "newSincePrevious": 47,
+    "uncategorizedCount": 124,
+    "previousCollectedAt": "2026-11-21T21:26:48.473542Z",
+    "newSincePrevious": 1,
     "companyFocus": [
       {
         "ticker": "TPR",
-        "count": 4,
+        "count": 1,
         "check": "Coach 성장·Kate Spade 손익",
         "headlines": [
           {
-            "title": "The 5 Best Dividend Stocks to Buy Now and Hold for the Next Decade - The Globe and Mail",
-            "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQb2NGR2taU0hpbXQ1dHVCYmNReGlFejBNc1U0U0JwNVVDUE5HWU9QUFZVNWpNMVNsTVdlcUNLZmlLU3EteUVETGN4eVpVeURzeXA2RER5YjdaTmtWYk5uanpiaVhzTzg3ckJNdFMwcVQzbHJCTHhnYVdXeWU4a1hfNlJnd1gtNjJPSjJwOG5XdTNsMXB6RFZGeUFCcUtPTC16QVcybVNvX0tUWDhGaGxpWVhlZlNxRUxiOGVXZmpFdVg1dkw0LVkyX2tSZkYySUJMWjl4c0N4VS12RmsyczFRVk5Sck0?oc=5",
-            "date": "2026-11-19"
-          },
-          {
-            "title": "The 5 Best Dividend Stocks to Buy Now and Hold for the Next Decade - The Motley Fool",
-            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPek9wNlNTMXFHTXgwa1ppVlFfV0RTSEpzbkVfV2VpUWhweURnbTNkc3ZjN05IOUxfRzlpZVV1dVhHUnUzQkVjZ0RBR09rNW5VR2s3U0lRZkl1Vko1ZFFsLXZ3Wlo0eUtjM3NMRzhkR0dPNDJBVldRelByVGZjLVpHUDczR01wTV9CTUcyaHh0REVEU0UzejlRLWUwRzJHZHpic3NFZUh4dTFwUjFZX0E?oc=5",
-            "date": "2026-11-19"
-          }
-        ]
-      },
-      {
-        "ticker": "RL",
-        "count": 4,
-        "check": "평균 판매단가·아시아 매출",
-        "headlines": [
-          {
-            "title": "Ralph Lauren Corporation (NYSE:RL) Stock Has Average Target Price of $448.20 - MarketBeat",
-            "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNd3I0aHRjT0xCcFNfNFRHcjNOYjVyeWNnMk95dl9CeXM1cUxYNG1ZVkpubHp0TmhYZV9tSURuQjdwMXhZUTdnRF9ORV8xMjFaWjFMcHVUcnFHQmU5MjM5RURvTXY3QVpUYVJZcW9pVjljZFZIcHhCQnFGazhYcThLaW5sVzVxb0wzbnVGLVNlQkRRcFNuYVQ2akFZLTVXZmFHR0RoNDJVQ2xqQlp1dDU2UUNYMFFXR0tUOC1zWW1scDJHNzFCT3lOUDluWDVobVNKbEE?oc=5",
-            "date": "2026-11-20"
-          },
-          {
-            "title": "From Practical Gifts to Wellness Moments: Holiday Trends to Watch for 2026 - Vogue",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVGZPT3diWUc2ZGo1VXF2dmZuc0hsQk9kbWNJQjlSNE9qSWppRV8zZXZfT0RtdEQ3RUdxcGlVX19fdXJ3NV9OZ19scnFoWkRPVWRPTDJSc0FlczFvSll4bkZFZ0JaN3FoU013RmluZnc3c01tYnM4anZVd3hwNDNQZkRLV3RuZVJsTFBHWVpINTRNS0JZVnJQcThubHZxVWZtZTQ1MWxB?oc=5",
-            "date": "2026-11-20"
+            "title": "Tapestry: Coach Keeps Impressing, But I Am Running Out Of Patience For Kate Spade (TPR) - Seeking Alpha",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOV1M4bXg1V24wY0YxNlF5NzdQejdqdUhFcVR3aXd1d0x0SzRNWEVIM0pjWlRMTEJTNFFIY0xZSXljZjJmODdlQmp2cmFRamVwdUQ2ajRwdWFXSjI2N2dhcVdPNlBYOV9BWUE3bEkyTWpBWkVMREVKRHc1XzZVSV9VVVZtUjd0LXpudlVpdE9uQ0ZwejhrdmNWMXZ5YzNpUVp6TG1xZVRRb1ZzMnk2bVlNaDJUUVhiVTNxdk9peg?oc=5",
+            "date": "2026-11-18"
           }
         ]
       },
       {
         "ticker": "GAP",
-        "count": 4,
+        "count": 2,
         "check": "Old Navy 동일매장매출·Athleta",
         "headlines": [
           {
@@ -3607,60 +2618,77 @@
             "date": "2026-11-20"
           },
           {
-            "title": "Gap stock pops even as warm fall weather leads the retail giant to cut its forecast - Yahoo Finance",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPLUtJa3VHWlN5S1ZJRnlfbTJISUR4ZmVmd1p6LVI1MURFQU1scGpFY0Nic2xfN19pbUNaT1NSQ1BCNjNmeEZUaU1qRWNOUVVxV1p6aXpnOTAyU2RXbUEyTldSLTQxWG5qdXAtLThIQ3MxX01Uak1Qd2k5RmRNZFdHakYxMUxqSF94VVFHb1p2bXNxNjJlTkJ1ZWNPR1VIbVVMUHBsYV9BMEUtRVdsUkN5SDQ0NExfcmM2UlNlT1BLdExwOEFYQV95aWJ1ckRNV21qNUV0OVBtTHZRUnZJaFRhZA?oc=5",
+            "title": "Gap Cuts Outlook on Weakness at Banana Republic and Old Navy - Bloomberg.com",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc3R0ZlRvWmVleGNscG9HLVhNNnIwMU02dUNmem1QWmdPMVFEV01Qb19XNFNCX2pyQmZZWDFvQ2xmYXRCajNaN3Vnb3g5eVNQbm11NlZpWi1TdWwzbk5RYXdlNS1PVkNyOElnbGtBcWlOZDlGSmRjYTBuYVJGVER0RFBFbGRNWVg0RFJnLUJaMHZ0WGR6SFNEem95Zng2eWhSeVNkYlpTZGJMZ3NXc1AxUQ?oc=5",
             "date": "2026-11-20"
           }
         ]
       },
       {
         "ticker": "URBN",
-        "count": 4,
+        "count": 2,
         "check": "Free People 동일매장매출·Nuuly 마진",
         "headlines": [
-          {
-            "title": "Boston Partners Buys New Position in Urban Outfitters, Inc. $URBN - MarketBeat",
-            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQNEtSNENBR3FfOEh3cUVORk1yZWlVZWpvckN1WXkyTXBhclZHWEd6WEFERER6dTZrczFmNEFyYTYwM3BxSWVoYzl1S2x2QWFrWThzT1UzNHBvYUtyTV9FLVg3UXlLM3Z1Nmc5aDFFZkFpTVpiY2hGVFZkUUZGR0NTcHYtQ3pGWmdoN2gxc3lYb0tWN05NRjVkdUZjZVRRMDhtcUp3WHZ3TEZPM2NzOVhRZEVVTjgzNVllTnB3NmFEZ3I?oc=5",
-            "date": "2026-11-21"
-          },
           {
             "title": "URBN’s LED Lighting Upgrades Cut Nearly $700K In Annual Energy Costs - Facility Executive Magazine",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNaDM1M2puemNKT1NwVDNqQTczRGw5QlpRVHRoWlNWd01Fb252Sm1WbzkzcXhnSlB6S2R1T1g2T2pCdzhzMFNvb2hKaV9lc05aSm1CV21sejVLZm92N0xjYnc1THFjRWIxMFN4cTM4cE5RclFPNHlvX21nMmdHOW1EYkNMYmhtVnNuODlTdWxfR1dXTlUzZFcwT3g4b0pLZw?oc=5",
             "date": "2026-11-18"
+          },
+          {
+            "title": "One person’s old outfit is another's new wardrobe - The Cavalier Daily",
+            "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczNrcVdnNm5vNWxpTGVTWTZRZVlPajhxZ1VMZGgyUEJFU3VMT3dyY2Z3SjI4R2ZfWWp3Tl92Y0Rxa2l2QTV3OEZMVkRZeWVFQkdSWUo5NDVkT3NnUmV0ZVJLY3RoM1VBSVJjV1NwMzd3b1NsRHdXMUhrSjlvZlVsUVAyUGdwVERDU3dhYzZnemtLQnZMWURFVA?oc=5",
+            "date": "2026-11-17"
           }
         ]
       },
       {
         "ticker": "LEVI",
-        "count": 4,
+        "count": 2,
         "check": "미국 직접판매 동일매장매출·재고",
         "headlines": [
-          {
-            "title": "Wait, These 19 Cute Levi’s Finds Will Be Your New Wardrobe Favorites - Who What Wear",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVTVBUnJYRWI2OVd4c2pEbEhKRzNoQTc5X0lMV2V1TGdVbGo4Q1RQQXlLZTZ5ekVNcEkxNks3aWdkaUR6Qm1ONEtveEFiaXI4QURwTXRWellpOGtRWXhUR3MtM2RuR2U3aVBFSDVxM3FMRlZzWWtxME5SamFCNmZFazItWVhYVE9XUWc?oc=5",
-            "date": "2026-11-20"
-          },
           {
             "title": "Levi’s® Celebrates 60 Years in Mexico - Levi Strauss & Co",
             "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aeVA3OUlfTVI2QW50bEs4Nlhha3Q4UmV2NXB0SjlHVkVUTnZjWWNmOGEzd1FLQUFBdmx6VmdZUDUwS3NtaEVheUFUajVsUUVDekY1emFRRHRWNWlENjExR2pB?oc=5",
             "date": "2026-11-18"
+          },
+          {
+            "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain - ESG Dive",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNS0N0cHdpV3BQNHZjVlJVLUpQaEtQNFJNS1FFQTJVV282TkZGYzhERFlGUV9kcTJDY2pucnpLTnNPR1NqQ3FfcGhFelBPUzlvUXBzX1pNblZHVUMxY1BxTi14cHp6M05VNU0tNlFvREFTcW1FcjU4b2lFSkE1T1hXOG9ZUjNTcjVsU01hdzBNeFQwQ3lhQm0zSjE2SUNfTlVXdm5KeHNpQXFPZw?oc=5",
+            "date": "2026-11-17"
           }
         ]
       },
       {
         "ticker": "CPRI",
-        "count": 4,
+        "count": 2,
         "check": "Michael Kors 매출·정가 판매",
         "headlines": [
-          {
-            "title": "Capri Holdings Stock Has A New CEO Has The Bull Case Changed? - Yahoo Finance",
-            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQV0NnUlFQSEJZWjlzT1BhODNjSnRHOTlsWTNwTDl0Mm5zLTJkbmhnTzQ3bllTOHpMOE1iQ0dLcVdsOHJYeU9xSDd4cjItRFA1N0tIX2NpbVprUXNYVGdkdS05WFZRdGUzdHQyTERQd1FYazdsM0NnYmdVeFNvS205c3N4elRQcHY1NG11d0JfNkFXdnhHcU9BSkRR?oc=5",
-            "date": "2026-11-21"
-          },
           {
             "title": "Justin Boxford’s Corner Office Pay at Capri - WWD",
             "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSUE1ODB6MG1pM3htSzg5WGFNdVlSM0hQcnpEM2lVYnFvb2lrTllEcDU3RDVNdTg2aDU5Q1gwV0l5WEsxNnBaY1hzS2libktOeUp0SEJBRUZUVzRrNkRaUzRHbmRpYkFLMkRibzVGbGNmNWQ4bEdHd2tBMW0xV3V3aFRROGtZS3lIQ0ExZFNYbkZFeVhucGRjRS1oRGs1YzJMSGFDZjZndV84ZHljd1E?oc=5",
             "date": "2026-11-16"
+          },
+          {
+            "title": "Justin Boxford joins Capri Holdings after more than two decades at Estée Lauder - Vogue Adria",
+            "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtZjFNM1lVazJ1bUh6VmNsbVRoaG1BRXRObzJGNG1tckRhenZXenJHa2JkdGZ4d2lQLWdGVHlsaTBkQm40S0NYaDlMOUFRUjVlYUJZSzcwMWdTRERyNjhjeHJTc2p4azNS?oc=5",
+            "date": "2026-11-16"
+          }
+        ]
+      },
+      {
+        "ticker": "VFC",
+        "count": 2,
+        "check": "Vans 매출·재고",
+        "headlines": [
+          {
+            "title": "V.F. Corporation's Post Earnings Jump Is Not Sustainable (NYSE:VFC) - Seeking Alpha",
+            "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRkpmb2k5d0tFOFZnOXAzMGt0OTlXMnZWTDhmQlgyYVd1cVZsY1JNRzlia1FzNmFzY2lWM3RGVnlYUjhEVU9XUzRPU2pFYjZGbWZ4cVN2bjVhenhxVmZqSWpPSXpad3NYZDFZUU9WNS1pTTZYRERKVFR3SzhHN2NmTE5pbXdhYkE3THBtWUN2U1RnS2lNTlcw?oc=5",
+            "date": "2026-11-19"
+          },
+          {
+            "title": "Inside Vans’ Milan Store: Local Design Meets Skate Heritage - VF Corporation",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY3dMN3ZVWjBfR3UxS0pvSklnb0RuVVBaU0h4NXZIUm5aV3ByaEljYlI0QkxNOUFmNDBidHJZTDJaMkRqM0JlU1o2UF9WSVpyTW1aZUotNktGR3NlSGZOX0YyeWRsaENCNE5EY3dWV2Z0NFh5YjFzU25BQWlmbU9EX2ZjV21FMHVQR2JLMVZxMG9mcFNkQ1I4dWxscnBDNkg5Q2hFSDlkdlZYN0xNV1dJX2tNcw?oc=5",
+            "date": "2026-11-18"
           }
         ]
       }
@@ -3672,7 +2700,7 @@
       "name": "Fashion Roadman",
       "source": "YouTube RSS",
       "status": "수집 완료",
-      "count": 9,
+      "count": 8,
       "previousRetained": 0
     },
     {
@@ -3686,15 +2714,15 @@
       "name": "공개 뉴스·패션 매체",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 227
+      "count": 153
     },
     {
       "name": "바이오·소비재·국내 뉴스 제목",
       "source": "Google News RSS",
       "status": "수집 완료",
-      "count": 154,
-      "scheduledToday": 40,
-      "succeededToday": 40,
+      "count": 124,
+      "scheduledToday": 12,
+      "succeededToday": 12,
       "failedToday": 0
     }
   ],
