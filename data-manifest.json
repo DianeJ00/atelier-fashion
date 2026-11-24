@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "releaseId": "0f5d3a405e04452b84dc",
-  "contentSha256": "0f5d3a405e04452b84dc1889ee617a45e895851c526abd556eebc46c061ede84",
-  "builtAt": "2026-11-23T04:35:05.648117+00:00",
+  "releaseId": "2d78fc7fd7bfb267ca3b",
+  "contentSha256": "2d78fc7fd7bfb267ca3bc058ab90b97693a57b411f9f74c24c5c91ad2ca33c2c",
+  "builtAt": "2026-11-24T02:44:36.537133+00:00",
   "dataFiles": {
     "research-universe.json": {
       "sha256": "3732bad63165856d6707f40816759f84178395574f099b2bca5eced78f569255",
@@ -89,10 +89,10 @@
       "status": null
     },
     "weekly-research.json": {
-      "sha256": "d8241ba0ed5ceceb1f5010a57903957954553ff70b0528ca0936eda2c76ac13d",
-      "bytes": 141480,
+      "sha256": "fd9629a5a70582243708324f9d4edc0985e1244f66ce341989ca94c51a0df405",
+      "bytes": 198164,
       "asOf": null,
-      "generatedAt": "2026-11-23T04:34:04.796328Z",
+      "generatedAt": "2026-11-24T02:44:30.808099Z",
       "status": null
     },
     "official-financials.json": {
