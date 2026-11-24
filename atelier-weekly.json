@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T04:35:05.470554+00:00",
-  "periodStart": "2026-11-16",
-  "periodEnd": "2026-11-23",
+  "generatedAt": "2026-11-24T07:28:52.402458+00:00",
+  "periodStart": "2026-11-17",
+  "periodEnd": "2026-11-24",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
   "items": [],
@@ -31,20 +31,20 @@
       "url": "https://clinicaltrials.gov/study/NCT06858839"
     },
     {
+      "title": "MRK · 항암 치료제의 3상 시험 일정",
+      "date": "2027-01-29",
+      "observation": "pembrolizumab의 항암 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 1월 29일로 예상되어 있음.",
+      "nextCheck": "MRK의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
+      "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
+      "url": "https://clinicaltrials.gov/study/NCT04657991"
+    },
+    {
       "title": "ABBV · 크론병(만성 장 염증질환) 치료제의 3상 시험 일정",
       "date": "2027-03",
       "observation": "risankizumab의 크론병(만성 장 염증질환) 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 3월로 예상되어 있음.",
       "nextCheck": "ABBV의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
       "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
       "url": "https://clinicaltrials.gov/study/NCT06063967"
-    },
-    {
-      "title": "SRPT · 희귀·유전 치료제의 3상 시험 일정",
-      "date": "2027-05-31",
-      "observation": "delandistrogene moxeparvovec의 희귀·유전 관련 3상 시험은 진행 중·모집 종료. 공식 등록자료에는 해당 연구의 주요 평가를 마칠 시점이 2027년 5월 31일로 예상되어 있음.",
-      "nextCheck": "SRPT의 기업 발표에서 실제 시험 결과 발표 시점과 평가 기준·부작용 데이터를 확인",
-      "caveat": "시험의 '주요 평가 완료 예정일'일 뿐, 결과 발표일·임상 성공·허가 예정일이 아님. 예상 일정은 바뀔 수 있음.",
-      "url": "https://clinicaltrials.gov/study/NCT05881408"
     }
   ],
   "staleConsumerKpi": [],
@@ -52,7 +52,7 @@
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-23T04:35:05.285431+00:00"
+    "fashion": "2026-11-24T07:28:52.148396+00:00"
   },
   "coverage": {
     "tracked": 52,
