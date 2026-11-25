@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T07:28:27.304696+00:00",
+  "generatedAt": "2026-11-25T05:57:35.934075+00:00",
   "status": "ok",
   "source": "SEC US-GAAP companyfacts; 10-Q period matched",
   "companies": [
@@ -399,102 +399,102 @@
     {
       "ticker": "GAP",
       "companyName": "GAP INC",
-      "periodStart": "2026-05-03",
-      "periodEnd": "2026-08-01",
-      "filed": "2026-08-28",
+      "periodStart": "2026-08-02",
+      "periodEnd": "2026-10-31",
+      "filed": "2026-11-24",
       "fiscalYear": 2026,
-      "fiscalPeriod": "Q2",
-      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
+      "fiscalPeriod": "Q3",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm",
       "metrics": {
         "revenue": {
-          "value": 3651000000,
+          "value": 4011000000,
           "unit": "USD",
           "tag": "Revenues",
-          "start": "2026-05-03",
-          "end": "2026-08-01",
+          "start": "2026-08-02",
+          "end": "2026-10-31",
           "yoy": {
-            "percent": -2.0,
+            "percent": 1.8,
             "comparison": {
-              "value": 3725000000,
-              "start": "2025-05-04",
-              "end": "2025-08-02",
+              "value": 3942000000,
+              "start": "2025-08-03",
+              "end": "2025-11-01",
               "form": "10-Q",
-              "filed": "2026-08-28",
-              "accession": "0001628280-26-059345",
+              "filed": "2026-11-24",
+              "accession": "0001628280-26-075650",
               "usGaapTag": "Revenues"
             }
           },
           "qoq": {
-            "percent": 4.4,
+            "percent": 9.9,
             "comparison": {
-              "value": 3497000000,
-              "start": "2026-02-01",
-              "end": "2026-05-02",
+              "value": 3651000000,
+              "start": "2026-05-03",
+              "end": "2026-08-01",
               "form": "10-Q",
-              "filed": "2026-05-29",
-              "accession": "0001628280-26-039070",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
               "usGaapTag": "Revenues"
             }
           }
         },
         "operatingIncome": {
-          "value": 676000000,
+          "value": 396000000,
           "unit": "USD",
           "tag": "OperatingIncomeLoss",
-          "start": "2026-05-03",
-          "end": "2026-08-01",
+          "start": "2026-08-02",
+          "end": "2026-10-31",
           "yoy": {
-            "percent": 131.5,
+            "percent": 18.6,
             "comparison": {
-              "value": 292000000,
-              "start": "2025-05-04",
-              "end": "2025-08-02",
+              "value": 334000000,
+              "start": "2025-08-03",
+              "end": "2025-11-01",
               "form": "10-Q",
-              "filed": "2026-08-28",
-              "accession": "0001628280-26-059345",
+              "filed": "2026-11-24",
+              "accession": "0001628280-26-075650",
               "usGaapTag": "OperatingIncomeLoss"
             }
           },
           "qoq": {
-            "percent": 51.9,
+            "percent": -41.4,
             "comparison": {
-              "value": 445000000,
-              "start": "2026-02-01",
-              "end": "2026-05-02",
+              "value": 676000000,
+              "start": "2026-05-03",
+              "end": "2026-08-01",
               "form": "10-Q",
-              "filed": "2026-05-29",
-              "accession": "0001628280-26-039070",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
               "usGaapTag": "OperatingIncomeLoss"
             }
           }
         },
         "netIncome": {
-          "value": 501000000,
+          "value": 311000000,
           "unit": "USD",
           "tag": "NetIncomeLoss",
-          "start": "2026-05-03",
-          "end": "2026-08-01",
+          "start": "2026-08-02",
+          "end": "2026-10-31",
           "yoy": {
-            "percent": 131.9,
+            "percent": 31.8,
             "comparison": {
-              "value": 216000000,
-              "start": "2025-05-04",
-              "end": "2025-08-02",
+              "value": 236000000,
+              "start": "2025-08-03",
+              "end": "2025-11-01",
               "form": "10-Q",
-              "filed": "2026-08-28",
-              "accession": "0001628280-26-059345",
+              "filed": "2026-11-24",
+              "accession": "0001628280-26-075650",
               "usGaapTag": "NetIncomeLoss"
             }
           },
           "qoq": {
-            "percent": 47.8,
+            "percent": -37.9,
             "comparison": {
-              "value": 339000000,
-              "start": "2026-02-01",
-              "end": "2026-05-02",
+              "value": 501000000,
+              "start": "2026-05-03",
+              "end": "2026-08-01",
               "form": "10-Q",
-              "filed": "2026-05-29",
-              "accession": "0001628280-26-039070",
+              "filed": "2026-08-28",
+              "accession": "0001628280-26-059345",
               "usGaapTag": "NetIncomeLoss"
             }
           }

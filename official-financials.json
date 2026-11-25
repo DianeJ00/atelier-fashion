@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T07:27:50.573984+00:00",
+  "generatedAt": "2026-11-25T05:57:03.325907+00:00",
   "source": "U.S. SEC EDGAR submissions + US-GAAP companyfacts",
   "method": "10-Q accession 일치 및 75~105일 수익·이익만 표기. GAAP 기준이며 조정 EPS·브랜드 성장률 아님.",
   "companies": [
@@ -86,7 +86,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-11-05",
@@ -178,7 +178,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-02",
@@ -260,7 +260,7 @@
           "netIncome": null
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-10-07",
@@ -352,7 +352,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-04",
@@ -368,12 +368,19 @@
       "status": "quarter_verified",
       "latestReport": {
         "form": "10-Q",
-        "filed": "2026-08-28",
-        "reportEnd": "2026-08-01",
-        "accession": "0001628280-26-059345",
-        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm"
+        "filed": "2026-11-24",
+        "reportEnd": "2026-10-31",
+        "accession": "0001628280-26-075650",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm"
       },
       "recentReports": [
+        {
+          "form": "10-Q",
+          "filed": "2026-11-24",
+          "reportEnd": "2026-10-31",
+          "accession": "0001628280-26-075650",
+          "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm"
+        },
         {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -387,70 +394,63 @@
           "reportEnd": "2026-05-02",
           "accession": "0001628280-26-039070",
           "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026039070/gap-20260502.htm"
-        },
-        {
-          "form": "10-K",
-          "filed": "2026-03-17",
-          "reportEnd": "2026-01-31",
-          "accession": "0001628280-26-018573",
-          "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026018573/gap-20260131.htm"
         }
       ],
       "quarter": {
-        "periodStart": "2026-05-03",
-        "periodEnd": "2026-08-01",
+        "periodStart": "2026-08-02",
+        "periodEnd": "2026-10-31",
         "form": "10-Q",
-        "filed": "2026-08-28",
-        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
+        "filed": "2026-11-24",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm",
         "fiscalYear": 2026,
-        "fiscalPeriod": "Q2",
+        "fiscalPeriod": "Q3",
         "metrics": {
           "revenue": {
-            "value": 3651000000,
+            "value": 4011000000,
             "unit": "USD",
             "usGaapTag": "Revenues",
-            "start": "2026-05-03",
-            "end": "2026-08-01",
+            "start": "2026-08-02",
+            "end": "2026-10-31",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q2",
+            "fiscalPeriod": "Q3",
             "form": "10-Q",
-            "accession": "0001628280-26-059345",
-            "priorYearValue": 3725000000,
-            "priorYearStart": "2025-05-04",
-            "priorYearEnd": "2025-08-02",
-            "yoyPercent": -2.0
+            "accession": "0001628280-26-075650",
+            "priorYearValue": 3942000000,
+            "priorYearStart": "2025-08-03",
+            "priorYearEnd": "2025-11-01",
+            "yoyPercent": 1.8
           },
           "operatingIncome": {
-            "value": 676000000,
+            "value": 396000000,
             "unit": "USD",
             "usGaapTag": "OperatingIncomeLoss",
-            "start": "2026-05-03",
-            "end": "2026-08-01",
+            "start": "2026-08-02",
+            "end": "2026-10-31",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q2",
+            "fiscalPeriod": "Q3",
             "form": "10-Q",
-            "accession": "0001628280-26-059345"
+            "accession": "0001628280-26-075650"
           },
           "netIncome": {
-            "value": 501000000,
+            "value": 311000000,
             "unit": "USD",
             "usGaapTag": "NetIncomeLoss",
-            "start": "2026-05-03",
-            "end": "2026-08-01",
+            "start": "2026-08-02",
+            "end": "2026-10-31",
             "fiscalYear": 2026,
-            "fiscalPeriod": "Q2",
+            "fiscalPeriod": "Q3",
             "form": "10-Q",
-            "accession": "0001628280-26-059345"
+            "accession": "0001628280-26-075650"
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
-        "filed": "2026-08-28",
-        "reportEnd": "2026-08-01",
-        "accession": "0001628280-26-059345",
-        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm"
+        "filed": "2026-11-24",
+        "reportEnd": "2026-10-31",
+        "accession": "0001628280-26-075650",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm"
       }
     },
     {
@@ -536,7 +536,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-10",
@@ -628,7 +628,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-09",
@@ -720,7 +720,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-10-28",
@@ -812,7 +812,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-10-30",
@@ -904,7 +904,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-10",
@@ -996,7 +996,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-09-04",
@@ -1088,7 +1088,7 @@
           }
         }
       },
-      "verifiedAt": "2026-11-24T07:27:50.573984+00:00",
+      "verifiedAt": "2026-11-25T05:57:03.325907+00:00",
       "quarterFiling": {
         "form": "10-Q",
         "filed": "2026-11-05",

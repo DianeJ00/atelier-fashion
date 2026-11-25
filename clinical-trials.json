@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T07:28:42.191800+00:00",
+  "generatedAt": "2026-11-25T05:57:50.514477+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -497,7 +497,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 15,
+      "verifiedTrialCountInSearchWindow": 13,
       "trials": [
         {
           "nctId": "NCT04657991",
@@ -528,6 +528,36 @@
           "primaryMeasure": "Safety Lead In (SLI): Incidence of Dose Limiting Toxicities (DLTs)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT04657991"
+        },
+        {
+          "nctId": "NCT07187778",
+          "title": "Phase II Trial of Single Agent Belzutifan or Pembrolizumab Versus Combination as Neoadjuvant Therapy in Clear Cell Renal Cell Carcinoma (BLAZE)",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Clear Cell Renal Cell Carcinoma"
+          ],
+          "sponsor": "M.D. Anderson Cancer Center",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2025-12-19",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-07-19",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2029-07-19",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "1. Safety and Adverse Events (AEs)",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT07187778"
         },
         {
           "nctId": "NCT07276880",
@@ -622,36 +652,6 @@
           "primaryMeasure": "Number of Participants with Adverse Events (AEs)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT07793942"
-        },
-        {
-          "nctId": "NCT05215340",
-          "title": "Study of Dato-DXd Plus Pembrolizumab vs Pembrolizumab Alone in the First-line Treatment of Subjects With Advanced or Metastatic NSCLC Without Actionable Genomic Alterations",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
-          "phases": [
-            "PHASE3"
-          ],
-          "conditions": [
-            "Metastatic Non Small Cell Lung Cancer"
-          ],
-          "sponsor": "Daiichi Sankyo",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2022-03-04",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2030-03-04",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2032-03-04",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Progression-free Survival Based on Blinded Independent Central Review in Participants With Non-Squamous Histology Who Were Administered Dato-DXd in Combination With Pembrolizumab C",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT05215340"
         }
       ],
       "status": "registered_trials_found",
@@ -662,7 +662,7 @@
       "asset": "sacituzumab govitecan",
       "disease": "항암",
       "modality": "항체약물접합체",
-      "verifiedTrialCountInSearchWindow": 64,
+      "verifiedTrialCountInSearchWindow": 63,
       "trials": [
         {
           "nctId": "NCT04454437",
@@ -693,36 +693,6 @@
           "primaryMeasure": "Objective Response Rate (ORR) According to Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v 1.1) By Independent Review Committee (IRC)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT04454437"
-        },
-        {
-          "nctId": "NCT05089734",
-          "title": "Study of Sacituzumab Govitecan (SG) Versus Docetaxel in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer (NSCLC)",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
-          "phases": [
-            "PHASE3"
-          ],
-          "conditions": [
-            "Non-Small Cell Lung Cancer"
-          ],
-          "sponsor": "Gilead Sciences",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2021-11-17",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2023-11-29",
-            "type": "ACTUAL"
-          },
-          "completion": {
-            "date": "2027-01",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Overall Survival (OS)",
-          "hasResultsPosted": true,
-          "url": "https://clinicaltrials.gov/study/NCT05089734"
         },
         {
           "nctId": "NCT04448886",
@@ -816,6 +786,36 @@
           "primaryMeasure": "Recommended phase II dose (RP2D) of alpelisib + sacituzumab govitecan",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT05143229"
+        },
+        {
+          "nctId": "NCT05327530",
+          "title": "A Study of the Safety and Efficacy of Various Combinations of Avelumab as Therapy in Locally Advanced or Metastatic Urothelial Carcinoma (JAVELIN Bladder Medley)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [
+            "PHASE2"
+          ],
+          "conditions": [
+            "Locally Advanced or Metastatic Urothelial Carcinoma"
+          ],
+          "sponsor": "EMD Serono Research & Development Institute, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-08-17",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2025-06-20",
+            "type": "ACTUAL"
+          },
+          "completion": {
+            "date": "2027-01-22",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Progression-Free Survival (PFS) According to Response Evaluation Criteria in Solid Tumors (RECIST Version 1.1) Assessed by Investigator - Avelumab + Sacituzumab Govitecan Versus Av",
+          "hasResultsPosted": true,
+          "url": "https://clinicaltrials.gov/study/NCT05327530"
         }
       ],
       "status": "registered_trials_found",
@@ -987,7 +987,7 @@
       "asset": "dupilumab",
       "disease": "면역·염증",
       "modality": "단클론항체",
-      "verifiedTrialCountInSearchWindow": 34,
+      "verifiedTrialCountInSearchWindow": 33,
       "trials": [
         {
           "nctId": "NCT06101095",
@@ -1018,34 +1018,6 @@
           "primaryMeasure": "Change from baseline in esophageal distensibility plateau as measured by Functional Lumen Imaging Probe (EndoFLIP)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT06101095"
-        },
-        {
-          "nctId": "NCT06087627",
-          "title": "A Non-interventional Study to Describe the Dupilumab Long-term Treatment, Safety and Patient Reported Outcomes in Chronic Nodular Prurigo (Prurigo Nodularis) in Clinical Routine",
-          "status": "ACTIVE_NOT_RECRUITING",
-          "statusKr": "진행 중·모집 종료",
-          "phases": [],
-          "conditions": [
-            "Prurigo Nodularis"
-          ],
-          "sponsor": "Sanofi",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2023-12-27",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2026-06-29",
-            "type": "ACTUAL"
-          },
-          "completion": {
-            "date": "2027-12-31",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Percentage (%) of participants with Investigator Global Assessment Prurigo Nodularis Stage (IGA-CPG-S) score 0 or 1 in Month 6",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT06087627"
         },
         {
           "nctId": "NCT05720325",
@@ -1134,6 +1106,34 @@
           "primaryMeasure": "Registry Assessment: Baseline Characteristics",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT03428646"
+        },
+        {
+          "nctId": "NCT03992417",
+          "title": "Observational Study of Patients Receiving Dupixent® for Atopic Dermatitis (AD)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "statusKr": "진행 중·모집 종료",
+          "phases": [],
+          "conditions": [
+            "Dermatitis Atopic"
+          ],
+          "sponsor": "Sanofi",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2019-06-11",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2027-03-31",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2027-03-31",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Baseline Characteristics: Medical history",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT03992417"
         }
       ],
       "status": "registered_trials_found",
@@ -1961,32 +1961,32 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-23T04:34:56.506161+00:00",
+  "comparisonTo": "2026-11-24T07:28:42.191800+00:00",
   "changeCount": 3,
   "changes": [
     {
       "ticker": "MRK",
       "asset": "pembrolizumab",
-      "nctId": "NCT04657991",
-      "url": "https://clinicaltrials.gov/study/NCT04657991",
+      "nctId": "NCT07187778",
+      "url": "https://clinicaltrials.gov/study/NCT07187778",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
     },
     {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT06170788",
-      "url": "https://clinicaltrials.gov/study/NCT06170788",
+      "ticker": "GILD",
+      "asset": "sacituzumab govitecan",
+      "nctId": "NCT05327530",
+      "url": "https://clinicaltrials.gov/study/NCT05327530",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
     },
     {
-      "ticker": "MRK",
-      "asset": "pembrolizumab",
-      "nctId": "NCT07793942",
-      "url": "https://clinicaltrials.gov/study/NCT07793942",
+      "ticker": "REGN",
+      "asset": "dupilumab",
+      "nctId": "NCT03992417",
+      "url": "https://clinicaltrials.gov/study/NCT03992417",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"

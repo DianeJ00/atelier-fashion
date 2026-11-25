@@ -1,13 +1,13 @@
 {
   "highlights": [
     {
-      "tier": "기사 제목·미검증",
-      "ticker": "RL",
-      "date": "2026-11-23",
-      "title": "Western Brands Need a New China Playbook - Vogue",
-      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBncTVkZEZGdTVkeEZwNy1VVEs1alhtbVQzLWUxRkpFYWotd3picXhuTVByb0F4c3VmSmoxcGZuY3BFRC1TN1VGeVBUcEE3ZGZnLWcyM3lLSWN1VUxFbzdWb3pCUFRaNW8xSG1PTzJla0Fod0dTSVFaM2F3?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+      "tier": "공식 공시",
+      "ticker": "GAP",
+      "date": "2026-11-24",
+      "title": "SEC 10-Q 매출 USD 4.01B / 전년 대비 +1.8%",
+      "context": "Old Navy 동일매장매출·Athleta · GAAP 법인 단위; 브랜드별 지표 별도 확인",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm",
+      "note": "공식 공시 사실, 세부 원문 확인 필요"
     },
     {
       "tier": "기사 제목·미검증",
@@ -20,20 +20,20 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "ANF",
-      "date": "2026-11-23",
-      "title": "The TikTok-Viral Abercrombie & Fitch Sloane Pants Are on Sale Now - Teen Vogue",
-      "context": "Hollister 동일매장매출·영업이익률 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYzM3QkJYbUpYcmpfWU9sOU9EWURSOFFUMjVHNG8zVDZ4NWlxbHhrQ3NhLU9rbzBHWGdCSERKZjRYSlRqeXlld204LXdkTWV4MGV4azE2WmJiemRjZnB4U09FTURnYWJaOU5OdW9lUlBwckZ4ZFdib0F4N1M4VkM5UlFuN3NYV0FraGtMcXU4cHY1dw?oc=5",
+      "ticker": "RL",
+      "date": "2026-11-24",
+      "title": "Inside Fashion’s $276 Billion Succession Shakeup - Vogue",
+      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcjl6SDd4dEVjeUQzeEZqel92cFNiZTRkekJuY2o5MXRiMlNxWWIzR19VM0ZMRWRNVFpYdlVjaXNSZ29xTVRsSHo4RnlKLUw5UWhtQ2NqZXpwY3FzdkxWM0VtZXpGN21NZUVWcFVweks4Z180WDVOQXQwNWFfS0RrdjdZN3JaNFlONFE?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-24T07:28:52.357986+00:00",
-  "periodStart": "2026-11-17",
-  "periodEnd": "2026-11-24",
+  "generatedAt": "2026-11-25T05:58:03.264630+00:00",
+  "periodStart": "2026-11-18",
+  "periodEnd": "2026-11-25",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
-    "newSECReports": 0,
+    "newSECReports": 1,
     "unverifiedHeadlines": 160,
     "commentVideosSampled": 0,
     "commentSamples": 0,
@@ -42,6 +42,29 @@
   "secStatus": "ok",
   "consumerStatus": "key_required",
   "companies": [
+    {
+      "ticker": "GAP",
+      "officialStatus": "quarter_verified",
+      "officialText": "SEC 10-Q 매출 USD 4.01B / 전년 대비 +1.8%",
+      "officialPeriod": "2026-08-02~2026-10-31",
+      "officialSource": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm",
+      "latestReport": {
+        "form": "10-Q",
+        "filed": "2026-11-24",
+        "reportEnd": "2026-10-31",
+        "accession": "0001628280-26-075650",
+        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm"
+      },
+      "newsTitleCount": 2,
+      "nextCheck": "Old Navy 동일매장매출·Athleta",
+      "riskToTest": "최대 브랜드 부진과 할인 확대",
+      "headline": {
+        "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine - Retail Dive",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHY1YXJVSXY1clNXNEM5X0xfTjlVZlRSWWdhTHBURzBEN1NFSEZaLTZCWU16TEEyMmw2UFdsNzNpMGZpTk5MalgwTWVXWkhXVXljandsTlNlZDY4dXQweWRqSVh6aFVNUDNqTmRFdm9jbGxWUjJYUklBVW4wY0l3YnFyNlJBTS1STFREQkxPT1FrS0xMNlFlaA?oc=5",
+        "date": "2026-11-20"
+      },
+      "consumerSampleCount": 0
+    },
     {
       "ticker": "TPR",
       "officialStatus": "quarter_verified",
@@ -55,13 +78,13 @@
         "accession": "0001116132-26-000031",
         "url": "https://www.sec.gov/Archives/edgar/data/1116132/000111613226000031/tpr-20260926.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Coach 성장·Kate Spade 손익",
       "riskToTest": "Coach 성장 둔화와 Kate Spade 적자 지속",
       "headline": {
-        "title": "Tapestry: Coach Keeps Impressing, But I Am Running Out Of Patience For Kate Spade (TPR) - Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOV1M4bXg1V24wY0YxNlF5NzdQejdqdUhFcVR3aXd1d0x0SzRNWEVIM0pjWlRMTEJTNFFIY0xZSXljZjJmODdlQmp2cmFRamVwdUQ2ajRwdWFXSjI2N2dhcVdPNlBYOV9BWUE3bEkyTWpBWkVMREVKRHc1XzZVSV9VVVZtUjd0LXpudlVpdE9uQ0ZwejhrdmNWMXZ5YzNpUVp6TG1xZVRRb1ZzMnk2bVlNaDJUUVhiVTNxdk9peg?oc=5",
-        "date": "2026-11-18"
+        "title": "US Company Tapestry, Inc. (Coach, Kate Spade) Set To Acquire Capri Holdings (Versace, Jimmy Choo) - Legal 500",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQbmZ3dmpsTUtqaVJQc1dYU2JXWE9SS1BFbm1PcXFscnN4Wkh4S0FnaE9WU045Z3NubDJ6cEFERkpTejJMcTBEanV2d1M0YWZKaE5Jckk1cEVsMEhaelpISmZWMXMyMm9FZzZPaFdLZ2IteXRIcFhQZmNKQ3htZ2lrdDV5UUg0NzlNVHM1ejJQUVl3ZHNnY1JKclBHUmdJbTVwcGdBUUVJek1oN3pOd19OS05yWWJKRWhwS2RLekJBTTltOWJkSl9kT2JwbWxFX2pSc0E1VnlFOW5ETmwyZll1amR5ZkNScENkREppYnJsU1JqNlBwUjJXMHpjVQ?oc=5",
+        "date": "2026-11-23"
       },
       "consumerSampleCount": 0
     },
@@ -82,32 +105,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Ralph Lauren Q2: Strong China, Europe Remains Weak, Soft Holiday Growth Outlook - Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYWpKU0lnaXloTGxCSTNjVm52SzlCaXJrdVIxdnk5QU5lZWJQUlhYTlJYU1ZVZF96SGc2cWNzR1FwcFJvMmRKWnZxZDNqOW1LVzNaanp6WnBreU5PZDJ6T0xadUlYSG5MLWVJOUMwb3VfTGhSRkFLa2Nhekg4OE5iRGc3VGVXc2xRU2E4LUZMNC13RXVUQlI1Q1U5aUwzMU5CWXdJb1llVkdVN0N3YWcyc1dFc3QtWmlwY0RjQWxRZi1SckpfaVBHQ3hCcGw4VlNVS2Vhbmo4bGxtRFhiQ3RIbWNR?oc=5",
-        "date": "2026-11-23"
-      },
-      "consumerSampleCount": 0
-    },
-    {
-      "ticker": "GAP",
-      "officialStatus": "quarter_verified",
-      "officialText": "SEC 10-Q 매출 USD 3.65B / 전년 대비 -2.0%",
-      "officialPeriod": "2026-05-03~2026-08-01",
-      "officialSource": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm",
-      "latestReport": {
-        "form": "10-Q",
-        "filed": "2026-08-28",
-        "reportEnd": "2026-08-01",
-        "accession": "0001628280-26-059345",
-        "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026059345/gap-20260801.htm"
-      },
-      "newsTitleCount": 2,
-      "nextCheck": "Old Navy 동일매장매출·Athleta",
-      "riskToTest": "최대 브랜드 부진과 할인 확대",
-      "headline": {
-        "title": "Warm weather thwarts Old Navy recovery, as Gap continues to shine - Retail Dive",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUHY1YXJVSXY1clNXNEM5X0xfTjlVZlRSWWdhTHBURzBEN1NFSEZaLTZCWU16TEEyMmw2UFdsNzNpMGZpTk5MalgwTWVXWkhXVXljandsTlNlZDY4dXQweWRqSVh6aFVNUDNqTmRFdm9jbGxWUjJYUklBVW4wY0l3YnFyNlJBTS1STFREQkxPT1FrS0xMNlFlaA?oc=5",
-        "date": "2026-11-20"
+        "title": "Inside Fashion’s $276 Billion Succession Shakeup - Vogue",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcjl6SDd4dEVjeUQzeEZqel92cFNiZTRkekJuY2o5MXRiMlNxWWIzR19VM0ZMRWRNVFpYdlVjaXNSZ29xTVRsSHo4RnlKLUw5UWhtQ2NqZXpwY3FzdkxWM0VtZXpGN21NZUVWcFVweks4Z180WDVOQXQwNWFfS0RrdjdZN3JaNFlONFE?oc=5",
+        "date": "2026-11-24"
       },
       "consumerSampleCount": 0
     },
@@ -124,13 +124,13 @@
         "accession": "0001193125-26-386468",
         "url": "https://www.sec.gov/Archives/edgar/data/912615/000119312526386468/urbn-20260731.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "One person’s old outfit is another's new wardrobe - The Cavalier Daily",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPczNrcVdnNm5vNWxpTGVTWTZRZVlPajhxZ1VMZGgyUEJFU3VMT3dyY2Z3SjI4R2ZfWWp3Tl92Y0Rxa2l2QTV3OEZMVkRZeWVFQkdSWUo5NDVkT3NnUmV0ZVJLY3RoM1VBSVJjV1NwMzd3b1NsRHdXMUhrSjlvZlVsUVAyUGdwVERDU3dhYzZnemtLQnZMWURFVA?oc=5",
-        "date": "2026-11-17"
+        "title": "Urban Outfitters Q3 sales rise 8.9 percent on Free People and Nuuly growth - Fashion United",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWE54YU8xdDJHNzFEdTB3M0JKMF85blg2RVdFSXl0ZVdXMHI2LWhqQ3ZQU0Rqdjg5dml4NWFHQXZPQm1lUjB0ZzEtRHY3NFNlSThsbmVqLS1mdG92QUhRSG00ai1VN0YxNTNQSFI0bzV4ZVV2SlZSeHc0Y1R5TkFjYk5ma0phaWw4aGczVnFnOW9fSklmMHFoSE9xMjh0OEhKa0ZXSENnaGFRTjVKTUVEdXFONm85OWxEVnZQUEVmT2VLQmJmZnc?oc=5",
+        "date": "2026-11-25"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "Levi’s® Celebrates 60 Years in Mexico - Levi Strauss & Co",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aeVA3OUlfTVI2QW50bEs4Nlhha3Q4UmV2NXB0SjlHVkVUTnZjWWNmOGEzd1FLQUFBdmx6VmdZUDUwS3NtaEVheUFUajVsUUVDekY1emFRRHRWNWlENjExR2pB?oc=5",
-        "date": "2026-11-18"
+        "title": "Wait, These 19 Cute Levi’s Black Friday Finds Will Be Your New Wardrobe Favorites - Who What Wear",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVTVBUnJYRWI2OVd4c2pEbEhKRzNoQTc5X0lMV2V1TGdVbGo4Q1RQQXlLZTZ5ekVNcEkxNks3aWdkaUR6Qm1ONEtveEFiaXI4QURwTXRWellpOGtRWXhUR3MtM2RuR2U3aVBFSDVxM3FMRlZzWWtxME5SamFCNmZFazItWVhYVE9XUWc?oc=5",
+        "date": "2026-11-20"
       },
       "consumerSampleCount": 0
     },
@@ -170,13 +170,13 @@
         "accession": "0001530721-26-000094",
         "url": "https://www.sec.gov/Archives/edgar/data/1530721/000153072126000094/cpri-20260926.htm"
       },
-      "newsTitleCount": 1,
+      "newsTitleCount": 2,
       "nextCheck": "Michael Kors 매출·정가 판매",
       "riskToTest": "브랜드 회복 지연",
       "headline": {
-        "title": "Justin Boxford’s Corner Office Pay at Capri - WWD",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSUE1ODB6MG1pM3htSzg5WGFNdVlSM0hQcnpEM2lVYnFvb2lrTllEcDU3RDVNdTg2aDU5Q1gwV0l5WEsxNnBaY1hzS2libktOeUp0SEJBRUZUVzRrNkRaUzRHbmRpYkFLMkRibzVGbGNmNWQ4bEdHd2tBMW0xV3V3aFRROGtZS3lIQ0ExZFNYbkZFeVhucGRjRS1oRGs1YzJMSGFDZjZndV84ZHljd1E?oc=5",
-        "date": "2026-11-16"
+        "title": "US Company Tapestry, Inc. (Coach, Kate Spade) Set To Acquire Capri Holdings (Versace, Jimmy Choo) - Legal 500",
+        "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQbmZ3dmpsTUtqaVJQc1dYU2JXWE9SS1BFbm1PcXFscnN4Wkh4S0FnaE9WU045Z3NubDJ6cEFERkpTejJMcTBEanV2d1M0YWZKaE5Jckk1cEVsMEhaelpISmZWMXMyMm9FZzZPaFdLZ2IteXRIcFhQZmNKQ3htZ2lrdDV5UUg0NzlNVHM1ejJQUVl3ZHNnY1JKclBHUmdJbTVwcGdBUUVJek1oN3pOd19OS05yWWJKRWhwS2RLekJBTTltOWJkSl9kT2JwbWxFX2pSc0E1VnlFOW5ETmwyZll1amR5ZkNScENkREppYnJsU1JqNlBwUjJXMHpjVQ?oc=5",
+        "date": "2026-11-23"
       },
       "consumerSampleCount": 0
     },
@@ -220,9 +220,9 @@
       "nextCheck": "Hollister 동일매장매출·영업이익률",
       "riskToTest": "핵심 브랜드 성장 둔화",
       "headline": {
-        "title": "The TikTok-Viral Abercrombie & Fitch Sloane Pants Are on Sale Now - Teen Vogue",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYzM3QkJYbUpYcmpfWU9sOU9EWURSOFFUMjVHNG8zVDZ4NWlxbHhrQ3NhLU9rbzBHWGdCSERKZjRYSlRqeXlld204LXdkTWV4MGV4azE2WmJiemRjZnB4U09FTURnYWJaOU5OdW9lUlBwckZ4ZFdib0F4N1M4VkM5UlFuN3NYV0FraGtMcXU4cHY1dw?oc=5",
-        "date": "2026-11-23"
+        "title": "Everything We’re Buying the Kids in Our Lives, Courtesy of Abercrombie & Fitch - theSkimm",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVUxsZllxcHByRGFHLVFzNFRMa2JfaDgwVjFQVEFrR0sxRm0ybm5Ma3lyd0s1MHZ0cF9nSnJYeThRSEwyaDAtR0pIdFdHOXAyUGQxSkhRcHJyRzRvaWpEYnlzcTNjWEhpYm9mU3d4cDZyeUpIYVhxSE5lR0tKU2ZqdTJwVmtYc1dTc1E?oc=5",
+        "date": "2026-11-24"
       },
       "consumerSampleCount": 0
     },
@@ -266,8 +266,8 @@
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
-        "title": "Calvin Klein turns 84: see his unbelievable transformation in then-and-now photos - HELLO!",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNX1IySGFIT2FOZHlGZVltdlJycUk4eldLLWVmb2c2OUg1RnRMdGdUSF9uVTk0d0lIMXJmOTNNN21tNEgzSVpNTVp4MFJVX3ZSdTl2dFNLM1l6N0M1akZKYzRCZzBXeU9NZHYwTUVnR1BKQVdXZ2ZoeE5zTEc0MTEtckxRNjZaT2hVaV9JSEx0aW9ZZDN0ckRwcDNpWVJkOVJabU10ZWdHRHFwTlNnTnc?oc=5",
+        "title": "Pvh Jumps 6.1% Amid Sector-Wide Rally - AlphaStreet",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qNnE1MUowa2JMUE5EeWN4aEdjNG15d3JzX001UTFWX0Fwc1Q1M201ZkJLNVFJTmxpQjJSeWFoalJxTm1iZTROMElyVjdUcXBsZjBuRkZwSUptOWdjckl4ZEVKaFE1Ti1VMkRFaXZ6NWJJUm1f0gF0QVVfeXFMTWo2cTUxSjBrYkxQTkR5Y3hoR2M0bXl3cnNfTTVRMVZfQXBzVDUzbTVmQks1UUlObGlCMlJ5YWhqUnFObWJlNE4wSXJWN1RxcGxmMG5GRnBJSm05Z2NySXhkRUpoUTVOLVUyREVpdno1YklSbV8?oc=5",
         "date": "2026-11-19"
       },
       "consumerSampleCount": 0
@@ -289,9 +289,9 @@
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "symbol__ Stock Quote Price and Forecast - CNN",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xS1NMc1lyV0VqVElwWkVJUFpLdFNHeV9iWnhzVkZtdzJvWFlhaFBpbFBLcmx3djF4a294c2g4MmFZcW0tR0JYMnFQS0Jwd2pm?oc=5",
-        "date": "2026-11-23"
+        "title": "VSXY: Victorias Secret & Co. filed SEC Form 8-K: Leadership Update, Financial Statements and Exhibits - Quantisnow",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSWw5Y005THFSUFNPVzUzdTlWdzRqY1pkREE0WnhVNXk1NFhxV3hVRlpTd0lOVW9kS2s5MGlNUm9tUXY3YnlDRkp4TEN0c29UYVZCTWdpc2JVM3JKMzdXV2ZpaU5EMjhnTGdnU09MeVVhc3RwUXhqdnlveVI4SDk5YmNjSGdDMlNFSVBBZGRnelBId0o4MHRJSXlkMmpjZ0tWMERuSXBOY0R6WlMzaGc?oc=5",
+        "date": "2026-11-24"
       },
       "consumerSampleCount": 0
     },
@@ -312,14 +312,21 @@
       "nextCheck": "Famous Footwear 동일매장매출",
       "riskToTest": "매장 부진과 차입 부담",
       "headline": {
-        "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork - The World's Fashion Business News",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNHotdGdUUjlCczdrV0xHUjZSNnN6VHJRbElBdVpNTkN2VGxfVjNXSVB4UUhaSVBuNjBndjZfaTRneEN1b011eUZfX2VaN0ltVjl0aUxLR2R4enFwQklTeXQtS09zZXI2b1JRdmY3QlRiTk51aVQ2b2VBX1hDM0NfUmNFMkJqTWZkVUtkZlhNcjFDa0FoMUdET1Q1UFN3N3V5MlF4N2Q5aHBVUmxYUEpRMEtCdWlQRUlXT0FKVTlWTy0?oc=5",
+        "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork France",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQV2RzWTlfQTVRdkRGSjBVVml1ZURZMEhkbTdFZkJ5dk5EN1hjNkVSalgzdWpNWlNNX1NzNUVQWHJmU3pVM05wbFFXd0VSTE5iWXpqTThHZE44X0lxNm95MHRmcTBFRGhuRE02MU0yZ3h1TGc0TGJRaWFIMl92Z2JZTzNkMGktV29wcVFiSkl1Wm1CSDZwbHBtbFRxa1ZacGI3aXE1UGIwcVBJdWhzUHFzd3dnTksxMXhqQ1RpcjNJNWY?oc=5",
         "date": "2026-11-20"
       },
       "consumerSampleCount": 0
     }
   ],
-  "latestSEC": [],
+  "latestSEC": [
+    {
+      "ticker": "GAP",
+      "form": "10-Q",
+      "filed": "2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/39911/000162828026075650/gap-20261031.htm"
+    }
+  ],
   "rules": [
     "10-Q 약 3개월 단위 US-GAAP 수치만 공식 실적 표시",
     "GAAP와 조정 실적, 다른 회계연도와 기간, 매출과 ARR 구분",
