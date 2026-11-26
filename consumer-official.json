@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T05:57:12.296116+00:00",
+  "generatedAt": "2026-11-26T05:50:14.040909+00:00",
   "editedKpiAsOf": "2026-11-05",
   "source": "기업 공식 실적 발표(업종 KPI) + 선택적 SEC 10-Q·XBRL",
   "status": "ok",
@@ -128,7 +128,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-04",
@@ -259,7 +259,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-21",
@@ -374,7 +374,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-05",
@@ -495,7 +495,7 @@
             "netIncome": null
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-03",
@@ -626,7 +626,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -673,7 +673,7 @@
       ],
       "risk": "분기 EPS에 일회성 관세 환급 혜택 포함. 반복 수익성으로 해석 금지",
       "status": "official_reviewed_snapshot",
-      "operatingKpiStatus": "dated_issuer_snapshot",
+      "operatingKpiStatus": "older_than_latest_10q",
       "sec": {
         "ticker": "TGT",
         "cik": 27419,
@@ -681,12 +681,19 @@
         "status": "quarter_verified",
         "latestReport": {
           "form": "10-Q",
-          "filed": "2026-08-28",
-          "reportEnd": "2026-08-01",
-          "accession": "0000027419-26-000042",
-          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm"
+          "filed": "2026-11-25",
+          "reportEnd": "2026-10-31",
+          "accession": "0000027419-26-000053",
+          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm"
         },
         "recentReports": [
+          {
+            "form": "10-Q",
+            "filed": "2026-11-25",
+            "reportEnd": "2026-10-31",
+            "accession": "0000027419-26-000053",
+            "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm"
+          },
           {
             "form": "10-Q",
             "filed": "2026-08-28",
@@ -700,70 +707,63 @@
             "reportEnd": "2026-05-02",
             "accession": "0000027419-26-000022",
             "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000022/tgt-20260502.htm"
-          },
-          {
-            "form": "10-K",
-            "filed": "2026-03-11",
-            "reportEnd": "2026-01-31",
-            "accession": "0000027419-26-000016",
-            "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm"
           }
         ],
         "quarter": {
-          "periodStart": "2026-05-03",
-          "periodEnd": "2026-08-01",
+          "periodStart": "2026-08-02",
+          "periodEnd": "2026-10-31",
           "form": "10-Q",
-          "filed": "2026-08-28",
-          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm",
+          "filed": "2026-11-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm",
           "fiscalYear": 2026,
-          "fiscalPeriod": "Q2",
+          "fiscalPeriod": "Q3",
           "metrics": {
             "revenue": {
-              "value": 26539000000,
+              "value": 27067000000,
               "unit": "USD",
               "usGaapTag": "RevenueFromContractWithCustomerExcludingAssessedTax",
-              "start": "2026-05-03",
-              "end": "2026-08-01",
+              "start": "2026-08-02",
+              "end": "2026-10-31",
               "fiscalYear": 2026,
-              "fiscalPeriod": "Q2",
+              "fiscalPeriod": "Q3",
               "form": "10-Q",
-              "accession": "0000027419-26-000042",
-              "priorYearValue": 25211000000,
-              "priorYearStart": "2025-05-04",
-              "priorYearEnd": "2025-08-02",
-              "yoyPercent": 5.3
+              "accession": "0000027419-26-000053",
+              "priorYearValue": 25270000000,
+              "priorYearStart": "2025-08-03",
+              "priorYearEnd": "2025-11-01",
+              "yoyPercent": 7.1
             },
             "operatingIncome": {
-              "value": 2560000000,
+              "value": 1672000000,
               "unit": "USD",
               "usGaapTag": "OperatingIncomeLoss",
-              "start": "2026-05-03",
-              "end": "2026-08-01",
+              "start": "2026-08-02",
+              "end": "2026-10-31",
               "fiscalYear": 2026,
-              "fiscalPeriod": "Q2",
+              "fiscalPeriod": "Q3",
               "form": "10-Q",
-              "accession": "0000027419-26-000042"
+              "accession": "0000027419-26-000053"
             },
             "netIncome": {
-              "value": 1877000000,
+              "value": 1211000000,
               "unit": "USD",
               "usGaapTag": "NetIncomeLoss",
-              "start": "2026-05-03",
-              "end": "2026-08-01",
+              "start": "2026-08-02",
+              "end": "2026-10-31",
               "fiscalYear": 2026,
-              "fiscalPeriod": "Q2",
+              "fiscalPeriod": "Q3",
               "form": "10-Q",
-              "accession": "0000027419-26-000042"
+              "accession": "0000027419-26-000053"
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
-          "filed": "2026-08-28",
-          "reportEnd": "2026-08-01",
-          "accession": "0000027419-26-000042",
-          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000042/tgt-20260801.htm"
+          "filed": "2026-11-25",
+          "reportEnd": "2026-10-31",
+          "accession": "0000027419-26-000053",
+          "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm"
         }
       }
     },
@@ -888,7 +888,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-06-03",
@@ -1009,7 +1009,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-28",
@@ -1140,7 +1140,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1271,7 +1271,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-10-29",
@@ -1402,7 +1402,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-07-29",
@@ -1533,7 +1533,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-05",
@@ -1664,7 +1664,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-08-27",
@@ -1795,7 +1795,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-11-02",
@@ -1926,7 +1926,7 @@
             }
           }
         },
-        "verifiedAt": "2026-11-25T05:57:12.296043+00:00",
+        "verifiedAt": "2026-11-26T05:50:14.040841+00:00",
         "quarterFiling": {
           "form": "10-Q",
           "filed": "2026-09-10",

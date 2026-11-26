@@ -20,17 +20,17 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "RL",
-      "date": "2026-11-24",
-      "title": "Inside Fashion’s $276 Billion Succession Shakeup - Vogue",
-      "context": "평균 판매단가·아시아 수요 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcjl6SDd4dEVjeUQzeEZqel92cFNiZTRkekJuY2o5MXRiMlNxWWIzR19VM0ZMRWRNVFpYdlVjaXNSZ29xTVRsSHo4RnlKLUw5UWhtQ2NqZXpwY3FzdkxWM0VtZXpGN21NZUVWcFVweks4Z180WDVOQXQwNWFfS0RrdjdZN3JaNFlONFE?oc=5",
+      "ticker": "ANF",
+      "date": "2026-11-23",
+      "title": "The TikTok-Viral Abercrombie & Fitch Sloane Pants Are on Sale Now - Teen Vogue",
+      "context": "Hollister 동일매장매출·영업이익률 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYzM3QkJYbUpYcmpfWU9sOU9EWURSOFFUMjVHNG8zVDZ4NWlxbHhrQ3NhLU9rbzBHWGdCSERKZjRYSlRqeXlld204LXdkTWV4MGV4azE2WmJiemRjZnB4U09FTURnYWJaOU5OdW9lUlBwckZ4ZFdib0F4N1M4VkM5UlFuN3NYV0FraGtMcXU4cHY1dw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-25T05:58:03.264630+00:00",
-  "periodStart": "2026-11-18",
-  "periodEnd": "2026-11-25",
+  "generatedAt": "2026-11-26T05:51:05.094811+00:00",
+  "periodStart": "2026-11-19",
+  "periodEnd": "2026-11-26",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 1,
@@ -105,9 +105,9 @@
       "nextCheck": "평균 판매단가·아시아 수요",
       "riskToTest": "가격 인상 이후 수요 둔화",
       "headline": {
-        "title": "Inside Fashion’s $276 Billion Succession Shakeup - Vogue",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPcjl6SDd4dEVjeUQzeEZqel92cFNiZTRkekJuY2o5MXRiMlNxWWIzR19VM0ZMRWRNVFpYdlVjaXNSZ29xTVRsSHo4RnlKLUw5UWhtQ2NqZXpwY3FzdkxWM0VtZXpGN21NZUVWcFVweks4Z180WDVOQXQwNWFfS0RrdjdZN3JaNFlONFE?oc=5",
-        "date": "2026-11-24"
+        "title": "Ralph Lauren Q2: Strong China, Europe Remains Weak, Soft Holiday Growth Outlook - Seeking Alpha",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYWpKU0lnaXloTGxCSTNjVm52SzlCaXJrdVIxdnk5QU5lZWJQUlhYTlJYU1ZVZF96SGc2cWNzR1FwcFJvMmRKWnZxZDNqOW1LVzNaanp6WnBreU5PZDJ6T0xadUlYSG5MLWVJOUMwb3VfTGhSRkFLa2Nhekg4OE5iRGc3VGVXc2xRU2E4LUZMNC13RXVUQlI1Q1U5aUwzMU5CWXdJb1llVkdVN0N3YWcyc1dFc3QtWmlwY0RjQWxRZi1SckpfaVBHQ3hCcGw4VlNVS2Vhbmo4bGxtRFhiQ3RIbWNR?oc=5",
+        "date": "2026-11-23"
       },
       "consumerSampleCount": 0
     },
@@ -128,9 +128,9 @@
       "nextCheck": "Free People 동일매장매출·Nuuly 마진",
       "riskToTest": "재고·물류 투자와 FCF 부담",
       "headline": {
-        "title": "Urban Outfitters Q3 sales rise 8.9 percent on Free People and Nuuly growth - Fashion United",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWE54YU8xdDJHNzFEdTB3M0JKMF85blg2RVdFSXl0ZVdXMHI2LWhqQ3ZQU0Rqdjg5dml4NWFHQXZPQm1lUjB0ZzEtRHY3NFNlSThsbmVqLS1mdG92QUhRSG00ai1VN0YxNTNQSFI0bzV4ZVV2SlZSeHc0Y1R5TkFjYk5ma0phaWw4aGczVnFnOW9fSklmMHFoSE9xMjh0OEhKa0ZXSENnaGFRTjVKTUVEdXFONm85OWxEVnZQUEVmT2VLQmJmZnc?oc=5",
-        "date": "2026-11-25"
+        "title": "Nuuly, Free People Drive Urban Outfitters’ Record Third-Quarter Results - SGB Media Online",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQWx4aXRVQ2hJYlk5ajM5NXBXb2RZaF9kdFdZN3diTFkxa0RQcm9NYzFxMzlzaGNQTW9JZnhicDNXYVJNOVpHNGxDbkNYaFlsQnh3anFBZW9IcTZSNktsTTI3OXdFNUE4X3JpZUc4U3FiVnRvZktHdlBNRlpHelZ4cExzS3NNUEF0X0NNNXJEaENWSWYzWXkw?oc=5",
+        "date": "2026-11-24"
       },
       "consumerSampleCount": 0
     },
@@ -151,9 +151,9 @@
       "nextCheck": "미국 직접판매 동일매장매출·재고",
       "riskToTest": "미국 직접판매 성장 정체",
       "headline": {
-        "title": "Wait, These 19 Cute Levi’s Black Friday Finds Will Be Your New Wardrobe Favorites - Who What Wear",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVTVBUnJYRWI2OVd4c2pEbEhKRzNoQTc5X0lMV2V1TGdVbGo4Q1RQQXlLZTZ5ekVNcEkxNks3aWdkaUR6Qm1ONEtveEFiaXI4QURwTXRWellpOGtRWXhUR3MtM2RuR2U3aVBFSDVxM3FMRlZzWWtxME5SamFCNmZFazItWVhYVE9XUWc?oc=5",
-        "date": "2026-11-20"
+        "title": "Levi’s Winterized Take on Its Iconic Trucker Jacket Is Ridiculously Affordable Right Now - Gear Patrol",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVG9nNzFmR29FbWFyZG1RM2hHaEo0SF8tS0ZERFRCZGxqdTVKTElqSi1ueEp2RDl5SVJ4aEhZNXFObTF3ZGI4VlJET3NiQTBjT0k1cktSZkItYVdwc3dlWEYtcFhJV3JJUjI1ZUtqeTNPcURJeDQ3ODRJQnc5Z0FTVVY4TV9JZw?oc=5",
+        "date": "2026-11-23"
       },
       "consumerSampleCount": 0
     },
@@ -243,9 +243,9 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "AEO earnings - Quantisnow",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4xNzNTZ29PZmY2S0RERDZRcVNtR3JNeXB4N3ZlSzN1UDJSdU91NGJPMzlCNlFuYXM3dHVBZmZDUGYtUF9LOWFRVU9Rd2x0b21E?oc=5",
-        "date": "2026-11-19"
+        "title": "Will Earnings Expectations Change The Bull Case For American Eagle Stock? - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNk04NzhSX0tleGNaN29JenBQSXEzMUVxTlN1T1VnZmFjMk1JRG9GbklQRmpxdkV3V1JWVWJXemt0aUUtSmVjNEljYmtWcHk3QXFTS2EyOUZmU0w5UVNIOGh4bjVEcUNJNzhCb0YzX29oQ3M2QTRNQWpOLWlyTUdMeUhjZ215Ujk3RWIxRXhkYTB3dnctTUF2Qm11aDBqVTNxek9lVVFn?oc=5",
+        "date": "2026-11-24"
       },
       "consumerSampleCount": 0
     },
@@ -266,9 +266,9 @@
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
-        "title": "Pvh Jumps 6.1% Amid Sector-Wide Rally - AlphaStreet",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1qNnE1MUowa2JMUE5EeWN4aEdjNG15d3JzX001UTFWX0Fwc1Q1M201ZkJLNVFJTmxpQjJSeWFoalJxTm1iZTROMElyVjdUcXBsZjBuRkZwSUptOWdjckl4ZEVKaFE1Ti1VMkRFaXZ6NWJJUm1f0gF0QVVfeXFMTWo2cTUxSjBrYkxQTkR5Y3hoR2M0bXl3cnNfTTVRMVZfQXBzVDUzbTVmQks1UUlObGlCMlJ5YWhqUnFObWJlNE4wSXJWN1RxcGxmMG5GRnBJSm05Z2NySXhkRUpoUTVOLVUyREVpdno1YklSbV8?oc=5",
-        "date": "2026-11-19"
+        "title": "Calvin Klein unveils holiday 2026 campaign with Jung Kook - Fashion United",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWmZmTlNjZzhpeHl3a3N3THAxZmFlckh2X294TnhsV0FLMkJ3UTgwOUxfTXRNWlRUTnFqSDJrLXlGeVFLTTA1V2NRMjV1TlE1WEkxcHZoQi1PeE1tMUk4X3lGMUhwTHltZWtiRVFxbUVOd0V4SDRZMjNuaGxsTHBOOExaQ1hMcHhra3Y0RUJ4VWVEdlAzQ0pxMDNpcHJYTE5OdWxJSDQ3N1MxR3JNQ0h1VQ?oc=5",
+        "date": "2026-11-25"
       },
       "consumerSampleCount": 0
     },
@@ -312,8 +312,8 @@
       "nextCheck": "Famous Footwear 동일매장매출",
       "riskToTest": "매장 부진과 차입 부담",
       "headline": {
-        "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork France",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQV2RzWTlfQTVRdkRGSjBVVml1ZURZMEhkbTdFZkJ5dk5EN1hjNkVSalgzdWpNWlNNX1NzNUVQWHJmU3pVM05wbFFXd0VSTE5iWXpqTThHZE44X0lxNm95MHRmcTBFRGhuRE02MU0yZ3h1TGc0TGJRaWFIMl92Z2JZTzNkMGktV29wcVFiSkl1Wm1CSDZwbHBtbFRxa1ZacGI3aXE1UGIwcVBJdWhzUHFzd3dnTksxMXhqQ1RpcjNJNWY?oc=5",
+        "title": "Caleres lowers Q3 earnings expectations, names new Famous Footwear president - FashionNetwork - The World's Fashion Business News",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNHotdGdUUjlCczdrV0xHUjZSNnN6VHJRbElBdVpNTkN2VGxfVjNXSVB4UUhaSVBuNjBndjZfaTRneEN1b011eUZfX2VaN0ltVjl0aUxLR2R4enFwQklTeXQtS09zZXI2b1JRdmY3QlRiTk51aVQ2b2VBX1hDM0NfUmNFMkJqTWZkVUtkZlhNcjFDa0FoMUdET1Q1UFN3N3V5MlF4N2Q5aHBVUmxYUEpRMEtCdWlQRUlXT0FKVTlWTy0?oc=5",
         "date": "2026-11-20"
       },
       "consumerSampleCount": 0

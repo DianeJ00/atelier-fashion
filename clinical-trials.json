@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T05:57:50.514477+00:00",
+  "generatedAt": "2026-11-26T05:50:51.190097+00:00",
   "source": "ClinicalTrials.gov API v2",
   "status": "ok",
   "assets": [
@@ -497,7 +497,7 @@
       "asset": "pembrolizumab",
       "disease": "항암",
       "modality": "면역관문 치료",
-      "verifiedTrialCountInSearchWindow": 13,
+      "verifiedTrialCountInSearchWindow": 14,
       "trials": [
         {
           "nctId": "NCT04657991",
@@ -560,39 +560,6 @@
           "url": "https://clinicaltrials.gov/study/NCT07187778"
         },
         {
-          "nctId": "NCT07276880",
-          "title": "Preoperative Chemotherapy, Pembrolizumab and Low or High Dose RADiation in an Expansion Cohort of Node(+), Triple Negative Breast Cancer",
-          "status": "RECRUITING",
-          "statusKr": "모집 중",
-          "phases": [
-            "PHASE2"
-          ],
-          "conditions": [
-            "Breast Cancer",
-            "Triple Negative Breast Cancer (TNBC)",
-            "HER2-Negative Breast Carcinoma",
-            "Node-positive Breast Cancer"
-          ],
-          "sponsor": "UNC Lineberger Comprehensive Cancer Center",
-          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
-          "start": {
-            "date": "2026-03-17",
-            "type": "ACTUAL"
-          },
-          "primaryCompletion": {
-            "date": "2027-11",
-            "type": "ESTIMATED"
-          },
-          "completion": {
-            "date": "2032-01",
-            "type": "ESTIMATED"
-          },
-          "lastUpdatePost": null,
-          "primaryMeasure": "Nodal Pathologic Complete Response rate(pCR)",
-          "hasResultsPosted": false,
-          "url": "https://clinicaltrials.gov/study/NCT07276880"
-        },
-        {
           "nctId": "NCT06170788",
           "title": "Sacituzumab Tirumotecan (MK-2870) in Combination With Pembrolizumab Versus Pembrolizumab Alone in Metastatic Non-small Cell Lung Cancer (NSCLC) With Programmed Cell Death Ligand 1 (PD-L1) Tumor Proportion Score (TPS) ≥ 5",
           "status": "RECRUITING",
@@ -621,6 +588,37 @@
           "primaryMeasure": "Overall Survival (OS)",
           "hasResultsPosted": false,
           "url": "https://clinicaltrials.gov/study/NCT06170788"
+        },
+        {
+          "nctId": "NCT05356741",
+          "title": "To Access the Safety and Effects of Intravenous Administration of VIR-5818 Alone and in Combination With Pembrolizumab in Adult Participants With Locally Advanced or Metastatic HER2-Expressing Cancers",
+          "status": "RECRUITING",
+          "statusKr": "모집 중",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "conditions": [
+            "Locally Advanced or Metastatic HER2-Expressing Cancers"
+          ],
+          "sponsor": "Vir Biotechnology, Inc.",
+          "association": "약물 + 시험 등록 후원·협력기관 교차 일치",
+          "start": {
+            "date": "2022-04-13",
+            "type": "ACTUAL"
+          },
+          "primaryCompletion": {
+            "date": "2028-04",
+            "type": "ESTIMATED"
+          },
+          "completion": {
+            "date": "2028-04",
+            "type": "ESTIMATED"
+          },
+          "lastUpdatePost": null,
+          "primaryMeasure": "Incidence of dose-limiting toxicity - Part 1 and Part 2",
+          "hasResultsPosted": false,
+          "url": "https://clinicaltrials.gov/study/NCT05356741"
         },
         {
           "nctId": "NCT07793942",
@@ -1961,32 +1959,14 @@
   ],
   "errors": [],
   "verifiedTrialCards": 59,
-  "comparisonTo": "2026-11-24T07:28:42.191800+00:00",
-  "changeCount": 3,
+  "comparisonTo": "2026-11-25T05:57:50.514477+00:00",
+  "changeCount": 1,
   "changes": [
     {
       "ticker": "MRK",
       "asset": "pembrolizumab",
-      "nctId": "NCT07187778",
-      "url": "https://clinicaltrials.gov/study/NCT07187778",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "GILD",
-      "asset": "sacituzumab govitecan",
-      "nctId": "NCT05327530",
-      "url": "https://clinicaltrials.gov/study/NCT05327530",
-      "sourceLastUpdate": null,
-      "type": "표본에서 새로 포착",
-      "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"
-    },
-    {
-      "ticker": "REGN",
-      "asset": "dupilumab",
-      "nctId": "NCT03992417",
-      "url": "https://clinicaltrials.gov/study/NCT03992417",
+      "nctId": "NCT05356741",
+      "url": "https://clinicaltrials.gov/study/NCT05356741",
       "sourceLastUpdate": null,
       "type": "표본에서 새로 포착",
       "detail": "이전 상위 표본에 없던 등록시험. 새로운 시험이 개설됐다는 뜻은 아님"

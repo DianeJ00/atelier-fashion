@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-25T05:58:03.102438+00:00",
-  "periodStart": "2026-11-15",
-  "periodEnd": "2026-11-25",
+  "generatedAt": "2026-11-26T05:51:04.938558+00:00",
+  "periodStart": "2026-11-16",
+  "periodEnd": "2026-11-26",
   "summaryPolicy": "원문 공개 부분을 대조한 편집 요약 우선. 제목/주가 기사 의견만으로 업황 확정 금지. 검증한 RSS는 원제목 대신 요약·검증 지표로 표시.",
   "items": [],
   "reviewedExtra": [],
@@ -10,110 +10,110 @@
   "autoItems": [],
   "pending": [
     {
-      "id": "rss-cc1d4e5f9a09a32",
-      "title": "Urban Outfitters Q3 sales rise 8.9 percent on Free People and Nuuly growth - Fashion United",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWE54YU8xdDJHNzFEdTB3M0JKMF85blg2RVdFSXl0ZVdXMHI2LWhqQ3ZQU0Rqdjg5dml4NWFHQXZPQm1lUjB0ZzEtRHY3NFNlSThsbmVqLS1mdG92QUhRSG00ai1VN0YxNTNQSFI0bzV4ZVV2SlZSeHc0Y1R5TkFjYk5ma0phaWw4aGczVnFnOW9fSklmMHFoSE9xMjh0OEhKa0ZXSENnaGFRTjVKTUVEdXFONm85OWxEVnZQUEVmT2VLQmJmZnc?oc=5",
+      "id": "rss-354be3bdbbaf8f1",
+      "title": "[여의도 투자본부 2부] 인제니아테라퓨틱스 vs 코스맥스 vs 현대오토에버 vs 로보티즈, 공략법은? - 머니투데이 - 머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE11b3lLbk12eFJvSDVMNDdkb29UU0FKRmwycGs3TWZiNmZpQXFtS2VhdWltV2NlRERHcldDUmpNM0xpUWZIdnJjcU41YjFNeDRiZW1JdGYwaEVfVUdubl9lQ3QtUnNzT3pX0gFuQVVfeXFMUHMtUVFpcWZ6elVkX1JoMXFPelBqV0dkYWsyT1BlN0JQYTZmdDdfWl9OM3JNb0NRc0hhRUNiWkY3N2ZldzlwRnAzSXpwcE5jZkotSkh1WEJlX09qTklob0RsYlFaUS1pS3lhV2NXNnc?oc=5",
+      "date": "2026-11-25",
+      "source": "머니투데이",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-2336b634c33e945",
+      "title": "Does the USD 134.1 Million Charge at Strategic Education (NASDAQ:STRA) Threaten Its Payout, and What Do Estée Lauder (NYSE:EL), Natural Grocers (NYSE:NGVC) and Newell Brands (NASDAQ:NWL) Show? - Kalkine",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOQVMyVmZTZl80NjM3V2sweks1Q1FlQmVkdnNlTVhJVzBvWDNOME0xMmRLNnVUNnNmLTUySDhtTXhTQ3lyTWdYX2UtellJSURPSHdtSnZnbTZfZThuNmV6dW1CV2lZVmFNSUpfZUlyWWxnS0tYeFh4WVJlSU9IbTU5cVIwM2tWY2NSdjlmcEJ0MUhnX0tpZ0stT0M3bFZaenU2bXBqMjlaTk9wM0ttZFROVFhIb29MelZfeGdxYTJlbldkWjg1WGZrWkItSEdBS2gtcjhDbTRjYS1aazFhVXlwbTFYN0w3OEFybGhwR201XzZjSDljUFdSbndoZzJVYm1hUnhtVk9WUHBFYzJpa0NycTdDcW5BM2hUSzNjeGw2UFFMUHRRZklaWmxOMzJmUmxEX3NDSXhtUy1QLUF2YnVRcHp3?oc=5",
+      "date": "2026-11-25",
+      "source": "Kalkine",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-b765f19ab22de8c",
+      "title": "CAVA vs. Monster Beverage: Which Consumer Stock Is a Better Buy for 2027? - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQN0hHMXFDQnJRSF9RdENHYmxpRGU3QWFyVVY3eWxGS214ekNSZUNRbzJTMFBVY1FERHRuLXFfa0lWRDdXekNLcW1HdnpIQWJCdmNlbUxqc2JNRU1yYXdOVnNhXy1PdXZKWndpM0JGM1N5MWthLXlUWi1CV3NLRGNoaWJpY0tWMTVQR0V1dzJ6a3ZiSnYtb0MyWHZvTGx3aU1zR25iRGdka3JvU1Iwa3VLeXk2LURsOVBfT0s1RDdyYmc?oc=5",
+      "date": "2026-11-25",
+      "source": "The Motley Fool",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-d45aa5342bccb4e",
+      "title": "Ionis Pharmaceuticals (NDQ:IONS): The RNA Pioneer Investors Have Given Up On After A Bad Phase 3 Result - Stocks Down Under",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9ZRUxlZnR4YUFybURrOFZZaExwNTFCUUZFV3B5N2tlRmJJMWxRUkFIaUJaRnd5UzNvNmFROTZjaU42elpwRmNSQjh2UkdGVXJ1TzdvQkJnNkdqS2l5WlJFbXBuMzd0T2tEeUdBY0NRNm0zQ0tWbnRQVjlTN1pwQQ?oc=5",
+      "date": "2026-11-25",
+      "source": "Stocks Down Under",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1f9bd850301c2cb",
+      "title": "Veruschka, the OG Supermodel and ’60s Icon, Dies at 87 - WWD",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOYXhRTkJuaUtJMUJCMFgtSXQxTnJ2cHFGRVZvSGVOT0h2bGRTREFQbkVfRmlqV1NJb3RZbmN4aHJlblUyWmt5RGs2TzdkbFJqVW52MDJJZlVFejI4c3NidEhoajE5ZlZ3R0F3X3J4Z2FfNkV0d2pmUFZyWmdWMnZFS3ZlRG1JS3JPdGJ0WEp0ZTZFUQ?oc=5",
+      "date": "2026-11-25",
+      "source": "WWD",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-e0f5d2abdfeead0",
+      "title": "Why Gilead’s HIV Access Shift Could Point Investors To ETFs - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUXo4S0JCbmdnYTFsY1RBT01QWEY2SnlVa0hEaDRJMkZrb1pEQUQtbHdLTTMyeVNsOG1xYjFxNm9wa2MyYm4yeUFkTk9QQ21jV2F0eWc3cl9OSHFaQ09IQVBhYldLNlZYYXp5d2pYMlVSNEVwME8yekkydUM1X3hmRmRwbEh4c00wRXhhNWVUV0hsRm9aekMzZWNiaF9wVUlOTFJtMWJvMznSAa4BQVVfeXFMT2VtRlpSTFNFajZ4Tm5uV1pGXzFBUVBsUjY5THp3a0NUMTBncDlNdHVqQnVGRnBvcHV2dzl6d2NSaG5xMTk2VWpINWg4RVUwV080b0g1T2luSmg5YjBlSmJyelFNamVmaV9kRnVtOXh0Y3dGR1RvcV9GVjBveXRXaHppenZBdWdUUmdOdWdPSFNyRjhvX3U4LWdVNmN4SnZTNjQtT01LOVB3RGE2ZGdB?oc=5",
+      "date": "2026-11-25",
+      "source": "Simply Wall St",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-06554f9b9057a33",
+      "title": "3 ETFs For Owning Gilead Without Making It The Whole Bet - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNXhFdUJfcVpPbnI4UTctRUFqcWs5dGFYQ1NfNkVtR3VBX2JMd2pMRzJwdFd1SEFRNTJWN3lFQmh2Z1l2LTljN2x2bG5SMjJqMmdaRVdLMWpVZlc3WWNxM1RtaHU2WHhiam1yY2t4MDlmSWlLbjNDdXdJZWZmNF9KVF9FblRTVE1DckMweGdOZ3dOTFJ5ZGpZUA?oc=5",
+      "date": "2026-11-25",
+      "source": "Yahoo Finance",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-94de848b2efc83f",
+      "title": "GSK’s autoimmune success; AbbVie drug gets expanded label for vitiligo - Endpoints News",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd1g0WHZJLUNWNzlSODZUcldTQzJCN1cyVU5fSUdVY1M2OG12azZXMWhDa0NfMGV4ZE5hd2pRUGZxc2g4WmNtNnlkX1dTMnFwRndJRW1kcGV0bDM2eTRFVU92WDZXbndIZEthT29CdXk3WUpla0NHenRRM0p3ZFZadGlidzFaaEY5VHBxTEJkbmtSUDZtbkJR?oc=5",
+      "date": "2026-11-25",
+      "source": "Endpoints News",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-1f981559717e220",
+      "title": "How Eli Lilly Stacks Up Against Johnson & Johnson, And Merck & Co, And The Rest Of The Pharmaceuticals Se - Benzinga",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWDA5NEVqc3JqcVA1V3V4RkR5eGdleVJ1bTFwZ0ZCY2tyVjlQSE16NlYxN0JDNjlfV1YxOFJWQ0JTWURmcWpzTk91Rml0M040bjJEYzZMdFgxT3pnXzFHb0ZkdTJsaGt1NG1HeHA4QVZTM0hkM1Vodi1pMlVYVzk2MWNxMHg5cHhkdGJtdFEtUnhnV0t4NXB5bFpRYURlU0ZIUXBFOEVscmk4eXZGbWNOYUFJaC1UZDlQbmhITE4yN2d1UE1iYnRhenlFdFh0OFFlRUF2aGdKa0pMSGhWeXViWnNB?oc=5",
+      "date": "2026-11-25",
+      "source": "Benzinga",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-eb7a976a5a03a9b",
+      "title": "Why is Amgen Stock Trading Higher Today/ - Amgen (NASDAQ:AMGN) - Benzinga",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNOGRzeXVVeDl0SjFwcThXRW56VGVVQVBoTW5rSXE5S2k2QWFTaGE4ZE41WW5fNG1EVTFEREg2dHJjT05uUWtYX1RodnZSSUFaM2NZeTVVNlkxS3lRUENETFVJUVR0UUk5akRXZlA4UEpFejlVY3RfMTZIRXdHQ3lLQ2FQdXJjWEk5dC1RWmNEVmRkLXF6UVl6MXlsdjdvMDNWS2pJeUJhcTFBMzRxY1AzNGlJODRyRWsyclVfUllPZm4zV0xHSGFaNWd5YTVVRnRNTFpZNFJGbGxnM0NwR2hLMDVxSm81Zw?oc=5",
+      "date": "2026-11-25",
+      "source": "Benzinga",
+      "status": "분석 대기",
+      "reason": "기사 본문 미확보 · RSS 제목만 수집"
+    },
+    {
+      "id": "rss-2225e0fac182e47",
+      "title": "Calvin Klein unveils holiday 2026 campaign with Jung Kook - Fashion United",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWmZmTlNjZzhpeHl3a3N3THAxZmFlckh2X294TnhsV0FLMkJ3UTgwOUxfTXRNWlRUTnFqSDJrLXlGeVFLTTA1V2NRMjV1TlE1WEkxcHZoQi1PeE1tMUk4X3lGMUhwTHltZWtiRVFxbUVOd0V4SDRZMjNuaGxsTHBOOExaQ1hMcHhra3Y0RUJ4VWVEdlAzQ0pxMDNpcHJYTE5OdWxJSDQ3N1MxR3JNQ0h1VQ?oc=5",
       "date": "2026-11-25",
       "source": "Fashion United",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     },
     {
-      "id": "rss-26d7b2f861e945d",
-      "title": "Urban Outfitters (URBN) earnings date: next report... - Quantisnow",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBnTXpmZXBTUlNaaXpmR0N6Q3E1YXpaM1RuN2JqNlB4dVJWVGVTYkNYS2ZHenpMbnNLa3BuY2FuY0tNMW5XZzJSaDBOMnFWMkpSTlE?oc=5",
+      "id": "rss-6ff53281a9ca9b3",
+      "title": "RH shares takes drastic plunge as luxury furniture retailer faces mounting market pressure - InteriorDaily",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZzg3ZEZucExHSWV5Y1phTV9PTkI5SmJ0VlVfYlNXNkV0WHRoS2s1WURJWEZKRjJSV1g1ejZjTWk5bjlqRFMwaUZ0dERQem84aUFzTHlDWkdlUGRnQkJSTGJZYi02Z3JPWmVGYktFWVdOMzZ4OU9NVmllYUE3SzMwMVdkaTdkNEpSS1JMNElta1pCQWVDRlFtdlh3NnlQSUNoWGdoLWhRaXJweTBLaGtObElXSUFhdDVxZ25ubkJ4OGVjSGJ0VWNlT1NsZU1hbHZ0WmRj?oc=5",
       "date": "2026-11-25",
-      "source": "Quantisnow",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-d723161737a41ae",
-      "title": "[리포트 브리핑]인제니아테라퓨틱스(Reg.S), '안과를 넘어, TIE2 플랫폼의 확장성 검증' Not Rated - 삼성증권 - 뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9TMllNTnJTaUpKUjMwN1hWX1I5RHBTVC1taGY3WTJ5MDdpdmVNUE1SWHZuMExZbDNKc1EtWVdHaGZVM3NZUTluc01jWVRXNUJZc0UwM2YyZWc3UEhE?oc=5",
-      "date": "2026-11-24",
-      "source": "뉴스핌",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-0ec4ac65c65b03e",
-      "title": "Americans are still spending. Why aren’t consumer discretionary stocks keeping up? - Chase Bank",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTNQQlRVMnp5c0JrMVRtNUtmMFZ6VEVmZmVPV3Z2dFFxTlk3YWJDdW1pNlA3UTdEeGg2ZnBCRS14dzRmeWlYd3JHOVhkb2w3RXB4SDBmTjhET1ZwbURuTUFCelZraDlscFoxYmhGelVGTFFXQl9HWjB5UU5WUXY4SzVNakhXYnBKQ25nY1FQR21GSGRQbjZCelNOcUN5b0gtV09hZmJqOGNfSjc2bGM0?oc=5",
-      "date": "2026-11-24",
-      "source": "Chase Bank",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-4ce72ecbd02fcfb",
-      "title": "Incyte (INCY) Stock Is Up 5.1% Today as Health Care Stocks Rally - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTDFPcUhFQVJYZ2xyOG43QUNWaHpvZ2htZm1qYXBvSkZCcG1NeUtFRThlY0RjOUktZTZnMlpVSTZ5MUliQU5Ta2RsQ3l6Tm9hZDdEbTczZkRnbU1aMjVndldjVk5samFscGo2emJQY3RKbzFFb3RKSHF1VnF2NzJFTkNaQV9EbHZjS0pCZ1h4TQ?oc=5",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-bde37ec89df0dc8",
-      "title": "Everything We’re Buying the Kids in Our Lives, Courtesy of Abercrombie & Fitch - theSkimm",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVUxsZllxcHByRGFHLVFzNFRMa2JfaDgwVjFQVEFrR0sxRm0ybm5Ma3lyd0s1MHZ0cF9nSnJYeThRSEwyaDAtR0pIdFdHOXAyUGQxSkhRcHJyRzRvaWpEYnlzcTNjWEhpYm9mU3d4cDZyeUpIYVhxSE5lR0tKU2ZqdTJwVmtYc1dTc1E?oc=5",
-      "date": "2026-11-24",
-      "source": "theSkimm",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-aa3be3880ca1f65",
-      "title": "ESTEE LAUDER COMPAN. INC., THER (ELAA.HA) Q3 FY2026 earnings call transcript - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPb3RSMVpBelNsQ3VIZ05uemRFSVFXNkNMcko0bGNMTzNTYi1vWmVaWjBnaFhPRmpHd0Jnd3hvTG9UWC1QbGlCWHM5clZQVnNDcFBqVFF2NUdSdUJldXdReEdja19SUXZMZFM2VVB1ODJvejk1VF9FNnNpRFJaWVdmWUFjUWpXS3RxckhWMXB1Z3o5R2VP?oc=5",
-      "date": "2026-11-24",
-      "source": "Yahoo Finance",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-4a97cb5fd40871e",
-      "title": "Moderna’s 650% Surge Gives Bespoke Vaccine Little Room for Error - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdWhzTnViOVloWlJfVi1ZeHlYcWltWEhNMEhkc2p4RmZ5R0ZOUDNGb00wWWxqTUpvcDBWNHYzbUlTTjhDdUE5bHo4UVZEck9ITnpRRFhSWlhUODB0LXNpX0kzWWh6TlJhZTZVbVFQQTNWV3dsOUUzVHBRNXcxR1FiaXlqVXpOQlJoM0o0aU5ySjNpZGZyZW5zSVhqZldXN1E2b0p1enFMMkNfeFFrUmltdEFjZldhTzBDajdiRk82TG4wZU0?oc=5",
-      "date": "2026-11-24",
-      "source": "Bloomberg.com",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-3ba666dca736670",
-      "title": "Two-Factor Authentication for Cancer Drugs: AbbVie Bets Up to $2.5B on DISCO's AND-Gated Bispecifics - Oncodaily",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5JSlI3Ym42XzN5MFNrbzdmZDk4WFJkNmduYldmR3JCQTlLZ0JFT085RnFOaVNtQlJ5YjZ2NXpGUU5WU3Z6Q3dIX2s2OWRHUEo2WVVXMTY2bXU?oc=5",
-      "date": "2026-11-24",
-      "source": "Oncodaily",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-f74abab52e483d8",
-      "title": "Chipotle’s Earnings Fell 7% Last Quarter, but 1 Trend Has Now Lasted 3 Straight Quarters. - AOL.com",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5pWEFIRnpuRU95MWFMLVZiT1RVZ3oyR3liVXZZSXRzVms4SUZ5OU9wM0FPck9GZFJKUFUwNUMzV0g3Rk8yWXBHM1F5eVVnZVFkUUxTcUh1LUkxc3Zra2xmZ1B4UWZMVmtlUTVwOUNuWVZrNDk5QnBOZ0dEV29CUQ?oc=5",
-      "date": "2026-11-24",
-      "source": "AOL.com",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-bfb7912dcd89458",
-      "title": "VSXY: Victorias Secret & Co. filed SEC Form 8-K: Leadership Update, Financial Statements and Exhibits - Quantisnow",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSWw5Y005THFSUFNPVzUzdTlWdzRqY1pkREE0WnhVNXk1NFhxV3hVRlpTd0lOVW9kS2s5MGlNUm9tUXY3YnlDRkp4TEN0c29UYVZCTWdpc2JVM3JKMzdXV2ZpaU5EMjhnTGdnU09MeVVhc3RwUXhqdnlveVI4SDk5YmNjSGdDMlNFSVBBZGRnelBId0o4MHRJSXlkMmpjZ0tWMERuSXBOY0R6WlMzaGc?oc=5",
-      "date": "2026-11-24",
-      "source": "Quantisnow",
-      "status": "분석 대기",
-      "reason": "기사 본문 미확보 · RSS 제목만 수집"
-    },
-    {
-      "id": "rss-817bc9e986d1741",
-      "title": "Pfizer steps into in vivo CAR T space with $2.6B licensing deal - Drug Discovery News",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbEJYTUNYd1ZXNjFQaXVrcEg4NlI0aU43V1NMaXVTekJOUzVwejhqbDBHUnN3VXd0V19xc3o3dWx4UDVMTnNTTG9HUUk4cldvYnJLQmQzdTVISjJKSXlhVVRKZ01qN2UyWWlNSW1UbWtBM0tIeS1QM0FqakZxT2szUE1laEdXTEZMTEdZSi1GdC1PMXBLamkzN2R2VkdsbkVCZmR1U2w3UkhxdjBKSHVENC1tYm5xNFNz?oc=5",
-      "date": "2026-11-24",
-      "source": "Drug Discovery News",
+      "source": "InteriorDaily",
       "status": "분석 대기",
       "reason": "기사 본문 미확보 · RSS 제목만 수집"
     }

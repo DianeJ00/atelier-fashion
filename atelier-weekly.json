@@ -1,11 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T05:58:03.302101+00:00",
-  "periodStart": "2026-11-18",
-  "periodEnd": "2026-11-25",
+  "generatedAt": "2026-11-26T05:51:05.130474+00:00",
+  "periodStart": "2026-11-19",
+  "periodEnd": "2026-11-26",
   "timezone": "UTC",
   "title": "이번 주 투자 논리를 점검할 변화",
   "items": [
+    {
+      "id": "SEC:TGT:2026-10-31",
+      "sector": "소비재·서비스",
+      "ticker": "TGT",
+      "eventDate": "2026-11-25",
+      "eventType": "미국 SEC 분기 실적",
+      "tier": "공식 공시 · GAAP",
+      "title": "TGT · 매출 전년 대비 +7.1%",
+      "observation": "SEC 10-Q 분기 GAAP 매출 USD 27.07B, 전년 동기 대비 +7.1%, 직전 분기 대비 +2.0%",
+      "period": "2026-08-02 ~ 2026-10-31",
+      "investment": "방문객 회복과 할인·관세 환급의 이익 기여 분리",
+      "nextCheck": "동일매장매출 성장률와 수익성·현금흐름을 동일 분기로 비교",
+      "caveat": "GAAP 회계 매출과 동일매장매출·총예약액 등의 기준은 다름. 매출 증가만으로 투자 가설의 방향성 확정 불가. 분기 EPS에 일회성 관세 환급 혜택 포함. 반복 수익성으로 해석 금지",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm",
+      "sourceLabel": "SEC 10-Q",
+      "priority": 5
+    },
     {
       "id": "SEC:GAP:2026-10-31",
       "sector": "패션",
@@ -24,13 +41,25 @@
       "priority": 4
     }
   ],
-  "itemCount": 1,
+  "itemCount": 2,
   "bySector": {
-    "소비재·서비스": 0,
+    "소비재·서비스": 1,
     "바이오·제약": 0,
     "패션": 1
   },
   "reviewCandidates": [
+    {
+      "companyId": "US:TGT",
+      "ticker": "TGT",
+      "sector": "소비재·서비스",
+      "currentQuestion": "재량 소비 회복과 매장 트래픽",
+      "contradictionToCheck": "비필수 소비 둔화·판촉 심화",
+      "candidateState": "근거 검토 필요 · 방향 미판정",
+      "change": "TGT · 매출 전년 대비 +7.1%",
+      "evidenceDate": "2026-11-25",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm",
+      "note": "AI·자동 규칙은 가설 강화·약화 및 매매 의견을 확정하지 않음."
+    },
     {
       "companyId": "US:GAP",
       "ticker": "GAP",
@@ -78,12 +107,21 @@
       "url": "https://clinicaltrials.gov/study/NCT06063967"
     }
   ],
-  "staleConsumerKpi": [],
+  "staleConsumerKpi": [
+    {
+      "ticker": "TGT",
+      "period": "2026 Q2",
+      "newSECPeriod": "2026-10-31",
+      "filed": "2026-11-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000053/tgt-20261031.htm",
+      "reason": "새 10-Q는 확인됐으나 운영 KPI는 종전 공식 분기 스냅샷. 원문 대조 갱신 필요"
+    }
+  ],
   "sourceStates": {
     "sec": "ok",
     "consumer": "ok",
     "clinical": "ok",
-    "fashion": "2026-11-25T05:58:03.102438+00:00"
+    "fashion": "2026-11-26T05:51:04.938558+00:00"
   },
   "coverage": {
     "tracked": 52,
