@@ -11,26 +11,26 @@
     },
     {
       "tier": "기사 제목·미검증",
-      "ticker": "VFC",
-      "date": "2026-11-18",
-      "title": "Inside Vans’ Milan Store: Local Design Meets Skate Heritage - VF Corporation",
-      "context": "Vans 매출·재고 · 공식 IR 교차 검증 전",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY3dMN3ZVWjBfR3UxS0pvSklnb0RuVVBaU0h4NXZIUm5aV3ByaEljYlI0QkxNOUFmNDBidHJZTDJaMkRqM0JlU1o2UF9WSVpyTW1aZUotNktGR3NlSGZOX0YyeWRsaENCNE5EY3dWV2Z0NFh5YjFzU25BQWlmbU9EX2ZjV21FMHVQR2JLMVZxMG9mcFNkQ1I4dWxscnBDNkg5Q2hFSDlkdlZYN0xNV1dJX2tNcw?oc=5",
-      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
-    },
-    {
-      "tier": "기사 제목·미검증",
       "ticker": "ANF",
       "date": "2026-11-23",
       "title": "The TikTok-Viral Abercrombie & Fitch Sloane Pants Are on Sale Now - Teen Vogue",
       "context": "Hollister 동일매장매출·영업이익률 · 공식 IR 교차 검증 전",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYzM3QkJYbUpYcmpfWU9sOU9EWURSOFFUMjVHNG8zVDZ4NWlxbHhrQ3NhLU9rbzBHWGdCSERKZjRYSlRqeXlld204LXdkTWV4MGV4azE2WmJiemRjZnB4U09FTURnYWJaOU5OdW9lUlBwckZ4ZFdib0F4N1M4VkM5UlFuN3NYV0FraGtMcXU4cHY1dw?oc=5",
       "note": "Google News RSS 발견 원문; 기사 본문 미검증"
+    },
+    {
+      "tier": "기사 제목·미검증",
+      "ticker": "CAL",
+      "date": "2026-11-19",
+      "title": "David Law Will Take the Reins at Famous Footwear as Brian Costello Retires - WWD",
+      "context": "Famous Footwear 동일매장매출 · 공식 IR 교차 검증 전",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVnY4QkNnVzhEbXF2MnUtaVN2X2RGWHNjSFhMX2VEZW5kR29fb0V0eEpoQnMxOUtiTC1YaDR3UHNJSFRyMVZzaUUyZTVNenBkM3lpSUsxa3RWamNNdWF2Qk01V2QtZzdzYm5NZkxiVjg5Nk10bnZwZV9aQldRU2U1T01FQmY4VnQ4Rkt0eURLQmFyWWFDZzZuWjJPd2s0R1BiWmlKcG9sX0VmMVZadFNsSmVHZ1BlVzBQUWhiVA?oc=5",
+      "note": "Google News RSS 발견 원문; 기사 본문 미검증"
     }
   ],
-  "generatedAt": "2026-11-26T05:51:05.094811+00:00",
-  "periodStart": "2026-11-19",
-  "periodEnd": "2026-11-26",
+  "generatedAt": "2026-11-27T05:44:00.979835+00:00",
+  "periodStart": "2026-11-20",
+  "periodEnd": "2026-11-27",
   "classification": "공식 재무 사실 + 미검증 기사 제목/댓글 표본 + 투자 검증 질문",
   "summaryCounts": {
     "newSECReports": 1,
@@ -197,9 +197,9 @@
       "nextCheck": "Vans 매출·재고",
       "riskToTest": "상품 관심도 대비 전체 매출 부진",
       "headline": {
-        "title": "V.F. Corporation's Post Earnings Jump Is Not Sustainable (NYSE:VFC) - Seeking Alpha",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRkpmb2k5d0tFOFZnOXAzMGt0OTlXMnZWTDhmQlgyYVd1cVZsY1JNRzlia1FzNmFzY2lWM3RGVnlYUjhEVU9XUzRPU2pFYjZGbWZ4cVN2bjVhenhxVmZqSWpPSXpad3NYZDFZUU9WNS1pTTZYRERKVFR3SzhHN2NmTE5pbXdhYkE3THBtWUN2U1RnS2lNTlcw?oc=5",
-        "date": "2026-11-19"
+        "title": "V.F. Targets $9.8 Billion in Revenue as Vans Turnaround Takes Shape - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeFc4SU1jOU0tQVpWVjYwLVVOUXo4RFVITW9ac1RUOU9XT3Z0Q0hlRzVoUzNyZlQ0SmRLbmFsWmJIR2FQd3VFRFF1Qnp0VE9sUURBMjd1OGFaV1BPdmlyMlRnZ2pYQmZPSUdESl9aWm1MaDFlaUREbTAzQnI5SDJJbHJSM1d4MTA?oc=5",
+        "date": "2026-11-20"
       },
       "consumerSampleCount": 0
     },
@@ -243,8 +243,8 @@
       "nextCheck": "Aerie 성장·연결 영업이익률",
       "riskToTest": "성장 브랜드의 이익 기여 미흡",
       "headline": {
-        "title": "Will Earnings Expectations Change The Bull Case For American Eagle Stock? - Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNk04NzhSX0tleGNaN29JenBQSXEzMUVxTlN1T1VnZmFjMk1JRG9GbklQRmpxdkV3V1JWVWJXemt0aUUtSmVjNEljYmtWcHk3QXFTS2EyOUZmU0w5UVNIOGh4bjVEcUNJNzhCb0YzX29oQ3M2QTRNQWpOLWlyTUdMeUhjZ215Ujk3RWIxRXhkYTB3dnctTUF2Qm11aDBqVTNxek9lVVFn?oc=5",
+        "title": "The Shops at Blackstone Valley has 4 new stores for holiday shoppers - Worcester Telegram",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOa3BEYWhQNWhFMXRrWHJFdjdrNWhFSm5jYXl4OV8wN3VPemw4a2d6Zkg5bUZuT05KZWNXbHN5bUdWTndxSkZTNkxfOWNOYU9Yclo3NVk1cHV0M0lGTWFyTWhVYUZwcUhsWTVpT2NRNkZUdHBiNmo3R3RsY3FiN3dnRlJDUUpDSEQ4SFZDQ2J0RFh1aWRDckh0YVkyTnFLTWs3TkwtcjZFYnYwbjRTT2dkSy03dy1fSGdfcVpQMmRDYzNISVJU?oc=5",
         "date": "2026-11-24"
       },
       "consumerSampleCount": 0
@@ -266,9 +266,9 @@
       "nextCheck": "Calvin Klein·Tommy 매출",
       "riskToTest": "핵심 브랜드 매출 부진",
       "headline": {
-        "title": "Calvin Klein unveils holiday 2026 campaign with Jung Kook - Fashion United",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWmZmTlNjZzhpeHl3a3N3THAxZmFlckh2X294TnhsV0FLMkJ3UTgwOUxfTXRNWlRUTnFqSDJrLXlGeVFLTTA1V2NRMjV1TlE1WEkxcHZoQi1PeE1tMUk4X3lGMUhwTHltZWtiRVFxbUVOd0V4SDRZMjNuaGxsTHBOOExaQ1hMcHhra3Y0RUJ4VWVEdlAzQ0pxMDNpcHJYTE5OdWxJSDQ3N1MxR3JNQ0h1VQ?oc=5",
-        "date": "2026-11-25"
+        "title": "Jung Kook Picks His Own Calvin Klein Holiday Wardrobe - Character Media",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdmxqM1VjYVZEV0dBWFhST19hRzZvUlhlakR0RDlScmRoQXZiRlc0TWljRkpDdm9vaVJPbzNtRktvRXRGNjdpRU5Oc0RLRmJubkFnQ3M4c3p0dlFUbnJPeF91ZGRSeUVScEctUDMxVkhwdnA4cFlIcFlrMXd1dkU5b0FrSlFzOVkx?oc=5",
+        "date": "2026-11-27"
       },
       "consumerSampleCount": 0
     },
@@ -289,9 +289,9 @@
       "nextCheck": "PINK 성장·정가 판매",
       "riskToTest": "회복 기대 대비 판촉 확대",
       "headline": {
-        "title": "VSXY: Victorias Secret & Co. filed SEC Form 8-K: Leadership Update, Financial Statements and Exhibits - Quantisnow",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSWw5Y005THFSUFNPVzUzdTlWdzRqY1pkREE0WnhVNXk1NFhxV3hVRlpTd0lOVW9kS2s5MGlNUm9tUXY3YnlDRkp4TEN0c29UYVZCTWdpc2JVM3JKMzdXV2ZpaU5EMjhnTGdnU09MeVVhc3RwUXhqdnlveVI4SDk5YmNjSGdDMlNFSVBBZGRnelBId0o4MHRJSXlkMmpjZ0tWMERuSXBOY0R6WlMzaGc?oc=5",
-        "date": "2026-11-24"
+        "title": "Victoria's Secret (VSXY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release - Yahoo Finance UK",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQc3pWZlJaV3NRVzEwdk4tTFRXZ0RwV1RnRmhFSkdma0xvRVJKQTRkVnFJN21fMVBGVEZuQnZwSnZDYWVocFhJdWRYaGpTUlpPOV9mYUtrQ3NzT3ZuQ3lEc1lUS2VaRndjN1J1eG1NZDdpNmlQV3VLUU5JdGMyY1JZRFZDc2R5SmhGTDQzdjR6ODBMdw?oc=5",
+        "date": "2026-11-26"
       },
       "consumerSampleCount": 0
     },
